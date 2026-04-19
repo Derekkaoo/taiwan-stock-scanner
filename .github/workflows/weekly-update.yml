@@ -1,6 +1,9 @@
 name: 台股資料自動更新
 
 on:
+  push:
+    branches:
+      - master
   schedule:
     # 週六 04:00 UTC = 台灣時間 12:00（完整更新）
     - cron: '0 4 * * 6'
