@@ -1,0 +1,65 @@
+name: 台股資料自動更新
+
+on:
+  schedule:
+    # 每週一 01:00 UTC = 台灣時間 09:00（完整更新）
+    - cron: '0 1 * * 1'
+    # 週二到週五 08:00 UTC = 台灣時間 16:00 收盤後（只更新 K 線）
+    - cron: '0 8 * * 2-5'
+  workflow_dispatch:
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 取得程式碼
+        uses: actions/checkout@v4
+
+      - name: 設定 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安裝 Python 套件
+        run: pip install requests beautifulsoup4 lxml
+
+      - name: 判斷執行模式
+        id: mode
+        run: |
+          DAY=$(date +%u)
+          if [ "$DAY" = "1" ]; then
+            echo "mode=full" >> $GITHUB_OUTPUT
+          else
+            echo "mode=klines" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 完整更新（週一）
+        if: steps.mode.outputs.mode == 'full'
+        run: python scripts/run_pipeline.py
+
+      - name: 每日 K 線更新（週二至週五）
+        if: steps.mode.outputs.mode == 'klines'
+        run: python scripts/update_klines.py
+
+      - name: 設定 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 安裝前端套件
+        run: |
+          cd frontend
+          npm install
+
+      - name: 建置前端
+        run: |
+          cd frontend
+          npm run build
+
+      - name: 部署到 Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          channelId: live
+          projectId: ${{ secrets.FIREBASE_PROJECT_ID }}

@@ -1,0 +1,114 @@
+/* ============================================================
+   Tailwind CSS v4 — CSS-first 設定
+   v4 不再需要 tailwind.config.js，直接用 @theme 定義設計 token
+   ============================================================ */
+@import "tailwindcss";
+
+/* ── 自訂 Dark Theme Token ── */
+@theme {
+  /* 背景色階 */
+  --color-bg-900:  #060912;
+  --color-bg-800:  #0a0e17;
+  --color-bg-700:  #0f1623;
+  --color-bg-600:  #141c2e;
+  --color-bg-500:  #1a2440;
+  --color-bg-400:  #1e2d4a;
+
+  /* 邊框 */
+  --color-border:       #1e2d4a;
+  --color-border-light: #243353;
+
+  /* 文字 */
+  --color-text-primary:   #e2e8f0;
+  --color-text-secondary: #8899b5;
+  --color-text-muted:     #4a5568;
+  --color-text-disabled:  #2d3748;
+
+  /* 強調色 */
+  --color-accent-blue:   #3b82f6;
+  --color-accent-cyan:   #06b6d4;
+  --color-accent-green:  #10b981;
+  --color-accent-red:    #ef4444;
+  --color-accent-yellow: #f59e0b;
+  --color-accent-purple: #8b5cf6;
+  --color-accent-orange: #f97316;
+
+  /* 台股顏色（紅漲綠跌） */
+  --color-up:      #ef4444;
+  --color-down:    #22c55e;
+  --color-neutral: #94a3b8;
+
+  /* 字體 — tabular-nums 對齊數字是關鍵需求 */
+  --font-sans: "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+
+  /* 族群顏色 */
+  --color-tag-ai:       #a78bfa;
+  --color-tag-cooling:  #06b6d4;
+  --color-tag-cpo:      #22d3ee;
+  --color-tag-pcb:      #34d399;
+  --color-tag-cowos:    #f472b6;
+  --color-tag-memory:   #fb923c;
+  --color-tag-robot:    #fbbf24;
+  --color-tag-power:    #60a5fa;
+  --color-tag-solar:    #facc15;
+  --color-tag-steel:    #9ca3af;
+  --color-tag-shipping: #38bdf8;
+  --color-tag-chem:     #a3e635;
+  --color-tag-other:    #6b7280;
+}
+
+/* ── Base 樣式 ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-bg-800);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── 數字一律使用 tabular-nums 對齊（財務資料關鍵需求） ── */
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* 所有 mono 字體自動套用 tabular-nums */
+.font-mono, code, kbd, pre {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* ── 自訂滾動條 ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--color-bg-800); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-border-light); }
+
+/* ── 動畫 ── */
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-spin    { animation: spin 0.8s linear infinite; }
+.animate-pulse   { animation: pulse 1.2s ease-in-out infinite; }
+.animate-slidein { animation: slideInRight 0.2s ease; }
+.animate-fadein  { animation: fadeIn 0.15s ease; }
