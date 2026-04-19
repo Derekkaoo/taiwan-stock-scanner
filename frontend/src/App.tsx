@@ -241,7 +241,7 @@ export default function App() {
               cursor: 'pointer',
             }}
           >
-            {v === 'group' ? '🗂 族群 K 線' : '📋 表格'}
+            {v === 'group' ? '族群總覽' : '個股列表'}
           </button>
         ))}
 
