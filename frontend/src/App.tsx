@@ -183,10 +183,7 @@ export default function App() {
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
       >
         <h1 className="text-sm font-bold" style={{ color: 'var(--color-accent-cyan)', letterSpacing: '0.5px' }}>
-          📊 台股大股東持股觀察
-          <span className="ml-2 text-xs font-normal" style={{ color: 'var(--color-text-muted)' }}>
-            族群 K 線工具
-          </span>
+          千張大戶持股追蹤器
         </h1>
         <div className="ml-auto flex items-center gap-3 text-xs font-mono tabular">
           {dataDate && (
