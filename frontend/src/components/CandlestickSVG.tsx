@@ -17,7 +17,6 @@ function calcMA(data: number[], period: number): (number | null)[] {
 }
 
 function shortDate(dateStr: string): string {
-  // 支援 2026/04/17 或 2026-04-17 格式，回傳 04/17
   const parts = dateStr.replace(/-/g, '/').split('/')
   if (parts.length >= 3) return `${parts[1]}/${parts[2]}`
   return dateStr
@@ -29,7 +28,7 @@ export function CandlestickSVG({
 }: Props) {
   if (!data || data.length === 0) return null
 
-  const dateAxisH = 14  // 日期軸高度
+  const dateAxisH = 14
   const volHeight = showVolume ? Math.floor(height * 0.2) : 0
   const chartH    = height - volHeight - dateAxisH - 4
   const padL = 4, padR = 4, padT = 4, padB = 2
@@ -59,7 +58,6 @@ export function CandlestickSVG({
   const downColor  = 'var(--color-down, #ef4444)'
   const mutedColor = 'var(--color-text-muted, #6b7280)'
 
-  // MA 折線
   const maPath = (vals: (number | null)[], color: string) => {
     const segments: string[] = []
     let seg = ''
@@ -76,9 +74,12 @@ export function CandlestickSVG({
     ))
   }
 
-  // 日期軸：只顯示第一根和最後一根的日期
-  const firstDate = data[0]?.date ? shortDate(data[0].date) : ''
-  const lastDate  = data[data.length - 1]?.date ? shortDate(data[data.length - 1].date) : ''
+  const tickIndices = [
+    0,
+    Math.floor(n / 3),
+    Math.floor(n * 2 / 3),
+    n - 1,
+  ]
   const dateAxisY = height - dateAxisH + 10
 
   return (
@@ -88,7 +89,6 @@ export function CandlestickSVG({
       className={className}
       style={{ display: 'block' }}
     >
-      {/* K 線蠟燭 */}
       {data.map((d, i) => {
         const isUp  = d.c >= d.o
         const color = isUp ? upColor : downColor
@@ -104,27 +104,21 @@ export function CandlestickSVG({
         )
       })}
 
-      {/* MA 線 */}
       {showMA && maPath(ma20, '#f59e0b')}
       {showMA && maPath(ma60, '#3b82f6')}
 
-      {/* 成交量柱 */}
       {showVolume && data.map((d, i) => {
         const isUp  = d.c >= d.o
         const color = isUp ? upColor : downColor
         const y     = vy(d.v)
         const bH    = chartH + 4 + volHeight - y - 2
         return (
-          <rect
-            key={i}
-            x={px(i) - candleW / 2} y={y}
+          <rect key={i} x={px(i) - candleW / 2} y={y}
             width={candleW} height={Math.max(1, bH)}
-            fill={color} opacity="0.4"
-          />
+            fill={color} opacity="0.4" />
         )
       })}
 
-      {/* 價格標籤 */}
       <text x={padL + 2} y={padT + 10} fontSize={9} fill={mutedColor} fontFamily="monospace">
         {maxP.toFixed(maxP >= 100 ? 1 : 2)}
       </text>
@@ -132,7 +126,6 @@ export function CandlestickSVG({
         {minP.toFixed(minP >= 100 ? 1 : 2)}
       </text>
 
-      {/* MA 圖例 */}
       {showMA && (
         <g>
           <rect x={width - 68} y={3} width={6} height={6} fill="#f59e0b" rx="1" />
@@ -142,26 +135,32 @@ export function CandlestickSVG({
         </g>
       )}
 
-      {/* 日期軸分隔線 */}
       <line
         x1={padL} y1={height - dateAxisH}
         x2={width - padR} y2={height - dateAxisH}
         stroke={mutedColor} strokeWidth="0.5" opacity="0.3"
       />
 
-      {/* 起始日期（左） */}
-      <text x={padL + 2} y={dateAxisY} fontSize={9} fill={mutedColor} fontFamily="monospace">
-        {firstDate}
-      </text>
-
-      {/* 結束日期（右） */}
-      <text
-        x={width - padR - 2} y={dateAxisY}
-        fontSize={9} fill={mutedColor} fontFamily="monospace"
-        textAnchor="end"
-      >
-        {lastDate}
-      </text>
+      {tickIndices.map((idx, ti) => {
+        const x    = px(idx)
+        const date = data[idx]?.date ? shortDate(data[idx].date) : ''
+        return (
+          <g key={ti}>
+            <line
+              x1={x} y1={height - dateAxisH}
+              x2={x} y2={height - dateAxisH + 3}
+              stroke={mutedColor} strokeWidth="0.5" opacity="0.5"
+            />
+            <text
+              x={x} y={dateAxisY}
+              fontSize={9} fill={mutedColor} fontFamily="monospace"
+              textAnchor="middle"
+            >
+              {date}
+            </text>
+          </g>
+        )
+      })}
     </svg>
   )
 }
