@@ -2,7 +2,7 @@ import type { StockRow, SortState } from '../types'
 import { THEME_CSS_MAP, TAG_COLORS } from '../constants/themeGroups'
 import { CandlestickSVG } from './CandlestickSVG'
 import { useKline } from '../hooks/useKline'
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 
 interface ColDef {
   key: keyof StockRow
@@ -65,7 +65,6 @@ interface Props {
 export function StockTable({ stocks, sort, onSort }: Props) {
   const { getFromCache, loadFromJson } = useKline()
   const [expandedId, setExpandedId] = useState<string | null>(null)
-  const klineRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     loadFromJson()
@@ -163,21 +162,21 @@ export function StockTable({ stocks, sort, onSort }: Props) {
                     key={stock.id + '-kline'}
                     style={{ background: 'var(--color-bg-700)', borderBottom: '1px solid var(--color-border)' }}
                   >
-                    <td colSpan={COLS.length + 1} className="px-3 py-3">
-                      {cached ? (
-                        <div ref={klineRef} className="w-full">
+                    <td colSpan={COLS.length + 1} className="p-3">
+                      <div style={{ width: '40%', minWidth: 200 }}>
+                        {cached ? (
                           <CandlestickSVG
                             data={cached}
-                            width={800}
-                            height={160}
+                            width={400}
+                            height={120}
                             showVolume={true}
                             showMA={true}
                             className="w-full"
                           />
-                        </div>
-                      ) : (
-                        <span style={{ color: 'var(--color-text-muted)', fontSize: 11 }}>⚠ 無 K 線資料</span>
-                      )}
+                        ) : (
+                          <span style={{ color: 'var(--color-text-muted)', fontSize: 11 }}>⚠ 無 K 線資料</span>
+                        )}
+                      </div>
                     </td>
                   </tr>
                 )}
