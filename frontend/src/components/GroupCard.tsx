@@ -97,12 +97,18 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, forceEx
 
         <span className="font-mono tabular text-xs ml-auto flex items-center gap-4 shrink-0">
           <span style={{ color: 'var(--color-text-muted)' }}>{stocks.length} 支</span>
-          <span style={{ color: avgDelta >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-            均增 +{fmt(avgDelta, 3)}%
+          <span
+            title="本週大股東持股週增幅平均值（非股價漲跌）"
+            style={{ color: avgDelta >= 0 ? 'var(--color-up)' : 'var(--color-down)', cursor: 'help' }}
+          >
+            均增持 +{fmt(avgDelta, 3)}%
           </span>
           {avgRet !== null && (
-            <span style={{ color: avgRet >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-              3M {avgRet >= 0 ? '+' : ''}{fmt(avgRet, 1)}%
+            <span
+              title="近三個月股價報酬率平均值"
+              style={{ color: avgRet >= 0 ? 'var(--color-up)' : 'var(--color-down)', cursor: 'help' }}
+            >
+              3個月報酬 {avgRet >= 0 ? '+' : ''}{fmt(avgRet, 1)}%
             </span>
           )}
         </span>
@@ -141,12 +147,12 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, forceEx
                         <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>收 </span>
                         {fmt(stock.price, stock.price >= 100 ? 1 : 2)}
                       </span>
-                      <span title="本週大股東增持幅度" style={{ color: 'var(--color-up)' }}>
-                        <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>增 </span>
+                      <span title="本週大股東持股週增幅（非股價漲跌）" style={{ color: 'var(--color-up)', cursor: 'help' }}>
+                        <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>週增持 </span>
                         +{fmt(stock.delta, 3)}%
                       </span>
-                      <span title="近三個月報酬率" style={{ color: retColor }}>
-                        <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>3M </span>
+                      <span title="近三個月股價報酬率" style={{ color: retColor, cursor: 'help' }}>
+                        <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>3個月報酬 </span>
                         {ret !== null ? `${ret >= 0 ? '+' : ''}${fmt(ret, 1)}%` : '—'}
                       </span>
                     </div>

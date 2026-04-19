@@ -13,8 +13,75 @@ function fmt(v: number | null, d = 2) {
 
 function formatDataDate(dateStr: string | null): string {
   if (!dateStr) return ''
-  // 2026-04-17 → 2026/04/17
   return dateStr.replace(/-/g, '/')
+}
+
+function InfoPopup({ text }: { text: string }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLSpanElement>(null)
+
+  useEffect(() => {
+    if (!open) return
+    const handler = (e: MouseEvent | TouchEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    document.addEventListener('touchstart', handler)
+    return () => {
+      document.removeEventListener('mousedown', handler)
+      document.removeEventListener('touchstart', handler)
+    }
+  }, [open])
+
+  return (
+    <span ref={ref} style={{ position: 'relative', display: 'inline-block' }}>
+      <span
+        onClick={e => { e.stopPropagation(); setOpen(v => !v) }}
+        style={{
+          cursor: 'pointer',
+          fontSize: 10,
+          color: 'var(--color-accent-cyan)',
+          opacity: 0.7,
+          marginLeft: 3,
+          userSelect: 'none',
+        }}
+      >
+        ⓘ
+      </span>
+      {open && (
+        <span style={{
+          position: 'absolute',
+          bottom: '120%',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          background: 'var(--color-bg-800)',
+          border: '1px solid var(--color-border)',
+          borderRadius: 6,
+          padding: '6px 10px',
+          fontSize: 11,
+          color: 'var(--color-text-primary)',
+          whiteSpace: 'nowrap',
+          zIndex: 9999,
+          boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
+          pointerEvents: 'none',
+        }}>
+          {text}
+          <span style={{
+            position: 'absolute',
+            top: '100%',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: 0, height: 0,
+            borderLeft: '5px solid transparent',
+            borderRight: '5px solid transparent',
+            borderTop: '5px solid var(--color-border)',
+          }} />
+        </span>
+      )}
+    </span>
+  )
 }
 
 export default function App() {
@@ -75,10 +142,36 @@ export default function App() {
     : null
   const maxDelta = stockCount ? Math.max(...filteredStocks.map(x => x.delta)) : null
 
+  const statCards = [
+    {
+      label: '符合條件股票',
+      value: stockCount.toString(),
+      color: 'var(--color-accent-cyan)',
+      tooltip: '本週大股東持股週增幅 ≥ 0.1% 的股票數量',
+    },
+    {
+      label: '族群數量',
+      value: groupCount.toString(),
+      color: 'var(--color-accent-blue)',
+      tooltip: '本週有大股東增持的族群數量',
+    },
+    {
+      label: '平均週增持',
+      value: `+${fmt(avgDelta, 3)}%`,
+      color: 'var(--color-up)',
+      tooltip: '所有符合條件股票的大股東持股週增幅平均值（非股價漲跌）',
+    },
+    {
+      label: '最高週增持',
+      value: `+${fmt(maxDelta, 3)}%`,
+      color: 'var(--color-up)',
+      tooltip: '本週單一股票大股東持股週增幅最高值（非股價漲跌）',
+    },
+  ]
+
   return (
     <div className="flex flex-col min-h-screen" style={{ background: 'var(--color-bg-800)' }}>
 
-      {/* 頂部標題列 */}
       <header
         className="sticky top-0 z-50 flex items-center gap-4 px-5 py-2.5 border-b"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
@@ -90,7 +183,6 @@ export default function App() {
           </span>
         </h1>
         <div className="ml-auto flex items-center gap-3 text-xs font-mono tabular">
-          {/* 資料截至日期 */}
           {dataDate && (
             <span
               className="px-2 py-0.5 rounded border"
@@ -110,7 +202,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* 工具列 */}
       <div
         className="sticky top-[41px] z-40 flex flex-wrap items-center gap-2 px-5 py-2 border-b"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
@@ -180,7 +271,6 @@ export default function App() {
         />
       </div>
 
-      {/* 狀態列 */}
       <div
         className="flex items-center gap-4 px-5 py-1.5 border-b text-[11px]"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
@@ -198,7 +288,7 @@ export default function App() {
         {!loading && !error && stockCount > 0 && (
           <>
             <span className="font-mono tabular" style={{ color: 'var(--color-text-muted)' }}>
-              平均週增 <span style={{ color: 'var(--color-up)' }}>+{fmt(avgDelta, 3)}%</span>
+              平均週增持 <span style={{ color: 'var(--color-up)' }}>+{fmt(avgDelta, 3)}%</span>
             </span>
             <span className="font-mono tabular" style={{ color: 'var(--color-text-muted)' }}>
               最高 <span style={{ color: 'var(--color-up)' }}>+{fmt(maxDelta, 3)}%</span>
@@ -207,25 +297,24 @@ export default function App() {
         )}
       </div>
 
-      {/* 摘要統計 */}
       {stockCount > 0 && (
         <div className="flex gap-3 px-5 py-3 flex-wrap">
-          {[
-            { label: '符合條件股票', value: stockCount.toString(),    color: 'var(--color-accent-cyan)' },
-            { label: '族群數量',     value: groupCount.toString(),    color: 'var(--color-accent-blue)' },
-            { label: '平均週增持',   value: `+${fmt(avgDelta, 3)}%`, color: 'var(--color-up)' },
-            { label: '最高週增持',   value: `+${fmt(maxDelta, 3)}%`, color: 'var(--color-up)' },
-          ].map(({ label, value, color }) => (
-            <div key={label} className="flex-1 min-w-[120px] rounded px-3 py-2 border"
-              style={{ background: 'var(--color-bg-600)', borderColor: 'var(--color-border)' }}>
-              <div className="text-[10px] mb-0.5" style={{ color: 'var(--color-text-muted)' }}>{label}</div>
+          {statCards.map(({ label, value, color, tooltip }) => (
+            <div
+              key={label}
+              className="flex-1 min-w-[120px] rounded px-3 py-2 border"
+              style={{ background: 'var(--color-bg-600)', borderColor: 'var(--color-border)' }}
+            >
+              <div className="flex items-center gap-1 text-[10px] mb-0.5" style={{ color: 'var(--color-text-muted)' }}>
+                {label}
+                <InfoPopup text={tooltip} />
+              </div>
               <div className="text-lg font-bold font-mono tabular" style={{ color }}>{value}</div>
             </div>
           ))}
         </div>
       )}
 
-      {/* 主內容 */}
       <main className="flex-1 px-5 pb-8">
         {!loading && stockCount === 0 && (
           <div className="flex flex-col items-center justify-center py-20" style={{ color: 'var(--color-text-muted)' }}>
@@ -262,7 +351,6 @@ export default function App() {
         )}
       </main>
 
-      {/* Toast */}
       <div className="fixed bottom-5 right-5 z-[9999] flex flex-col gap-2">
         {toasts.map(t => (
           <div key={t.id} className="rounded border px-4 py-2 text-xs shadow-lg max-w-xs"
