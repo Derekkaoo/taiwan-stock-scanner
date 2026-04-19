@@ -1,11 +1,8 @@
-// ============================================================
-//  StockTable — 可排序股票主表格
-//  數字欄位一律 font-mono + tabular-nums
-// ============================================================
 import type { StockRow, SortState } from '../types'
 import { THEME_CSS_MAP, TAG_COLORS } from '../constants/themeGroups'
 import { CandlestickSVG } from './CandlestickSVG'
 import { useKline } from '../hooks/useKline'
+import { useEffect, useState } from 'react'
 
 interface ColDef {
   key: keyof StockRow
@@ -16,9 +13,9 @@ interface ColDef {
 }
 
 const COLS: ColDef[] = [
-  { key: 'id',         label: '代號',    align: 'left',  mono: true },
-  { key: 'name',       label: '名稱',    align: 'left' },
-  { key: 'group',      label: '族群',    align: 'left',
+  { key: 'id',   label: '代號', align: 'left', mono: true },
+  { key: 'name', label: '名稱', align: 'left' },
+  { key: 'group', label: '族群', align: 'left',
     render: (s) => {
       const css = THEME_CSS_MAP[s.group] ?? 'tag-other'
       const c   = TAG_COLORS[css] ?? '#6b7280'
@@ -30,25 +27,18 @@ const COLS: ColDef[] = [
       )
     }
   },
-  { key: 'holdingPct', label: '持股%',   align: 'right', mono: true,
+  { key: 'holdingPct', label: '持股%', align: 'right', mono: true,
     render: (s) => <span className="tabular font-mono">{s.holdingPct.toFixed(2)}%</span>
   },
-  { key: 'delta',      label: '週增%',   align: 'right', mono: true,
+  { key: 'delta', label: '週增%', align: 'right', mono: true,
     render: (s) => (
       <span className="tabular font-mono" style={{ color: s.delta >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
         +{s.delta.toFixed(3)}%
       </span>
     )
   },
-  { key: 'price',      label: '收盤價',  align: 'right', mono: true,
+  { key: 'price', label: '收盤價', align: 'right', mono: true,
     render: (s) => <span className="tabular font-mono">{s.price.toFixed(s.price >= 100 ? 1 : 2)}</span>
-  },
-  { key: 'marketCap',  label: '市值(億)', align: 'right', mono: true,
-    render: (s) => (
-      <span className="tabular font-mono" style={{ color: 'var(--color-text-secondary)' }}>
-        {s.marketCap > 0 ? s.marketCap.toLocaleString() : '—'}
-      </span>
-    )
   },
   { key: 'threeMonthReturn', label: '3M報酬', align: 'right', mono: true,
     render: (s) => {
@@ -73,14 +63,23 @@ interface Props {
 }
 
 export function StockTable({ stocks, sort, onSort }: Props) {
-  const { getFromCache } = useKline()
+  const { getFromCache, loadFromJson } = useKline()
+  const [expandedId, setExpandedId] = useState<string | null>(null)
+
+  useEffect(() => {
+    loadFromJson()
+  }, [])
+
+  const handleRowClick = (id: string) => {
+    setExpandedId(prev => prev === id ? null : id)
+  }
 
   if (!stocks.length) {
     return (
       <div className="flex items-center justify-center py-16" style={{ color: 'var(--color-text-muted)' }}>
         <div className="text-center">
           <div className="text-lg mb-2">📭</div>
-          <div className="text-sm">無符合條件的資料</div>
+          <div className="text-sm">沒有符合條件的股票</div>
         </div>
       </div>
     )
@@ -105,56 +104,91 @@ export function StockTable({ stocks, sort, onSort }: Props) {
                 >
                   {col.label}
                   {active && (
-                    <span className="ml-1 text-[9px]">{sort.dir === 'asc' ? '↑' : '↓'}</span>
+                    <span className="ml-1 text-[9px]">{sort.dir === 'asc' ? '▲' : '▼'}</span>
                   )}
                 </th>
               )
             })}
-            <th className="px-3 py-2" style={{ color: 'var(--color-text-muted)', textAlign: 'right' }}>
-              走勢
+            <th className="px-3 py-2 text-right" style={{ color: 'var(--color-text-muted)' }}>
+              K 線
             </th>
           </tr>
         </thead>
         <tbody>
           {stocks.map(stock => {
+            const isExpanded = expandedId === stock.id
             const cached = getFromCache(stock.id)
             return (
-              <tr
-                key={stock.id}
-                className="border-b transition-colors"
-                style={{
-                  borderColor: 'var(--color-border)',
-                  cursor: 'default',
-                }}
-                onMouseEnter={e => {
-                  (e.currentTarget as HTMLElement).style.background = 'var(--color-bg-500)'
-                }}
-                onMouseLeave={e => {
-                  (e.currentTarget as HTMLElement).style.background = ''
-                }}
-              >
-                {COLS.map(col => (
-                  <td
-                    key={col.key}
-                    className="px-3 py-1.5 whitespace-nowrap"
-                    style={{ textAlign: col.align }}
-                  >
-                    {col.render ? col.render(stock) : (
-                      <span className={col.mono ? 'font-mono tabular' : ''}>
-                        {String(stock[col.key] ?? '—')}
-                      </span>
-                    )}
+              <>
+                {/* 主要資料列 */}
+                <tr
+                  key={stock.id}
+                  className="border-b transition-colors cursor-pointer"
+                  style={{
+                    borderColor: 'var(--color-border)',
+                    background: isExpanded ? 'var(--color-bg-500)' : '',
+                  }}
+                  onClick={() => handleRowClick(stock.id)}
+                  onMouseEnter={e => {
+                    if (!isExpanded)
+                      (e.currentTarget as HTMLElement).style.background = 'var(--color-bg-500)'
+                  }}
+                  onMouseLeave={e => {
+                    if (!isExpanded)
+                      (e.currentTarget as HTMLElement).style.background = ''
+                  }}
+                >
+                  {COLS.map(col => (
+                    <td
+                      key={col.key}
+                      className="px-3 py-1.5 whitespace-nowrap"
+                      style={{ textAlign: col.align }}
+                    >
+                      {col.render ? col.render(stock) : (
+                        <span className={col.mono ? 'font-mono tabular' : ''}>
+                          {String(stock[col.key] ?? '—')}
+                        </span>
+                      )}
+                    </td>
+                  ))}
+                  {/* 展開/收合按鈕 */}
+                  <td className="px-3 py-1.5 text-right">
+                    <span style={{ color: 'var(--color-text-muted)', fontSize: 10 }}>
+                      {isExpanded ? '▲' : '▼'}
+                    </span>
                   </td>
-                ))}
-                {/* 迷你 Sparkline */}
-                <td className="px-3 py-1.5" style={{ textAlign: 'right' }}>
-                  {cached ? (
-                    <CandlestickSVG data={cached} width={72} height={24} />
-                  ) : (
-                    <span style={{ color: 'var(--color-text-disabled)', fontSize: 10 }}>—</span>
-                  )}
-                </td>
-              </tr>
+                </tr>
+
+                {/* K 線展開列 */}
+                {isExpanded && (
+                  <tr
+                    key={stock.id + '-kline'}
+                    style={{ background: 'var(--color-bg-700)', borderBottom: '1px solid var(--color-border)' }}
+                  >
+                    <td colSpan={COLS.length + 1} className="px-4 py-3">
+                      {cached ? (
+                        <div className="flex items-center gap-4">
+                          <CandlestickSVG
+                            data={cached}
+                            width={400}
+                            height={160}
+                            showVolume={true}
+                            showMA={true}
+                          />
+                          <div className="text-xs flex flex-col gap-1" style={{ color: 'var(--color-text-muted)' }}>
+                            <span>近 3 個月 K 線</span>
+                            <span style={{ color: stock.threeMonthReturn !== null && stock.threeMonthReturn >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
+                              3M {stock.threeMonthReturn !== null ? `${stock.threeMonthReturn >= 0 ? '+' : ''}${stock.threeMonthReturn.toFixed(1)}%` : '—'}
+                            </span>
+                          </div>
+                        </div>
+                      ) : (
+                        <span style={{ color: 'var(--color-text-muted)', fontSize: 11 }}>⚠ 無 K 線資料</span>
+                      )}
+                    </td>
+                  </tr>
+                )}
+              </>
             )
           })}
         </tbody>
