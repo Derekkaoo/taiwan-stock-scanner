@@ -1,6 +1,3 @@
-// useKline.ts — K 線資料管理
-// 優先從 /data/klines.json 讀取（pipeline 預先抓好）
-// 若找不到才即時抓 Yahoo Finance
 import { useCallback, useRef, useState } from 'react'
 import type { KlineBar } from '../types'
 
@@ -33,14 +30,27 @@ function generateMockKline(stockId: string): KlineBar[] {
   return data
 }
 
+interface YahooQuote {
+  open?: number[]
+  high?: number[]
+  low?: number[]
+  close?: number[]
+  volume?: number[]
+}
+
 function parseYahooResponse(json: unknown): KlineBar[] | null {
-  const result = (json as { chart?: { result?: Array<{
-    timestamp: number[]
-    indicators: { quote: Array<{ open: number[], high: number[], low: number[], close: number[], volume: number[] }> }
-  }> } })?.chart?.result?.[0]
+  const data = json as {
+    chart?: {
+      result?: Array<{
+        timestamp: number[]
+        indicators: { quote: YahooQuote[] }
+      }>
+    }
+  }
+  const result = data?.chart?.result?.[0]
   if (!result) return null
   const { timestamp = [], indicators } = result
-  const ohlcv = indicators?.quote?.[0] ?? {}
+  const ohlcv: YahooQuote = indicators?.quote?.[0] ?? {}
   return timestamp.map((ts, i) => ({
     date: new Date(ts * 1000).toLocaleDateString('zh-TW'),
     o: ohlcv.open?.[i]   ?? 0,
@@ -71,7 +81,6 @@ export function useKline() {
   const cache = useRef<Map<string, KlineBar[]>>(new Map())
   const [statusMap, setStatusMap] = useState<Record<string, 'loading' | 'ok' | 'error'>>({})
 
-  /** 從 /data/klines.json 批次載入所有 K 線（pipeline 預先產生）*/
   const loadFromJson = useCallback(async () => {
     try {
       const resp = await fetch('/data/klines.json')
@@ -84,9 +93,9 @@ export function useKline() {
           count++
         }
       }
-      console.log(`[useKline] 從 klines.json 載入 ${count} 支股票 K 線`)
+      console.log(`[useKline] 從 klines.json 載入 ${count} 支`)
     } catch (e) {
-      console.warn('[useKline] 無法載入 klines.json，將即時抓取', e)
+      console.warn('[useKline] 無法載入 klines.json', e)
     }
   }, [])
 
@@ -112,7 +121,6 @@ export function useKline() {
       } catch { /* continue */ }
     }
 
-    console.warn(`[useKline] ${stockId} Yahoo 失敗，使用 Mock`)
     const mockBars = generateMockKline(stockId)
     cache.current.set(stockId, mockBars)
     setStatusMap(prev => ({ ...prev, [stockId]: 'ok' }))

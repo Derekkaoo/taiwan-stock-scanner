@@ -13,18 +13,18 @@ function fmt(v: number | null, d = 2) {
 
 export default function App() {
   const {
-    stocks, filteredStocks, grouped, sort, loading, error,
+    filteredStocks, grouped, sort, loading, error,
     searchQuery, lastUpdated,
     loadData, setSearchQuery, updateSort, updateStockReturn,
   } = useStocks()
 
   const { fetchGroup, getFromCache, loadFromJson } = useKline()
 
-  const [view,       setView]       = useState<View>('group')
+  const [view,        setView]        = useState<View>('group')
   const [collapseAll, setCollapseAll] = useState(false)
   const [expandAll,   setExpandAll]   = useState(false)
-  const [toasts,     setToasts]     = useState<Toast[]>([])
-  const searchTimer = useRef<ReturnType<typeof setTimeout>>()
+  const [toasts,      setToasts]      = useState<Toast[]>([])
+  const searchTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   const toast = useCallback((message: string, type: Toast['type'] = 'info') => {
     const id = Math.random().toString(36).slice(2)
@@ -32,7 +32,6 @@ export default function App() {
     setTimeout(() => setToasts(prev => prev.filter(t => t.id !== id)), 3500)
   }, [])
 
-  // 初始載入
   useEffect(() => {
     loadData()
     loadFromJson()
@@ -73,7 +72,6 @@ export default function App() {
   return (
     <div className="flex flex-col min-h-screen" style={{ background: 'var(--color-bg-800)' }}>
 
-      {/* 頂部標題列 */}
       <header
         className="sticky top-0 z-50 flex items-center gap-4 px-5 py-2.5 border-b"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
@@ -89,12 +87,10 @@ export default function App() {
         </div>
       </header>
 
-      {/* 工具列 */}
       <div
         className="sticky top-[41px] z-40 flex flex-wrap items-center gap-2 px-5 py-2 border-b"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
       >
-        {/* 更新資料按鈕 */}
         <button
           onClick={handleRefresh}
           disabled={loading}
@@ -112,7 +108,6 @@ export default function App() {
 
         <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
 
-        {/* 視圖切換 */}
         {(['group', 'table'] as View[]).map(v => (
           <button
             key={v}
@@ -146,7 +141,6 @@ export default function App() {
 
         <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
 
-        {/* 搜尋 */}
         <input
           type="text"
           placeholder="🔍 搜尋代號 / 名稱 / 族群…"
@@ -162,7 +156,6 @@ export default function App() {
         />
       </div>
 
-      {/* 狀態列 */}
       <div
         className="flex items-center gap-4 px-5 py-1.5 border-b text-[11px]"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
@@ -189,14 +182,13 @@ export default function App() {
         )}
       </div>
 
-      {/* 摘要統計 */}
       {stockCount > 0 && (
         <div className="flex gap-3 px-5 py-3 flex-wrap">
           {[
-            { label: '符合條件股票', value: stockCount.toString(),      color: 'var(--color-accent-cyan)' },
-            { label: '族群數量',     value: groupCount.toString(),      color: 'var(--color-accent-blue)' },
-            { label: '平均週增持',   value: `+${fmt(avgDelta, 3)}%`,   color: 'var(--color-up)' },
-            { label: '最高週增持',   value: `+${fmt(maxDelta, 3)}%`,   color: 'var(--color-up)' },
+            { label: '符合條件股票', value: stockCount.toString(),    color: 'var(--color-accent-cyan)' },
+            { label: '族群數量',     value: groupCount.toString(),    color: 'var(--color-accent-blue)' },
+            { label: '平均週增持',   value: `+${fmt(avgDelta, 3)}%`, color: 'var(--color-up)' },
+            { label: '最高週增持',   value: `+${fmt(maxDelta, 3)}%`, color: 'var(--color-up)' },
           ].map(({ label, value, color }) => (
             <div key={label} className="flex-1 min-w-[120px] rounded px-3 py-2 border"
               style={{ background: 'var(--color-bg-600)', borderColor: 'var(--color-border)' }}>
@@ -207,7 +199,6 @@ export default function App() {
         </div>
       )}
 
-      {/* 主內容 */}
       <main className="flex-1 px-5 pb-8">
         {!loading && stockCount === 0 && (
           <div className="flex flex-col items-center justify-center py-20" style={{ color: 'var(--color-text-muted)' }}>
@@ -244,10 +235,9 @@ export default function App() {
         )}
       </main>
 
-      {/* Toast */}
       <div className="fixed bottom-5 right-5 z-[9999] flex flex-col gap-2">
         {toasts.map(t => (
-          <div key={t.id} className="rounded border px-4 py-2 text-xs animate-slidein shadow-lg max-w-xs"
+          <div key={t.id} className="rounded border px-4 py-2 text-xs shadow-lg max-w-xs"
             style={{
               background: 'var(--color-bg-600)',
               borderColor: t.type === 'error' ? 'var(--color-accent-red)'

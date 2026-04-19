@@ -1,4 +1,3 @@
-// useStocks.ts — 純靜態 JSON 模式
 import { useState, useCallback, useRef } from 'react'
 import type { StockRow, SortState, DataMode } from '../types'
 import { assignThemeGroup, buildGroupedStocks } from '../constants/themeGroups'
@@ -18,10 +17,16 @@ function normalizeRow(raw: Record<string, unknown>): StockRow {
 }
 
 function compareStocks(a: StockRow, b: StockRow, sort: SortState): number {
-  const av = a[sort.key], bv = b[sort.key]
+  const av = a[sort.key]
+  const bv = b[sort.key]
   if (av === null || av === undefined) return 1
   if (bv === null || bv === undefined) return -1
-  const cmp = typeof av === 'string' ? av.localeCompare(bv) : (av as number) - (bv as number)
+  let cmp: number
+  if (typeof av === 'string' && typeof bv === 'string') {
+    cmp = av.localeCompare(bv)
+  } else {
+    cmp = (av as number) - (bv as number)
+  }
   return sort.dir === 'asc' ? cmp : -cmp
 }
 
@@ -47,7 +52,11 @@ export function useStocks() {
     (allStocks: StockRow[], query: string, currentSort: SortState) => {
       const q = query.toLowerCase().trim()
       const filtered = q
-        ? allStocks.filter(s => s.id.includes(q) || s.name.toLowerCase().includes(q) || s.group.toLowerCase().includes(q))
+        ? allStocks.filter(s =>
+            s.id.includes(q) ||
+            s.name.toLowerCase().includes(q) ||
+            s.group.toLowerCase().includes(q)
+          )
         : [...allStocks]
       const sorted = [...filtered].sort((a, b) => compareStocks(a, b, currentSort))
       setFilteredStocks(sorted)
@@ -82,7 +91,10 @@ export function useStocks() {
 
   const updateSort = useCallback((key: SortState['key']) => {
     setSort(prev => {
-      const newSort: SortState = { key, dir: prev.key === key && prev.dir === 'desc' ? 'asc' : 'desc' }
+      const newSort: SortState = {
+        key,
+        dir: prev.key === key && prev.dir === 'desc' ? 'asc' : 'desc',
+      }
       applyFilterSort(stocks, searchRef.current, newSort)
       return newSort
     })
@@ -96,6 +108,9 @@ export function useStocks() {
     })
   }, [applyFilterSort, sort])
 
-  return { stocks, filteredStocks, grouped, sort, loading, error, searchQuery, lastUpdated,
-    loadData, setSearchQuery, updateSort, updateStockReturn }
+  return {
+    stocks, filteredStocks, grouped, sort, loading, error,
+    searchQuery, lastUpdated, loadData, setSearchQuery,
+    updateSort, updateStockReturn,
+  }
 }

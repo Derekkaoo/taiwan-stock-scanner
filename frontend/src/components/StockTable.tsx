@@ -4,7 +4,7 @@
 // ============================================================
 import type { StockRow, SortState } from '../types'
 import { THEME_CSS_MAP, TAG_COLORS } from '../constants/themeGroups'
-import { SparklineSVG } from './CandlestickSVG'
+import { CandlestickSVG } from './CandlestickSVG'
 import { useKline } from '../hooks/useKline'
 
 interface ColDef {
@@ -149,7 +149,7 @@ export function StockTable({ stocks, sort, onSort }: Props) {
                 {/* 迷你 Sparkline */}
                 <td className="px-3 py-1.5" style={{ textAlign: 'right' }}>
                   {cached ? (
-                    <SparklineSVG data={cached} width={72} height={24} />
+                    <CandlestickSVG data={cached} width={72} height={24} />
                   ) : (
                     <span style={{ color: 'var(--color-text-disabled)', fontSize: 10 }}>—</span>
                   )}
