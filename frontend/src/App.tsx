@@ -6,6 +6,7 @@ import { StockTable } from './components/StockTable'
 import { GroupCard } from './components/GroupCard'
 
 type View = 'group' | 'table'
+type GroupSort = 'delta' | 'return'
 
 function fmt(v: number | null, d = 2) {
   return v !== null && v !== undefined ? v.toFixed(d) : '—'
@@ -96,6 +97,7 @@ export default function App() {
   const [view,        setView]        = useState<View>('group')
   const [collapseAll, setCollapseAll] = useState(false)
   const [expandAll,   setExpandAll]   = useState(false)
+  const [groupSort,   setGroupSort]   = useState<GroupSort>('delta')
   const [toasts,      setToasts]      = useState<Toast[]>([])
   const searchTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
@@ -141,6 +143,25 @@ export default function App() {
     ? filteredStocks.reduce((s, x) => s + x.delta, 0) / stockCount
     : null
   const maxDelta = stockCount ? Math.max(...filteredStocks.map(x => x.delta)) : null
+
+  const sortedGroupEntries = [...groupEntries].sort(([nameA, stocksA], [nameB, stocksB]) => {
+    switch (groupSort) {
+      case 'delta': {
+        const avgA = stocksA.reduce((s, x) => s + x.delta, 0) / stocksA.length
+        const avgB = stocksB.reduce((s, x) => s + x.delta, 0) / stocksB.length
+        return avgB - avgA
+      }
+      case 'return': {
+        const retA = stocksA.filter(s => s.threeMonthReturn !== null)
+        const retB = stocksB.filter(s => s.threeMonthReturn !== null)
+        const avgA = retA.length ? retA.reduce((s, x) => s + x.threeMonthReturn!, 0) / retA.length : -999
+        const avgB = retB.length ? retB.reduce((s, x) => s + x.threeMonthReturn!, 0) / retB.length : -999
+        return avgB - avgA
+      }
+      default:
+        return 0
+    }
+  })
 
   const statCards = [
     {
@@ -251,6 +272,23 @@ export default function App() {
               style={{ background: 'var(--color-bg-600)', borderColor: 'var(--color-border)', color: 'var(--color-text-secondary)' }}>
               收合全部
             </button>
+
+            <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
+
+            <span className="text-xs" style={{ color: 'var(--color-text-muted)' }}>族群排序：</span>
+            <select
+              value={groupSort}
+              onChange={e => setGroupSort(e.target.value as GroupSort)}
+              className="text-xs px-2 py-1 rounded border outline-none cursor-pointer"
+              style={{
+                background: 'var(--color-bg-600)',
+                borderColor: 'var(--color-border)',
+                color: 'var(--color-text-primary)',
+              }}
+            >
+              <option value="delta">均增持幅度 ↓</option>
+              <option value="return">3個月報酬 ↓</option>
+            </select>
           </>
         )}
 
@@ -326,7 +364,7 @@ export default function App() {
 
         {view === 'group' && stockCount > 0 && (
           <div className="flex flex-col gap-2">
-            {groupEntries.map(([name, stks]) => (
+            {sortedGroupEntries.map(([name, stks]) => (
               <GroupCard
                 key={name}
                 groupName={name}

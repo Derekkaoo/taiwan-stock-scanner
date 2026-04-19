@@ -76,38 +76,33 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, forceEx
       style={{ borderColor: expanded ? color + '55' : 'var(--color-border)', background: 'var(--color-bg-600)' }}>
 
       <button onClick={handleToggle}
-        className="w-full text-left px-4 py-2.5 flex items-center gap-3 hover:bg-[var(--color-bg-500)] transition-colors rounded-t select-none"
+        className="w-full text-left px-4 py-2.5 flex items-center gap-2 hover:bg-[var(--color-bg-500)] transition-colors rounded-t select-none"
         aria-expanded={expanded}>
-        <span className="text-[10px] transition-transform duration-200" style={{
+        <span className="text-[10px] transition-transform duration-200 shrink-0" style={{
           display: 'inline-block',
           transform: expanded ? 'rotate(90deg)' : 'rotate(0deg)',
           color: 'var(--color-text-muted)',
         }}>▶</span>
 
-        <span className="text-xs font-bold px-2 py-0.5 rounded-full border whitespace-nowrap"
-          style={{ color, borderColor: color + '44', background: color + '18' }}>
+        <span className="text-xs font-bold px-2 py-0.5 rounded-full border shrink-0"
+          style={{ color, borderColor: color + '44', background: color + '18', whiteSpace: 'nowrap' }}>
           {groupName}
         </span>
 
         {groupDesc && (
-          <span className="text-[11px] hidden sm:block" style={{ color: 'var(--color-text-muted)' }}>
+          <span className="text-[11px] hidden lg:block truncate" style={{ color: 'var(--color-text-muted)' }}>
             {groupDesc}
           </span>
         )}
 
-        <span className="font-mono tabular text-xs ml-auto flex items-center gap-4 shrink-0">
+        {/* 統計數字：手機只顯示均增持，桌機顯示全部 */}
+        <span className="font-mono tabular text-xs ml-auto flex items-center gap-2 shrink-0">
           <span style={{ color: 'var(--color-text-muted)' }}>{stocks.length} 支</span>
-          <span
-            title="本週大股東持股週增幅平均值（非股價漲跌）"
-            style={{ color: avgDelta >= 0 ? 'var(--color-up)' : 'var(--color-down)', cursor: 'help' }}
-          >
+          <span style={{ color: avgDelta >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
             均增持 +{fmt(avgDelta, 3)}%
           </span>
           {avgRet !== null && (
-            <span
-              title="近三個月股價報酬率平均值"
-              style={{ color: avgRet >= 0 ? 'var(--color-up)' : 'var(--color-down)', cursor: 'help' }}
-            >
+            <span className="hidden sm:inline" style={{ color: avgRet >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
               3個月報酬 {avgRet >= 0 ? '+' : ''}{fmt(avgRet, 1)}%
             </span>
           )}
@@ -123,7 +118,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, forceEx
               <span className="text-xs">載入 K 線資料…</span>
             </div>
           )}
-          <div className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))' }}>
+          <div className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
             {stocks.map(stock => {
               const bars = getKline(stock.id)
               const ret  = bars ? calcThreeMonthReturn(bars) : null
@@ -136,22 +131,22 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, forceEx
 
                   <div className="flex items-center justify-between px-2.5 py-1.5 border-b"
                     style={{ borderColor: 'var(--color-border)' }}>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 shrink-0">
                       <span className="font-mono font-bold tabular text-xs" style={{ color: 'var(--color-accent-cyan)' }}>
                         {stock.id}
                       </span>
                       <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>{stock.name}</span>
                     </div>
-                    <div className="flex items-center gap-2 font-mono tabular text-[11px]">
+                    <div className="flex items-center gap-2 font-mono tabular text-[11px] shrink-0">
                       <span title="收盤價" style={{ color: 'var(--color-text-primary)' }}>
                         <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>收 </span>
                         {fmt(stock.price, stock.price >= 100 ? 1 : 2)}
                       </span>
-                      <span title="本週大股東持股週增幅（非股價漲跌）" style={{ color: 'var(--color-up)', cursor: 'help' }}>
+                      <span title="本週大股東持股週增幅（非股價漲跌）" style={{ color: 'var(--color-up)' }}>
                         <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>週增持 </span>
                         +{fmt(stock.delta, 3)}%
                       </span>
-                      <span title="近三個月股價報酬率" style={{ color: retColor, cursor: 'help' }}>
+                      <span title="近三個月股價報酬率" style={{ color: retColor }}>
                         <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>3個月報酬 </span>
                         {ret !== null ? `${ret >= 0 ? '+' : ''}${fmt(ret, 1)}%` : '—'}
                       </span>
@@ -160,7 +155,14 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, forceEx
 
                   <div className="p-1">
                     {bars ? (
-                      <CandlestickSVG data={bars} width={316} height={150} showVolume={true} showMA={true} className="w-full" />
+                      <CandlestickSVG
+                        data={bars}
+                        width={316}
+                        height={150}
+                        showVolume={true}
+                        showMA={true}
+                        className="w-full"
+                      />
                     ) : (
                       <div className="flex items-center justify-center text-xs h-[150px]"
                         style={{ color: 'var(--color-text-muted)' }}>

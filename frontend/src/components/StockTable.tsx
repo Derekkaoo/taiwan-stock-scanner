@@ -2,7 +2,7 @@ import type { StockRow, SortState } from '../types'
 import { THEME_CSS_MAP, TAG_COLORS } from '../constants/themeGroups'
 import { CandlestickSVG } from './CandlestickSVG'
 import { useKline } from '../hooks/useKline'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 interface ColDef {
   key: keyof StockRow
@@ -40,7 +40,7 @@ const COLS: ColDef[] = [
   { key: 'price', label: '收盤價', align: 'right', mono: true,
     render: (s) => <span className="tabular font-mono">{s.price.toFixed(s.price >= 100 ? 1 : 2)}</span>
   },
-  { key: 'threeMonthReturn', label: '3M報酬', align: 'right', mono: true,
+  { key: 'threeMonthReturn', label: '3個月報酬', align: 'right', mono: true,
     render: (s) => {
       const r = s.threeMonthReturn
       if (r === null) return <span style={{ color: 'var(--color-text-muted)' }}>—</span>
@@ -65,6 +65,7 @@ interface Props {
 export function StockTable({ stocks, sort, onSort }: Props) {
   const { getFromCache, loadFromJson } = useKline()
   const [expandedId, setExpandedId] = useState<string | null>(null)
+  const klineRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     loadFromJson()
@@ -120,7 +121,6 @@ export function StockTable({ stocks, sort, onSort }: Props) {
             const cached = getFromCache(stock.id)
             return (
               <>
-                {/* 主要資料列 */}
                 <tr
                   key={stock.id}
                   className="border-b transition-colors cursor-pointer"
@@ -151,7 +151,6 @@ export function StockTable({ stocks, sort, onSort }: Props) {
                       )}
                     </td>
                   ))}
-                  {/* 展開/收合按鈕 */}
                   <td className="px-3 py-1.5 text-right">
                     <span style={{ color: 'var(--color-text-muted)', fontSize: 10 }}>
                       {isExpanded ? '▲' : '▼'}
@@ -159,28 +158,22 @@ export function StockTable({ stocks, sort, onSort }: Props) {
                   </td>
                 </tr>
 
-                {/* K 線展開列 */}
                 {isExpanded && (
                   <tr
                     key={stock.id + '-kline'}
                     style={{ background: 'var(--color-bg-700)', borderBottom: '1px solid var(--color-border)' }}
                   >
-                    <td colSpan={COLS.length + 1} className="px-4 py-3">
+                    <td colSpan={COLS.length + 1} className="px-3 py-3">
                       {cached ? (
-                        <div className="flex items-center gap-4">
+                        <div ref={klineRef} className="w-full">
                           <CandlestickSVG
                             data={cached}
-                            width={400}
+                            width={800}
                             height={160}
                             showVolume={true}
                             showMA={true}
+                            className="w-full"
                           />
-                          <div className="text-xs flex flex-col gap-1" style={{ color: 'var(--color-text-muted)' }}>
-                            <span>近 3 個月 K 線</span>
-                            <span style={{ color: stock.threeMonthReturn !== null && stock.threeMonthReturn >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-                              3M {stock.threeMonthReturn !== null ? `${stock.threeMonthReturn >= 0 ? '+' : ''}${stock.threeMonthReturn.toFixed(1)}%` : '—'}
-                            </span>
-                          </div>
                         </div>
                       ) : (
                         <span style={{ color: 'var(--color-text-muted)', fontSize: 11 }}>⚠ 無 K 線資料</span>
