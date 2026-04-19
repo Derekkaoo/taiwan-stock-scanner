@@ -2,9 +2,7 @@ name: 台股資料自動更新
 
 on:
   schedule:
-    # 每週一 01:00 UTC = 台灣時間 09:00（完整更新）
     - cron: '0 1 * * 1'
-    # 週二到週五 08:00 UTC = 台灣時間 16:00 收盤後（只更新 K 線）
     - cron: '0 8 * * 2-5'
   workflow_dispatch:
 
@@ -54,7 +52,7 @@ jobs:
       - name: 建置前端
         run: |
           cd frontend
-          npm run build
+          npx tsc -b && npx vite build
 
       - name: 複製資料到 dist
         run: |
