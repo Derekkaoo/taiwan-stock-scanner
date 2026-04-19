@@ -40,7 +40,7 @@ const COLS: ColDef[] = [
   { key: 'price', label: '收盤價', align: 'right', mono: true,
     render: (s) => <span className="tabular font-mono">{s.price.toFixed(s.price >= 100 ? 1 : 2)}</span>
   },
-  { key: 'threeMonthReturn', label: '3個月報酬', align: 'right', mono: true,
+  { key: 'threeMonthReturn', label: '1年報酬', align: 'right', mono: true,
     render: (s) => {
       const r = s.threeMonthReturn
       if (r === null) return <span style={{ color: 'var(--color-text-muted)' }}>—</span>
@@ -167,8 +167,8 @@ export function StockTable({ stocks, sort, onSort }: Props) {
                         {cached ? (
                           <CandlestickSVG
                             data={cached}
-                            width={400}
-                            height={120}
+                            width={600}
+                            height={200}
                             showVolume={true}
                             showMA={true}
                             className="w-full"

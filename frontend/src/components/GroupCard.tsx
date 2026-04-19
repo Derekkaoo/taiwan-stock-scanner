@@ -9,8 +9,6 @@ interface Props {
   stocks: StockRow[]
   fetchGroup: (ids: string[], onEach?: (id: string, bars: KlineBar[]) => void) => Promise<void>
   getFromCache: (id: string) => KlineBar[] | null
-  forceExpand?: boolean
-  forceCollapse?: boolean
 }
 
 function fmt(v: number | null, digits = 2) {
@@ -18,7 +16,7 @@ function fmt(v: number | null, digits = 2) {
   return v.toFixed(digits)
 }
 
-export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, forceExpand, forceCollapse }: Props) {
+export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props) {
   const [expanded, setExpanded] = useState(false)
   const [klineMap, setKlineMap] = useState<Record<string, KlineBar[]>>({})
   const [loading,  setLoading]  = useState(false)
@@ -61,14 +59,6 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, forceEx
     }
   }, [expanded, openAndLoad])
 
-  useEffect(() => {
-    if (forceExpand) openAndLoad()
-  }, [forceExpand])
-
-  useEffect(() => {
-    if (forceCollapse) setExpanded(false)
-  }, [forceCollapse])
-
   const getKline = (id: string) => klineMap[id] ?? getFromCache(id)
 
   return (
@@ -79,17 +69,13 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, forceEx
         className="w-full text-left px-4 py-2.5 flex items-start gap-2 hover:bg-[var(--color-bg-500)] transition-colors rounded-t select-none"
         aria-expanded={expanded}>
 
-        {/* 箭頭 */}
         <span className="text-[10px] transition-transform duration-200 shrink-0 mt-1" style={{
           display: 'inline-block',
           transform: expanded ? 'rotate(90deg)' : 'rotate(0deg)',
           color: 'var(--color-text-muted)',
         }}>▶</span>
 
-        {/* 三排內容 */}
         <div className="flex flex-col gap-0.5 flex-1 min-w-0">
-
-          {/* 第一排：族群標籤 + 支數 */}
           <div className="flex items-center gap-2">
             <span className="text-xs font-bold px-2 py-0.5 rounded-full border shrink-0"
               style={{ color, borderColor: color + '44', background: color + '18', whiteSpace: 'nowrap' }}>
@@ -100,21 +86,19 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, forceEx
             </span>
           </div>
 
-          {/* 第二排：業務說明 */}
           {groupDesc && (
             <span className="text-[10px]" style={{ color: 'var(--color-text-muted)', lineHeight: 1.4 }}>
               {groupDesc}
             </span>
           )}
 
-          {/* 第三排：統計數字 */}
           <div className="flex items-center gap-3 font-mono tabular text-[11px]">
             <span style={{ color: avgDelta >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
               均增持 +{fmt(avgDelta, 3)}%
             </span>
             {avgRet !== null && (
               <span style={{ color: avgRet >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-                3個月報酬 {avgRet >= 0 ? '+' : ''}{fmt(avgRet, 1)}%
+                1年報酬 {avgRet >= 0 ? '+' : ''}{fmt(avgRet, 1)}%
               </span>
             )}
           </div>
@@ -160,7 +144,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, forceEx
                         +{fmt(stock.delta, 3)}%
                       </span>
                       <span style={{ color: retColor }}>
-                        <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>3個月報酬 </span>
+                        <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>1年報酬 </span>
                         {ret !== null ? `${ret >= 0 ? '+' : ''}${fmt(ret, 1)}%` : '—'}
                       </span>
                     </div>
@@ -169,7 +153,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, forceEx
                   <div className="p-1">
                     {bars ? (
                       <CandlestickSVG
-                        data={bars.slice(-65)}
+                        data={bars.slice(-120)}
                         fullData={bars}
                         width={400}
                         height={200}
