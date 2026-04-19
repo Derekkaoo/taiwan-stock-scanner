@@ -99,6 +99,46 @@ STATEMENTDOG_TAGS = {
     "1452":"低軌衛星",   "376":"低軌衛星",
 }
 
+GROUP_DESC = {
+    "AI伺服器":       "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
+    "IC設計/半導體":  "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
+    "晶圓代工":       "晶圓代工，台積電、聯電等",
+    "散熱":           "均熱板、散熱模組、液冷系統，AI 伺服器熱管理關鍵",
+    "CPO矽光子":      "共封裝光學、矽光子、光模組，AI 資料中心高速傳輸",
+    "CoWoS先進封裝":  "CoWoS/SoIC 先進封裝、IC 載板，台積電供應鏈",
+    "PCB載板":        "印刷電路板、ABF 載板、軟板，電子產品基礎建設",
+    "被動元件":       "MLCC、電阻、電感等被動元件，電子產品必備",
+    "連接器":         "線材連接器、背板連接器，資料中心與消費電子應用",
+    "電子零組件":     "其他電子零組件，包含各類電子材料與模組",
+    "電源供應器":     "伺服器電源、工業電源供應器",
+    "線材Cable":      "高速傳輸線材、充電線，資料中心與消費電子",
+    "機電工程":       "廠務機電工程、無塵室工程，半導體廠建廠受惠",
+    "重電電網":       "變壓器、配電設備、電網基礎建設，台電供應商",
+    "太陽能":         "太陽能電池、模組、系統，綠能轉型受惠族群",
+    "風電":           "離岸風電、海底電纜，台灣再生能源政策受惠",
+    "機器人":         "工業機器手臂、減速機、AMR，自動化生產趨勢",
+    "工業自動化":     "CNC 工具機、工業電腦、自動化設備",
+    "鋼鐵":           "熱軋、冷軋、不鏽鋼，基礎建設與製造業原料",
+    "塑化":           "石化原料、塑膠製品，台塑四寶為代表",
+    "生技醫療":       "新藥研發、醫療器材、CDMO 委託開發製造",
+    "航運":           "散裝航運、油輪，全球大宗物資運輸",
+    "貨櫃航運":       "定期貨櫃航線，長榮、陽明、萬海三大業者",
+    "金控銀行":       "銀行、金控、壽險，國內金融體系核心",
+    "5G通訊":         "5G 基站設備、Open RAN、無線通訊模組",
+    "車用電子":       "ADAS 自駕、ECU、車用感測器，電動車趨勢",
+    "食品飲料":       "食品加工、飲料製造，民生消費穩定族群",
+    "光電/LED":       "LED 照明、面板、光學鏡頭、光學元件",
+    "光學/鏡頭":      "光學鏡頭、鏡片，手機與工業應用",
+    "雲端SaaS":       "雲端服務、企業軟體、資料中心服務",
+    "建設營造":       "不動產開發、營建工程",
+    "記憶體DRAM":     "DRAM、Flash 記憶體製造",
+    "低軌衛星":       "低軌衛星通訊、SpaceX Starlink 供應鏈",
+    "紡織":           "紡紗、織布、機能性布料",
+    "水泥":           "水泥、砂石、預拌混凝土",
+    "傳產其他":       "其他傳統產業",
+    "其他/未分組":    "尚未分類或跨產業個股",
+}
+
 
 def assign_group(sid, name, industry, sd_map):
     if sid in STOCK_OVERRIDE:
@@ -115,10 +155,6 @@ def assign_group(sid, name, industry, sd_map):
 
 
 def check_already_updated() -> bool:
-    """
-    檢查現有 stocks.json 的資料日期是否已是本週最新。
-    若是，代表來源網站已更新且上次 pipeline 已成功，不需重跑。
-    """
     stocks_path = DATA_DIR / "stocks.json"
     if not stocks_path.exists():
         return False
@@ -131,7 +167,6 @@ def check_already_updated() -> bool:
         if not latest_date_str:
             return False
         latest_date = datetime.strptime(latest_date_str, "%Y-%m-%d")
-        # 計算本週五（資料更新日）
         today = datetime.now()
         days_since_friday = (today.weekday() - 4) % 7
         last_friday = today - timedelta(days=days_since_friday)
@@ -305,7 +340,6 @@ def calc_3m_return(bars):
 
 
 def run():
-    # 自動偵測：若資料已是本週最新則跳過
     if check_already_updated():
         logger.info("本次執行跳過（資料已是最新）")
         return
@@ -343,6 +377,7 @@ def run():
             "id":               sid,
             "name":             name,
             "group":            group,
+            "groupDesc":        GROUP_DESC.get(group, ""),
             "holdingPct":       float(h.get("holdingPct", h.get("holding_pct", 0))),
             "delta":            float(h.get("delta", 0)),
             "price":            float(bars[-1]["c"]) if bars else 0.0,

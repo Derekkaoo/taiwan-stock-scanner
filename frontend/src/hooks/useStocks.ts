@@ -7,6 +7,7 @@ function normalizeRow(raw: Record<string, unknown>): StockRow {
     id:              String(raw.id ?? '').trim(),
     name:            String(raw.name ?? '').trim(),
     group:           String(raw.group ?? '').trim(),
+    groupDesc:       String(raw.groupDesc ?? '').trim(),
     holdingPct:      Number(raw.holdingPct ?? 0),
     delta:           Number(raw.delta ?? 0),
     price:           Number(raw.price ?? 0),
@@ -76,7 +77,6 @@ export function useStocks() {
       setStocks(processed)
       applyFilterSort(processed, searchRef.current, sort)
       setLastUpdated(new Date().toLocaleString('zh-TW'))
-      // 取資料截至日期（從第一筆的 date 欄位）
       if (processed.length > 0 && processed[0].date) {
         setDataDate(processed[0].date)
       }
