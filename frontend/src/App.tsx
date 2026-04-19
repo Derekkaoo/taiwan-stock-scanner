@@ -11,10 +11,16 @@ function fmt(v: number | null, d = 2) {
   return v !== null && v !== undefined ? v.toFixed(d) : '—'
 }
 
+function formatDataDate(dateStr: string | null): string {
+  if (!dateStr) return ''
+  // 2026-04-17 → 2026/04/17
+  return dateStr.replace(/-/g, '/')
+}
+
 export default function App() {
   const {
     filteredStocks, grouped, sort, loading, error,
-    searchQuery, lastUpdated,
+    searchQuery, lastUpdated, dataDate,
     loadData, setSearchQuery, updateSort, updateStockReturn,
   } = useStocks()
 
@@ -72,6 +78,7 @@ export default function App() {
   return (
     <div className="flex flex-col min-h-screen" style={{ background: 'var(--color-bg-800)' }}>
 
+      {/* 頂部標題列 */}
       <header
         className="sticky top-0 z-50 flex items-center gap-4 px-5 py-2.5 border-b"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
@@ -82,11 +89,28 @@ export default function App() {
             族群 K 線工具
           </span>
         </h1>
-        <div className="ml-auto text-xs tabular font-mono" style={{ color: 'var(--color-text-muted)' }}>
-          {lastUpdated ? `更新：${lastUpdated}` : '載入中…'}
+        <div className="ml-auto flex items-center gap-3 text-xs font-mono tabular">
+          {/* 資料截至日期 */}
+          {dataDate && (
+            <span
+              className="px-2 py-0.5 rounded border"
+              style={{
+                color: 'var(--color-accent-cyan)',
+                borderColor: 'var(--color-accent-cyan)' + '44',
+                background: 'var(--color-accent-cyan)' + '11',
+                fontSize: 11,
+              }}
+            >
+              資料截至 {formatDataDate(dataDate)}
+            </span>
+          )}
+          <span style={{ color: 'var(--color-text-muted)' }}>
+            {lastUpdated ? `載入：${lastUpdated}` : '載入中…'}
+          </span>
         </div>
       </header>
 
+      {/* 工具列 */}
       <div
         className="sticky top-[41px] z-40 flex flex-wrap items-center gap-2 px-5 py-2 border-b"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
@@ -156,6 +180,7 @@ export default function App() {
         />
       </div>
 
+      {/* 狀態列 */}
       <div
         className="flex items-center gap-4 px-5 py-1.5 border-b text-[11px]"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
@@ -182,6 +207,7 @@ export default function App() {
         )}
       </div>
 
+      {/* 摘要統計 */}
       {stockCount > 0 && (
         <div className="flex gap-3 px-5 py-3 flex-wrap">
           {[
@@ -199,6 +225,7 @@ export default function App() {
         </div>
       )}
 
+      {/* 主內容 */}
       <main className="flex-1 px-5 pb-8">
         {!loading && stockCount === 0 && (
           <div className="flex flex-col items-center justify-center py-20" style={{ color: 'var(--color-text-muted)' }}>
@@ -235,6 +262,7 @@ export default function App() {
         )}
       </main>
 
+      {/* Toast */}
       <div className="fixed bottom-5 right-5 z-[9999] flex flex-col gap-2">
         {toasts.map(t => (
           <div key={t.id} className="rounded border px-4 py-2 text-xs shadow-lg max-w-xs"

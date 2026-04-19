@@ -39,6 +39,7 @@ export function useStocks() {
   const [error,          setError]          = useState<string | null>(null)
   const [searchQuery,    setSearchQueryRaw] = useState('')
   const [lastUpdated,    setLastUpdated]    = useState<string | null>(null)
+  const [dataDate,       setDataDate]       = useState<string | null>(null)
   const searchRef = useRef('')
 
   const processRows = useCallback((rows: StockRow[]): StockRow[] => {
@@ -75,6 +76,10 @@ export function useStocks() {
       setStocks(processed)
       applyFilterSort(processed, searchRef.current, sort)
       setLastUpdated(new Date().toLocaleString('zh-TW'))
+      // 取資料截至日期（從第一筆的 date 欄位）
+      if (processed.length > 0 && processed[0].date) {
+        setDataDate(processed[0].date)
+      }
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e)
       setError(msg)
@@ -110,7 +115,7 @@ export function useStocks() {
 
   return {
     stocks, filteredStocks, grouped, sort, loading, error,
-    searchQuery, lastUpdated, loadData, setSearchQuery,
-    updateSort, updateStockReturn,
+    searchQuery, lastUpdated, dataDate,
+    loadData, setSearchQuery, updateSort, updateStockReturn,
   }
 }
