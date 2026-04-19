@@ -94,11 +94,9 @@ export default function App() {
 
   const { fetchGroup, getFromCache, loadFromJson } = useKline()
 
-  const [view,        setView]        = useState<View>('group')
-  const [collapseAll, setCollapseAll] = useState(false)
-  const [expandAll,   setExpandAll]   = useState(false)
-  const [groupSort,   setGroupSort]   = useState<GroupSort>('delta')
-  const [toasts,      setToasts]      = useState<Toast[]>([])
+  const [view,      setView]      = useState<View>('group')
+  const [groupSort, setGroupSort] = useState<GroupSort>('delta')
+  const [toasts,    setToasts]    = useState<Toast[]>([])
   const searchTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   const toast = useCallback((message: string, type: Toast['type'] = 'info') => {
@@ -123,19 +121,6 @@ export default function App() {
     searchTimer.current = setTimeout(() => setSearchQuery(q), 200)
   }
 
-  const handleExpandAll = useCallback(async () => {
-    setCollapseAll(false)
-    setExpandAll(true)
-    setTimeout(() => setExpandAll(false), 100)
-    toast('已展開全部族群', 'info')
-  }, [toast])
-
-  const handleCollapseAll = useCallback(() => {
-    setExpandAll(false)
-    setCollapseAll(true)
-    setTimeout(() => setCollapseAll(false), 100)
-  }, [])
-
   const groupEntries = Object.entries(grouped)
   const stockCount = filteredStocks.length
   const groupCount = groupEntries.length
@@ -144,7 +129,7 @@ export default function App() {
     : null
   const maxDelta = stockCount ? Math.max(...filteredStocks.map(x => x.delta)) : null
 
-  const sortedGroupEntries = [...groupEntries].sort(([nameA, stocksA], [nameB, stocksB]) => {
+  const sortedGroupEntries = [...groupEntries].sort(([, stocksA], [, stocksB]) => {
     switch (groupSort) {
       case 'delta': {
         const avgA = stocksA.reduce((s, x) => s + x.delta, 0) / stocksA.length
@@ -262,19 +247,7 @@ export default function App() {
 
         {view === 'group' && (
           <>
-            <button onClick={handleExpandAll}
-              className="text-xs px-3 py-1 rounded border transition-colors cursor-pointer"
-              style={{ background: 'var(--color-bg-600)', borderColor: 'var(--color-border)', color: 'var(--color-text-secondary)' }}>
-              展開全部
-            </button>
-            <button onClick={handleCollapseAll}
-              className="text-xs px-3 py-1 rounded border transition-colors cursor-pointer"
-              style={{ background: 'var(--color-bg-600)', borderColor: 'var(--color-border)', color: 'var(--color-text-secondary)' }}>
-              收合全部
-            </button>
-
             <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
-
             <span className="text-xs" style={{ color: 'var(--color-text-muted)' }}>族群排序：</span>
             <select
               value={groupSort}
@@ -377,8 +350,6 @@ export default function App() {
                   })
                 }}
                 getFromCache={getFromCache}
-                forceExpand={expandAll}
-                forceCollapse={collapseAll}
               />
             ))}
           </div>

@@ -163,7 +163,7 @@ export function StockTable({ stocks, sort, onSort }: Props) {
                     style={{ background: 'var(--color-bg-700)', borderBottom: '1px solid var(--color-border)' }}
                   >
                     <td colSpan={COLS.length + 1} className="p-3">
-                      <div style={{ width: '40%', minWidth: 200 }}>
+                      <div style={{ width: '50%', minWidth: 200 }}>
                         {cached ? (
                           <CandlestickSVG
                             data={cached}

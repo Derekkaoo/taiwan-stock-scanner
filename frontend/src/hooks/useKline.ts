@@ -9,7 +9,7 @@ function generateMockKline(stockId: string): KlineBar[] {
     const x = Math.sin(s) * 10000
     return min + (x - Math.floor(x)) * (max - min)
   }
-  const days = 65
+  const days = 130
   const basePrice = 50 + (seed % 300)
   const data: KlineBar[] = []
   let price = basePrice
@@ -105,7 +105,7 @@ export function useKline() {
 
     for (const suffix of ['.TW', '.TWO']) {
       try {
-        const url = `${YAHOO_BASE}${stockId}${suffix}?interval=1d&range=3mo`
+        const url = `${YAHOO_BASE}${stockId}${suffix}?interval=1d&range=6mo`
         const controller = new AbortController()
         const timer = setTimeout(() => controller.abort(), 8000)
         const resp = await fetch(url, { signal: controller.signal })

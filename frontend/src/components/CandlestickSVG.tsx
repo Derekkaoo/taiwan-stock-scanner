@@ -23,7 +23,7 @@ function shortDate(dateStr: string): string {
 }
 
 export function CandlestickSVG({
-  data, width = 316, height = 150,
+  data, width = 400, height = 150,
   showVolume = true, showMA = true, className,
 }: Props) {
   if (!data || data.length === 0) return null
@@ -32,7 +32,7 @@ export function CandlestickSVG({
   const maLegendH = showMA ? 14 : 0
   const volHeight = showVolume ? Math.floor(height * 0.2) : 0
   const chartH    = height - volHeight - dateAxisH - maLegendH - 4
-  const padL = 4, padR = 44, padT = 8, padB = 8
+  const padL = 18, padR = 44, padT = 8, padB = 8
 
   const closes  = data.map(d => d.c)
   const highs   = data.map(d => d.h)
@@ -42,9 +42,16 @@ export function CandlestickSVG({
   const ma20 = calcMA(closes, 20)
   const ma60 = calcMA(closes, 60)
 
-  const minP   = Math.min(...lows)
-  const maxP   = Math.max(...highs)
-  const rangeP = maxP - minP || 1
+  const rawMin = Math.min(...lows)
+  const rawMax = Math.max(...highs)
+  const rawRange = rawMax - rawMin || 1
+
+  // 價格範圍加 5% padding，讓 K 棒不會頂到邊界
+  const pricePad = rawRange * 0.05
+  const minP = rawMin - pricePad
+  const maxP = rawMax + pricePad
+  const rangeP = maxP - minP
+
   const maxV   = Math.max(...volumes) || 1
 
   const n       = data.length
@@ -75,16 +82,17 @@ export function CandlestickSVG({
     ))
   }
 
-  const tickIndices = [0, Math.floor(n / 3), Math.floor(n * 2 / 3), n - 1]
+  // 4 個等距 Y 軸刻度，用實際價格範圍（不含 padding）
+  const Y_TICKS = 4
+  const yTicks = Array.from({ length: Y_TICKS }, (_, i) => {
+  return minP + (rangeP * i) / (Y_TICKS - 1)
+})
 
+  const tickIndices = [0, Math.floor(n / 3), Math.floor(n * 2 / 3), n - 1]
   const dateAxisY = height - maLegendH - dateAxisH + 10
   const dateLineY = height - maLegendH - dateAxisH
   const maLegendY = height - maLegendH + 10
   const priceLabelX = width - padR + 4
-
-  // 最高最低價對應的 Y 座標
-  const maxPY = py(maxP)
-  const minPY = py(minP)
 
   return (
     <svg
@@ -93,6 +101,16 @@ export function CandlestickSVG({
       className={className}
       style={{ display: 'block', width: '100%', height: 'auto' }}
     >
+      {/* Y 軸格線 */}
+      {yTicks.map((t, i) => (
+        <line key={i}
+          x1={padL} y1={py(t)}
+          x2={width - padR} y2={py(t)}
+          stroke={mutedColor} strokeWidth="0.3" opacity="0.2"
+          strokeDasharray="3,3"
+        />
+      ))}
+
       {/* 成交量柱 */}
       {showVolume && data.map((d, i) => {
         const isUp  = d.c >= d.o
@@ -133,40 +151,28 @@ export function CandlestickSVG({
         stroke={mutedColor} strokeWidth="0.5" opacity="0.2"
       />
 
-      {/* 最高價標籤（對齊實際 Y 位置） */}
-      <line
-        x1={width - padR} y1={maxPY}
-        x2={width - padR + 2} y2={maxPY}
-        stroke={mutedColor} strokeWidth="0.5" opacity="0.5"
-      />
-      <text
-        x={priceLabelX} y={maxPY + 4}
-        fontSize={9} fill={mutedColor} fontFamily="monospace"
-        textAnchor="start"
-      >
-        {maxP.toFixed(maxP >= 100 ? 1 : 2)}
-      </text>
-
-      {/* 最低價標籤（對齊實際 Y 位置） */}
-      <line
-        x1={width - padR} y1={minPY}
-        x2={width - padR + 2} y2={minPY}
-        stroke={mutedColor} strokeWidth="0.5" opacity="0.5"
-      />
-      <text
-        x={priceLabelX} y={minPY + 4}
-        fontSize={9} fill={mutedColor} fontFamily="monospace"
-        textAnchor="start"
-      >
-        {minP.toFixed(minP >= 100 ? 1 : 2)}
-      </text>
+      {/* Y 軸刻度標籤 */}
+      {yTicks.map((t, i) => (
+        <g key={i}>
+          <line
+            x1={width - padR} y1={py(t)}
+            x2={width - padR + 3} y2={py(t)}
+            stroke={mutedColor} strokeWidth="0.5" opacity="0.5"
+          />
+          <text
+            x={priceLabelX} y={py(t)}
+            fontSize={9} fill={mutedColor}
+            fontFamily="monospace" textAnchor="start"
+            dominantBaseline="middle"
+          >
+            {t.toFixed(t >= 100 ? 1 : 2)}
+          </text>
+        </g>
+      ))}
 
       {/* 日期軸分隔線 */}
-      <line
-        x1={padL} y1={dateLineY}
-        x2={width - padR} y2={dateLineY}
-        stroke={mutedColor} strokeWidth="0.5" opacity="0.3"
-      />
+      <line x1={padL} y1={dateLineY} x2={width - padR} y2={dateLineY}
+        stroke={mutedColor} strokeWidth="0.5" opacity="0.3" />
 
       {/* 4 個日期刻度 */}
       {tickIndices.map((idx, ti) => {
@@ -174,16 +180,10 @@ export function CandlestickSVG({
         const date = data[idx]?.date ? shortDate(data[idx].date) : ''
         return (
           <g key={ti}>
-            <line
-              x1={x} y1={dateLineY}
-              x2={x} y2={dateLineY + 3}
-              stroke={mutedColor} strokeWidth="0.5" opacity="0.5"
-            />
-            <text
-              x={x} y={dateAxisY}
-              fontSize={9} fill={mutedColor} fontFamily="monospace"
-              textAnchor="middle"
-            >
+            <line x1={x} y1={dateLineY} x2={x} y2={dateLineY + 3}
+              stroke={mutedColor} strokeWidth="0.5" opacity="0.5" />
+            <text x={x} y={dateAxisY} fontSize={9} fill={mutedColor}
+              fontFamily="monospace" textAnchor="middle">
               {date}
             </text>
           </g>

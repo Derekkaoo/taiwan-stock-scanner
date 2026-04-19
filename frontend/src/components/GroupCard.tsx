@@ -170,7 +170,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, forceEx
                     {bars ? (
                       <CandlestickSVG
                         data={bars}
-                        width={316}
+                        width={400}
                         height={150}
                         showVolume={true}
                         showMA={true}

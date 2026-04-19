@@ -298,7 +298,7 @@ def fetch_klines(stock_ids):
         for suffix in [".TW", ".TWO"]:
             try:
                 url = ("https://query1.finance.yahoo.com/v8/finance/chart/"
-                       + sid + suffix + "?interval=1d&range=3mo")
+       + sid + suffix + "?interval=1d&range=6mo")
                 r = requests.get(url, headers=HEADERS, timeout=10)
                 if not r.ok:
                     continue
