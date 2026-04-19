@@ -105,7 +105,7 @@ export function useKline() {
 
     for (const suffix of ['.TW', '.TWO']) {
       try {
-        const url = `${YAHOO_BASE}${stockId}${suffix}?interval=1d&range=6mo`
+        const url = `${YAHOO_BASE}${stockId}${suffix}?interval=1d&range=1y`
         const controller = new AbortController()
         const timer = setTimeout(() => controller.abort(), 8000)
         const resp = await fetch(url, { signal: controller.signal })

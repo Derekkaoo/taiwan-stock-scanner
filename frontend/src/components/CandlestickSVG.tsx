@@ -2,6 +2,7 @@ import type { KlineBar } from '../types'
 
 interface Props {
   data: KlineBar[]
+  fullData?: KlineBar[]  // 完整資料，用來計算 MA
   width?: number
   height?: number
   showVolume?: boolean
@@ -23,7 +24,7 @@ function shortDate(dateStr: string): string {
 }
 
 export function CandlestickSVG({
-  data, width = 400, height = 150,
+  data, fullData, width = 400, height = 200,
   showVolume = true, showMA = true, className,
 }: Props) {
   if (!data || data.length === 0) return null
@@ -34,19 +35,22 @@ export function CandlestickSVG({
   const chartH    = height - volHeight - dateAxisH - maLegendH - 4
   const padL = 18, padR = 44, padT = 8, padB = 8
 
-  const closes  = data.map(d => d.c)
   const highs   = data.map(d => d.h)
   const lows    = data.map(d => d.l)
   const volumes = data.map(d => d.v)
 
-  const ma20 = calcMA(closes, 20)
-  const ma60 = calcMA(closes, 60)
+  // MA 用完整資料計算，只取最後 data.length 筆
+  const sourceData = fullData && fullData.length >= data.length ? fullData : data
+  const sourceCloses = sourceData.map(d => d.c)
+  const fullMA20 = calcMA(sourceCloses, 20)
+  const fullMA60 = calcMA(sourceCloses, 60)
+  const offset = sourceData.length - data.length
+  const ma20 = fullMA20.slice(offset)
+  const ma60 = fullMA60.slice(offset)
 
   const rawMin = Math.min(...lows)
   const rawMax = Math.max(...highs)
   const rawRange = rawMax - rawMin || 1
-
-  // 價格範圍加 5% padding，讓 K 棒不會頂到邊界
   const pricePad = rawRange * 0.05
   const minP = rawMin - pricePad
   const maxP = rawMax + pricePad
@@ -82,11 +86,10 @@ export function CandlestickSVG({
     ))
   }
 
-  // 4 個等距 Y 軸刻度，用實際價格範圍（不含 padding）
   const Y_TICKS = 4
   const yTicks = Array.from({ length: Y_TICKS }, (_, i) => {
-  return minP + (rangeP * i) / (Y_TICKS - 1)
-})
+    return minP + (rangeP * i) / (Y_TICKS - 1)
+  })
 
   const tickIndices = [0, Math.floor(n / 3), Math.floor(n * 2 / 3), n - 1]
   const dateAxisY = height - maLegendH - dateAxisH + 10

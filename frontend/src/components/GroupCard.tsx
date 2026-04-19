@@ -169,9 +169,10 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, forceEx
                   <div className="p-1">
                     {bars ? (
                       <CandlestickSVG
-                        data={bars}
+                        data={bars.slice(-65)}
+                        fullData={bars}
                         width={400}
-                        height={150}
+                        height={200}
                         showVolume={true}
                         showMA={true}
                         className="w-full"
