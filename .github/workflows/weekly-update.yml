@@ -49,10 +49,13 @@ jobs:
           cd frontend
           npm install
 
+      - name: 修正執行權限
+        run: chmod -R +x frontend/node_modules/.bin/
+
       - name: 建置前端
         run: |
           cd frontend
-          npx tsc -b && npx vite build
+          npm run build
 
       - name: 複製資料到 dist
         run: |
