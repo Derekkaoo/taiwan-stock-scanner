@@ -1,18 +1,11 @@
 #!/usr/bin/env python3
 """
-run_pipeline.py — 完整資料管線（含財報狗族群分類）
+run_pipeline.py — 完整資料管線（含自動偵測來源是否更新）
 執行：venv\Scripts\python.exe ..\scripts\run_pipeline.py
-
-流程：
-  1. 抓大股東持股名單（norway.twsthr.info）
-  2. 抓產業別（TWSE ISIN）
-  3. 抓族群分類（財報狗概念股，全市場）
-  4. 抓 K 線資料（Yahoo Finance）
-  5. 輸出 stocks.json + klines.json
 """
 import json, logging, sys, time, re
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -121,6 +114,39 @@ def assign_group(sid, name, industry, sd_map):
     return "其他/未分組"
 
 
+def check_already_updated() -> bool:
+    """
+    檢查現有 stocks.json 的資料日期是否已是本週最新。
+    若是，代表來源網站已更新且上次 pipeline 已成功，不需重跑。
+    """
+    stocks_path = DATA_DIR / "stocks.json"
+    if not stocks_path.exists():
+        return False
+    try:
+        with open(stocks_path, encoding="utf-8") as f:
+            stocks = json.load(f)
+        if not stocks:
+            return False
+        latest_date_str = stocks[0].get("date", "")
+        if not latest_date_str:
+            return False
+        latest_date = datetime.strptime(latest_date_str, "%Y-%m-%d")
+        # 計算本週五（資料更新日）
+        today = datetime.now()
+        days_since_friday = (today.weekday() - 4) % 7
+        last_friday = today - timedelta(days=days_since_friday)
+        last_friday = last_friday.replace(hour=0, minute=0, second=0, microsecond=0)
+        logger.info("現有資料日期：%s，本週五：%s", latest_date_str, last_friday.strftime("%Y-%m-%d"))
+        if latest_date >= last_friday:
+            logger.info("資料已是本週最新，跳過更新")
+            return True
+        logger.info("資料尚未更新到本週，繼續執行 pipeline")
+        return False
+    except Exception as e:
+        logger.warning("檢查日期失敗：%s，繼續執行", e)
+        return False
+
+
 def fetch_holdings():
     logger.info("Step 1: 抓取持股名單…")
     url = ("https://norway.twsthr.info/StockHoldersContinue.aspx"
@@ -164,7 +190,7 @@ def fetch_holdings():
                 })
             except:
                 continue
-        logger.info("持股名單：%d 筆", len(rows))
+        logger.info("持股名單：%d 筆，資料日期：%s", len(rows), date_str)
         return rows
     except Exception as e:
         logger.error("持股名單抓取失敗：%s", e)
@@ -236,8 +262,8 @@ def fetch_klines(stock_ids):
     for i, sid in enumerate(stock_ids):
         for suffix in [".TW", ".TWO"]:
             try:
-                url = (f"https://query1.finance.yahoo.com/v8/finance/chart/"
-                       f"{sid}{suffix}?interval=1d&range=3mo")
+                url = ("https://query1.finance.yahoo.com/v8/finance/chart/"
+                       + sid + suffix + "?interval=1d&range=3mo")
                 r = requests.get(url, headers=HEADERS, timeout=10)
                 if not r.ok:
                     continue
@@ -279,6 +305,11 @@ def calc_3m_return(bars):
 
 
 def run():
+    # 自動偵測：若資料已是本週最新則跳過
+    if check_already_updated():
+        logger.info("本次執行跳過（資料已是最新）")
+        return
+
     holdings = fetch_holdings()
     if not holdings:
         old_path = DATA_DIR / "stocks.json"
