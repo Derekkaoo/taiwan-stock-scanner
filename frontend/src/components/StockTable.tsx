@@ -166,7 +166,8 @@ export function StockTable({ stocks, sort, onSort }: Props) {
                       <div style={{ width: '50%', minWidth: 200 }}>
                         {cached ? (
                           <CandlestickSVG
-                            data={cached}
+                            data={cached.slice(-90)}
+			    fullData={cached}
                             width={600}
                             height={200}
                             showVolume={true}

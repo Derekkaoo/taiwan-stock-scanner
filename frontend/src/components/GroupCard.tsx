@@ -153,7 +153,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
                   <div className="p-1">
                     {bars ? (
                       <CandlestickSVG
-                        data={bars.slice(-120)}
+                        data={bars.slice(-65)}
                         fullData={bars}
                         width={400}
                         height={200}
