@@ -257,7 +257,7 @@ export default function App() {
               }}
             >
               <option value="delta">均增持幅度 ↓</option>
-              <option value="return">3個月報酬 ↓</option>
+              <option value="return">1年漲幅 ↓</option>
             </select>
           </>
         )}

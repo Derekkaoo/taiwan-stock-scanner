@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback } from 'react'
 import type { StockRow, KlineBar } from '../types'
 import { THEME_CSS_MAP, TAG_COLORS } from '../constants/themeGroups'
 import { CandlestickSVG } from './CandlestickSVG'
@@ -98,7 +98,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
             </span>
             {avgRet !== null && (
               <span style={{ color: avgRet >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-                1年報酬 {avgRet >= 0 ? '+' : ''}{fmt(avgRet, 1)}%
+                1年漲幅 {avgRet >= 0 ? '+' : ''}{fmt(avgRet, 1)}%
               </span>
             )}
           </div>
@@ -144,7 +144,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
                         +{fmt(stock.delta, 3)}%
                       </span>
                       <span style={{ color: retColor }}>
-                        <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>1年報酬 </span>
+                        <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>1年漲幅 </span>
                         {ret !== null ? `${ret >= 0 ? '+' : ''}${fmt(ret, 1)}%` : '—'}
                       </span>
                     </div>
