@@ -14,6 +14,7 @@ export interface StockRow {
   marketCap: number    // 市值（億）
   date: string         // 資料日期 YYYY-MM-DD
   threeMonthReturn: number | null  // 近三個月報酬率（從 K 線計算）
+  subIndustries?: string[]
 }
 
 /** K 線資料列 */

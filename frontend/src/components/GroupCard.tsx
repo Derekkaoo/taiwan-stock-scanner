@@ -148,6 +148,16 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
                         {ret !== null ? `${ret >= 0 ? '+' : ''}${fmt(ret, 1)}%` : '—'}
                       </span>
                     </div>
+                    {stock.subIndustries && stock.subIndustries.length > 0 && (
+                      <div className="flex flex-wrap gap-1 mt-1">
+                        {stock.subIndustries.map(si => (
+                          <span key={si} className="text-[9px] px-1.5 py-0.5 rounded"
+                            style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-muted)', border: '1px solid var(--color-border)' }}>
+                            {si}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
 
                   <div className="p-1">

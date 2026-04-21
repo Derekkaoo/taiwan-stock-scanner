@@ -117,6 +117,18 @@ export const THEME_CSS_MAP: Record<string, string> = {
   "生技醫療": "tag-cooling",  "新藥CDMO": "tag-cooling",
   "車用電子": "tag-robot",   "5G通訊": "tag-cpo",
   "資安": "tag-purple",      "雲端SaaS": "tag-purple",
+  "先進封裝": "tag-cowos",
+  "光通訊/矽光子": "tag-cpo",
+  "記憶體": "tag-memory",
+  "衛星通訊": "tag-purple",
+  "建設營造": "tag-steel",
+  "電子零組件": "tag-other",
+  "IC設計/半導體": "tag-cowos",
+  "光電/LED": "tag-cpo",
+  "光學/鏡頭": "tag-cpo",
+  "線材Cable": "tag-other",
+  "機電工程": "tag-other",
+  "其他/未分組": "tag-other",
 };
 
 /** CSS class → 顏色值 */
