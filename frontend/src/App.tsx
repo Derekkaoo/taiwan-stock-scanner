@@ -186,21 +186,16 @@ export default function App() {
           千張大戶持股追蹤器
         </h1>
         <div className="ml-auto flex items-center gap-3 text-xs font-mono tabular">
-          {dataDate && (
-            <span
-              className="px-2 py-0.5 rounded border"
-              style={{
-                color: 'var(--color-accent-cyan)',
-                borderColor: 'var(--color-accent-cyan)' + '44',
-                background: 'var(--color-accent-cyan)' + '11',
-                fontSize: 11,
-              }}
-            >
-              資料截至 {formatDataDate(dataDate)}
-            </span>
-          )}
-          <span style={{ color: 'var(--color-text-muted)' }}>
-            {lastUpdated ? `載入：${lastUpdated}` : '載入中…'}
+          <span
+            className="px-2 py-0.5 rounded border"
+            style={{
+              color: 'var(--color-accent-cyan)',
+              borderColor: 'var(--color-accent-cyan)' + '44',
+              background: 'var(--color-accent-cyan)' + '11',
+              fontSize: 11,
+            }}
+          >
+            {lastUpdated ? `最後更新 ${lastUpdated}` : '載入中…'}
           </span>
         </div>
       </header>
