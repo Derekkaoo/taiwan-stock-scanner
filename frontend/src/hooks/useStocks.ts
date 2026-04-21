@@ -1,5 +1,5 @@
-import { useState, useCallback, useRef } from 'react'
-import type { StockRow, SortState, DataMode } from '../types'
+import { useState, useCallback, useRef, useEffect } from 'react'
+import type { StockRow, SortState, DataMode, ReturnPeriod } from '../types'
 import { assignThemeGroup, buildGroupedStocks } from '../constants/themeGroups'
 
 function normalizeRow(raw: Record<string, unknown>): StockRow {
@@ -48,21 +48,7 @@ function parseReturns(raw: unknown): StockRow['returns'] {
   return out
 }
 
-function compareStocks(a: StockRow, b: StockRow, sort: SortState): number {
-  const av = a[sort.key]
-  const bv = b[sort.key]
-  if (av === null || av === undefined) return 1
-  if (bv === null || bv === undefined) return -1
-  let cmp: number
-  if (typeof av === 'string' && typeof bv === 'string') {
-    cmp = av.localeCompare(bv)
-  } else {
-    cmp = (av as number) - (bv as number)
-  }
-  return sort.dir === 'asc' ? cmp : -cmp
-}
-
-export function useStocks() {
+export function useStocks(returnPeriod: ReturnPeriod = 'y1') {
   const [stocks,         setStocks]         = useState<StockRow[]>([])
   const [filteredStocks, setFilteredStocks] = useState<StockRow[]>([])
   const [grouped,        setGrouped]        = useState<Record<string, StockRow[]>>({})
@@ -83,6 +69,26 @@ export function useStocks() {
 
   const applyFilterSort = useCallback(
     (allStocks: StockRow[], query: string, currentSort: SortState) => {
+      const getSortVal = (row: StockRow): unknown => {
+        if (currentSort.key === 'threeMonthReturn') {
+          const v = row.returns && row.returns[returnPeriod]
+          return v == null ? row.threeMonthReturn : v
+        }
+        return row[currentSort.key]
+      }
+      const compare = (a: StockRow, b: StockRow): number => {
+        const av = getSortVal(a)
+        const bv = getSortVal(b)
+        if (av === null || av === undefined) return 1
+        if (bv === null || bv === undefined) return -1
+        let cmp: number
+        if (typeof av === 'string' && typeof bv === 'string') {
+          cmp = av.localeCompare(bv)
+        } else {
+          cmp = (av as number) - (bv as number)
+        }
+        return currentSort.dir === 'asc' ? cmp : -cmp
+      }
       const q = query.toLowerCase().trim()
       const filtered = q
         ? allStocks.filter(s =>
@@ -91,11 +97,19 @@ export function useStocks() {
             s.group.toLowerCase().includes(q)
           )
         : [...allStocks]
-      const sorted = [...filtered].sort((a, b) => compareStocks(a, b, currentSort))
+      const sorted = [...filtered].sort(compare)
       setFilteredStocks(sorted)
       setGrouped(buildGroupedStocks(filtered))
-    }, []
+    }, [returnPeriod]
   )
+
+  // 期間切換時重新排序（個股表漲幅欄位依當前期間排）
+  useEffect(() => {
+    if (stocks.length > 0) {
+      applyFilterSort(stocks, searchRef.current, sort)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [returnPeriod])
 
   const loadData = useCallback(async (_mode?: DataMode) => {
     setLoading(true)

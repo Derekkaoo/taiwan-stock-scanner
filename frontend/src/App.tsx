@@ -87,17 +87,17 @@ function InfoPopup({ text }: { text: string }) {
 }
 
 export default function App() {
+  const [returnPeriod, setReturnPeriod] = useState<ReturnPeriod>('y1')
   const {
     filteredStocks, grouped, sort, loading, error,
     searchQuery, lastUpdated, dataDate,
     loadData, setSearchQuery, updateSort, updateStockReturn,
-  } = useStocks()
+  } = useStocks(returnPeriod)
 
   const { fetchGroup, getFromCache, loadFromJson } = useKline()
 
   const [view,      setView]      = useState<View>('group')
   const [groupSort, setGroupSort] = useState<GroupSort>('delta')
-  const [returnPeriod, setReturnPeriod] = useState<ReturnPeriod>('y1')
   const [toasts,    setToasts]    = useState<Toast[]>([])
   const searchTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
