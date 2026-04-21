@@ -15,6 +15,8 @@ export interface StockRow {
   date: string         // 資料日期 YYYY-MM-DD
   threeMonthReturn: number | null  // 近三個月報酬率（從 K 線計算）
   subIndustries?: string[]
+  groups?: string[]                         // 股票同時屬於多個產業別
+  subsByGroup?: Record<string, string[]>   // 每個產業別下該股票相關的細產業
 }
 
 /** K 線資料列 */

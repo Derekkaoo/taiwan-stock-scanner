@@ -159,15 +159,20 @@ export function assignThemeGroup(stockId: string): string {
   return '其他/未分組'
 }
 
-/** 建立 StockRow[] → grouped Record */
+/** 建立 StockRow[] → grouped Record。若 stock.groups 有值（多族群），
+ *  會把該股票列在每個族群下；否則 fallback 到單一 stock.group。 */
 export function buildGroupedStocks(
   stocks: import('../types').StockRow[]
 ): Record<string, import('../types').StockRow[]> {
   const groups: Record<string, import('../types').StockRow[]> = {}
   for (const stock of stocks) {
-    const g = stock.group || assignThemeGroup(stock.id)
-    if (!groups[g]) groups[g] = []
-    groups[g].push(stock)
+    const gs = (stock.groups && stock.groups.length > 0)
+      ? stock.groups
+      : [stock.group || assignThemeGroup(stock.id)]
+    for (const g of gs) {
+      if (!groups[g]) groups[g] = []
+      groups[g].push(stock)
+    }
   }
   // 依平均 delta 降冪排序族群
   return Object.fromEntries(

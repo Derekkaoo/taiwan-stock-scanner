@@ -3,6 +3,21 @@ import type { StockRow, SortState, DataMode } from '../types'
 import { assignThemeGroup, buildGroupedStocks } from '../constants/themeGroups'
 
 function normalizeRow(raw: Record<string, unknown>): StockRow {
+  const groups = Array.isArray(raw.groups)
+    ? (raw.groups as unknown[]).map(g => String(g).trim()).filter(Boolean)
+    : undefined
+  const subIndustries = Array.isArray(raw.subIndustries)
+    ? (raw.subIndustries as unknown[]).map(s => String(s).trim()).filter(Boolean)
+    : undefined
+  const rawSbg = raw.subsByGroup
+  const subsByGroup: Record<string, string[]> | undefined = (rawSbg && typeof rawSbg === 'object' && !Array.isArray(rawSbg))
+    ? Object.fromEntries(
+        Object.entries(rawSbg as Record<string, unknown>).map(([k, v]) => [
+          k,
+          Array.isArray(v) ? (v as unknown[]).map(x => String(x).trim()).filter(Boolean) : [],
+        ])
+      )
+    : undefined
   return {
     id:              String(raw.id ?? '').trim(),
     name:            String(raw.name ?? '').trim(),
@@ -14,6 +29,9 @@ function normalizeRow(raw: Record<string, unknown>): StockRow {
     marketCap:       Number(raw.marketCap ?? 0),
     date:            String(raw.date ?? new Date().toISOString().slice(0, 10)),
     threeMonthReturn: raw.threeMonthReturn != null ? Number(raw.threeMonthReturn) : null,
+    subIndustries,
+    groups,
+    subsByGroup,
   }
 }
 

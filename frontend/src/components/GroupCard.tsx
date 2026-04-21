@@ -16,6 +16,14 @@ function fmt(v: number | null, digits = 2) {
   return v.toFixed(digits)
 }
 
+/** 取這個股票在「本族群」下相關的細產業；若沒 subsByGroup 則 fallback 用全部 */
+function getSubsForGroup(stock: StockRow, groupName: string): string[] {
+  if (stock.subsByGroup && stock.subsByGroup[groupName]) {
+    return stock.subsByGroup[groupName]
+  }
+  return stock.subIndustries ?? []
+}
+
 export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props) {
   const [expanded, setExpanded] = useState(false)
   const [klineMap, setKlineMap] = useState<Record<string, KlineBar[]>>({})
@@ -32,17 +40,16 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
     : null
   const groupDesc = stocks[0]?.groupDesc ?? ''
 
-  // Top 3 aggregate sub-industries in this group
+  // 本族群內最常出現的細產業 Top 3（aggregate chips）— 只算跟此族群相關的
   const topSubIndustries = (() => {
     const counts = new Map<string, number>()
     stocks.forEach(s => {
-      s.subIndustries?.forEach(si => {
-        counts.set(si, (counts.get(si) ?? 0) + 1)
-      })
+      for (const sub of getSubsForGroup(s, groupName)) {
+        counts.set(sub, (counts.get(sub) ?? 0) + 1)
+      }
     })
     return Array.from(counts.entries())
       .sort((a, b) => b[1] - a[1])
-      .slice(0, 3)
   })()
 
   const openAndLoad = useCallback(async () => {
@@ -144,20 +151,27 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
               const ret  = bars ? calcThreeMonthReturn(bars) : null
               const retColor = ret === null ? 'var(--color-text-muted)'
                 : ret >= 0 ? 'var(--color-up)' : 'var(--color-down)'
+              const stockSubs = getSubsForGroup(stock, groupName)
 
               return (
                 <div key={stock.id} className="rounded border overflow-hidden"
                   style={{ borderColor: 'var(--color-border)', background: 'var(--color-bg-700)' }}>
 
                   <div className="px-2.5 py-1.5 border-b" style={{ borderColor: 'var(--color-border)' }}>
-                    <div className="flex items-center justify-between mb-0.5">
-                      <div className="flex items-center gap-2">
+                    <div className="flex items-start justify-between gap-2 mb-0.5">
+                      <div className="flex flex-wrap items-center gap-x-2 gap-y-1 flex-1 min-w-0">
                         <span className="font-mono font-bold tabular text-xs" style={{ color: 'var(--color-accent-cyan)' }}>
                           {stock.id}
                         </span>
                         <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>{stock.name}</span>
+                        {stockSubs.map(si => (
+                          <span key={si} className="text-[9px] px-1.5 py-0.5 rounded"
+                            style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-muted)', border: '1px solid var(--color-border)' }}>
+                            {si}
+                          </span>
+                        ))}
                       </div>
-                      <span className="font-mono tabular text-xs" style={{ color: 'var(--color-text-primary)' }}>
+                      <span className="font-mono tabular text-xs shrink-0" style={{ color: 'var(--color-text-primary)' }}>
                         <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>收 </span>
                         {fmt(stock.price, stock.price >= 100 ? 1 : 2)}
                       </span>
@@ -172,16 +186,6 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
                         {ret !== null ? `${ret >= 0 ? '+' : ''}${fmt(ret, 1)}%` : '—'}
                       </span>
                     </div>
-                    {stock.subIndustries && stock.subIndustries.length > 0 && (
-                      <div className="flex flex-wrap gap-1 mt-1">
-                        {stock.subIndustries.map(si => (
-                          <span key={si} className="text-[9px] px-1.5 py-0.5 rounded"
-                            style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-muted)', border: '1px solid var(--color-border)' }}>
-                            {si}
-                          </span>
-                        ))}
-                      </div>
-                    )}
                   </div>
 
                   <div className="p-1">

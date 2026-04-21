@@ -22,205 +22,6 @@ DB_PATH = Path(__file__).parent.parent / "backend" / "db" / "stock_industry_map.
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
 
-STOCK_OVERRIDE = {
-    "2382": "AI伺服器", "3231": "AI伺服器", "6669": "AI伺服器",
-    "3706": "AI伺服器", "2317": "AI伺服器", "4977": "AI伺服器",
-    "2324": "AI伺服器", "2356": "AI伺服器",
-    "1603": "重電電網", "2351": "重電電網", "6274": "重電電網",
-    "8215": "重電電網", "2421": "重電電網", "3324": "重電電網",
-    "3017": "重電電網", "3653": "重電電網",
-    "3008": "光學/鏡頭",
-    "6116": "光電/LED",
-    "4205": "光通訊", "6719": "光通訊", "3450": "光通訊",
-    "4979": "光通訊",
-    "6533": "IC封測", "2449": "IC封測", "3035": "IC封測",
-    "2367": "PCB載板",   "3037": "PCB載板",   "3046": "PCB載板",
-    "2049": "機器人",    "1537": "機器人",
-    "3576": "太陽能",    "6244": "太陽能",
-    "1513": "重電電網",  "1514": "重電電網",
-    "2603": "航運",  "2609": "航運",  "2615": "航運",
-    "2327": "被動元件",  "2492": "被動元件",
-}
-
-STATEMENTDOG_TAGS = {
-    "5509": "AI伺服器",   "1475": "AI伺服器",   "826":  "AI伺服器",
-    "489":  "散熱",        "19887":"散熱",
-    "19288":"光通訊",  "10405":"光通訊",  "48029":"光通訊",
-    "1468": "IC封測","15964":"IC封測",
-    "351":  "PCB載板",     "957":  "PCB載板",    "410":  "PCB載板",
-    "172":  "被動元件",
-    "194":  "連接器",
-    "977":  "記憶體",
-    "1412": "IC設計","2163":"IC設計",
-    "101":  "晶圓代工",    "946":  "晶圓代工",
-    "1440": "光電/LED",    "8471": "光電/LED",
-    "366":  "重電電網",    "540":  "重電電網",   "577":  "重電電網",
-    "1450": "機器人",      "12760":"機器人",      "2207": "機器人",
-    "306":  "工業自動化",
-    "653":  "太陽能",      "5917": "太陽能",
-    "1477": "5G通訊",      "321":  "5G通訊",
-    "66":   "車用電子",    "197":  "車用電子",
-    "273":  "光學/鏡頭",   "491":  "光學/鏡頭",
-    "320":  "光電/LED",    "357":  "光電/LED",
-    "1452": "衛星通訊",    "376":  "衛星通訊",
-}
-
-MONEYDJ_TO_GROUP = {
-    "AI伺服器":             "AI伺服器",
-    "ASIC伺服器":           "AI伺服器",
-    "伺服器":               "AI伺服器",
-    "伺服器機殼":           "AI伺服器",
-    "散熱模組":             "散熱",
-    "伺服器用散熱模組":     "散熱",
-    "其他散熱零件":         "散熱",
-    "散熱風扇馬達":         "散熱",
-    "筆記型電腦用散熱模組": "散熱",
-    "光通訊IC":             "光通訊",
-    "高速傳輸介面IC":       "光通訊",
-    "光纖主動元件":         "光電/LED",
-    "光纖被動元件":         "光電/LED",
-    "光纖光纜":             "電子零組件",
-    "光纖設備":             "電子零組件",
-    "光纖零組件":           "電子零組件",
-    "被動元件":             "被動元件",
-    "被動元件上游":         "被動元件",
-    "ABF載板":              "PCB載板",
-    "IC基板":               "PCB載板",
-    "IC設計":               "IC設計",
-    "ASIC":                 "IC設計",
-    "IC製造":               "IC設計",
-    "IC生產":               "IC設計",
-    "繪圖IC":               "IC設計",
-    "網路通訊IC":           "IC設計",
-    "無線網路IC":           "IC設計",
-    "類比IC":               "IC設計",
-    "其他IC":               "IC設計",
-    "消費性IC":             "IC設計",
-    "電源管理IC":           "IC設計",
-    "晶圓代工":             "晶圓代工",
-    "化合物晶圓":           "晶圓代工",
-    "IC封裝":               "電子零組件",
-    "IC封裝測試":           "電子零組件",
-    "IC測試":               "電子零組件",
-    "DRAM記憶體IC":         "記憶體",
-    "FLASH記憶體IC":        "記憶體",
-    "SRAM記憶體IC":         "記憶體",
-    "SSD控制IC":            "記憶體",
-    "LED":                  "光電/LED",
-    "LED封裝":              "光電/LED",
-    "LED晶粒":              "光電/LED",
-    "LED磊晶":              "光電/LED",
-    "LED照明產品":          "光電/LED",
-    "OLED":                 "光電/LED",
-    "MICROLED":             "光電/LED",
-    "LED散熱基板":          "光電/LED",
-    "連接器":               "連接器",
-    "電源供應器":           "電源供應器",
-    "5G通訊設備":           "5G通訊",
-    "車用電子":             "車用電子",
-    "電動車":               "車用電子",
-    "車用充電相關":         "車用電子",
-    "車用鋰電池":           "車用電子",
-    "太陽能":               "太陽能",
-    "太陽能電池":           "太陽能",
-    "太陽能電池模組":       "太陽能",
-    "太陽能發電":           "太陽能",
-    "太陽能矽晶圓":         "太陽能",
-    "太陽能導電漿":         "太陽能",
-    "太陽能系統運用":       "太陽能",
-    "變壓器":               "重電電網",
-    "電力電纜":             "重電電網",
-    "電線電纜":             "重電電網",
-    "電纜連接件及配件":     "重電電網",
-    "配電工程":             "重電電網",
-    "電力設備":             "重電電網",
-    "機器人":               "機器人",
-    "協作機器人":           "機器人",
-    "航運":             "航運",
-    "散裝航運":             "航運",
-    "生物科技":             "生技醫療",
-    "製藥":                 "生技醫療",
-    "醫療器材":             "生技醫療",
-    "特殊鋼":               "鋼鐵",
-    "不銹鋼":               "鋼鐵",
-    "鋼鐵":                 "鋼鐵",
-    "鋼構":                 "鋼鐵",
-}
-
-NAME_KEYWORD = {
-    "雙鴻": "散熱",    "建準": "散熱",    "健策": "散熱",    "奇鋐": "散熱",
-    "超眾": "散熱",    "泰碩": "散熱",
-    "國巨": "被動元件","華新科": "被動元件","大毅": "被動元件",
-    "禾伸堂": "被動元件","立隆電": "被動元件",
-    "金像電": "PCB載板","志超": "PCB載板","柏承": "PCB載板","泰鼎": "PCB載板",
-    "正崴": "連接器",  "信邦": "連接器",   "宏致": "連接器",
-    "鴻海": "AI伺服器","可成": "AI伺服器",
-    "偉訓": "電源供應器",
-    "貿聯": "線材Cable",
-    "亞翔": "機電工程","聖暉": "機電工程",
-}
-
-INDUSTRY_TO_GROUP = {
-    "半導體業":         "IC設計",
-    "電腦及週邊設備業": "AI伺服器",
-    "光電業":           "光電/LED",
-    "通信網路業":       "5G通訊",
-    "電子零組件業":     "電子零組件",
-    "其他電子業":       "電子零組件",
-    "電機機械":         "重電電網",
-    "電器電纜":         "重電電網",
-    "機械工業":         "工業自動化",
-    "鋼鐵工業":         "鋼鐵",
-    "塑膠工業":         "塑化",
-    "化學工業":         "塑化",
-    "生技醫療業":       "生技醫療",
-    "醫療器材":         "生技醫療",
-    "航運業":           "航運",
-    "金融保險業":       "金控銀行",
-    "食品工業":         "食品飲料",
-    "紡織纖維":         "紡織",
-    "水泥工業":         "水泥",
-    "建材營造業":       "建設營造",
-    "營建業":           "建設營造",
-}
-
-GROUP_DESC = {
-    "AI伺服器":       "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
-    "IC設計":  "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
-    "晶圓代工":       "晶圓代工，台積電、聯電等",
-    "散熱":           "均熱板、散熱模組、液冷系統，AI 伺服器熱管理關鍵",
-    "光通訊":      "共封裝光學、矽光子、光模組，AI 資料中心高速傳輸",
-    "IC封測":  "傳統封測、IC 載板、先進封裝（CoWoS/SoIC），日月光、京元電、欣興等",
-    "PCB載板":        "印刷電路板、ABF 載板、軟板，電子產品基礎建設",
-    "被動元件":       "MLCC、電阻、電感等被動元件，電子產品必備",
-    "連接器":         "線材連接器、背板連接器，資料中心與消費電子應用",
-    "電子零組件":     "其他電子零組件，包含各類電子材料與模組",
-    "電源供應器":     "伺服器電源、工業電源供應器",
-    "線材Cable":      "高速傳輸線材、充電線，資料中心與消費電子",
-    "機電工程":       "廠務機電工程、無塵室工程，半導體廠建廠受惠",
-    "重電電網":       "變壓器、配電設備、電網基礎建設，台電供應商",
-    "太陽能":         "太陽能電池、模組、系統，綠能轉型受惠族群",
-    "風電":           "離岸風電、海底電纜，台灣再生能源政策受惠",
-    "機器人":         "工業機器手臂、減速機、AMR，自動化生產趨勢",
-    "工業自動化":     "CNC 工具機、工業電腦、自動化設備",
-    "鋼鐵":           "熱軋、冷軋、不鏽鋼，基礎建設與製造業原料",
-    "塑化":           "石化原料、塑膠製品，台塑四寶為代表",
-    "生技醫療":       "新藥研發、醫療器材、CDMO 委託開發製造",
-    "航運":           "貨櫃與散裝航運、油輪運輸，長榮、陽明、萬海、裕民等業者",
-    "金控銀行":       "銀行、金控、壽險，國內金融體系核心",
-    "5G通訊":         "5G 基站設備、Open RAN、無線通訊模組",
-    "車用電子":       "ADAS 自駕、ECU、車用感測器，電動車趨勢",
-    "食品飲料":       "食品加工、飲料製造，民生消費穩定族群",
-    "光電/LED":       "LED 照明、面板、光學鏡頭、光學元件",
-    "光學/鏡頭":      "光學鏡頭、鏡片，手機與工業應用",
-    "衛星通訊":       "衛星通訊通訊、SpaceX Starlink 供應鏈",
-    "記憶體":     "DRAM、Flash 記憶體製造",
-    "建設營造":       "不動產開發、營建工程",
-    "紡織":           "紡紗、織布、機能性布料",
-    "水泥":           "水泥、砂石、預拌混凝土",
-    "其他/未分組":    "尚未分類或跨產業個股",
-}
-
 
 def load_moneydj_map():
     if not DB_PATH.exists():
@@ -228,35 +29,6 @@ def load_moneydj_map():
         return {}
     with open(DB_PATH, encoding="utf-8") as f:
         return json.load(f)
-
-
-def assign_group_from_moneydj(sid, moneydj_map):
-    entry = moneydj_map.get(sid)
-    if not entry:
-        return None
-    for sub in entry.get("sub_industries", []):
-        name = sub.get("name", "")
-        if name in MONEYDJ_TO_GROUP:
-            return MONEYDJ_TO_GROUP[name]
-    return None
-
-
-def assign_group(sid, name, industry, sd_map, moneydj_map=None):
-    if sid in STOCK_OVERRIDE:
-        return STOCK_OVERRIDE[sid]
-    if sid in sd_map:
-        return sd_map[sid]
-    if moneydj_map:
-        mj_group = assign_group_from_moneydj(sid, moneydj_map)
-        if mj_group:
-            return mj_group
-    for k, v in NAME_KEYWORD.items():
-        if k in name:
-            return v
-    for k, v in INDUSTRY_TO_GROUP.items():
-        if k in industry:
-            return v
-    return "其他/未分組"
 
 
 def check_already_updated() -> bool:
@@ -366,36 +138,6 @@ def fetch_industry_map():
     return result
 
 
-def fetch_statementdog_map():
-    logger.info("Step 3: 抓取財報狗族群標籤…")
-    sd_map = {}
-    total = len(STATEMENTDOG_TAGS)
-    for i, (tag_id, group_name) in enumerate(STATEMENTDOG_TAGS.items(), 1):
-        try:
-            r = requests.get(
-                f"https://statementdog.com/tags/{tag_id}",
-                headers=HEADERS, timeout=15,
-            )
-            if r.status_code != 200:
-                continue
-            soup = BeautifulSoup(r.text, "lxml")
-            for a in soup.find_all("a", href=True):
-                href = a["href"]
-                if "/analysis/" not in href:
-                    continue
-                for p in href.split("/"):
-                    if len(p) == 4 and p.isdigit():
-                        if p not in sd_map:
-                            sd_map[p] = group_name
-        except Exception as e:
-            logger.debug("tag %s 失敗：%s", tag_id, e)
-        if i % 10 == 0:
-            logger.info("  財報狗進度：%d/%d，已 mapping %d 支", i, total, len(sd_map))
-        time.sleep(0.5)
-    logger.info("財報狗 mapping 完成：%d 支", len(sd_map))
-    return sd_map
-
-
 def fetch_klines(stock_ids):
     logger.info("Step 4: 抓取 K 線（%d 支）…", len(stock_ids))
     klines = {}
@@ -449,6 +191,49 @@ def calc_3m_return(bars):
     return round((last - first) / first * 100, 2)
 
 
+# ============================================================
+# 產業別映射：backend/db/industry_categories.json
+# 從 MoneyDJ 爬來的 {細產業名: 產業別名} 對應表（由 fetch_industry_hierarchy.py 產生）
+# ============================================================
+CATEGORY_MAP_PATH = Path(__file__).parent.parent / "backend" / "db" / "industry_categories.json"
+
+
+def load_category_map():
+    if not CATEGORY_MAP_PATH.exists():
+        logger.warning("產業別對應表不存在：%s", CATEGORY_MAP_PATH)
+        return {}
+    with open(CATEGORY_MAP_PATH, encoding="utf-8") as f:
+        return json.load(f)
+
+
+
+def assign_groups(sid, moneydj_map, category_map):
+    """
+    用股票的 MoneyDJ 細產業查表，回傳所屬的「產業別」列表（去重、依原順序）。
+    股票有多個細產業時，會在每個對應的產業別下都出現。
+    """
+    subs = moneydj_map.get(sid, {}).get("sub_industries", [])
+    if not subs:
+        return ["其他/未分類"]
+    seen = set()
+    result = []
+    for s in subs:
+        name = s.get("name", "")
+        if not name:
+            continue
+        cat = category_map.get(name)
+        if cat and cat not in seen:
+            seen.add(cat)
+            result.append(cat)
+    if not result:
+        return ["其他/未分類"]
+    return result
+
+
+def assign_group(sid, moneydj_map, category_map):
+    return assign_groups(sid, moneydj_map, category_map)[0]
+
+
 def run():
     force = any(a in ("--force", "-f") for a in sys.argv[1:])
     if force:
@@ -475,11 +260,13 @@ def run():
     })
 
     industry_map  = fetch_industry_map()
-    sd_map        = fetch_statementdog_map()
     moneydj_map   = load_moneydj_map()
+    category_map  = load_category_map()
     klines        = fetch_klines(stock_ids)
 
     logger.info("MoneyDJ 資料庫載入：%d 支", len(moneydj_map))
+    logger.info("產業別對應表載入：%d 個細產業 → %d 個產業別",
+                len(category_map), len(set(category_map.values())))
 
     stocks = []
     for h in holdings:
@@ -487,13 +274,22 @@ def run():
         info     = industry_map.get(sid, {})
         name     = h.get("name") or info.get("name", "")
         industry = info.get("industry", "")
-        group    = assign_group(sid, name, industry, sd_map, moneydj_map)
+        groups   = assign_groups(sid, moneydj_map, category_map)
         bars     = klines.get(sid, [])
+        # 完整細產業列表（不截斷）
+        all_subs = [s["name"] for s in moneydj_map.get(sid, {}).get("sub_industries", [])]
+        # 每個族群（產業別）對應該股票裡的相關細產業
+        subs_by_group = {}
+        for sub_name in all_subs:
+            cat = category_map.get(sub_name)
+            if cat:
+                subs_by_group.setdefault(cat, []).append(sub_name)
         stocks.append({
             "id":               sid,
             "name":             name,
-            "group":            group,
-            "groupDesc":        GROUP_DESC.get(group, ""),
+            "group":            groups[0],          # 主族群（向後相容）
+            "groups":           groups,              # 所有相關族群
+            "groupDesc":        "",
             "holdingPct":       float(h.get("holdingPct", h.get("holding_pct", 0))),
             "delta":            float(h.get("delta", 0)),
             "price":            float(bars[-1]["c"]) if bars else 0.0,
@@ -501,7 +297,8 @@ def run():
             "date":             h.get("date", datetime.now().strftime("%Y-%m-%d")),
             "threeMonthReturn": calc_3m_return(bars),
             "industry":         industry,
-            "subIndustries": [s["name"] for s in moneydj_map.get(sid, {}).get("sub_industries", [])][:3],
+            "subIndustries":    all_subs,            # 完整列表
+            "subsByGroup":      subs_by_group,       # {產業別: [該股票在此產業別下的細產業]}
         })
 
     with open(DATA_DIR / "stocks.json", "w", encoding="utf-8") as f:
@@ -513,10 +310,12 @@ def run():
     size_kb = (DATA_DIR / "klines.json").stat().st_size // 1024
     logger.info("klines.json：%d 支，%d KB", len(klines), size_kb)
 
-    groups = Counter(s["group"] for s in stocks)
-    logger.info("族群分布（前 15）：")
-    for g, cnt in groups.most_common(15):
+    group_counts = Counter(g for s in stocks for g in s["groups"])
+    multi = sum(1 for s in stocks if len(s["groups"]) > 1)
+    logger.info("族群分布（前 20，含跨族群計數）：")
+    for g, cnt in group_counts.most_common(20):
         logger.info("  %-25s %d 支", g, cnt)
+    logger.info("其中 %d 支股票同時屬於多個族群", multi)
 
     logger.info("Pipeline 完成！")
 

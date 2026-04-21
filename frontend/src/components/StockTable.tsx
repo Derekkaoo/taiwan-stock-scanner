@@ -163,6 +163,18 @@ export function StockTable({ stocks, sort, onSort }: Props) {
                     style={{ background: 'var(--color-bg-700)', borderBottom: '1px solid var(--color-border)' }}
                   >
                     <td colSpan={COLS.length + 1} className="p-3">
+                      <div className="flex items-center flex-wrap gap-2 mb-2">
+                        <span className="font-mono font-bold tabular text-xs" style={{ color: 'var(--color-accent-cyan)' }}>
+                          {stock.id}
+                        </span>
+                        <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>{stock.name}</span>
+                        {(stock.subIndustries ?? []).map(si => (
+                          <span key={si} className="text-[10px] px-1.5 py-0.5 rounded"
+                            style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-muted)', border: '1px solid var(--color-border)' }}>
+                            {si}
+                          </span>
+                        ))}
+                      </div>
                       <div style={{ width: '50%', minWidth: 200 }}>
                         {cached ? (
                           <CandlestickSVG
