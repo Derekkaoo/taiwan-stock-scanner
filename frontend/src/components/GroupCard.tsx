@@ -32,6 +32,19 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
     : null
   const groupDesc = stocks[0]?.groupDesc ?? ''
 
+  // Top 3 aggregate sub-industries in this group
+  const topSubIndustries = (() => {
+    const counts = new Map<string, number>()
+    stocks.forEach(s => {
+      s.subIndustries?.forEach(si => {
+        counts.set(si, (counts.get(si) ?? 0) + 1)
+      })
+    })
+    return Array.from(counts.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 3)
+  })()
+
   const openAndLoad = useCallback(async () => {
     setExpanded(true)
     if (!loaded) {
@@ -102,6 +115,17 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
               </span>
             )}
           </div>
+
+          {topSubIndustries.length > 0 && (
+            <div className="flex flex-wrap gap-1 mt-0.5">
+              {topSubIndustries.map(([name, count]) => (
+                <span key={name} className="text-[9px] px-1.5 py-0.5 rounded"
+                  style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-muted)', border: '1px solid var(--color-border)' }}>
+                  {name} <span style={{ opacity: 0.55 }}>×{count}</span>
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       </button>
 

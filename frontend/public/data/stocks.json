@@ -6,11 +6,16 @@
     "groupDesc": "食品加工、飲料製造，民生消費穩定族群",
     "holdingPct": 59.58,
     "delta": 0.44,
-    "price": 55.0,
+    "price": 54.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -6.3,
-    "industry": "食品工業"
+    "threeMonthReturn": 5.25,
+    "industry": "食品工業",
+    "subIndustries": [
+      "食品加工",
+      "肉品加工",
+      "大宗物資"
+    ]
   },
   {
     "id": "1218",
@@ -19,11 +24,16 @@
     "groupDesc": "食品加工、飲料製造，民生消費穩定族群",
     "holdingPct": 65.11,
     "delta": 0.24,
-    "price": 18.95,
+    "price": 19.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -5.25,
-    "industry": "食品工業"
+    "threeMonthReturn": 4.68,
+    "industry": "食品工業",
+    "subIndustries": [
+      "大宗物資",
+      "油脂",
+      "飲料相關"
+    ]
   },
   {
     "id": "1219",
@@ -32,11 +42,16 @@
     "groupDesc": "食品加工、飲料製造，民生消費穩定族群",
     "holdingPct": 55.94,
     "delta": 0.1,
-    "price": 14.1,
+    "price": 14.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.44,
-    "industry": "食品工業"
+    "threeMonthReturn": 5.64,
+    "industry": "食品工業",
+    "subIndustries": [
+      "食品加工",
+      "寵物食品",
+      "大宗物資"
+    ]
   },
   {
     "id": "1233",
@@ -45,11 +60,16 @@
     "groupDesc": "食品加工、飲料製造，民生消費穩定族群",
     "holdingPct": 67.0,
     "delta": 0.6,
-    "price": 29.0,
+    "price": 28.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -14.2,
-    "industry": "食品工業"
+    "threeMonthReturn": -10.45,
+    "industry": "食品工業",
+    "subIndustries": [
+      "食品加工",
+      "茶葉相關",
+      "旅宿／餐飲"
+    ]
   },
   {
     "id": "1235",
@@ -58,11 +78,15 @@
     "groupDesc": "食品加工、飲料製造，民生消費穩定族群",
     "holdingPct": 95.46,
     "delta": 0.75,
-    "price": 46.3,
+    "price": 46.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -45.53,
-    "industry": "食品工業"
+    "threeMonthReturn": 2.99,
+    "industry": "食品工業",
+    "subIndustries": [
+      "農林漁牧",
+      "飼料"
+    ]
   },
   {
     "id": "1301",
@@ -71,11 +95,16 @@
     "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
     "holdingPct": 71.3,
     "delta": 2.0,
-    "price": 52.6,
+    "price": 51.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 52.02,
-    "industry": "塑膠工業"
+    "threeMonthReturn": 27.43,
+    "industry": "塑膠工業",
+    "subIndustries": [
+      "塑化原料",
+      "PVC",
+      "PE"
+    ]
   },
   {
     "id": "1303",
@@ -84,11 +113,16 @@
     "groupDesc": "印刷電路板、ABF 載板、軟板，電子產品基礎建設",
     "holdingPct": 81.97,
     "delta": 0.63,
-    "price": 85.7,
+    "price": 88.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 185.19,
-    "industry": "塑膠工業"
+    "threeMonthReturn": 36.63,
+    "industry": "塑膠工業",
+    "subIndustries": [
+      "塑化原料",
+      "DOP",
+      "PA"
+    ]
   },
   {
     "id": "1304",
@@ -97,11 +131,16 @@
     "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
     "holdingPct": 56.34,
     "delta": 0.31,
-    "price": 14.75,
+    "price": 14.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 47.94,
-    "industry": "塑膠工業"
+    "threeMonthReturn": 29.91,
+    "industry": "塑膠工業",
+    "subIndustries": [
+      "塑化原料",
+      "PE",
+      "ABS"
+    ]
   },
   {
     "id": "1305",
@@ -110,11 +149,16 @@
     "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
     "holdingPct": 47.8,
     "delta": 1.07,
-    "price": 14.75,
+    "price": 14.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 34.7,
-    "industry": "塑膠工業"
+    "threeMonthReturn": 27.31,
+    "industry": "塑膠工業",
+    "subIndustries": [
+      "塑化原料",
+      "PVC",
+      "塑化製品"
+    ]
   },
   {
     "id": "1308",
@@ -123,11 +167,16 @@
     "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
     "holdingPct": 47.48,
     "delta": 0.11,
-    "price": 15.45,
+    "price": 15.35,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 21.65,
-    "industry": "塑膠工業"
+    "threeMonthReturn": 13.28,
+    "industry": "塑膠工業",
+    "subIndustries": [
+      "塑化原料",
+      "PE",
+      "EVA"
+    ]
   },
   {
     "id": "1312",
@@ -136,11 +185,16 @@
     "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
     "holdingPct": 47.97,
     "delta": 0.93,
-    "price": 13.3,
+    "price": 13.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 18.22,
-    "industry": "塑膠工業"
+    "threeMonthReturn": 8.79,
+    "industry": "塑膠工業",
+    "subIndustries": [
+      "塑化原料",
+      "SM",
+      "ABS"
+    ]
   },
   {
     "id": "1313",
@@ -149,11 +203,16 @@
     "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
     "holdingPct": 62.17,
     "delta": 0.85,
-    "price": 11.95,
+    "price": 11.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 46.99,
-    "industry": "塑膠工業"
+    "threeMonthReturn": 15.53,
+    "industry": "塑膠工業",
+    "subIndustries": [
+      "塑化原料",
+      "PVC",
+      "DOP"
+    ]
   },
   {
     "id": "1316",
@@ -165,8 +224,13 @@
     "price": 11.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -17.36,
-    "industry": "建材營造業"
+    "threeMonthReturn": -19.05,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "食品加工",
+      "保健食品",
+      "化學工業"
+    ]
   },
   {
     "id": "1326",
@@ -178,8 +242,13 @@
     "price": 50.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 105.28,
-    "industry": "塑膠工業"
+    "threeMonthReturn": 55.38,
+    "industry": "塑膠工業",
+    "subIndustries": [
+      "塑化原料",
+      "芳香烴",
+      "SM"
+    ]
   },
   {
     "id": "1337",
@@ -188,11 +257,16 @@
     "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
     "holdingPct": 39.22,
     "delta": 0.58,
-    "price": 5.41,
+    "price": 5.36,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -2.7,
-    "industry": "塑膠工業"
+    "threeMonthReturn": 10.74,
+    "industry": "塑膠工業",
+    "subIndustries": [
+      "塑化原料",
+      "EVA",
+      "塑化製品"
+    ]
   },
   {
     "id": "1409",
@@ -201,11 +275,16 @@
     "groupDesc": "紡紗、織布、機能性布料",
     "holdingPct": 63.42,
     "delta": 0.65,
-    "price": 16.6,
+    "price": 16.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 37.76,
-    "industry": "紡織纖維"
+    "threeMonthReturn": 12.71,
+    "industry": "紡織纖維",
+    "subIndustries": [
+      "塑化製品",
+      "塑膠加工",
+      "化學纖維"
+    ]
   },
   {
     "id": "1419",
@@ -214,11 +293,16 @@
     "groupDesc": "紡紗、織布、機能性布料",
     "holdingPct": 85.92,
     "delta": 0.35,
-    "price": 64.3,
+    "price": 65.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 57.6,
-    "industry": "紡織纖維"
+    "threeMonthReturn": -6.2,
+    "industry": "紡織纖維",
+    "subIndustries": [
+      "成衣",
+      "成衣銷售／零售",
+      "織布業"
+    ]
   },
   {
     "id": "1437",
@@ -227,11 +311,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 65.11,
     "delta": 0.52,
-    "price": 30.45,
+    "price": 30.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 0.83,
-    "industry": "其他業"
+    "threeMonthReturn": -8.43,
+    "industry": "其他業",
+    "subIndustries": [
+      "紡紗",
+      "毛紡",
+      "地產"
+    ]
   },
   {
     "id": "1440",
@@ -240,11 +329,16 @@
     "groupDesc": "紡紗、織布、機能性布料",
     "holdingPct": 73.31,
     "delta": 0.13,
-    "price": 13.3,
+    "price": 13.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 14.16,
-    "industry": "紡織纖維"
+    "threeMonthReturn": 0.0,
+    "industry": "紡織纖維",
+    "subIndustries": [
+      "化學纖維",
+      "聚酯絲",
+      "聚酯棉"
+    ]
   },
   {
     "id": "1442",
@@ -253,11 +347,15 @@
     "groupDesc": "不動產開發、營建工程",
     "holdingPct": 78.76,
     "delta": 0.28,
-    "price": 29.7,
+    "price": 30.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -58.81,
-    "industry": "建材營造業"
+    "threeMonthReturn": 0.33,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "地產",
+      "營建"
+    ]
   },
   {
     "id": "1444",
@@ -266,11 +364,16 @@
     "groupDesc": "紡紗、織布、機能性布料",
     "holdingPct": 60.58,
     "delta": 0.1,
-    "price": 6.52,
+    "price": 6.43,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -10.56,
-    "industry": "紡織纖維"
+    "threeMonthReturn": 6.63,
+    "industry": "紡織纖維",
+    "subIndustries": [
+      "化學纖維",
+      "聚酯加工絲",
+      "聚酯粒"
+    ]
   },
   {
     "id": "1447",
@@ -282,8 +385,13 @@
     "price": 5.28,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -14.01,
-    "industry": "紡織纖維"
+    "threeMonthReturn": 1.34,
+    "industry": "紡織纖維",
+    "subIndustries": [
+      "化學纖維",
+      "尼龍粒",
+      "織布業"
+    ]
   },
   {
     "id": "1451",
@@ -292,11 +400,16 @@
     "groupDesc": "紡紗、織布、機能性布料",
     "holdingPct": 56.41,
     "delta": 0.54,
-    "price": 17.3,
+    "price": 17.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -3.08,
-    "industry": "紡織纖維"
+    "threeMonthReturn": -1.16,
+    "industry": "紡織纖維",
+    "subIndustries": [
+      "成衣",
+      "成衣製造",
+      "織布業"
+    ]
   },
   {
     "id": "1455",
@@ -305,11 +418,16 @@
     "groupDesc": "紡紗、織布、機能性布料",
     "holdingPct": 61.87,
     "delta": 0.35,
-    "price": 8.97,
+    "price": 9.15,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -3.03,
-    "industry": "紡織纖維"
+    "threeMonthReturn": 18.99,
+    "industry": "紡織纖維",
+    "subIndustries": [
+      "化學纖維",
+      "尼龍粒",
+      "尼龍加工絲"
+    ]
   },
   {
     "id": "1460",
@@ -318,11 +436,14 @@
     "groupDesc": "紡紗、織布、機能性布料",
     "holdingPct": 63.41,
     "delta": 0.62,
-    "price": 6.82,
+    "price": 6.78,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 0.29,
-    "industry": "紡織纖維"
+    "threeMonthReturn": 6.1,
+    "industry": "紡織纖維",
+    "subIndustries": [
+      "織布業"
+    ]
   },
   {
     "id": "1463",
@@ -331,11 +452,16 @@
     "groupDesc": "紡紗、織布、機能性布料",
     "holdingPct": 74.29,
     "delta": 0.14,
-    "price": 17.95,
+    "price": 17.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -13.91,
-    "industry": "紡織纖維"
+    "threeMonthReturn": 0.56,
+    "industry": "紡織纖維",
+    "subIndustries": [
+      "織布業",
+      "染整",
+      "地產"
+    ]
   },
   {
     "id": "1474",
@@ -344,11 +470,15 @@
     "groupDesc": "紡紗、織布、機能性布料",
     "holdingPct": 52.14,
     "delta": 0.15,
-    "price": 10.3,
+    "price": 10.35,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -15.57,
-    "industry": "紡織纖維"
+    "threeMonthReturn": -1.9,
+    "industry": "紡織纖維",
+    "subIndustries": [
+      "織布業",
+      "工業紡織品"
+    ]
   },
   {
     "id": "1477",
@@ -357,11 +487,15 @@
     "groupDesc": "紡紗、織布、機能性布料",
     "holdingPct": 59.91,
     "delta": 0.17,
-    "price": 225.0,
+    "price": 224.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -8.91,
-    "industry": "紡織纖維"
+    "threeMonthReturn": -24.54,
+    "industry": "紡織纖維",
+    "subIndustries": [
+      "成衣",
+      "成衣製造"
+    ]
   },
   {
     "id": "1527",
@@ -370,11 +504,16 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 25.79,
     "delta": 1.83,
-    "price": 33.15,
+    "price": 33.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -5.42,
-    "industry": "電機機械"
+    "threeMonthReturn": 1.07,
+    "industry": "電機機械",
+    "subIndustries": [
+      "產業機械",
+      "電動工具",
+      "自行車零件"
+    ]
   },
   {
     "id": "1528",
@@ -383,11 +522,16 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 30.04,
     "delta": 1.04,
-    "price": 28.2,
+    "price": 29.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 141.03,
-    "industry": "電機機械"
+    "threeMonthReturn": 32.42,
+    "industry": "電機機械",
+    "subIndustries": [
+      "產業機械",
+      "木工機械",
+      "印刷電路板相關"
+    ]
   },
   {
     "id": "1540",
@@ -396,24 +540,34 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 24.04,
     "delta": 1.27,
-    "price": 21.8,
+    "price": 21.75,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -20.0,
-    "industry": "電機機械"
+    "threeMonthReturn": -5.02,
+    "industry": "電機機械",
+    "subIndustries": [
+      "工具機",
+      "龍門機",
+      "車床"
+    ]
   },
   {
     "id": "1560",
     "name": "中砂",
-    "group": "重電電網",
-    "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
+    "group": "IC設計",
+    "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 52.61,
     "delta": 0.85,
-    "price": 542.0,
+    "price": 530.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 189.84,
-    "industry": "電機機械"
+    "threeMonthReturn": 25.59,
+    "industry": "電機機械",
+    "subIndustries": [
+      "產業機械",
+      "磨料磨具",
+      "IC製造"
+    ]
   },
   {
     "id": "1563",
@@ -422,11 +576,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 30.99,
     "delta": 0.11,
-    "price": 41.75,
+    "price": 41.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -27.01,
-    "industry": "汽車工業"
+    "threeMonthReturn": -13.35,
+    "industry": "汽車工業",
+    "subIndustries": [
+      "汽機車零組件",
+      "輪圈"
+    ]
   },
   {
     "id": "1586",
@@ -435,11 +593,16 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 64.19,
     "delta": 2.5,
-    "price": 23.4,
+    "price": 22.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -13.33,
-    "industry": "電機機械"
+    "threeMonthReturn": -13.96,
+    "industry": "電機機械",
+    "subIndustries": [
+      "汽機車零組件",
+      "車用金屬成型",
+      "車用沖壓件"
+    ]
   },
   {
     "id": "1597",
@@ -448,24 +611,33 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 39.96,
     "delta": 0.31,
-    "price": 115.5,
+    "price": 114.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 83.04,
-    "industry": "電機機械"
+    "threeMonthReturn": 54.68,
+    "industry": "電機機械",
+    "subIndustries": [
+      "機械零組件",
+      "滑軌"
+    ]
   },
   {
     "id": "1603",
     "name": "華電",
-    "group": "散熱",
-    "groupDesc": "均熱板、散熱模組、液冷系統，AI 伺服器熱管理關鍵",
+    "group": "重電電網",
+    "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 69.69,
     "delta": 0.61,
-    "price": 32.5,
+    "price": 32.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 0.46,
-    "industry": "電器電纜"
+    "threeMonthReturn": -12.62,
+    "industry": "電器電纜",
+    "subIndustries": [
+      "電線電纜",
+      "電力電纜",
+      "建材"
+    ]
   },
   {
     "id": "1605",
@@ -474,11 +646,16 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 68.4,
     "delta": 0.25,
-    "price": 33.65,
+    "price": 32.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 79.95,
-    "industry": "電器電纜"
+    "threeMonthReturn": -17.65,
+    "industry": "電器電纜",
+    "subIndustries": [
+      "電線電纜",
+      "電力電纜",
+      "不鏽鋼"
+    ]
   },
   {
     "id": "1609",
@@ -487,24 +664,34 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 28.14,
     "delta": 0.45,
-    "price": 34.3,
+    "price": 34.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.94,
-    "industry": "電器電纜"
+    "threeMonthReturn": -13.8,
+    "industry": "電器電纜",
+    "subIndustries": [
+      "電線電纜",
+      "漆包線",
+      "裸銅線"
+    ]
   },
   {
     "id": "1611",
     "name": "中電",
-    "group": "重電電網",
-    "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
+    "group": "光電/LED",
+    "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 45.95,
     "delta": 0.34,
-    "price": 12.05,
+    "price": 12.15,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -4.37,
-    "industry": "電器電纜"
+    "threeMonthReturn": -7.6,
+    "industry": "電器電纜",
+    "subIndustries": [
+      "家電",
+      "照明",
+      "LED"
+    ]
   },
   {
     "id": "1616",
@@ -513,11 +700,15 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 57.23,
     "delta": 0.1,
-    "price": 23.6,
+    "price": 23.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -1.87,
-    "industry": "電器電纜"
+    "threeMonthReturn": -14.9,
+    "industry": "電器電纜",
+    "subIndustries": [
+      "電線電纜",
+      "電力電纜"
+    ]
   },
   {
     "id": "1626",
@@ -526,24 +717,33 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 59.63,
     "delta": 0.25,
-    "price": 11.35,
+    "price": 11.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -4.62,
-    "industry": "電器電纜"
+    "threeMonthReturn": 6.42,
+    "industry": "電器電纜",
+    "subIndustries": [
+      "家電",
+      "小家電"
+    ]
   },
   {
     "id": "1708",
     "name": "東鹼",
-    "group": "塑化",
-    "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
+    "group": "航運",
+    "groupDesc": "貨櫃與散裝航運、油輪運輸，長榮、陽明、萬海、裕民等業者",
     "holdingPct": 41.09,
     "delta": 0.6,
-    "price": 39.3,
+    "price": 39.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 24.76,
-    "industry": "化學工業"
+    "threeMonthReturn": 20.25,
+    "industry": "化學工業",
+    "subIndustries": [
+      "化學工業",
+      "肥料",
+      "鹼業"
+    ]
   },
   {
     "id": "1710",
@@ -552,11 +752,16 @@
     "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
     "holdingPct": 56.19,
     "delta": 0.13,
-    "price": 13.5,
+    "price": 13.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.06,
-    "industry": "化學工業"
+    "threeMonthReturn": 5.04,
+    "industry": "化學工業",
+    "subIndustries": [
+      "化纖原料",
+      "EG",
+      "化學工業"
+    ]
   },
   {
     "id": "1714",
@@ -565,11 +770,16 @@
     "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
     "holdingPct": 55.79,
     "delta": 1.02,
-    "price": 9.74,
+    "price": 9.92,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 12.34,
-    "industry": "化學工業"
+    "threeMonthReturn": 21.57,
+    "industry": "化學工業",
+    "subIndustries": [
+      "化學工業",
+      "烷基苯",
+      "正烷屬烴"
+    ]
   },
   {
     "id": "1723",
@@ -578,11 +788,15 @@
     "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
     "holdingPct": 47.27,
     "delta": 1.54,
-    "price": 80.1,
+    "price": 83.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -10.8,
-    "industry": "化學工業"
+    "threeMonthReturn": 19.86,
+    "industry": "化學工業",
+    "subIndustries": [
+      "化學工業",
+      "煤化工"
+    ]
   },
   {
     "id": "1727",
@@ -591,11 +805,16 @@
     "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
     "holdingPct": 53.67,
     "delta": 2.47,
-    "price": 57.5,
+    "price": 59.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 167.44,
-    "industry": "化學工業"
+    "threeMonthReturn": 13.46,
+    "industry": "化學工業",
+    "subIndustries": [
+      "化學工業",
+      "染料，顏料",
+      "強酸產品"
+    ]
   },
   {
     "id": "1773",
@@ -604,11 +823,16 @@
     "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
     "holdingPct": 68.28,
     "delta": 0.13,
-    "price": 159.0,
+    "price": 163.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 49.65,
-    "industry": "化學工業"
+    "threeMonthReturn": -3.25,
+    "industry": "化學工業",
+    "subIndustries": [
+      "化學工業",
+      "溶劑",
+      "化學產品通路"
+    ]
   },
   {
     "id": "1785",
@@ -617,11 +841,16 @@
     "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 54.02,
     "delta": 1.21,
-    "price": 153.5,
+    "price": 155.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 210.73,
-    "industry": "其他電子業"
+    "threeMonthReturn": 140.31,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "貴金屬",
+      "IC製造",
+      "其他半導體耗材"
+    ]
   },
   {
     "id": "1802",
@@ -630,11 +859,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 79.7,
     "delta": 2.91,
-    "price": 70.9,
+    "price": 74.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 413.77,
-    "industry": "玻璃陶瓷"
+    "threeMonthReturn": 109.9,
+    "industry": "玻璃陶瓷",
+    "subIndustries": [
+      "建材",
+      "玻璃",
+      "印刷電路板相關"
+    ]
   },
   {
     "id": "1907",
@@ -643,11 +877,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 80.48,
     "delta": 0.13,
-    "price": 24.9,
+    "price": 25.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -3.11,
-    "industry": "造紙工業"
+    "threeMonthReturn": -0.58,
+    "industry": "造紙工業",
+    "subIndustries": [
+      "化學工業",
+      "衛生清潔用品",
+      "造紙業"
+    ]
   },
   {
     "id": "1909",
@@ -656,11 +895,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 61.94,
     "delta": 0.15,
-    "price": 9.37,
+    "price": 9.51,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 6.0,
-    "industry": "造紙工業"
+    "threeMonthReturn": -2.56,
+    "industry": "造紙工業",
+    "subIndustries": [
+      "造紙業",
+      "工業用紙"
+    ]
   },
   {
     "id": "2002",
@@ -669,11 +912,16 @@
     "groupDesc": "熱軋、冷軋、不鏽鋼，基礎建設與製造業原料",
     "holdingPct": 50.89,
     "delta": 0.17,
-    "price": 19.85,
+    "price": 19.75,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -0.75,
-    "industry": "鋼鐵工業"
+    "threeMonthReturn": 1.54,
+    "industry": "鋼鐵工業",
+    "subIndustries": [
+      "線材盤元",
+      "條鋼",
+      "棒鋼"
+    ]
   },
   {
     "id": "2008",
@@ -682,11 +930,15 @@
     "groupDesc": "熱軋、冷軋、不鏽鋼，基礎建設與製造業原料",
     "holdingPct": 90.53,
     "delta": 0.48,
-    "price": 27.0,
+    "price": 27.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 12.5,
-    "industry": "鋼鐵工業"
+    "threeMonthReturn": -6.37,
+    "industry": "鋼鐵工業",
+    "subIndustries": [
+      "條鋼",
+      "鋼管"
+    ]
   },
   {
     "id": "2009",
@@ -695,11 +947,15 @@
     "groupDesc": "熱軋、冷軋、不鏽鋼，基礎建設與製造業原料",
     "holdingPct": 56.73,
     "delta": 0.44,
-    "price": 39.7,
+    "price": 39.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 25.83,
-    "industry": "鋼鐵工業"
+    "threeMonthReturn": -22.27,
+    "industry": "鋼鐵工業",
+    "subIndustries": [
+      "非鐵金屬",
+      "銅"
+    ]
   },
   {
     "id": "2014",
@@ -708,11 +964,16 @@
     "groupDesc": "熱軋、冷軋、不鏽鋼，基礎建設與製造業原料",
     "holdingPct": 45.84,
     "delta": 0.14,
-    "price": 18.6,
+    "price": 18.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 19.61,
-    "industry": "鋼鐵工業"
+    "threeMonthReturn": 6.4,
+    "industry": "鋼鐵工業",
+    "subIndustries": [
+      "板鋼",
+      "熱軋鋼捲",
+      "冷軋鋼捲"
+    ]
   },
   {
     "id": "2030",
@@ -721,11 +982,16 @@
     "groupDesc": "熱軋、冷軋、不鏽鋼，基礎建設與製造業原料",
     "holdingPct": 40.53,
     "delta": 0.73,
-    "price": 16.5,
+    "price": 16.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 13.01,
-    "industry": "鋼鐵工業"
+    "threeMonthReturn": 4.78,
+    "industry": "鋼鐵工業",
+    "subIndustries": [
+      "不鏽鋼",
+      "不鏽鋼剪裁加工",
+      "不鏽鋼管"
+    ]
   },
   {
     "id": "2033",
@@ -737,8 +1003,11 @@
     "price": 16.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -6.98,
-    "industry": "鋼鐵工業"
+    "threeMonthReturn": -2.63,
+    "industry": "鋼鐵工業",
+    "subIndustries": [
+      "線材盤元"
+    ]
   },
   {
     "id": "2034",
@@ -747,11 +1016,16 @@
     "groupDesc": "熱軋、冷軋、不鏽鋼，基礎建設與製造業原料",
     "holdingPct": 42.15,
     "delta": 0.3,
-    "price": 20.95,
+    "price": 21.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 6.35,
-    "industry": "鋼鐵工業"
+    "threeMonthReturn": -2.29,
+    "industry": "鋼鐵工業",
+    "subIndustries": [
+      "不鏽鋼",
+      "不鏽鋼剪裁加工",
+      "不鏽鋼管"
+    ]
   },
   {
     "id": "2049",
@@ -760,11 +1034,15 @@
     "groupDesc": "工業機器手臂、減速機、AMR，自動化生產趨勢",
     "holdingPct": 57.31,
     "delta": 1.84,
-    "price": 293.5,
+    "price": 301.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 63.06,
-    "industry": "電機機械"
+    "threeMonthReturn": 53.57,
+    "industry": "電機機械",
+    "subIndustries": [
+      "機械零組件",
+      "滑軌"
+    ]
   },
   {
     "id": "2059",
@@ -773,11 +1051,15 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 56.67,
     "delta": 0.33,
-    "price": 3745.0,
+    "price": 3855.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 127.66,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 18.43,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子零件元件",
+      "其他電子零件"
+    ]
   },
   {
     "id": "2062",
@@ -786,24 +1068,32 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 56.59,
     "delta": 0.5,
-    "price": 22.7,
+    "price": 22.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -5.42,
-    "industry": "居家生活"
+    "threeMonthReturn": 9.16,
+    "industry": "居家生活",
+    "subIndustries": [
+      "家居用品",
+      "水龍頭"
+    ]
   },
   {
     "id": "2072",
     "name": "世紀風電",
-    "group": "其他/未分組",
-    "groupDesc": "尚未分類或跨產業個股",
+    "group": "鋼鐵",
+    "groupDesc": "熱軋、冷軋、不鏽鋼，基礎建設與製造業原料",
     "holdingPct": 71.45,
     "delta": 0.61,
-    "price": 184.5,
+    "price": 182.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -22.96,
-    "industry": "綠能環保"
+    "threeMonthReturn": -24.01,
+    "industry": "綠能環保",
+    "subIndustries": [
+      "條鋼",
+      "鋼構"
+    ]
   },
   {
     "id": "2102",
@@ -812,11 +1102,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 75.38,
     "delta": 0.15,
-    "price": 19.3,
+    "price": 19.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 14.54,
-    "industry": "橡膠工業"
+    "threeMonthReturn": 0.52,
+    "industry": "橡膠工業",
+    "subIndustries": [
+      "橡膠工業",
+      "輪胎",
+      "資產股"
+    ]
   },
   {
     "id": "2107",
@@ -825,11 +1120,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 54.55,
     "delta": 0.18,
-    "price": 26.0,
+    "price": 25.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.63,
-    "industry": "橡膠工業"
+    "threeMonthReturn": 4.67,
+    "industry": "橡膠工業",
+    "subIndustries": [
+      "塑化製品",
+      "塑膠皮布",
+      "橡膠工業"
+    ]
   },
   {
     "id": "2108",
@@ -838,11 +1138,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 64.82,
     "delta": 0.24,
-    "price": 25.75,
+    "price": 25.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 0.78,
-    "industry": "橡膠工業"
+    "threeMonthReturn": 4.48,
+    "industry": "橡膠工業",
+    "subIndustries": [
+      "橡膠工業",
+      "乳膠相關"
+    ]
   },
   {
     "id": "2201",
@@ -851,11 +1155,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 58.37,
     "delta": 0.25,
-    "price": 27.7,
+    "price": 27.35,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -23.37,
-    "industry": "汽車工業"
+    "threeMonthReturn": -14.8,
+    "industry": "汽車工業",
+    "subIndustries": [
+      "汽車服務相關",
+      "汽車銷售",
+      "汽機車零組件"
+    ]
   },
   {
     "id": "2236",
@@ -864,37 +1173,49 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 69.61,
     "delta": 0.91,
-    "price": 125.5,
+    "price": 129.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 43.13,
-    "industry": "汽車工業"
+    "threeMonthReturn": 10.73,
+    "industry": "汽車工業",
+    "subIndustries": [
+      "汽機車零組件"
+    ]
   },
   {
     "id": "2303",
     "name": "聯電",
-    "group": "晶圓代工",
-    "groupDesc": "晶圓代工，台積電、聯電等",
+    "group": "IC封測",
+    "groupDesc": "傳統封測、IC 載板、先進封裝（CoWoS/SoIC），日月光、京元電、欣興等",
     "holdingPct": 73.58,
     "delta": 1.25,
-    "price": 76.9,
+    "price": 76.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 76.17,
-    "industry": "半導體業"
+    "threeMonthReturn": 40.85,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC製造",
+      "晶圓代工"
+    ]
   },
   {
     "id": "2312",
     "name": "金寶",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "車用電子",
+    "groupDesc": "ADAS 自駕、ECU、車用感測器，電動車趨勢",
     "holdingPct": 45.66,
     "delta": 0.62,
-    "price": 24.7,
+    "price": 27.15,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 32.8,
-    "industry": "其他電子業"
+    "threeMonthReturn": 13.84,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "家電",
+      "車用電子",
+      "網通設備"
+    ]
   },
   {
     "id": "2317",
@@ -903,11 +1224,16 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 63.86,
     "delta": 0.18,
-    "price": 207.5,
+    "price": 211.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 52.01,
-    "industry": "其他電子業"
+    "threeMonthReturn": -11.53,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "機器人",
+      "家電",
+      "液晶電視"
+    ]
   },
   {
     "id": "2324",
@@ -916,11 +1242,16 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 64.11,
     "delta": 0.18,
-    "price": 30.25,
+    "price": 31.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 11.83,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 1.62,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "家電",
+      "液晶電視",
+      "車用電子"
+    ]
   },
   {
     "id": "2327",
@@ -929,63 +1260,87 @@
     "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 67.73,
     "delta": 3.62,
-    "price": 319.5,
+    "price": 323.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 189.14,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 27.67,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "MLCC",
+      "晶片電阻"
+    ]
   },
   {
     "id": "2329",
     "name": "華泰",
-    "group": "IC設計/半導體",
-    "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
+    "group": "電子零組件",
+    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 52.88,
     "delta": 3.62,
-    "price": 62.2,
+    "price": 62.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 100.97,
-    "industry": "半導體業"
+    "threeMonthReturn": 10.71,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC封裝測試",
+      "IC封裝",
+      "IC測試"
+    ]
   },
   {
     "id": "2330",
     "name": "台積電",
-    "group": "CPO矽光子",
+    "group": "光通訊",
     "groupDesc": "共封裝光學、矽光子、光模組，AI 資料中心高速傳輸",
     "holdingPct": 85.69,
     "delta": 0.13,
-    "price": 2025.0,
+    "price": 2050.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 142.51,
-    "industry": "半導體業"
+    "threeMonthReturn": 22.39,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC製造",
+      "晶圓代工"
+    ]
   },
   {
     "id": "2340",
     "name": "台亞",
-    "group": "IC設計/半導體",
-    "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
+    "group": "光電/LED",
+    "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 35.29,
     "delta": 1.52,
-    "price": 35.5,
+    "price": 39.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 77.06,
-    "industry": "半導體業"
+    "threeMonthReturn": 42.26,
+    "industry": "半導體業",
+    "subIndustries": [
+      "LED",
+      "LED晶粒",
+      "LED照明產品"
+    ]
   },
   {
     "id": "2345",
     "name": "智邦",
-    "group": "CPO矽光子",
+    "group": "光通訊",
     "groupDesc": "共封裝光學、矽光子、光模組，AI 資料中心高速傳輸",
     "holdingPct": 57.47,
     "delta": 0.41,
-    "price": 2005.0,
+    "price": 2190.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 296.25,
-    "industry": "通信網路業"
+    "threeMonthReturn": 81.74,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "網通設備",
+      "用戶端設備",
+      "網路交換器"
+    ]
   },
   {
     "id": "2349",
@@ -994,24 +1349,34 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 18.81,
     "delta": 0.56,
-    "price": 13.55,
+    "price": 13.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 34.83,
-    "industry": "光電業"
+    "threeMonthReturn": -15.17,
+    "industry": "光電業",
+    "subIndustries": [
+      "光碟片",
+      "週邊產品",
+      "記憶卡"
+    ]
   },
   {
     "id": "2351",
     "name": "順德",
-    "group": "散熱",
-    "groupDesc": "均熱板、散熱模組、液冷系統，AI 伺服器熱管理關鍵",
+    "group": "重電電網",
+    "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 60.67,
     "delta": 0.95,
-    "price": 141.5,
+    "price": 151.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 109.94,
-    "industry": "半導體業"
+    "threeMonthReturn": 96.1,
+    "industry": "半導體業",
+    "subIndustries": [
+      "封測服務與材料",
+      "導線架",
+      "傳產其他"
+    ]
   },
   {
     "id": "2352",
@@ -1023,8 +1388,13 @@
     "price": 25.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -15.54,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 4.27,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "顯示器",
+      "LCD顯示器",
+      "網通設備"
+    ]
   },
   {
     "id": "2353",
@@ -1033,11 +1403,16 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 34.63,
     "delta": 0.72,
-    "price": 28.55,
+    "price": 28.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -9.37,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 4.99,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "顯示器",
+      "投影機",
+      "消費性電子產品"
+    ]
   },
   {
     "id": "2356",
@@ -1046,37 +1421,52 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 66.08,
     "delta": 0.62,
-    "price": 46.6,
+    "price": 47.35,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 16.94,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 7.98,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "電腦系統業",
+      "伺服器",
+      "筆記型電腦製造"
+    ]
   },
   {
     "id": "2363",
     "name": "矽統",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 28.14,
     "delta": 0.17,
-    "price": 55.6,
+    "price": 57.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 17.8,
-    "industry": "半導體業"
+    "threeMonthReturn": 18.18,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "繪圖IC",
+      "觸控IC"
+    ]
   },
   {
     "id": "2365",
     "name": "昆盈",
-    "group": "AI伺服器",
-    "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
+    "group": "車用電子",
+    "groupDesc": "ADAS 自駕、ECU、車用感測器，電動車趨勢",
     "holdingPct": 17.78,
     "delta": 0.69,
-    "price": 35.15,
+    "price": 35.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 20.38,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 0.14,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "車用電子",
+      "行車紀錄器",
+      "週邊產品"
+    ]
   },
   {
     "id": "2368",
@@ -1085,24 +1475,33 @@
     "groupDesc": "印刷電路板、ABF 載板、軟板，電子產品基礎建設",
     "holdingPct": 68.3,
     "delta": 0.31,
-    "price": 1210.0,
+    "price": 1225.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 554.05,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 90.51,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "印刷電路板"
+    ]
   },
   {
     "id": "2369",
     "name": "菱生",
-    "group": "IC設計/半導體",
-    "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
+    "group": "電子零組件",
+    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 26.91,
     "delta": 0.13,
-    "price": 30.25,
+    "price": 32.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 130.92,
-    "industry": "半導體業"
+    "threeMonthReturn": 22.7,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC封裝測試",
+      "IC封裝",
+      "IC測試"
+    ]
   },
   {
     "id": "2371",
@@ -1111,11 +1510,16 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 45.92,
     "delta": 0.11,
-    "price": 31.7,
+    "price": 32.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -25.36,
-    "industry": "電機機械"
+    "threeMonthReturn": 3.23,
+    "industry": "電機機械",
+    "subIndustries": [
+      "電力設備",
+      "電機",
+      "重電設備"
+    ]
   },
   {
     "id": "2374",
@@ -1124,11 +1528,16 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 25.15,
     "delta": 0.44,
-    "price": 72.3,
+    "price": 74.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 95.3,
-    "industry": "光電業"
+    "threeMonthReturn": -5.55,
+    "industry": "光電業",
+    "subIndustries": [
+      "數位相機",
+      "數位相機組裝",
+      "光學元件"
+    ]
   },
   {
     "id": "2376",
@@ -1137,11 +1546,16 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 60.39,
     "delta": 2.83,
-    "price": 279.0,
+    "price": 288.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 31.29,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 17.76,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "週邊產品",
+      "電競週邊",
+      "電腦系統業"
+    ]
   },
   {
     "id": "2377",
@@ -1150,24 +1564,34 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 56.89,
     "delta": 0.23,
-    "price": 91.7,
+    "price": 93.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -28.91,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": -2.6,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "週邊產品",
+      "電競週邊",
+      "電腦系統業"
+    ]
   },
   {
     "id": "2379",
     "name": "瑞昱",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 58.52,
     "delta": 0.34,
-    "price": 538.0,
+    "price": 551.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 6.11,
-    "industry": "半導體業"
+    "threeMonthReturn": 3.96,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "網路卡IC",
+      "集線器IC"
+    ]
   },
   {
     "id": "2382",
@@ -1176,37 +1600,52 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 81.74,
     "delta": 0.37,
-    "price": 329.0,
+    "price": 340.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 41.81,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 20.57,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "電腦系統業",
+      "伺服器",
+      "筆記型電腦製造"
+    ]
   },
   {
     "id": "2388",
     "name": "威盛",
-    "group": "IC設計/半導體",
-    "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
+    "group": "車用電子",
+    "groupDesc": "ADAS 自駕、ECU、車用感測器，電動車趨勢",
     "holdingPct": 64.99,
     "delta": 1.1,
-    "price": 66.2,
+    "price": 72.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -0.45,
-    "industry": "半導體業"
+    "threeMonthReturn": 41.36,
+    "industry": "半導體業",
+    "subIndustries": [
+      "車用電子",
+      "IC設計",
+      "CPU"
+    ]
   },
   {
     "id": "2392",
     "name": "正崴",
-    "group": "連接器",
-    "groupDesc": "線材連接器、背板連接器，資料中心與消費電子應用",
+    "group": "電源供應器",
+    "groupDesc": "伺服器電源、工業電源供應器",
     "holdingPct": 43.21,
     "delta": 0.28,
-    "price": 40.25,
+    "price": 39.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -9.55,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 7.13,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子零件元件",
+      "電源供應器",
+      "連接器"
+    ]
   },
   {
     "id": "2393",
@@ -1215,11 +1654,16 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 60.54,
     "delta": 0.22,
-    "price": 72.9,
+    "price": 73.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -2.41,
-    "industry": "光電業"
+    "threeMonthReturn": 29.02,
+    "industry": "光電業",
+    "subIndustries": [
+      "LED",
+      "LED封裝",
+      "LED照明產品"
+    ]
   },
   {
     "id": "2399",
@@ -1228,24 +1672,34 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 21.09,
     "delta": 1.89,
-    "price": 38.15,
+    "price": 41.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 121.8,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 62.28,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "工業電腦",
+      "電腦系統業",
+      "主機板"
+    ]
   },
   {
     "id": "2401",
     "name": "凌陽",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 31.8,
     "delta": 0.95,
-    "price": 24.2,
+    "price": 25.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 21.91,
-    "industry": "半導體業"
+    "threeMonthReturn": 19.44,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "DSP",
+      "消費性IC"
+    ]
   },
   {
     "id": "2402",
@@ -1254,11 +1708,16 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 45.42,
     "delta": 4.22,
-    "price": 77.3,
+    "price": 77.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 133.18,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 31.57,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子零件元件",
+      "其他電子零件",
+      "印刷電路板相關"
+    ]
   },
   {
     "id": "2417",
@@ -1267,11 +1726,16 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 39.11,
     "delta": 0.73,
-    "price": 42.0,
+    "price": 42.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 21.56,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 5.5,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "消費性電子產品",
+      "視訊轉換相關",
+      "視訊會議產品"
+    ]
   },
   {
     "id": "2419",
@@ -1280,24 +1744,33 @@
     "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
     "holdingPct": 64.85,
     "delta": 1.69,
-    "price": 34.65,
+    "price": 34.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 75.89,
-    "industry": "通信網路業"
+    "threeMonthReturn": 38.69,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "網通設備",
+      "用戶端設備",
+      "接取設備"
+    ]
   },
   {
     "id": "2421",
     "name": "建準",
-    "group": "散熱",
-    "groupDesc": "均熱板、散熱模組、液冷系統，AI 伺服器熱管理關鍵",
+    "group": "重電電網",
+    "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 44.57,
     "delta": 1.11,
     "price": 146.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 82.73,
-    "industry": "電子零組件業"
+    "threeMonthReturn": -6.71,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "散熱模組",
+      "散熱風扇馬達"
+    ]
   },
   {
     "id": "2425",
@@ -1306,50 +1779,69 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 37.85,
     "delta": 0.2,
-    "price": 30.0,
+    "price": 31.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -15.97,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 2.8,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "電腦系統業",
+      "伺服器",
+      "主機板"
+    ]
   },
   {
     "id": "2431",
     "name": "聯昌",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "電源供應器",
+    "groupDesc": "伺服器電源、工業電源供應器",
     "holdingPct": 34.95,
     "delta": 0.96,
-    "price": 11.5,
+    "price": 11.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 9.52,
-    "industry": "電子零組件業"
+    "threeMonthReturn": -0.84,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子零件元件",
+      "電源供應器"
+    ]
   },
   {
     "id": "2454",
     "name": "聯發科",
-    "group": "IC設計/半導體",
-    "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
+    "group": "衛星通訊",
+    "groupDesc": "衛星通訊通訊、SpaceX Starlink 供應鏈",
     "holdingPct": 66.38,
     "delta": 0.74,
-    "price": 1900.0,
+    "price": 2090.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 41.26,
-    "industry": "半導體業"
+    "threeMonthReturn": 40.27,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "DSL晶片組",
+      "無線網路IC"
+    ]
   },
   {
     "id": "2458",
     "name": "義隆",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 50.45,
     "delta": 0.11,
-    "price": 135.0,
+    "price": 137.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 18.42,
-    "industry": "半導體業"
+    "threeMonthReturn": 16.6,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "消費性IC",
+      "PC週邊IC"
+    ]
   },
   {
     "id": "2461",
@@ -1358,11 +1850,16 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 36.49,
     "delta": 0.28,
-    "price": 17.7,
+    "price": 17.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 12.38,
-    "industry": "其他電子業"
+    "threeMonthReturn": 7.16,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "面板零組件",
+      "光學膜",
+      "電子其他"
+    ]
   },
   {
     "id": "2467",
@@ -1371,11 +1868,16 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 60.53,
     "delta": 0.31,
-    "price": 570.0,
+    "price": 560.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 361.54,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 112.93,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "設備儀器商",
+      "PCB相關設備",
+      "半導體製程設備"
+    ]
   },
   {
     "id": "2468",
@@ -1384,11 +1886,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 49.67,
     "delta": 0.25,
-    "price": 34.6,
+    "price": 35.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -44.9,
-    "industry": "資訊服務業"
+    "threeMonthReturn": -13.37,
+    "industry": "資訊服務業",
+    "subIndustries": [
+      "軟體業",
+      "系統整合"
+    ]
   },
   {
     "id": "2472",
@@ -1397,11 +1903,16 @@
     "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 50.2,
     "delta": 0.38,
-    "price": 183.0,
+    "price": 188.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 178.96,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 70.14,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "鋁質電解電容",
+      "被動元件上游"
+    ]
   },
   {
     "id": "2474",
@@ -1410,24 +1921,32 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 71.84,
     "delta": 0.5,
-    "price": 206.5,
+    "price": 210.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -3.28,
-    "industry": "其他電子業"
+    "threeMonthReturn": 1.2,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "電子零件元件",
+      "鎂鋁合金"
+    ]
   },
   {
     "id": "2476",
     "name": "鉅祥",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "AI伺服器",
+    "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 50.29,
     "delta": 0.2,
-    "price": 121.5,
+    "price": 122.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 86.64,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 35.25,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子零件元件",
+      "模具沖壓"
+    ]
   },
   {
     "id": "2478",
@@ -1436,37 +1955,51 @@
     "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 45.3,
     "delta": 1.98,
-    "price": 75.4,
+    "price": 73.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 80.17,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 17.3,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "晶片電阻"
+    ]
   },
   {
     "id": "2481",
     "name": "強茂",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 57.13,
     "delta": 3.86,
-    "price": 110.0,
+    "price": 110.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 158.52,
-    "industry": "半導體業"
+    "threeMonthReturn": 36.59,
+    "industry": "半導體業",
+    "subIndustries": [
+      "分離式元件",
+      "二極體",
+      "電晶體"
+    ]
   },
   {
     "id": "2484",
     "name": "希華",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "被動元件",
+    "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 28.71,
     "delta": 11.86,
-    "price": 46.6,
+    "price": 49.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 136.55,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 136.21,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "石英元件",
+      "濾波器"
+    ]
   },
   {
     "id": "2488",
@@ -1475,11 +2008,15 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 45.33,
     "delta": 2.11,
-    "price": 52.4,
+    "price": 52.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 19.23,
-    "industry": "其他電子業"
+    "threeMonthReturn": 12.04,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "電子零件元件",
+      "音響設備及零件"
+    ]
   },
   {
     "id": "2492",
@@ -1488,11 +2025,16 @@
     "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 55.3,
     "delta": 3.09,
-    "price": 149.5,
+    "price": 149.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 98.8,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 12.88,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "MLCC",
+      "晶片電阻"
+    ]
   },
   {
     "id": "2493",
@@ -1501,11 +2043,16 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 43.91,
     "delta": 1.96,
-    "price": 136.5,
+    "price": 135.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 63.47,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 12.45,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子通路",
+      "半導體材料通路商",
+      "設備儀器商"
+    ]
   },
   {
     "id": "2495",
@@ -1514,11 +2061,15 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 49.6,
     "delta": 2.16,
-    "price": 42.45,
+    "price": 44.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 89.09,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 33.48,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "週邊產品",
+      "磁碟陣列控制器"
+    ]
   },
   {
     "id": "2501",
@@ -1530,8 +2081,12 @@
     "price": 24.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 35.15,
-    "industry": "建材營造業"
+    "threeMonthReturn": 3.33,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "地產",
+      "營建"
+    ]
   },
   {
     "id": "2511",
@@ -1540,11 +2095,16 @@
     "groupDesc": "不動產開發、營建工程",
     "holdingPct": 74.61,
     "delta": 0.19,
-    "price": 8.1,
+    "price": 8.13,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -9.4,
-    "industry": "建材營造業"
+    "threeMonthReturn": -3.79,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "地產",
+      "營建",
+      "旅宿／餐飲"
+    ]
   },
   {
     "id": "2528",
@@ -1553,11 +2113,15 @@
     "groupDesc": "不動產開發、營建工程",
     "holdingPct": 77.68,
     "delta": 0.26,
-    "price": 23.05,
+    "price": 22.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -27.42,
-    "industry": "建材營造業"
+    "threeMonthReturn": -23.28,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "地產",
+      "營建"
+    ]
   },
   {
     "id": "2535",
@@ -1566,11 +2130,16 @@
     "groupDesc": "不動產開發、營建工程",
     "holdingPct": 53.1,
     "delta": 0.12,
-    "price": 69.4,
+    "price": 70.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 32.19,
-    "industry": "建材營造業"
+    "threeMonthReturn": 10.49,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "營造工程",
+      "住宅建設",
+      "基礎建設"
+    ]
   },
   {
     "id": "2537",
@@ -1579,11 +2148,15 @@
     "groupDesc": "不動產開發、營建工程",
     "holdingPct": 48.88,
     "delta": 0.56,
-    "price": 10.4,
+    "price": 10.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.48,
-    "industry": "建材營造業"
+    "threeMonthReturn": -12.18,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "地產",
+      "營建"
+    ]
   },
   {
     "id": "2546",
@@ -1592,11 +2165,16 @@
     "groupDesc": "不動產開發、營建工程",
     "holdingPct": 57.97,
     "delta": 0.11,
-    "price": 86.0,
+    "price": 85.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 19.16,
-    "industry": "建材營造業"
+    "threeMonthReturn": -1.6,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "營造工程",
+      "住宅建設",
+      "基礎建設"
+    ]
   },
   {
     "id": "2596",
@@ -1605,37 +2183,51 @@
     "groupDesc": "不動產開發、營建工程",
     "holdingPct": 58.01,
     "delta": 1.08,
-    "price": 31.15,
+    "price": 30.75,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 2.3,
-    "industry": "建材營造業"
+    "threeMonthReturn": -17.45,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "地產",
+      "營建"
+    ]
   },
   {
     "id": "2606",
     "name": "裕民",
     "group": "航運",
-    "groupDesc": "散裝航運、油輪，全球大宗物資運輸",
+    "groupDesc": "貨櫃與散裝航運、油輪運輸，長榮、陽明、萬海、裕民等業者",
     "holdingPct": 70.45,
     "delta": 0.41,
-    "price": 62.0,
+    "price": 63.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 21.57,
-    "industry": "航運業"
+    "threeMonthReturn": 3.76,
+    "industry": "航運業",
+    "subIndustries": [
+      "運輸事業",
+      "散裝航運",
+      "油輪"
+    ]
   },
   {
     "id": "2607",
     "name": "榮運",
     "group": "航運",
-    "groupDesc": "散裝航運、油輪，全球大宗物資運輸",
+    "groupDesc": "貨櫃與散裝航運、油輪運輸，長榮、陽明、萬海、裕民等業者",
     "holdingPct": 71.2,
     "delta": 0.21,
-    "price": 50.0,
+    "price": 50.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -11.35,
-    "industry": "航運業"
+    "threeMonthReturn": -13.15,
+    "industry": "航運業",
+    "subIndustries": [
+      "運輸事業",
+      "貨櫃場服務",
+      "倉儲服務"
+    ]
   },
   {
     "id": "2614",
@@ -1644,76 +2236,103 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 43.1,
     "delta": 0.21,
-    "price": 20.5,
+    "price": 20.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 38.33,
-    "industry": "其他業"
+    "threeMonthReturn": -9.98,
+    "industry": "其他業",
+    "subIndustries": [
+      "運輸事業",
+      "貨櫃場服務",
+      "傳播事業"
+    ]
   },
   {
     "id": "2630",
     "name": "亞航",
     "group": "航運",
-    "groupDesc": "散裝航運、油輪，全球大宗物資運輸",
+    "groupDesc": "貨櫃與散裝航運、油輪運輸，長榮、陽明、萬海、裕民等業者",
     "holdingPct": 64.55,
     "delta": 0.4,
-    "price": 50.1,
+    "price": 49.15,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 39.36,
-    "industry": "航運業"
+    "threeMonthReturn": -4.19,
+    "industry": "航運業",
+    "subIndustries": [
+      "運輸事業",
+      "飛機維修"
+    ]
   },
   {
     "id": "2634",
     "name": "漢翔",
     "group": "航運",
-    "groupDesc": "散裝航運、油輪，全球大宗物資運輸",
+    "groupDesc": "貨櫃與散裝航運、油輪運輸，長榮、陽明、萬海、裕民等業者",
     "holdingPct": 46.62,
     "delta": 0.18,
-    "price": 50.4,
+    "price": 49.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 8.86,
-    "industry": "航運業"
+    "threeMonthReturn": -4.74,
+    "industry": "航運業",
+    "subIndustries": [
+      "機械零組件",
+      "飛機零件／製造",
+      "航天軍工"
+    ]
   },
   {
     "id": "2636",
     "name": "台驊控股",
     "group": "航運",
-    "groupDesc": "散裝航運、油輪，全球大宗物資運輸",
+    "groupDesc": "貨櫃與散裝航運、油輪運輸，長榮、陽明、萬海、裕民等業者",
     "holdingPct": 34.64,
     "delta": 0.14,
-    "price": 68.0,
+    "price": 68.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -2.58,
-    "industry": "航運業"
+    "threeMonthReturn": 1.94,
+    "industry": "航運業",
+    "subIndustries": [
+      "運輸事業",
+      "海空運承攬業",
+      "物流業"
+    ]
   },
   {
     "id": "2637",
     "name": "慧洋-KY",
     "group": "航運",
-    "groupDesc": "散裝航運、油輪，全球大宗物資運輸",
+    "groupDesc": "貨櫃與散裝航運、油輪運輸，長榮、陽明、萬海、裕民等業者",
     "holdingPct": 74.98,
     "delta": 0.52,
-    "price": 72.7,
+    "price": 74.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 21.17,
-    "industry": "航運業"
+    "threeMonthReturn": 8.56,
+    "industry": "航運業",
+    "subIndustries": [
+      "運輸事業",
+      "散裝航運"
+    ]
   },
   {
     "id": "2646",
     "name": "星宇航空",
     "group": "航運",
-    "groupDesc": "散裝航運、油輪，全球大宗物資運輸",
+    "groupDesc": "貨櫃與散裝航運、油輪運輸，長榮、陽明、萬海、裕民等業者",
     "holdingPct": 62.86,
     "delta": 0.15,
-    "price": 20.85,
+    "price": 20.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -13.12,
-    "industry": "航運業"
+    "threeMonthReturn": -10.73,
+    "industry": "航運業",
+    "subIndustries": [
+      "運輸事業",
+      "空運"
+    ]
   },
   {
     "id": "2702",
@@ -1722,11 +2341,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 72.07,
     "delta": 0.41,
-    "price": 16.05,
+    "price": 16.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 26.38,
-    "industry": "觀光餐旅"
+    "threeMonthReturn": 41.53,
+    "industry": "觀光餐旅",
+    "subIndustries": [
+      "旅宿／餐飲",
+      "飯店"
+    ]
   },
   {
     "id": "2727",
@@ -1735,11 +2358,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 17.5,
     "delta": 0.27,
-    "price": 226.0,
+    "price": 225.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 7.36,
-    "industry": "觀光餐旅"
+    "threeMonthReturn": 5.13,
+    "industry": "觀光餐旅",
+    "subIndustries": [
+      "旅宿／餐飲",
+      "餐飲"
+    ]
   },
   {
     "id": "2740",
@@ -1748,11 +2375,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 72.53,
     "delta": 4.73,
-    "price": 41.25,
+    "price": 38.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 55.66,
-    "industry": "觀光餐旅"
+    "threeMonthReturn": 31.03,
+    "industry": "觀光餐旅",
+    "subIndustries": [
+      "旅宿／餐飲",
+      "餐飲"
+    ]
   },
   {
     "id": "2820",
@@ -1761,11 +2392,16 @@
     "groupDesc": "銀行、金控、壽險，國內金融體系核心",
     "holdingPct": 63.09,
     "delta": 0.2,
-    "price": 17.15,
+    "price": 17.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 17.06,
-    "industry": "金融保險業"
+    "threeMonthReturn": 3.65,
+    "industry": "金融保險業",
+    "subIndustries": [
+      "金融業",
+      "票券",
+      "金融其他"
+    ]
   },
   {
     "id": "2834",
@@ -1774,11 +2410,15 @@
     "groupDesc": "銀行、金控、壽險，國內金融體系核心",
     "holdingPct": 55.45,
     "delta": 0.28,
-    "price": 16.9,
+    "price": 16.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 27.93,
-    "industry": "金融保險業"
+    "threeMonthReturn": 3.12,
+    "industry": "金融保險業",
+    "subIndustries": [
+      "金融業",
+      "銀行"
+    ]
   },
   {
     "id": "2852",
@@ -1787,11 +2427,16 @@
     "groupDesc": "銀行、金控、壽險，國內金融體系核心",
     "holdingPct": 53.35,
     "delta": 0.37,
-    "price": 26.1,
+    "price": 26.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -7.61,
-    "industry": "金融保險業"
+    "threeMonthReturn": -5.23,
+    "industry": "金融保險業",
+    "subIndustries": [
+      "金融業",
+      "產險",
+      "再保險"
+    ]
   },
   {
     "id": "2855",
@@ -1800,11 +2445,15 @@
     "groupDesc": "銀行、金控、壽險，國內金融體系核心",
     "holdingPct": 71.9,
     "delta": 0.68,
-    "price": 33.0,
+    "price": 33.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 64.59,
-    "industry": "金融保險業"
+    "threeMonthReturn": 33.27,
+    "industry": "金融保險業",
+    "subIndustries": [
+      "金融業",
+      "證券"
+    ]
   },
   {
     "id": "2867",
@@ -1813,11 +2462,15 @@
     "groupDesc": "銀行、金控、壽險，國內金融體系核心",
     "holdingPct": 78.91,
     "delta": 0.42,
-    "price": 7.88,
+    "price": 7.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 44.06,
-    "industry": "金融保險業"
+    "threeMonthReturn": 0.64,
+    "industry": "金融保險業",
+    "subIndustries": [
+      "金融業",
+      "壽險"
+    ]
   },
   {
     "id": "2885",
@@ -1826,11 +2479,16 @@
     "groupDesc": "銀行、金控、壽險，國內金融體系核心",
     "holdingPct": 80.62,
     "delta": 0.13,
-    "price": 51.2,
+    "price": 51.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 74.03,
-    "industry": "金融保險業"
+    "threeMonthReturn": 26.87,
+    "industry": "金融保險業",
+    "subIndustries": [
+      "金融業",
+      "銀行",
+      "證金公司"
+    ]
   },
   {
     "id": "2897",
@@ -1842,8 +2500,12 @@
     "price": 10.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 12.2,
-    "industry": "金融保險業"
+    "threeMonthReturn": 12.69,
+    "industry": "金融保險業",
+    "subIndustries": [
+      "金融業",
+      "銀行"
+    ]
   },
   {
     "id": "2912",
@@ -1852,11 +2514,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 79.51,
     "delta": 0.16,
-    "price": 238.0,
+    "price": 236.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -6.48,
-    "industry": "貿易百貨業"
+    "threeMonthReturn": 7.5,
+    "industry": "貿易百貨業",
+    "subIndustries": [
+      "流通業",
+      "便利商店"
+    ]
   },
   {
     "id": "2913",
@@ -1865,11 +2531,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 53.03,
     "delta": 0.35,
-    "price": 11.9,
+    "price": 11.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -21.45,
-    "industry": "貿易百貨業"
+    "threeMonthReturn": -11.61,
+    "industry": "貿易百貨業",
+    "subIndustries": [
+      "食品加工",
+      "茶葉相關",
+      "流通業"
+    ]
   },
   {
     "id": "3004",
@@ -1878,11 +2549,16 @@
     "groupDesc": "熱軋、冷軋、不鏽鋼，基礎建設與製造業原料",
     "holdingPct": 47.99,
     "delta": 0.3,
-    "price": 117.5,
+    "price": 116.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 32.02,
-    "industry": "鋼鐵工業"
+    "threeMonthReturn": 3.56,
+    "industry": "鋼鐵工業",
+    "subIndustries": [
+      "線材盤元",
+      "螺絲螺帽",
+      "航天軍工"
+    ]
   },
   {
     "id": "3008",
@@ -1891,11 +2567,15 @@
     "groupDesc": "光學鏡頭、鏡片，手機與工業應用",
     "holdingPct": 46.74,
     "delta": 0.8,
-    "price": 2710.0,
+    "price": 2645.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 28.13,
-    "industry": "光電業"
+    "threeMonthReturn": 3.73,
+    "industry": "光電業",
+    "subIndustries": [
+      "光學元件",
+      "光學鏡片／頭"
+    ]
   },
   {
     "id": "3010",
@@ -1904,11 +2584,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 55.23,
     "delta": 0.32,
-    "price": 133.0,
+    "price": 137.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 48.11,
-    "industry": "電子通路業"
+    "threeMonthReturn": 23.42,
+    "industry": "電子通路業",
+    "subIndustries": [
+      "電子通路",
+      "電子元件代理商",
+      "半導體材料通路商"
+    ]
   },
   {
     "id": "3011",
@@ -1917,50 +2602,69 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 25.12,
     "delta": 0.63,
-    "price": 13.5,
+    "price": 13.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 13.45,
-    "industry": "電子零組件業"
+    "threeMonthReturn": -4.15,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子零件元件",
+      "連接線材"
+    ]
   },
   {
     "id": "3014",
     "name": "聯陽",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 20.42,
     "delta": 0.66,
-    "price": 123.5,
+    "price": 124.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.65,
-    "industry": "半導體業"
+    "threeMonthReturn": 5.98,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "IO控制IC",
+      "消費性IC"
+    ]
   },
   {
     "id": "3016",
     "name": "嘉晶",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 68.39,
     "delta": 0.8,
-    "price": 65.9,
+    "price": 70.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 113.27,
-    "industry": "半導體業"
+    "threeMonthReturn": 18.01,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC製造",
+      "第三類半導體",
+      "磊晶"
+    ]
   },
   {
     "id": "3017",
     "name": "奇鋐",
-    "group": "散熱",
-    "groupDesc": "均熱板、散熱模組、液冷系統，AI 伺服器熱管理關鍵",
+    "group": "重電電網",
+    "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 55.63,
     "delta": 0.16,
-    "price": 2490.0,
+    "price": 2565.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 517.87,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 86.55,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "電子零件元件",
+      "伺服器機殼",
+      "機殼"
+    ]
   },
   {
     "id": "3022",
@@ -1969,11 +2673,14 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 52.01,
     "delta": 0.64,
-    "price": 70.6,
+    "price": 70.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -7.71,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 10.78,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "工業電腦"
+    ]
   },
   {
     "id": "3023",
@@ -1982,11 +2689,16 @@
     "groupDesc": "線材連接器、背板連接器，資料中心與消費電子應用",
     "holdingPct": 54.59,
     "delta": 0.12,
-    "price": 279.5,
+    "price": 282.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 39.75,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 46.37,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子零件元件",
+      "連接器",
+      "連接線材"
+    ]
   },
   {
     "id": "3026",
@@ -1995,11 +2707,16 @@
     "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 43.58,
     "delta": 3.57,
-    "price": 234.0,
+    "price": 255.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 191.41,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 140.57,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "MLCC",
+      "鋁質電解電容"
+    ]
   },
   {
     "id": "3028",
@@ -2011,21 +2728,31 @@
     "price": 61.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 101.98,
-    "industry": "電子通路業"
+    "threeMonthReturn": 44.58,
+    "industry": "電子通路業",
+    "subIndustries": [
+      "電子通路",
+      "IC零組件通路商",
+      "電子元件代理商"
+    ]
   },
   {
     "id": "3032",
     "name": "偉訓",
-    "group": "電源供應器",
-    "groupDesc": "伺服器電源、工業電源供應器",
+    "group": "AI伺服器",
+    "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 45.93,
     "delta": 0.91,
-    "price": 61.1,
+    "price": 63.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.89,
-    "industry": "電子零組件業"
+    "threeMonthReturn": -17.34,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子零件元件",
+      "伺服器機殼",
+      "電源供應器"
+    ]
   },
   {
     "id": "3033",
@@ -2034,24 +2761,33 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 27.33,
     "delta": 1.23,
-    "price": 34.55,
+    "price": 34.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 11.81,
-    "industry": "電子通路業"
+    "threeMonthReturn": 6.41,
+    "industry": "電子通路業",
+    "subIndustries": [
+      "電子通路",
+      "IC零組件通路商"
+    ]
   },
   {
     "id": "3034",
     "name": "聯詠",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 57.48,
     "delta": 0.32,
-    "price": 415.0,
+    "price": 415.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -15.99,
-    "industry": "半導體業"
+    "threeMonthReturn": 3.36,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "LCD驅動IC",
+      "LCD控制IC"
+    ]
   },
   {
     "id": "3037",
@@ -2060,11 +2796,16 @@
     "groupDesc": "印刷電路板、ABF 載板、軟板，電子產品基礎建設",
     "holdingPct": 70.39,
     "delta": 0.33,
-    "price": 678.0,
+    "price": 710.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 734.98,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 214.16,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "印刷電路板",
+      "封測服務與材料"
+    ]
   },
   {
     "id": "3038",
@@ -2073,11 +2814,16 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 32.06,
     "delta": 0.24,
-    "price": 23.55,
+    "price": 23.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 2.61,
-    "industry": "光電業"
+    "threeMonthReturn": -3.33,
+    "industry": "光電業",
+    "subIndustries": [
+      "面板業",
+      "中小尺吋面板",
+      "LCM"
+    ]
   },
   {
     "id": "3040",
@@ -2086,24 +2832,34 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 65.5,
     "delta": 0.44,
-    "price": 44.0,
+    "price": 44.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -1.12,
-    "industry": "其他業"
+    "threeMonthReturn": -13.85,
+    "industry": "其他業",
+    "subIndustries": [
+      "消費性電子產品",
+      "地產",
+      "物業投資發展"
+    ]
   },
   {
     "id": "3042",
     "name": "晶技",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "被動元件",
+    "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 59.3,
     "delta": 5.16,
     "price": 166.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 95.65,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 108.39,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "石英元件",
+      "振盪器"
+    ]
   },
   {
     "id": "3048",
@@ -2112,11 +2868,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 40.3,
     "delta": 0.24,
-    "price": 39.35,
+    "price": 39.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 72.59,
-    "industry": "電子通路業"
+    "threeMonthReturn": -9.47,
+    "industry": "電子通路業",
+    "subIndustries": [
+      "電子通路",
+      "IC零組件通路商"
+    ]
   },
   {
     "id": "3049",
@@ -2125,11 +2885,15 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 44.46,
     "delta": 0.14,
-    "price": 14.35,
+    "price": 13.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 112.91,
-    "industry": "光電業"
+    "threeMonthReturn": 88.46,
+    "industry": "光電業",
+    "subIndustries": [
+      "面板業",
+      "觸控面板"
+    ]
   },
   {
     "id": "3051",
@@ -2138,11 +2902,15 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 29.6,
     "delta": 0.73,
-    "price": 22.6,
+    "price": 24.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -18.41,
-    "industry": "光電業"
+    "threeMonthReturn": 22.72,
+    "industry": "光電業",
+    "subIndustries": [
+      "面板零組件",
+      "偏光板"
+    ]
   },
   {
     "id": "3056",
@@ -2151,11 +2919,16 @@
     "groupDesc": "不動產開發、營建工程",
     "holdingPct": 25.19,
     "delta": 0.29,
-    "price": 14.55,
+    "price": 14.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -47.47,
-    "industry": "建材營造業"
+    "threeMonthReturn": -18.99,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "地產",
+      "營建",
+      "控股公司"
+    ]
   },
   {
     "id": "3057",
@@ -2164,24 +2937,33 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 29.32,
     "delta": 8.83,
-    "price": 18.5,
+    "price": 18.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 51.27,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": -18.56,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "週邊產品",
+      "磁碟陣列控制器"
+    ]
   },
   {
     "id": "3059",
     "name": "華晶科",
-    "group": "光電/LED",
-    "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
+    "group": "車用電子",
+    "groupDesc": "ADAS 自駕、ECU、車用感測器，電動車趨勢",
     "holdingPct": 21.29,
     "delta": 0.26,
-    "price": 37.2,
+    "price": 38.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 14.29,
-    "industry": "光電業"
+    "threeMonthReturn": -7.07,
+    "industry": "光電業",
+    "subIndustries": [
+      "車用電子",
+      "IC設計",
+      "影音IC"
+    ]
   },
   {
     "id": "3060",
@@ -2190,37 +2972,69 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 13.39,
     "delta": 2.33,
-    "price": 30.35,
+    "price": 30.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 40.18,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": -16.23,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "週邊產品",
+      "硬碟相關"
+    ]
   },
   {
     "id": "3081",
     "name": "聯亞",
-    "group": "CPO矽光子",
+    "group": "光通訊",
     "groupDesc": "共封裝光學、矽光子、光模組，AI 資料中心高速傳輸",
     "holdingPct": 31.97,
     "delta": 0.56,
-    "price": 2860.0,
+    "price": 2935.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1151.64,
-    "industry": "通信網路業"
+    "threeMonthReturn": 371.86,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "IC製造",
+      "砷化鎵相關",
+      "光通訊元件磊晶"
+    ]
+  },
+  {
+    "id": "3086",
+    "name": "華義",
+    "group": "其他/未分組",
+    "groupDesc": "尚未分類或跨產業個股",
+    "holdingPct": 100.0,
+    "delta": 24.58,
+    "price": 39.3,
+    "marketCap": 0.0,
+    "date": "2026-04-17",
+    "threeMonthReturn": 84.07,
+    "industry": "文化創意業",
+    "subIndustries": [
+      "遊戲產業",
+      "PC遊戲",
+      "手機遊戲"
+    ]
   },
   {
     "id": "3090",
     "name": "日電貿",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "被動元件",
+    "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 56.16,
     "delta": 2.64,
-    "price": 109.0,
+    "price": 108.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 81.97,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 2.86,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "MLCC",
+      "電容"
+    ]
   },
   {
     "id": "3093",
@@ -2229,24 +3043,34 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 73.89,
     "delta": 1.04,
-    "price": 73.5,
+    "price": 69.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 180.53,
-    "industry": "其他電子業"
+    "threeMonthReturn": 173.91,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "設備儀器商",
+      "PCB相關設備",
+      "封測用設備"
+    ]
   },
   {
     "id": "3105",
     "name": "穩懋",
-    "group": "IC設計/半導體",
-    "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
+    "group": "衛星通訊",
+    "groupDesc": "衛星通訊通訊、SpaceX Starlink 供應鏈",
     "holdingPct": 54.8,
     "delta": 1.2,
-    "price": 592.0,
+    "price": 617.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 613.25,
-    "industry": "半導體業"
+    "threeMonthReturn": 231.72,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC製造",
+      "砷化鎵相關",
+      "第三類半導體"
+    ]
   },
   {
     "id": "3149",
@@ -2255,24 +3079,33 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 27.21,
     "delta": 0.54,
-    "price": 46.5,
+    "price": 46.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 59.52,
-    "industry": "光電業"
+    "threeMonthReturn": 16.92,
+    "industry": "光電業",
+    "subIndustries": [
+      "建材",
+      "玻璃",
+      "汽車內裝"
+    ]
   },
   {
     "id": "3163",
     "name": "波若威",
-    "group": "CPO矽光子",
+    "group": "光通訊",
     "groupDesc": "共封裝光學、矽光子、光模組，AI 資料中心高速傳輸",
     "holdingPct": 28.7,
     "delta": 0.38,
-    "price": 1295.0,
+    "price": 1260.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 841.82,
-    "industry": "通信網路業"
+    "threeMonthReturn": 235.11,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "光通訊",
+      "光纖被動元件"
+    ]
   },
   {
     "id": "3171",
@@ -2281,11 +3114,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 69.54,
     "delta": 1.16,
-    "price": 64.2,
+    "price": 66.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 64.62,
-    "industry": "居家生活"
+    "threeMonthReturn": 40.43,
+    "industry": "居家生活",
+    "subIndustries": [
+      "塑化製品",
+      "塑膠加工",
+      "化學工業"
+    ]
   },
   {
     "id": "3176",
@@ -2294,11 +3132,16 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 29.27,
     "delta": 0.77,
-    "price": 30.8,
+    "price": 30.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 8.83,
-    "industry": "生技醫療業"
+    "threeMonthReturn": -3.32,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "醫藥產業",
+      "西藥製劑",
+      "新藥研發"
+    ]
   },
   {
     "id": "3188",
@@ -2307,24 +3150,33 @@
     "groupDesc": "不動產開發、營建工程",
     "holdingPct": 68.58,
     "delta": 1.1,
-    "price": 26.2,
+    "price": 25.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.35,
-    "industry": "建材營造業"
+    "threeMonthReturn": -11.6,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "地產",
+      "營建"
+    ]
   },
   {
     "id": "3189",
     "name": "景碩",
-    "group": "IC設計/半導體",
-    "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
+    "group": "PCB載板",
+    "groupDesc": "印刷電路板、ABF 載板、軟板，電子產品基礎建設",
     "holdingPct": 62.19,
     "delta": 0.11,
-    "price": 430.5,
+    "price": 473.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 544.46,
-    "industry": "半導體業"
+    "threeMonthReturn": 170.57,
+    "industry": "半導體業",
+    "subIndustries": [
+      "封測服務與材料",
+      "IC基板",
+      "輔助與彌補用醫材"
+    ]
   },
   {
     "id": "3206",
@@ -2333,50 +3185,69 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 42.35,
     "delta": 0.1,
-    "price": 37.1,
+    "price": 36.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.65,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 15.47,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電聲產品",
+      "受話器",
+      "耳機"
+    ]
   },
   {
     "id": "3209",
     "name": "全科",
-    "group": "其他/未分組",
-    "groupDesc": "尚未分類或跨產業個股",
+    "group": "IC設計",
+    "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 38.73,
     "delta": 1.16,
-    "price": 48.5,
+    "price": 48.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 36.81,
-    "industry": "電子通路業"
+    "threeMonthReturn": 50.23,
+    "industry": "電子通路業",
+    "subIndustries": [
+      "IC設計",
+      "無線網路IC",
+      "類比IC"
+    ]
   },
   {
     "id": "3221",
     "name": "台嘉碩",
-    "group": "5G通訊",
-    "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
+    "group": "被動元件",
+    "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 15.29,
     "delta": 4.3,
-    "price": 48.8,
+    "price": 53.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 160.96,
-    "industry": "通信網路業"
+    "threeMonthReturn": 139.82,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "被動元件",
+      "石英元件",
+      "濾波器"
+    ]
   },
   {
     "id": "3230",
     "name": "錦明",
-    "group": "光電/LED",
-    "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
+    "group": "AI伺服器",
+    "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 54.41,
     "delta": 1.39,
-    "price": 42.8,
+    "price": 40.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 7.0,
-    "industry": "光電業"
+    "threeMonthReturn": 14.99,
+    "industry": "光電業",
+    "subIndustries": [
+      "電子零件元件",
+      "模具沖壓"
+    ]
   },
   {
     "id": "3231",
@@ -2385,11 +3256,16 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 54.08,
     "delta": 0.7,
-    "price": 140.5,
+    "price": 144.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 36.41,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": -8.83,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "電腦系統業",
+      "伺服器",
+      "筆記型電腦製造"
+    ]
   },
   {
     "id": "3289",
@@ -2398,24 +3274,33 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 20.18,
     "delta": 2.93,
-    "price": 198.0,
+    "price": 210.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 102.25,
-    "industry": "其他電子業"
+    "threeMonthReturn": 82.25,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "設備儀器商",
+      "檢測驗證服務"
+    ]
   },
   {
     "id": "3290",
     "name": "東浦",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "AI伺服器",
+    "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 44.26,
     "delta": 1.03,
-    "price": 47.55,
+    "price": 49.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 29.0,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 5.83,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子零件元件",
+      "機殼",
+      "塑膠射出"
+    ]
   },
   {
     "id": "3310",
@@ -2424,11 +3309,16 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 72.75,
     "delta": 1.44,
-    "price": 71.0,
+    "price": 71.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -7.67,
-    "industry": "電子零組件業"
+    "threeMonthReturn": -12.56,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "車用金屬成型",
+      "車用沖壓件",
+      "電子零件元件"
+    ]
   },
   {
     "id": "3311",
@@ -2437,24 +3327,33 @@
     "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
     "holdingPct": 49.79,
     "delta": 0.43,
-    "price": 32.6,
+    "price": 32.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -13.98,
-    "industry": "通信網路業"
+    "threeMonthReturn": 2.04,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "汽機車零組件",
+      "穿戴式裝置"
+    ]
   },
   {
     "id": "3324",
     "name": "雙鴻",
-    "group": "散熱",
-    "groupDesc": "均熱板、散熱模組、液冷系統，AI 伺服器熱管理關鍵",
+    "group": "重電電網",
+    "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 36.44,
     "delta": 3.1,
-    "price": 1040.0,
+    "price": 1050.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 128.82,
-    "industry": "其他電子業"
+    "threeMonthReturn": 7.36,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "散熱模組",
+      "伺服器用散熱模組",
+      "筆記型電腦用散熱模組"
+    ]
   },
   {
     "id": "3339",
@@ -2463,11 +3362,16 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 18.95,
     "delta": 2.04,
-    "price": 66.3,
+    "price": 71.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 142.86,
-    "industry": "光電業"
+    "threeMonthReturn": 173.56,
+    "industry": "光電業",
+    "subIndustries": [
+      "LED",
+      "LED晶粒",
+      "LED磊晶"
+    ]
   },
   {
     "id": "3360",
@@ -2476,37 +3380,51 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 19.17,
     "delta": 1.41,
-    "price": 13.9,
+    "price": 14.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 15.83,
-    "industry": "電子通路業"
+    "threeMonthReturn": -0.69,
+    "industry": "電子通路業",
+    "subIndustries": [
+      "電子通路",
+      "IC零組件通路商",
+      "數位相機"
+    ]
   },
   {
     "id": "3406",
     "name": "玉晶光",
-    "group": "光電/LED",
-    "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
+    "group": "光學/鏡頭",
+    "groupDesc": "光學鏡頭、鏡片，手機與工業應用",
     "holdingPct": 40.17,
     "delta": 1.31,
-    "price": 544.0,
+    "price": 529.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 53.02,
-    "industry": "光電業"
+    "threeMonthReturn": 20.64,
+    "industry": "光電業",
+    "subIndustries": [
+      "LED",
+      "LED照明產品",
+      "光學元件"
+    ]
   },
   {
     "id": "3413",
     "name": "京鼎",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 32.28,
     "delta": 1.7,
     "price": 327.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 34.77,
-    "industry": "半導體業"
+    "threeMonthReturn": 16.34,
+    "industry": "半導體業",
+    "subIndustries": [
+      "設備儀器商",
+      "半導體製程設備"
+    ]
   },
   {
     "id": "3416",
@@ -2515,11 +3433,14 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 51.57,
     "delta": 0.3,
-    "price": 158.5,
+    "price": 156.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 21.46,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 4.7,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "工業電腦"
+    ]
   },
   {
     "id": "3434",
@@ -2528,37 +3449,52 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 29.53,
     "delta": 1.24,
-    "price": 31.05,
+    "price": 31.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -43.89,
-    "industry": "光電業"
+    "threeMonthReturn": 5.37,
+    "industry": "光電業",
+    "subIndustries": [
+      "顯示器",
+      "工業電腦",
+      "安全監控"
+    ]
   },
   {
     "id": "3443",
     "name": "創意",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 56.55,
     "delta": 1.42,
-    "price": 3580.0,
+    "price": 3735.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 274.09,
-    "industry": "半導體業"
+    "threeMonthReturn": 50.0,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "設計IP",
+      "ASIC"
+    ]
   },
   {
     "id": "3450",
     "name": "聯鈞",
-    "group": "CPO矽光子",
+    "group": "光通訊",
     "groupDesc": "共封裝光學、矽光子、光模組，AI 資料中心高速傳輸",
     "holdingPct": 34.65,
     "delta": 3.55,
-    "price": 383.0,
+    "price": 380.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 110.44,
-    "industry": "半導體業"
+    "threeMonthReturn": 47.0,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC封裝測試",
+      "IC封裝",
+      "IC測試"
+    ]
   },
   {
     "id": "3465",
@@ -2567,11 +3503,15 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 58.51,
     "delta": 0.38,
-    "price": 34.35,
+    "price": 34.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -36.39,
-    "industry": "其他電子業"
+    "threeMonthReturn": -30.61,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "電子零件元件",
+      "音響設備及零件"
+    ]
   },
   {
     "id": "3481",
@@ -2580,24 +3520,34 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 38.23,
     "delta": 0.59,
-    "price": 26.15,
+    "price": 26.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 80.97,
-    "industry": "光電業"
+    "threeMonthReturn": 17.38,
+    "industry": "光電業",
+    "subIndustries": [
+      "面板業",
+      "中小尺吋面板",
+      "TFT-LCD"
+    ]
   },
   {
     "id": "3483",
     "name": "力致",
-    "group": "AI伺服器",
-    "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
+    "group": "散熱",
+    "groupDesc": "均熱板、散熱模組、液冷系統，AI 伺服器熱管理關鍵",
     "holdingPct": 14.35,
     "delta": 1.01,
-    "price": 89.7,
+    "price": 90.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.48,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": -0.33,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "散熱模組",
+      "散熱風扇馬達",
+      "伺服器用散熱模組"
+    ]
   },
   {
     "id": "3499",
@@ -2606,11 +3556,15 @@
     "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
     "holdingPct": 41.19,
     "delta": 0.11,
-    "price": 16.3,
+    "price": 17.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 25.38,
-    "industry": "通信網路業"
+    "threeMonthReturn": -6.04,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "網通設備",
+      "衛星導航"
+    ]
   },
   {
     "id": "3508",
@@ -2619,11 +3573,15 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 32.51,
     "delta": 1.1,
-    "price": 24.05,
+    "price": 24.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 22.7,
-    "industry": "其他電子業"
+    "threeMonthReturn": 1.25,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "電子零件元件",
+      "機殼表面處理"
+    ]
   },
   {
     "id": "3515",
@@ -2632,11 +3590,15 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 63.66,
     "delta": 0.81,
-    "price": 224.0,
+    "price": 227.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 39.56,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": -6.39,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "電腦系統業",
+      "主機板"
+    ]
   },
   {
     "id": "3516",
@@ -2645,24 +3607,34 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 67.99,
     "delta": 0.13,
-    "price": 20.1,
+    "price": 20.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -4.74,
-    "industry": "光電業"
+    "threeMonthReturn": -0.25,
+    "industry": "光電業",
+    "subIndustries": [
+      "LED",
+      "LED照明產品",
+      "電子零件元件"
+    ]
   },
   {
     "id": "3529",
     "name": "力旺",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 36.58,
     "delta": 0.1,
-    "price": 4385.0,
+    "price": 4400.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 85.81,
-    "industry": "半導體業"
+    "threeMonthReturn": 147.89,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "FLASH記憶體IC",
+      "設計IP"
+    ]
   },
   {
     "id": "3531",
@@ -2671,24 +3643,32 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 60.87,
     "delta": 0.11,
-    "price": 22.0,
+    "price": 22.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -17.76,
-    "industry": "光電業"
+    "threeMonthReturn": 5.39,
+    "industry": "光電業",
+    "subIndustries": [
+      "面板零組件",
+      "背光模組"
+    ]
   },
   {
     "id": "3532",
     "name": "台勝科",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 88.66,
     "delta": 1.73,
-    "price": 186.0,
+    "price": 182.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 155.85,
-    "industry": "半導體業"
+    "threeMonthReturn": 53.36,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC製造",
+      "矽晶圓"
+    ]
   },
   {
     "id": "3550",
@@ -2697,11 +3677,15 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 35.18,
     "delta": 0.54,
-    "price": 21.25,
+    "price": 20.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 77.08,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 33.65,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子零件元件",
+      "連接線材"
+    ]
   },
   {
     "id": "3563",
@@ -2710,11 +3694,16 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 47.19,
     "delta": 1.51,
-    "price": 954.0,
+    "price": 916.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 166.48,
-    "industry": "光電業"
+    "threeMonthReturn": 76.15,
+    "industry": "光電業",
+    "subIndustries": [
+      "設備儀器商",
+      "PCB相關設備",
+      "IC檢測設備"
+    ]
   },
   {
     "id": "3576",
@@ -2723,11 +3712,16 @@
     "groupDesc": "太陽能電池、模組、系統，綠能轉型受惠族群",
     "holdingPct": 32.81,
     "delta": 2.3,
-    "price": 17.2,
+    "price": 16.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 118.55,
-    "industry": "光電業"
+    "threeMonthReturn": 80.79,
+    "industry": "光電業",
+    "subIndustries": [
+      "太陽能",
+      "太陽能電池",
+      "太陽能電池模組"
+    ]
   },
   {
     "id": "3580",
@@ -2736,24 +3730,33 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 9.68,
     "delta": 2.53,
-    "price": 83.6,
+    "price": 82.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 49.29,
-    "industry": "其他電子業"
+    "threeMonthReturn": 12.89,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "設備儀器商",
+      "半導體製程設備"
+    ]
   },
   {
     "id": "3583",
     "name": "辛耘",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 55.97,
     "delta": 5.99,
-    "price": 808.0,
+    "price": 770.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 235.27,
-    "industry": "半導體業"
+    "threeMonthReturn": 119.69,
+    "industry": "半導體業",
+    "subIndustries": [
+      "設備儀器商",
+      "半導體製程設備",
+      "IC製造"
+    ]
   },
   {
     "id": "3591",
@@ -2762,11 +3765,16 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 46.21,
     "delta": 2.51,
-    "price": 27.2,
+    "price": 25.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 51.53,
-    "industry": "光電業"
+    "threeMonthReturn": 37.5,
+    "industry": "光電業",
+    "subIndustries": [
+      "LED",
+      "LED封裝",
+      "LED照明產品"
+    ]
   },
   {
     "id": "3605",
@@ -2775,24 +3783,34 @@
     "groupDesc": "線材連接器、背板連接器，資料中心與消費電子應用",
     "holdingPct": 38.97,
     "delta": 0.79,
-    "price": 67.5,
+    "price": 71.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 49.67,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 14.93,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子零件元件",
+      "連接器",
+      "其他電子零件"
+    ]
   },
   {
     "id": "3624",
     "name": "光頡",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "被動元件",
+    "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 46.44,
     "delta": 0.84,
-    "price": 57.3,
+    "price": 56.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 100.0,
-    "industry": "電子零組件業"
+    "threeMonthReturn": -5.67,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "晶片電阻",
+      "電阻"
+    ]
   },
   {
     "id": "3645",
@@ -2801,50 +3819,51 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 45.11,
     "delta": 8.84,
-    "price": 114.5,
+    "price": 109.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 143.62,
-    "industry": "電子零組件業"
-  },
-  {
-    "id": "3653",
-    "name": "健策",
-    "group": "散熱",
-    "groupDesc": "均熱板、散熱模組、液冷系統，AI 伺服器熱管理關鍵",
-    "holdingPct": 58.63,
-    "delta": 0.13,
-    "price": 5020.0,
-    "marketCap": 0.0,
-    "date": "2026-04-17",
-    "threeMonthReturn": 450.44,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 106.21,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "軟板PI"
+    ]
   },
   {
     "id": "3661",
     "name": "世芯-KY",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 18.39,
     "delta": 2.62,
-    "price": 3625.0,
+    "price": 3985.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 72.21,
-    "industry": "半導體業"
+    "threeMonthReturn": 8.29,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "設計IP",
+      "ASIC"
+    ]
   },
   {
     "id": "3663",
     "name": "鑫科",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "IC設計",
+    "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 59.99,
     "delta": 0.57,
-    "price": 73.2,
+    "price": 73.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 63.76,
-    "industry": "其他電子業"
+    "threeMonthReturn": 34.37,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "IC製造",
+      "其他半導體耗材",
+      "傳產其他"
+    ]
   },
   {
     "id": "3664",
@@ -2853,11 +3872,16 @@
     "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
     "holdingPct": 65.16,
     "delta": 4.45,
-    "price": 7.5,
+    "price": 7.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -67.67,
-    "industry": "通信網路業"
+    "threeMonthReturn": -53.8,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "網通設備",
+      "用戶端設備",
+      "資安設備"
+    ]
   },
   {
     "id": "3665",
@@ -2866,11 +3890,16 @@
     "groupDesc": "線材連接器、背板連接器，資料中心與消費電子應用",
     "holdingPct": 47.03,
     "delta": 0.77,
-    "price": 2460.0,
+    "price": 2425.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 414.35,
-    "industry": "其他電子業"
+    "threeMonthReturn": 69.58,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "電線電纜",
+      "電子線",
+      "電子零件元件"
+    ]
   },
   {
     "id": "3673",
@@ -2879,11 +3908,16 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 46.71,
     "delta": 3.58,
-    "price": 71.2,
+    "price": 69.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 139.33,
-    "industry": "光電業"
+    "threeMonthReturn": 64.82,
+    "industry": "光電業",
+    "subIndustries": [
+      "面板業",
+      "觸控面板",
+      "面板零組件"
+    ]
   },
   {
     "id": "3694",
@@ -2892,37 +3926,52 @@
     "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
     "holdingPct": 57.08,
     "delta": 0.3,
-    "price": 61.5,
+    "price": 62.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 48.37,
-    "industry": "通信網路業"
+    "threeMonthReturn": 4.52,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "網通設備",
+      "通訊設備零組件",
+      "光學元件"
+    ]
   },
   {
     "id": "3701",
     "name": "大眾控",
-    "group": "AI伺服器",
-    "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
+    "group": "車用電子",
+    "groupDesc": "ADAS 自駕、ECU、車用感測器，電動車趨勢",
     "holdingPct": 71.46,
     "delta": 1.11,
-    "price": 67.2,
+    "price": 71.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 147.06,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 41.58,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "車用電子",
+      "消費性電子產品",
+      "平板電腦"
+    ]
   },
   {
     "id": "3704",
     "name": "合勤控",
-    "group": "5G通訊",
-    "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
+    "group": "電子零組件",
+    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 50.04,
     "delta": 0.76,
     "price": 38.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 33.8,
-    "industry": "通信網路業"
+    "threeMonthReturn": 13.94,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "網通設備",
+      "用戶端設備",
+      "無線網路設備系統(WLAN)"
+    ]
   },
   {
     "id": "3706",
@@ -2931,11 +3980,16 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 48.3,
     "delta": 0.91,
-    "price": 84.1,
+    "price": 85.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 88.02,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": -7.71,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "車用電子",
+      "行車紀錄器",
+      "網通設備"
+    ]
   },
   {
     "id": "3709",
@@ -2944,11 +3998,16 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 65.76,
     "delta": 0.1,
-    "price": 70.3,
+    "price": 77.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 92.08,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 26.31,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "電子通路",
+      "電腦通路商",
+      "控股公司"
+    ]
   },
   {
     "id": "3714",
@@ -2957,24 +4016,33 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 44.11,
     "delta": 2.48,
-    "price": 77.4,
+    "price": 73.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 118.03,
-    "industry": "光電業"
+    "threeMonthReturn": 101.37,
+    "industry": "光電業",
+    "subIndustries": [
+      "LED",
+      "LED晶粒",
+      "LED封裝"
+    ]
   },
   {
     "id": "3717",
     "name": "聯嘉投控",
-    "group": "其他/未分組",
-    "groupDesc": "尚未分類或跨產業個股",
+    "group": "光電/LED",
+    "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 36.67,
     "delta": 1.22,
-    "price": 22.45,
+    "price": 22.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 11.97,
-    "industry": "汽車工業"
+    "threeMonthReturn": 29.65,
+    "industry": "汽車工業",
+    "subIndustries": [
+      "LED",
+      "LED封裝"
+    ]
   },
   {
     "id": "4107",
@@ -2983,11 +4051,16 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 50.59,
     "delta": 0.13,
-    "price": 119.5,
+    "price": 118.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.02,
-    "industry": "生技醫療業"
+    "threeMonthReturn": -3.27,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "手術與治療用醫材",
+      "洗腎器具",
+      "其他醫療器材"
+    ]
   },
   {
     "id": "4111",
@@ -2996,11 +4069,16 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 23.6,
     "delta": 1.75,
-    "price": 29.3,
+    "price": 29.35,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.42,
-    "industry": "生技醫療業"
+    "threeMonthReturn": 1.38,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "醫藥產業",
+      "西藥製劑",
+      "學名藥"
+    ]
   },
   {
     "id": "4129",
@@ -3012,8 +4090,13 @@
     "price": 103.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 20.35,
-    "industry": "生技醫療業"
+    "threeMonthReturn": -8.81,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "輔助與彌補用醫材",
+      "人造關節",
+      "骨科類器材"
+    ]
   },
   {
     "id": "4130",
@@ -3022,11 +4105,16 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 60.53,
     "delta": 1.94,
-    "price": 32.45,
+    "price": 32.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 65.48,
-    "industry": "生技醫療業"
+    "threeMonthReturn": 3.26,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "醫藥產業",
+      "西藥製劑",
+      "新藥研發"
+    ]
   },
   {
     "id": "4142",
@@ -3035,11 +4123,15 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 32.38,
     "delta": 0.21,
-    "price": 18.05,
+    "price": 18.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -1.9,
-    "industry": "生技醫療業"
+    "threeMonthReturn": -6.46,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "醫藥產業",
+      "生物製劑"
+    ]
   },
   {
     "id": "4148",
@@ -3048,11 +4140,16 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 78.15,
     "delta": 0.15,
-    "price": 37.3,
+    "price": 37.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -0.85,
-    "industry": "生技醫療業"
+    "threeMonthReturn": -1.05,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "化學工業",
+      "肥料",
+      "生物科技"
+    ]
   },
   {
     "id": "4166",
@@ -3061,11 +4158,16 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 80.0,
     "delta": 0.26,
-    "price": 25.35,
+    "price": 27.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -17.69,
-    "industry": "生技醫療業"
+    "threeMonthReturn": -2.34,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "醫藥產業",
+      "西藥製劑",
+      "新藥研發"
+    ]
   },
   {
     "id": "4169",
@@ -3074,11 +4176,16 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 47.85,
     "delta": 1.84,
-    "price": 169.5,
+    "price": 176.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 9.35,
-    "industry": "生技醫療業"
+    "threeMonthReturn": 13.87,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "醫藥產業",
+      "新藥研發",
+      "生物科技"
+    ]
   },
   {
     "id": "4174",
@@ -3087,11 +4194,16 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 35.66,
     "delta": 0.1,
-    "price": 36.7,
+    "price": 36.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -60.41,
-    "industry": "生技醫療業"
+    "threeMonthReturn": -30.85,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "醫藥產業",
+      "新藥研發",
+      "生物製劑"
+    ]
   },
   {
     "id": "4198",
@@ -3100,11 +4212,15 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 75.16,
     "delta": 0.14,
-    "price": 38.6,
+    "price": 39.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 23.32,
-    "industry": "生技醫療業"
+    "threeMonthReturn": 28.69,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "診斷與監測用醫材",
+      "醫學影像裝置"
+    ]
   },
   {
     "id": "4306",
@@ -3116,21 +4232,31 @@
     "price": 13.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -10.2,
-    "industry": "塑膠工業"
+    "threeMonthReturn": -4.88,
+    "industry": "塑膠工業",
+    "subIndustries": [
+      "塑化製品",
+      "塑膠加工",
+      "化學工業"
+    ]
   },
   {
     "id": "4402",
     "name": "郡都開發",
-    "group": "紡織",
-    "groupDesc": "紡紗、織布、機能性布料",
+    "group": "太陽能",
+    "groupDesc": "太陽能電池、模組、系統，綠能轉型受惠族群",
     "holdingPct": 59.53,
     "delta": 0.1,
-    "price": 16.1,
+    "price": 16.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -17.22,
-    "industry": "紡織纖維"
+    "threeMonthReturn": -20.0,
+    "industry": "紡織纖維",
+    "subIndustries": [
+      "織布業",
+      "太陽能",
+      "太陽能系統運用"
+    ]
   },
   {
     "id": "4503",
@@ -3139,11 +4265,16 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 59.43,
     "delta": 0.24,
-    "price": 43.8,
+    "price": 44.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -1.57,
-    "industry": "電機機械"
+    "threeMonthReturn": 12.69,
+    "industry": "電機機械",
+    "subIndustries": [
+      "電力設備",
+      "車用充電相關",
+      "工業電腦"
+    ]
   },
   {
     "id": "4540",
@@ -3152,11 +4283,15 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 31.14,
     "delta": 1.19,
-    "price": 58.8,
+    "price": 59.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 68.97,
-    "industry": "電機機械"
+    "threeMonthReturn": 55.53,
+    "industry": "電機機械",
+    "subIndustries": [
+      "機械零組件",
+      "滑軌"
+    ]
   },
   {
     "id": "4541",
@@ -3165,11 +4300,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 26.96,
     "delta": 1.68,
-    "price": 49.35,
+    "price": 48.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.45,
-    "industry": "其他業"
+    "threeMonthReturn": 19.41,
+    "industry": "其他業",
+    "subIndustries": [
+      "機械零組件",
+      "飛機零件／製造",
+      "設備儀器商"
+    ]
   },
   {
     "id": "4545",
@@ -3178,11 +4318,16 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 70.99,
     "delta": 1.42,
-    "price": 30.8,
+    "price": 30.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.36,
-    "industry": "電子零組件業"
+    "threeMonthReturn": -24.38,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "產業機械",
+      "自動化設備",
+      "電子零件元件"
+    ]
   },
   {
     "id": "4564",
@@ -3191,11 +4336,16 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 34.61,
     "delta": 0.46,
-    "price": 19.95,
+    "price": 19.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 11.45,
-    "industry": "電機機械"
+    "threeMonthReturn": 14.53,
+    "industry": "電機機械",
+    "subIndustries": [
+      "汽車內裝",
+      "安全氣囊",
+      "傳產其他"
+    ]
   },
   {
     "id": "4566",
@@ -3204,11 +4354,16 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 51.84,
     "delta": 1.26,
-    "price": 69.0,
+    "price": 69.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 31.68,
-    "industry": "電機機械"
+    "threeMonthReturn": 24.68,
+    "industry": "電機機械",
+    "subIndustries": [
+      "汽機車零組件",
+      "傳產其他",
+      "金屬加工／製品"
+    ]
   },
   {
     "id": "4576",
@@ -3217,11 +4372,15 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 62.39,
     "delta": 1.3,
-    "price": 198.0,
+    "price": 194.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 104.33,
-    "industry": "電機機械"
+    "threeMonthReturn": 80.47,
+    "industry": "電機機械",
+    "subIndustries": [
+      "機械零組件",
+      "氣動元件"
+    ]
   },
   {
     "id": "4707",
@@ -3230,11 +4389,16 @@
     "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
     "holdingPct": 60.33,
     "delta": 0.91,
-    "price": 15.85,
+    "price": 15.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 58.5,
-    "industry": "化學工業"
+    "threeMonthReturn": 52.88,
+    "industry": "化學工業",
+    "subIndustries": [
+      "化學工業",
+      "衛生清潔用品",
+      "其他化工產品"
+    ]
   },
   {
     "id": "4737",
@@ -3243,11 +4407,15 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 47.68,
     "delta": 0.52,
-    "price": 63.3,
+    "price": 62.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 27.75,
-    "industry": "生技醫療業"
+    "threeMonthReturn": 14.19,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "體外診斷用醫材",
+      "血糖儀"
+    ]
   },
   {
     "id": "4743",
@@ -3256,11 +4424,16 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 41.87,
     "delta": 0.45,
-    "price": 52.4,
+    "price": 51.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -10.88,
-    "industry": "生技醫療業"
+    "threeMonthReturn": -14.94,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "醫藥產業",
+      "新藥研發",
+      "植物新藥"
+    ]
   },
   {
     "id": "4744",
@@ -3269,11 +4442,15 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 29.44,
     "delta": 0.27,
-    "price": 31.4,
+    "price": 31.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 51.69,
-    "industry": "生技醫療業"
+    "threeMonthReturn": 8.08,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "產業機械",
+      "醫療保健設備／裝置"
+    ]
   },
   {
     "id": "4745",
@@ -3282,24 +4459,34 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 58.16,
     "delta": 1.32,
-    "price": 18.75,
+    "price": 18.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.93,
-    "industry": "生技醫療業"
+    "threeMonthReturn": -19.78,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "醫藥流通",
+      "醫療器材通路",
+      "體外診斷用醫材"
+    ]
   },
   {
     "id": "4760",
     "name": "勤凱科技",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "被動元件",
+    "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 35.36,
     "delta": 0.21,
-    "price": 261.0,
+    "price": 262.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 191.85,
-    "industry": "其他電子業"
+    "threeMonthReturn": 45.43,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "被動元件",
+      "被動元件上游",
+      "太陽能"
+    ]
   },
   {
     "id": "4764",
@@ -3308,24 +4495,33 @@
     "groupDesc": "石化原料、塑膠製品，台塑四寶為代表",
     "holdingPct": 68.09,
     "delta": 2.4,
-    "price": 233.5,
+    "price": 244.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 501.03,
-    "industry": "化學工業"
+    "threeMonthReturn": 85.93,
+    "industry": "化學工業",
+    "subIndustries": [
+      "化學工業",
+      "合成樹脂",
+      "其他化工產品"
+    ]
   },
   {
     "id": "4908",
     "name": "前鼎",
-    "group": "5G通訊",
-    "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
+    "group": "光電/LED",
+    "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 44.44,
     "delta": 3.49,
-    "price": 187.5,
+    "price": 205.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 178.6,
-    "industry": "通信網路業"
+    "threeMonthReturn": 170.45,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "光通訊",
+      "光纖主動元件"
+    ]
   },
   {
     "id": "4916",
@@ -3334,24 +4530,34 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 25.07,
     "delta": 3.39,
-    "price": 68.5,
+    "price": 67.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 84.14,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 17.89,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "工業電腦",
+      "博奕機台",
+      "航天軍工"
+    ]
   },
   {
     "id": "4919",
     "name": "新唐",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 62.21,
     "delta": 2.57,
-    "price": 141.5,
+    "price": 144.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 121.09,
-    "industry": "半導體業"
+    "threeMonthReturn": 164.17,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "類比IC",
+      "IO控制IC"
+    ]
   },
   {
     "id": "4927",
@@ -3360,24 +4566,33 @@
     "groupDesc": "印刷電路板、ABF 載板、軟板，電子產品基礎建設",
     "holdingPct": 24.61,
     "delta": 0.42,
-    "price": 52.2,
+    "price": 53.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 161.0,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 41.11,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "印刷電路板"
+    ]
   },
   {
     "id": "4934",
     "name": "太極",
-    "group": "光電/LED",
-    "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
+    "group": "太陽能",
+    "groupDesc": "太陽能電池、模組、系統，綠能轉型受惠族群",
     "holdingPct": 29.18,
     "delta": 0.94,
-    "price": 17.05,
+    "price": 17.75,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 81.38,
-    "industry": "光電業"
+    "threeMonthReturn": 20.75,
+    "industry": "光電業",
+    "subIndustries": [
+      "太陽能",
+      "太陽能電池",
+      "太陽能電池模組"
+    ]
   },
   {
     "id": "4939",
@@ -3386,11 +4601,15 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 20.38,
     "delta": 2.28,
-    "price": 45.25,
+    "price": 46.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 122.91,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 24.29,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "軟板基板"
+    ]
   },
   {
     "id": "4956",
@@ -3399,11 +4618,16 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 38.02,
     "delta": 4.5,
-    "price": 54.7,
+    "price": 53.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 170.12,
-    "industry": "光電業"
+    "threeMonthReturn": 152.73,
+    "industry": "光電業",
+    "subIndustries": [
+      "LED",
+      "LED晶粒",
+      "LED磊晶"
+    ]
   },
   {
     "id": "4960",
@@ -3412,24 +4636,33 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 63.07,
     "delta": 1.81,
-    "price": 37.2,
+    "price": 40.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 207.44,
-    "industry": "光電業"
+    "threeMonthReturn": 194.24,
+    "industry": "光電業",
+    "subIndustries": [
+      "面板零組件",
+      "偏光板"
+    ]
   },
   {
     "id": "4966",
     "name": "譜瑞-KY",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 28.04,
     "delta": 0.27,
-    "price": 532.0,
+    "price": 537.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.91,
-    "industry": "半導體業"
+    "threeMonthReturn": -12.97,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "LCD驅動IC",
+      "LCD控制IC"
+    ]
   },
   {
     "id": "4972",
@@ -3438,11 +4671,16 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 37.85,
     "delta": 0.18,
-    "price": 17.0,
+    "price": 16.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -23.25,
-    "industry": "光電業"
+    "threeMonthReturn": -5.83,
+    "industry": "光電業",
+    "subIndustries": [
+      "家電",
+      "照明",
+      "LED"
+    ]
   },
   {
     "id": "4977",
@@ -3451,24 +4689,32 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 18.24,
     "delta": 5.79,
-    "price": 241.5,
+    "price": 252.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 183.45,
-    "industry": "通信網路業"
+    "threeMonthReturn": 95.35,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "光通訊",
+      "光纖主動元件"
+    ]
   },
   {
     "id": "4979",
     "name": "華星光",
-    "group": "CPO矽光子",
+    "group": "光通訊",
     "groupDesc": "共封裝光學、矽光子、光模組，AI 資料中心高速傳輸",
     "holdingPct": 38.8,
     "delta": 7.67,
-    "price": 708.0,
+    "price": 655.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 440.46,
-    "industry": "通信網路業"
+    "threeMonthReturn": 122.03,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "光通訊",
+      "光纖主動元件"
+    ]
   },
   {
     "id": "4989",
@@ -3477,24 +4723,33 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 44.03,
     "delta": 8.0,
-    "price": 107.0,
+    "price": 106.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 650.88,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 113.64,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "銅箔"
+    ]
   },
   {
     "id": "4991",
     "name": "環宇-KY",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 51.35,
     "delta": 0.73,
-    "price": 724.0,
+    "price": 721.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 735.06,
-    "industry": "半導體業"
+    "threeMonthReturn": 239.29,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC製造",
+      "砷化鎵相關",
+      "第三類半導體"
+    ]
   },
   {
     "id": "5015",
@@ -3503,11 +4758,16 @@
     "groupDesc": "熱軋、冷軋、不鏽鋼，基礎建設與製造業原料",
     "holdingPct": 43.52,
     "delta": 0.13,
-    "price": 24.2,
+    "price": 23.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -32.87,
-    "industry": "鋼鐵工業"
+    "threeMonthReturn": -15.1,
+    "industry": "鋼鐵工業",
+    "subIndustries": [
+      "不鏽鋼",
+      "不鏽鋼緊固件",
+      "不鏽鋼線材"
+    ]
   },
   {
     "id": "5201",
@@ -3516,11 +4776,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 33.85,
     "delta": 0.1,
-    "price": 37.15,
+    "price": 33.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -9.72,
-    "industry": "資訊服務業"
+    "threeMonthReturn": -23.28,
+    "industry": "資訊服務業",
+    "subIndustries": [
+      "軟體業",
+      "系統整合"
+    ]
   },
   {
     "id": "5234",
@@ -3529,11 +4793,15 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 55.84,
     "delta": 1.39,
-    "price": 456.5,
+    "price": 462.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 198.37,
-    "industry": "光電業"
+    "threeMonthReturn": 27.8,
+    "industry": "光電業",
+    "subIndustries": [
+      "半導體化學品",
+      "光阻劑"
+    ]
   },
   {
     "id": "5243",
@@ -3542,11 +4810,16 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 62.86,
     "delta": 0.91,
-    "price": 121.5,
+    "price": 119.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 193.83,
-    "industry": "光電業"
+    "threeMonthReturn": 46.73,
+    "industry": "光電業",
+    "subIndustries": [
+      "車用金屬成型",
+      "車用沖壓件",
+      "電子零件元件"
+    ]
   },
   {
     "id": "5283",
@@ -3555,37 +4828,50 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 52.21,
     "delta": 1.19,
-    "price": 55.7,
+    "price": 55.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -20.99,
-    "industry": "電器電纜"
+    "threeMonthReturn": -7.51,
+    "industry": "電器電纜",
+    "subIndustries": [
+      "家電",
+      "冷氣機",
+      "顯示器"
+    ]
   },
   {
     "id": "5284",
     "name": "jpp-KY",
-    "group": "其他/未分組",
-    "groupDesc": "尚未分類或跨產業個股",
+    "group": "AI伺服器",
+    "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 49.81,
     "delta": 2.06,
-    "price": 350.0,
+    "price": 380.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 190.46,
-    "industry": "其他業"
+    "threeMonthReturn": 39.19,
+    "industry": "其他業",
+    "subIndustries": [
+      "電子零件元件",
+      "模具沖壓"
+    ]
   },
   {
     "id": "5285",
     "name": "界霖",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 53.85,
     "delta": 0.17,
-    "price": 54.6,
+    "price": 55.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 28.93,
-    "industry": "半導體業"
+    "threeMonthReturn": 8.61,
+    "industry": "半導體業",
+    "subIndustries": [
+      "封測服務與材料",
+      "導線架"
+    ]
   },
   {
     "id": "5289",
@@ -3594,11 +4880,16 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 27.64,
     "delta": 0.38,
-    "price": 1020.0,
+    "price": 1120.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 344.6,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 70.99,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "電子零件元件",
+      "DRAM模組",
+      "FLASH模組"
+    ]
   },
   {
     "id": "5324",
@@ -3607,11 +4898,16 @@
     "groupDesc": "不動產開發、營建工程",
     "holdingPct": 71.11,
     "delta": 0.37,
-    "price": 11.95,
+    "price": 12.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 10.14,
-    "industry": "建材營造業"
+    "threeMonthReturn": 15.38,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "地產",
+      "營建",
+      "旅宿／餐飲"
+    ]
   },
   {
     "id": "5340",
@@ -3620,11 +4916,15 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 57.96,
     "delta": 2.2,
-    "price": 125.5,
+    "price": 117.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 323.99,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 72.06,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "玻纖布"
+    ]
   },
   {
     "id": "5355",
@@ -3633,11 +4933,15 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 61.93,
     "delta": 0.1,
-    "price": 6.49,
+    "price": 6.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -19.88,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 0.29,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "印刷電路板"
+    ]
   },
   {
     "id": "5356",
@@ -3646,11 +4950,16 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 39.51,
     "delta": 0.11,
-    "price": 27.15,
+    "price": 27.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -3.55,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 8.8,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "電子零件元件",
+      "其他電子零件",
+      "週邊產品"
+    ]
   },
   {
     "id": "5403",
@@ -3659,11 +4968,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 28.45,
     "delta": 1.26,
-    "price": 93.0,
+    "price": 93.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -21.19,
-    "industry": "資訊服務業"
+    "threeMonthReturn": -18.96,
+    "industry": "資訊服務業",
+    "subIndustries": [
+      "軟體業",
+      "系統整合"
+    ]
   },
   {
     "id": "5426",
@@ -3672,11 +4985,16 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 54.25,
     "delta": 0.56,
-    "price": 18.9,
+    "price": 19.15,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -8.92,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": -3.04,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "電子零件元件",
+      "機殼",
+      "連接器"
+    ]
   },
   {
     "id": "5439",
@@ -3685,11 +5003,15 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 44.62,
     "delta": 4.81,
-    "price": 441.5,
+    "price": 438.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 266.39,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 39.21,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "印刷電路板"
+    ]
   },
   {
     "id": "5469",
@@ -3698,24 +5020,34 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 67.3,
     "delta": 0.87,
-    "price": 96.3,
+    "price": 96.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 121.38,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 3.45,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "印刷電路板",
+      "電腦系統業"
+    ]
   },
   {
     "id": "5483",
     "name": "中美晶",
-    "group": "IC設計/半導體",
-    "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
+    "group": "太陽能",
+    "groupDesc": "太陽能電池、模組、系統，綠能轉型受惠族群",
     "holdingPct": 53.4,
     "delta": 2.56,
-    "price": 131.5,
+    "price": 134.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 31.76,
-    "industry": "半導體業"
+    "threeMonthReturn": 8.47,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC製造",
+      "矽晶圓",
+      "太陽能"
+    ]
   },
   {
     "id": "5488",
@@ -3724,11 +5056,15 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 34.79,
     "delta": 1.35,
-    "price": 10.45,
+    "price": 10.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 19.7,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 5.21,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子零件元件",
+      "連接線材"
+    ]
   },
   {
     "id": "5489",
@@ -3737,11 +5073,15 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 81.97,
     "delta": 0.15,
-    "price": 40.85,
+    "price": 41.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -24.63,
-    "industry": "其他電子業"
+    "threeMonthReturn": 1.86,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "工業電腦",
+      "安全監控"
+    ]
   },
   {
     "id": "5498",
@@ -3750,11 +5090,16 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 37.17,
     "delta": 6.44,
-    "price": 75.6,
+    "price": 83.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 778.05,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 61.36,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "雷射鑽孔機、鑽頭",
+      "電腦系統業"
+    ]
   },
   {
     "id": "5508",
@@ -3763,11 +5108,15 @@
     "groupDesc": "不動產開發、營建工程",
     "holdingPct": 67.04,
     "delta": 0.13,
-    "price": 50.5,
+    "price": 50.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -59.6,
-    "industry": "建材營造業"
+    "threeMonthReturn": -20.19,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "地產",
+      "營建"
+    ]
   },
   {
     "id": "5515",
@@ -3776,37 +5125,51 @@
     "groupDesc": "不動產開發、營建工程",
     "holdingPct": 62.46,
     "delta": 1.25,
-    "price": 40.9,
+    "price": 40.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 44.52,
-    "industry": "建材營造業"
+    "threeMonthReturn": 4.13,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "營造工程",
+      "住宅建設",
+      "基礎建設"
+    ]
   },
   {
     "id": "5536",
     "name": "聖暉*",
-    "group": "機電工程",
-    "groupDesc": "廠務機電工程、無塵室工程，半導體廠建廠受惠",
+    "group": "工業自動化",
+    "groupDesc": "CNC 工具機、工業電腦、自動化設備",
     "holdingPct": 33.67,
     "delta": 0.84,
-    "price": 863.0,
+    "price": 890.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 144.13,
-    "industry": "其他電子業"
+    "threeMonthReturn": 10.97,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "電子其他",
+      "廠務工程",
+      "營造工程"
+    ]
   },
   {
     "id": "5608",
     "name": "四維航",
     "group": "航運",
-    "groupDesc": "散裝航運、油輪，全球大宗物資運輸",
+    "groupDesc": "貨櫃與散裝航運、油輪運輸，長榮、陽明、萬海、裕民等業者",
     "holdingPct": 23.25,
     "delta": 0.12,
-    "price": 15.8,
+    "price": 15.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -1.25,
-    "industry": "航運業"
+    "threeMonthReturn": -11.39,
+    "industry": "航運業",
+    "subIndustries": [
+      "運輸事業",
+      "散裝航運"
+    ]
   },
   {
     "id": "5864",
@@ -3815,11 +5178,15 @@
     "groupDesc": "銀行、金控、壽險，國內金融體系核心",
     "holdingPct": 63.48,
     "delta": 1.09,
-    "price": 25.0,
+    "price": 25.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 102.43,
-    "industry": "金融保險業"
+    "threeMonthReturn": 52.57,
+    "industry": "金融保險業",
+    "subIndustries": [
+      "金融業",
+      "證券"
+    ]
   },
   {
     "id": "5871",
@@ -3828,11 +5195,16 @@
     "groupDesc": "太陽能電池、模組、系統，綠能轉型受惠族群",
     "holdingPct": 61.98,
     "delta": 0.26,
-    "price": 120.0,
+    "price": 117.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 10.27,
-    "industry": "其他業"
+    "threeMonthReturn": 11.9,
+    "industry": "其他業",
+    "subIndustries": [
+      "汽車服務相關",
+      "汽車融資",
+      "金融業"
+    ]
   },
   {
     "id": "5902",
@@ -3841,11 +5213,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 78.68,
     "delta": 0.13,
-    "price": 38.1,
+    "price": 37.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -11.4,
-    "industry": "居家生活"
+    "threeMonthReturn": -12.77,
+    "industry": "居家生活",
+    "subIndustries": [
+      "飲料相關",
+      "非酒精飲料",
+      "流通業"
+    ]
   },
   {
     "id": "6016",
@@ -3854,11 +5231,15 @@
     "groupDesc": "銀行、金控、壽險，國內金融體系核心",
     "holdingPct": 49.0,
     "delta": 0.89,
-    "price": 17.75,
+    "price": 17.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 75.05,
-    "industry": "金融保險業"
+    "threeMonthReturn": 29.71,
+    "industry": "金融保險業",
+    "subIndustries": [
+      "金融業",
+      "證券"
+    ]
   },
   {
     "id": "6026",
@@ -3870,21 +5251,30 @@
     "price": 14.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 25.96,
-    "industry": "金融保險業"
+    "threeMonthReturn": 9.23,
+    "industry": "金融保險業",
+    "subIndustries": [
+      "金融業",
+      "證券"
+    ]
   },
   {
     "id": "6109",
     "name": "亞元",
-    "group": "5G通訊",
-    "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
+    "group": "電源供應器",
+    "groupDesc": "伺服器電源、工業電源供應器",
     "holdingPct": 48.24,
     "delta": 15.19,
-    "price": 11.9,
+    "price": 11.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 22.68,
-    "industry": "通信網路業"
+    "threeMonthReturn": -0.42,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "電子零件元件",
+      "電源供應器",
+      "變壓器"
+    ]
   },
   {
     "id": "6111",
@@ -3893,11 +5283,14 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 36.89,
     "delta": 0.91,
-    "price": 47.8,
+    "price": 48.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -1.24,
-    "industry": "文化創意業"
+    "threeMonthReturn": 6.89,
+    "industry": "文化創意業",
+    "subIndustries": [
+      "控股公司"
+    ]
   },
   {
     "id": "6112",
@@ -3906,11 +5299,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 56.34,
     "delta": 0.13,
-    "price": 47.9,
+    "price": 47.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 14.46,
-    "industry": "資訊服務業"
+    "threeMonthReturn": -1.04,
+    "industry": "資訊服務業",
+    "subIndustries": [
+      "軟體業",
+      "系統整合",
+      "軟體通路／代理"
+    ]
   },
   {
     "id": "6116",
@@ -3919,11 +5317,16 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 42.95,
     "delta": 1.21,
-    "price": 9.09,
+    "price": 8.99,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 32.31,
-    "industry": "光電業"
+    "threeMonthReturn": -15.19,
+    "industry": "光電業",
+    "subIndustries": [
+      "面板業",
+      "中小尺吋面板",
+      "TFT-LCD"
+    ]
   },
   {
     "id": "6120",
@@ -3932,24 +5335,33 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 55.36,
     "delta": 0.28,
-    "price": 14.65,
+    "price": 14.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 31.86,
-    "industry": "光電業"
+    "threeMonthReturn": 6.18,
+    "industry": "光電業",
+    "subIndustries": [
+      "面板業",
+      "LCM",
+      "面板零組件"
+    ]
   },
   {
     "id": "6127",
     "name": "九豪",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "被動元件",
+    "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 21.98,
     "delta": 5.01,
-    "price": 48.0,
+    "price": 50.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 196.3,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 31.15,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "被動元件上游"
+    ]
   },
   {
     "id": "6139",
@@ -3958,11 +5370,15 @@
     "groupDesc": "廠務機電工程、無塵室工程，半導體廠建廠受惠",
     "holdingPct": 61.05,
     "delta": 1.12,
-    "price": 751.0,
+    "price": 725.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 242.92,
-    "industry": "其他電子業"
+    "threeMonthReturn": 21.85,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "電子其他",
+      "廠務工程"
+    ]
   },
   {
     "id": "6141",
@@ -3971,11 +5387,15 @@
     "groupDesc": "印刷電路板、ABF 載板、軟板，電子產品基礎建設",
     "holdingPct": 40.37,
     "delta": 0.16,
-    "price": 34.3,
+    "price": 34.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 281.11,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 226.64,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "印刷電路板"
+    ]
   },
   {
     "id": "6142",
@@ -3984,24 +5404,34 @@
     "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
     "holdingPct": 50.55,
     "delta": 0.12,
-    "price": 9.33,
+    "price": 9.22,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 10.15,
-    "industry": "通信網路業"
+    "threeMonthReturn": 0.22,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "網通設備",
+      "用戶端設備",
+      "區域網路"
+    ]
   },
   {
     "id": "6147",
     "name": "頎邦",
-    "group": "IC設計/半導體",
-    "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
+    "group": "電子零組件",
+    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 67.24,
     "delta": 1.48,
-    "price": 126.5,
+    "price": 135.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 113.68,
-    "industry": "半導體業"
+    "threeMonthReturn": 144.58,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC封裝測試",
+      "IC封裝",
+      "IC測試"
+    ]
   },
   {
     "id": "6163",
@@ -4010,11 +5440,16 @@
     "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
     "holdingPct": 45.78,
     "delta": 2.21,
-    "price": 74.1,
+    "price": 70.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 299.46,
-    "industry": "通信網路業"
+    "threeMonthReturn": 32.89,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "軟體業",
+      "系統整合",
+      "企業資源規劃"
+    ]
   },
   {
     "id": "6166",
@@ -4023,11 +5458,14 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 67.55,
     "delta": 2.11,
-    "price": 78.5,
+    "price": 78.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 12.63,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 17.09,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "工業電腦"
+    ]
   },
   {
     "id": "6168",
@@ -4036,50 +5474,67 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 44.81,
     "delta": 1.04,
-    "price": 29.95,
+    "price": 28.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 90.16,
-    "industry": "光電業"
+    "threeMonthReturn": 34.86,
+    "industry": "光電業",
+    "subIndustries": [
+      "LED",
+      "LED封裝"
+    ]
   },
   {
     "id": "6173",
     "name": "信昌電",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "被動元件",
+    "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 57.19,
     "delta": 8.96,
-    "price": 90.7,
+    "price": 89.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 174.85,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 32.44,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "MLCC",
+      "晶片電阻"
+    ]
   },
   {
     "id": "6175",
     "name": "立敦",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "被動元件",
+    "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 57.32,
     "delta": 0.99,
-    "price": 65.6,
+    "price": 66.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 110.93,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 23.51,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "被動元件上游"
+    ]
   },
   {
     "id": "6182",
     "name": "合晶",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 17.09,
     "delta": 2.3,
-    "price": 39.35,
+    "price": 43.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 106.56,
-    "industry": "半導體業"
+    "threeMonthReturn": 23.75,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC製造",
+      "矽晶圓"
+    ]
   },
   {
     "id": "6191",
@@ -4088,11 +5543,16 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 54.79,
     "delta": 0.56,
-    "price": 114.5,
+    "price": 113.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 115.23,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 2.25,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "印刷電路板",
+      "電腦系統業"
+    ]
   },
   {
     "id": "6192",
@@ -4101,11 +5561,16 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 44.87,
     "delta": 1.08,
-    "price": 125.0,
+    "price": 124.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 31.58,
-    "industry": "其他電子業"
+    "threeMonthReturn": 11.71,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "電子通路",
+      "電子元件代理商",
+      "設備儀器商"
+    ]
   },
   {
     "id": "6196",
@@ -4114,11 +5579,16 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 67.12,
     "delta": 0.53,
-    "price": 394.5,
+    "price": 397.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 163.0,
-    "industry": "其他電子業"
+    "threeMonthReturn": 30.54,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "電子其他",
+      "廠務工程",
+      "軟體業"
+    ]
   },
   {
     "id": "6209",
@@ -4127,11 +5597,15 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 36.27,
     "delta": 0.14,
-    "price": 65.9,
+    "price": 68.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 189.67,
-    "industry": "光電業"
+    "threeMonthReturn": 10.53,
+    "industry": "光電業",
+    "subIndustries": [
+      "光學元件",
+      "光學鏡片／頭"
+    ]
   },
   {
     "id": "6214",
@@ -4140,11 +5614,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 46.15,
     "delta": 1.3,
-    "price": 126.5,
+    "price": 127.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 10.96,
-    "industry": "資訊服務業"
+    "threeMonthReturn": 10.39,
+    "industry": "資訊服務業",
+    "subIndustries": [
+      "軟體業",
+      "系統整合",
+      "軟體通路／代理"
+    ]
   },
   {
     "id": "6219",
@@ -4156,8 +5635,12 @@
     "price": 14.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -45.55,
-    "industry": "建材營造業"
+    "threeMonthReturn": -30.69,
+    "industry": "建材營造業",
+    "subIndustries": [
+      "地產",
+      "營建"
+    ]
   },
   {
     "id": "6221",
@@ -4166,11 +5649,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 71.28,
     "delta": 0.16,
-    "price": 28.1,
+    "price": 27.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -34.94,
-    "industry": "資訊服務業"
+    "threeMonthReturn": -8.79,
+    "industry": "資訊服務業",
+    "subIndustries": [
+      "軟體業",
+      "系統整合",
+      "軟體通路／代理"
+    ]
   },
   {
     "id": "6222",
@@ -4179,11 +5667,33 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 84.52,
     "delta": 5.5,
-    "price": 20.9,
+    "price": 20.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -11.81,
-    "industry": "光電業"
+    "threeMonthReturn": 10.61,
+    "industry": "光電業",
+    "subIndustries": [
+      "營造工程",
+      "住宅建設"
+    ]
+  },
+  {
+    "id": "6223",
+    "name": "旺矽",
+    "group": "光通訊",
+    "groupDesc": "共封裝光學、矽光子、光模組，AI 資料中心高速傳輸",
+    "holdingPct": 43.04,
+    "delta": 1.23,
+    "price": 4940.0,
+    "marketCap": 0.0,
+    "date": "2026-04-17",
+    "threeMonthReturn": 129.23,
+    "industry": "半導體業",
+    "subIndustries": [
+      "設備儀器商",
+      "LED設備",
+      "封測服務與材料"
+    ]
   },
   {
     "id": "6234",
@@ -4192,11 +5702,16 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 50.69,
     "delta": 1.11,
-    "price": 34.1,
+    "price": 34.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 68.81,
-    "industry": "光電業"
+    "threeMonthReturn": 21.47,
+    "industry": "光電業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "雷射鑽孔機、鑽頭",
+      "設備儀器商"
+    ]
   },
   {
     "id": "6235",
@@ -4205,24 +5720,31 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 37.67,
     "delta": 0.11,
-    "price": 46.4,
+    "price": 47.15,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.69,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": -24.8,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "汽機車零組件"
+    ]
   },
   {
     "id": "6237",
     "name": "驊訊",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 15.87,
     "delta": 0.14,
-    "price": 38.7,
+    "price": 40.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 20.56,
-    "industry": "半導體業"
+    "threeMonthReturn": -0.5,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "影音IC"
+    ]
   },
   {
     "id": "6244",
@@ -4231,11 +5753,16 @@
     "groupDesc": "太陽能電池、模組、系統，綠能轉型受惠族群",
     "holdingPct": 26.03,
     "delta": 1.05,
-    "price": 28.8,
+    "price": 28.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 67.93,
-    "industry": "光電業"
+    "threeMonthReturn": 30.54,
+    "industry": "光電業",
+    "subIndustries": [
+      "太陽能",
+      "太陽能電池",
+      "太陽能電池模組"
+    ]
   },
   {
     "id": "6245",
@@ -4244,11 +5771,16 @@
     "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
     "holdingPct": 38.73,
     "delta": 0.38,
-    "price": 83.9,
+    "price": 85.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.88,
-    "industry": "通信網路業"
+    "threeMonthReturn": 27.04,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "網通設備",
+      "用戶端設備",
+      "資安設備"
+    ]
   },
   {
     "id": "6248",
@@ -4260,34 +5792,49 @@
     "price": 20.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -17.01,
-    "industry": "鋼鐵工業"
+    "threeMonthReturn": -5.88,
+    "industry": "鋼鐵工業",
+    "subIndustries": [
+      "條鋼",
+      "鋼筋",
+      "板鋼"
+    ]
   },
   {
     "id": "6261",
     "name": "久元",
-    "group": "IC設計/半導體",
-    "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
+    "group": "電子零組件",
+    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 34.52,
     "delta": 0.22,
-    "price": 86.1,
+    "price": 92.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 40.69,
-    "industry": "半導體業"
+    "threeMonthReturn": 26.47,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC封裝測試",
+      "IC測試",
+      "設備儀器商"
+    ]
   },
   {
     "id": "6272",
     "name": "驊陞",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "車用電子",
+    "groupDesc": "ADAS 自駕、ECU、車用感測器，電動車趨勢",
     "holdingPct": 33.8,
     "delta": 0.13,
-    "price": 33.05,
+    "price": 33.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -32.83,
-    "industry": "電子零組件業"
+    "threeMonthReturn": -23.06,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "汽機車零組件",
+      "車用電子",
+      "電子零件元件"
+    ]
   },
   {
     "id": "6278",
@@ -4299,21 +5846,31 @@
     "price": 158.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 72.28,
-    "industry": "光電業"
+    "threeMonthReturn": 63.91,
+    "industry": "光電業",
+    "subIndustries": [
+      "LED",
+      "LED照明產品",
+      "電腦系統業"
+    ]
   },
   {
     "id": "6409",
     "name": "旭隼",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "太陽能",
+    "groupDesc": "太陽能電池、模組、系統，綠能轉型受惠族群",
     "holdingPct": 37.33,
     "delta": 0.32,
     "price": 773.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -40.31,
-    "industry": "其他電子業"
+    "threeMonthReturn": -23.08,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "電子零件元件",
+      "UPS",
+      "太陽能"
+    ]
   },
   {
     "id": "6414",
@@ -4322,24 +5879,32 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 47.17,
     "delta": 0.53,
-    "price": 310.0,
+    "price": 312.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 20.39,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 8.7,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "工業電腦"
+    ]
   },
   {
     "id": "6415",
     "name": "矽力*-KY",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 64.31,
     "delta": 0.76,
-    "price": 365.5,
+    "price": 394.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -13.8,
-    "industry": "半導體業"
+    "threeMonthReturn": 73.57,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "LED驅動IC",
+      "電源管理IC"
+    ]
   },
   {
     "id": "6417",
@@ -4348,37 +5913,51 @@
     "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
     "holdingPct": 51.95,
     "delta": 0.24,
-    "price": 126.0,
+    "price": 123.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 50.9,
-    "industry": "通信網路業"
+    "threeMonthReturn": 16.59,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "網通設備",
+      "RFID相關"
+    ]
   },
   {
     "id": "6442",
     "name": "光聖",
-    "group": "CPO矽光子",
+    "group": "光通訊",
     "groupDesc": "共封裝光學、矽光子、光模組，AI 資料中心高速傳輸",
     "holdingPct": 36.77,
     "delta": 1.29,
-    "price": 2370.0,
+    "price": 2340.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 620.36,
-    "industry": "通信網路業"
+    "threeMonthReturn": 80.69,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "電子零件元件",
+      "連接器",
+      "光通訊"
+    ]
   },
   {
     "id": "6443",
     "name": "元晶",
-    "group": "光電/LED",
-    "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
+    "group": "太陽能",
+    "groupDesc": "太陽能電池、模組、系統，綠能轉型受惠族群",
     "holdingPct": 15.55,
     "delta": 5.16,
-    "price": 39.1,
+    "price": 39.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 189.63,
-    "industry": "光電業"
+    "threeMonthReturn": 38.03,
+    "industry": "光電業",
+    "subIndustries": [
+      "太陽能",
+      "太陽能電池",
+      "太陽能電池模組"
+    ]
   },
   {
     "id": "6446",
@@ -4387,11 +5966,16 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 41.96,
     "delta": 0.41,
-    "price": 658.0,
+    "price": 650.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 48.42,
-    "industry": "生技醫療業"
+    "threeMonthReturn": 28.21,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "醫藥產業",
+      "新藥研發",
+      "生物製劑"
+    ]
   },
   {
     "id": "6456",
@@ -4400,11 +5984,15 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 49.82,
     "delta": 3.25,
-    "price": 83.8,
+    "price": 79.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 99.52,
-    "industry": "光電業"
+    "threeMonthReturn": 85.81,
+    "industry": "光電業",
+    "subIndustries": [
+      "面板業",
+      "觸控面板"
+    ]
   },
   {
     "id": "6469",
@@ -4413,50 +6001,70 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 43.11,
     "delta": 0.29,
-    "price": 80.8,
+    "price": 80.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -39.14,
-    "industry": "生技醫療業"
+    "threeMonthReturn": -11.78,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "醫藥流通",
+      "醫療器材通路",
+      "藥品通路"
+    ]
   },
   {
     "id": "6477",
     "name": "安集",
-    "group": "光電/LED",
-    "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
+    "group": "太陽能",
+    "groupDesc": "太陽能電池、模組、系統，綠能轉型受惠族群",
     "holdingPct": 39.26,
     "delta": 0.93,
-    "price": 34.55,
+    "price": 34.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 29.64,
-    "industry": "光電業"
+    "threeMonthReturn": -1.42,
+    "industry": "光電業",
+    "subIndustries": [
+      "太陽能",
+      "太陽能電池模組",
+      "電力"
+    ]
   },
   {
     "id": "6485",
     "name": "點序",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 18.51,
     "delta": 0.37,
-    "price": 79.3,
+    "price": 83.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 58.6,
-    "industry": "半導體業"
+    "threeMonthReturn": -17.75,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "FLASH記憶體IC",
+      "記憶卡IC"
+    ]
   },
   {
     "id": "6488",
     "name": "環球晶",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 72.91,
     "delta": 2.11,
-    "price": 551.0,
+    "price": 597.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 102.2,
-    "industry": "半導體業"
+    "threeMonthReturn": 27.02,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC製造",
+      "第三類半導體",
+      "矽晶圓"
+    ]
   },
   {
     "id": "6492",
@@ -4465,11 +6073,15 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 24.7,
     "delta": 0.11,
-    "price": 54.2,
+    "price": 55.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 70.98,
-    "industry": "生技醫療業"
+    "threeMonthReturn": 27.29,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "醫藥產業",
+      "新藥研發"
+    ]
   },
   {
     "id": "6527",
@@ -4478,50 +6090,67 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 26.08,
     "delta": 0.27,
-    "price": 70.0,
+    "price": 70.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -11.39,
-    "industry": "生技醫療業"
+    "threeMonthReturn": -5.5,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "診斷與監測用醫材",
+      "醫學影像裝置"
+    ]
   },
   {
     "id": "6530",
     "name": "創威",
-    "group": "5G通訊",
-    "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
+    "group": "光電/LED",
+    "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 16.54,
     "delta": 7.61,
-    "price": 127.0,
+    "price": 133.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 204.19,
-    "industry": "通信網路業"
+    "threeMonthReturn": 123.99,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "光通訊",
+      "光纖主動元件"
+    ]
   },
   {
     "id": "6531",
     "name": "愛普*",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 56.36,
     "delta": 3.02,
-    "price": 682.0,
+    "price": 720.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 208.6,
-    "industry": "半導體業"
+    "threeMonthReturn": 58.07,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "DRAM記憶體IC",
+      "SRAM記憶體IC"
+    ]
   },
   {
     "id": "6532",
     "name": "瑞耘",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 21.53,
     "delta": 0.1,
-    "price": 84.8,
+    "price": 93.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 47.74,
-    "industry": "半導體業"
+    "threeMonthReturn": 63.8,
+    "industry": "半導體業",
+    "subIndustries": [
+      "設備儀器商",
+      "半導體製程設備"
+    ]
   },
   {
     "id": "6534",
@@ -4530,11 +6159,16 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 73.13,
     "delta": 0.42,
-    "price": 98.2,
+    "price": 100.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 31.81,
-    "industry": "生技醫療業"
+    "threeMonthReturn": 9.41,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "化學工業",
+      "肥料",
+      "生物科技"
+    ]
   },
   {
     "id": "6576",
@@ -4543,37 +6177,50 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 57.6,
     "delta": 0.18,
-    "price": 75.9,
+    "price": 79.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 19.34,
-    "industry": "生技醫療業"
+    "threeMonthReturn": 0.0,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "醫藥產業",
+      "西藥製劑",
+      "新藥研發"
+    ]
   },
   {
     "id": "6578",
     "name": "達邦蛋白",
-    "group": "其他/未分組",
-    "groupDesc": "尚未分類或跨產業個股",
+    "group": "生技醫療",
+    "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 55.41,
     "delta": 1.4,
-    "price": 17.4,
+    "price": 17.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 2.65,
-    "industry": "農業科技業"
+    "threeMonthReturn": -14.0,
+    "industry": "農業科技業",
+    "subIndustries": [
+      "生物科技",
+      "農業生技"
+    ]
   },
   {
     "id": "6584",
     "name": "南俊國際",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "AI伺服器",
+    "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 65.76,
     "delta": 0.1,
-    "price": 733.0,
+    "price": 787.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 548.67,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 132.5,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子零件元件",
+      "其他電子零件"
+    ]
   },
   {
     "id": "6625",
@@ -4582,11 +6229,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 44.07,
     "delta": 2.22,
-    "price": 75.1,
+    "price": 75.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 9.16,
-    "industry": "其他業"
+    "threeMonthReturn": -7.98,
+    "industry": "其他業",
+    "subIndustries": [
+      "傳播事業",
+      "影音娛樂"
+    ]
   },
   {
     "id": "6658",
@@ -4595,11 +6246,15 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 33.37,
     "delta": 0.48,
-    "price": 81.0,
+    "price": 83.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 63.31,
-    "industry": "其他電子業"
+    "threeMonthReturn": 44.52,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "設備儀器商",
+      "PCB相關設備"
+    ]
   },
   {
     "id": "6669",
@@ -4608,24 +6263,34 @@
     "groupDesc": "AI 伺服器組裝、ODM 代工，受惠 NVIDIA/AMD GPU 需求",
     "holdingPct": 54.31,
     "delta": 0.16,
-    "price": 3980.0,
+    "price": 4220.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 116.3,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": -9.64,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "電腦系統業",
+      "伺服器",
+      "AI伺服器"
+    ]
   },
   {
     "id": "6679",
     "name": "鈺太",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 49.95,
     "delta": 0.51,
-    "price": 271.0,
+    "price": 288.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 32.2,
-    "industry": "半導體業"
+    "threeMonthReturn": 62.25,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "類比IC",
+      "影音IC"
+    ]
   },
   {
     "id": "6703",
@@ -4634,11 +6299,16 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 38.64,
     "delta": 0.12,
-    "price": 112.5,
+    "price": 113.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -4.81,
-    "industry": "生技醫療業"
+    "threeMonthReturn": 6.6,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "INTERNET應用與服務",
+      "電商平台",
+      "時尚產業"
+    ]
   },
   {
     "id": "6706",
@@ -4647,24 +6317,32 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 20.93,
     "delta": 3.31,
-    "price": 149.0,
+    "price": 148.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 136.13,
-    "industry": "光電業"
+    "threeMonthReturn": 16.02,
+    "industry": "光電業",
+    "subIndustries": [
+      "LED",
+      "MICROLED",
+      "設備儀器商"
+    ]
   },
   {
     "id": "6753",
     "name": "龍德造船",
     "group": "航運",
-    "groupDesc": "散裝航運、油輪，全球大宗物資運輸",
+    "groupDesc": "貨櫃與散裝航運、油輪運輸，長榮、陽明、萬海、裕民等業者",
     "holdingPct": 55.42,
     "delta": 1.54,
-    "price": 144.0,
+    "price": 142.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 46.94,
-    "industry": "航運業"
+    "threeMonthReturn": 9.65,
+    "industry": "航運業",
+    "subIndustries": [
+      "造船業"
+    ]
   },
   {
     "id": "6768",
@@ -4673,11 +6351,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 77.4,
     "delta": 0.17,
-    "price": 84.6,
+    "price": 84.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -18.65,
-    "industry": "運動休閒"
+    "threeMonthReturn": -17.96,
+    "industry": "運動休閒",
+    "subIndustries": [
+      "傳產其他",
+      "鞋材"
+    ]
   },
   {
     "id": "6782",
@@ -4686,24 +6368,33 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 32.92,
     "delta": 1.74,
-    "price": 223.0,
+    "price": 219.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 51.7,
-    "industry": "生技醫療業"
+    "threeMonthReturn": 23.66,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "輔助與彌補用醫材",
+      "隱形眼鏡"
+    ]
   },
   {
     "id": "6806",
     "name": "森崴能源",
-    "group": "其他/未分組",
-    "groupDesc": "尚未分類或跨產業個股",
+    "group": "重電電網",
+    "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 55.49,
     "delta": 0.56,
-    "price": 27.1,
+    "price": 29.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -65.74,
-    "industry": "綠能環保"
+    "threeMonthReturn": -21.37,
+    "industry": "綠能環保",
+    "subIndustries": [
+      "電力設備",
+      "配電工程",
+      "營造工程"
+    ]
   },
   {
     "id": "6841",
@@ -4712,11 +6403,14 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 38.22,
     "delta": 1.17,
-    "price": 58.0,
+    "price": 58.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -10.36,
-    "industry": "生技醫療業"
+    "threeMonthReturn": -12.95,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "智慧醫療技術"
+    ]
   },
   {
     "id": "6877",
@@ -4725,11 +6419,16 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 58.16,
     "delta": 0.81,
-    "price": 165.0,
+    "price": 164.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 152.1,
-    "industry": "其他電子業"
+    "threeMonthReturn": 89.38,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "設備儀器商",
+      "半導體製程設備",
+      "IC檢測設備"
+    ]
   },
   {
     "id": "6934",
@@ -4738,11 +6437,15 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 52.44,
     "delta": 0.21,
-    "price": 87.3,
+    "price": 87.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -43.68,
-    "industry": "生技醫療業"
+    "threeMonthReturn": -43.61,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "手術與治療用醫材",
+      "呼吸與麻醉用器具"
+    ]
   },
   {
     "id": "6958",
@@ -4754,21 +6457,29 @@
     "price": 20.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.33,
-    "industry": "其他業"
+    "threeMonthReturn": 30.29,
+    "industry": "其他業",
+    "subIndustries": [
+      "汽車服務相關",
+      "汽車融資",
+      "金融業"
+    ]
   },
   {
     "id": "6988",
     "name": "威力暘-創",
-    "group": "其他/未分組",
-    "groupDesc": "尚未分類或跨產業個股",
+    "group": "車用電子",
+    "groupDesc": "ADAS 自駕、ECU、車用感測器，電動車趨勢",
     "holdingPct": 64.46,
     "delta": 0.1,
     "price": 14.75,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -23.58,
-    "industry": "汽車工業"
+    "threeMonthReturn": 6.88,
+    "industry": "汽車工業",
+    "subIndustries": [
+      "車用電子"
+    ]
   },
   {
     "id": "7723",
@@ -4777,11 +6488,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 45.77,
     "delta": 0.77,
-    "price": 34.35,
+    "price": 34.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -37.32,
-    "industry": "觀光餐旅"
+    "threeMonthReturn": 4.24,
+    "industry": "觀光餐旅",
+    "subIndustries": [
+      "旅宿／餐飲",
+      "餐飲"
+    ]
   },
   {
     "id": "7750",
@@ -4790,11 +6505,34 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 65.06,
     "delta": 0.29,
-    "price": 1915.0,
+    "price": 1940.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 111.84,
-    "industry": "電機機械"
+    "threeMonthReturn": 127.43,
+    "industry": "電機機械",
+    "subIndustries": [
+      "工具機",
+      "工具機控制器",
+      "工具機主軸"
+    ]
+  },
+  {
+    "id": "7794",
+    "name": "宏卅硒撥s",
+    "group": "其他/未分組",
+    "groupDesc": "尚未分類或跨產業個股",
+    "holdingPct": 82.84,
+    "delta": 2.06,
+    "price": 39.5,
+    "marketCap": 0.0,
+    "date": "2026-04-17",
+    "threeMonthReturn": -11.24,
+    "industry": "居家生活",
+    "subIndustries": [
+      "家電",
+      "小家電",
+      "地產"
+    ]
   },
   {
     "id": "7811",
@@ -4803,24 +6541,50 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 64.03,
     "delta": 0.55,
-    "price": 86.8,
+    "price": 86.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -30.0,
-    "industry": "運動休閒"
+    "threeMonthReturn": -34.62,
+    "industry": "運動休閒",
+    "subIndustries": [
+      "傳產其他",
+      "製鞋業",
+      "運動產業"
+    ]
+  },
+  {
+    "id": "7821",
+    "name": "神數",
+    "group": "車用電子",
+    "groupDesc": "ADAS 自駕、ECU、車用感測器，電動車趨勢",
+    "holdingPct": 87.33,
+    "delta": 1.34,
+    "price": 49.25,
+    "marketCap": 0.0,
+    "date": "2026-04-17",
+    "threeMonthReturn": -26.38,
+    "industry": "汽車工業",
+    "subIndustries": [
+      "車用電子"
+    ]
   },
   {
     "id": "8016",
     "name": "矽創",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 28.8,
     "delta": 0.28,
     "price": 219.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 14.36,
-    "industry": "半導體業"
+    "threeMonthReturn": 19.02,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "LCD驅動IC",
+      "CMOS晶片"
+    ]
   },
   {
     "id": "8021",
@@ -4829,11 +6593,16 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 42.24,
     "delta": 1.5,
-    "price": 418.0,
+    "price": 405.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1513.9,
-    "industry": "其他電子業"
+    "threeMonthReturn": 111.22,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "雷射鑽孔機、鑽頭",
+      "電腦系統業"
+    ]
   },
   {
     "id": "8034",
@@ -4842,24 +6611,33 @@
     "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
     "holdingPct": 10.88,
     "delta": 2.16,
-    "price": 25.8,
+    "price": 25.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 66.45,
-    "industry": "通信網路業"
+    "threeMonthReturn": 1.97,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "網通設備",
+      "接取設備"
+    ]
   },
   {
     "id": "8043",
     "name": "蜜望實",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "被動元件",
+    "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 60.01,
     "delta": 7.94,
-    "price": 91.3,
+    "price": 87.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 288.51,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 7.74,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "MLCC",
+      "電感"
+    ]
   },
   {
     "id": "8044",
@@ -4868,11 +6646,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 55.72,
     "delta": 0.14,
-    "price": 24.65,
+    "price": 24.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -32.56,
-    "industry": "數位雲端"
+    "threeMonthReturn": -18.02,
+    "industry": "數位雲端",
+    "subIndustries": [
+      "INTERNET應用與服務",
+      "電商平台"
+    ]
   },
   {
     "id": "8047",
@@ -4881,37 +6663,49 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 70.82,
     "delta": 0.11,
-    "price": 52.7,
+    "price": 52.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 319.92,
-    "industry": "其他電子業"
+    "threeMonthReturn": 2.35,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "設備儀器商"
+    ]
   },
   {
     "id": "8048",
     "name": "德勝",
-    "group": "5G通訊",
-    "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
+    "group": "電子零組件",
+    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 28.48,
     "delta": 0.22,
-    "price": 71.0,
+    "price": 73.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 65.12,
-    "industry": "通信網路業"
+    "threeMonthReturn": 32.91,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "光通訊",
+      "光纖設備"
+    ]
   },
   {
     "id": "8054",
     "name": "安國",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 30.86,
     "delta": 1.32,
-    "price": 103.5,
+    "price": 113.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 49.78,
-    "industry": "半導體業"
+    "threeMonthReturn": -7.72,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "FLASH記憶體IC",
+      "集線器IC"
+    ]
   },
   {
     "id": "8069",
@@ -4920,11 +6714,16 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 67.38,
     "delta": 0.16,
-    "price": 158.0,
+    "price": 154.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -28.02,
-    "industry": "光電業"
+    "threeMonthReturn": -14.68,
+    "industry": "光電業",
+    "subIndustries": [
+      "面板業",
+      "中小尺吋面板",
+      "電子紙"
+    ]
   },
   {
     "id": "8070",
@@ -4933,11 +6732,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 71.67,
     "delta": 0.12,
-    "price": 48.5,
+    "price": 48.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 30.9,
-    "industry": "電子通路業"
+    "threeMonthReturn": 7.02,
+    "industry": "電子通路業",
+    "subIndustries": [
+      "電子通路",
+      "半導體材料通路商",
+      "封測服務與材料"
+    ]
   },
   {
     "id": "8074",
@@ -4946,11 +6750,15 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 30.61,
     "delta": 1.95,
-    "price": 78.3,
+    "price": 77.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 298.47,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 65.67,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "PCB材料"
+    ]
   },
   {
     "id": "8077",
@@ -4962,21 +6770,30 @@
     "price": 41.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.52,
-    "industry": "觀光餐旅"
+    "threeMonthReturn": -4.37,
+    "industry": "觀光餐旅",
+    "subIndustries": [
+      "旅宿／餐飲",
+      "飯店"
+    ]
   },
   {
     "id": "8081",
     "name": "致新",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 23.69,
     "delta": 0.11,
-    "price": 238.0,
+    "price": 241.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 14.15,
-    "industry": "半導體業"
+    "threeMonthReturn": 12.09,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC設計",
+      "類比IC",
+      "LED驅動IC"
+    ]
   },
   {
     "id": "8096",
@@ -4985,11 +6802,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 40.33,
     "delta": 2.98,
-    "price": 93.7,
+    "price": 93.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 80.19,
-    "industry": "電子通路業"
+    "threeMonthReturn": 72.83,
+    "industry": "電子通路業",
+    "subIndustries": [
+      "電子通路",
+      "IC零組件通路商",
+      "電子元件代理商"
+    ]
   },
   {
     "id": "8097",
@@ -4998,24 +6820,34 @@
     "groupDesc": "5G 基站設備、Open RAN、無線通訊模組",
     "holdingPct": 57.2,
     "delta": 0.69,
-    "price": 52.6,
+    "price": 51.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -26.12,
-    "industry": "通信網路業"
+    "threeMonthReturn": -13.42,
+    "industry": "通信網路業",
+    "subIndustries": [
+      "網通設備",
+      "用戶端設備",
+      "無線網路設備系統(WLAN)"
+    ]
   },
   {
     "id": "8103",
     "name": "瀚荃",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "連接器",
+    "groupDesc": "線材連接器、背板連接器，資料中心與消費電子應用",
     "holdingPct": 36.03,
     "delta": 2.53,
-    "price": 100.5,
+    "price": 96.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 114.38,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 3.34,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "電子零件元件",
+      "連接器",
+      "連接線材"
+    ]
   },
   {
     "id": "8105",
@@ -5024,11 +6856,15 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 58.38,
     "delta": 1.59,
-    "price": 14.1,
+    "price": 14.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 16.53,
-    "industry": "光電業"
+    "threeMonthReturn": -6.33,
+    "industry": "光電業",
+    "subIndustries": [
+      "面板業",
+      "LCM"
+    ]
   },
   {
     "id": "8107",
@@ -5037,11 +6873,14 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 46.97,
     "delta": 1.33,
-    "price": 13.45,
+    "price": 13.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -23.36,
-    "industry": "電機機械"
+    "threeMonthReturn": -2.88,
+    "industry": "電機機械",
+    "subIndustries": [
+      "汽機車零組件"
+    ]
   },
   {
     "id": "8111",
@@ -5050,24 +6889,34 @@
     "groupDesc": "LED 照明、面板、光學鏡頭、光學元件",
     "holdingPct": 32.91,
     "delta": 3.74,
-    "price": 77.6,
+    "price": 80.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 110.01,
-    "industry": "光電業"
+    "threeMonthReturn": 20.75,
+    "industry": "光電業",
+    "subIndustries": [
+      "LED",
+      "LED封裝",
+      "LED照明產品"
+    ]
   },
   {
     "id": "8150",
     "name": "南茂",
-    "group": "IC設計/半導體",
-    "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
+    "group": "電子零組件",
+    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 68.81,
     "delta": 6.4,
-    "price": 67.4,
+    "price": 74.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 171.23,
-    "industry": "半導體業"
+    "threeMonthReturn": 39.29,
+    "industry": "半導體業",
+    "subIndustries": [
+      "IC封裝測試",
+      "IC封裝",
+      "IC測試"
+    ]
   },
   {
     "id": "8155",
@@ -5076,37 +6925,51 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 52.2,
     "delta": 0.89,
-    "price": 401.5,
+    "price": 396.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 293.63,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 130.9,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "印刷電路板"
+    ]
   },
   {
     "id": "8171",
     "name": "天宇",
-    "group": "其他/未分組",
-    "groupDesc": "尚未分類或跨產業個股",
+    "group": "車用電子",
+    "groupDesc": "ADAS 自駕、ECU、車用感測器，電動車趨勢",
     "holdingPct": 51.92,
     "delta": 0.17,
-    "price": 23.9,
+    "price": 24.35,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -36.27,
-    "industry": "綠能環保"
+    "threeMonthReturn": 2.1,
+    "industry": "綠能環保",
+    "subIndustries": [
+      "電池",
+      "工業用電池",
+      "車用鋰電池"
+    ]
   },
   {
     "id": "8182",
     "name": "加高",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "被動元件",
+    "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 65.3,
     "delta": 0.11,
-    "price": 42.95,
+    "price": 44.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 48.36,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 68.97,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "石英元件",
+      "振盪器"
+    ]
   },
   {
     "id": "8210",
@@ -5118,8 +6981,12 @@
     "price": 1020.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 340.6,
-    "industry": "電腦及週邊設備業"
+    "threeMonthReturn": 4.62,
+    "industry": "電腦及週邊設備業",
+    "subIndustries": [
+      "電子零件元件",
+      "伺服器機殼"
+    ]
   },
   {
     "id": "8213",
@@ -5128,50 +6995,67 @@
     "groupDesc": "印刷電路板、ABF 載板、軟板，電子產品基礎建設",
     "holdingPct": 39.78,
     "delta": 0.31,
-    "price": 38.65,
+    "price": 38.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 35.38,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 13.41,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "印刷電路板"
+    ]
   },
   {
     "id": "8261",
     "name": "富鼎",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 38.76,
     "delta": 0.22,
-    "price": 126.0,
+    "price": 128.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 82.61,
-    "industry": "半導體業"
+    "threeMonthReturn": 40.97,
+    "industry": "半導體業",
+    "subIndustries": [
+      "分離式元件",
+      "電晶體"
+    ]
   },
   {
     "id": "8277",
     "name": "商丞",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 13.48,
     "delta": 0.13,
-    "price": 7.51,
+    "price": 7.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -22.26,
-    "industry": "半導體業"
+    "threeMonthReturn": -15.91,
+    "industry": "半導體業",
+    "subIndustries": [
+      "電子零件元件",
+      "記憶體模組",
+      "週邊產品"
+    ]
   },
   {
     "id": "8289",
     "name": "泰藝",
-    "group": "電子零組件",
-    "groupDesc": "其他電子零組件，包含各類電子材料與模組",
+    "group": "被動元件",
+    "groupDesc": "MLCC、電阻、電感等被動元件，電子產品必備",
     "holdingPct": 36.7,
     "delta": 2.35,
-    "price": 54.6,
+    "price": 56.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 191.98,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 173.43,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "被動元件",
+      "振盪器"
+    ]
   },
   {
     "id": "8349",
@@ -5183,8 +7067,12 @@
     "price": 44.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -0.47,
-    "industry": "鋼鐵工業"
+    "threeMonthReturn": 1.72,
+    "industry": "鋼鐵工業",
+    "subIndustries": [
+      "線材盤元",
+      "螺絲螺帽"
+    ]
   },
   {
     "id": "8358",
@@ -5193,24 +7081,33 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 49.7,
     "delta": 6.13,
-    "price": 404.0,
+    "price": 393.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 795.79,
-    "industry": "電子零組件業"
+    "threeMonthReturn": 47.93,
+    "industry": "電子零組件業",
+    "subIndustries": [
+      "印刷電路板相關",
+      "銅箔"
+    ]
   },
   {
     "id": "8383",
     "name": "千附",
-    "group": "IC設計/半導體",
+    "group": "IC設計",
     "groupDesc": "Fabless IC 設計，包含 SoC、驅動 IC、電源管理 IC",
     "holdingPct": 43.35,
     "delta": 1.5,
-    "price": 68.6,
+    "price": 72.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 55.73,
-    "industry": "半導體業"
+    "threeMonthReturn": 77.56,
+    "industry": "半導體業",
+    "subIndustries": [
+      "產業機械",
+      "其他產業機械",
+      "電子其他"
+    ]
   },
   {
     "id": "8404",
@@ -5219,11 +7116,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 73.15,
     "delta": 0.2,
-    "price": 17.75,
+    "price": 17.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -0.62,
-    "industry": "其他業"
+    "threeMonthReturn": -24.84,
+    "industry": "其他業",
+    "subIndustries": [
+      "織布業",
+      "工業紡織品",
+      "黏扣帶"
+    ]
   },
   {
     "id": "8415",
@@ -5232,11 +7134,15 @@
     "groupDesc": "熱軋、冷軋、不鏽鋼，基礎建設與製造業原料",
     "holdingPct": 89.54,
     "delta": 0.12,
-    "price": 33.7,
+    "price": 33.75,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.81,
-    "industry": "鋼鐵工業"
+    "threeMonthReturn": -0.59,
+    "industry": "鋼鐵工業",
+    "subIndustries": [
+      "線材盤元",
+      "螺絲螺帽"
+    ]
   },
   {
     "id": "8431",
@@ -5245,11 +7151,15 @@
     "groupDesc": "其他電子零組件，包含各類電子材料與模組",
     "holdingPct": 19.98,
     "delta": 1.15,
-    "price": 66.7,
+    "price": 70.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 23.29,
-    "industry": "其他電子業"
+    "threeMonthReturn": -9.86,
+    "industry": "其他電子業",
+    "subIndustries": [
+      "電子零件元件",
+      "機殼表面處理"
+    ]
   },
   {
     "id": "8436",
@@ -5258,11 +7168,16 @@
     "groupDesc": "新藥研發、醫療器材、CDMO 委託開發製造",
     "holdingPct": 29.7,
     "delta": 0.75,
-    "price": 122.0,
+    "price": 124.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -14.08,
-    "industry": "生技醫療業"
+    "threeMonthReturn": 2.9,
+    "industry": "生技醫療業",
+    "subIndustries": [
+      "食品加工",
+      "保健食品",
+      "時尚產業"
+    ]
   },
   {
     "id": "8437",
@@ -5271,11 +7186,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 25.18,
     "delta": 2.19,
-    "price": 12.35,
+    "price": 13.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -42.82,
-    "industry": "其他業"
+    "threeMonthReturn": -17.38,
+    "industry": "其他業",
+    "subIndustries": [
+      "服務業",
+      "教育事業"
+    ]
   },
   {
     "id": "8438",
@@ -5284,11 +7203,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 66.89,
     "delta": 0.19,
-    "price": 88.4,
+    "price": 88.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 209.09,
-    "industry": "綠能環保"
+    "threeMonthReturn": 78.81,
+    "industry": "綠能環保",
+    "subIndustries": [
+      "半導體化學品",
+      "傳產其他",
+      "回收焚化／掩埋清運"
+    ]
   },
   {
     "id": "8446",
@@ -5297,11 +7221,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 41.2,
     "delta": 0.1,
-    "price": 89.3,
+    "price": 88.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -9.06,
-    "industry": "文化創意業"
+    "threeMonthReturn": -8.14,
+    "industry": "文化創意業",
+    "subIndustries": [
+      "傳播事業",
+      "演出經紀",
+      "文化創意產業"
+    ]
   },
   {
     "id": "8462",
@@ -5310,11 +7239,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 60.33,
     "delta": 0.95,
-    "price": 142.5,
+    "price": 144.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 12.2,
-    "industry": "運動休閒"
+    "threeMonthReturn": -6.8,
+    "industry": "運動休閒",
+    "subIndustries": [
+      "休閒娛樂",
+      "連鎖健身房"
+    ]
   },
   {
     "id": "8905",
@@ -5323,11 +7256,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 88.77,
     "delta": 0.84,
-    "price": 40.05,
+    "price": 40.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 27.14,
-    "industry": "其他業"
+    "threeMonthReturn": 28.94,
+    "industry": "其他業",
+    "subIndustries": [
+      "食品加工",
+      "罐頭業",
+      "肉品加工"
+    ]
   },
   {
     "id": "8908",
@@ -5336,11 +7274,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 85.14,
     "delta": 0.25,
-    "price": 40.75,
+    "price": 40.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 2.13,
-    "industry": "油電燃氣業"
+    "threeMonthReturn": -5.7,
+    "industry": "油電燃氣業",
+    "subIndustries": [
+      "石油及天然氣",
+      "天然氣"
+    ]
   },
   {
     "id": "8932",
@@ -5349,11 +7291,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 71.42,
     "delta": 0.13,
-    "price": 98.8,
+    "price": 101.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 146.26,
-    "industry": "其他業"
+    "threeMonthReturn": 18.13,
+    "industry": "其他業",
+    "subIndustries": [
+      "傳產其他",
+      "拉鍊"
+    ]
   },
   {
     "id": "8996",
@@ -5362,11 +7308,15 @@
     "groupDesc": "變壓器、配電設備、電網基礎建設，台電供應商",
     "holdingPct": 37.28,
     "delta": 0.19,
-    "price": 1200.0,
+    "price": 1215.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 510.69,
-    "industry": "電機機械"
+    "threeMonthReturn": 113.91,
+    "industry": "電機機械",
+    "subIndustries": [
+      "傳產其他",
+      "金屬加工／製品"
+    ]
   },
   {
     "id": "9105",
@@ -5375,11 +7325,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 17.81,
     "delta": 0.92,
-    "price": 5.54,
+    "price": 5.79,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -4.81,
-    "industry": ""
+    "threeMonthReturn": -1.53,
+    "industry": "",
+    "subIndustries": [
+      "家電",
+      "液晶電視",
+      "消費性電子產品"
+    ]
   },
   {
     "id": "9110",
@@ -5388,11 +7343,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 21.28,
     "delta": 0.17,
-    "price": 3.09,
+    "price": 3.08,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -49.76,
-    "industry": ""
+    "threeMonthReturn": 1.99,
+    "industry": "",
+    "subIndustries": [
+      "汽機車零組件",
+      "機車零組件",
+      "車輛整車"
+    ]
   },
   {
     "id": "9136",
@@ -5401,11 +7361,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 56.47,
     "delta": 1.12,
-    "price": 10.7,
+    "price": 11.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 41.16,
-    "industry": ""
+    "threeMonthReturn": 37.78,
+    "industry": "",
+    "subIndustries": [
+      "電子零件元件",
+      "機殼",
+      "鎂鋁合金"
+    ]
   },
   {
     "id": "9902",
@@ -5414,11 +7379,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 49.71,
     "delta": 0.1,
-    "price": 14.95,
+    "price": 14.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 17.72,
-    "industry": "其他業"
+    "threeMonthReturn": -11.31,
+    "industry": "其他業",
+    "subIndustries": [
+      "汽車服務相關",
+      "車輛整車",
+      "特種車輛相關"
+    ]
   },
   {
     "id": "9921",
@@ -5427,11 +7397,16 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 56.51,
     "delta": 0.54,
-    "price": 69.2,
+    "price": 70.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -45.08,
-    "industry": "運動休閒"
+    "threeMonthReturn": -22.06,
+    "industry": "運動休閒",
+    "subIndustries": [
+      "產業機械",
+      "自行車零件",
+      "車輛整車"
+    ]
   },
   {
     "id": "9933",
@@ -5440,11 +7415,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 53.16,
     "delta": 0.21,
-    "price": 36.4,
+    "price": 37.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 40.76,
-    "industry": "其他業"
+    "threeMonthReturn": 19.23,
+    "industry": "其他業",
+    "subIndustries": [
+      "營造工程",
+      "工程顧問"
+    ]
   },
   {
     "id": "9941",
@@ -5453,11 +7432,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 65.14,
     "delta": 0.77,
-    "price": 78.0,
+    "price": 78.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -21.25,
-    "industry": "其他業"
+    "threeMonthReturn": -4.28,
+    "industry": "其他業",
+    "subIndustries": [
+      "汽車服務相關",
+      "汽車融資"
+    ]
   },
   {
     "id": "9949",
@@ -5466,11 +7449,15 @@
     "groupDesc": "尚未分類或跨產業個股",
     "holdingPct": 58.39,
     "delta": 0.5,
-    "price": 36.55,
+    "price": 36.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 94.41,
-    "industry": "文化創意業"
+    "threeMonthReturn": 41.75,
+    "industry": "文化創意業",
+    "subIndustries": [
+      "傳產其他",
+      "工藝品"
+    ]
   },
   {
     "id": "9958",
@@ -5479,10 +7466,14 @@
     "groupDesc": "熱軋、冷軋、不鏽鋼，基礎建設與製造業原料",
     "holdingPct": 47.33,
     "delta": 0.4,
-    "price": 108.5,
+    "price": 106.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -32.19,
-    "industry": "鋼鐵工業"
+    "threeMonthReturn": -23.38,
+    "industry": "鋼鐵工業",
+    "subIndustries": [
+      "條鋼",
+      "鋼構"
+    ]
   }
 ]
