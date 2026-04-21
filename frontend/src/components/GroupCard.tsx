@@ -126,7 +126,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
           {topSubIndustries.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-0.5">
               {topSubIndustries.map(([name, count]) => (
-                <span key={name} className="text-[9px] px-1.5 py-0.5 rounded"
+                <span key={name} className="text-[11px] px-1.5 py-0.5 rounded"
                   style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-muted)', border: '1px solid var(--color-border)' }}>
                   {name} <span style={{ opacity: 0.55 }}>×{count}</span>
                 </span>
@@ -165,7 +165,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
                         </span>
                         <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>{stock.name}</span>
                         {stockSubs.map(si => (
-                          <span key={si} className="text-[9px] px-1.5 py-0.5 rounded"
+                          <span key={si} className="text-[11px] px-1.5 py-0.5 rounded"
                             style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-muted)', border: '1px solid var(--color-border)' }}>
                             {si}
                           </span>

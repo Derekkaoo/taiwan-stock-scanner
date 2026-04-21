@@ -169,7 +169,7 @@ export function StockTable({ stocks, sort, onSort }: Props) {
                         </span>
                         <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>{stock.name}</span>
                         {(stock.subIndustries ?? []).map(si => (
-                          <span key={si} className="text-[10px] px-1.5 py-0.5 rounded"
+                          <span key={si} className="text-[11px] px-1.5 py-0.5 rounded"
                             style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-muted)', border: '1px solid var(--color-border)' }}>
                             {si}
                           </span>
