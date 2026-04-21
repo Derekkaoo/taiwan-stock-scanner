@@ -66,16 +66,27 @@ def run():
         json.dump(klines, f, ensure_ascii=False)
     size_kb = klines_path.stat().st_size // 1024
     logger.info("klines.json 更新完成：%d 支，%d KB", len(klines), size_kb)
+    # 5 個期間的漲幅（用最後 N 個交易日）
+    PERIODS = {"w1": 5, "m1": 21, "m3": 65, "m6": 130, "y1": 252}
     updated = 0
     for s in stocks:
         bars = klines.get(s["id"])
-        if not bars:
+        if not bars or len(bars) < 2:
             continue
-        s["price"] = float(bars[-1]["c"])
-        if len(bars) >= 2:
-            s["threeMonthReturn"] = round(
-                (bars[-1]["c"] - bars[0]["c"]) / bars[0]["c"] * 100, 2
-            )
+        last = bars[-1]["c"]
+        if not last:
+            continue
+        s["price"] = float(last)
+        returns = {}
+        for key, days in PERIODS.items():
+            recent = bars if len(bars) <= days else bars[-(days + 1):]
+            first = recent[0]["c"]
+            if first:
+                returns[key] = round((last - first) / first * 100, 2)
+            else:
+                returns[key] = None
+        s["returns"] = returns
+        s["threeMonthReturn"] = returns.get("y1")  # 向後相容（UI label 是 1 年）
         updated += 1
     with open(stocks_path, "w", encoding="utf-8") as f:
         json.dump(stocks, f, ensure_ascii=False, indent=2)

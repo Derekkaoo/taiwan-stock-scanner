@@ -1,5 +1,6 @@
-import type { StockRow, SortState } from '../types'
-import { THEME_CSS_MAP, TAG_COLORS } from '../constants/themeGroups'
+import type { StockRow, SortState, ReturnPeriod } from '../types'
+import { RETURN_PERIOD_LABELS } from '../types'
+import { THEME_CSS_MAP, TAG_COLORS, getGroupCssClass } from '../constants/themeGroups'
 import { CandlestickSVG } from './CandlestickSVG'
 import { useKline } from '../hooks/useKline'
 import { useEffect, useState } from 'react'
@@ -12,57 +13,58 @@ interface ColDef {
   render?: (v: StockRow) => React.ReactNode
 }
 
-const COLS: ColDef[] = [
-  { key: 'id',   label: '代號', align: 'left', mono: true },
-  { key: 'name', label: '名稱', align: 'left' },
-  { key: 'group', label: '族群', align: 'left',
-    render: (s) => {
-      const css = THEME_CSS_MAP[s.group] ?? 'tag-other'
-      const c   = TAG_COLORS[css] ?? '#6b7280'
-      return (
-        <span className="inline-block px-2 py-0.5 rounded-full text-[10px] font-bold border"
-          style={{ color: c, borderColor: c + '44', background: c + '18', whiteSpace: 'nowrap' }}>
-          {s.group}
-        </span>
-      )
-    }
-  },
-  { key: 'holdingPct', label: '持股%', align: 'right', mono: true,
-    render: (s) => <span className="tabular font-mono">{s.holdingPct.toFixed(2)}%</span>
-  },
-  { key: 'delta', label: '週增%', align: 'right', mono: true,
-    render: (s) => (
-      <span className="tabular font-mono" style={{ color: s.delta >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-        +{s.delta.toFixed(3)}%
-      </span>
-    )
-  },
-  { key: 'price', label: '收盤價', align: 'right', mono: true,
-    render: (s) => <span className="tabular font-mono">{s.price.toFixed(s.price >= 100 ? 1 : 2)}</span>
-  },
-  { key: 'threeMonthReturn', label: '1年漲幅', align: 'right', mono: true,
-    render: (s) => {
-      const r = s.threeMonthReturn
-      if (r === null) return <span style={{ color: 'var(--color-text-muted)' }}>—</span>
-      return (
-        <span className="tabular font-mono" style={{ color: r >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-          {r >= 0 ? '+' : ''}{r.toFixed(1)}%
-        </span>
-      )
-    }
-  },
-  { key: 'date', label: '更新日', align: 'right',
-    render: (s) => <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>{s.date}</span>
-  },
-]
+
 
 interface Props {
   stocks: StockRow[]
   sort: SortState
   onSort: (key: keyof StockRow) => void
+  returnPeriod: ReturnPeriod
 }
 
-export function StockTable({ stocks, sort, onSort }: Props) {
+export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
+  const COLS: ColDef[] = [
+    { key: 'id',   label: '代號', align: 'left', mono: true },
+    { key: 'name', label: '名稱', align: 'left' },
+    { key: 'group', label: '族群', align: 'left',
+      render: (s) => {
+        const css = getGroupCssClass(s.group)
+        const c   = TAG_COLORS[css] ?? '#6b7280'
+        return (
+          <span className="inline-block px-2 py-0.5 rounded-full text-[10px] font-bold border"
+            style={{ color: c, borderColor: c + '44', background: c + '18', whiteSpace: 'nowrap' }}>
+            {s.group}
+          </span>
+        )
+      }
+    },
+    { key: 'holdingPct', label: '持股%', align: 'right', mono: true,
+      render: (s) => <span className="tabular font-mono">{s.holdingPct.toFixed(2)}%</span>
+    },
+    { key: 'delta', label: '週增%', align: 'right', mono: true,
+      render: (s) => (
+        <span className="tabular font-mono" style={{ color: s.delta >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
+          +{s.delta.toFixed(3)}%
+        </span>
+      )
+    },
+    { key: 'price', label: '收盤價', align: 'right', mono: true,
+      render: (s) => <span className="tabular font-mono">{s.price.toFixed(s.price >= 100 ? 1 : 2)}</span>
+    },
+    { key: 'threeMonthReturn', label: `${RETURN_PERIOD_LABELS[returnPeriod]}漲幅`, align: 'right', mono: true,
+      render: (s) => {
+        const rv = s.returns && s.returns[returnPeriod]
+        const r  = rv == null ? s.threeMonthReturn : rv
+        if (r == null) return <span style={{ color: 'var(--color-text-muted)' }}>—</span>
+        return (
+          <span className="tabular font-mono" style={{ color: r >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
+            {r >= 0 ? '+' : ''}{r.toFixed(1)}%
+          </span>
+        )
+      }
+    },
+  ]
+
   const { getFromCache, loadFromJson } = useKline()
   const [expandedId, setExpandedId] = useState<string | null>(null)
 
@@ -170,7 +172,7 @@ export function StockTable({ stocks, sort, onSort }: Props) {
                         <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>{stock.name}</span>
                         {(stock.subIndustries ?? []).map(si => (
                           <span key={si} className="text-[11px] px-1.5 py-0.5 rounded"
-                            style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-muted)', border: '1px solid var(--color-border)' }}>
+                            style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-secondary)', border: '1px solid var(--color-border)' }}>
                             {si}
                           </span>
                         ))}

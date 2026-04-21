@@ -17,6 +17,19 @@ export interface StockRow {
   subIndustries?: string[]
   groups?: string[]                         // 股票同時屬於多個產業別
   subsByGroup?: Record<string, string[]>   // 每個產業別下該股票相關的細產業
+  returns?: Partial<Record<ReturnPeriod, number | null>>  // 各期間漲幅 %
+}
+
+/** 漲幅期間 key */
+export type ReturnPeriod = 'w1' | 'm1' | 'm3' | 'm6' | 'y1'
+
+/** UI 顯示用的期間標籤 */
+export const RETURN_PERIOD_LABELS: Record<ReturnPeriod, string> = {
+  w1: '1週',
+  m1: '1月',
+  m3: '3月',
+  m6: '半年',
+  y1: '1年',
 }
 
 /** K 線資料列 */

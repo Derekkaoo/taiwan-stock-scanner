@@ -144,9 +144,16 @@ export const TAG_COLORS: Record<string, string> = {
   "tag-steel":    "#9ca3af",
   "tag-shipping": "#38bdf8",
   "tag-chem":     "#a3e635",
-  "tag-other":    "#6b7280",
+  "tag-other":    "#7a90b0",
   "tag-purple":   "#c084fc",
 };
+
+/** 取得族群對應的 tag css class。
+ *  目前統一使用中性色（dusty steel-blue），避免畫面太繽紛。
+ *  若之後想恢復分色，改回 `THEME_CSS_MAP[groupName] ?? 'tag-other'` 即可。 */
+export function getGroupCssClass(_groupName: string): string {
+  return 'tag-other'
+}
 
 /**
  * 指派族群

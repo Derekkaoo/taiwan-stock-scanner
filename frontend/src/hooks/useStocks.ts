@@ -32,7 +32,20 @@ function normalizeRow(raw: Record<string, unknown>): StockRow {
     subIndustries,
     groups,
     subsByGroup,
+    returns: parseReturns(raw.returns),
   }
+}
+
+function parseReturns(raw: unknown): StockRow['returns'] {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return undefined
+  const r = raw as Record<string, unknown>
+  const periods: Array<'w1'|'m1'|'m3'|'m6'|'y1'> = ['w1','m1','m3','m6','y1']
+  const out: Record<string, number | null> = {}
+  for (const k of periods) {
+    const v = r[k]
+    out[k] = v == null ? null : Number(v)
+  }
+  return out
 }
 
 function compareStocks(a: StockRow, b: StockRow, sort: SortState): number {

@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react'
-import type { StockRow, KlineBar } from '../types'
-import { THEME_CSS_MAP, TAG_COLORS } from '../constants/themeGroups'
+import type { StockRow, KlineBar, ReturnPeriod } from '../types'
+import { RETURN_PERIOD_LABELS } from '../types'
+import { THEME_CSS_MAP, TAG_COLORS, getGroupCssClass } from '../constants/themeGroups'
 import { CandlestickSVG } from './CandlestickSVG'
 import { calcThreeMonthReturn } from '../hooks/useKline'
 
@@ -9,6 +10,7 @@ interface Props {
   stocks: StockRow[]
   fetchGroup: (ids: string[], onEach?: (id: string, bars: KlineBar[]) => void) => Promise<void>
   getFromCache: (id: string) => KlineBar[] | null
+  returnPeriod: ReturnPeriod
 }
 
 function fmt(v: number | null, digits = 2) {
@@ -24,20 +26,23 @@ function getSubsForGroup(stock: StockRow, groupName: string): string[] {
   return stock.subIndustries ?? []
 }
 
-export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props) {
+export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnPeriod }: Props) {
   const [expanded, setExpanded] = useState(false)
   const [klineMap, setKlineMap] = useState<Record<string, KlineBar[]>>({})
   const [loading,  setLoading]  = useState(false)
   const [loaded,   setLoaded]   = useState(false)
 
-  const cssClass = THEME_CSS_MAP[groupName] ?? 'tag-other'
+  const cssClass = getGroupCssClass(groupName)
   const color    = TAG_COLORS[cssClass] ?? '#6b7280'
 
+  const getRet = (s: StockRow): number | null => {
+    const v = s.returns && s.returns[returnPeriod]
+    return v == null ? s.threeMonthReturn : v
+  }
   const avgDelta  = stocks.reduce((s, x) => s + x.delta, 0) / stocks.length
-  const retStocks = stocks.filter(s => s.threeMonthReturn !== null)
-  const avgRet    = retStocks.length
-    ? retStocks.reduce((s, x) => s + x.threeMonthReturn!, 0) / retStocks.length
-    : null
+  const retVals   = stocks.map(getRet).filter((x): x is number => x != null)
+  const avgRet    = retVals.length ? retVals.reduce((s, x) => s + x, 0) / retVals.length : null
+  const retLabel  = `${RETURN_PERIOD_LABELS[returnPeriod]}漲幅`
   const groupDesc = stocks[0]?.groupDesc ?? ''
 
   // 本族群內最常出現的細產業 Top 3（aggregate chips）— 只算跟此族群相關的
@@ -118,7 +123,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
             </span>
             {avgRet !== null && (
               <span style={{ color: avgRet >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-                1年漲幅 {avgRet >= 0 ? '+' : ''}{fmt(avgRet, 1)}%
+                {retLabel} {avgRet >= 0 ? '+' : ''}{fmt(avgRet, 1)}%
               </span>
             )}
           </div>
@@ -127,7 +132,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
             <div className="flex flex-wrap gap-1 mt-0.5">
               {topSubIndustries.map(([name, count]) => (
                 <span key={name} className="text-[11px] px-1.5 py-0.5 rounded"
-                  style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-muted)', border: '1px solid var(--color-border)' }}>
+                  style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-secondary)', border: '1px solid var(--color-border)' }}>
                   {name} <span style={{ opacity: 0.55 }}>×{count}</span>
                 </span>
               ))}
@@ -148,7 +153,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
           <div className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
             {stocks.map(stock => {
               const bars = getKline(stock.id)
-              const ret  = bars ? calcThreeMonthReturn(bars) : null
+              const ret  = getRet(stock)
               const retColor = ret === null ? 'var(--color-text-muted)'
                 : ret >= 0 ? 'var(--color-up)' : 'var(--color-down)'
               const stockSubs = getSubsForGroup(stock, groupName)
@@ -166,7 +171,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
                         <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>{stock.name}</span>
                         {stockSubs.map(si => (
                           <span key={si} className="text-[11px] px-1.5 py-0.5 rounded"
-                            style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-muted)', border: '1px solid var(--color-border)' }}>
+                            style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-secondary)', border: '1px solid var(--color-border)' }}>
                             {si}
                           </span>
                         ))}
@@ -182,7 +187,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache }: Props
                         +{fmt(stock.delta, 3)}%
                       </span>
                       <span style={{ color: retColor }}>
-                        <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>1年漲幅 </span>
+                        <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>{retLabel} </span>
                         {ret !== null ? `${ret >= 0 ? '+' : ''}${fmt(ret, 1)}%` : '—'}
                       </span>
                     </div>

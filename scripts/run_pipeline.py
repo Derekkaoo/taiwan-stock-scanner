@@ -180,15 +180,33 @@ def fetch_klines(stock_ids):
     return klines
 
 
-def calc_3m_return(bars):
+def calc_returns(bars):
+    """回傳 5 個期間的漲幅 %: {w1, m1, m3, m6, y1}（用最後 N 個交易日）"""
+    periods = {"w1": 5, "m1": 21, "m3": 65, "m6": 130, "y1": 252}
+    empty = {k: None for k in periods}
     if not bars or len(bars) < 2:
-        return None
-    recent = bars[-65:] if len(bars) >= 65 else bars
-    first = recent[0]["c"]
-    last  = recent[-1]["c"]
-    if not first:
-        return None
-    return round((last - first) / first * 100, 2)
+        return empty
+    last = bars[-1]["c"]
+    if not last:
+        return empty
+    result = {}
+    for key, days in periods.items():
+        # 取最近 days+1 根 bar（起點到終點）；資料不足就用全部
+        if len(bars) <= days:
+            recent = bars
+        else:
+            recent = bars[-(days + 1):]
+        first = recent[0]["c"]
+        if not first:
+            result[key] = None
+        else:
+            result[key] = round((last - first) / first * 100, 2)
+    return result
+
+
+def calc_3m_return(bars):
+    """保留向後相容：回傳 3 月漲幅"""
+    return calc_returns(bars).get("m3")
 
 
 # ============================================================
@@ -276,6 +294,7 @@ def run():
         industry = info.get("industry", "")
         groups   = assign_groups(sid, moneydj_map, category_map)
         bars     = klines.get(sid, [])
+        returns  = calc_returns(bars)
         # 完整細產業列表（不截斷）
         all_subs = [s["name"] for s in moneydj_map.get(sid, {}).get("sub_industries", [])]
         # 每個族群（產業別）對應該股票裡的相關細產業
@@ -295,7 +314,8 @@ def run():
             "price":            float(bars[-1]["c"]) if bars else 0.0,
             "marketCap":        0.0,
             "date":             h.get("date", datetime.now().strftime("%Y-%m-%d")),
-            "threeMonthReturn": calc_3m_return(bars),
+            "threeMonthReturn": returns.get("y1"),  # 主欄位：預設顯示 1 年漲幅
+            "returns":          returns,
             "industry":         industry,
             "subIndustries":    all_subs,            # 完整列表
             "subsByGroup":      subs_by_group,       # {產業別: [該股票在此產業別下的細產業]}

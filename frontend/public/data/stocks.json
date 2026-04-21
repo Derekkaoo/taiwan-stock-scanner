@@ -14,7 +14,14 @@
     "price": 54.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.25,
+    "threeMonthReturn": -7.84,
+    "returns": {
+      "w1": -0.18,
+      "m1": 1.88,
+      "m3": 5.66,
+      "m6": 4.44,
+      "y1": -7.84
+    },
     "industry": "食品工業",
     "subIndustries": [
       "食品加工",
@@ -51,7 +58,14 @@
     "price": 19.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.68,
+    "threeMonthReturn": -5.0,
+    "returns": {
+      "w1": -1.55,
+      "m1": -0.52,
+      "m3": 5.26,
+      "m6": -0.78,
+      "y1": -5.0
+    },
     "industry": "食品工業",
     "subIndustries": [
       "大宗物資",
@@ -85,7 +99,14 @@
     "price": 14.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.64,
+    "threeMonthReturn": 4.07,
+    "returns": {
+      "w1": -2.09,
+      "m1": 3.69,
+      "m3": 5.64,
+      "m6": 3.69,
+      "y1": 4.07
+    },
     "industry": "食品工業",
     "subIndustries": [
       "食品加工",
@@ -124,7 +145,14 @@
     "price": 28.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -10.45,
+    "threeMonthReturn": -15.09,
+    "returns": {
+      "w1": -2.88,
+      "m1": -4.65,
+      "m3": -10.45,
+      "m6": -6.51,
+      "y1": -15.09
+    },
     "industry": "食品工業",
     "subIndustries": [
       "食品加工",
@@ -158,7 +186,14 @@
     "price": 46.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 2.99,
+    "threeMonthReturn": -45.24,
+    "returns": {
+      "w1": 4.61,
+      "m1": 28.77,
+      "m3": 2.99,
+      "m6": -11.2,
+      "y1": -45.24
+    },
     "industry": "食品工業",
     "subIndustries": [
       "農林漁牧",
@@ -186,7 +221,14 @@
     "price": 51.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 27.43,
+    "threeMonthReturn": 49.71,
+    "returns": {
+      "w1": -4.6,
+      "m1": 6.58,
+      "m3": 35.6,
+      "m6": 34.37,
+      "y1": 49.71
+    },
     "industry": "塑膠工業",
     "subIndustries": [
       "塑化原料",
@@ -239,7 +281,14 @@
     "price": 88.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 36.63,
+    "threeMonthReturn": 194.18,
+    "returns": {
+      "w1": -0.67,
+      "m1": 4.99,
+      "m3": 50.08,
+      "m6": 124.08,
+      "y1": 194.18
+    },
     "industry": "塑膠工業",
     "subIndustries": [
       "塑化原料",
@@ -311,7 +360,14 @@
     "price": 14.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 29.91,
+    "threeMonthReturn": 45.94,
+    "returns": {
+      "w1": -10.46,
+      "m1": 2.83,
+      "m3": 37.91,
+      "m6": 44.06,
+      "y1": 45.94
+    },
     "industry": "塑膠工業",
     "subIndustries": [
       "塑化原料",
@@ -344,7 +400,14 @@
     "price": 14.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 27.31,
+    "threeMonthReturn": 31.96,
+    "returns": {
+      "w1": -18.13,
+      "m1": -6.47,
+      "m3": 33.18,
+      "m6": 26.75,
+      "y1": 31.96
+    },
     "industry": "塑膠工業",
     "subIndustries": [
       "塑化原料",
@@ -378,7 +441,14 @@
     "price": 15.35,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 13.28,
+    "threeMonthReturn": 20.87,
+    "returns": {
+      "w1": -8.08,
+      "m1": -4.36,
+      "m3": 19.92,
+      "m6": 30.64,
+      "y1": 20.87
+    },
     "industry": "塑膠工業",
     "subIndustries": [
       "塑化原料",
@@ -406,7 +476,14 @@
     "price": 13.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 8.79,
+    "threeMonthReturn": 15.56,
+    "returns": {
+      "w1": -12.46,
+      "m1": -9.72,
+      "m3": 15.04,
+      "m6": 36.27,
+      "y1": 15.56
+    },
     "industry": "塑膠工業",
     "subIndustries": [
       "塑化原料",
@@ -434,7 +511,14 @@
     "price": 11.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 15.53,
+    "threeMonthReturn": 46.37,
+    "returns": {
+      "w1": -9.85,
+      "m1": -9.16,
+      "m3": 20.81,
+      "m6": 13.88,
+      "y1": 46.37
+    },
     "industry": "塑膠工業",
     "subIndustries": [
       "塑化原料",
@@ -466,7 +550,14 @@
     "price": 11.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -19.05,
+    "threeMonthReturn": -17.36,
+    "returns": {
+      "w1": -1.24,
+      "m1": -5.93,
+      "m3": -17.36,
+      "m6": -21.97,
+      "y1": -17.36
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "食品加工",
@@ -507,7 +598,14 @@
     "price": 50.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 55.38,
+    "threeMonthReturn": 105.28,
+    "returns": {
+      "w1": -7.51,
+      "m1": 8.37,
+      "m3": 61.86,
+      "m6": 69.75,
+      "y1": 105.28
+    },
     "industry": "塑膠工業",
     "subIndustries": [
       "塑化原料",
@@ -570,7 +668,14 @@
     "price": 5.36,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 10.74,
+    "threeMonthReturn": -3.6,
+    "returns": {
+      "w1": -7.27,
+      "m1": -14.65,
+      "m3": 12.84,
+      "m6": 4.89,
+      "y1": -3.6
+    },
     "industry": "塑膠工業",
     "subIndustries": [
       "塑化原料",
@@ -604,7 +709,14 @@
     "price": 16.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 12.71,
+    "threeMonthReturn": 39.83,
+    "returns": {
+      "w1": -2.03,
+      "m1": 0.9,
+      "m3": 15.41,
+      "m6": 19.08,
+      "y1": 39.83
+    },
     "industry": "紡織纖維",
     "subIndustries": [
       "塑化製品",
@@ -645,7 +757,14 @@
     "price": 65.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -6.2,
+    "threeMonthReturn": 59.31,
+    "returns": {
+      "w1": 2.85,
+      "m1": 6.04,
+      "m3": -2.99,
+      "m6": 15.04,
+      "y1": 59.31
+    },
     "industry": "紡織纖維",
     "subIndustries": [
       "成衣",
@@ -688,7 +807,14 @@
     "price": 30.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -8.43,
+    "threeMonthReturn": 0.66,
+    "returns": {
+      "w1": -0.82,
+      "m1": -0.98,
+      "m3": -8.71,
+      "m6": -0.98,
+      "y1": 0.66
+    },
     "industry": "其他業",
     "subIndustries": [
       "紡紗",
@@ -731,7 +857,14 @@
     "price": 13.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 0.0,
+    "threeMonthReturn": 13.73,
+    "returns": {
+      "w1": -3.64,
+      "m1": -1.12,
+      "m3": 1.53,
+      "m6": -1.49,
+      "y1": 13.73
+    },
     "industry": "紡織纖維",
     "subIndustries": [
       "化學纖維",
@@ -775,7 +908,14 @@
     "price": 30.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 0.33,
+    "threeMonthReturn": -58.25,
+    "returns": {
+      "w1": 15.33,
+      "m1": 11.28,
+      "m3": 1.69,
+      "m6": -28.67,
+      "y1": -58.25
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "地產",
@@ -801,7 +941,14 @@
     "price": 6.43,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 6.63,
+    "threeMonthReturn": -11.8,
+    "returns": {
+      "w1": -4.32,
+      "m1": -0.77,
+      "m3": 7.71,
+      "m6": -1.38,
+      "y1": -11.8
+    },
     "industry": "紡織纖維",
     "subIndustries": [
       "化學纖維",
@@ -830,7 +977,14 @@
     "price": 5.28,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.34,
+    "threeMonthReturn": -14.01,
+    "returns": {
+      "w1": -0.38,
+      "m1": -5.88,
+      "m3": 2.13,
+      "m6": -8.17,
+      "y1": -14.01
+    },
     "industry": "紡織纖維",
     "subIndustries": [
       "化學纖維",
@@ -861,7 +1015,14 @@
     "price": 17.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -1.16,
+    "threeMonthReturn": -4.2,
+    "returns": {
+      "w1": -8.31,
+      "m1": -5.0,
+      "m3": -1.44,
+      "m6": -3.93,
+      "y1": -4.2
+    },
     "industry": "紡織纖維",
     "subIndustries": [
       "成衣",
@@ -891,7 +1052,14 @@
     "price": 9.15,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 18.99,
+    "threeMonthReturn": -1.08,
+    "returns": {
+      "w1": 5.17,
+      "m1": -2.87,
+      "m3": 20.87,
+      "m6": 2.12,
+      "y1": -1.08
+    },
     "industry": "紡織纖維",
     "subIndustries": [
       "化學纖維",
@@ -921,7 +1089,14 @@
     "price": 6.78,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 6.1,
+    "threeMonthReturn": -0.29,
+    "returns": {
+      "w1": -3.42,
+      "m1": -2.02,
+      "m3": 5.94,
+      "m6": 15.11,
+      "y1": -0.29
+    },
     "industry": "紡織纖維",
     "subIndustries": [
       "織布業"
@@ -946,7 +1121,14 @@
     "price": 17.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 0.56,
+    "threeMonthReturn": -14.39,
+    "returns": {
+      "w1": -0.83,
+      "m1": 1.42,
+      "m3": -0.28,
+      "m6": -17.36,
+      "y1": -14.39
+    },
     "industry": "紡織纖維",
     "subIndustries": [
       "織布業",
@@ -979,7 +1161,14 @@
     "price": 10.35,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -1.9,
+    "threeMonthReturn": -15.16,
+    "returns": {
+      "w1": -0.48,
+      "m1": 3.5,
+      "m3": -1.9,
+      "m6": -11.54,
+      "y1": -15.16
+    },
     "industry": "紡織纖維",
     "subIndustries": [
       "織布業",
@@ -1007,7 +1196,14 @@
     "price": 224.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -24.54,
+    "threeMonthReturn": -9.11,
+    "returns": {
+      "w1": 3.7,
+      "m1": -23.38,
+      "m3": -22.98,
+      "m6": -22.59,
+      "y1": -9.11
+    },
     "industry": "紡織纖維",
     "subIndustries": [
       "成衣",
@@ -1033,7 +1229,14 @@
     "price": 33.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.07,
+    "threeMonthReturn": -5.71,
+    "returns": {
+      "w1": -0.15,
+      "m1": 1.69,
+      "m3": 1.69,
+      "m6": 1.54,
+      "y1": -5.71
+    },
     "industry": "電機機械",
     "subIndustries": [
       "產業機械",
@@ -1063,7 +1266,14 @@
     "price": 29.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 32.42,
+    "threeMonthReturn": 147.86,
+    "returns": {
+      "w1": 5.07,
+      "m1": 25.54,
+      "m3": 32.72,
+      "m6": 86.5,
+      "y1": 147.86
+    },
     "industry": "電機機械",
     "subIndustries": [
       "產業機械",
@@ -1101,7 +1311,14 @@
     "price": 21.75,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -5.02,
+    "threeMonthReturn": -20.18,
+    "returns": {
+      "w1": -1.58,
+      "m1": -1.58,
+      "m3": -6.05,
+      "m6": -13.0,
+      "y1": -20.18
+    },
     "industry": "電機機械",
     "subIndustries": [
       "工具機",
@@ -1130,7 +1347,14 @@
     "price": 530.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 25.59,
+    "threeMonthReturn": 183.42,
+    "returns": {
+      "w1": 5.37,
+      "m1": 13.49,
+      "m3": 22.4,
+      "m6": 57.97,
+      "y1": 183.42
+    },
     "industry": "電機機械",
     "subIndustries": [
       "產業機械",
@@ -1162,7 +1386,14 @@
     "price": 41.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -13.35,
+    "threeMonthReturn": -26.84,
+    "returns": {
+      "w1": -3.13,
+      "m1": 3.72,
+      "m3": -12.72,
+      "m6": -13.35,
+      "y1": -26.84
+    },
     "industry": "汽車工業",
     "subIndustries": [
       "汽機車零組件",
@@ -1190,7 +1421,14 @@
     "price": 22.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -13.96,
+    "threeMonthReturn": -15.56,
+    "returns": {
+      "w1": 1.11,
+      "m1": -1.51,
+      "m3": -9.88,
+      "m6": -15.71,
+      "y1": -15.56
+    },
     "industry": "電機機械",
     "subIndustries": [
       "汽機車零組件",
@@ -1226,7 +1464,14 @@
     "price": 114.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 54.68,
+    "threeMonthReturn": 80.67,
+    "returns": {
+      "w1": -4.6,
+      "m1": 44.12,
+      "m3": 53.23,
+      "m6": 43.4,
+      "y1": 80.67
+    },
     "industry": "電機機械",
     "subIndustries": [
       "機械零組件",
@@ -1253,7 +1498,14 @@
     "price": 32.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -12.62,
+    "threeMonthReturn": 1.7,
+    "returns": {
+      "w1": 0.77,
+      "m1": -2.66,
+      "m3": -10.96,
+      "m6": -17.54,
+      "y1": 1.7
+    },
     "industry": "電器電纜",
     "subIndustries": [
       "電線電纜",
@@ -1286,7 +1538,14 @@
     "price": 32.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -17.65,
+    "threeMonthReturn": 74.6,
+    "returns": {
+      "w1": 1.4,
+      "m1": 1.4,
+      "m3": -9.43,
+      "m6": 25.82,
+      "y1": 74.6
+    },
     "industry": "電器電纜",
     "subIndustries": [
       "電線電纜",
@@ -1316,7 +1575,14 @@
     "price": 34.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -13.8,
+    "threeMonthReturn": 3.18,
+    "returns": {
+      "w1": 0.15,
+      "m1": -0.73,
+      "m3": -12.02,
+      "m6": -15.3,
+      "y1": 3.18
+    },
     "industry": "電器電纜",
     "subIndustries": [
       "電線電纜",
@@ -1347,7 +1613,14 @@
     "price": 12.15,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -7.6,
+    "threeMonthReturn": -3.57,
+    "returns": {
+      "w1": -1.62,
+      "m1": -11.31,
+      "m3": -7.6,
+      "m6": -6.54,
+      "y1": -3.57
+    },
     "industry": "電器電纜",
     "subIndustries": [
       "家電",
@@ -1379,7 +1652,14 @@
     "price": 23.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -14.9,
+    "threeMonthReturn": -1.46,
+    "returns": {
+      "w1": 0.85,
+      "m1": -2.27,
+      "m3": -17.13,
+      "m6": -32.09,
+      "y1": -1.46
+    },
     "industry": "電器電纜",
     "subIndustries": [
       "電線電纜",
@@ -1405,7 +1685,14 @@
     "price": 11.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 6.42,
+    "threeMonthReturn": -2.52,
+    "returns": {
+      "w1": 16.0,
+      "m1": 13.73,
+      "m3": 6.42,
+      "m6": -5.69,
+      "y1": -2.52
+    },
     "industry": "電器電纜",
     "subIndustries": [
       "家電",
@@ -1432,7 +1719,14 @@
     "price": 39.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 20.25,
+    "threeMonthReturn": 24.44,
+    "returns": {
+      "w1": -5.08,
+      "m1": -15.61,
+      "m3": 20.43,
+      "m6": 27.9,
+      "y1": 24.44
+    },
     "industry": "化學工業",
     "subIndustries": [
       "化學工業",
@@ -1469,7 +1763,14 @@
     "price": 13.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.04,
+    "threeMonthReturn": 5.45,
+    "returns": {
+      "w1": -6.87,
+      "m1": -8.75,
+      "m3": 11.52,
+      "m6": 10.16,
+      "y1": 5.45
+    },
     "industry": "化學工業",
     "subIndustries": [
       "化纖原料",
@@ -1501,7 +1802,14 @@
     "price": 9.92,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 21.57,
+    "threeMonthReturn": 14.42,
+    "returns": {
+      "w1": -1.78,
+      "m1": 0.3,
+      "m3": 23.08,
+      "m6": 24.94,
+      "y1": 14.42
+    },
     "industry": "化學工業",
     "subIndustries": [
       "化學工業",
@@ -1531,7 +1839,14 @@
     "price": 83.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 19.86,
+    "threeMonthReturn": -7.24,
+    "returns": {
+      "w1": 2.33,
+      "m1": 8.75,
+      "m3": 24.14,
+      "m6": 1.83,
+      "y1": -7.24
+    },
     "industry": "化學工業",
     "subIndustries": [
       "化學工業",
@@ -1558,7 +1873,14 @@
     "price": 59.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 13.46,
+    "threeMonthReturn": 174.42,
+    "returns": {
+      "w1": 1.55,
+      "m1": 7.86,
+      "m3": 21.27,
+      "m6": 66.2,
+      "y1": 174.42
+    },
     "industry": "化學工業",
     "subIndustries": [
       "化學工業",
@@ -1592,7 +1914,14 @@
     "price": 163.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -3.25,
+    "threeMonthReturn": 53.88,
+    "returns": {
+      "w1": 5.48,
+      "m1": 9.73,
+      "m3": 5.14,
+      "m6": 21.11,
+      "y1": 53.88
+    },
     "industry": "化學工業",
     "subIndustries": [
       "化學工業",
@@ -1624,7 +1953,14 @@
     "price": 155.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 140.31,
+    "threeMonthReturn": 213.77,
+    "returns": {
+      "w1": 11.11,
+      "m1": 52.71,
+      "m3": 139.57,
+      "m6": 148.8,
+      "y1": 213.77
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "貴金屬",
@@ -1662,7 +1998,14 @@
     "price": 74.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 109.9,
+    "threeMonthReturn": 437.68,
+    "returns": {
+      "w1": 8.8,
+      "m1": 21.44,
+      "m3": 117.28,
+      "m6": 170.8,
+      "y1": 437.68
+    },
     "industry": "玻璃陶瓷",
     "subIndustries": [
       "建材",
@@ -1702,7 +2045,14 @@
     "price": 25.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -0.58,
+    "threeMonthReturn": -0.78,
+    "returns": {
+      "w1": -2.3,
+      "m1": 6.69,
+      "m3": -1.73,
+      "m6": 0.0,
+      "y1": -0.78
+    },
     "industry": "造紙工業",
     "subIndustries": [
       "化學工業",
@@ -1744,7 +2094,14 @@
     "price": 9.51,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -2.56,
+    "threeMonthReturn": 7.58,
+    "returns": {
+      "w1": -2.86,
+      "m1": 3.93,
+      "m3": -0.42,
+      "m6": -4.9,
+      "y1": 7.58
+    },
     "industry": "造紙工業",
     "subIndustries": [
       "造紙業",
@@ -1772,7 +2129,14 @@
     "price": 19.75,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.54,
+    "threeMonthReturn": -1.25,
+    "returns": {
+      "w1": -3.66,
+      "m1": 5.05,
+      "m3": 6.76,
+      "m6": 1.8,
+      "y1": -1.25
+    },
     "industry": "鋼鐵工業",
     "subIndustries": [
       "線材盤元",
@@ -1818,7 +2182,14 @@
     "price": 27.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -6.37,
+    "threeMonthReturn": 13.33,
+    "returns": {
+      "w1": -0.18,
+      "m1": -1.98,
+      "m3": -7.17,
+      "m6": 1.3,
+      "y1": 13.33
+    },
     "industry": "鋼鐵工業",
     "subIndustries": [
       "條鋼",
@@ -1844,7 +2215,14 @@
     "price": 39.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -22.27,
+    "threeMonthReturn": 26.15,
+    "returns": {
+      "w1": -4.44,
+      "m1": -4.21,
+      "m3": -20.87,
+      "m6": -5.91,
+      "y1": 26.15
+    },
     "industry": "鋼鐵工業",
     "subIndustries": [
       "非鐵金屬",
@@ -1870,7 +2248,14 @@
     "price": 18.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 6.4,
+    "threeMonthReturn": 17.68,
+    "returns": {
+      "w1": -2.14,
+      "m1": 2.52,
+      "m3": 15.82,
+      "m6": 15.46,
+      "y1": 17.68
+    },
     "industry": "鋼鐵工業",
     "subIndustries": [
       "板鋼",
@@ -1898,7 +2283,14 @@
     "price": 16.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.78,
+    "threeMonthReturn": 12.67,
+    "returns": {
+      "w1": 0.92,
+      "m1": 7.52,
+      "m3": 15.03,
+      "m6": 16.25,
+      "y1": 12.67
+    },
     "industry": "鋼鐵工業",
     "subIndustries": [
       "不鏽鋼",
@@ -1926,7 +2318,14 @@
     "price": 16.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -2.63,
+    "threeMonthReturn": -6.98,
+    "returns": {
+      "w1": 1.52,
+      "m1": 6.39,
+      "m3": 5.38,
+      "m6": -23.97,
+      "y1": -6.98
+    },
     "industry": "鋼鐵工業",
     "subIndustries": [
       "線材盤元"
@@ -1950,7 +2349,14 @@
     "price": 21.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -2.29,
+    "threeMonthReturn": 8.12,
+    "returns": {
+      "w1": 3.9,
+      "m1": 6.23,
+      "m3": 4.93,
+      "m6": 8.12,
+      "y1": 8.12
+    },
     "industry": "鋼鐵工業",
     "subIndustries": [
       "不鏽鋼",
@@ -1978,7 +2384,14 @@
     "price": 301.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 53.57,
+    "threeMonthReturn": 67.22,
+    "returns": {
+      "w1": 9.45,
+      "m1": 31.15,
+      "m3": 52.79,
+      "m6": 39.68,
+      "y1": 67.22
+    },
     "industry": "電機機械",
     "subIndustries": [
       "機械零組件",
@@ -2004,7 +2417,14 @@
     "price": 3855.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 18.43,
+    "threeMonthReturn": 134.35,
+    "returns": {
+      "w1": 11.9,
+      "m1": 7.83,
+      "m3": 20.28,
+      "m6": 17.17,
+      "y1": 134.35
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子零件元件",
@@ -2030,7 +2450,14 @@
     "price": 22.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 9.16,
+    "threeMonthReturn": -5.63,
+    "returns": {
+      "w1": 2.03,
+      "m1": 11.03,
+      "m3": 10.22,
+      "m6": 2.26,
+      "y1": -5.63
+    },
     "industry": "居家生活",
     "subIndustries": [
       "家居用品",
@@ -2057,6 +2484,13 @@
     "marketCap": 0.0,
     "date": "2026-04-17",
     "threeMonthReturn": -24.01,
+    "returns": {
+      "w1": 4.9,
+      "m1": -22.72,
+      "m3": -24.01,
+      "m6": -24.01,
+      "y1": -24.01
+    },
     "industry": "綠能環保",
     "subIndustries": [
       "條鋼",
@@ -2083,7 +2517,14 @@
     "price": 19.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 0.52,
+    "threeMonthReturn": 15.13,
+    "returns": {
+      "w1": -2.27,
+      "m1": 2.37,
+      "m3": -0.77,
+      "m6": 2.92,
+      "y1": 15.13
+    },
     "industry": "橡膠工業",
     "subIndustries": [
       "橡膠工業",
@@ -2117,7 +2558,14 @@
     "price": 25.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.67,
+    "threeMonthReturn": 3.82,
+    "returns": {
+      "w1": 0.0,
+      "m1": 2.79,
+      "m3": 4.67,
+      "m6": 7.95,
+      "y1": 3.82
+    },
     "industry": "橡膠工業",
     "subIndustries": [
       "塑化製品",
@@ -2165,7 +2613,14 @@
     "price": 25.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.48,
+    "threeMonthReturn": 0.39,
+    "returns": {
+      "w1": -3.75,
+      "m1": -7.07,
+      "m3": 11.04,
+      "m6": 8.92,
+      "y1": 0.39
+    },
     "industry": "橡膠工業",
     "subIndustries": [
       "橡膠工業",
@@ -2194,7 +2649,14 @@
     "price": 27.35,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -14.8,
+    "threeMonthReturn": -24.34,
+    "returns": {
+      "w1": 3.21,
+      "m1": -0.73,
+      "m3": -13.86,
+      "m6": -21.63,
+      "y1": -24.34
+    },
     "industry": "汽車工業",
     "subIndustries": [
       "汽車服務相關",
@@ -2234,7 +2696,14 @@
     "price": 129.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 10.73,
+    "threeMonthReturn": 47.13,
+    "returns": {
+      "w1": 1.57,
+      "m1": 19.44,
+      "m3": 10.26,
+      "m6": 20.76,
+      "y1": 47.13
+    },
     "industry": "汽車工業",
     "subIndustries": [
       "汽機車零組件"
@@ -2258,7 +2727,14 @@
     "price": 76.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 40.85,
+    "threeMonthReturn": 74.57,
+    "returns": {
+      "w1": 27.64,
+      "m1": 29.81,
+      "m3": 54.88,
+      "m6": 67.29,
+      "y1": 74.57
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC製造",
@@ -2292,7 +2768,14 @@
     "price": 27.15,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 13.84,
+    "threeMonthReturn": 45.97,
+    "returns": {
+      "w1": 19.6,
+      "m1": 13.6,
+      "m3": 16.77,
+      "m6": 39.59,
+      "y1": 45.97
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "家電",
@@ -2377,7 +2860,14 @@
     "price": 211.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -11.53,
+    "threeMonthReturn": 54.58,
+    "returns": {
+      "w1": 1.69,
+      "m1": 2.93,
+      "m3": -10.59,
+      "m6": -2.31,
+      "y1": 54.58
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "機器人",
@@ -2496,7 +2986,14 @@
     "price": 31.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.62,
+    "threeMonthReturn": 16.27,
+    "returns": {
+      "w1": 6.61,
+      "m1": -3.53,
+      "m3": 2.11,
+      "m6": -2.93,
+      "y1": 16.27
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "家電",
@@ -2564,7 +3061,14 @@
     "price": 323.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 27.67,
+    "threeMonthReturn": 192.31,
+    "returns": {
+      "w1": 3.53,
+      "m1": 17.45,
+      "m3": 27.42,
+      "m6": 90.0,
+      "y1": 192.31
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -2599,7 +3103,14 @@
     "price": 62.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 10.71,
+    "threeMonthReturn": 100.32,
+    "returns": {
+      "w1": 5.08,
+      "m1": 2.82,
+      "m3": 9.93,
+      "m6": 32.06,
+      "y1": 100.32
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC封裝測試",
@@ -2633,7 +3144,14 @@
     "price": 2050.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 22.39,
+    "threeMonthReturn": 145.51,
+    "returns": {
+      "w1": -0.24,
+      "m1": 10.81,
+      "m3": 20.23,
+      "m6": 57.09,
+      "y1": 145.51
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC製造",
@@ -2660,7 +3178,14 @@
     "price": 39.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 42.26,
+    "threeMonthReturn": 94.76,
+    "returns": {
+      "w1": 33.5,
+      "m1": 36.78,
+      "m3": 46.8,
+      "m6": 42.26,
+      "y1": 94.76
+    },
     "industry": "半導體業",
     "subIndustries": [
       "LED",
@@ -2696,7 +3221,14 @@
     "price": 2190.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 81.74,
+    "threeMonthReturn": 332.81,
+    "returns": {
+      "w1": 15.87,
+      "m1": 37.74,
+      "m3": 76.61,
+      "m6": 109.57,
+      "y1": 332.81
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "網通設備",
@@ -2725,7 +3257,14 @@
     "price": 13.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -15.17,
+    "threeMonthReturn": 36.32,
+    "returns": {
+      "w1": 1.48,
+      "m1": -4.86,
+      "m3": -6.8,
+      "m6": 33.01,
+      "y1": 36.32
+    },
     "industry": "光電業",
     "subIndustries": [
       "光碟片",
@@ -2760,7 +3299,14 @@
     "price": 151.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 96.1,
+    "threeMonthReturn": 124.04,
+    "returns": {
+      "w1": 22.76,
+      "m1": 60.3,
+      "m3": 99.74,
+      "m6": 87.58,
+      "y1": 124.04
+    },
     "industry": "半導體業",
     "subIndustries": [
       "封測服務與材料",
@@ -2799,7 +3345,14 @@
     "price": 25.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.27,
+    "threeMonthReturn": -15.54,
+    "returns": {
+      "w1": 5.99,
+      "m1": 5.56,
+      "m3": 7.32,
+      "m6": -30.24,
+      "y1": -15.54
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "顯示器",
@@ -2868,7 +3421,14 @@
     "price": 28.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.99,
+    "threeMonthReturn": -9.84,
+    "returns": {
+      "w1": 4.22,
+      "m1": 0.18,
+      "m3": 8.4,
+      "m6": -8.24,
+      "y1": -9.84
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "顯示器",
@@ -2922,7 +3482,14 @@
     "price": 47.35,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 7.98,
+    "threeMonthReturn": 18.82,
+    "returns": {
+      "w1": 6.17,
+      "m1": 8.98,
+      "m3": 9.61,
+      "m6": 3.5,
+      "y1": 18.82
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "電腦系統業",
@@ -2954,7 +3521,14 @@
     "price": 57.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 18.18,
+    "threeMonthReturn": 21.19,
+    "returns": {
+      "w1": 18.8,
+      "m1": 12.16,
+      "m3": 23.01,
+      "m6": -0.17,
+      "y1": 21.19
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -2985,7 +3559,14 @@
     "price": 35.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 0.14,
+    "threeMonthReturn": 22.95,
+    "returns": {
+      "w1": 4.51,
+      "m1": 2.72,
+      "m3": -0.28,
+      "m6": -14.32,
+      "y1": 22.95
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "車用電子",
@@ -3021,7 +3602,14 @@
     "price": 1225.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 90.51,
+    "threeMonthReturn": 562.16,
+    "returns": {
+      "w1": 6.52,
+      "m1": 21.89,
+      "m3": 85.05,
+      "m6": 181.29,
+      "y1": 562.16
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -3047,7 +3635,14 @@
     "price": 32.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 22.7,
+    "threeMonthReturn": 149.62,
+    "returns": {
+      "w1": 2.03,
+      "m1": 0.62,
+      "m3": 34.85,
+      "m6": 72.11,
+      "y1": 149.62
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC封裝測試",
@@ -3080,7 +3675,14 @@
     "price": 32.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.23,
+    "threeMonthReturn": -24.65,
+    "returns": {
+      "w1": 0.16,
+      "m1": 2.56,
+      "m3": 4.58,
+      "m6": -17.42,
+      "y1": -24.65
+    },
     "industry": "電機機械",
     "subIndustries": [
       "電力設備",
@@ -3156,7 +3758,14 @@
     "price": 74.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -5.55,
+    "threeMonthReturn": 102.32,
+    "returns": {
+      "w1": 4.03,
+      "m1": 5.49,
+      "m3": -5.9,
+      "m6": -13.21,
+      "y1": 102.32
+    },
     "industry": "光電業",
     "subIndustries": [
       "數位相機",
@@ -3195,7 +3804,14 @@
     "price": 288.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 17.76,
+    "threeMonthReturn": 35.76,
+    "returns": {
+      "w1": 9.49,
+      "m1": 16.57,
+      "m3": 17.76,
+      "m6": -3.51,
+      "y1": 35.76
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "週邊產品",
@@ -3238,7 +3854,14 @@
     "price": 93.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -2.6,
+    "threeMonthReturn": -27.29,
+    "returns": {
+      "w1": 5.51,
+      "m1": -0.53,
+      "m3": -2.09,
+      "m6": -19.14,
+      "y1": -27.29
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "週邊產品",
@@ -3280,7 +3903,14 @@
     "price": 551.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.96,
+    "threeMonthReturn": 8.68,
+    "returns": {
+      "w1": 5.15,
+      "m1": 15.63,
+      "m3": 7.62,
+      "m6": 0.18,
+      "y1": 8.68
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -3322,7 +3952,14 @@
     "price": 340.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 20.57,
+    "threeMonthReturn": 46.55,
+    "returns": {
+      "w1": 5.26,
+      "m1": 18.67,
+      "m3": 20.57,
+      "m6": 17.24,
+      "y1": 46.55
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "電腦系統業",
@@ -3356,7 +3993,14 @@
     "price": 72.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 41.36,
+    "threeMonthReturn": 9.47,
+    "returns": {
+      "w1": 28.17,
+      "m1": 44.73,
+      "m3": 42.75,
+      "m6": 30.94,
+      "y1": 9.47
+    },
     "industry": "半導體業",
     "subIndustries": [
       "車用電子",
@@ -3403,7 +4047,14 @@
     "price": 39.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 7.13,
+    "threeMonthReturn": -10.56,
+    "returns": {
+      "w1": 16.37,
+      "m1": 8.74,
+      "m3": 9.19,
+      "m6": -15.95,
+      "y1": -10.56
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子零件元件",
@@ -3453,7 +4104,14 @@
     "price": 73.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 29.02,
+    "threeMonthReturn": -1.2,
+    "returns": {
+      "w1": 3.51,
+      "m1": 7.58,
+      "m3": 29.93,
+      "m6": 15.49,
+      "y1": -1.2
+    },
     "industry": "光電業",
     "subIndustries": [
       "LED",
@@ -3482,7 +4140,14 @@
     "price": 41.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 62.28,
+    "threeMonthReturn": 143.9,
+    "returns": {
+      "w1": 24.48,
+      "m1": 23.93,
+      "m3": 64.19,
+      "m6": 119.63,
+      "y1": 143.9
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "工業電腦",
@@ -3514,7 +4179,14 @@
     "price": 25.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 19.44,
+    "threeMonthReturn": 28.46,
+    "returns": {
+      "w1": 16.17,
+      "m1": 22.01,
+      "m3": 24.69,
+      "m6": 9.68,
+      "y1": 28.46
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -3549,7 +4221,14 @@
     "price": 77.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 31.57,
+    "threeMonthReturn": 132.58,
+    "returns": {
+      "w1": 6.49,
+      "m1": 49.42,
+      "m3": 30.46,
+      "m6": 48.27,
+      "y1": 132.58
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子零件元件",
@@ -3581,7 +4260,14 @@
     "price": 42.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.5,
+    "threeMonthReturn": 22.14,
+    "returns": {
+      "w1": 3.81,
+      "m1": 17.88,
+      "m3": 3.05,
+      "m6": 1.2,
+      "y1": 22.14
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "消費性電子產品",
@@ -3610,7 +4296,14 @@
     "price": 34.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 38.69,
+    "threeMonthReturn": 77.41,
+    "returns": {
+      "w1": 1.75,
+      "m1": 10.25,
+      "m3": 39.24,
+      "m6": 50.97,
+      "y1": 77.41
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "網通設備",
@@ -3646,7 +4339,14 @@
     "price": 146.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -6.71,
+    "threeMonthReturn": 82.73,
+    "returns": {
+      "w1": 3.18,
+      "m1": 1.04,
+      "m3": -6.71,
+      "m6": 15.42,
+      "y1": 82.73
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "散熱模組",
@@ -3672,7 +4372,14 @@
     "price": 31.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 2.8,
+    "threeMonthReturn": -12.61,
+    "returns": {
+      "w1": 2.97,
+      "m1": 0.65,
+      "m3": 2.97,
+      "m6": 1.96,
+      "y1": -12.61
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "電腦系統業",
@@ -3704,7 +4411,14 @@
     "price": 11.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -0.84,
+    "threeMonthReturn": 12.38,
+    "returns": {
+      "w1": 4.89,
+      "m1": -8.17,
+      "m3": 2.61,
+      "m6": -12.27,
+      "y1": 12.38
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子零件元件",
@@ -3731,7 +4445,14 @@
     "price": 2090.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 40.27,
+    "threeMonthReturn": 55.39,
+    "returns": {
+      "w1": 21.51,
+      "m1": 24.4,
+      "m3": 40.74,
+      "m6": 58.94,
+      "y1": 55.39
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -3783,7 +4504,14 @@
     "price": 137.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 16.6,
+    "threeMonthReturn": 20.18,
+    "returns": {
+      "w1": 0.37,
+      "m1": 0.37,
+      "m3": 17.6,
+      "m6": 5.38,
+      "y1": 20.18
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -3818,7 +4546,14 @@
     "price": 17.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 7.16,
+    "threeMonthReturn": 13.97,
+    "returns": {
+      "w1": 1.41,
+      "m1": 8.13,
+      "m3": 5.59,
+      "m6": 10.46,
+      "y1": 13.97
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "面板零組件",
@@ -3848,7 +4583,14 @@
     "price": 560.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 112.93,
+    "threeMonthReturn": 353.44,
+    "returns": {
+      "w1": 2.19,
+      "m1": 50.74,
+      "m3": 109.74,
+      "m6": 192.43,
+      "y1": 353.44
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "設備儀器商",
@@ -3878,7 +4620,14 @@
     "price": 35.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -13.37,
+    "threeMonthReturn": -43.79,
+    "returns": {
+      "w1": 0.43,
+      "m1": -13.59,
+      "m3": -13.05,
+      "m6": -33.4,
+      "y1": -43.79
+    },
     "industry": "資訊服務業",
     "subIndustries": [
       "軟體業",
@@ -3904,7 +4653,14 @@
     "price": 188.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 70.14,
+    "threeMonthReturn": 186.59,
+    "returns": {
+      "w1": 5.32,
+      "m1": 46.88,
+      "m3": 67.11,
+      "m6": 116.09,
+      "y1": 186.59
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -3932,7 +4688,14 @@
     "price": 210.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.2,
+    "threeMonthReturn": -1.64,
+    "returns": {
+      "w1": 6.33,
+      "m1": 11.7,
+      "m3": 2.19,
+      "m6": 15.07,
+      "y1": -1.64
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "電子零件元件",
@@ -3958,7 +4721,14 @@
     "price": 122.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 35.25,
+    "threeMonthReturn": 87.4,
+    "returns": {
+      "w1": 15.64,
+      "m1": 41.86,
+      "m3": 36.62,
+      "m6": 16.19,
+      "y1": 87.4
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子零件元件",
@@ -3984,7 +4754,14 @@
     "price": 73.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 17.3,
+    "threeMonthReturn": 76.58,
+    "returns": {
+      "w1": 8.2,
+      "m1": 2.78,
+      "m3": 20.36,
+      "m6": 40.76,
+      "y1": 76.58
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -4010,7 +4787,14 @@
     "price": 110.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 36.59,
+    "threeMonthReturn": 159.69,
+    "returns": {
+      "w1": 11.62,
+      "m1": 9.41,
+      "m3": 39.52,
+      "m6": 56.07,
+      "y1": 159.69
+    },
     "industry": "半導體業",
     "subIndustries": [
       "分離式元件",
@@ -4038,7 +4822,14 @@
     "price": 49.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 136.21,
+    "threeMonthReturn": 150.0,
+    "returns": {
+      "w1": 42.96,
+      "m1": 76.52,
+      "m3": 143.21,
+      "m6": 123.36,
+      "y1": 150.0
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -4068,7 +4859,14 @@
     "price": 52.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 12.04,
+    "threeMonthReturn": 18.54,
+    "returns": {
+      "w1": 4.2,
+      "m1": 7.76,
+      "m3": 14.38,
+      "m6": 17.21,
+      "y1": 18.54
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "電子零件元件",
@@ -4094,7 +4892,14 @@
     "price": 149.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 12.88,
+    "threeMonthReturn": 98.14,
+    "returns": {
+      "w1": 4.2,
+      "m1": 8.76,
+      "m3": 15.06,
+      "m6": 42.58,
+      "y1": 98.14
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -4125,7 +4930,14 @@
     "price": 135.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 12.45,
+    "threeMonthReturn": 62.28,
+    "returns": {
+      "w1": -2.52,
+      "m1": 16.31,
+      "m3": 13.87,
+      "m6": 26.64,
+      "y1": 62.28
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子通路",
@@ -4159,7 +4971,14 @@
     "price": 44.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 33.48,
+    "threeMonthReturn": 98.0,
+    "returns": {
+      "w1": 8.15,
+      "m1": 12.53,
+      "m3": 46.7,
+      "m6": 99.33,
+      "y1": 98.0
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "週邊產品",
@@ -4185,7 +5004,14 @@
     "price": 24.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.33,
+    "threeMonthReturn": 35.15,
+    "returns": {
+      "w1": 1.22,
+      "m1": 6.67,
+      "m3": 6.67,
+      "m6": 5.98,
+      "y1": 35.15
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "地產",
@@ -4212,7 +5038,14 @@
     "price": 8.13,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -3.79,
+    "threeMonthReturn": -9.06,
+    "returns": {
+      "w1": -1.33,
+      "m1": 0.12,
+      "m3": 0.25,
+      "m6": -11.05,
+      "y1": -9.06
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "地產",
@@ -4244,7 +5077,14 @@
     "price": 22.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -23.28,
+    "threeMonthReturn": -27.9,
+    "returns": {
+      "w1": -4.78,
+      "m1": -14.71,
+      "m3": -23.54,
+      "m6": -20.9,
+      "y1": -27.9
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "地產",
@@ -4270,7 +5110,14 @@
     "price": 70.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 10.49,
+    "threeMonthReturn": 34.48,
+    "returns": {
+      "w1": 0.43,
+      "m1": -2.35,
+      "m3": 10.31,
+      "m6": 18.66,
+      "y1": 34.48
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "營造工程",
@@ -4298,7 +5145,14 @@
     "price": 10.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -12.18,
+    "threeMonthReturn": 3.98,
+    "returns": {
+      "w1": -0.48,
+      "m1": 3.47,
+      "m3": -7.93,
+      "m6": -5.43,
+      "y1": 3.98
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "地產",
@@ -4324,7 +5178,14 @@
     "price": 85.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -1.6,
+    "threeMonthReturn": 19.02,
+    "returns": {
+      "w1": -0.23,
+      "m1": 3.0,
+      "m3": -0.35,
+      "m6": -2.05,
+      "y1": 19.02
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "營造工程",
@@ -4352,7 +5213,14 @@
     "price": 30.75,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -17.45,
+    "threeMonthReturn": 0.99,
+    "returns": {
+      "w1": -4.06,
+      "m1": -8.07,
+      "m3": -17.89,
+      "m6": -1.91,
+      "y1": 0.99
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "地產",
@@ -4378,7 +5246,14 @@
     "price": 63.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.76,
+    "threeMonthReturn": 24.51,
+    "returns": {
+      "w1": 5.31,
+      "m1": 4.96,
+      "m3": 7.81,
+      "m6": 11.21,
+      "y1": 24.51
+    },
     "industry": "航運業",
     "subIndustries": [
       "運輸事業",
@@ -4408,7 +5283,14 @@
     "price": 50.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -13.15,
+    "threeMonthReturn": -10.99,
+    "returns": {
+      "w1": -0.99,
+      "m1": -5.1,
+      "m3": -11.93,
+      "m6": -28.29,
+      "y1": -10.99
+    },
     "industry": "航運業",
     "subIndustries": [
       "運輸事業",
@@ -4454,7 +5336,14 @@
     "price": 20.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -9.98,
+    "threeMonthReturn": 36.98,
+    "returns": {
+      "w1": -0.25,
+      "m1": -0.25,
+      "m3": -7.73,
+      "m6": -8.14,
+      "y1": 36.98
+    },
     "industry": "其他業",
     "subIndustries": [
       "運輸事業",
@@ -4492,7 +5381,14 @@
     "price": 49.15,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -4.19,
+    "threeMonthReturn": 36.72,
+    "returns": {
+      "w1": 6.16,
+      "m1": -3.82,
+      "m3": -4.75,
+      "m6": -10.15,
+      "y1": 36.72
+    },
     "industry": "航運業",
     "subIndustries": [
       "運輸事業",
@@ -4519,7 +5415,14 @@
     "price": 49.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -4.74,
+    "threeMonthReturn": 6.37,
+    "returns": {
+      "w1": 3.68,
+      "m1": -1.89,
+      "m3": -5.47,
+      "m6": -12.52,
+      "y1": 6.37
+    },
     "industry": "航運業",
     "subIndustries": [
       "機械零組件",
@@ -4551,7 +5454,14 @@
     "price": 68.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.94,
+    "threeMonthReturn": -2.15,
+    "returns": {
+      "w1": 0.59,
+      "m1": -3.26,
+      "m3": 3.02,
+      "m6": -2.43,
+      "y1": -2.15
+    },
     "industry": "航運業",
     "subIndustries": [
       "運輸事業",
@@ -4579,7 +5489,14 @@
     "price": 74.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 8.56,
+    "threeMonthReturn": 24.67,
+    "returns": {
+      "w1": 6.55,
+      "m1": 4.32,
+      "m3": 12.82,
+      "m6": 27.43,
+      "y1": 24.67
+    },
     "industry": "航運業",
     "subIndustries": [
       "運輸事業",
@@ -4605,7 +5522,14 @@
     "price": 20.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -10.73,
+    "threeMonthReturn": -13.33,
+    "returns": {
+      "w1": -0.95,
+      "m1": -3.03,
+      "m3": -9.96,
+      "m6": -15.79,
+      "y1": -13.33
+    },
     "industry": "航運業",
     "subIndustries": [
       "運輸事業",
@@ -4631,7 +5555,14 @@
     "price": 16.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 41.53,
+    "threeMonthReturn": 31.5,
+    "returns": {
+      "w1": 5.7,
+      "m1": 49.11,
+      "m3": 42.13,
+      "m6": 38.02,
+      "y1": 31.5
+    },
     "industry": "觀光餐旅",
     "subIndustries": [
       "旅宿／餐飲",
@@ -4657,7 +5588,14 @@
     "price": 225.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.13,
+    "threeMonthReturn": 7.13,
+    "returns": {
+      "w1": -0.22,
+      "m1": 0.89,
+      "m3": 5.62,
+      "m6": -1.96,
+      "y1": 7.13
+    },
     "industry": "觀光餐旅",
     "subIndustries": [
       "旅宿／餐飲",
@@ -4683,7 +5621,14 @@
     "price": 38.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 31.03,
+    "threeMonthReturn": 43.4,
+    "returns": {
+      "w1": 7.34,
+      "m1": -6.17,
+      "m3": 38.18,
+      "m6": 59.66,
+      "y1": 43.4
+    },
     "industry": "觀光餐旅",
     "subIndustries": [
       "旅宿／餐飲",
@@ -4709,7 +5654,14 @@
     "price": 17.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.65,
+    "threeMonthReturn": 16.38,
+    "returns": {
+      "w1": -0.58,
+      "m1": 1.49,
+      "m3": 3.33,
+      "m6": 4.92,
+      "y1": 16.38
+    },
     "industry": "金融保險業",
     "subIndustries": [
       "金融業",
@@ -4737,7 +5689,14 @@
     "price": 16.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.12,
+    "threeMonthReturn": 25.28,
+    "returns": {
+      "w1": 7.82,
+      "m1": 9.97,
+      "m3": 2.48,
+      "m6": 5.08,
+      "y1": 25.28
+    },
     "industry": "金融保險業",
     "subIndustries": [
       "金融業",
@@ -4763,7 +5722,14 @@
     "price": 26.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -5.23,
+    "threeMonthReturn": -7.08,
+    "returns": {
+      "w1": 0.0,
+      "m1": 1.55,
+      "m3": -5.06,
+      "m6": -2.05,
+      "y1": -7.08
+    },
     "industry": "金融保險業",
     "subIndustries": [
       "金融業",
@@ -4791,7 +5757,14 @@
     "price": 33.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 33.27,
+    "threeMonthReturn": 66.83,
+    "returns": {
+      "w1": 5.69,
+      "m1": 1.67,
+      "m3": 34.34,
+      "m6": 43.25,
+      "y1": 66.83
+    },
     "industry": "金融保險業",
     "subIndustries": [
       "金融業",
@@ -4817,7 +5790,14 @@
     "price": 7.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 0.64,
+    "threeMonthReturn": 44.42,
+    "returns": {
+      "w1": 0.13,
+      "m1": 4.22,
+      "m3": -0.75,
+      "m6": 35.04,
+      "y1": 44.42
+    },
     "industry": "金融保險業",
     "subIndustries": [
       "金融業",
@@ -4843,7 +5823,14 @@
     "price": 51.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 26.87,
+    "threeMonthReturn": 73.35,
+    "returns": {
+      "w1": 2.93,
+      "m1": 15.25,
+      "m3": 26.08,
+      "m6": 46.34,
+      "y1": 73.35
+    },
     "industry": "金融保險業",
     "subIndustries": [
       "金融業",
@@ -4883,7 +5870,14 @@
     "price": 10.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 12.69,
+    "threeMonthReturn": 12.2,
+    "returns": {
+      "w1": -0.48,
+      "m1": 4.04,
+      "m3": 12.57,
+      "m6": 13.94,
+      "y1": 12.2
+    },
     "industry": "金融保險業",
     "subIndustries": [
       "金融業",
@@ -4909,7 +5903,14 @@
     "price": 236.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 7.5,
+    "threeMonthReturn": -7.07,
+    "returns": {
+      "w1": 3.96,
+      "m1": 10.26,
+      "m3": 7.99,
+      "m6": -4.64,
+      "y1": -7.07
+    },
     "industry": "貿易百貨業",
     "subIndustries": [
       "流通業",
@@ -4938,7 +5939,14 @@
     "price": 11.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -11.61,
+    "threeMonthReturn": -22.11,
+    "returns": {
+      "w1": -3.67,
+      "m1": -3.28,
+      "m3": -10.27,
+      "m6": -16.01,
+      "y1": -22.11
+    },
     "industry": "貿易百貨業",
     "subIndustries": [
       "食品加工",
@@ -4981,7 +5989,14 @@
     "price": 116.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.56,
+    "threeMonthReturn": 30.9,
+    "returns": {
+      "w1": 0.0,
+      "m1": 11.48,
+      "m3": 1.3,
+      "m6": -12.55,
+      "y1": 30.9
+    },
     "industry": "鋼鐵工業",
     "subIndustries": [
       "線材盤元",
@@ -5011,7 +6026,14 @@
     "price": 2645.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.73,
+    "threeMonthReturn": 25.06,
+    "returns": {
+      "w1": -0.94,
+      "m1": 14.01,
+      "m3": 2.72,
+      "m6": 12.55,
+      "y1": 25.06
+    },
     "industry": "光電業",
     "subIndustries": [
       "光學元件",
@@ -5037,7 +6059,14 @@
     "price": 137.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 23.42,
+    "threeMonthReturn": 52.56,
+    "returns": {
+      "w1": 1.48,
+      "m1": 1.11,
+      "m3": 25.11,
+      "m6": 43.61,
+      "y1": 52.56
+    },
     "industry": "電子通路業",
     "subIndustries": [
       "電子通路",
@@ -5065,7 +6094,14 @@
     "price": 13.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -4.15,
+    "threeMonthReturn": 16.39,
+    "returns": {
+      "w1": 6.95,
+      "m1": 8.63,
+      "m3": -3.15,
+      "m6": -8.28,
+      "y1": 16.39
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子零件元件",
@@ -5091,7 +6127,14 @@
     "price": 124.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.98,
+    "threeMonthReturn": 2.06,
+    "returns": {
+      "w1": 2.9,
+      "m1": 5.53,
+      "m3": 10.71,
+      "m6": -7.12,
+      "y1": 2.06
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -5131,7 +6174,14 @@
     "price": 70.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 18.01,
+    "threeMonthReturn": 126.86,
+    "returns": {
+      "w1": 15.3,
+      "m1": 9.19,
+      "m3": 23.2,
+      "m6": 21.28,
+      "y1": 126.86
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC製造",
@@ -5162,7 +6212,14 @@
     "price": 2565.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 86.55,
+    "threeMonthReturn": 536.48,
+    "returns": {
+      "w1": 11.04,
+      "m1": 27.3,
+      "m3": 80.0,
+      "m6": 161.47,
+      "y1": 536.48
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "電子零件元件",
@@ -5202,7 +6259,14 @@
     "price": 70.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 10.78,
+    "threeMonthReturn": -7.32,
+    "returns": {
+      "w1": 4.88,
+      "m1": 3.5,
+      "m3": 12.36,
+      "m6": 6.78,
+      "y1": -7.32
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "工業電腦"
@@ -5226,7 +6290,14 @@
     "price": 282.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 46.37,
+    "threeMonthReturn": 41.25,
+    "returns": {
+      "w1": 5.41,
+      "m1": 15.07,
+      "m3": 44.13,
+      "m6": 22.83,
+      "y1": 41.25
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子零件元件",
@@ -5255,7 +6326,14 @@
     "price": 255.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 140.57,
+    "threeMonthReturn": 217.56,
+    "returns": {
+      "w1": 11.11,
+      "m1": 109.88,
+      "m3": 140.57,
+      "m6": 162.89,
+      "y1": 217.56
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -5291,7 +6369,14 @@
     "price": 61.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 44.58,
+    "threeMonthReturn": 101.98,
+    "returns": {
+      "w1": -4.37,
+      "m1": 8.5,
+      "m3": 48.43,
+      "m6": 94.6,
+      "y1": 101.98
+    },
     "industry": "電子通路業",
     "subIndustries": [
       "電子通路",
@@ -5320,7 +6405,14 @@
     "price": 63.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -17.34,
+    "threeMonthReturn": 9.88,
+    "returns": {
+      "w1": 3.43,
+      "m1": -1.71,
+      "m3": -16.36,
+      "m6": -34.97,
+      "y1": 9.88
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子零件元件",
@@ -5356,7 +6448,14 @@
     "price": 34.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 6.41,
+    "threeMonthReturn": 12.78,
+    "returns": {
+      "w1": 1.16,
+      "m1": -0.99,
+      "m3": 9.08,
+      "m6": 24.02,
+      "y1": 12.78
+    },
     "industry": "電子通路業",
     "subIndustries": [
       "電子通路",
@@ -5383,7 +6482,14 @@
     "price": 415.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.36,
+    "threeMonthReturn": -15.89,
+    "returns": {
+      "w1": 4.27,
+      "m1": 11.24,
+      "m3": 9.92,
+      "m6": -2.58,
+      "y1": -15.89
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -5428,7 +6534,14 @@
     "price": 710.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 214.16,
+    "threeMonthReturn": 774.38,
+    "returns": {
+      "w1": 18.93,
+      "m1": 22.2,
+      "m3": 208.03,
+      "m6": 368.65,
+      "y1": 774.38
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -5464,7 +6577,14 @@
     "price": 23.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -3.33,
+    "threeMonthReturn": 1.09,
+    "returns": {
+      "w1": 2.43,
+      "m1": 5.45,
+      "m3": -2.11,
+      "m6": 5.94,
+      "y1": 1.09
+    },
     "industry": "光電業",
     "subIndustries": [
       "面板業",
@@ -5495,7 +6615,14 @@
     "price": 44.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -13.85,
+    "threeMonthReturn": 0.67,
+    "returns": {
+      "w1": -4.88,
+      "m1": -7.63,
+      "m3": -13.85,
+      "m6": -31.08,
+      "y1": 0.67
+    },
     "industry": "其他業",
     "subIndustries": [
       "消費性電子產品",
@@ -5525,7 +6652,14 @@
     "price": 166.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 108.39,
+    "threeMonthReturn": 95.65,
+    "returns": {
+      "w1": 24.72,
+      "m1": 78.27,
+      "m3": 108.65,
+      "m6": 83.17,
+      "y1": 95.65
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -5553,7 +6687,14 @@
     "price": 39.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -9.47,
+    "threeMonthReturn": 71.93,
+    "returns": {
+      "w1": 0.51,
+      "m1": -7.87,
+      "m3": -10.81,
+      "m6": -2.61,
+      "y1": 71.93
+    },
     "industry": "電子通路業",
     "subIndustries": [
       "電子通路",
@@ -5579,7 +6720,14 @@
     "price": 13.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 88.46,
+    "threeMonthReturn": 101.04,
+    "returns": {
+      "w1": 15.81,
+      "m1": -17.38,
+      "m3": 107.19,
+      "m6": 101.64,
+      "y1": 101.04
+    },
     "industry": "光電業",
     "subIndustries": [
       "面板業",
@@ -5605,7 +6753,14 @@
     "price": 24.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 22.72,
+    "threeMonthReturn": -10.29,
+    "returns": {
+      "w1": 20.63,
+      "m1": 19.47,
+      "m3": 24.87,
+      "m6": 11.43,
+      "y1": -10.29
+    },
     "industry": "光電業",
     "subIndustries": [
       "面板零組件",
@@ -5632,7 +6787,14 @@
     "price": 14.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -18.99,
+    "threeMonthReturn": -47.65,
+    "returns": {
+      "w1": -1.69,
+      "m1": 0.0,
+      "m3": -17.85,
+      "m6": -27.32,
+      "y1": -47.65
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "地產",
@@ -5662,7 +6824,14 @@
     "price": 18.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -18.56,
+    "threeMonthReturn": 52.49,
+    "returns": {
+      "w1": -0.53,
+      "m1": 1.91,
+      "m3": -21.97,
+      "m6": 30.24,
+      "y1": 52.49
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "週邊產品",
@@ -5694,7 +6863,14 @@
     "price": 38.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -7.07,
+    "threeMonthReturn": 17.05,
+    "returns": {
+      "w1": 3.25,
+      "m1": 0.66,
+      "m3": -7.19,
+      "m6": -26.73,
+      "y1": 17.05
+    },
     "industry": "光電業",
     "subIndustries": [
       "車用電子",
@@ -5754,7 +6930,14 @@
     "price": 30.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -16.23,
+    "threeMonthReturn": 40.65,
+    "returns": {
+      "w1": -2.4,
+      "m1": -8.7,
+      "m3": -7.87,
+      "m6": 18.02,
+      "y1": 40.65
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "週邊產品",
@@ -5780,7 +6963,14 @@
     "price": 2935.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 371.86,
+    "threeMonthReturn": 1184.46,
+    "returns": {
+      "w1": 34.94,
+      "m1": 90.58,
+      "m3": 381.94,
+      "m6": 545.05,
+      "y1": 1184.46
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "IC製造",
@@ -5809,7 +6999,14 @@
     "price": 39.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 84.07,
+    "threeMonthReturn": 205.6,
+    "returns": {
+      "w1": 20.92,
+      "m1": 39.86,
+      "m3": 78.23,
+      "m6": 176.76,
+      "y1": 205.6
+    },
     "industry": "文化創意業",
     "subIndustries": [
       "遊戲產業",
@@ -5842,7 +7039,14 @@
     "price": 108.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 2.86,
+    "threeMonthReturn": 80.3,
+    "returns": {
+      "w1": 1.41,
+      "m1": 8.65,
+      "m3": 0.0,
+      "m6": 43.24,
+      "y1": 80.3
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -5878,7 +7082,14 @@
     "price": 69.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 173.91,
+    "threeMonthReturn": 164.5,
+    "returns": {
+      "w1": 0.73,
+      "m1": 28.57,
+      "m3": 171.23,
+      "m6": 169.65,
+      "y1": 164.5
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "設備儀器商",
@@ -5906,7 +7117,14 @@
     "price": 617.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 231.72,
+    "threeMonthReturn": 643.37,
+    "returns": {
+      "w1": 35.01,
+      "m1": 74.05,
+      "m3": 235.33,
+      "m6": 564.16,
+      "y1": 643.37
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC製造",
@@ -5938,7 +7156,14 @@
     "price": 46.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 16.92,
+    "threeMonthReturn": 58.83,
+    "returns": {
+      "w1": 7.67,
+      "m1": 4.04,
+      "m3": 19.02,
+      "m6": 11.43,
+      "y1": 58.83
+    },
     "industry": "光電業",
     "subIndustries": [
       "建材",
@@ -5976,7 +7201,14 @@
     "price": 1260.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 235.11,
+    "threeMonthReturn": 816.36,
+    "returns": {
+      "w1": 5.0,
+      "m1": 37.25,
+      "m3": 229.84,
+      "m6": 460.0,
+      "y1": 816.36
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "光通訊",
@@ -6003,7 +7235,14 @@
     "price": 66.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 40.43,
+    "threeMonthReturn": 69.23,
+    "returns": {
+      "w1": -6.52,
+      "m1": 6.62,
+      "m3": 38.66,
+      "m6": 20.0,
+      "y1": 69.23
+    },
     "industry": "居家生活",
     "subIndustries": [
       "塑化製品",
@@ -6036,7 +7275,14 @@
     "price": 30.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -3.32,
+    "threeMonthReturn": 8.13,
+    "returns": {
+      "w1": -2.7,
+      "m1": -12.57,
+      "m3": -3.92,
+      "m6": 5.52,
+      "y1": 8.13
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "醫藥產業",
@@ -6074,7 +7320,14 @@
     "price": 25.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -11.6,
+    "threeMonthReturn": 0.19,
+    "returns": {
+      "w1": -3.36,
+      "m1": -24.6,
+      "m3": -10.38,
+      "m6": -7.99,
+      "y1": 0.19
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "地產",
@@ -6101,7 +7354,14 @@
     "price": 473.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 170.57,
+    "threeMonthReturn": 608.83,
+    "returns": {
+      "w1": 27.63,
+      "m1": 23.47,
+      "m3": 179.35,
+      "m6": 340.47,
+      "y1": 608.83
+    },
     "industry": "半導體業",
     "subIndustries": [
       "封測服務與材料",
@@ -6133,7 +7393,14 @@
     "price": 36.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 15.47,
+    "threeMonthReturn": 4.23,
+    "returns": {
+      "w1": -5.5,
+      "m1": -1.86,
+      "m3": 15.83,
+      "m6": 7.57,
+      "y1": 4.23
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電聲產品",
@@ -6164,7 +7431,14 @@
     "price": 48.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 50.23,
+    "threeMonthReturn": 37.09,
+    "returns": {
+      "w1": 4.97,
+      "m1": 12.37,
+      "m3": 51.4,
+      "m6": 55.27,
+      "y1": 37.09
+    },
     "industry": "電子通路業",
     "subIndustries": [
       "IC設計",
@@ -6202,7 +7476,14 @@
     "price": 53.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 139.82,
+    "threeMonthReturn": 186.63,
+    "returns": {
+      "w1": 41.8,
+      "m1": 60.24,
+      "m3": 138.75,
+      "m6": 139.82,
+      "y1": 186.63
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "被動元件",
@@ -6232,7 +7513,14 @@
     "price": 40.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 14.99,
+    "threeMonthReturn": 1.62,
+    "returns": {
+      "w1": 3.83,
+      "m1": -2.52,
+      "m3": 18.0,
+      "m6": -21.37,
+      "y1": 1.62
+    },
     "industry": "光電業",
     "subIndustries": [
       "電子零件元件",
@@ -6258,7 +7546,14 @@
     "price": 144.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -8.83,
+    "threeMonthReturn": 40.29,
+    "returns": {
+      "w1": 5.86,
+      "m1": 13.33,
+      "m3": -6.47,
+      "m6": 2.85,
+      "y1": 40.29
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "電腦系統業",
@@ -6290,7 +7585,14 @@
     "price": 210.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 82.25,
+    "threeMonthReturn": 115.02,
+    "returns": {
+      "w1": 11.97,
+      "m1": 45.17,
+      "m3": 79.15,
+      "m6": 78.81,
+      "y1": 115.02
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "設備儀器商",
@@ -6316,7 +7618,14 @@
     "price": 49.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.83,
+    "threeMonthReturn": 35.51,
+    "returns": {
+      "w1": -0.3,
+      "m1": 12.12,
+      "m3": 11.25,
+      "m6": 24.56,
+      "y1": 35.51
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子零件元件",
@@ -6345,7 +7654,14 @@
     "price": 71.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -12.56,
+    "threeMonthReturn": -6.76,
+    "returns": {
+      "w1": 0.28,
+      "m1": -3.37,
+      "m3": -15.15,
+      "m6": 12.56,
+      "y1": -6.76
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "車用金屬成型",
@@ -6378,7 +7694,14 @@
     "price": 32.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 2.04,
+    "threeMonthReturn": -14.12,
+    "returns": {
+      "w1": -0.76,
+      "m1": -0.46,
+      "m3": 5.34,
+      "m6": -6.73,
+      "y1": -14.12
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "汽機車零組件",
@@ -6406,7 +7729,14 @@
     "price": 1050.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 7.36,
+    "threeMonthReturn": 131.02,
+    "returns": {
+      "w1": 8.81,
+      "m1": -1.87,
+      "m3": 4.48,
+      "m6": 25.0,
+      "y1": 131.02
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "散熱模組",
@@ -6434,7 +7764,14 @@
     "price": 71.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 173.56,
+    "threeMonthReturn": 161.54,
+    "returns": {
+      "w1": 37.04,
+      "m1": 117.02,
+      "m3": 178.91,
+      "m6": 113.13,
+      "y1": 161.54
+    },
     "industry": "光電業",
     "subIndustries": [
       "LED",
@@ -6463,7 +7800,14 @@
     "price": 14.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -0.69,
+    "threeMonthReturn": 20.0,
+    "returns": {
+      "w1": 1.41,
+      "m1": -5.88,
+      "m3": -3.36,
+      "m6": 12.06,
+      "y1": 20.0
+    },
     "industry": "電子通路業",
     "subIndustries": [
       "電子通路",
@@ -6496,7 +7840,14 @@
     "price": 529.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 20.64,
+    "threeMonthReturn": 48.8,
+    "returns": {
+      "w1": 2.12,
+      "m1": 17.95,
+      "m3": 21.05,
+      "m6": 23.6,
+      "y1": 48.8
+    },
     "industry": "光電業",
     "subIndustries": [
       "LED",
@@ -6528,7 +7879,14 @@
     "price": 327.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 16.34,
+    "threeMonthReturn": 34.77,
+    "returns": {
+      "w1": 1.71,
+      "m1": 7.38,
+      "m3": 17.17,
+      "m6": 8.62,
+      "y1": 34.77
+    },
     "industry": "半導體業",
     "subIndustries": [
       "設備儀器商",
@@ -6554,7 +7912,14 @@
     "price": 156.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.7,
+    "threeMonthReturn": 19.54,
+    "returns": {
+      "w1": -3.41,
+      "m1": 3.65,
+      "m3": 5.41,
+      "m6": -12.61,
+      "y1": 19.54
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "工業電腦"
@@ -6579,7 +7944,14 @@
     "price": 31.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.37,
+    "threeMonthReturn": -43.26,
+    "returns": {
+      "w1": 7.35,
+      "m1": 6.08,
+      "m3": 5.37,
+      "m6": -6.82,
+      "y1": -43.26
+    },
     "industry": "光電業",
     "subIndustries": [
       "顯示器",
@@ -6609,7 +7981,14 @@
     "price": 3735.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 50.0,
+    "threeMonthReturn": 290.28,
+    "returns": {
+      "w1": 22.46,
+      "m1": 43.1,
+      "m3": 50.3,
+      "m6": 178.73,
+      "y1": 290.28
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -6637,7 +8016,14 @@
     "price": 380.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 47.0,
+    "threeMonthReturn": 108.79,
+    "returns": {
+      "w1": 20.83,
+      "m1": 36.2,
+      "m3": 45.32,
+      "m6": 39.71,
+      "y1": 108.79
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC封裝測試",
@@ -6665,7 +8051,14 @@
     "price": 34.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -30.61,
+    "threeMonthReturn": -37.04,
+    "returns": {
+      "w1": -1.16,
+      "m1": -20.65,
+      "m3": -30.61,
+      "m6": -28.19,
+      "y1": -37.04
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "電子零件元件",
@@ -6692,7 +8085,14 @@
     "price": 26.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 17.38,
+    "threeMonthReturn": 79.93,
+    "returns": {
+      "w1": -4.59,
+      "m1": -4.76,
+      "m3": 18.99,
+      "m6": 80.56,
+      "y1": 79.93
+    },
     "industry": "光電業",
     "subIndustries": [
       "面板業",
@@ -6730,7 +8130,14 @@
     "price": 90.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -0.33,
+    "threeMonthReturn": 5.95,
+    "returns": {
+      "w1": -2.17,
+      "m1": 7.39,
+      "m3": 0.56,
+      "m6": -15.79,
+      "y1": 5.95
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "散熱模組",
@@ -6760,7 +8167,14 @@
     "price": 17.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -6.04,
+    "threeMonthReturn": 31.54,
+    "returns": {
+      "w1": -1.72,
+      "m1": -8.06,
+      "m3": -2.56,
+      "m6": 13.62,
+      "y1": 31.54
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "網通設備",
@@ -6786,7 +8200,14 @@
     "price": 24.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.25,
+    "threeMonthReturn": 23.98,
+    "returns": {
+      "w1": 3.62,
+      "m1": -53.54,
+      "m3": 1.67,
+      "m6": -2.8,
+      "y1": 23.98
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "電子零件元件",
@@ -6812,7 +8233,14 @@
     "price": 227.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -6.39,
+    "threeMonthReturn": 41.43,
+    "returns": {
+      "w1": 2.48,
+      "m1": 3.18,
+      "m3": -6.2,
+      "m6": -18.78,
+      "y1": 41.43
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "電腦系統業",
@@ -6839,7 +8267,14 @@
     "price": 20.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -0.25,
+    "threeMonthReturn": -4.98,
+    "returns": {
+      "w1": 2.56,
+      "m1": 3.89,
+      "m3": 0.5,
+      "m6": -3.84,
+      "y1": -4.98
+    },
     "industry": "光電業",
     "subIndustries": [
       "LED",
@@ -6871,7 +8306,14 @@
     "price": 4400.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 147.89,
+    "threeMonthReturn": 86.44,
+    "returns": {
+      "w1": 31.93,
+      "m1": 58.56,
+      "m3": 154.34,
+      "m6": 118.36,
+      "y1": 86.44
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -6901,7 +8343,14 @@
     "price": 22.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.39,
+    "threeMonthReturn": -15.89,
+    "returns": {
+      "w1": 3.45,
+      "m1": 7.14,
+      "m3": 5.39,
+      "m6": -4.26,
+      "y1": -15.89
+    },
     "industry": "光電業",
     "subIndustries": [
       "面板零組件",
@@ -6927,7 +8376,14 @@
     "price": 182.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 53.36,
+    "threeMonthReturn": 151.03,
+    "returns": {
+      "w1": 1.96,
+      "m1": 19.28,
+      "m3": 68.2,
+      "m6": 79.8,
+      "y1": 151.03
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC製造",
@@ -6953,7 +8409,14 @@
     "price": 20.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 33.65,
+    "threeMonthReturn": 73.75,
+    "returns": {
+      "w1": 4.51,
+      "m1": 6.65,
+      "m3": 39.46,
+      "m6": 36.72,
+      "y1": 73.75
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子零件元件",
@@ -6979,7 +8442,14 @@
     "price": 916.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 76.15,
+    "threeMonthReturn": 155.87,
+    "returns": {
+      "w1": 0.66,
+      "m1": 24.63,
+      "m3": 70.9,
+      "m6": 74.81,
+      "y1": 155.87
+    },
     "industry": "光電業",
     "subIndustries": [
       "設備儀器商",
@@ -7009,7 +8479,14 @@
     "price": 16.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 80.79,
+    "threeMonthReturn": 114.1,
+    "returns": {
+      "w1": 9.42,
+      "m1": -30.52,
+      "m3": 98.7,
+      "m6": 144.91,
+      "y1": 114.1
+    },
     "industry": "光電業",
     "subIndustries": [
       "太陽能",
@@ -7039,7 +8516,14 @@
     "price": 82.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 12.89,
+    "threeMonthReturn": 46.96,
+    "returns": {
+      "w1": -1.2,
+      "m1": 16.24,
+      "m3": 17.57,
+      "m6": 29.61,
+      "y1": 46.96
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "設備儀器商",
@@ -7066,7 +8550,14 @@
     "price": 770.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 119.69,
+    "threeMonthReturn": 219.5,
+    "returns": {
+      "w1": 12.74,
+      "m1": 84.87,
+      "m3": 114.48,
+      "m6": 94.94,
+      "y1": 219.5
+    },
     "industry": "半導體業",
     "subIndustries": [
       "設備儀器商",
@@ -7098,7 +8589,14 @@
     "price": 25.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 37.5,
+    "threeMonthReturn": 40.95,
+    "returns": {
+      "w1": 11.45,
+      "m1": 15.0,
+      "m3": 39.78,
+      "m6": 39.39,
+      "y1": 40.95
+    },
     "industry": "光電業",
     "subIndustries": [
       "LED",
@@ -7126,7 +8624,14 @@
     "price": 71.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 14.93,
+    "threeMonthReturn": 58.76,
+    "returns": {
+      "w1": 10.15,
+      "m1": 15.3,
+      "m3": 13.65,
+      "m6": 0.14,
+      "y1": 58.76
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子零件元件",
@@ -7156,7 +8661,14 @@
     "price": 56.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -5.67,
+    "threeMonthReturn": 97.56,
+    "returns": {
+      "w1": 7.2,
+      "m1": 9.48,
+      "m3": -9.29,
+      "m6": 44.02,
+      "y1": 97.56
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -7184,7 +8696,14 @@
     "price": 109.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 106.21,
+    "threeMonthReturn": 132.98,
+    "returns": {
+      "w1": 23.17,
+      "m1": 35.35,
+      "m3": 106.21,
+      "m6": 58.93,
+      "y1": 132.98
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -7210,7 +8729,14 @@
     "price": 3985.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 8.29,
+    "threeMonthReturn": 89.31,
+    "returns": {
+      "w1": 24.53,
+      "m1": 23.76,
+      "m3": 6.69,
+      "m6": 15.01,
+      "y1": 89.31
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -7239,7 +8765,14 @@
     "price": 73.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 34.37,
+    "threeMonthReturn": 64.43,
+    "returns": {
+      "w1": -0.27,
+      "m1": -1.34,
+      "m3": 30.32,
+      "m6": 44.69,
+      "y1": 64.43
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "IC製造",
@@ -7272,7 +8805,14 @@
     "price": 7.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -53.8,
+    "threeMonthReturn": -65.95,
+    "returns": {
+      "w1": 0.89,
+      "m1": -38.04,
+      "m3": -53.39,
+      "m6": -60.0,
+      "y1": -65.95
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "網通設備",
@@ -7309,7 +8849,14 @@
     "price": 2425.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 69.58,
+    "threeMonthReturn": 407.04,
+    "returns": {
+      "w1": 5.66,
+      "m1": 40.99,
+      "m3": 53.97,
+      "m6": 135.44,
+      "y1": 407.04
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "電線電纜",
@@ -7344,7 +8891,14 @@
     "price": 69.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 64.82,
+    "threeMonthReturn": 134.62,
+    "returns": {
+      "w1": 15.37,
+      "m1": 54.6,
+      "m3": 70.04,
+      "m6": 76.93,
+      "y1": 134.62
+    },
     "industry": "光電業",
     "subIndustries": [
       "面板業",
@@ -7377,7 +8931,14 @@
     "price": 62.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.52,
+    "threeMonthReturn": 50.54,
+    "returns": {
+      "w1": 2.13,
+      "m1": 9.47,
+      "m3": 3.31,
+      "m6": -20.81,
+      "y1": 50.54
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "網通設備",
@@ -7413,7 +8974,14 @@
     "price": 71.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 41.58,
+    "threeMonthReturn": 162.87,
+    "returns": {
+      "w1": 15.32,
+      "m1": 8.33,
+      "m3": 44.88,
+      "m6": 73.75,
+      "y1": 162.87
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "車用電子",
@@ -7459,7 +9027,14 @@
     "price": 38.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 13.94,
+    "threeMonthReturn": 33.8,
+    "returns": {
+      "w1": 5.26,
+      "m1": 11.6,
+      "m3": 15.5,
+      "m6": 11.93,
+      "y1": 33.8
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "網通設備",
@@ -7507,7 +9082,14 @@
     "price": 85.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -7.71,
+    "threeMonthReturn": 90.03,
+    "returns": {
+      "w1": 3.16,
+      "m1": 3.53,
+      "m3": -8.21,
+      "m6": -3.08,
+      "y1": 90.03
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "車用電子",
@@ -7556,7 +9138,14 @@
     "price": 77.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 26.31,
+    "threeMonthReturn": 111.2,
+    "returns": {
+      "w1": 3.34,
+      "m1": 7.81,
+      "m3": 36.33,
+      "m6": 77.09,
+      "y1": 111.2
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "電子通路",
@@ -7587,7 +9176,14 @@
     "price": 73.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 101.37,
+    "threeMonthReturn": 107.32,
+    "returns": {
+      "w1": 17.01,
+      "m1": 51.75,
+      "m3": 107.03,
+      "m6": 87.52,
+      "y1": 107.32
+    },
     "industry": "光電業",
     "subIndustries": [
       "LED",
@@ -7625,7 +9221,14 @@
     "price": 22.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 29.65,
+    "threeMonthReturn": 11.22,
+    "returns": {
+      "w1": 2.06,
+      "m1": 18.93,
+      "m3": 34.34,
+      "m6": 13.2,
+      "y1": 11.22
+    },
     "industry": "汽車工業",
     "subIndustries": [
       "LED",
@@ -7652,7 +9255,14 @@
     "price": 118.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -3.27,
+    "threeMonthReturn": 2.16,
+    "returns": {
+      "w1": -1.66,
+      "m1": 0.42,
+      "m3": -2.47,
+      "m6": -0.84,
+      "y1": 2.16
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "手術與治療用醫材",
@@ -7684,7 +9294,14 @@
     "price": 29.35,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.38,
+    "threeMonthReturn": 3.6,
+    "returns": {
+      "w1": -0.17,
+      "m1": -0.84,
+      "m3": 1.73,
+      "m6": -3.45,
+      "y1": 3.6
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "醫藥產業",
@@ -7712,7 +9329,14 @@
     "price": 103.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -8.81,
+    "threeMonthReturn": 20.35,
+    "returns": {
+      "w1": 0.0,
+      "m1": -2.82,
+      "m3": -6.76,
+      "m6": -15.85,
+      "y1": 20.35
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "輔助與彌補用醫材",
@@ -7740,7 +9364,14 @@
     "price": 32.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.26,
+    "threeMonthReturn": 63.18,
+    "returns": {
+      "w1": -3.32,
+      "m1": -0.62,
+      "m3": 6.92,
+      "m6": 38.83,
+      "y1": 63.18
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "醫藥產業",
@@ -7770,7 +9401,14 @@
     "price": 18.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -6.46,
+    "threeMonthReturn": -1.63,
+    "returns": {
+      "w1": -0.55,
+      "m1": 0.28,
+      "m3": -4.23,
+      "m6": -4.49,
+      "y1": -1.63
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "醫藥產業",
@@ -7797,7 +9435,14 @@
     "price": 37.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -1.05,
+    "threeMonthReturn": -0.05,
+    "returns": {
+      "w1": -5.17,
+      "m1": -10.79,
+      "m3": -1.18,
+      "m6": -4.33,
+      "y1": -0.05
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "化學工業",
@@ -7829,7 +9474,14 @@
     "price": 27.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -2.34,
+    "threeMonthReturn": -12.01,
+    "returns": {
+      "w1": 4.43,
+      "m1": 11.52,
+      "m3": 0.18,
+      "m6": 6.07,
+      "y1": -12.01
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "醫藥產業",
@@ -7863,6 +9515,13 @@
     "marketCap": 0.0,
     "date": "2026-04-17",
     "threeMonthReturn": 13.87,
+    "returns": {
+      "w1": 17.67,
+      "m1": 13.87,
+      "m3": 13.87,
+      "m6": 13.87,
+      "y1": 13.87
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "醫藥產業",
@@ -7904,7 +9563,14 @@
     "price": 36.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -30.85,
+    "threeMonthReturn": -60.46,
+    "returns": {
+      "w1": -2.66,
+      "m1": -4.56,
+      "m3": -30.06,
+      "m6": -29.92,
+      "y1": -60.46
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "醫藥產業",
@@ -7932,7 +9598,14 @@
     "price": 39.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 28.69,
+    "threeMonthReturn": 25.4,
+    "returns": {
+      "w1": -0.63,
+      "m1": 6.08,
+      "m3": 22.85,
+      "m6": -0.63,
+      "y1": 25.4
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "診斷與監測用醫材",
@@ -7959,7 +9632,14 @@
     "price": 13.65,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -4.88,
+    "threeMonthReturn": -10.2,
+    "returns": {
+      "w1": -2.85,
+      "m1": 1.87,
+      "m3": -3.87,
+      "m6": -3.53,
+      "y1": -10.2
+    },
     "industry": "塑膠工業",
     "subIndustries": [
       "塑化製品",
@@ -7992,7 +9672,14 @@
     "price": 16.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -20.0,
+    "threeMonthReturn": -17.74,
+    "returns": {
+      "w1": -4.76,
+      "m1": -6.43,
+      "m3": -20.79,
+      "m6": -16.23,
+      "y1": -17.74
+    },
     "industry": "紡織纖維",
     "subIndustries": [
       "織布業",
@@ -8023,7 +9710,14 @@
     "price": 44.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 12.69,
+    "threeMonthReturn": -0.22,
+    "returns": {
+      "w1": 6.47,
+      "m1": 21.31,
+      "m3": 12.83,
+      "m6": -17.78,
+      "y1": -0.22
+    },
     "industry": "電機機械",
     "subIndustries": [
       "電力設備",
@@ -8057,7 +9751,14 @@
     "price": 59.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 55.53,
+    "threeMonthReturn": 69.83,
+    "returns": {
+      "w1": 13.87,
+      "m1": 28.9,
+      "m3": 55.94,
+      "m6": 43.97,
+      "y1": 69.83
+    },
     "industry": "電機機械",
     "subIndustries": [
       "機械零組件",
@@ -8085,7 +9786,14 @@
     "price": 48.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 19.41,
+    "threeMonthReturn": 3.85,
+    "returns": {
+      "w1": 4.52,
+      "m1": 17.96,
+      "m3": 18.25,
+      "m6": -1.92,
+      "y1": 3.85
+    },
     "industry": "其他業",
     "subIndustries": [
       "機械零組件",
@@ -8122,7 +9830,14 @@
     "price": 30.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -24.38,
+    "threeMonthReturn": 3.02,
+    "returns": {
+      "w1": -0.97,
+      "m1": -5.25,
+      "m3": -23.44,
+      "m6": -13.64,
+      "y1": 3.02
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "產業機械",
@@ -8157,7 +9872,14 @@
     "price": 19.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 14.53,
+    "threeMonthReturn": 10.06,
+    "returns": {
+      "w1": 3.14,
+      "m1": -1.25,
+      "m3": 14.53,
+      "m6": 2.6,
+      "y1": 10.06
+    },
     "industry": "電機機械",
     "subIndustries": [
       "汽車內裝",
@@ -8190,7 +9912,14 @@
     "price": 69.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 24.68,
+    "threeMonthReturn": 32.06,
+    "returns": {
+      "w1": -4.68,
+      "m1": 13.26,
+      "m3": 25.59,
+      "m6": 28.39,
+      "y1": 32.06
+    },
     "industry": "電機機械",
     "subIndustries": [
       "汽機車零組件",
@@ -8220,7 +9949,14 @@
     "price": 194.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 80.47,
+    "threeMonthReturn": 100.21,
+    "returns": {
+      "w1": 0.78,
+      "m1": 63.03,
+      "m3": 79.63,
+      "m6": 66.52,
+      "y1": 100.21
+    },
     "industry": "電機機械",
     "subIndustries": [
       "機械零組件",
@@ -8246,7 +9982,14 @@
     "price": 15.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 52.88,
+    "threeMonthReturn": 59.0,
+    "returns": {
+      "w1": 16.06,
+      "m1": 48.6,
+      "m3": 56.65,
+      "m6": 59.32,
+      "y1": 59.0
+    },
     "industry": "化學工業",
     "subIndustries": [
       "化學工業",
@@ -8274,7 +10017,14 @@
     "price": 62.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 14.19,
+    "threeMonthReturn": 25.53,
+    "returns": {
+      "w1": -9.46,
+      "m1": -0.64,
+      "m3": 13.57,
+      "m6": -1.58,
+      "y1": 25.53
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "體外診斷用醫材",
@@ -8300,7 +10050,14 @@
     "price": 51.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -14.94,
+    "threeMonthReturn": -11.9,
+    "returns": {
+      "w1": -2.45,
+      "m1": -1.33,
+      "m3": -11.3,
+      "m6": -24.49,
+      "y1": -11.9
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "醫藥產業",
@@ -8328,7 +10085,14 @@
     "price": 31.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 8.08,
+    "threeMonthReturn": 51.93,
+    "returns": {
+      "w1": -6.12,
+      "m1": -13.12,
+      "m3": 6.25,
+      "m6": -1.1,
+      "y1": 51.93
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "產業機械",
@@ -8356,7 +10120,14 @@
     "price": 18.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -19.78,
+    "threeMonthReturn": 4.24,
+    "returns": {
+      "w1": -7.05,
+      "m1": -4.4,
+      "m3": -23.28,
+      "m6": 10.15,
+      "y1": 4.24
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "醫藥流通",
@@ -8397,7 +10168,14 @@
     "price": 262.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 45.43,
+    "threeMonthReturn": 193.53,
+    "returns": {
+      "w1": -2.05,
+      "m1": 39.26,
+      "m3": 38.16,
+      "m6": 51.73,
+      "y1": 193.53
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "被動元件",
@@ -8429,7 +10207,14 @@
     "price": 244.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 85.93,
+    "threeMonthReturn": 529.34,
+    "returns": {
+      "w1": 30.4,
+      "m1": 55.24,
+      "m3": 88.8,
+      "m6": 496.34,
+      "y1": 529.34
+    },
     "industry": "化學工業",
     "subIndustries": [
       "化學工業",
@@ -8457,7 +10242,14 @@
     "price": 205.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 170.45,
+    "threeMonthReturn": 204.61,
+    "returns": {
+      "w1": 43.86,
+      "m1": 81.42,
+      "m3": 173.33,
+      "m6": 136.99,
+      "y1": 204.61
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "光通訊",
@@ -8484,7 +10276,14 @@
     "price": 67.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 17.89,
+    "threeMonthReturn": 80.65,
+    "returns": {
+      "w1": 15.07,
+      "m1": 5.16,
+      "m3": 19.79,
+      "m6": 15.46,
+      "y1": 80.65
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "工業電腦",
@@ -8517,7 +10316,14 @@
     "price": 144.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 164.17,
+    "threeMonthReturn": 125.78,
+    "returns": {
+      "w1": 30.77,
+      "m1": 45.37,
+      "m3": 169.59,
+      "m6": 129.37,
+      "y1": 125.78
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -8561,7 +10367,14 @@
     "price": 53.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 41.11,
+    "threeMonthReturn": 166.0,
+    "returns": {
+      "w1": 4.93,
+      "m1": 15.4,
+      "m3": 49.65,
+      "m6": 98.14,
+      "y1": 166.0
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -8587,7 +10400,14 @@
     "price": 17.75,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 20.75,
+    "threeMonthReturn": 88.83,
+    "returns": {
+      "w1": 10.25,
+      "m1": -11.25,
+      "m3": 21.58,
+      "m6": 3.5,
+      "y1": 88.83
+    },
     "industry": "光電業",
     "subIndustries": [
       "太陽能",
@@ -8615,7 +10435,14 @@
     "price": 46.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 24.29,
+    "threeMonthReturn": 126.85,
+    "returns": {
+      "w1": 40.61,
+      "m1": 49.76,
+      "m3": 23.29,
+      "m6": 88.34,
+      "y1": 126.85
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -8641,7 +10468,14 @@
     "price": 53.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 152.73,
+    "threeMonthReturn": 162.72,
+    "returns": {
+      "w1": 27.27,
+      "m1": 52.44,
+      "m3": 155.77,
+      "m6": 152.73,
+      "y1": 162.72
+    },
     "industry": "光電業",
     "subIndustries": [
       "LED",
@@ -8669,7 +10503,14 @@
     "price": 40.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 194.24,
+    "threeMonthReturn": 238.02,
+    "returns": {
+      "w1": 60.39,
+      "m1": 57.92,
+      "m3": 192.14,
+      "m6": 186.01,
+      "y1": 238.02
+    },
     "industry": "光電業",
     "subIndustries": [
       "面板零組件",
@@ -8696,7 +10537,14 @@
     "price": 537.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -12.97,
+    "threeMonthReturn": 4.88,
+    "returns": {
+      "w1": -0.37,
+      "m1": 6.76,
+      "m3": -8.05,
+      "m6": -27.53,
+      "y1": 4.88
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -8737,7 +10585,14 @@
     "price": 16.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -5.83,
+    "threeMonthReturn": -23.48,
+    "returns": {
+      "w1": 0.0,
+      "m1": -5.04,
+      "m3": -4.78,
+      "m6": -5.57,
+      "y1": -23.48
+    },
     "industry": "光電業",
     "subIndustries": [
       "家電",
@@ -8769,7 +10624,14 @@
     "price": 252.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 95.35,
+    "threeMonthReturn": 195.77,
+    "returns": {
+      "w1": 33.69,
+      "m1": 31.25,
+      "m3": 90.19,
+      "m6": 107.41,
+      "y1": 195.77
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "光通訊",
@@ -8795,7 +10657,14 @@
     "price": 655.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 122.03,
+    "threeMonthReturn": 400.0,
+    "returns": {
+      "w1": 35.05,
+      "m1": 67.31,
+      "m3": 119.43,
+      "m6": 203.24,
+      "y1": 400.0
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "光通訊",
@@ -8821,7 +10690,14 @@
     "price": 106.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 113.64,
+    "threeMonthReturn": 647.37,
+    "returns": {
+      "w1": 19.13,
+      "m1": 44.11,
+      "m3": 113.43,
+      "m6": 313.59,
+      "y1": 647.37
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -8847,7 +10723,14 @@
     "price": 721.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 239.29,
+    "threeMonthReturn": 731.6,
+    "returns": {
+      "w1": 16.1,
+      "m1": 85.59,
+      "m3": 231.49,
+      "m6": 422.46,
+      "y1": 731.6
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC製造",
@@ -8877,7 +10760,14 @@
     "price": 23.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -15.1,
+    "threeMonthReturn": -33.7,
+    "returns": {
+      "w1": -5.72,
+      "m1": -9.13,
+      "m3": -13.25,
+      "m6": -18.71,
+      "y1": -33.7
+    },
     "industry": "鋼鐵工業",
     "subIndustries": [
       "不鏽鋼",
@@ -8905,7 +10795,14 @@
     "price": 33.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -23.28,
+    "threeMonthReturn": -18.71,
+    "returns": {
+      "w1": -14.78,
+      "m1": -15.42,
+      "m3": -24.58,
+      "m6": -20.17,
+      "y1": -18.71
+    },
     "industry": "資訊服務業",
     "subIndustries": [
       "軟體業",
@@ -8931,7 +10828,14 @@
     "price": 462.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 27.8,
+    "threeMonthReturn": 201.96,
+    "returns": {
+      "w1": 14.78,
+      "m1": 17.86,
+      "m3": 25.2,
+      "m6": 17.71,
+      "y1": 201.96
+    },
     "industry": "光電業",
     "subIndustries": [
       "半導體化學品",
@@ -8958,7 +10862,14 @@
     "price": 119.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 46.73,
+    "threeMonthReturn": 187.79,
+    "returns": {
+      "w1": -6.3,
+      "m1": 65.05,
+      "m3": 49.69,
+      "m6": 49.87,
+      "y1": 187.79
+    },
     "industry": "光電業",
     "subIndustries": [
       "車用金屬成型",
@@ -8991,7 +10902,14 @@
     "price": 55.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -7.51,
+    "threeMonthReturn": -21.42,
+    "returns": {
+      "w1": 0.73,
+      "m1": -2.12,
+      "m3": -7.2,
+      "m6": -2.67,
+      "y1": -21.42
+    },
     "industry": "電器電纜",
     "subIndustries": [
       "家電",
@@ -9023,7 +10941,14 @@
     "price": 380.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 39.19,
+    "threeMonthReturn": 215.35,
+    "returns": {
+      "w1": 24.39,
+      "m1": 39.19,
+      "m3": 35.96,
+      "m6": 32.64,
+      "y1": 215.35
+    },
     "industry": "其他業",
     "subIndustries": [
       "電子零件元件",
@@ -9049,7 +10974,14 @@
     "price": 55.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 8.61,
+    "threeMonthReturn": 31.05,
+    "returns": {
+      "w1": 7.14,
+      "m1": 16.97,
+      "m3": 9.47,
+      "m6": 14.32,
+      "y1": 31.05
+    },
     "industry": "半導體業",
     "subIndustries": [
       "封測服務與材料",
@@ -9076,7 +11008,14 @@
     "price": 1120.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 70.99,
+    "threeMonthReturn": 388.19,
+    "returns": {
+      "w1": -5.08,
+      "m1": -16.1,
+      "m3": 78.91,
+      "m6": 239.91,
+      "y1": 388.19
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "電子零件元件",
@@ -9113,7 +11052,14 @@
     "price": 12.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 15.38,
+    "threeMonthReturn": 10.6,
+    "returns": {
+      "w1": 0.0,
+      "m1": 9.59,
+      "m3": 16.5,
+      "m6": 13.21,
+      "y1": 10.6
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "地產",
@@ -9145,7 +11091,14 @@
     "price": 117.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 72.06,
+    "threeMonthReturn": 295.27,
+    "returns": {
+      "w1": 0.86,
+      "m1": 4.0,
+      "m3": 80.83,
+      "m6": 160.29,
+      "y1": 295.27
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -9171,7 +11124,14 @@
     "price": 6.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 0.29,
+    "threeMonthReturn": -16.05,
+    "returns": {
+      "w1": 4.78,
+      "m1": -4.49,
+      "m3": -1.88,
+      "m6": -12.71,
+      "y1": -16.05
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -9198,7 +11158,14 @@
     "price": 27.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 8.8,
+    "threeMonthReturn": -3.37,
+    "returns": {
+      "w1": 6.88,
+      "m1": 10.12,
+      "m3": 9.46,
+      "m6": 8.37,
+      "y1": -3.37
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "電子零件元件",
@@ -9228,7 +11195,14 @@
     "price": 93.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -18.96,
+    "threeMonthReturn": -20.68,
+    "returns": {
+      "w1": 1.85,
+      "m1": -15.68,
+      "m3": -18.96,
+      "m6": -23.9,
+      "y1": -20.68
+    },
     "industry": "資訊服務業",
     "subIndustries": [
       "軟體業",
@@ -9254,7 +11228,14 @@
     "price": 19.15,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -3.04,
+    "threeMonthReturn": -7.71,
+    "returns": {
+      "w1": -0.52,
+      "m1": -4.01,
+      "m3": -0.78,
+      "m6": -14.51,
+      "y1": -7.71
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "電子零件元件",
@@ -9282,7 +11263,14 @@
     "price": 438.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 39.21,
+    "threeMonthReturn": 263.9,
+    "returns": {
+      "w1": 21.64,
+      "m1": 50.43,
+      "m3": 36.6,
+      "m6": 37.03,
+      "y1": 263.9
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -9309,7 +11297,14 @@
     "price": 96.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.45,
+    "threeMonthReturn": 120.69,
+    "returns": {
+      "w1": 3.9,
+      "m1": 9.97,
+      "m3": 4.92,
+      "m6": 4.92,
+      "y1": 120.69
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -9342,7 +11337,14 @@
     "price": 134.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 8.47,
+    "threeMonthReturn": 34.77,
+    "returns": {
+      "w1": 10.25,
+      "m1": 8.47,
+      "m3": 13.5,
+      "m6": 15.95,
+      "y1": 34.77
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC製造",
@@ -9374,7 +11376,14 @@
     "price": 10.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 5.21,
+    "threeMonthReturn": 17.98,
+    "returns": {
+      "w1": -1.44,
+      "m1": 1.48,
+      "m3": 7.18,
+      "m6": 1.98,
+      "y1": 17.98
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子零件元件",
@@ -9400,7 +11409,14 @@
     "price": 41.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.86,
+    "threeMonthReturn": -24.17,
+    "returns": {
+      "w1": 0.49,
+      "m1": 3.14,
+      "m3": 2.75,
+      "m6": 0.74,
+      "y1": -24.17
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "工業電腦",
@@ -9427,7 +11443,14 @@
     "price": 83.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 61.36,
+    "threeMonthReturn": 865.16,
+    "returns": {
+      "w1": 30.46,
+      "m1": 32.32,
+      "m3": 64.88,
+      "m6": 355.34,
+      "y1": 865.16
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -9459,7 +11482,14 @@
     "price": 50.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -20.19,
+    "threeMonthReturn": -59.52,
+    "returns": {
+      "w1": 0.4,
+      "m1": -5.6,
+      "m3": -18.26,
+      "m6": -42.17,
+      "y1": -59.52
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "地產",
@@ -9485,7 +11515,14 @@
     "price": 40.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.13,
+    "threeMonthReturn": 42.4,
+    "returns": {
+      "w1": -6.71,
+      "m1": 8.33,
+      "m3": 8.92,
+      "m6": 66.87,
+      "y1": 42.4
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "營造工程",
@@ -9514,7 +11551,14 @@
     "price": 890.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 10.97,
+    "threeMonthReturn": 151.77,
+    "returns": {
+      "w1": 12.94,
+      "m1": 30.88,
+      "m3": 8.8,
+      "m6": 14.84,
+      "y1": 151.77
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "電子其他",
@@ -9546,7 +11590,14 @@
     "price": 15.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -11.39,
+    "threeMonthReturn": -0.31,
+    "returns": {
+      "w1": -1.24,
+      "m1": -8.86,
+      "m3": -7.27,
+      "m6": -7.54,
+      "y1": -0.31
+    },
     "industry": "航運業",
     "subIndustries": [
       "運輸事業",
@@ -9572,7 +11623,14 @@
     "price": 25.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 52.57,
+    "threeMonthReturn": 104.45,
+    "returns": {
+      "w1": 1.41,
+      "m1": 0.8,
+      "m3": 56.83,
+      "m6": 75.35,
+      "y1": 104.45
+    },
     "industry": "金融保險業",
     "subIndustries": [
       "金融業",
@@ -9600,7 +11658,14 @@
     "price": 117.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 11.9,
+    "threeMonthReturn": 7.98,
+    "returns": {
+      "w1": 3.98,
+      "m1": 10.85,
+      "m3": 11.37,
+      "m6": 5.38,
+      "y1": 7.98
+    },
     "industry": "其他業",
     "subIndustries": [
       "汽車服務相關",
@@ -9637,7 +11702,14 @@
     "price": 37.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -12.77,
+    "threeMonthReturn": -11.86,
+    "returns": {
+      "w1": -2.32,
+      "m1": -2.57,
+      "m3": -13.37,
+      "m6": -18.58,
+      "y1": -11.86
+    },
     "industry": "居家生活",
     "subIndustries": [
       "飲料相關",
@@ -9671,7 +11743,14 @@
     "price": 17.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 29.71,
+    "threeMonthReturn": 76.53,
+    "returns": {
+      "w1": 5.92,
+      "m1": 1.7,
+      "m3": 30.18,
+      "m6": 36.12,
+      "y1": 76.53
+    },
     "industry": "金融保險業",
     "subIndustries": [
       "金融業",
@@ -9697,7 +11776,14 @@
     "price": 14.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 9.23,
+    "threeMonthReturn": 25.96,
+    "returns": {
+      "w1": 0.34,
+      "m1": 0.0,
+      "m3": 8.42,
+      "m6": 30.97,
+      "y1": 25.96
+    },
     "industry": "金融保險業",
     "subIndustries": [
       "金融業",
@@ -9723,7 +11809,14 @@
     "price": 11.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -0.42,
+    "threeMonthReturn": 21.65,
+    "returns": {
+      "w1": -3.28,
+      "m1": -2.88,
+      "m3": 0.0,
+      "m6": 14.01,
+      "y1": 21.65
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "電子零件元件",
@@ -9751,7 +11844,14 @@
     "price": 48.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 6.89,
+    "threeMonthReturn": 1.03,
+    "returns": {
+      "w1": 8.67,
+      "m1": 11.01,
+      "m3": 6.77,
+      "m6": -2.78,
+      "y1": 1.03
+    },
     "industry": "文化創意業",
     "subIndustries": [
       "控股公司"
@@ -9775,7 +11875,14 @@
     "price": 47.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -1.04,
+    "threeMonthReturn": 13.62,
+    "returns": {
+      "w1": 1.28,
+      "m1": -3.45,
+      "m3": -0.52,
+      "m6": -8.03,
+      "y1": 13.62
+    },
     "industry": "資訊服務業",
     "subIndustries": [
       "軟體業",
@@ -9803,7 +11910,14 @@
     "price": 8.99,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -15.19,
+    "threeMonthReturn": 30.86,
+    "returns": {
+      "w1": 1.47,
+      "m1": 2.63,
+      "m3": -6.84,
+      "m6": 10.31,
+      "y1": 30.86
+    },
     "industry": "光電業",
     "subIndustries": [
       "面板業",
@@ -9834,7 +11948,14 @@
     "price": 14.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 6.18,
+    "threeMonthReturn": 31.41,
+    "returns": {
+      "w1": -2.99,
+      "m1": 9.36,
+      "m3": 8.15,
+      "m6": 26.96,
+      "y1": 31.41
+    },
     "industry": "光電業",
     "subIndustries": [
       "面板業",
@@ -9866,7 +11987,14 @@
     "price": 50.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 31.15,
+    "threeMonthReturn": 209.26,
+    "returns": {
+      "w1": 4.05,
+      "m1": 12.84,
+      "m3": 29.62,
+      "m6": 100.0,
+      "y1": 209.26
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -9892,7 +12020,14 @@
     "price": 725.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 21.85,
+    "threeMonthReturn": 231.05,
+    "returns": {
+      "w1": 14.17,
+      "m1": 23.51,
+      "m3": 20.23,
+      "m6": 101.95,
+      "y1": 231.05
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "電子其他",
@@ -9918,7 +12053,14 @@
     "price": 34.95,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 226.64,
+    "threeMonthReturn": 288.33,
+    "returns": {
+      "w1": 48.72,
+      "m1": 23.5,
+      "m3": 234.45,
+      "m6": 191.25,
+      "y1": 288.33
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -9944,7 +12086,14 @@
     "price": 9.22,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 0.22,
+    "threeMonthReturn": 8.85,
+    "returns": {
+      "w1": 0.22,
+      "m1": -7.71,
+      "m3": 2.1,
+      "m6": -7.34,
+      "y1": 8.85
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "網通設備",
@@ -9973,7 +12122,14 @@
     "price": 135.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 144.58,
+    "threeMonthReturn": 128.89,
+    "returns": {
+      "w1": 19.91,
+      "m1": 90.58,
+      "m3": 150.93,
+      "m6": 144.58,
+      "y1": 128.89
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC封裝測試",
@@ -10009,7 +12165,14 @@
     "price": 70.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 32.89,
+    "threeMonthReturn": 278.98,
+    "returns": {
+      "w1": 12.66,
+      "m1": 22.9,
+      "m3": 32.39,
+      "m6": 196.0,
+      "y1": 278.98
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "軟體業",
@@ -10037,7 +12200,14 @@
     "price": 78.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 17.09,
+    "threeMonthReturn": 13.06,
+    "returns": {
+      "w1": 8.99,
+      "m1": 30.25,
+      "m3": 19.21,
+      "m6": 28.76,
+      "y1": 13.06
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "工業電腦"
@@ -10061,7 +12231,14 @@
     "price": 28.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 34.86,
+    "threeMonthReturn": 78.1,
+    "returns": {
+      "w1": 7.27,
+      "m1": 18.11,
+      "m3": 40.25,
+      "m6": 34.53,
+      "y1": 78.1
+    },
     "industry": "光電業",
     "subIndustries": [
       "LED",
@@ -10087,7 +12264,14 @@
     "price": 89.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 32.44,
+    "threeMonthReturn": 170.91,
+    "returns": {
+      "w1": 21.96,
+      "m1": 37.12,
+      "m3": 28.82,
+      "m6": 69.32,
+      "y1": 170.91
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -10117,7 +12301,14 @@
     "price": 66.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 23.51,
+    "threeMonthReturn": 112.86,
+    "returns": {
+      "w1": 16.55,
+      "m1": 37.63,
+      "m3": 21.69,
+      "m6": 64.27,
+      "y1": 112.86
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -10143,7 +12334,14 @@
     "price": 43.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 23.75,
+    "threeMonthReturn": 127.03,
+    "returns": {
+      "w1": 17.34,
+      "m1": 15.95,
+      "m3": 29.49,
+      "m6": 42.04,
+      "y1": 127.03
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC製造",
@@ -10170,7 +12368,14 @@
     "price": 113.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 2.25,
+    "threeMonthReturn": 113.35,
+    "returns": {
+      "w1": 8.61,
+      "m1": 16.29,
+      "m3": 4.13,
+      "m6": -5.42,
+      "y1": 113.35
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -10203,7 +12408,14 @@
     "price": 124.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 11.71,
+    "threeMonthReturn": 30.53,
+    "returns": {
+      "w1": 3.77,
+      "m1": 4.2,
+      "m3": 11.71,
+      "m6": 20.39,
+      "y1": 30.53
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "電子通路",
@@ -10235,7 +12447,14 @@
     "price": 397.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 30.54,
+    "threeMonthReturn": 165.0,
+    "returns": {
+      "w1": 20.09,
+      "m1": 41.71,
+      "m3": 34.29,
+      "m6": 62.58,
+      "y1": 165.0
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "電子其他",
@@ -10273,7 +12492,14 @@
     "price": 68.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 10.53,
+    "threeMonthReturn": 199.78,
+    "returns": {
+      "w1": 8.6,
+      "m1": 13.29,
+      "m3": 6.56,
+      "m6": 80.66,
+      "y1": 199.78
+    },
     "industry": "光電業",
     "subIndustries": [
       "光學元件",
@@ -10300,7 +12526,14 @@
     "price": 127.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 10.39,
+    "threeMonthReturn": 11.84,
+    "returns": {
+      "w1": 7.59,
+      "m1": 13.84,
+      "m3": 10.39,
+      "m6": 5.37,
+      "y1": 11.84
+    },
     "industry": "資訊服務業",
     "subIndustries": [
       "軟體業",
@@ -10334,7 +12567,14 @@
     "price": 14.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -30.69,
+    "threeMonthReturn": -45.55,
+    "returns": {
+      "w1": -1.06,
+      "m1": -2.78,
+      "m3": -31.71,
+      "m6": -32.37,
+      "y1": -45.55
+    },
     "industry": "建材營造業",
     "subIndustries": [
       "地產",
@@ -10361,7 +12601,14 @@
     "price": 27.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -8.79,
+    "threeMonthReturn": -36.33,
+    "returns": {
+      "w1": 2.42,
+      "m1": 0.73,
+      "m3": -9.39,
+      "m6": -20.34,
+      "y1": -36.33
+    },
     "industry": "資訊服務業",
     "subIndustries": [
       "軟體業",
@@ -10395,7 +12642,14 @@
     "price": 20.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 10.61,
+    "threeMonthReturn": -12.03,
+    "returns": {
+      "w1": 0.97,
+      "m1": -0.71,
+      "m3": 10.61,
+      "m6": 1.46,
+      "y1": -12.03
+    },
     "industry": "光電業",
     "subIndustries": [
       "營造工程",
@@ -10422,7 +12676,14 @@
     "price": 4940.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 129.23,
+    "threeMonthReturn": 728.86,
+    "returns": {
+      "w1": 8.33,
+      "m1": 34.79,
+      "m3": 129.77,
+      "m6": 188.05,
+      "y1": 728.86
+    },
     "industry": "半導體業",
     "subIndustries": [
       "設備儀器商",
@@ -10455,7 +12716,14 @@
     "price": 34.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 21.47,
+    "threeMonthReturn": 72.28,
+    "returns": {
+      "w1": 1.31,
+      "m1": 21.47,
+      "m3": 20.83,
+      "m6": 42.62,
+      "y1": 72.28
+    },
     "industry": "光電業",
     "subIndustries": [
       "印刷電路板相關",
@@ -10485,7 +12753,14 @@
     "price": 47.15,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -24.8,
+    "threeMonthReturn": 5.36,
+    "returns": {
+      "w1": 4.55,
+      "m1": -3.97,
+      "m3": -24.32,
+      "m6": -26.33,
+      "y1": 5.36
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "汽機車零組件"
@@ -10509,7 +12784,14 @@
     "price": 40.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -0.5,
+    "threeMonthReturn": 24.92,
+    "returns": {
+      "w1": 6.51,
+      "m1": 5.25,
+      "m3": -0.37,
+      "m6": -5.31,
+      "y1": 24.92
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -10535,7 +12817,14 @@
     "price": 28.85,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 30.54,
+    "threeMonthReturn": 68.22,
+    "returns": {
+      "w1": 7.05,
+      "m1": -11.77,
+      "m3": 43.53,
+      "m6": 65.33,
+      "y1": 68.22
+    },
     "industry": "光電業",
     "subIndustries": [
       "太陽能",
@@ -10563,7 +12852,14 @@
     "price": 85.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 27.04,
+    "threeMonthReturn": 6.88,
+    "returns": {
+      "w1": 12.35,
+      "m1": 29.74,
+      "m3": 28.19,
+      "m6": 6.88,
+      "y1": 6.88
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "網通設備",
@@ -10592,7 +12888,14 @@
     "price": 20.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -5.88,
+    "threeMonthReturn": -17.01,
+    "returns": {
+      "w1": -0.25,
+      "m1": 0.0,
+      "m3": -5.66,
+      "m6": -7.41,
+      "y1": -17.01
+    },
     "industry": "鋼鐵工業",
     "subIndustries": [
       "條鋼",
@@ -10625,7 +12928,14 @@
     "price": 92.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 26.47,
+    "threeMonthReturn": 50.65,
+    "returns": {
+      "w1": 13.13,
+      "m1": 38.44,
+      "m3": 32.09,
+      "m6": 53.67,
+      "y1": 50.65
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC封裝測試",
@@ -10659,7 +12969,14 @@
     "price": 33.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -23.06,
+    "threeMonthReturn": -31.5,
+    "returns": {
+      "w1": 9.06,
+      "m1": -1.46,
+      "m3": -23.93,
+      "m6": -31.5,
+      "y1": -31.5
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "汽機車零組件",
@@ -10696,7 +13013,14 @@
     "price": 158.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 63.91,
+    "threeMonthReturn": 72.28,
+    "returns": {
+      "w1": 26.8,
+      "m1": 60.1,
+      "m3": 65.28,
+      "m6": 51.67,
+      "y1": 72.28
+    },
     "industry": "光電業",
     "subIndustries": [
       "LED",
@@ -10729,7 +13053,14 @@
     "price": 773.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -23.08,
+    "threeMonthReturn": -40.31,
+    "returns": {
+      "w1": 6.04,
+      "m1": 4.46,
+      "m3": -24.22,
+      "m6": -16.61,
+      "y1": -40.31
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "電子零件元件",
@@ -10761,7 +13092,14 @@
     "price": 312.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 8.7,
+    "threeMonthReturn": 21.36,
+    "returns": {
+      "w1": 6.29,
+      "m1": 15.1,
+      "m3": 10.42,
+      "m6": 6.11,
+      "y1": 21.36
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "工業電腦"
@@ -10785,7 +13123,14 @@
     "price": 394.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 73.57,
+    "threeMonthReturn": -7.08,
+    "returns": {
+      "w1": 46.2,
+      "m1": 40.46,
+      "m3": 90.8,
+      "m6": 52.71,
+      "y1": -7.08
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -10813,7 +13158,14 @@
     "price": 123.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 16.59,
+    "threeMonthReturn": 47.31,
+    "returns": {
+      "w1": 12.84,
+      "m1": 16.04,
+      "m3": 16.59,
+      "m6": 11.31,
+      "y1": 47.31
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "網通設備",
@@ -10840,7 +13192,14 @@
     "price": 2340.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 80.69,
+    "threeMonthReturn": 611.25,
+    "returns": {
+      "w1": 12.77,
+      "m1": 21.24,
+      "m3": 80.0,
+      "m6": 195.08,
+      "y1": 611.25
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "電子零件元件",
@@ -10874,7 +13233,14 @@
     "price": 39.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 38.03,
+    "threeMonthReturn": 190.37,
+    "returns": {
+      "w1": 5.95,
+      "m1": -20.65,
+      "m3": 51.64,
+      "m6": 159.6,
+      "y1": 190.37
+    },
     "industry": "光電業",
     "subIndustries": [
       "太陽能",
@@ -10902,7 +13268,14 @@
     "price": 650.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 28.21,
+    "threeMonthReturn": 46.61,
+    "returns": {
+      "w1": 1.25,
+      "m1": 0.62,
+      "m3": 30.0,
+      "m6": 26.21,
+      "y1": 46.61
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "醫藥產業",
@@ -10930,7 +13303,14 @@
     "price": 79.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 85.81,
+    "threeMonthReturn": 90.24,
+    "returns": {
+      "w1": 25.24,
+      "m1": 23.49,
+      "m3": 88.22,
+      "m6": 27.43,
+      "y1": 90.24
+    },
     "industry": "光電業",
     "subIndustries": [
       "面板業",
@@ -10956,7 +13336,14 @@
     "price": 80.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -11.78,
+    "threeMonthReturn": -39.06,
+    "returns": {
+      "w1": 2.41,
+      "m1": -0.12,
+      "m3": -10.31,
+      "m6": -37.29,
+      "y1": -39.06
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "醫藥流通",
@@ -10985,7 +13372,14 @@
     "price": 34.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -1.42,
+    "threeMonthReturn": 30.21,
+    "returns": {
+      "w1": 3.58,
+      "m1": -7.71,
+      "m3": 1.02,
+      "m6": -17.58,
+      "y1": 30.21
+    },
     "industry": "光電業",
     "subIndustries": [
       "太陽能",
@@ -11017,7 +13411,14 @@
     "price": 83.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -17.75,
+    "threeMonthReturn": 67.8,
+    "returns": {
+      "w1": 6.47,
+      "m1": -10.93,
+      "m3": -9.59,
+      "m6": 30.08,
+      "y1": 67.8
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -11047,7 +13448,14 @@
     "price": 597.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 27.02,
+    "threeMonthReturn": 119.08,
+    "returns": {
+      "w1": 19.16,
+      "m1": 26.48,
+      "m3": 37.88,
+      "m6": 27.97,
+      "y1": 119.08
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC製造",
@@ -11075,7 +13483,14 @@
     "price": 55.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 27.29,
+    "threeMonthReturn": 75.08,
+    "returns": {
+      "w1": 9.47,
+      "m1": 2.02,
+      "m3": 29.98,
+      "m6": 35.2,
+      "y1": 75.08
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "醫藥產業",
@@ -11101,7 +13516,14 @@
     "price": 70.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -5.5,
+    "threeMonthReturn": -10.89,
+    "returns": {
+      "w1": -0.14,
+      "m1": -4.09,
+      "m3": -6.75,
+      "m6": -17.95,
+      "y1": -10.89
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "診斷與監測用醫材",
@@ -11127,7 +13549,14 @@
     "price": 133.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 123.99,
+    "threeMonthReturn": 219.76,
+    "returns": {
+      "w1": 40.53,
+      "m1": 65.43,
+      "m3": 125.13,
+      "m6": 122.5,
+      "y1": 219.76
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "光通訊",
@@ -11153,7 +13582,14 @@
     "price": 720.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 58.07,
+    "threeMonthReturn": 225.79,
+    "returns": {
+      "w1": 18.81,
+      "m1": 30.67,
+      "m3": 50.79,
+      "m6": 111.45,
+      "y1": 225.79
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -11183,7 +13619,14 @@
     "price": 93.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 63.8,
+    "threeMonthReturn": 62.37,
+    "returns": {
+      "w1": 16.65,
+      "m1": 33.72,
+      "m3": 62.37,
+      "m6": 56.9,
+      "y1": 62.37
+    },
     "industry": "半導體業",
     "subIndustries": [
       "設備儀器商",
@@ -11210,7 +13653,14 @@
     "price": 100.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 9.41,
+    "threeMonthReturn": 34.23,
+    "returns": {
+      "w1": 0.7,
+      "m1": 17.37,
+      "m3": 8.34,
+      "m6": -11.5,
+      "y1": 34.23
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "化學工業",
@@ -11242,7 +13692,14 @@
     "price": 79.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 0.0,
+    "threeMonthReturn": 25.31,
+    "returns": {
+      "w1": 3.51,
+      "m1": 2.18,
+      "m3": -0.37,
+      "m6": -3.04,
+      "y1": 25.31
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "醫藥產業",
@@ -11272,7 +13729,14 @@
     "price": 17.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -14.0,
+    "threeMonthReturn": 1.47,
+    "returns": {
+      "w1": -2.82,
+      "m1": -3.1,
+      "m3": -12.69,
+      "m6": -18.1,
+      "y1": 1.47
+    },
     "industry": "農業科技業",
     "subIndustries": [
       "生物科技",
@@ -11298,7 +13762,14 @@
     "price": 787.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 132.5,
+    "threeMonthReturn": 596.46,
+    "returns": {
+      "w1": 12.75,
+      "m1": 72.4,
+      "m3": 131.13,
+      "m6": 229.98,
+      "y1": 596.46
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子零件元件",
@@ -11324,7 +13795,14 @@
     "price": 75.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -7.98,
+    "threeMonthReturn": 9.01,
+    "returns": {
+      "w1": -8.54,
+      "m1": -3.85,
+      "m3": -7.64,
+      "m6": -11.45,
+      "y1": 9.01
+    },
     "industry": "其他業",
     "subIndustries": [
       "傳播事業",
@@ -11350,7 +13828,14 @@
     "price": 83.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 44.52,
+    "threeMonthReturn": 67.54,
+    "returns": {
+      "w1": 3.87,
+      "m1": 24.4,
+      "m3": 45.03,
+      "m6": 41.81,
+      "y1": 67.54
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "設備儀器商",
@@ -11376,7 +13861,14 @@
     "price": 4220.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -9.64,
+    "threeMonthReturn": 129.35,
+    "returns": {
+      "w1": 12.38,
+      "m1": 12.08,
+      "m3": -8.56,
+      "m6": 27.3,
+      "y1": 129.35
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "電腦系統業",
@@ -11406,7 +13898,14 @@
     "price": 288.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 62.25,
+    "threeMonthReturn": 40.49,
+    "returns": {
+      "w1": 10.13,
+      "m1": 14.97,
+      "m3": 64.57,
+      "m6": 34.89,
+      "y1": 40.49
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -11439,7 +13938,14 @@
     "price": 113.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 6.6,
+    "threeMonthReturn": -4.38,
+    "returns": {
+      "w1": -4.24,
+      "m1": -5.83,
+      "m3": 6.6,
+      "m6": -3.83,
+      "y1": -4.38
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "INTERNET應用與服務",
@@ -11472,7 +13978,14 @@
     "price": 148.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 16.02,
+    "threeMonthReturn": 135.34,
+    "returns": {
+      "w1": 6.45,
+      "m1": 22.22,
+      "m3": 12.93,
+      "m6": 66.48,
+      "y1": 135.34
+    },
     "industry": "光電業",
     "subIndustries": [
       "LED",
@@ -11506,7 +14019,14 @@
     "price": 142.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 9.65,
+    "threeMonthReturn": 44.9,
+    "returns": {
+      "w1": 9.65,
+      "m1": 8.4,
+      "m3": 7.98,
+      "m6": -4.38,
+      "y1": 44.9
+    },
     "industry": "航運業",
     "subIndustries": [
       "造船業"
@@ -11530,7 +14050,14 @@
     "price": 84.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -17.96,
+    "threeMonthReturn": -18.75,
+    "returns": {
+      "w1": 3.17,
+      "m1": -9.82,
+      "m3": -17.56,
+      "m6": -17.16,
+      "y1": -18.75
+    },
     "industry": "運動休閒",
     "subIndustries": [
       "傳產其他",
@@ -11556,7 +14083,14 @@
     "price": 219.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 23.66,
+    "threeMonthReturn": 49.32,
+    "returns": {
+      "w1": 6.3,
+      "m1": 5.78,
+      "m3": 25.07,
+      "m6": 7.33,
+      "y1": 49.32
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "輔助與彌補用醫材",
@@ -11584,7 +14118,14 @@
     "price": 29.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -21.37,
+    "threeMonthReturn": -62.33,
+    "returns": {
+      "w1": 60.22,
+      "m1": -27.41,
+      "m3": -21.27,
+      "m6": -47.07,
+      "y1": -62.33
+    },
     "industry": "綠能環保",
     "subIndustries": [
       "電力設備",
@@ -11620,7 +14161,14 @@
     "price": 58.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -12.95,
+    "threeMonthReturn": -9.58,
+    "returns": {
+      "w1": -1.18,
+      "m1": 0.69,
+      "m3": -12.69,
+      "m6": -18.98,
+      "y1": -9.58
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "智慧醫療技術"
@@ -11644,7 +14192,14 @@
     "price": 164.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 89.38,
+    "threeMonthReturn": 150.57,
+    "returns": {
+      "w1": 32.26,
+      "m1": 34.98,
+      "m3": 89.38,
+      "m6": 74.47,
+      "y1": 150.57
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "設備儀器商",
@@ -11675,6 +14230,13 @@
     "marketCap": 0.0,
     "date": "2026-04-17",
     "threeMonthReturn": -43.61,
+    "returns": {
+      "w1": 5.43,
+      "m1": 10.63,
+      "m3": -43.61,
+      "m6": -43.61,
+      "y1": -43.61
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "手術與治療用醫材",
@@ -11701,7 +14263,14 @@
     "price": 20.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 30.29,
+    "threeMonthReturn": 4.33,
+    "returns": {
+      "w1": 0.0,
+      "m1": 17.3,
+      "m3": 27.8,
+      "m6": 10.19,
+      "y1": 4.33
+    },
     "industry": "其他業",
     "subIndustries": [
       "汽車服務相關",
@@ -11733,7 +14302,14 @@
     "price": 14.75,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 6.88,
+    "threeMonthReturn": -23.58,
+    "returns": {
+      "w1": -0.67,
+      "m1": 6.88,
+      "m3": 8.86,
+      "m6": -12.98,
+      "y1": -23.58
+    },
     "industry": "汽車工業",
     "subIndustries": [
       "車用電子"
@@ -11757,7 +14333,14 @@
     "price": 34.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.24,
+    "threeMonthReturn": -37.23,
+    "returns": {
+      "w1": 1.78,
+      "m1": 2.69,
+      "m3": 6.34,
+      "m6": -7.65,
+      "y1": -37.23
+    },
     "industry": "觀光餐旅",
     "subIndustries": [
       "旅宿／餐飲",
@@ -11783,7 +14366,14 @@
     "price": 1940.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 127.43,
+    "threeMonthReturn": 114.6,
+    "returns": {
+      "w1": 17.22,
+      "m1": 34.72,
+      "m3": 120.96,
+      "m6": 122.99,
+      "y1": 114.6
+    },
     "industry": "電機機械",
     "subIndustries": [
       "工具機",
@@ -11813,7 +14403,14 @@
     "price": 39.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -11.24,
+    "threeMonthReturn": -11.63,
+    "returns": {
+      "w1": -20.68,
+      "m1": -19.06,
+      "m3": -14.13,
+      "m6": -12.22,
+      "y1": -11.63
+    },
     "industry": "居家生活",
     "subIndustries": [
       "家電",
@@ -11852,7 +14449,14 @@
     "price": 86.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -34.62,
+    "threeMonthReturn": -30.4,
+    "returns": {
+      "w1": -1.93,
+      "m1": -19.72,
+      "m3": -33.1,
+      "m6": -34.87,
+      "y1": -30.4
+    },
     "industry": "運動休閒",
     "subIndustries": [
       "傳產其他",
@@ -11885,6 +14489,13 @@
     "marketCap": 0.0,
     "date": "2026-04-17",
     "threeMonthReturn": -26.38,
+    "returns": {
+      "w1": -25.94,
+      "m1": -26.38,
+      "m3": -26.38,
+      "m6": -26.38,
+      "y1": -26.38
+    },
     "industry": "汽車工業",
     "subIndustries": [
       "車用電子"
@@ -11909,7 +14520,14 @@
     "price": 219.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 19.02,
+    "threeMonthReturn": 14.36,
+    "returns": {
+      "w1": 7.88,
+      "m1": 10.05,
+      "m3": 21.33,
+      "m6": 0.92,
+      "y1": 14.36
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -11950,7 +14568,14 @@
     "price": 405.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 111.22,
+    "threeMonthReturn": 1463.71,
+    "returns": {
+      "w1": 15.71,
+      "m1": 55.77,
+      "m3": 122.15,
+      "m6": 300.99,
+      "y1": 1463.71
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "印刷電路板相關",
@@ -11982,7 +14607,14 @@
     "price": 25.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.97,
+    "threeMonthReturn": 67.1,
+    "returns": {
+      "w1": 4.23,
+      "m1": 3.39,
+      "m3": 6.15,
+      "m6": 6.58,
+      "y1": 67.1
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "網通設備",
@@ -12009,7 +14641,14 @@
     "price": 87.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 7.74,
+    "threeMonthReturn": 273.19,
+    "returns": {
+      "w1": 3.18,
+      "m1": 16.47,
+      "m3": 4.53,
+      "m6": 128.98,
+      "y1": 273.19
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -12043,7 +14682,14 @@
     "price": 24.8,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -18.02,
+    "threeMonthReturn": -32.15,
+    "returns": {
+      "w1": 10.47,
+      "m1": 7.83,
+      "m3": -15.93,
+      "m6": -22.38,
+      "y1": -32.15
+    },
     "industry": "數位雲端",
     "subIndustries": [
       "INTERNET應用與服務",
@@ -12069,7 +14715,14 @@
     "price": 52.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 2.35,
+    "threeMonthReturn": 315.94,
+    "returns": {
+      "w1": -9.37,
+      "m1": -5.26,
+      "m3": 2.35,
+      "m6": 183.7,
+      "y1": 315.94
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "設備儀器商"
@@ -12093,7 +14746,14 @@
     "price": 73.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 32.91,
+    "threeMonthReturn": 70.93,
+    "returns": {
+      "w1": 24.58,
+      "m1": 21.29,
+      "m3": 36.11,
+      "m6": 58.58,
+      "y1": 70.93
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "光通訊",
@@ -12119,7 +14779,14 @@
     "price": 113.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -7.72,
+    "threeMonthReturn": 64.25,
+    "returns": {
+      "w1": 14.65,
+      "m1": 17.98,
+      "m3": -9.92,
+      "m6": 11.27,
+      "y1": 64.25
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -12155,7 +14822,14 @@
     "price": 154.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -14.68,
+    "threeMonthReturn": -29.84,
+    "returns": {
+      "w1": 2.67,
+      "m1": 7.32,
+      "m3": -17.65,
+      "m6": -35.97,
+      "y1": -29.84
+    },
     "industry": "光電業",
     "subIndustries": [
       "面板業",
@@ -12184,7 +14858,14 @@
     "price": 48.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 7.02,
+    "threeMonthReturn": 29.69,
+    "returns": {
+      "w1": 0.1,
+      "m1": 10.08,
+      "m3": 8.83,
+      "m6": 20.58,
+      "y1": 29.69
+    },
     "industry": "電子通路業",
     "subIndustries": [
       "電子通路",
@@ -12216,7 +14897,14 @@
     "price": 77.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 65.67,
+    "threeMonthReturn": 292.88,
+    "returns": {
+      "w1": 11.56,
+      "m1": 22.15,
+      "m3": 64.26,
+      "m6": 169.93,
+      "y1": 292.88
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -12242,7 +14930,14 @@
     "price": 41.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -4.37,
+    "threeMonthReturn": 4.52,
+    "returns": {
+      "w1": -7.96,
+      "m1": -3.37,
+      "m3": -5.35,
+      "m6": -5.67,
+      "y1": 4.52
+    },
     "industry": "觀光餐旅",
     "subIndustries": [
       "旅宿／餐飲",
@@ -12268,7 +14963,14 @@
     "price": 241.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 12.09,
+    "threeMonthReturn": 15.59,
+    "returns": {
+      "w1": 3.88,
+      "m1": 1.26,
+      "m3": 14.49,
+      "m6": 3.21,
+      "y1": 15.59
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC設計",
@@ -12298,7 +15000,14 @@
     "price": 93.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 72.83,
+    "threeMonthReturn": 79.81,
+    "returns": {
+      "w1": -1.68,
+      "m1": 8.34,
+      "m3": 83.69,
+      "m6": 121.04,
+      "y1": 79.81
+    },
     "industry": "電子通路業",
     "subIndustries": [
       "電子通路",
@@ -12326,7 +15035,14 @@
     "price": 51.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -13.42,
+    "threeMonthReturn": -27.53,
+    "returns": {
+      "w1": -6.18,
+      "m1": -11.79,
+      "m3": -14.0,
+      "m6": -19.75,
+      "y1": -27.53
+    },
     "industry": "通信網路業",
     "subIndustries": [
       "網通設備",
@@ -12354,7 +15070,14 @@
     "price": 96.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 3.34,
+    "threeMonthReturn": 104.78,
+    "returns": {
+      "w1": 6.08,
+      "m1": 12.94,
+      "m3": 3.56,
+      "m6": 52.82,
+      "y1": 104.78
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "電子零件元件",
@@ -12382,7 +15105,14 @@
     "price": 14.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -6.33,
+    "threeMonthReturn": 16.12,
+    "returns": {
+      "w1": -3.44,
+      "m1": 2.55,
+      "m3": 2.93,
+      "m6": 3.69,
+      "y1": 16.12
+    },
     "industry": "光電業",
     "subIndustries": [
       "面板業",
@@ -12408,7 +15138,14 @@
     "price": 13.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -2.88,
+    "threeMonthReturn": -23.08,
+    "returns": {
+      "w1": 5.47,
+      "m1": 0.37,
+      "m3": -3.57,
+      "m6": -12.34,
+      "y1": -23.08
+    },
     "industry": "電機機械",
     "subIndustries": [
       "汽機車零組件"
@@ -12432,7 +15169,14 @@
     "price": 80.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 20.75,
+    "threeMonthReturn": 118.94,
+    "returns": {
+      "w1": 17.76,
+      "m1": 23.32,
+      "m3": 17.93,
+      "m6": 45.5,
+      "y1": 118.94
+    },
     "industry": "光電業",
     "subIndustries": [
       "LED",
@@ -12461,7 +15205,14 @@
     "price": 74.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 39.29,
+    "threeMonthReturn": 198.19,
+    "returns": {
+      "w1": 17.62,
+      "m1": 16.88,
+      "m3": 43.88,
+      "m6": 151.19,
+      "y1": 198.19
+    },
     "industry": "半導體業",
     "subIndustries": [
       "IC封裝測試",
@@ -12497,7 +15248,14 @@
     "price": 396.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 130.9,
+    "threeMonthReturn": 288.24,
+    "returns": {
+      "w1": 21.47,
+      "m1": 46.94,
+      "m3": 134.32,
+      "m6": 157.14,
+      "y1": 288.24
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -12523,7 +15281,14 @@
     "price": 24.35,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 2.1,
+    "threeMonthReturn": -35.07,
+    "returns": {
+      "w1": 0.83,
+      "m1": -10.15,
+      "m3": 1.46,
+      "m6": -13.65,
+      "y1": -35.07
+    },
     "industry": "綠能環保",
     "subIndustries": [
       "電池",
@@ -12553,7 +15318,14 @@
     "price": 44.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 68.97,
+    "threeMonthReturn": 52.33,
+    "returns": {
+      "w1": 39.34,
+      "m1": 65.17,
+      "m3": 69.62,
+      "m6": 69.62,
+      "y1": 52.33
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -12581,7 +15353,14 @@
     "price": 1020.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 4.62,
+    "threeMonthReturn": 340.6,
+    "returns": {
+      "w1": 6.14,
+      "m1": 14.35,
+      "m3": 3.03,
+      "m6": 72.3,
+      "y1": 340.6
+    },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
       "電子零件元件",
@@ -12607,7 +15386,14 @@
     "price": 38.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 13.41,
+    "threeMonthReturn": 36.25,
+    "returns": {
+      "w1": 11.94,
+      "m1": 15.09,
+      "m3": 19.88,
+      "m6": 11.62,
+      "y1": 36.25
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -12633,7 +15419,14 @@
     "price": 128.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 40.97,
+    "threeMonthReturn": 85.51,
+    "returns": {
+      "w1": 15.32,
+      "m1": 13.78,
+      "m3": 39.59,
+      "m6": 35.45,
+      "y1": 85.51
+    },
     "industry": "半導體業",
     "subIndustries": [
       "分離式元件",
@@ -12660,7 +15453,14 @@
     "price": 7.45,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -15.91,
+    "threeMonthReturn": -22.88,
+    "returns": {
+      "w1": -1.72,
+      "m1": -13.17,
+      "m3": -17.95,
+      "m6": -39.68,
+      "y1": -22.88
+    },
     "industry": "半導體業",
     "subIndustries": [
       "電子零件元件",
@@ -12694,7 +15494,14 @@
     "price": 56.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 173.43,
+    "threeMonthReturn": 202.67,
+    "returns": {
+      "w1": 40.27,
+      "m1": 55.28,
+      "m3": 175.43,
+      "m6": 157.86,
+      "y1": 202.67
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "被動元件",
@@ -12720,7 +15527,14 @@
     "price": 44.25,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.72,
+    "threeMonthReturn": -0.47,
+    "returns": {
+      "w1": -2.53,
+      "m1": 3.39,
+      "m3": 0.0,
+      "m6": -5.65,
+      "y1": -0.47
+    },
     "industry": "鋼鐵工業",
     "subIndustries": [
       "線材盤元",
@@ -12746,7 +15560,14 @@
     "price": 393.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 47.93,
+    "threeMonthReturn": 772.51,
+    "returns": {
+      "w1": 24.72,
+      "m1": 46.28,
+      "m3": 44.4,
+      "m6": 69.61,
+      "y1": 772.51
+    },
     "industry": "電子零組件業",
     "subIndustries": [
       "印刷電路板相關",
@@ -12775,7 +15596,14 @@
     "price": 72.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 77.56,
+    "threeMonthReturn": 63.45,
+    "returns": {
+      "w1": 34.58,
+      "m1": 61.43,
+      "m3": 78.66,
+      "m6": 71.84,
+      "y1": 63.45
+    },
     "industry": "半導體業",
     "subIndustries": [
       "產業機械",
@@ -12822,7 +15650,14 @@
     "price": 17.7,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -24.84,
+    "threeMonthReturn": -0.9,
+    "returns": {
+      "w1": 0.0,
+      "m1": -9.0,
+      "m3": -25.16,
+      "m6": -29.76,
+      "y1": -0.9
+    },
     "industry": "其他業",
     "subIndustries": [
       "織布業",
@@ -12864,7 +15699,14 @@
     "price": 33.75,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -0.59,
+    "threeMonthReturn": 1.96,
+    "returns": {
+      "w1": -0.88,
+      "m1": 0.15,
+      "m3": 0.6,
+      "m6": 0.6,
+      "y1": 1.96
+    },
     "industry": "鋼鐵工業",
     "subIndustries": [
       "線材盤元",
@@ -12890,7 +15732,14 @@
     "price": 70.4,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -9.86,
+    "threeMonthReturn": 30.13,
+    "returns": {
+      "w1": 4.45,
+      "m1": -1.54,
+      "m3": -7.25,
+      "m6": 53.21,
+      "y1": 30.13
+    },
     "industry": "其他電子業",
     "subIndustries": [
       "電子零件元件",
@@ -12918,7 +15767,14 @@
     "price": 124.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 2.9,
+    "threeMonthReturn": -12.68,
+    "returns": {
+      "w1": 2.48,
+      "m1": 0.81,
+      "m3": 7.36,
+      "m6": 5.53,
+      "y1": -12.68
+    },
     "industry": "生技醫療業",
     "subIndustries": [
       "食品加工",
@@ -12956,7 +15812,14 @@
     "price": 13.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -17.38,
+    "threeMonthReturn": -37.27,
+    "returns": {
+      "w1": 10.61,
+      "m1": 3.83,
+      "m3": -17.88,
+      "m6": -23.88,
+      "y1": -37.27
+    },
     "industry": "其他業",
     "subIndustries": [
       "服務業",
@@ -12983,7 +15846,14 @@
     "price": 88.6,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 78.81,
+    "threeMonthReturn": 209.79,
+    "returns": {
+      "w1": 3.26,
+      "m1": 49.92,
+      "m3": 80.82,
+      "m6": 191.45,
+      "y1": 209.79
+    },
     "industry": "綠能環保",
     "subIndustries": [
       "半導體化學品",
@@ -13014,7 +15884,14 @@
     "price": 88.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -8.14,
+    "threeMonthReturn": -10.39,
+    "returns": {
+      "w1": -10.57,
+      "m1": -11.2,
+      "m3": -8.71,
+      "m6": -10.57,
+      "y1": -10.39
+    },
     "industry": "文化創意業",
     "subIndustries": [
       "傳播事業",
@@ -13044,7 +15921,14 @@
     "price": 144.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -6.8,
+    "threeMonthReturn": 13.39,
+    "returns": {
+      "w1": 2.86,
+      "m1": 0.7,
+      "m3": -4.32,
+      "m6": -12.2,
+      "y1": 13.39
+    },
     "industry": "運動休閒",
     "subIndustries": [
       "休閒娛樂",
@@ -13071,7 +15955,14 @@
     "price": 40.1,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 28.94,
+    "threeMonthReturn": 27.3,
+    "returns": {
+      "w1": 0.75,
+      "m1": 0.25,
+      "m3": 35.93,
+      "m6": 25.71,
+      "y1": 27.3
+    },
     "industry": "其他業",
     "subIndustries": [
       "食品加工",
@@ -13105,7 +15996,14 @@
     "price": 40.55,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -5.7,
+    "threeMonthReturn": 1.63,
+    "returns": {
+      "w1": 1.0,
+      "m1": -7.0,
+      "m3": -6.35,
+      "m6": -0.98,
+      "y1": 1.63
+    },
     "industry": "油電燃氣業",
     "subIndustries": [
       "石油及天然氣",
@@ -13131,7 +16029,14 @@
     "price": 101.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 18.13,
+    "threeMonthReturn": 151.74,
+    "returns": {
+      "w1": 14.77,
+      "m1": 23.02,
+      "m3": 19.17,
+      "m6": -1.22,
+      "y1": 151.74
+    },
     "industry": "其他業",
     "subIndustries": [
       "傳產其他",
@@ -13157,7 +16062,14 @@
     "price": 1215.0,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 113.91,
+    "threeMonthReturn": 518.32,
+    "returns": {
+      "w1": 8.97,
+      "m1": 27.76,
+      "m3": 108.76,
+      "m6": 267.62,
+      "y1": 518.32
+    },
     "industry": "電機機械",
     "subIndustries": [
       "傳產其他",
@@ -13188,7 +16100,14 @@
     "price": 5.79,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -1.53,
+    "threeMonthReturn": -0.52,
+    "returns": {
+      "w1": 8.43,
+      "m1": 0.7,
+      "m3": -1.19,
+      "m6": -6.46,
+      "y1": -0.52
+    },
     "industry": "",
     "subIndustries": [
       "家電",
@@ -13247,7 +16166,14 @@
     "price": 3.08,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 1.99,
+    "threeMonthReturn": -49.92,
+    "returns": {
+      "w1": 5.12,
+      "m1": 0.98,
+      "m3": -1.91,
+      "m6": -31.56,
+      "y1": -49.92
+    },
     "industry": "",
     "subIndustries": [
       "汽機車零組件",
@@ -13279,7 +16205,14 @@
     "price": 11.05,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 37.78,
+    "threeMonthReturn": 45.78,
+    "returns": {
+      "w1": 19.59,
+      "m1": 9.95,
+      "m3": 38.13,
+      "m6": 80.56,
+      "y1": 45.78
+    },
     "industry": "",
     "subIndustries": [
       "電子零件元件",
@@ -13312,7 +16245,14 @@
     "price": 14.9,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -11.31,
+    "threeMonthReturn": 17.32,
+    "returns": {
+      "w1": 3.11,
+      "m1": 1.71,
+      "m3": -9.15,
+      "m6": -5.7,
+      "y1": 17.32
+    },
     "industry": "其他業",
     "subIndustries": [
       "汽車服務相關",
@@ -13353,7 +16293,14 @@
     "price": 70.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -22.06,
+    "threeMonthReturn": -44.21,
+    "returns": {
+      "w1": 2.18,
+      "m1": 0.29,
+      "m3": -19.75,
+      "m6": -25.92,
+      "y1": -44.21
+    },
     "industry": "運動休閒",
     "subIndustries": [
       "產業機械",
@@ -13385,7 +16332,14 @@
     "price": 37.2,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 19.23,
+    "threeMonthReturn": 43.85,
+    "returns": {
+      "w1": 7.36,
+      "m1": 6.59,
+      "m3": 20.0,
+      "m6": 17.54,
+      "y1": 43.85
+    },
     "industry": "其他業",
     "subIndustries": [
       "營造工程",
@@ -13411,7 +16365,14 @@
     "price": 78.3,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -4.28,
+    "threeMonthReturn": -20.95,
+    "returns": {
+      "w1": 3.3,
+      "m1": 2.76,
+      "m3": -5.09,
+      "m6": -22.86,
+      "y1": -20.95
+    },
     "industry": "其他業",
     "subIndustries": [
       "汽車服務相關",
@@ -13437,7 +16398,14 @@
     "price": 36.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": 41.75,
+    "threeMonthReturn": 94.15,
+    "returns": {
+      "w1": 4.29,
+      "m1": 34.69,
+      "m3": 40.93,
+      "m6": 58.7,
+      "y1": 94.15
+    },
     "industry": "文化創意業",
     "subIndustries": [
       "傳產其他",
@@ -13463,7 +16431,14 @@
     "price": 106.5,
     "marketCap": 0.0,
     "date": "2026-04-17",
-    "threeMonthReturn": -23.38,
+    "threeMonthReturn": -33.44,
+    "returns": {
+      "w1": 2.9,
+      "m1": -15.48,
+      "m3": -25.0,
+      "m6": -39.14,
+      "y1": -33.44
+    },
     "industry": "鋼鐵工業",
     "subIndustries": [
       "條鋼",

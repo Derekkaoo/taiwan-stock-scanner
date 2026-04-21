@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
-import type { Toast } from './types'
+import type { Toast, ReturnPeriod } from './types'
+import { RETURN_PERIOD_LABELS } from './types'
 import { useStocks } from './hooks/useStocks'
 import { useKline, calcThreeMonthReturn } from './hooks/useKline'
 import { StockTable } from './components/StockTable'
@@ -96,6 +97,7 @@ export default function App() {
 
   const [view,      setView]      = useState<View>('group')
   const [groupSort, setGroupSort] = useState<GroupSort>('delta')
+  const [returnPeriod, setReturnPeriod] = useState<ReturnPeriod>('y1')
   const [toasts,    setToasts]    = useState<Toast[]>([])
   const searchTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
@@ -129,6 +131,11 @@ export default function App() {
     : null
   const maxDelta = stockCount ? Math.max(...filteredStocks.map(x => x.delta)) : null
 
+  const getStockReturn = (s: typeof filteredStocks[number]): number | null => {
+    const v = s.returns && s.returns[returnPeriod]
+    return v == null ? s.threeMonthReturn : v
+  }
+
   const sortedGroupEntries = [...groupEntries].sort(([, stocksA], [, stocksB]) => {
     switch (groupSort) {
       case 'delta': {
@@ -137,10 +144,13 @@ export default function App() {
         return avgB - avgA
       }
       case 'return': {
-        const retA = stocksA.filter(s => s.threeMonthReturn !== null)
-        const retB = stocksB.filter(s => s.threeMonthReturn !== null)
-        const avgA = retA.length ? retA.reduce((s, x) => s + x.threeMonthReturn!, 0) / retA.length : -999
-        const avgB = retB.length ? retB.reduce((s, x) => s + x.threeMonthReturn!, 0) / retB.length : -999
+        const retVals = (list: typeof stocksA) => list
+          .map(getStockReturn)
+          .filter((x): x is number => x != null)
+        const a = retVals(stocksA)
+        const b = retVals(stocksB)
+        const avgA = a.length ? a.reduce((s, x) => s + x, 0) / a.length : -999
+        const avgB = b.length ? b.reduce((s, x) => s + x, 0) / b.length : -999
         return avgB - avgA
       }
       default:
@@ -252,8 +262,31 @@ export default function App() {
               }}
             >
               <option value="delta">均增持幅度 ↓</option>
-              <option value="return">1年漲幅 ↓</option>
+              <option value="return">漲幅 ↓</option>
             </select>
+
+            <span className="text-xs" style={{ color: 'var(--color-text-muted)' }}>漲幅期間：</span>
+            <div className="flex items-center gap-1">
+              {(['w1','m1','m3','m6','y1'] as ReturnPeriod[]).map(p => {
+                const active = returnPeriod === p
+                return (
+                  <button
+                    key={p}
+                    onClick={() => setReturnPeriod(p)}
+                    className="text-xs px-2 py-1 rounded border transition-colors"
+                    style={{
+                      background: active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                      borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                      color: active ? '#fff' : 'var(--color-text-secondary)',
+                      fontWeight: active ? 600 : 400,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {RETURN_PERIOD_LABELS[p]}
+                  </button>
+                )
+              })}
+            </div>
           </>
         )}
 
@@ -342,13 +375,14 @@ export default function App() {
                   })
                 }}
                 getFromCache={getFromCache}
+                returnPeriod={returnPeriod}
               />
             ))}
           </div>
         )}
 
         {view === 'table' && stockCount > 0 && (
-          <StockTable stocks={filteredStocks} sort={sort} onSort={key => updateSort(key)} />
+          <StockTable stocks={filteredStocks} sort={sort} onSort={key => updateSort(key)} returnPeriod={returnPeriod} />
         )}
       </main>
 
