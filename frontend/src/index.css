@@ -113,3 +113,19 @@ body {
 .animate-pulse   { animation: pulse 1.2s ease-in-out infinite; }
 .animate-slidein { animation: slideInRight 0.2s ease; }
 .animate-fadein  { animation: fadeIn 0.15s ease; }
+
+/* ── 瀏覽人數：平常隱形，反白（選取）才看得到 ── */
+.visitor-counter {
+  color: var(--color-bg-800);         /* 跟背景同色，不被看到 */
+  user-select: text;                   /* 允許被選取 */
+  font-size: 11px;
+  letter-spacing: 0.3px;
+}
+.visitor-counter::selection {
+  color: var(--color-text-primary);
+  background: var(--color-accent-blue);
+}
+.visitor-counter::-moz-selection {
+  color: var(--color-text-primary);
+  background: var(--color-accent-blue);
+}
