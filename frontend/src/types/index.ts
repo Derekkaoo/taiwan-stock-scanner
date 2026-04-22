@@ -18,6 +18,8 @@ export interface StockRow {
   groups?: string[]                         // 股票同時屬於多個產業別
   subsByGroup?: Record<string, string[]>   // 每個產業別下該股票相關的細產業
   returns?: Partial<Record<ReturnPeriod, number | null>>  // 各期間漲幅 %
+  revenueYoY?: number | null            // 月營收年增率 %
+  revenueMonth?: string | null          // 該月營收資料月份 YYYY-MM
 }
 
 /** 漲幅期間 key */

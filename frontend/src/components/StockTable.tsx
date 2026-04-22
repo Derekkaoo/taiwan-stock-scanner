@@ -63,6 +63,17 @@ export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
         )
       }
     },
+    { key: 'revenueYoY', label: '月營收YoY', align: 'right', mono: true,
+      render: (s) => {
+        const r = s.revenueYoY
+        if (r == null) return <span style={{ color: 'var(--color-text-muted)' }}>—</span>
+        return (
+          <span className="tabular font-mono" style={{ color: r >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
+            {r >= 0 ? '+' : ''}{r.toFixed(1)}%
+          </span>
+        )
+      }
+    },
   ]
 
   const { getFromCache, loadFromJson } = useKline()

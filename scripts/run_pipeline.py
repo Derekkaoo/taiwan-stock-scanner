@@ -224,6 +224,30 @@ def load_category_map():
         return json.load(f)
 
 
+REVENUE_PATH = Path(__file__).parent.parent / "backend" / "db" / "monthly_revenue.json"
+
+
+def load_monthly_revenue():
+    """回傳 {'month': 'YYYY-MM', 'data': {sid: {'yoy': ..., 'revenue': ..., 'name': ...}}}"""
+    if not REVENUE_PATH.exists():
+        logger.warning("月營收資料不存在：%s（跑 fetch_monthly_revenue.py 產生）", REVENUE_PATH)
+        return {"month": None, "data": {}}
+    with open(REVENUE_PATH, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def refresh_monthly_revenue():
+    """嘗試自動更新月營收 JSON（從 MOPS 重抓）；失敗就用既有的"""
+    try:
+        sys.path.insert(0, str(Path(__file__).parent))
+        import fetch_monthly_revenue
+        fetch_monthly_revenue.run()
+    except SystemExit:
+        logger.warning("月營收 scraper 呼叫 sys.exit，保留現有 monthly_revenue.json")
+    except Exception as e:
+        logger.warning("月營收更新失敗：%s（使用現有快取）", e)
+
+
 
 def assign_groups(sid, moneydj_map, category_map):
     """
@@ -280,11 +304,15 @@ def run():
     industry_map  = fetch_industry_map()
     moneydj_map   = load_moneydj_map()
     category_map  = load_category_map()
+    refresh_monthly_revenue()  # 嘗試從 MOPS 重抓最新月營收
+    revenue_map   = load_monthly_revenue()
     klines        = fetch_klines(stock_ids)
 
     logger.info("MoneyDJ 資料庫載入：%d 支", len(moneydj_map))
     logger.info("產業別對應表載入：%d 個細產業 → %d 個產業別",
                 len(category_map), len(set(category_map.values())))
+    logger.info("月營收資料月份：%s（%d 支）",
+                revenue_map.get("month") or "(無)", len(revenue_map.get("data", {})))
 
     stocks = []
     for h in holdings:
@@ -303,6 +331,7 @@ def run():
             cat = category_map.get(sub_name)
             if cat:
                 subs_by_group.setdefault(cat, []).append(sub_name)
+        rev_entry = revenue_map.get("data", {}).get(sid, {})
         stocks.append({
             "id":               sid,
             "name":             name,
@@ -319,6 +348,8 @@ def run():
             "industry":         industry,
             "subIndustries":    all_subs,            # 完整列表
             "subsByGroup":      subs_by_group,       # {產業別: [該股票在此產業別下的細產業]}
+            "revenueYoY":       rev_entry.get("yoy"),        # 月營收年增率 %
+            "revenueMonth":     revenue_map.get("month"),    # 該月營收資料月份 YYYY-MM
         })
 
     with open(DATA_DIR / "stocks.json", "w", encoding="utf-8") as f:
