@@ -121,23 +121,55 @@ export function useKline() {
       } catch { /* continue */ }
     }
 
-    const mockBars = generateMockKline(stockId)
-    cache.current.set(stockId, mockBars)
-    setStatusMap(prev => ({ ...prev, [stockId]: 'ok' }))
-    return mockBars
+    // 不再用 mock 資料（避免使用者誤以為真資料）
+    setStatusMap(prev => ({ ...prev, [stockId]: 'error' }))
+    return []
   }, [])
 
+  // 已載入過的族群檔（避免重複 fetch 同一個族群檔）
+  const loadedGroups = useRef<Set<string>>(new Set())
+
+  const loadGroupFile = useCallback(async (groupName: string): Promise<void> => {
+    if (loadedGroups.current.has(groupName)) return
+    loadedGroups.current.add(groupName)
+    try {
+      // 把 / 先換成 _（與 pipeline 一致），再 URL-encode 中文字
+      const safe = encodeURIComponent(groupName.replace(/[/\\]/g, '_'))
+      const resp = await fetch(`/data/klines/${safe}.json`)
+      if (!resp.ok) {
+        console.warn(`[useKline] klines/${safe}.json 不存在 (${resp.status})`)
+        return
+      }
+      const json: Record<string, KlineBar[]> = await resp.json()
+      for (const [id, bars] of Object.entries(json)) {
+        if (bars && bars.length > 0) {
+          // 永遠覆蓋：族群檔的資料是最新源頭，避免 mock 卡住
+          cache.current.set(id, bars)
+        }
+      }
+    } catch (e) {
+      console.warn(`[useKline] 載入 ${groupName} 族群檔失敗`, e)
+    }
+  }, [])
+
+  // 展開族群時呼叫：先抓對應族群檔（一個 HTTP，拿該族群所有股票的 K 線），
+  // 若檔案缺或缺某支，再用 Yahoo fetchOne 作 fallback
   const fetchGroup = useCallback(async (
+    groupName: string,
     stockIds: string[],
     onEach?: (id: string, bars: KlineBar[]) => void,
   ) => {
+    await loadGroupFile(groupName)
     const tasks = stockIds.map(async (id) => {
-      const bars = await fetchOne(id)
+      let bars = cache.current.get(id)
+      if (!bars) {
+        bars = await fetchOne(id)
+      }
       onEach?.(id, bars)
       return { id, bars }
     })
     await Promise.allSettled(tasks)
-  }, [fetchOne])
+  }, [fetchOne, loadGroupFile])
 
   const getFromCache = useCallback((stockId: string) => {
     return cache.current.get(stockId) ?? null

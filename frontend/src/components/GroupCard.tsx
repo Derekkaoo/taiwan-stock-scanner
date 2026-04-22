@@ -194,7 +194,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnP
                   </div>
 
                   <div className="p-1">
-                    {bars ? (
+                    {bars && bars.length > 0 ? (
                       <CandlestickSVG
                         data={bars.slice(-65)}
                         fullData={bars}

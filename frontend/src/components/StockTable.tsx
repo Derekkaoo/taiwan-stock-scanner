@@ -67,12 +67,22 @@ export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
       render: (s) => {
         const r = s.revenueYoY
         if (r == null) return <span style={{ color: 'var(--color-text-muted)' }}>—</span>
-        // 判斷是否為「近期新公佈」：revenueFirstSeen 在 7 天內
+        // 判斷是否為「近期新公佈」：今天在該營收月份的「下一個月 1-10 號」
+        // （MOPS 在隔月 1-10 號陸續公告當月營收）
         let isFresh = false
-        if (s.revenueFirstSeen) {
-          const seen = new Date(s.revenueFirstSeen)
-          const days = (Date.now() - seen.getTime()) / (1000 * 60 * 60 * 24)
-          isFresh = days >= 0 && days <= 7
+        if (s.revenueMonth) {
+          const m = /^(\d{4})-(\d{2})$/.exec(s.revenueMonth)
+          if (m) {
+            const yy = parseInt(m[1], 10)
+            const mm = parseInt(m[2], 10)
+            const pubYear = mm === 12 ? yy + 1 : yy
+            const pubMonth = mm === 12 ? 1 : mm + 1
+            const now = new Date()
+            isFresh = now.getFullYear() === pubYear
+                   && now.getMonth() + 1 === pubMonth
+                   && now.getDate() >= 1
+                   && now.getDate() <= 10
+          }
         }
         return (
           <span className="inline-flex items-center gap-1 tabular font-mono justify-end">
@@ -95,15 +105,24 @@ export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
     },
   ]
 
-  const { getFromCache, loadFromJson } = useKline()
+  const { getFromCache, fetchGroup } = useKline()
   const [expandedId, setExpandedId] = useState<string | null>(null)
+  const [, forceRerender] = useState(0)
 
-  useEffect(() => {
-    loadFromJson()
-  }, [])
 
-  const handleRowClick = (id: string) => {
-    setExpandedId(prev => prev === id ? null : id)
+
+  const handleRowClick = async (id: string) => {
+    const willExpand = expandedId !== id
+    setExpandedId(willExpand ? id : null)
+    if (!willExpand) return
+    // Lazy-load K 線資料：找該股票所屬族群檔（第一個 group）
+    const stock = stocks.find(st => st.id === id)
+    const group = stock?.groups?.[0] ?? stock?.group
+    if (stock && group && !getFromCache(id)) {
+      await fetchGroup(group, [id])
+      // cache 更新但 useRef 不觸發 re-render → 用 counter 強制刷新
+      forceRerender(v => v + 1)
+    }
   }
 
   if (!stocks.length) {
@@ -208,7 +227,7 @@ export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
                         ))}
                       </div>
                       <div style={{ width: '50%', minWidth: 200 }}>
-                        {cached ? (
+                        {cached && cached.length > 0 ? (
                           <CandlestickSVG
                             data={cached.slice(-90)}
 			    fullData={cached}

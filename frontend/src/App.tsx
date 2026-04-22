@@ -110,7 +110,7 @@ export default function App() {
 
   useEffect(() => {
     loadData()
-    loadFromJson()
+    // 不再一次載入所有 K 線（lazy-load per group on expand 以省頻寬）
   }, [])
 
   const handleRefresh = useCallback(async () => {
@@ -370,7 +370,7 @@ export default function App() {
                 groupName={name}
                 stocks={stks}
                 fetchGroup={async (ids, onEach) => {
-                  await fetchGroup(ids, (id, bars) => {
+                  await fetchGroup(name, ids, (id, bars) => {
                     onEach?.(id, bars)
                     const ret = calcThreeMonthReturn(bars)
                     if (ret !== null) updateStockReturn(id, ret)
