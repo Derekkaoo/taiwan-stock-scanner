@@ -9,11 +9,16 @@ on:
     - cron: '0 4 * * 6'
     # 週六 10:00 UTC = 台灣時間 18:00（補跑，若資料未更新）
     - cron: '0 10 * * 6'
-    # 週一到週五 07:17 UTC ≈ 台灣時間 15:17（每日 K 線更新）
+    # 週一到週五 06:37 UTC ≈ 台灣時間 14:37（每日 K 線更新）
     # 說明：
-    # - 用 07:17 避開整點，GitHub Actions 整點時段 runner 擁擠易延遲 30~90 分
-    # - 15:17 TW 是收盤後 1h47m，Yahoo Finance 此時已有當日完整資料
-    - cron: '17 7 * * 1-5'
+    # - 用 06:37 避開整點，GitHub Actions 整點時段 runner 擁擠易延遲 30~90 分
+    # - 14:37 TW 是收盤後 67 分鐘，Yahoo Finance 此時已有當日完整資料
+    # - 含 delay 估計實際跑完約 15:00~15:30 TW
+    - cron: '37 6 * * 1-5'
+    # 每月 1-10 號 06:43 UTC ≈ 台灣時間 14:43（完整 pipeline 以更新月營收 YoY）
+    # MOPS 每月 10 號前陸續公告當月營收，這 10 天每天跑一次確保抓到最新
+    # 含 delay 估計實際跑完約 15:10~15:40 TW
+    - cron: '43 6 1-10 * *'
   workflow_dispatch:
 
 jobs:
@@ -34,16 +39,19 @@ jobs:
       - name: 判斷執行模式
         id: mode
         run: |
-          DAY=$(date +%u)
-          if [ "$DAY" = "6" ]; then
+          DOW=$(date +%u)      # 星期幾 (1-7, Sat=6)
+          DOM=$(date +%-d)     # 每月第幾天 (1-31)
+          # Saturday 或每月 1-10 號 → 跑完整 pipeline（含月營收重抓）
+          # 其他 → 只跑 K 線更新
+          if [ "$DOW" = "6" ] || [ "$DOM" -le 10 ]; then
             echo "mode=full" >> $GITHUB_OUTPUT
           else
             echo "mode=klines" >> $GITHUB_OUTPUT
           fi
 
-      - name: 完整更新（週六，含自動偵測）
+      - name: 完整更新（週六 或 每月 1-10 號）
         if: steps.mode.outputs.mode == 'full'
-        run: python scripts/run_pipeline.py
+        run: python scripts/run_pipeline.py --force
 
       - name: 每日 K 線更新（週一至週五）
         if: steps.mode.outputs.mode == 'klines'
@@ -76,7 +84,4 @@ jobs:
       - name: 部署到 Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TAIWAN_STOCK_SCANNER }}
-          channelId: live
-          projectId: taiwan-stock-scanner
+          repoT
