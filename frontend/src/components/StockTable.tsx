@@ -2,8 +2,9 @@ import type { StockRow, SortState, ReturnPeriod } from '../types'
 import { RETURN_PERIOD_LABELS } from '../types'
 import { THEME_CSS_MAP, TAG_COLORS, getGroupCssClass } from '../constants/themeGroups'
 import { CandlestickSVG } from './CandlestickSVG'
+import { FundamentalsPanel } from './FundamentalsPanel'
 import { useKline } from '../hooks/useKline'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 interface ColDef {
   key: keyof StockRow
@@ -226,7 +227,13 @@ export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
                     key={stock.id + '-kline'}
                     style={{ background: 'var(--color-bg-700)', borderBottom: '1px solid var(--color-border)' }}
                   >
-                    <td colSpan={COLS.length} className="p-3">
+                    <td colSpan={COLS.length} className="p-0 md:p-3">
+                      {/*
+                        手機（< md）：position: sticky + left:0 + width:100vw
+                          → 展開內容黏在視窗左邊，不用橫向捲動就能看
+                        桌面（≥ md）：靜態佈局，跟原本一樣
+                      */}
+                      <div className="sticky left-0 w-screen max-w-full p-3 box-border md:static md:left-auto md:w-auto md:max-w-none md:p-0">
                       <div className="flex items-center flex-wrap gap-2 mb-2">
                         <span className="font-mono font-bold tabular text-xs" style={{ color: 'var(--color-accent-cyan)' }}>
                           {stock.id}
@@ -239,20 +246,47 @@ export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
                           </span>
                         ))}
                       </div>
-                      <div style={{ width: '50%', minWidth: 200 }}>
-                        {cached && cached.length > 0 ? (
-                          <CandlestickSVG
-                            data={cached.slice(-90)}
-			    fullData={cached}
-                            width={600}
-                            height={200}
-                            showVolume={true}
-                            showMA={true}
-                            className="w-full"
-                          />
-                        ) : (
-                          <span style={{ color: 'var(--color-text-muted)', fontSize: 11 }}>⚠ 無 K 線資料</span>
-                        )}
+                      <div className="flex flex-col md:flex-row gap-3 md:gap-4 items-stretch">
+                        <div className="w-full md:flex-1 md:min-w-0">
+                          {cached && cached.length > 0 ? (
+                            <CandlestickSVG
+                              data={cached.slice(-90)}
+                              fullData={cached}
+                              width={600}
+                              height={200}
+                              showVolume={true}
+                              showMA={true}
+                              className="w-full"
+                            />
+                          ) : (
+                            <span style={{ color: 'var(--color-text-muted)', fontSize: 11 }}>⚠ 無 K 線資料</span>
+                          )}
+                        </div>
+                        {/* 分隔線：桌面直線、手機橫線 */}
+                        <div
+                          aria-hidden
+                          className="hidden md:block self-stretch"
+                          style={{
+                            width: 1,
+                            background: 'linear-gradient(to bottom, transparent, var(--color-border) 15%, var(--color-border) 85%, transparent)',
+                            flexShrink: 0,
+                          }}
+                        />
+                        <div
+                          aria-hidden
+                          className="block md:hidden w-full"
+                          style={{
+                            height: 1,
+                            background: 'linear-gradient(to right, transparent, var(--color-border) 15%, var(--color-border) 85%, transparent)',
+                          }}
+                        />
+                        <div
+                          className="w-full md:flex-1 md:min-w-0"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FundamentalsPanel fundamentals={stock.fundamentals} />
+                        </div>
+                      </div>
                       </div>
                     </td>
                   </tr>

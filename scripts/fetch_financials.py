@@ -1,0 +1,303 @@
+#!/usr/bin/env python3
+"""
+fetch_financials.py 抓 FinMind 月營收 + 季財報，算出 4 個 YoY 陣列
+
+需要環境變數 FINMIND_TOKEN（或 .env 檔）
+輸出：backend/db/financials.json
+  {
+    "2330": {
+      "revenueYoY":         [{"date": "2024-04", "yoy": 28.5}, ...12 個月],
+      "grossMarginYoY":     [{"quarter": "2024Q1", "yoy": 3.2}, ...8 季],
+      "operatingMarginYoY": [{"quarter": "2024Q1", "yoy": 4.1}, ...8 季],
+      "epsYoY":             [{"quarter": "2024Q1", "yoy": 18.7}, ...8 季],
+    },
+    ...
+  }
+
+FinMind 免費方案限 600 req/小時，腳本會自動節流；若額度用完就用現有快取。
+"""
+import os, json, logging, re, sys, time
+from pathlib import Path
+from collections import defaultdict
+import requests
+
+# 讀 .env
+ENV_PATH = Path(__file__).parent.parent / ".env"
+if ENV_PATH.exists():
+    for line in ENV_PATH.read_text(encoding="utf-8").splitlines():
+        if "=" in line and not line.strip().startswith("#"):
+            k, v = line.split("=", 1)
+            os.environ.setdefault(k.strip(), v.strip())
+
+TOKEN = os.environ.get("FINMIND_TOKEN", "")
+if not TOKEN:
+    print("ERROR: 找不到 FINMIND_TOKEN")
+    sys.exit(1)
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+logger = logging.getLogger(__name__)
+
+API = "https://api.finmindtrade.com/api/v4/data"
+DATA_DIR = Path(__file__).parent.parent / "frontend" / "public" / "data"
+DB_DIR   = Path(__file__).parent.parent / "backend" / "db"
+OUT_PATH = DB_DIR / "financials.json"
+
+MONTHS_BACK = 13  # 多抓 1 個月，才能算 YoY
+QUARTERS_BACK = 8  # 最近 8 季 YoY
+QUARTERS_FETCH = QUARTERS_BACK + 4  # 多抓 4 季，算同季 YoY
+
+
+def load_stock_ids():
+    """從 stocks.json 拿到要抓的股票代號"""
+    stocks_path = DATA_DIR / "stocks.json"
+    if not stocks_path.exists():
+        logger.error("stocks.json 不存在")
+        return []
+    with open(stocks_path, encoding="utf-8") as f:
+        stocks = json.load(f)
+    return list({s["id"] for s in stocks})
+
+
+def fetch(dataset, stock_id, start_date):
+    params = {"dataset": dataset, "data_id": stock_id, "start_date": start_date, "token": TOKEN}
+    try:
+        r = requests.get(API, params=params, timeout=30)
+        if r.status_code == 402:
+            logger.warning("402 額度用完，停止")
+            return None
+        j = r.json()
+        if j.get("status") != 200:
+            return None
+        return j.get("data", [])
+    except Exception as e:
+        logger.debug("fetch %s %s 失敗：%s", dataset, stock_id, e)
+        return None
+
+
+def parse_revenue_yoy(records):
+    """從月營收紀錄算 YoY。回傳最近 12 個月的 [{date: YYYY-MM, yoy: 28.5}, ...]"""
+    if not records:
+        return []
+    # 用 (year, month) 建 map
+    by_ym = {}
+    for r in records:
+        y, m = r.get("revenue_year"), r.get("revenue_month")
+        rev = r.get("revenue")
+        if y and m and rev:
+            by_ym[(y, m)] = rev
+    if not by_ym:
+        return []
+    # 排序取最新的 12 個月
+    keys = sorted(by_ym.keys())[-MONTHS_BACK:]
+    result = []
+    for (y, m) in keys:
+        curr = by_ym.get((y, m))
+        prev = by_ym.get((y - 1, m))
+        if curr and prev and prev > 0:
+            yoy = round((curr - prev) / prev * 100, 2)
+            result.append({"date": f"{y:04d}-{m:02d}", "yoy": yoy})
+    return result[-12:]  # 最多 12 筆
+
+
+def _quarter_str(date_str):
+    """把 "2024-03-31" 轉成 "2024Q1" """
+    m = re.match(r"^(\d{4})-(\d{2})-", date_str or "")
+    if not m:
+        return None
+    year = int(m.group(1))
+    month = int(m.group(2))
+    q = (month - 1) // 3 + 1
+    return f"{year}Q{q}"
+
+
+def parse_financial_yoy(records):
+    """從季財報紀錄算出 grossMarginYoY, operatingMarginYoY, epsYoY。"""
+    # by_q = {"2024Q1": {"Revenue": ..., "GrossProfit": ..., "OperatingIncome": ..., "EPS": ...}}
+    by_q = defaultdict(dict)
+    for r in records:
+        qstr = _quarter_str(r.get("date", ""))
+        if not qstr:
+            continue
+        t = r.get("type", "")
+        v = r.get("value")
+        if v is None:
+            continue
+        if t in ("Revenue", "GrossProfit", "OperatingIncome", "EPS"):
+            by_q[qstr][t] = v
+
+    # Build list of quarters sorted
+    quarters = sorted(by_q.keys())
+
+    def get_yoy_series(compute_metric):
+        """compute_metric(q_data) 回傳 該季指標值；YoY = (curr - prev_year) / abs(prev_year)"""
+        series = []
+        for q in quarters:
+            curr = compute_metric(by_q[q])
+            # 找去年同季
+            y, qn = q.split("Q")
+            prev_q = f"{int(y)-1}Q{qn}"
+            prev = compute_metric(by_q.get(prev_q, {}))
+            if curr is not None and prev is not None and abs(prev) > 0.001:
+                yoy = round((curr - prev) / abs(prev) * 100, 2)
+                series.append({"quarter": q, "yoy": yoy})
+        return series[-QUARTERS_BACK:]
+
+    def gross_margin(d):
+        rev, gp = d.get("Revenue"), d.get("GrossProfit")
+        if rev and gp and rev > 0:
+            return gp / rev * 100
+        return None
+
+    def op_margin(d):
+        rev, oi = d.get("Revenue"), d.get("OperatingIncome")
+        if rev and oi and rev > 0:
+            return oi / rev * 100
+        return None
+
+    def eps(d):
+        return d.get("EPS")
+
+    return (
+        get_yoy_series(gross_margin),
+        get_yoy_series(op_margin),
+        get_yoy_series(eps),
+    )
+
+
+def load_existing():
+    if OUT_PATH.exists():
+        try:
+            with open(OUT_PATH, encoding="utf-8") as f:
+                return json.load(f)
+        except:
+            return {}
+    return {}
+
+
+
+def expected_latest_revenue_month(today):
+    """今天可以預期拿到的最新月營收（MOPS 規定隔月 10 號前公告，以 10 號為界線）"""
+    y, m, d = today.year, today.month, today.day
+    if d >= 10:
+        # 10 號（含）以後，上個月資料已公告
+        prev_y, prev_m = (y, m - 1) if m > 1 else (y - 1, 12)
+    else:
+        # 1~9 號，上個月還沒全部公告 → 用上上月
+        if m > 2:
+            prev_y, prev_m = y, m - 2
+        elif m == 2:
+            prev_y, prev_m = y - 1, 12
+        else:
+            prev_y, prev_m = y - 1, 11
+    return f"{prev_y:04d}-{prev_m:02d}"
+
+
+def expected_latest_quarter(today):
+    """今天可以預期拿到的最新已公告季財報"""
+    y, m, d = today.year, today.month, today.day
+    if m > 11 or (m == 11 and d >= 15):
+        return f"{y}Q3"
+    elif m > 8 or (m == 8 and d >= 15):
+        return f"{y}Q2"
+    elif m > 5 or (m == 5 and d >= 16):
+        return f"{y}Q1"
+    else:
+        return f"{y-1}Q4"
+
+
+def should_refresh_revenue(entry, today):
+    if not entry:
+        return True
+    arr = entry.get("revenueYoY") or []
+    if not arr:
+        return True
+    last = arr[-1].get("date", "")
+    return last < expected_latest_revenue_month(today)
+
+
+def should_refresh_financials(entry, today):
+    if not entry:
+        return True
+    arr = entry.get("epsYoY") or []
+    if not arr:
+        return True
+    last = arr[-1].get("quarter", "")
+    return last < expected_latest_quarter(today)
+
+
+def run():
+    stock_ids = load_stock_ids()
+    if not stock_ids:
+        return
+    logger.info("共 %d 支股票要抓", len(stock_ids))
+
+    # 起始日期：月營收多抓 2 年（才能算 12 個月 YoY）；財報抓近 3 年（要 8 季 YoY）
+    today = time.strftime("%Y-%m-%d")
+    rev_start = f"{int(today[:4]) - 2}-01-01"
+    fin_start = f"{int(today[:4]) - 3}-01-01"
+
+    existing = load_existing()
+    result = {}
+
+    from datetime import datetime
+    today = datetime.now()
+
+    total = len(stock_ids)
+    skipped = 0
+    fetched_rev = 0
+    fetched_fin = 0
+    for i, sid in enumerate(stock_ids, 1):
+        entry = existing.get(sid, {}).copy()  # 從快取起步
+
+        need_rev = should_refresh_revenue(entry, today)
+        need_fin = should_refresh_financials(entry, today)
+
+        if not need_rev and not need_fin:
+            # 這支資料是最新的，跳過
+            result[sid] = entry
+            skipped += 1
+            continue
+
+        if need_rev:
+            rev_records = fetch("TaiwanStockMonthRevenue", sid, rev_start)
+            time.sleep(0.3)
+            if rev_records is not None:
+                revenue_yoy = parse_revenue_yoy(rev_records)
+                if revenue_yoy:
+                    entry["revenueYoY"] = revenue_yoy
+                    fetched_rev += 1
+
+        if need_fin:
+            fin_records = fetch("TaiwanStockFinancialStatements", sid, fin_start)
+            time.sleep(0.3)
+            if fin_records is not None:
+                gm_yoy, om_yoy, eps_yoy = parse_financial_yoy(fin_records)
+                if gm_yoy or om_yoy or eps_yoy:
+                    entry["grossMarginYoY"]     = gm_yoy
+                    entry["operatingMarginYoY"] = om_yoy
+                    entry["epsYoY"]             = eps_yoy
+                    fetched_fin += 1
+
+        # 若 entry 仍然空的（新股票 + 兩個 API 都失敗），放棄此支
+        if entry:
+            result[sid] = entry
+
+        if i % 20 == 0:
+            logger.info("進度 %d/%d（剛處理：%s，略過 %d、抓 rev %d / fin %d）",
+                        i, total, sid, skipped, fetched_rev, fetched_fin)
+            DB_DIR.mkdir(parents=True, exist_ok=True)
+            with open(OUT_PATH, "w", encoding="utf-8") as f:
+                json.dump(result, f, ensure_ascii=False, indent=2)
+
+    DB_DIR.mkdir(parents=True, exist_ok=True)
+    with open(OUT_PATH, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+
+    # 簡短統計
+    n_with = sum(1 for v in result.values() if v.get("revenueYoY") or v.get("epsYoY"))
+    logger.info("完成：%d 支有資料 / 總 %d 支", n_with, total)
+    logger.info("輸出：%s", OUT_PATH)
+
+
+if __name__ == "__main__":
+    run()

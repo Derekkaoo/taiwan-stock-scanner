@@ -36,6 +36,30 @@ function normalizeRow(raw: Record<string, unknown>): StockRow {
     revenueYoY:   raw.revenueYoY != null ? Number(raw.revenueYoY) : null,
     revenueMonth: raw.revenueMonth ? String(raw.revenueMonth) : null,
     revenueFirstSeen: raw.revenueFirstSeen ? String(raw.revenueFirstSeen) : null,
+    fundamentals: parseFundamentals(raw.fundamentals),
+  }
+}
+
+function parseFundamentals(raw: unknown): StockRow['fundamentals'] {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return undefined
+  const r = raw as Record<string, unknown>
+  const parseDateArr = (v: unknown) => Array.isArray(v)
+    ? (v as Array<Record<string, unknown>>)
+        .filter(o => o && typeof o === 'object')
+        .map(o => ({ date: String(o.date ?? ''), yoy: Number(o.yoy ?? 0) }))
+        .filter(x => x.date)
+    : undefined
+  const parseQArr = (v: unknown) => Array.isArray(v)
+    ? (v as Array<Record<string, unknown>>)
+        .filter(o => o && typeof o === 'object')
+        .map(o => ({ quarter: String(o.quarter ?? ''), yoy: Number(o.yoy ?? 0) }))
+        .filter(x => x.quarter)
+    : undefined
+  return {
+    revenueYoY:         parseDateArr(r.revenueYoY),
+    grossMarginYoY:     parseQArr(r.grossMarginYoY),
+    operatingMarginYoY: parseQArr(r.operatingMarginYoY),
+    epsYoY:             parseQArr(r.epsYoY),
   }
 }
 

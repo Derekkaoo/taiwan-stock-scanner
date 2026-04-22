@@ -225,6 +225,28 @@ def load_category_map():
 
 
 REVENUE_PATH = Path(__file__).parent.parent / "backend" / "db" / "monthly_revenue.json"
+FINANCIALS_PATH = Path(__file__).parent.parent / "backend" / "db" / "financials.json"
+
+
+def load_financials():
+    """讀 FinMind 抓下來的基本面資料（若不存在回空 dict）"""
+    if not FINANCIALS_PATH.exists():
+        logger.warning("財務資料不存在：%s（請跑 fetch_financials.py）", FINANCIALS_PATH)
+        return {}
+    with open(FINANCIALS_PATH, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def refresh_financials():
+    """嘗試用 fetch_financials.py 增量更新（需要 .env 裡的 FINMIND_TOKEN）"""
+    try:
+        sys.path.insert(0, str(Path(__file__).parent))
+        import fetch_financials
+        fetch_financials.run()
+    except SystemExit:
+        logger.warning("FinMind scraper 呼叫 sys.exit，保留現有快取")
+    except Exception as e:
+        logger.warning("FinMind 更新失敗：%s（使用現有快取）", e)
 
 
 def load_monthly_revenue():
@@ -315,6 +337,8 @@ def run():
     category_map  = load_category_map()
     refresh_monthly_revenue()  # 嘗試從 MOPS 重抓最新月營收
     revenue_map   = load_monthly_revenue()
+    refresh_financials()       # 嘗試用 FinMind 更新 12 月營收 + 8 季財報
+    financials    = load_financials()
     klines        = fetch_klines(stock_ids)
 
     logger.info("MoneyDJ 資料庫載入：%d 支", len(moneydj_map))
@@ -322,6 +346,7 @@ def run():
                 len(category_map), len(set(category_map.values())))
     logger.info("月營收資料月份：%s（%d 支）",
                 revenue_map.get("month") or "(無)", len(revenue_map.get("data", {})))
+    logger.info("基本面資料：%d 支股票有 FinMind 快取", len(financials))
 
     stocks = []
     for h in holdings:
@@ -376,6 +401,7 @@ def run():
             "revenueYoY":       curr_yoy,                    # 月營收年增率 %
             "revenueMonth":     curr_month,                  # 該月營收資料月份 YYYY-MM
             "revenueFirstSeen": revenue_first_seen,          # 首次抓到此月份資料的日期 YYYY-MM-DD
+            "fundamentals":     financials.get(sid, {}),     # FinMind 12 個月/8 季 YoY 序列
         })
 
     with open(DATA_DIR / "stocks.json", "w", encoding="utf-8") as f:

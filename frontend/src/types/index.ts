@@ -21,6 +21,15 @@ export interface StockRow {
   revenueYoY?: number | null            // 月營收年增率 %
   revenueMonth?: string | null          // 該月營收資料月份 YYYY-MM
   revenueFirstSeen?: string | null      // 首次抓到此月份營收資料的日期 YYYY-MM-DD
+  fundamentals?: Fundamentals           // FinMind 12 月營收 + 8 季財報 YoY 序列
+}
+
+/** FinMind 抓下來的基本面資料 */
+export interface Fundamentals {
+  revenueYoY?: Array<{ date: string; yoy: number }>          // 12 個月
+  grossMarginYoY?: Array<{ quarter: string; yoy: number }>   // 8 季
+  operatingMarginYoY?: Array<{ quarter: string; yoy: number }>
+  epsYoY?: Array<{ quarter: string; yoy: number }>
 }
 
 /** 漲幅期間 key */

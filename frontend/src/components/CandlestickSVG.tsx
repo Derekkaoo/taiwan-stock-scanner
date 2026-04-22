@@ -29,11 +29,11 @@ export function CandlestickSVG({
 }: Props) {
   if (!data || data.length === 0) return null
 
-  const dateAxisH = 14
-  const maLegendH = showMA ? 14 : 0
+  const dateAxisH = 20
+  const maLegendH = showMA ? 20 : 0
   const volHeight = showVolume ? Math.floor(height * 0.2) : 0
   const chartH    = height - volHeight - dateAxisH - maLegendH - 4
-  const padL = 18, padR = 44, padT = 8, padB = 8
+  const padL = 18, padR = 54, padT = 8, padB = 8
 
   const highs   = data.map(d => d.h)
   const lows    = data.map(d => d.l)
@@ -92,9 +92,9 @@ export function CandlestickSVG({
   })
 
   const tickIndices = [0, Math.floor(n / 3), Math.floor(n * 2 / 3), n - 1]
-  const dateAxisY = height - maLegendH - dateAxisH + 10
+  const dateAxisY = height - maLegendH - dateAxisH + 14
   const dateLineY = height - maLegendH - dateAxisH
-  const maLegendY = height - maLegendH + 10
+  const maLegendY = height - maLegendH + 14
   const priceLabelX = width - padR + 4
 
   return (
@@ -164,7 +164,7 @@ export function CandlestickSVG({
           />
           <text
             x={priceLabelX} y={py(t)}
-            fontSize={9} fill={mutedColor}
+            fontSize={12} fill={mutedColor}
             fontFamily="monospace" textAnchor="start"
             dominantBaseline="middle"
           >
@@ -185,7 +185,7 @@ export function CandlestickSVG({
           <g key={ti}>
             <line x1={x} y1={dateLineY} x2={x} y2={dateLineY + 3}
               stroke={mutedColor} strokeWidth="0.5" opacity="0.5" />
-            <text x={x} y={dateAxisY} fontSize={9} fill={mutedColor}
+            <text x={x} y={dateAxisY} fontSize={12} fill={mutedColor}
               fontFamily="monospace" textAnchor="middle">
               {date}
             </text>
@@ -196,10 +196,10 @@ export function CandlestickSVG({
       {/* MA 圖例（日期軸下方） */}
       {showMA && (
         <g>
-          <rect x={width - 68} y={maLegendY - 8} width={6} height={6} fill="#f59e0b" rx="1" />
-          <text x={width - 60} y={maLegendY} fontSize={8} fill={mutedColor} fontFamily="monospace">MA20</text>
-          <rect x={width - 32} y={maLegendY - 8} width={6} height={6} fill="#3b82f6" rx="1" />
-          <text x={width - 24} y={maLegendY} fontSize={8} fill={mutedColor} fontFamily="monospace">MA60</text>
+          <rect x={width - 96} y={maLegendY - 10} width={8} height={8} fill="#f59e0b" rx="1" />
+          <text x={width - 85} y={maLegendY} fontSize={11} fill={mutedColor} fontFamily="monospace">MA20</text>
+          <rect x={width - 46} y={maLegendY - 10} width={8} height={8} fill="#3b82f6" rx="1" />
+          <text x={width - 35} y={maLegendY} fontSize={11} fill={mutedColor} fontFamily="monospace">MA60</text>
         </g>
       )}
     </svg>
