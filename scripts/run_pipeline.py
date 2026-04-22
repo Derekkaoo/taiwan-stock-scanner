@@ -280,6 +280,15 @@ def run():
     force = any(a in ("--force", "-f") for a in sys.argv[1:])
     if force:
         logger.info("--force 指定，略過『已是最新』檢查")
+    # 讀既有的 stocks.json 作為比對基礎（為了偵測「新公佈營收」）
+    prev_stocks = {}
+    prev_stocks_path = DATA_DIR / "stocks.json"
+    if prev_stocks_path.exists():
+        try:
+            for old_s in json.load(open(prev_stocks_path, encoding="utf-8")):
+                prev_stocks[old_s.get("id", "")] = old_s
+        except Exception as e:
+            logger.warning("讀既有 stocks.json 失敗（不影響流程）：%s", e)
     elif check_already_updated():
         logger.info("資料已是最新，跳過本次更新（若要強制重跑：加 --force）")
         return
@@ -332,6 +341,22 @@ def run():
             if cat:
                 subs_by_group.setdefault(cat, []).append(sub_name)
         rev_entry = revenue_map.get("data", {}).get(sid, {})
+        # 計算 revenueFirstSeen：這個 (股票 × 月份) 組合第一次看到的日期
+        curr_yoy   = rev_entry.get("yoy")
+        curr_month = revenue_map.get("month")
+        prev_s     = prev_stocks.get(sid, {})
+        today_str  = datetime.now().strftime("%Y-%m-%d")
+        if curr_yoy is None:
+            revenue_first_seen = None
+        elif (prev_s.get("revenueMonth") == curr_month
+              and prev_s.get("revenueYoY") is not None
+              and prev_s.get("revenueFirstSeen")):
+            # 同一個月份的 YoY 之前就已經抓到，保留原本日期
+            revenue_first_seen = prev_s.get("revenueFirstSeen")
+        else:
+            # 新月份，或這個月第一次抓到該股資料
+            revenue_first_seen = today_str
+
         stocks.append({
             "id":               sid,
             "name":             name,
@@ -348,8 +373,9 @@ def run():
             "industry":         industry,
             "subIndustries":    all_subs,            # 完整列表
             "subsByGroup":      subs_by_group,       # {產業別: [該股票在此產業別下的細產業]}
-            "revenueYoY":       rev_entry.get("yoy"),        # 月營收年增率 %
-            "revenueMonth":     revenue_map.get("month"),    # 該月營收資料月份 YYYY-MM
+            "revenueYoY":       curr_yoy,                    # 月營收年增率 %
+            "revenueMonth":     curr_month,                  # 該月營收資料月份 YYYY-MM
+            "revenueFirstSeen": revenue_first_seen,          # 首次抓到此月份資料的日期 YYYY-MM-DD
         })
 
     with open(DATA_DIR / "stocks.json", "w", encoding="utf-8") as f:

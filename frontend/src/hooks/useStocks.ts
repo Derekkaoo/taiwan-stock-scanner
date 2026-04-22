@@ -35,6 +35,7 @@ function normalizeRow(raw: Record<string, unknown>): StockRow {
     returns: parseReturns(raw.returns),
     revenueYoY:   raw.revenueYoY != null ? Number(raw.revenueYoY) : null,
     revenueMonth: raw.revenueMonth ? String(raw.revenueMonth) : null,
+    revenueFirstSeen: raw.revenueFirstSeen ? String(raw.revenueFirstSeen) : null,
   }
 }
 

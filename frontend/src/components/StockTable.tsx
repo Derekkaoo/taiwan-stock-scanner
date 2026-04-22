@@ -67,9 +67,28 @@ export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
       render: (s) => {
         const r = s.revenueYoY
         if (r == null) return <span style={{ color: 'var(--color-text-muted)' }}>—</span>
+        // 判斷是否為「近期新公佈」：revenueFirstSeen 在 7 天內
+        let isFresh = false
+        if (s.revenueFirstSeen) {
+          const seen = new Date(s.revenueFirstSeen)
+          const days = (Date.now() - seen.getTime()) / (1000 * 60 * 60 * 24)
+          isFresh = days >= 0 && days <= 7
+        }
         return (
-          <span className="tabular font-mono" style={{ color: r >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-            {r >= 0 ? '+' : ''}{r.toFixed(1)}%
+          <span className="inline-flex items-center gap-1 tabular font-mono justify-end">
+            {isFresh && (
+              <span className="text-[9px] px-1 py-0 rounded font-semibold"
+                style={{
+                  color: '#fff',
+                  background: 'var(--color-accent-cyan)',
+                  letterSpacing: '0.5px',
+                }}>
+                新
+              </span>
+            )}
+            <span style={{ color: r >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
+              {r >= 0 ? '+' : ''}{r.toFixed(1)}%
+            </span>
           </span>
         )
       }

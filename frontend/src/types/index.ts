@@ -20,6 +20,7 @@ export interface StockRow {
   returns?: Partial<Record<ReturnPeriod, number | null>>  // 各期間漲幅 %
   revenueYoY?: number | null            // 月營收年增率 %
   revenueMonth?: string | null          // 該月營收資料月份 YYYY-MM
+  revenueFirstSeen?: string | null      // 首次抓到此月份營收資料的日期 YYYY-MM-DD
 }
 
 /** 漲幅期間 key */
