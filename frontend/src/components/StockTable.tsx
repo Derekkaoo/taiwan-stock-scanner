@@ -24,7 +24,26 @@ interface Props {
 
 export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
   const COLS: ColDef[] = [
-    { key: 'id',   label: '代號', align: 'left', mono: true },
+    { key: 'id', label: '代號', align: 'left', mono: true,
+      render: (s) => {
+        const isExpanded = expandedId === s.id
+        return (
+          <span className="inline-flex items-center gap-2">
+            <span
+              className="text-[10px] transition-transform duration-200 shrink-0"
+              style={{
+                display: 'inline-block',
+                transform: isExpanded ? 'rotate(90deg)' : 'rotate(0deg)',
+                color: isExpanded ? 'var(--color-accent-cyan)' : 'var(--color-text-secondary)',
+              }}
+            >▶</span>
+            <span className="font-mono tabular" style={{ color: 'var(--color-accent-cyan)' }}>
+              {s.id}
+            </span>
+          </span>
+        )
+      }
+    },
     { key: 'name', label: '名稱', align: 'left' },
     { key: 'group', label: '族群', align: 'left',
       render: (s) => {
@@ -160,9 +179,7 @@ export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
                 </th>
               )
             })}
-            <th className="px-3 py-2 text-right" style={{ color: 'var(--color-text-muted)' }}>
-              K 線
-            </th>
+
           </tr>
         </thead>
         <tbody>
@@ -201,11 +218,7 @@ export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
                       )}
                     </td>
                   ))}
-                  <td className="px-3 py-1.5 text-right">
-                    <span style={{ color: 'var(--color-text-muted)', fontSize: 10 }}>
-                      {isExpanded ? '▲' : '▼'}
-                    </span>
-                  </td>
+
                 </tr>
 
                 {isExpanded && (
@@ -213,7 +226,7 @@ export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
                     key={stock.id + '-kline'}
                     style={{ background: 'var(--color-bg-700)', borderBottom: '1px solid var(--color-border)' }}
                   >
-                    <td colSpan={COLS.length + 1} className="p-3">
+                    <td colSpan={COLS.length} className="p-3">
                       <div className="flex items-center flex-wrap gap-2 mb-2">
                         <span className="font-mono font-bold tabular text-xs" style={{ color: 'var(--color-accent-cyan)' }}>
                           {stock.id}
