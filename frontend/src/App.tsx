@@ -249,9 +249,11 @@ export default function App() {
           </button>
         ))}
 
+        <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
+
+        {/* 族群排序下拉（只在族群總覽顯示）*/}
         {view === 'group' && (
           <>
-            <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
             <span className="text-xs" style={{ color: 'var(--color-text-muted)' }}>族群排序：</span>
             <select
               value={groupSort}
@@ -266,31 +268,32 @@ export default function App() {
               <option value="delta">均增持幅度 ↓</option>
               <option value="return">漲幅 ↓</option>
             </select>
-
-            <span className="text-xs" style={{ color: 'var(--color-text-muted)' }}>漲幅期間：</span>
-            <div className="flex items-center gap-1">
-              {(['w1','m1','m3','m6','y1'] as ReturnPeriod[]).map(p => {
-                const active = returnPeriod === p
-                return (
-                  <button
-                    key={p}
-                    onClick={() => setReturnPeriod(p)}
-                    className="text-xs px-2 py-1 rounded border transition-colors"
-                    style={{
-                      background: active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                      borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                      color: active ? '#fff' : 'var(--color-text-secondary)',
-                      fontWeight: active ? 600 : 400,
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {RETURN_PERIOD_LABELS[p]}
-                  </button>
-                )
-              })}
-            </div>
           </>
         )}
+
+        {/* 漲幅期間按鈕（兩個 view 都顯示）*/}
+        <span className="text-xs" style={{ color: 'var(--color-text-muted)' }}>漲幅期間：</span>
+        <div className="flex items-center gap-1">
+          {(['w1','m1','m3','m6','y1'] as ReturnPeriod[]).map(p => {
+            const active = returnPeriod === p
+            return (
+              <button
+                key={p}
+                onClick={() => setReturnPeriod(p)}
+                className="text-xs px-2 py-1 rounded border transition-colors"
+                style={{
+                  background: active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                  color: active ? '#fff' : 'var(--color-text-secondary)',
+                  fontWeight: active ? 600 : 400,
+                  cursor: 'pointer',
+                }}
+              >
+                {RETURN_PERIOD_LABELS[p]}
+              </button>
+            )
+          })}
+        </div>
 
         <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
 
