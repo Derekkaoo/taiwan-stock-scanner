@@ -241,9 +241,19 @@ def fetch_holdings():
                 delta = float(delta_text)
                 col6 = tds[6].text.strip()
                 holding_pct = float(col6.replace(delta_text, "", 1))
+                # td[18] = 市值(億)；部分股票為空則回 0，後續用 FinMind fallback
+                market_cap = 0.0
+                if len(tds) > 18:
+                    mc_text = tds[18].text.strip().replace(",", "")
+                    if mc_text:
+                        try:
+                            market_cap = float(mc_text)
+                        except ValueError:
+                            market_cap = 0.0
                 rows.append({
                     "id": m.group(1), "name": sanitize_name(m.group(2).strip()),
-                    "delta": delta, "holdingPct": holding_pct, "date": date_str,
+                    "delta": delta, "holdingPct": holding_pct,
+                    "marketCap": market_cap, "date": date_str,
                 })
             except:
                 continue
@@ -508,6 +518,26 @@ def run():
     financials    = load_financials()
     klines        = fetch_klines(stock_ids)
 
+    # 神秘金字塔抓不到市值的股票，用 FinMind CommonStocks 反推
+    missing_cap_ids = [
+        h.get("id", h.get("stock_id", ""))[:4]
+        for h in holdings
+        if not float(h.get("marketCap", 0) or 0)
+    ]
+    common_stocks_map = {}
+    if missing_cap_ids:
+        logger.info("神秘金字塔沒市值的有 %d 支，用 FinMind fallback", len(missing_cap_ids))
+        try:
+            sys.path.insert(0, str(Path(__file__).parent))
+            import fetch_common_stocks
+            common_stocks_cache = fetch_common_stocks.refresh(missing_cap_ids)
+            common_stocks_map = {
+                sid: (e.get("common_stocks") or 0)
+                for sid, e in common_stocks_cache.items()
+            }
+        except Exception as e:
+            logger.warning("FinMind common_stocks fallback 失敗：%s", e)
+
     logger.info("MoneyDJ 資料庫載入：%d 支", len(moneydj_map))
     logger.info("產業別對應表載入：%d 個細產業 → %d 個產業別",
                 len(category_map), len(set(category_map.values())))
@@ -549,6 +579,13 @@ def run():
             # 新月份，或這個月第一次抓到該股資料
             revenue_first_seen = today_str
 
+        # 市值（億）：優先從 holdings 帶；沒有時用 FinMind common_stocks × 股價 / 1e8
+        price_now = float(bars[-1]["c"]) if bars else 0.0
+        market_cap = float(h.get("marketCap", 0.0))
+        if not market_cap and sid in common_stocks_map and price_now:
+            shares = common_stocks_map[sid] / 10  # 面額 10 元
+            market_cap = round((shares * price_now) / 1e8, 2)
+
         stocks.append({
             "id":               sid,
             "name":             name,
@@ -557,8 +594,8 @@ def run():
             "groupDesc":        "",
             "holdingPct":       float(h.get("holdingPct", h.get("holding_pct", 0))),
             "delta":            float(h.get("delta", 0)),
-            "price":            float(bars[-1]["c"]) if bars else 0.0,
-            "marketCap":        0.0,
+            "price":            price_now,
+            "marketCap":        market_cap,
             "date":             h.get("date", datetime.now().strftime("%Y-%m-%d")),
             "threeMonthReturn": returns.get("y1"),  # 主欄位：預設顯示 1 年漲幅
             "returns":          returns,
