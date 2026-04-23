@@ -5,7 +5,6 @@ import { useStocks } from './hooks/useStocks'
 import { useKline, calcThreeMonthReturn } from './hooks/useKline'
 import { StockTable } from './components/StockTable'
 import { GroupCard } from './components/GroupCard'
-import { VisitorCounter } from './components/VisitorCounter'
 
 type View = 'group' | 'table'
 type GroupSort = 'delta' | 'return'
@@ -200,7 +199,6 @@ export default function App() {
           千張大戶持股追蹤器
         </h1>
         <div className="ml-auto flex items-center gap-3 text-xs font-mono tabular">
-          <VisitorCounter />
           <span
             className="px-2 py-0.5 rounded border"
             style={{
