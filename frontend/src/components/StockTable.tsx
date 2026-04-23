@@ -13,6 +13,22 @@ interface ColDef {
   render?: (v: StockRow) => React.ReactNode
 }
 
+/**
+ * 把「億」單位的金額格式化成人類可讀字串
+ *  >= 100 億  → 整數億
+ *  >= 1 億   → 1 位小數億
+ *  < 1 億   → 換算成萬顯示
+ */
+function formatDeltaAmount(yi: number): string {
+  const abs = Math.abs(yi)
+  const sign = yi >= 0 ? '+' : '-'
+  if (abs >= 100) return `${sign}${abs.toFixed(0)} 億`
+  if (abs >= 1)   return `${sign}${abs.toFixed(1)} 億`
+  const wan = abs * 10000
+  if (wan >= 100) return `${sign}${wan.toFixed(0)} 萬`
+  return `${sign}${wan.toFixed(1)} 萬`
+}
+
 
 
 interface Props {
@@ -70,6 +86,17 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, fetchGroup, get
           +{s.delta.toFixed(3)}%
         </span>
       )
+    },
+    { key: 'deltaAmount', label: '週增金額', align: 'right', mono: true,
+      render: (s) => {
+        const amt = s.deltaAmount ?? 0
+        if (!amt) return <span style={{ color: 'var(--color-text-muted)' }}>—</span>
+        return (
+          <span className="tabular font-mono" style={{ color: amt >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
+            {formatDeltaAmount(amt)}
+          </span>
+        )
+      }
     },
     { key: 'price', label: '收盤價', align: 'right', mono: true,
       render: (s) => <span className="tabular font-mono">{s.price.toFixed(s.price >= 100 ? 1 : 2)}</span>

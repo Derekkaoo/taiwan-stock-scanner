@@ -42,10 +42,22 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnP
     return v == null ? s.threeMonthReturn : v
   }
   const avgDelta  = stocks.reduce((s, x) => s + x.delta, 0) / stocks.length
+  // 本族群本週總增持金額（億）
+  const totalDeltaAmount = stocks.reduce((s, x) => s + (x.deltaAmount ?? 0), 0)
   const retVals   = stocks.map(getRet).filter((x): x is number => x != null)
   const avgRet    = retVals.length ? retVals.reduce((s, x) => s + x, 0) / retVals.length : null
   const retLabel  = `${RETURN_PERIOD_LABELS[returnPeriod]}漲幅`
   const groupDesc = stocks[0]?.groupDesc ?? ''
+
+  const fmtAmount = (yi: number): string => {
+    const abs = Math.abs(yi)
+    const sign = yi >= 0 ? '+' : '-'
+    if (abs >= 100) return `${sign}${abs.toFixed(0)} 億`
+    if (abs >= 1)   return `${sign}${abs.toFixed(1)} 億`
+    const wan = abs * 10000
+    if (wan >= 100) return `${sign}${wan.toFixed(0)} 萬`
+    return `${sign}${wan.toFixed(1)} 萬`
+  }
 
   // 本族群內最常出現的細產業 Top 3（aggregate chips）— 只算跟此族群相關的
   const topSubIndustries = (() => {
@@ -144,10 +156,15 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnP
             </span>
           )}
 
-          <div className="flex items-center gap-3 font-mono tabular text-[11px]">
+          <div className="flex items-center gap-3 font-mono tabular text-[11px] flex-wrap">
             <span style={{ color: avgDelta >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
               均增持 +{fmt(avgDelta, 3)}%
             </span>
+            {totalDeltaAmount > 0 && (
+              <span style={{ color: 'var(--color-up)' }}>
+                週增金額 {fmtAmount(totalDeltaAmount)}
+              </span>
+            )}
             {avgRet !== null && (
               <span style={{ color: avgRet >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
                 {retLabel} {avgRet >= 0 ? '+' : ''}{fmt(avgRet, 1)}%
@@ -212,6 +229,11 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnP
                       <span style={{ color: 'var(--color-up)' }}>
                         <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>週增持 </span>
                         +{fmt(stock.delta, 3)}%
+                        {(stock.deltaAmount ?? 0) > 0 && (
+                          <span style={{ color: 'var(--color-text-muted)', fontSize: 10, marginLeft: 4 }}>
+                            ({fmtAmount(stock.deltaAmount ?? 0)})
+                          </span>
+                        )}
                       </span>
                       <span style={{ color: retColor }}>
                         <span style={{ color: 'var(--color-text-muted)', fontSize: 9 }}>{retLabel} </span>

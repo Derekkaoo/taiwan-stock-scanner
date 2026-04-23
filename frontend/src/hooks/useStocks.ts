@@ -18,15 +18,20 @@ function normalizeRow(raw: Record<string, unknown>): StockRow {
         ])
       )
     : undefined
+  const delta     = Number(raw.delta ?? 0)
+  const marketCap = Number(raw.marketCap ?? 0)
+  // 衍生欄位：週增金額（億）= delta% × 市值（億）/ 100
+  const deltaAmount = (delta && marketCap) ? (delta * marketCap) / 100 : 0
   return {
     id:              String(raw.id ?? '').trim(),
     name:            String(raw.name ?? '').trim(),
     group:           String(raw.group ?? '').trim(),
     groupDesc:       String(raw.groupDesc ?? '').trim(),
     holdingPct:      Number(raw.holdingPct ?? 0),
-    delta:           Number(raw.delta ?? 0),
+    delta,
     price:           Number(raw.price ?? 0),
-    marketCap:       Number(raw.marketCap ?? 0),
+    marketCap,
+    deltaAmount,
     date:            String(raw.date ?? new Date().toISOString().slice(0, 10)),
     threeMonthReturn: raw.threeMonthReturn != null ? Number(raw.threeMonthReturn) : null,
     subIndustries,

@@ -12,6 +12,7 @@ export interface StockRow {
   delta: number        // 本週增持幅度 %
   price: number        // 收盤價
   marketCap: number    // 市值（億）
+  deltaAmount?: number // 本週增持金額（億）= delta% × marketCap，normalizeRow 時衍生
   date: string         // 資料日期 YYYY-MM-DD
   threeMonthReturn: number | null  // 近三個月報酬率（從 K 線計算）
   subIndustries?: string[]
