@@ -95,7 +95,7 @@ export default function App() {
     loadData, setSearchQuery, updateSort, updateStockReturn,
   } = useStocks(returnPeriod)
 
-  const { fetchGroup, getFromCache, loadFromJson } = useKline()
+  const { fetchGroup, getFromCache, loadFromJson, cacheVersion, clearCache } = useKline()
 
   const [view,      setView]      = useState<View>('group')
   const [groupSort, setGroupSort] = useState<GroupSort>('delta')
@@ -114,10 +114,13 @@ export default function App() {
   }, [])
 
   const handleRefresh = useCallback(async () => {
+    // 清掉舊 K 線 cache（跟展開狀態下的本地 state），
+    // loadFromJson 會重新灌入最新版本
+    clearCache()
     await loadData()
     await loadFromJson()
     toast('資料已更新', 'success')
-  }, [loadData, loadFromJson, toast])
+  }, [clearCache, loadData, loadFromJson, toast])
 
   const handleSearch = (q: string) => {
     clearTimeout(searchTimer.current)
@@ -381,13 +384,22 @@ export default function App() {
                 }}
                 getFromCache={getFromCache}
                 returnPeriod={returnPeriod}
+                cacheVersion={cacheVersion}
               />
             ))}
           </div>
         )}
 
         {view === 'table' && stockCount > 0 && (
-          <StockTable stocks={filteredStocks} sort={sort} onSort={key => updateSort(key)} returnPeriod={returnPeriod} />
+          <StockTable
+            stocks={filteredStocks}
+            sort={sort}
+            onSort={key => updateSort(key)}
+            returnPeriod={returnPeriod}
+            fetchGroup={fetchGroup}
+            getFromCache={getFromCache}
+            cacheVersion={cacheVersion}
+          />
         )}
       </main>
 

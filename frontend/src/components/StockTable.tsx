@@ -1,10 +1,9 @@
-import type { StockRow, SortState, ReturnPeriod } from '../types'
+import type { StockRow, SortState, ReturnPeriod, KlineBar } from '../types'
 import { RETURN_PERIOD_LABELS } from '../types'
 import { THEME_CSS_MAP, TAG_COLORS, getGroupCssClass } from '../constants/themeGroups'
 import { CandlestickSVG } from './CandlestickSVG'
 import { FundamentalsPanel } from './FundamentalsPanel'
-import { useKline } from '../hooks/useKline'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 interface ColDef {
   key: keyof StockRow
@@ -21,9 +20,13 @@ interface Props {
   sort: SortState
   onSort: (key: keyof StockRow) => void
   returnPeriod: ReturnPeriod
+  /** 來自 App 層的 useKline（避免 StockTable 自建獨立 cache） */
+  fetchGroup: (groupName: string, stockIds: string[], onEach?: (id: string, bars: KlineBar[]) => void) => Promise<void>
+  getFromCache: (stockId: string) => KlineBar[] | null
+  cacheVersion: number
 }
 
-export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
+export function StockTable({ stocks, sort, onSort, returnPeriod, fetchGroup, getFromCache, cacheVersion }: Props) {
   const COLS: ColDef[] = [
     { key: 'id', label: '代號', align: 'left', mono: true,
       render: (s) => {
@@ -125,11 +128,19 @@ export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
     },
   ]
 
-  const { getFromCache, fetchGroup } = useKline()
   const [expandedId, setExpandedId] = useState<string | null>(null)
-  const [, forceRerender] = useState(0)
 
-
+  // cacheVersion 一變 → 使用者按了「更新資料」→
+  //   展開中的列自動去觸發重新載入（繞開 cache 剛被清空的狀態）
+  useEffect(() => {
+    if (!expandedId) return
+    const stock = stocks.find(st => st.id === expandedId)
+    const group = stock?.groups?.[0] ?? stock?.group
+    if (stock && group && !getFromCache(stock.id)) {
+      fetchGroup(group, [stock.id])
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cacheVersion])
 
   const handleRowClick = async (id: string) => {
     const willExpand = expandedId !== id
@@ -140,8 +151,6 @@ export function StockTable({ stocks, sort, onSort, returnPeriod }: Props) {
     const group = stock?.groups?.[0] ?? stock?.group
     if (stock && group && !getFromCache(id)) {
       await fetchGroup(group, [id])
-      // cache 更新但 useRef 不觸發 re-render → 用 counter 強制刷新
-      forceRerender(v => v + 1)
     }
   }
 

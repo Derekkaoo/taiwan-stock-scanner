@@ -80,10 +80,14 @@ export function calcMA(closes: number[], period: number): (number | null)[] {
 export function useKline() {
   const cache = useRef<Map<string, KlineBar[]>>(new Map())
   const [statusMap, setStatusMap] = useState<Record<string, 'loading' | 'ok' | 'error'>>({})
+  // cacheVersion：每次 cache 有大改動就 +1，讓 subscribers 知道要重新讀 cache
+  const [cacheVersion, setCacheVersion] = useState(0)
+  const bump = useCallback(() => setCacheVersion(v => v + 1), [])
 
   const loadFromJson = useCallback(async () => {
     try {
-      const resp = await fetch('/data/klines.json')
+      // cache-bust：避免 CDN / 瀏覽器 serve 舊檔
+      const resp = await fetch('/data/klines.json?t=' + Date.now())
       if (!resp.ok) return
       const json: Record<string, KlineBar[]> = await resp.json()
       let count = 0
@@ -94,10 +98,11 @@ export function useKline() {
         }
       }
       console.log(`[useKline] 從 klines.json 載入 ${count} 支`)
+      bump()
     } catch (e) {
       console.warn('[useKline] 無法載入 klines.json', e)
     }
-  }, [])
+  }, [bump])
 
   const fetchOne = useCallback(async (stockId: string): Promise<KlineBar[]> => {
     if (cache.current.has(stockId)) return cache.current.get(stockId)!
@@ -128,29 +133,51 @@ export function useKline() {
 
   // 已載入過的族群檔（避免重複 fetch 同一個族群檔）
   const loadedGroups = useRef<Set<string>>(new Set())
+  // 正在飛的請求 → 併發呼叫同一族群會 await 同一個 promise，避免 race condition
+  const inFlightGroups = useRef<Map<string, Promise<void>>>(new Map())
 
   const loadGroupFile = useCallback(async (groupName: string): Promise<void> => {
     if (loadedGroups.current.has(groupName)) return
-    loadedGroups.current.add(groupName)
-    try {
-      // 把 / 先換成 _（與 pipeline 一致），再 URL-encode 中文字
-      const safe = encodeURIComponent(groupName.replace(/[/\\]/g, '_'))
-      const resp = await fetch(`/data/klines/${safe}.json`)
-      if (!resp.ok) {
-        console.warn(`[useKline] klines/${safe}.json 不存在 (${resp.status})`)
-        return
-      }
-      const json: Record<string, KlineBar[]> = await resp.json()
-      for (const [id, bars] of Object.entries(json)) {
-        if (bars && bars.length > 0) {
-          // 永遠覆蓋：族群檔的資料是最新源頭，避免 mock 卡住
-          cache.current.set(id, bars)
+    const existing = inFlightGroups.current.get(groupName)
+    if (existing) return existing
+
+    const promise = (async () => {
+      try {
+        // 把 / 先換成 _（與 pipeline 一致），再 URL-encode 中文字
+        const safe = encodeURIComponent(groupName.replace(/[/\\]/g, '_'))
+        // cache-bust：避免載到舊檔
+        const resp = await fetch(`/data/klines/${safe}.json?t=${Date.now()}`)
+        if (!resp.ok) {
+          console.warn(`[useKline] klines/${safe}.json 不存在 (${resp.status})`)
+          return
         }
+        const json: Record<string, KlineBar[]> = await resp.json()
+        for (const [id, bars] of Object.entries(json)) {
+          if (bars && bars.length > 0) {
+            cache.current.set(id, bars)
+          }
+        }
+        loadedGroups.current.add(groupName)
+        bump()
+      } catch (e) {
+        console.warn(`[useKline] 載入 ${groupName} 族群檔失敗`, e)
+      } finally {
+        inFlightGroups.current.delete(groupName)
       }
-    } catch (e) {
-      console.warn(`[useKline] 載入 ${groupName} 族群檔失敗`, e)
-    }
-  }, [])
+    })()
+
+    inFlightGroups.current.set(groupName, promise)
+    return promise
+  }, [bump])
+
+  // 清空 cache（手動更新時呼叫，下次展開會重抓）
+  const clearCache = useCallback(() => {
+    cache.current.clear()
+    loadedGroups.current.clear()
+    inFlightGroups.current.clear()
+    setStatusMap({})
+    bump()
+  }, [bump])
 
   // 展開族群時呼叫：先抓對應族群檔（一個 HTTP，拿該族群所有股票的 K 線），
   // 若檔案缺或缺某支，再用 Yahoo fetchOne 作 fallback
@@ -175,5 +202,5 @@ export function useKline() {
     return cache.current.get(stockId) ?? null
   }, [])
 
-  return { fetchOne, fetchGroup, getFromCache, loadFromJson, statusMap }
+  return { fetchOne, fetchGroup, getFromCache, loadFromJson, statusMap, cacheVersion, clearCache }
 }

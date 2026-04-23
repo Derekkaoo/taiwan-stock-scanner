@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import type { StockRow, KlineBar, ReturnPeriod } from '../types'
 import { RETURN_PERIOD_LABELS } from '../types'
 import { THEME_CSS_MAP, TAG_COLORS, getGroupCssClass } from '../constants/themeGroups'
@@ -11,6 +11,8 @@ interface Props {
   fetchGroup: (ids: string[], onEach?: (id: string, bars: KlineBar[]) => void) => Promise<void>
   getFromCache: (id: string) => KlineBar[] | null
   returnPeriod: ReturnPeriod
+  /** App 層 cache 版本；變動時代表使用者按了「更新資料」，已展開的卡片要重新載入 */
+  cacheVersion?: number
 }
 
 function fmt(v: number | null, digits = 2) {
@@ -26,7 +28,7 @@ function getSubsForGroup(stock: StockRow, groupName: string): string[] {
   return stock.subIndustries ?? []
 }
 
-export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnPeriod }: Props) {
+export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnPeriod, cacheVersion }: Props) {
   const [expanded, setExpanded] = useState(false)
   const [klineMap, setKlineMap] = useState<Record<string, KlineBar[]>>({})
   const [loading,  setLoading]  = useState(false)
@@ -57,24 +59,49 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnP
       .sort((a, b) => b[1] - a[1])
   })()
 
+  /**
+   * 共用載入邏輯（不用 `loaded` 當守門員，改用 useKline 內部的 loadedGroups 去重）。
+   * `force=true` 代表來自「更新資料」→ 強制重新從 useKline 拉最新（loadedGroups
+   * 已經被 clearCache 清掉了，所以會真的去網路重抓）。
+   */
+  const doLoad = useCallback(async () => {
+    setLoading(true)
+    const fromCache: Record<string, KlineBar[]> = {}
+    stocks.forEach(s => {
+      const cached = getFromCache(s.id)
+      if (cached) fromCache[s.id] = cached
+    })
+    if (Object.keys(fromCache).length > 0) {
+      setKlineMap(prev => ({ ...prev, ...fromCache }))
+    }
+    const missing = stocks.filter(s => !fromCache[s.id]).map(s => s.id)
+    if (missing.length > 0) {
+      await fetchGroup(missing, (id, bars) =>
+        setKlineMap(prev => ({ ...prev, [id]: bars }))
+      )
+    }
+    setLoaded(true)
+    setLoading(false)
+  }, [fetchGroup, stocks, getFromCache])
+
   const openAndLoad = useCallback(async () => {
     setExpanded(true)
-    if (!loaded) {
-      setLoading(true)
-      const fromCache: Record<string, KlineBar[]> = {}
-      stocks.forEach(s => {
-        const cached = getFromCache(s.id)
-        if (cached) fromCache[s.id] = cached
-      })
-      if (Object.keys(fromCache).length > 0) setKlineMap(prev => ({ ...prev, ...fromCache }))
-      const missing = stocks.filter(s => !fromCache[s.id]).map(s => s.id)
-      if (missing.length > 0) {
-        await fetchGroup(missing, (id, bars) => setKlineMap(prev => ({ ...prev, [id]: bars })))
-      }
-      setLoaded(true)
-      setLoading(false)
+    if (!loaded) await doLoad()
+  }, [loaded, doLoad])
+
+  // cacheVersion 一變 → 使用者按了「更新資料」
+  //   - 展開中：直接觸發 doLoad，讓新 K 線到齊後才覆蓋 klineMap（避免閃空白）
+  //   - 折疊中：只重置 loaded / klineMap，下次展開時會重抓
+  useEffect(() => {
+    if (cacheVersion === undefined) return
+    setLoaded(false)
+    if (expanded) {
+      doLoad()
+    } else {
+      setKlineMap({})
     }
-  }, [loaded, fetchGroup, stocks, getFromCache])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cacheVersion])
 
   const handleToggle = useCallback(async () => {
     if (expanded) {

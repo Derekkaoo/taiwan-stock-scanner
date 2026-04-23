@@ -31,32 +31,161 @@ def load_moneydj_map():
         return json.load(f)
 
 
-def check_already_updated() -> bool:
+def expected_latest_trading_day(now=None):
+    """預期資料應該更新到的最近交易日（不考慮假日；14:00 TW 為切換時點）
+
+    重要：GitHub Actions 跑在 UTC，必須強制換算成台灣時間才能正確判斷。
+    本機 Windows 跑 datetime.now() 是 local time (TW)，轉一次還是 TW，沒差。
+    """
+    if now is None:
+        # utcnow + 8 小時 = TW 時間（無論 runner 在哪個時區都 work）
+        now = datetime.utcnow() + timedelta(hours=8)
+    wd = now.weekday()  # 0=Mon..6=Sun
+    if wd >= 5:
+        # 週末：回到上週五
+        return (now - timedelta(days=wd - 4)).date()
+    # 平日：14:00 後算今天，之前用前一個工作日
+    cutoff = now.replace(hour=14, minute=0, second=0, microsecond=0)
+    if now >= cutoff:
+        return now.date()
+    if wd == 0:
+        return (now - timedelta(days=3)).date()  # 週一早上 → 上週五
+    return (now - timedelta(days=1)).date()
+
+
+def check_what_needs_refresh() -> dict:
+    """
+    檢查哪些資料需要更新，回傳 dict：
+      {"klines": bool, "holdings": bool, "revenue": bool, "financials": bool,
+       "reasons": [str, ...]}
+    True = 該項需要更新。reasons 是 log 用的人話說明。
+    """
+    result = {
+        "klines": False,
+        "holdings": False,
+        "revenue": False,
+        "financials": False,
+        "reasons": [],
+    }
+    # 強制用台灣時間（CI 在 UTC 會判斷錯）
+    now = datetime.utcnow() + timedelta(hours=8)
+    today = now.date()
+    expected_date = expected_latest_trading_day(now)
+
+    # 1. K 線 / 股價：看 klines.json 最後一根 bar（格式是 YYYY/MM/DD）
+    klines_path = DATA_DIR / "klines.json"
+    kline_latest = None
+    if klines_path.exists():
+        try:
+            with open(klines_path, encoding="utf-8") as f:
+                kl = json.load(f)
+            for sid, bars in kl.items():
+                if bars:
+                    last = bars[-1].get("date", "")
+                    if last:
+                        # 容錯：YYYY/MM/DD 或 YYYY-MM-DD 都能解析
+                        for fmt in ("%Y/%m/%d", "%Y-%m-%d"):
+                            try:
+                                kline_latest = datetime.strptime(last, fmt).date()
+                                break
+                            except ValueError:
+                                continue
+                        if kline_latest:
+                            break
+        except Exception as e:
+            logger.warning("讀 klines.json 失敗：%s", e)
+    if kline_latest is None:
+        result["klines"] = True
+        result["reasons"].append("K 線資料不存在")
+    elif kline_latest < expected_date:
+        result["klines"] = True
+        result["reasons"].append(
+            f"K 線過期（最新 {kline_latest}，預期 {expected_date}）"
+        )
+
+    # 2. 大戶持股：看 stocks.json 的 date（週更，7 天內算新）
     stocks_path = DATA_DIR / "stocks.json"
-    if not stocks_path.exists():
-        return False
+    holdings_date = None
+    if stocks_path.exists():
+        try:
+            with open(stocks_path, encoding="utf-8") as f:
+                ss = json.load(f)
+            if ss:
+                ds = ss[0].get("date", "")
+                if ds:
+                    holdings_date = datetime.strptime(ds, "%Y-%m-%d").date()
+        except Exception as e:
+            logger.warning("讀 stocks.json 失敗：%s", e)
+    if holdings_date is None:
+        result["holdings"] = True
+        result["reasons"].append("大戶持股資料不存在")
+    else:
+        days_old = (today - holdings_date).days
+        if days_old >= 7:
+            result["holdings"] = True
+            result["reasons"].append(
+                f"大戶持股超過 7 天未更新（最新 {holdings_date}，距今 {days_old} 天）"
+            )
+
+    # 3. 月營收：對照 expected_latest_revenue_month
     try:
-        with open(stocks_path, encoding="utf-8") as f:
-            stocks = json.load(f)
-        if not stocks:
-            return False
-        latest_date_str = stocks[0].get("date", "")
-        if not latest_date_str:
-            return False
-        latest_date = datetime.strptime(latest_date_str, "%Y-%m-%d")
-        today = datetime.now()
-        days_since_friday = (today.weekday() - 4) % 7
-        last_friday = today - timedelta(days=days_since_friday)
-        last_friday = last_friday.replace(hour=0, minute=0, second=0, microsecond=0)
-        logger.info("現有資料日期：%s，本週五：%s", latest_date_str, last_friday.strftime("%Y-%m-%d"))
-        if latest_date >= last_friday:
-            logger.info("資料已是本週最新，跳過更新")
-            return True
-        logger.info("資料尚未更新到本週，繼續執行 pipeline")
-        return False
-    except Exception as e:
-        logger.warning("檢查日期失敗：%s，繼續執行", e)
-        return False
+        sys.path.insert(0, str(Path(__file__).parent))
+        import fetch_financials as _ff
+        exp_rev = _ff.expected_latest_revenue_month(now)
+    except Exception:
+        exp_rev = None
+        _ff = None
+
+    if exp_rev and REVENUE_PATH.exists():
+        try:
+            with open(REVENUE_PATH, encoding="utf-8") as f:
+                rev = json.load(f)
+            cached_month = rev.get("month") or ""
+            if cached_month < exp_rev:
+                result["revenue"] = True
+                result["reasons"].append(
+                    f"月營收過期（最新 {cached_month or '無'}，預期 {exp_rev}）"
+                )
+        except Exception as e:
+            logger.warning("讀 monthly_revenue.json 失敗：%s", e)
+    elif exp_rev:
+        result["revenue"] = True
+        result["reasons"].append("月營收資料不存在")
+
+    # 4. 季報：取樣看 financials.json 各股票的 epsYoY 最後一季
+    exp_q = None
+    if _ff is not None:
+        try:
+            exp_q = _ff.expected_latest_quarter(now)
+        except Exception:
+            pass
+
+    if exp_q and FINANCIALS_PATH.exists():
+        try:
+            with open(FINANCIALS_PATH, encoding="utf-8") as f:
+                fin = json.load(f)
+            stale_count = 0
+            sample_count = 0
+            for entry in list(fin.values())[:50]:
+                arr = entry.get("epsYoY") or []
+                if not arr:
+                    continue
+                sample_count += 1
+                last_q = arr[-1].get("quarter", "")
+                if last_q < exp_q:
+                    stale_count += 1
+            if sample_count > 0 and stale_count >= sample_count / 2:
+                result["financials"] = True
+                result["reasons"].append(
+                    f"季報過期（預期至少到 {exp_q}，取樣 {stale_count}/{sample_count} 支過期）"
+                )
+        except Exception as e:
+            logger.warning("讀 financials.json 失敗：%s", e)
+    elif exp_q:
+        result["financials"] = True
+        result["reasons"].append("財報資料不存在")
+
+    return result
 
 
 def fetch_holdings():
@@ -302,6 +431,31 @@ def run():
     force = any(a in ("--force", "-f") for a in sys.argv[1:])
     if force:
         logger.info("--force 指定，略過『已是最新』檢查")
+    else:
+        # 智能檢查：看哪些資料需要更新
+        needs = check_what_needs_refresh()
+        if not any([needs["klines"], needs["holdings"], needs["revenue"], needs["financials"]]):
+            logger.info("✅ 所有資料皆為最新，無需更新")
+            return
+        logger.info("需要更新：%s", "；".join(needs["reasons"]))
+        # 若只有 K 線過期、其他都 fresh → 跑輕量 update_klines.py 就好
+        only_klines = (
+            needs["klines"]
+            and not needs["holdings"]
+            and not needs["revenue"]
+            and not needs["financials"]
+        )
+        if only_klines:
+            logger.info("→ 只有 K 線過期，改跑輕量 update_klines.py")
+            try:
+                sys.path.insert(0, str(Path(__file__).parent))
+                import update_klines
+                update_klines.run()
+            except Exception as e:
+                logger.warning("update_klines 失敗：%s，fallback 跑完整 pipeline", e)
+            else:
+                return
+
     # 讀既有的 stocks.json 作為比對基礎（為了偵測「新公佈營收」）
     prev_stocks = {}
     prev_stocks_path = DATA_DIR / "stocks.json"
@@ -311,9 +465,6 @@ def run():
                 prev_stocks[old_s.get("id", "")] = old_s
         except Exception as e:
             logger.warning("讀既有 stocks.json 失敗（不影響流程）：%s", e)
-    elif check_already_updated():
-        logger.info("資料已是最新，跳過本次更新（若要強制重跑：加 --force）")
-        return
 
     holdings = fetch_holdings()
     if not holdings:
