@@ -22,6 +22,22 @@ DB_PATH = Path(__file__).parent.parent / "backend" / "db" / "stock_industry_map.
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
 
+# 資料源常見的字元錯誤修正（norway.twsthr.info 會把某些 Big-5 字元吐成兩個錯誤字元）
+# key = 錯字, value = 正字
+NAME_FIX_MAP = {
+    "卅卅": "碁",  # 洛碁 8077, 立碁 8111 等
+}
+
+
+def sanitize_name(name: str) -> str:
+    """把資料源拼錯的公司名修正成正確的字"""
+    if not name:
+        return name
+    for bad, good in NAME_FIX_MAP.items():
+        name = name.replace(bad, good)
+    return name
+
+
 
 def load_moneydj_map():
     if not DB_PATH.exists():
@@ -226,7 +242,7 @@ def fetch_holdings():
                 col6 = tds[6].text.strip()
                 holding_pct = float(col6.replace(delta_text, "", 1))
                 rows.append({
-                    "id": m.group(1), "name": m.group(2).strip(),
+                    "id": m.group(1), "name": sanitize_name(m.group(2).strip()),
                     "delta": delta, "holdingPct": holding_pct, "date": date_str,
                 })
             except:
@@ -258,7 +274,7 @@ def fetch_industry_map():
                 sid = m.group(1)
                 if sid not in result:
                     result[sid] = {
-                        "name": m.group(2).strip(),
+                        "name": sanitize_name(m.group(2).strip()),
                         "industry": tds[4].text.strip(),
                     }
         except Exception as e:
