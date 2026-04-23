@@ -1,0 +1,16 @@
+# Cloudflare Pages headers
+# 語法：https://developers.cloudflare.com/pages/configuration/headers/
+
+# 所有 JSON 資料檔：永不 cache，每次訪客都要重新拿最新
+/data/*.json
+  Cache-Control: no-cache, must-revalidate, max-age=0
+
+/data/**/*.json
+  Cache-Control: no-cache, must-revalidate, max-age=0
+
+# HTML：也不要 cache（確保 SPA 的 index.html 永遠最新）
+/*.html
+  Cache-Control: no-cache, must-revalidate
+
+/
+  Cache-Control: no-cache, must-revalidate
