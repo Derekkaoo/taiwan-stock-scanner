@@ -5,6 +5,7 @@ import { useStocks } from './hooks/useStocks'
 import { useKline, calcThreeMonthReturn } from './hooks/useKline'
 import { StockTable } from './components/StockTable'
 import { GroupCard } from './components/GroupCard'
+import { Footer } from './components/Footer'
 
 type View = 'group' | 'table'
 type GroupSort = 'delta' | 'return'
@@ -400,6 +401,8 @@ export default function App() {
           />
         )}
       </main>
+
+      <Footer />
 
       <div className="fixed bottom-5 right-5 z-[9999] flex flex-col gap-2">
         {toasts.map(t => (
