@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>關於本站｜千張大戶持股追蹤器</title>
+  <meta name="description" content="關於千張大戶持股追蹤器 — 這個工具在做什麼、資料從哪來、為什麼免費提供給台股散戶使用。" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://taiwan-stock-scanner.pages.dev/about.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="關於本站｜千張大戶持股追蹤器" />
+  <meta property="og:description" content="這個工具在做什麼、資料從哪來、為什麼免費提供給台股散戶使用。" />
+  <meta property="og:url" content="https://taiwan-stock-scanner.pages.dev/about.html" />
+  <meta property="og:image" content="https://taiwan-stock-scanner.pages.dev/og-image.svg" />
+  <meta property="og:locale" content="zh_TW" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-900: #060912; --bg-800: #0a0e17; --bg-700: #0f1623; --bg-600: #141c2e;
+      --border: #1e2d4a; --border-light: #243353;
+      --text-primary: #e2e8f0; --text-secondary: #8899b5; --text-muted: #4a5568;
+      --accent-cyan: #06b6d4; --accent-blue: #3b82f6;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { color-scheme: dark; }
+    body {
+      background: var(--bg-800); color: var(--text-primary);
+      font-family: "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
+      font-size: 16px; line-height: 1.75; min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--bg-700); border-bottom: 1px solid var(--border);
+      padding: 12px 20px; display: flex; align-items: center; gap: 16px;
+    }
+    header a.home {
+      color: var(--accent-cyan); text-decoration: none;
+      font-weight: 700; font-size: 14px; letter-spacing: 0.5px;
+    }
+    header .crumb { color: var(--text-muted); font-size: 13px; }
+    main {
+      max-width: 720px; margin: 0 auto; padding: 48px 24px 64px;
+    }
+    h1 {
+      font-size: 32px; font-weight: 700; margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+    .lead { color: var(--text-secondary); font-size: 15px; margin-bottom: 36px; }
+    h2 {
+      font-size: 20px; font-weight: 700; margin: 36px 0 12px;
+      color: var(--accent-cyan); padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    p { color: var(--text-primary); margin-bottom: 16px; font-size: 15px; }
+    ul { padding-left: 24px; margin-bottom: 16px; }
+    li { color: var(--text-primary); margin-bottom: 8px; font-size: 15px; }
+    a { color: var(--accent-blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code {
+      background: var(--bg-600); padding: 2px 6px; border-radius: 4px;
+      font-family: "JetBrains Mono", monospace; font-size: 13px;
+      color: var(--accent-cyan); border: 1px solid var(--border);
+    }
+    .callout {
+      background: var(--bg-700); border-left: 3px solid var(--accent-cyan);
+      padding: 14px 18px; margin: 20px 0; border-radius: 4px;
+      color: var(--text-secondary); font-size: 14px;
+    }
+    table {
+      width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px;
+    }
+    th, td {
+      padding: 10px 14px; border-bottom: 1px solid var(--border); text-align: left;
+    }
+    th { color: var(--text-secondary); font-weight: 600; background: var(--bg-700); }
+    footer {
+      border-top: 1px solid var(--border); padding: 16px 20px;
+      background: var(--bg-700); color: var(--text-muted); font-size: 12px;
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+    }
+    footer a { color: var(--text-muted); text-decoration: none; }
+    footer a:hover { color: var(--text-secondary); text-decoration: underline; }
+    footer .dot { opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/" class="home">← 千張大戶持股追蹤器</a>
+    <span class="crumb">/ 關於本站</span>
+  </header>
+
+  <main>
+    <h1>關於本站</h1>
+    <p class="lead">一個給台股散戶的免費小工具。<br>把 TDCC 集保公開資料整合成「大戶週增持 × 族群 K 線」的清爽介面，讓你一眼看出大戶正在買什麼。</p>
+
+    <h2>這個網站在做什麼？</h2>
+    <p>本站聚焦在一件很窄、但台股散戶超關心的事情：<strong>千張大戶這週有沒有在加碼某檔股票？</strong></p>
+    <p>台灣證券集中保管結算所（TDCC）每週公開股權分散表，本站會自動下載、計算週增減變化，並把符合條件（大戶持股週增 ≥ 0.1%）的股票按族群分組，搭配近三個月 K 線圖（含 MA20、MA60、成交量）一起呈現。</p>
+    <div class="callout">這不是另一個「報明牌」網站。本站只呈現客觀資料，不給任何買賣建議。</div>
+
+    <h2>資料從哪來？更新頻率？</h2>
+    <table>
+      <thead>
+        <tr><th>資料</th><th>來源</th><th>更新頻率</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>大戶持股比例</td><td>TDCC 集保公開 OpenAPI</td><td>每週六自動更新</td></tr>
+        <tr><td>股票族群分類</td><td>人工維護字典</td><td>不定期調整</td></tr>
+        <tr><td>K 線資料</td><td>Yahoo Finance</td><td>每次開啟時抓取</td></tr>
+      </tbody>
+    </table>
+    <p>所有資料均來自公開來源，本站不對資料準確性與即時性做任何保證。詳見<a href="/disclaimer.html">免責聲明</a>。</p>
+
+    <h2>為什麼做這個、為什麼免費？</h2>
+    <p>站長是一個喜歡看 K 線 + 基本面的散戶。市面上查大戶持股的工具不是 UI 太老舊，就是要登入券商、切很多頁面才湊得出一張完整的圖。自己需要，就順手做了一個。</p>
+    <p>目前完全免費。未來如果要負擔伺服器與網域成本，可能會加入：</p>
+    <ul>
+      <li>付費會員制（提供進階功能，例：個股警示、歷史回測查詢）</li>
+      <li>Google AdSense 廣告</li>
+      <li>券商合作連結（affiliate）</li>
+    </ul>
+    <p>但核心功能會永遠免費，這是一開始就決定的事情。</p>
+
+    <h2>能反饋意見嗎？</h2>
+    <p>歡迎寫信給我：<a href="mailto:stiau334@gmail.com">stiau334@gmail.com</a></p>
+    <p>Bug 回報、功能建議、想看到哪些族群被加入字典，都非常歡迎。</p>
+  </main>
+
+  <footer>
+    <span>© 2026 千張大戶持股追蹤器</span>
+    <span class="dot">·</span>
+    <a href="/">首頁</a>
+    <span class="dot">·</span>
+    <a href="/about.html">關於本站</a>
+    <span class="dot">·</span>
+    <a href="/disclaimer.html">免責聲明</a>
+    <span class="dot">·</span>
+    <a href="/privacy.html">隱私權政策</a>
+  </footer>
+</body>
+</html>

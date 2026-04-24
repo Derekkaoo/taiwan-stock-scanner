@@ -1,0 +1,9 @@
+# https://taiwan-stock-scanner.pages.dev/robots.txt
+# TODO: 換自訂網域後請同步更新 Sitemap URL
+
+User-agent: *
+Allow: /
+Disallow: /data/
+
+# Sitemap
+Sitemap: https://taiwan-stock-scanner.pages.dev/sitemap.xml
