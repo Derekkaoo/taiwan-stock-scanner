@@ -5,3 +5,11 @@ backend/venv/
 __pycache__/
 *.pyc
 .env
+
+# PoC / cache / raw debug files in backend/db (only commit the core JSONs)
+backend/db/poc_*/
+backend/db/monthly_revenue_raw/
+backend/db/*_raw.html
+
+# Local pipeline run log
+update_data.log
