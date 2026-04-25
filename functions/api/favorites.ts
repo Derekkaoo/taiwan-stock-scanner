@@ -46,7 +46,7 @@ export const onRequestOptions: PagesFunction<Env> = async () => {
 // GET：列出該使用者所有最愛
 export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   const token = getToken(request)
-  if (\!token) return jsonResponse({ error: 'Missing token' }, 401)
+  if (!token) return jsonResponse({ error: 'Missing token' }, 401)
 
   const { results } = await env.DB
     .prepare('SELECT stock_id, added_at FROM favorites WHERE user_token = ? ORDER BY added_at DESC')
@@ -62,7 +62,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
 // POST：加進最愛
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   const token = getToken(request)
-  if (\!token) return jsonResponse({ error: 'Missing token' }, 401)
+  if (!token) return jsonResponse({ error: 'Missing token' }, 401)
 
   let body: { stock_id?: unknown }
   try {
@@ -71,7 +71,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     return jsonResponse({ error: 'Invalid JSON' }, 400)
   }
 
-  if (\!isValidStockId(body.stock_id)) {
+  if (!isValidStockId(body.stock_id)) {
     return jsonResponse({ error: 'Invalid stock_id' }, 400)
   }
 
@@ -86,7 +86,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 // DELETE：從最愛移除
 export const onRequestDelete: PagesFunction<Env> = async ({ request, env }) => {
   const token = getToken(request)
-  if (\!token) return jsonResponse({ error: 'Missing token' }, 401)
+  if (!token) return jsonResponse({ error: 'Missing token' }, 401)
 
   let body: { stock_id?: unknown }
   try {
@@ -95,7 +95,7 @@ export const onRequestDelete: PagesFunction<Env> = async ({ request, env }) => {
     return jsonResponse({ error: 'Invalid JSON' }, 400)
   }
 
-  if (\!isValidStockId(body.stock_id)) {
+  if (!isValidStockId(body.stock_id)) {
     return jsonResponse({ error: 'Invalid stock_id' }, 400)
   }
 
