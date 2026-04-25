@@ -1,8 +1,9 @@
-import { useState, useCallback, useEffect, useRef } from 'react'
+import { useState, useCallback, useEffect, useRef, useMemo } from 'react'
 import type { Toast, ReturnPeriod, TurnoverPeriod } from './types'
 import { RETURN_PERIOD_LABELS, TURNOVER_PERIOD_LABELS } from './types'
 import { useStocks } from './hooks/useStocks'
 import { useKline, calcThreeMonthReturn } from './hooks/useKline'
+import { useFavorites } from './hooks/useFavorites'
 import { StockTable } from './components/StockTable'
 import { GroupCard } from './components/GroupCard'
 import { Footer } from './components/Footer'
@@ -102,7 +103,17 @@ export default function App() {
   const [view,      setView]      = useState<View>('group')
   const [groupSort, setGroupSort] = useState<GroupSort>('delta')
   const [toasts,    setToasts]    = useState<Toast[]>([])
+  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false)
   const searchTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
+
+  // 我的最愛（後端同步）
+  const fav = useFavorites()
+
+  // 套用「只看最愛」filter
+  const visibleStocks = useMemo(() => {
+    if (!showFavoritesOnly) return filteredStocks
+    return filteredStocks.filter(s => fav.isFavorite(s.id))
+  }, [filteredStocks, showFavoritesOnly, fav])
 
   const toast = useCallback((message: string, type: Toast['type'] = 'info') => {
     const id = Math.random().toString(36).slice(2)
@@ -252,6 +263,23 @@ export default function App() {
             {v === 'group' ? '族群總覽' : '個股列表'}
           </button>
         ))}
+
+        {/* 「只看我的最愛」toggle */}
+        <button
+          onClick={() => setShowFavoritesOnly(v => !v)}
+          disabled={fav.loading}
+          className="text-xs px-3 py-1 rounded border transition-colors"
+          style={{
+            background:  showFavoritesOnly ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+            borderColor: showFavoritesOnly ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+            color:       showFavoritesOnly ? '#fff' : 'var(--color-text-secondary)',
+            cursor: fav.loading ? 'not-allowed' : 'pointer',
+            opacity: fav.loading ? 0.5 : 1,
+          }}
+          title={`目前最愛 ${fav.count} 支`}
+        >
+          ⭐ 我的最愛 ({fav.count})
+        </button>
 
         <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
 
@@ -420,9 +448,9 @@ export default function App() {
           </div>
         )}
 
-        {view === 'table' && stockCount > 0 && (
+        {view === 'table' && visibleStocks.length > 0 && (
           <StockTable
-            stocks={filteredStocks}
+            stocks={visibleStocks}
             sort={sort}
             onSort={key => updateSort(key)}
             returnPeriod={returnPeriod}
@@ -430,6 +458,8 @@ export default function App() {
             fetchGroup={fetchGroup}
             getFromCache={getFromCache}
             cacheVersion={cacheVersion}
+            isFavorite={fav.isFavorite}
+            toggleFavorite={fav.toggle}
           />
         )}
       </main>

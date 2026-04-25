@@ -42,13 +42,17 @@ interface Props {
   fetchGroup: (groupName: string, stockIds: string[], onEach?: (id: string, bars: KlineBar[]) => void) => Promise<void>
   getFromCache: (stockId: string) => KlineBar[] | null
   cacheVersion: number
+  /** 我的最愛（從 useFavorites 傳進來）*/
+  isFavorite?: (stockId: string) => boolean
+  toggleFavorite?: (stockId: string) => void
 }
 
-export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod, fetchGroup, getFromCache, cacheVersion }: Props) {
+export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod, fetchGroup, getFromCache, cacheVersion, isFavorite, toggleFavorite }: Props) {
   const COLS: ColDef[] = [
     { key: 'id', label: '代號', align: 'left', mono: true,
       render: (s) => {
         const isExpanded = expandedId === s.id
+        const fav = isFavorite?.(s.id) ?? false
         return (
           <span className="inline-flex items-center gap-2">
             <span
@@ -59,6 +63,24 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
                 color: isExpanded ? 'var(--color-accent-cyan)' : 'var(--color-text-secondary)',
               }}
             >▶</span>
+            {/* ⭐ 按鈕：點擊 toggle，stopPropagation 避免觸發行展開 */}
+            {toggleFavorite && (
+              <button
+                onClick={(e) => { e.stopPropagation(); toggleFavorite(s.id) }}
+                className="cursor-pointer transition-transform hover:scale-110 shrink-0"
+                style={{
+                  fontSize: 14,
+                  lineHeight: 1,
+                  color: fav ? '#fbbf24' : 'var(--color-text-muted)',
+                  background: 'transparent',
+                  border: 'none',
+                  padding: 0,
+                }}
+                title={fav ? '從最愛移除' : '加入最愛'}
+              >
+                {fav ? '★' : '☆'}
+              </button>
+            )}
             <span className="font-mono tabular" style={{ color: 'var(--color-accent-cyan)' }}>
               {s.id}
             </span>
