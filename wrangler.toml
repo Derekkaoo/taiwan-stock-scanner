@@ -1,0 +1,12 @@
+# Cloudflare Pages Functions configuration
+# 這個檔案讓 Pages Functions 認得 D1 binding
+
+name = "taiwan-stock-scanner"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "frontend/dist"
+
+# D1 資料庫綁定（在 Pages Function 裡用 env.DB 訪問）
+[[d1_databases]]
+binding = "DB"
+database_name = "stock-scanner-favorites"
+database_id = "7631cf70-84d4-477a-9627-9994a7806685"
