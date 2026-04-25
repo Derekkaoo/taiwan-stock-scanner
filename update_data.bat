@@ -52,6 +52,11 @@ if errorlevel 1 (
 )
 
 echo. >> "%LOGFILE%"
+echo [5/5] Send Telegram notifications... >> "%LOGFILE%"
+"%PYTHON%" scripts/send_notifications.py >> "%LOGFILE%" 2>&1
+REM 通知失敗不阻擋整個流程（pipeline + push 已成功）
+
+echo. >> "%LOGFILE%"
 echo Done! CI will deploy in ~5 min >> "%LOGFILE%"
 echo Run finished: %date% %time% >> "%LOGFILE%"
 exit /b 0
