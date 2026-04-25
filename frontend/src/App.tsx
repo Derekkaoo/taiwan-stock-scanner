@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
-import type { Toast, ReturnPeriod } from './types'
-import { RETURN_PERIOD_LABELS } from './types'
+import type { Toast, ReturnPeriod, TurnoverPeriod } from './types'
+import { RETURN_PERIOD_LABELS, TURNOVER_PERIOD_LABELS } from './types'
 import { useStocks } from './hooks/useStocks'
 import { useKline, calcThreeMonthReturn } from './hooks/useKline'
 import { StockTable } from './components/StockTable'
@@ -88,12 +88,14 @@ function InfoPopup({ text }: { text: string }) {
 }
 
 export default function App() {
-  const [returnPeriod, setReturnPeriod] = useState<ReturnPeriod>('y1')
+  const [returnPeriod,   setReturnPeriod]   = useState<ReturnPeriod>('y1')
+  const [turnoverPeriod, setTurnoverPeriod] = useState<TurnoverPeriod>('d5')
+
   const {
     filteredStocks, grouped, sort, loading, error,
     searchQuery, lastUpdated, dataDate,
     loadData, setSearchQuery, updateSort, updateStockReturn,
-  } = useStocks(returnPeriod)
+  } = useStocks(returnPeriod, turnoverPeriod)
 
   const { fetchGroup, getFromCache, loadFromJson, cacheVersion, clearCache } = useKline()
 
@@ -297,6 +299,35 @@ export default function App() {
           })}
         </div>
 
+        {/* 成交期間按鈕（只在個股列表顯示，因為只有那邊有成交值欄位）*/}
+        {view === 'table' && (
+          <>
+            <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
+            <span className="text-xs" style={{ color: 'var(--color-text-muted)' }}>成交值期間：</span>
+            <div className="flex items-center gap-1">
+              {(['d1','d5','d10','d20'] as TurnoverPeriod[]).map(p => {
+                const active = turnoverPeriod === p
+                return (
+                  <button
+                    key={p}
+                    onClick={() => setTurnoverPeriod(p)}
+                    className="text-xs px-2 py-1 rounded border transition-colors"
+                    style={{
+                      background: active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                      borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                      color: active ? '#fff' : 'var(--color-text-secondary)',
+                      fontWeight: active ? 600 : 400,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {TURNOVER_PERIOD_LABELS[p]}
+                  </button>
+                )
+              })}
+            </div>
+          </>
+        )}
+
         <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
 
         <input
@@ -395,6 +426,7 @@ export default function App() {
             sort={sort}
             onSort={key => updateSort(key)}
             returnPeriod={returnPeriod}
+            turnoverPeriod={turnoverPeriod}
             fetchGroup={fetchGroup}
             getFromCache={getFromCache}
             cacheVersion={cacheVersion}

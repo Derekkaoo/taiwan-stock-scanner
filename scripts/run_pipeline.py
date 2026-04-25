@@ -180,6 +180,22 @@ def check_what_needs_refresh() -> dict:
         try:
             with open(FINANCIALS_PATH, encoding="utf-8") as f:
                 fin = json.load(f)
+
+            # 檢查 1：stocks.json 中有多少 ID 不在 financials（新進股完全沒抓過）
+            stocks_path = DATA_DIR / "stocks.json"
+            if stocks_path.exists():
+                with open(stocks_path, encoding="utf-8") as f:
+                    stocks_ids = {s["id"] for s in json.load(f)}
+                fin_ids_with_data = {sid for sid, v in fin.items()
+                                      if v.get("revenueYoY") or v.get("epsYoY")}
+                missing = stocks_ids - fin_ids_with_data
+                if len(missing) >= max(10, len(stocks_ids) * 0.05):  # 缺 >= 10 支或 5%
+                    result["financials"] = True
+                    result["reasons"].append(
+                        f"財報資料缺漏（{len(missing)} 支股票未抓過，例：{list(missing)[:5]}）"
+                    )
+
+            # 檢查 2：時間過期（取樣 50 支看 epsYoY 是否到最新季）
             stale_count = 0
             sample_count = 0
             for entry in list(fin.values())[:50]:
@@ -192,9 +208,10 @@ def check_what_needs_refresh() -> dict:
                     stale_count += 1
             if sample_count > 0 and stale_count >= sample_count / 2:
                 result["financials"] = True
-                result["reasons"].append(
-                    f"季報過期（預期至少到 {exp_q}，取樣 {stale_count}/{sample_count} 支過期）"
-                )
+                if not any("缺漏" in r for r in result["reasons"]):
+                    result["reasons"].append(
+                        f"季報過期（預期至少到 {exp_q}，取樣 {stale_count}/{sample_count} 支過期）"
+                    )
         except Exception as e:
             logger.warning("讀 financials.json 失敗：%s", e)
     elif exp_q:
@@ -586,6 +603,25 @@ def run():
             shares = common_stocks_map[sid] / 10  # 面額 10 元
             market_cap = round((shares * price_now) / 1e8, 2)
 
+        # 成交值（億元）：用 typical price 近似
+        # typical_price = (high + low + close) / 3，比單純 close 更接近 VWAP
+        # d1=當日；d5=週均；d10=雙週均；d20=月均
+        def _bar_turnover(b):
+            h = b.get("h") or 0
+            l = b.get("l") or 0
+            c = b.get("c") or 0
+            v = b.get("v") or 0
+            tp = (h + l + c) / 3 if (h and l and c) else c
+            return tp * v
+        turnovers = {}
+        if bars:
+            for label, days in [("d1", 1), ("d5", 5), ("d10", 10), ("d20", 20)]:
+                recent = bars[-days:] if len(bars) >= days else bars
+                total = sum(_bar_turnover(b) for b in recent)
+                turnovers[label] = round(total / len(recent) / 1e8, 2)
+        else:
+            turnovers = {"d1": 0, "d5": 0, "d10": 0, "d20": 0}
+
         stocks.append({
             "id":               sid,
             "name":             name,
@@ -596,6 +632,7 @@ def run():
             "delta":            float(h.get("delta", 0)),
             "price":            price_now,
             "marketCap":        market_cap,
+            "turnovers":        turnovers,            # 多期間成交值（億元）：d1/d5/d10/d20
             "date":             h.get("date", datetime.now().strftime("%Y-%m-%d")),
             "threeMonthReturn": returns.get("y1"),  # 主欄位：預設顯示 1 年漲幅
             "returns":          returns,

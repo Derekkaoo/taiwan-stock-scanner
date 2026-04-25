@@ -1,5 +1,5 @@
-import type { StockRow, SortState, ReturnPeriod, KlineBar } from '../types'
-import { RETURN_PERIOD_LABELS } from '../types'
+import type { StockRow, SortState, ReturnPeriod, TurnoverPeriod, KlineBar } from '../types'
+import { RETURN_PERIOD_LABELS, TURNOVER_PERIOD_LABELS } from '../types'
 import { THEME_CSS_MAP, TAG_COLORS, getGroupCssClass } from '../constants/themeGroups'
 import { CandlestickSVG } from './CandlestickSVG'
 import { FundamentalsPanel } from './FundamentalsPanel'
@@ -36,13 +36,14 @@ interface Props {
   sort: SortState
   onSort: (key: keyof StockRow) => void
   returnPeriod: ReturnPeriod
+  turnoverPeriod: TurnoverPeriod
   /** 來自 App 層的 useKline（避免 StockTable 自建獨立 cache） */
   fetchGroup: (groupName: string, stockIds: string[], onEach?: (id: string, bars: KlineBar[]) => void) => Promise<void>
   getFromCache: (stockId: string) => KlineBar[] | null
   cacheVersion: number
 }
 
-export function StockTable({ stocks, sort, onSort, returnPeriod, fetchGroup, getFromCache, cacheVersion }: Props) {
+export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod, fetchGroup, getFromCache, cacheVersion }: Props) {
   const COLS: ColDef[] = [
     { key: 'id', label: '代號', align: 'left', mono: true,
       render: (s) => {
@@ -100,6 +101,17 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, fetchGroup, get
     },
     { key: 'price', label: '收盤價', align: 'right', mono: true,
       render: (s) => <span className="tabular font-mono">{s.price.toFixed(s.price >= 100 ? 1 : 2)}</span>
+    },
+    { key: 'turnovers', label: `${TURNOVER_PERIOD_LABELS[turnoverPeriod]}成交值`, align: 'right', mono: true,
+      render: (s) => {
+        const t = s.turnovers?.[turnoverPeriod] ?? 0
+        if (!t) return <span style={{ color: 'var(--color-text-muted)' }}>—</span>
+        // 億元為單位：>=100 億不帶小數、>=10 億 1 位、<10 億 2 位
+        const display = t >= 100 ? `${t.toFixed(0)} 億`
+                      : t >= 10  ? `${t.toFixed(1)} 億`
+                      :            `${t.toFixed(2)} 億`
+        return <span className="tabular font-mono" style={{ color: 'var(--color-text-secondary)' }}>{display}</span>
+      }
     },
     { key: 'threeMonthReturn', label: `${RETURN_PERIOD_LABELS[returnPeriod]}漲幅`, align: 'right', mono: true,
       render: (s) => {

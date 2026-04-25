@@ -2,18 +2,86 @@
 <html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
-<meta property="og:title" content="千張大戶持股追蹤器" />
-<meta property="og:description" content="追蹤千張大戶持股動向與族群 K 線" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>千張大戶持股追蹤器</title>
-    <!-- Google Fonts: Noto Sans TC (中文), JetBrains Mono (數字) -->
+
+    <!-- ============ Primary SEO Meta Tags ============ -->
+    <title>千張大戶持股追蹤器｜台股大股東週增持、族群 K 線免費工具</title>
+    <meta name="title" content="千張大戶持股追蹤器｜台股大股東週增持、族群 K 線免費工具" />
+    <meta name="description" content="免費追蹤台股千張大戶持股變化，整合族群 K 線圖與技術面。每週更新 TDCC 集保資料，一眼看出大股東正在增持的股票與潛在強勢族群。" />
+    <meta name="keywords" content="千張大戶,大股東持股,台股大戶,大戶持股追蹤,TDCC集保,族群K線,台股篩選,台股工具,大股東持股變化,千張大戶增持,集保戶股權分散" />
+    <meta name="author" content="千張大戶持股追蹤器" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <!-- TODO: 改自訂網域時請同步更新 canonical 與 og:url、twitter:url -->
+    <link rel="canonical" href="https://taiwan-stock-scanner.pages.dev/" />
+
+    <!-- ============ Open Graph / Facebook ============ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://taiwan-stock-scanner.pages.dev/" />
+    <meta property="og:site_name" content="千張大戶持股追蹤器" />
+    <meta property="og:title" content="千張大戶持股追蹤器｜台股大股東週增持、族群 K 線" />
+    <meta property="og:description" content="免費追蹤台股千張大戶持股變化，整合族群 K 線圖與技術面。每週更新 TDCC 集保資料，一眼看出大股東正在增持的股票與潛在強勢族群。" />
+    <meta property="og:image" content="https://taiwan-stock-scanner.pages.dev/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="千張大戶持股追蹤器 — 台股大股東週增持與族群 K 線" />
+    <meta property="og:locale" content="zh_TW" />
+
+    <!-- ============ Twitter / X Card ============ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://taiwan-stock-scanner.pages.dev/" />
+    <meta name="twitter:title" content="千張大戶持股追蹤器｜台股大股東週增持、族群 K 線" />
+    <meta name="twitter:description" content="免費追蹤台股千張大戶持股變化，整合族群 K 線圖與技術面。" />
+    <meta name="twitter:image" content="https://taiwan-stock-scanner.pages.dev/og-image.svg" />
+
+    <!-- ============ Favicon ============ -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+
+    <!-- ============ Google Fonts ============ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-C01KO8jw.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-B9eU4l60.css">
+
+    <!-- ============ Structured Data (JSON-LD) ============ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "千張大戶持股追蹤器",
+      "alternateName": "Taiwan Stock Major Shareholder Tracker",
+      "url": "https://taiwan-stock-scanner.pages.dev/",
+      "description": "免費追蹤台股千張大戶持股變化，整合族群 K 線圖與技術面。每週更新 TDCC 集保資料。",
+      "applicationCategory": "FinanceApplication",
+      "applicationSubCategory": "Stock Screener",
+      "operatingSystem": "Web",
+      "inLanguage": "zh-TW",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TWD"
+      },
+      "featureList": [
+        "台股千張大戶持股週增持追蹤",
+        "族群 K 線圖（含 MA20/MA60/成交量）",
+        "可依族群或漲幅排序",
+        "每週自動更新 TDCC 集保資料"
+      ]
+    }
+    </script>
+
+    <!-- ============ Google Analytics 4 ============ -->
+    <!-- Property: 千張大戶持股追蹤器 / Stream: Taiwan Stock Scanner Web -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QF7SM2Z96T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QF7SM2Z96T');
+    </script>
+    <script type="module" crossorigin src="/assets/index-8LlJQtRH.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-ILbuHfqG.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>

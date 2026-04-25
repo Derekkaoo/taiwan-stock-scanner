@@ -13,6 +13,7 @@ export interface StockRow {
   price: number        // 收盤價
   marketCap: number    // 市值（億）
   deltaAmount?: number // 本週增持金額（億）= delta% × marketCap，normalizeRow 時衍生
+  turnovers?: Partial<Record<TurnoverPeriod, number>>  // 多期間成交值（億元）
   date: string         // 資料日期 YYYY-MM-DD
   threeMonthReturn: number | null  // 近三個月報酬率（從 K 線計算）
   subIndustries?: string[]
@@ -43,6 +44,17 @@ export const RETURN_PERIOD_LABELS: Record<ReturnPeriod, string> = {
   m3: '3月',
   m6: '半年',
   y1: '1年',
+}
+
+/** 成交值期間 key */
+export type TurnoverPeriod = 'd1' | 'd5' | 'd10' | 'd20'
+
+/** UI 顯示用的成交值期間標籤 */
+export const TURNOVER_PERIOD_LABELS: Record<TurnoverPeriod, string> = {
+  d1:  '1日',
+  d5:  '5日均',
+  d10: '10日均',
+  d20: '月均',
 }
 
 /** K 線資料列 */

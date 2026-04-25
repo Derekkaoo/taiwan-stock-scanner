@@ -43,7 +43,15 @@
     "revenueYoY": -8.96,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 6.87,
+    "avgTurnover5d": 5.47,
+    "turnovers": {
+      "d1": 6.87,
+      "d5": 5.47,
+      "d10": 5.8,
+      "d20": 7.17
+    }
   },
   {
     "id": "1102",
@@ -89,7 +97,15 @@
     "revenueYoY": -18.11,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 2.39,
+    "avgTurnover5d": 4.31,
+    "turnovers": {
+      "d1": 2.39,
+      "d5": 4.31,
+      "d10": 3.9,
+      "d20": 3.69
+    }
   },
   {
     "id": "1307",
@@ -133,7 +149,15 @@
     "revenueYoY": -1.06,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.26,
+    "avgTurnover5d": 0.25,
+    "turnovers": {
+      "d1": 0.26,
+      "d5": 0.25,
+      "d10": 0.22,
+      "d20": 0.33
+    }
   },
   {
     "id": "1309",
@@ -172,7 +196,15 @@
     "revenueYoY": -8.35,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 7.93,
+    "avgTurnover5d": 4.02,
+    "turnovers": {
+      "d1": 8.02,
+      "d5": 4.0,
+      "d10": 3.9,
+      "d20": 6.5
+    }
   },
   {
     "id": "1321",
@@ -223,7 +255,15 @@
     "revenueYoY": 1.49,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.09,
+    "avgTurnover5d": 0.11,
+    "turnovers": {
+      "d1": 0.09,
+      "d5": 0.11,
+      "d10": 0.09,
+      "d20": 0.08
+    }
   },
   {
     "id": "1414",
@@ -272,7 +312,15 @@
     "revenueYoY": -24.43,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.06,
+    "avgTurnover5d": 0.05,
+    "turnovers": {
+      "d1": 0.06,
+      "d5": 0.05,
+      "d10": 0.05,
+      "d20": 0.05
+    }
   },
   {
     "id": "1417",
@@ -311,7 +359,15 @@
     "revenueYoY": 8.18,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.0,
+    "avgTurnover5d": 0.01,
+    "turnovers": {
+      "d1": 0.0,
+      "d5": 0.01,
+      "d10": 0.01,
+      "d20": 0.01
+    }
   },
   {
     "id": "1432",
@@ -355,7 +411,15 @@
     "revenueYoY": -42.78,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.04,
+    "avgTurnover5d": 0.08,
+    "turnovers": {
+      "d1": 0.04,
+      "d5": 0.08,
+      "d10": 0.06,
+      "d20": 0.06
+    }
   },
   {
     "id": "1455",
@@ -549,6 +613,14 @@
           "yoy": -153.85
         }
       ]
+    },
+    "turnover": 0.07,
+    "avgTurnover5d": 0.08,
+    "turnovers": {
+      "d1": 0.07,
+      "d5": 0.08,
+      "d10": 0.09,
+      "d20": 0.07
     }
   },
   {
@@ -737,6 +809,14 @@
           "yoy": 100.0
         }
       ]
+    },
+    "turnover": 0.05,
+    "avgTurnover5d": 0.05,
+    "turnovers": {
+      "d1": 0.05,
+      "d5": 0.05,
+      "d10": 0.05,
+      "d20": 0.04
     }
   },
   {
@@ -934,6 +1014,14 @@
           "yoy": -121.52
         }
       ]
+    },
+    "turnover": 0.19,
+    "avgTurnover5d": 0.05,
+    "turnovers": {
+      "d1": 0.19,
+      "d5": 0.05,
+      "d10": 0.03,
+      "d20": 0.02
     }
   },
   {
@@ -1127,6 +1215,14 @@
           "yoy": 25.0
         }
       ]
+    },
+    "turnover": 0.01,
+    "avgTurnover5d": 0.01,
+    "turnovers": {
+      "d1": 0.01,
+      "d5": 0.01,
+      "d10": 0.01,
+      "d20": 0.01
     }
   },
   {
@@ -1197,7 +1293,15 @@
     "revenueYoY": 3.3,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 2.95,
+    "avgTurnover5d": 5.47,
+    "turnovers": {
+      "d1": 2.94,
+      "d5": 5.49,
+      "d10": 5.66,
+      "d20": 5.16
+    }
   },
   {
     "id": "1522",
@@ -1234,7 +1338,15 @@
     "revenueYoY": 46.7,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.27,
+    "avgTurnover5d": 0.27,
+    "turnovers": {
+      "d1": 0.27,
+      "d5": 0.27,
+      "d10": 0.28,
+      "d20": 0.23
+    }
   },
   {
     "id": "1529",
@@ -1278,7 +1390,15 @@
     "revenueYoY": -68.95,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.1,
+    "avgTurnover5d": 0.19,
+    "turnovers": {
+      "d1": 0.1,
+      "d5": 0.19,
+      "d10": 0.18,
+      "d20": 0.23
+    }
   },
   {
     "id": "1568",
@@ -1315,7 +1435,15 @@
     "revenueYoY": 27.04,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.26,
+    "avgTurnover5d": 0.4,
+    "turnovers": {
+      "d1": 0.27,
+      "d5": 0.4,
+      "d10": 0.25,
+      "d20": 0.14
+    }
   },
   {
     "id": "1569",
@@ -1354,7 +1482,15 @@
     "revenueYoY": 11.41,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 5.95,
+    "avgTurnover5d": 2.79,
+    "turnovers": {
+      "d1": 5.94,
+      "d5": 2.79,
+      "d10": 1.79,
+      "d20": 1.15
+    }
   },
   {
     "id": "1584",
@@ -1389,7 +1525,15 @@
     "revenueYoY": -34.65,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.24,
+    "avgTurnover5d": 0.24,
+    "turnovers": {
+      "d1": 0.24,
+      "d5": 0.24,
+      "d10": 0.2,
+      "d20": 0.18
+    }
   },
   {
     "id": "1595",
@@ -1428,7 +1572,15 @@
     "revenueYoY": -20.9,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 4.34,
+    "avgTurnover5d": 2.04,
+    "turnovers": {
+      "d1": 4.21,
+      "d5": 2.0,
+      "d10": 1.77,
+      "d20": 0.94
+    }
   },
   {
     "id": "1598",
@@ -1465,7 +1617,15 @@
     "revenueYoY": 16.79,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.06,
+    "avgTurnover5d": 0.05,
+    "turnovers": {
+      "d1": 0.06,
+      "d5": 0.05,
+      "d10": 0.06,
+      "d20": 0.07
+    }
   },
   {
     "id": "1609",
@@ -1659,6 +1819,14 @@
           "yoy": -88.0
         }
       ]
+    },
+    "turnover": 0.8,
+    "avgTurnover5d": 1.05,
+    "turnovers": {
+      "d1": 0.8,
+      "d5": 1.06,
+      "d10": 0.97,
+      "d20": 0.89
     }
   },
   {
@@ -1856,6 +2024,14 @@
           "yoy": -437.5
         }
       ]
+    },
+    "turnover": 0.3,
+    "avgTurnover5d": 0.68,
+    "turnovers": {
+      "d1": 0.31,
+      "d5": 0.69,
+      "d10": 0.77,
+      "d20": 1.43
     }
   },
   {
@@ -1895,7 +2071,15 @@
     "revenueYoY": -22.89,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 2.11,
+    "avgTurnover5d": 3.79,
+    "turnovers": {
+      "d1": 2.14,
+      "d5": 3.66,
+      "d10": 2.38,
+      "d20": 1.3
+    }
   },
   {
     "id": "1733",
@@ -1934,7 +2118,15 @@
     "revenueYoY": -24.14,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.04,
+    "avgTurnover5d": 0.05,
+    "turnovers": {
+      "d1": 0.04,
+      "d5": 0.05,
+      "d10": 0.05,
+      "d20": 0.04
+    }
   },
   {
     "id": "1773",
@@ -2128,6 +2320,14 @@
           "yoy": -2.7
         }
       ]
+    },
+    "turnover": 6.76,
+    "avgTurnover5d": 6.62,
+    "turnovers": {
+      "d1": 6.74,
+      "d5": 6.62,
+      "d10": 4.28,
+      "d20": 3.21
     }
   },
   {
@@ -2165,7 +2365,15 @@
     "revenueYoY": 0.79,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.19,
+    "avgTurnover5d": 0.15,
+    "turnovers": {
+      "d1": 0.19,
+      "d5": 0.15,
+      "d10": 0.17,
+      "d20": 0.19
+    }
   },
   {
     "id": "1808",
@@ -2202,7 +2410,15 @@
     "revenueYoY": 68259.95,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.82,
+    "avgTurnover5d": 0.66,
+    "turnovers": {
+      "d1": 0.82,
+      "d5": 0.66,
+      "d10": 0.54,
+      "d20": 0.39
+    }
   },
   {
     "id": "1809",
@@ -2239,7 +2455,15 @@
     "revenueYoY": -14.74,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.58,
+    "avgTurnover5d": 1.51,
+    "turnovers": {
+      "d1": 0.59,
+      "d5": 1.52,
+      "d10": 1.31,
+      "d20": 1.0
+    }
   },
   {
     "id": "1810",
@@ -2278,7 +2502,15 @@
     "revenueYoY": -11.97,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.15,
+    "avgTurnover5d": 0.31,
+    "turnovers": {
+      "d1": 0.15,
+      "d5": 0.31,
+      "d10": 0.29,
+      "d20": 0.2
+    }
   },
   {
     "id": "1904",
@@ -2319,7 +2551,15 @@
     "revenueYoY": 10.34,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.27,
+    "avgTurnover5d": 0.28,
+    "turnovers": {
+      "d1": 0.28,
+      "d5": 0.28,
+      "d10": 0.29,
+      "d20": 0.74
+    }
   },
   {
     "id": "1906",
@@ -2356,7 +2596,15 @@
     "revenueYoY": 50.07,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.01,
+    "avgTurnover5d": 0.03,
+    "turnovers": {
+      "d1": 0.01,
+      "d5": 0.03,
+      "d10": 0.02,
+      "d20": 0.09
+    }
   },
   {
     "id": "2022",
@@ -2393,7 +2641,15 @@
     "revenueYoY": 52.49,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.07,
+    "avgTurnover5d": 0.08,
+    "turnovers": {
+      "d1": 0.07,
+      "d5": 0.09,
+      "d10": 0.09,
+      "d20": 0.08
+    }
   },
   {
     "id": "2030",
@@ -2585,6 +2841,14 @@
           "yoy": 22.22
         }
       ]
+    },
+    "turnover": 0.15,
+    "avgTurnover5d": 0.15,
+    "turnovers": {
+      "d1": 0.15,
+      "d5": 0.15,
+      "d10": 0.14,
+      "d20": 0.13
     }
   },
   {
@@ -2769,6 +3033,14 @@
           "yoy": 150.0
         }
       ]
+    },
+    "turnover": 0.02,
+    "avgTurnover5d": 0.02,
+    "turnovers": {
+      "d1": 0.02,
+      "d5": 0.02,
+      "d10": 0.02,
+      "d20": 0.02
     }
   },
   {
@@ -2957,6 +3229,14 @@
           "yoy": 69.23
         }
       ]
+    },
+    "turnover": 0.26,
+    "avgTurnover5d": 0.34,
+    "turnovers": {
+      "d1": 0.26,
+      "d5": 0.34,
+      "d10": 0.3,
+      "d20": 0.27
     }
   },
   {
@@ -3147,6 +3427,14 @@
           "yoy": 39.78
         }
       ]
+    },
+    "turnover": 17.59,
+    "avgTurnover5d": 30.41,
+    "turnovers": {
+      "d1": 17.79,
+      "d5": 30.46,
+      "d10": 37.23,
+      "d20": 25.42
     }
   },
   {
@@ -3342,6 +3630,14 @@
           "yoy": 2279.49
         }
       ]
+    },
+    "turnover": 0.14,
+    "avgTurnover5d": 0.11,
+    "turnovers": {
+      "d1": 0.14,
+      "d5": 0.11,
+      "d10": 0.09,
+      "d20": 0.1
     }
   },
   {
@@ -3558,6 +3854,14 @@
           "yoy": 50.0
         }
       ]
+    },
+    "turnover": 0.14,
+    "avgTurnover5d": 0.12,
+    "turnovers": {
+      "d1": 0.14,
+      "d5": 0.12,
+      "d10": 0.11,
+      "d20": 0.08
     }
   },
   {
@@ -3611,7 +3915,15 @@
     "revenueYoY": -5.64,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 1.16,
+    "avgTurnover5d": 1.14,
+    "turnovers": {
+      "d1": 1.15,
+      "d5": 1.14,
+      "d10": 0.8,
+      "d20": 0.64
+    }
   },
   {
     "id": "2208",
@@ -3646,7 +3958,15 @@
     "revenueYoY": -25.35,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.51,
+    "avgTurnover5d": 0.73,
+    "turnovers": {
+      "d1": 0.51,
+      "d5": 0.73,
+      "d10": 0.79,
+      "d20": 0.75
+    }
   },
   {
     "id": "2230",
@@ -3690,7 +4010,15 @@
     "revenueYoY": 186.45,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.15,
+    "avgTurnover5d": 0.12,
+    "turnovers": {
+      "d1": 0.15,
+      "d5": 0.12,
+      "d10": 0.09,
+      "d20": 0.09
+    }
   },
   {
     "id": "2231",
@@ -3729,7 +4057,15 @@
     "revenueYoY": -26.94,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 3.4,
+    "avgTurnover5d": 5.04,
+    "turnovers": {
+      "d1": 3.45,
+      "d5": 5.06,
+      "d10": 3.87,
+      "d20": 3.4
+    }
   },
   {
     "id": "2233",
@@ -3785,7 +4121,15 @@
     "revenueYoY": 2.89,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 2.8,
+    "avgTurnover5d": 5.09,
+    "turnovers": {
+      "d1": 2.84,
+      "d5": 5.13,
+      "d10": 3.78,
+      "d20": 2.52
+    }
   },
   {
     "id": "2236",
@@ -3973,6 +4317,14 @@
           "yoy": -149.34
         }
       ]
+    },
+    "turnover": 0.85,
+    "avgTurnover5d": 0.73,
+    "turnovers": {
+      "d1": 0.85,
+      "d5": 0.73,
+      "d10": 0.88,
+      "d20": 0.67
     }
   },
   {
@@ -4008,7 +4360,15 @@
     "revenueYoY": 52.46,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.47,
+    "avgTurnover5d": 0.31,
+    "turnovers": {
+      "d1": 0.48,
+      "d5": 0.31,
+      "d10": 0.28,
+      "d20": 0.31
+    }
   },
   {
     "id": "2301",
@@ -4112,7 +4472,15 @@
     "revenueYoY": 23.44,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 42.65,
+    "avgTurnover5d": 62.27,
+    "turnovers": {
+      "d1": 42.15,
+      "d5": 62.36,
+      "d10": 48.33,
+      "d20": 37.59
+    }
   },
   {
     "id": "2303",
@@ -4302,6 +4670,14 @@
           "yoy": 17.65
         }
       ]
+    },
+    "turnover": 133.34,
+    "avgTurnover5d": 198.61,
+    "turnovers": {
+      "d1": 134.89,
+      "d5": 199.92,
+      "d10": 175.06,
+      "d20": 114.82
     }
   },
   {
@@ -4591,6 +4967,14 @@
           "yoy": -3.29
         }
       ]
+    },
+    "turnover": 167.37,
+    "avgTurnover5d": 209.05,
+    "turnovers": {
+      "d1": 167.87,
+      "d5": 208.71,
+      "d10": 156.9,
+      "d20": 125.28
     }
   },
   {
@@ -4830,6 +5214,14 @@
           "yoy": -27.27
         }
       ]
+    },
+    "turnover": 10.66,
+    "avgTurnover5d": 24.15,
+    "turnovers": {
+      "d1": 10.74,
+      "d5": 24.22,
+      "d10": 19.96,
+      "d20": 15.57
     }
   },
   {
@@ -5029,6 +5421,14 @@
           "yoy": 300.0
         }
       ]
+    },
+    "turnover": 4.6,
+    "avgTurnover5d": 11.61,
+    "turnovers": {
+      "d1": 4.64,
+      "d5": 11.65,
+      "d10": 15.64,
+      "d20": 10.54
     }
   },
   {
@@ -5066,7 +5466,15 @@
     "revenueYoY": -10.78,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.95,
+    "avgTurnover5d": 0.94,
+    "turnovers": {
+      "d1": 0.97,
+      "d5": 0.94,
+      "d10": 0.66,
+      "d20": 0.47
+    }
   },
   {
     "id": "2344",
@@ -5105,7 +5513,15 @@
     "revenueYoY": 91.49,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 107.15,
+    "avgTurnover5d": 129.55,
+    "turnovers": {
+      "d1": 105.73,
+      "d5": 129.37,
+      "d10": 121.43,
+      "d20": 143.17
+    }
   },
   {
     "id": "2351",
@@ -5302,6 +5718,14 @@
           "yoy": 11.88
         }
       ]
+    },
+    "turnover": 26.75,
+    "avgTurnover5d": 26.39,
+    "turnovers": {
+      "d1": 27.69,
+      "d5": 26.72,
+      "d10": 17.9,
+      "d20": 12.81
     }
   },
   {
@@ -5539,6 +5963,14 @@
           "yoy": -54.55
         }
       ]
+    },
+    "turnover": 1.07,
+    "avgTurnover5d": 1.33,
+    "turnovers": {
+      "d1": 1.07,
+      "d5": 1.33,
+      "d10": 1.28,
+      "d20": 1.12
     }
   },
   {
@@ -5735,6 +6167,14 @@
           "yoy": -13.64
         }
       ]
+    },
+    "turnover": 21.21,
+    "avgTurnover5d": 17.32,
+    "turnovers": {
+      "d1": 21.0,
+      "d5": 17.29,
+      "d10": 13.71,
+      "d20": 10.34
     }
   },
   {
@@ -5805,7 +6245,15 @@
     "revenueYoY": 33.84,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 28.17,
+    "avgTurnover5d": 28.35,
+    "turnovers": {
+      "d1": 28.41,
+      "d5": 28.41,
+      "d10": 25.8,
+      "d20": 21.52
+    }
   },
   {
     "id": "2359",
@@ -5875,7 +6323,15 @@
     "revenueYoY": -44.13,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.96,
+    "avgTurnover5d": 1.54,
+    "turnovers": {
+      "d1": 0.96,
+      "d5": 1.55,
+      "d10": 1.62,
+      "d20": 1.18
+    }
   },
   {
     "id": "2363",
@@ -6069,6 +6525,14 @@
           "yoy": 133.33
         }
       ]
+    },
+    "turnover": 8.07,
+    "avgTurnover5d": 13.72,
+    "turnovers": {
+      "d1": 8.11,
+      "d5": 13.84,
+      "d10": 10.72,
+      "d20": 6.05
     }
   },
   {
@@ -6259,6 +6723,14 @@
           "yoy": 121.97
         }
       ]
+    },
+    "turnover": 117.11,
+    "avgTurnover5d": 77.8,
+    "turnovers": {
+      "d1": 114.58,
+      "d5": 77.46,
+      "d10": 71.4,
+      "d20": 71.29
     }
   },
   {
@@ -6305,7 +6777,15 @@
     "revenueYoY": 2.74,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 1.24,
+    "avgTurnover5d": 3.07,
+    "turnovers": {
+      "d1": 1.26,
+      "d5": 3.12,
+      "d10": 4.83,
+      "d20": 2.83
+    }
   },
   {
     "id": "2376",
@@ -6512,6 +6992,14 @@
           "yoy": 2.78
         }
       ]
+    },
+    "turnover": 13.7,
+    "avgTurnover5d": 25.91,
+    "turnovers": {
+      "d1": 13.71,
+      "d5": 25.96,
+      "d10": 32.34,
+      "d20": 24.05
     }
   },
   {
@@ -6719,6 +7207,14 @@
           "yoy": 250.91
         }
       ]
+    },
+    "turnover": 18.68,
+    "avgTurnover5d": 18.03,
+    "turnovers": {
+      "d1": 18.78,
+      "d5": 18.25,
+      "d10": 11.49,
+      "d20": 7.87
     }
   },
   {
@@ -6915,6 +7411,14 @@
           "yoy": 39.56
         }
       ]
+    },
+    "turnover": 58.08,
+    "avgTurnover5d": 69.41,
+    "turnovers": {
+      "d1": 57.99,
+      "d5": 69.5,
+      "d10": 68.89,
+      "d20": 69.19
     }
   },
   {
@@ -6952,7 +7456,15 @@
     "revenueYoY": 56.63,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 188.09,
+    "avgTurnover5d": 142.32,
+    "turnovers": {
+      "d1": 184.79,
+      "d5": 141.92,
+      "d10": 125.18,
+      "d20": 109.75
+    }
   },
   {
     "id": "2385",
@@ -6998,7 +7510,15 @@
     "revenueYoY": 3.89,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 4.49,
+    "avgTurnover5d": 6.08,
+    "turnovers": {
+      "d1": 4.51,
+      "d5": 6.11,
+      "d10": 5.38,
+      "d20": 4.68
+    }
   },
   {
     "id": "2387",
@@ -7035,7 +7555,15 @@
     "revenueYoY": 12.77,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.23,
+    "avgTurnover5d": 0.39,
+    "turnovers": {
+      "d1": 0.23,
+      "d5": 0.39,
+      "d10": 0.35,
+      "d20": 0.45
+    }
   },
   {
     "id": "2388",
@@ -7245,6 +7773,14 @@
           "yoy": 1.67
         }
       ]
+    },
+    "turnover": 35.72,
+    "avgTurnover5d": 19.74,
+    "turnovers": {
+      "d1": 36.35,
+      "d5": 19.85,
+      "d10": 14.08,
+      "d20": 8.45
     }
   },
   {
@@ -7280,7 +7816,15 @@
     "revenueYoY": 21.75,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 6.33,
+    "avgTurnover5d": 9.02,
+    "turnovers": {
+      "d1": 6.33,
+      "d5": 9.05,
+      "d10": 10.27,
+      "d20": 9.26
+    }
   },
   {
     "id": "2399",
@@ -7477,6 +8021,14 @@
           "yoy": 620.0
         }
       ]
+    },
+    "turnover": 21.38,
+    "avgTurnover5d": 13.43,
+    "turnovers": {
+      "d1": 20.86,
+      "d5": 13.42,
+      "d10": 9.94,
+      "d20": 6.92
     }
   },
   {
@@ -7675,6 +8227,14 @@
           "yoy": -466.67
         }
       ]
+    },
+    "turnover": 3.55,
+    "avgTurnover5d": 4.73,
+    "turnovers": {
+      "d1": 3.54,
+      "d5": 4.76,
+      "d10": 3.15,
+      "d20": 1.76
     }
   },
   {
@@ -7712,7 +8272,15 @@
     "revenueYoY": 100.57,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 41.93,
+    "avgTurnover5d": 55.91,
+    "turnovers": {
+      "d1": 42.01,
+      "d5": 56.28,
+      "d10": 53.62,
+      "d20": 40.76
+    }
   },
   {
     "id": "2405",
@@ -7756,7 +8324,15 @@
     "revenueYoY": 1.07,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.22,
+    "avgTurnover5d": 0.36,
+    "turnovers": {
+      "d1": 0.22,
+      "d5": 0.36,
+      "d10": 0.33,
+      "d20": 0.3
+    }
   },
   {
     "id": "2406",
@@ -7795,7 +8371,15 @@
     "revenueYoY": 160.07,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 1.98,
+    "avgTurnover5d": 3.29,
+    "turnovers": {
+      "d1": 2.0,
+      "d5": 3.34,
+      "d10": 3.85,
+      "d20": 4.59
+    }
   },
   {
     "id": "2412",
@@ -7841,7 +8425,15 @@
     "revenueYoY": 7.55,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 12.08,
+    "avgTurnover5d": 13.68,
+    "turnovers": {
+      "d1": 12.08,
+      "d5": 13.69,
+      "d10": 12.77,
+      "d20": 11.86
+    }
   },
   {
     "id": "2417",
@@ -8033,6 +8625,14 @@
           "yoy": 334.62
         }
       ]
+    },
+    "turnover": 0.25,
+    "avgTurnover5d": 0.52,
+    "turnovers": {
+      "d1": 0.25,
+      "d5": 0.52,
+      "d10": 0.49,
+      "d20": 0.44
     }
   },
   {
@@ -8072,7 +8672,15 @@
     "revenueYoY": 3.16,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.11,
+    "avgTurnover5d": 0.19,
+    "turnovers": {
+      "d1": 0.11,
+      "d5": 0.19,
+      "d10": 0.24,
+      "d20": 0.17
+    }
   },
   {
     "id": "2430",
@@ -8116,7 +8724,15 @@
     "revenueYoY": 1.87,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.04,
+    "avgTurnover5d": 0.03,
+    "turnovers": {
+      "d1": 0.04,
+      "d5": 0.03,
+      "d10": 0.03,
+      "d20": 0.02
+    }
   },
   {
     "id": "2440",
@@ -8153,7 +8769,15 @@
     "revenueYoY": 14.63,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.08,
+    "avgTurnover5d": 0.16,
+    "turnovers": {
+      "d1": 0.08,
+      "d5": 0.16,
+      "d10": 0.1,
+      "d20": 0.07
+    }
   },
   {
     "id": "2454",
@@ -8370,6 +8994,14 @@
           "yoy": -3.61
         }
       ]
+    },
+    "turnover": 528.03,
+    "avgTurnover5d": 450.6,
+    "turnovers": {
+      "d1": 520.44,
+      "d5": 446.18,
+      "d10": 356.0,
+      "d20": 242.41
     }
   },
   {
@@ -8568,6 +9200,14 @@
           "yoy": 22.38
         }
       ]
+    },
+    "turnover": 5.89,
+    "avgTurnover5d": 6.71,
+    "turnovers": {
+      "d1": 5.93,
+      "d5": 6.76,
+      "d10": 6.32,
+      "d20": 5.74
     }
   },
   {
@@ -8763,6 +9403,14 @@
           "yoy": -45.0
         }
       ]
+    },
+    "turnover": 0.2,
+    "avgTurnover5d": 0.22,
+    "turnovers": {
+      "d1": 0.2,
+      "d5": 0.22,
+      "d10": 0.18,
+      "d20": 0.2
     }
   },
   {
@@ -8821,7 +9469,15 @@
     "revenueYoY": 7.96,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 23.85,
+    "avgTurnover5d": 22.04,
+    "turnovers": {
+      "d1": 23.28,
+      "d5": 21.9,
+      "d10": 13.51,
+      "d20": 7.63
+    }
   },
   {
     "id": "2467",
@@ -9015,6 +9671,14 @@
           "yoy": 32.31
         }
       ]
+    },
+    "turnover": 4.42,
+    "avgTurnover5d": 3.94,
+    "turnovers": {
+      "d1": 4.38,
+      "d5": 3.97,
+      "d10": 10.76,
+      "d20": 18.12
     }
   },
   {
@@ -9205,6 +9869,14 @@
           "yoy": 26.32
         }
       ]
+    },
+    "turnover": 0.07,
+    "avgTurnover5d": 0.11,
+    "turnovers": {
+      "d1": 0.07,
+      "d5": 0.11,
+      "d10": 0.11,
+      "d20": 0.11
     }
   },
   {
@@ -9397,6 +10069,14 @@
           "yoy": 71.84
         }
       ]
+    },
+    "turnover": 5.83,
+    "avgTurnover5d": 7.62,
+    "turnovers": {
+      "d1": 5.87,
+      "d5": 7.69,
+      "d10": 10.11,
+      "d20": 8.61
     }
   },
   {
@@ -9587,6 +10267,14 @@
           "yoy": -80.0
         }
       ]
+    },
+    "turnover": 32.04,
+    "avgTurnover5d": 24.14,
+    "turnovers": {
+      "d1": 32.9,
+      "d5": 24.24,
+      "d10": 15.82,
+      "d20": 9.91
     }
   },
   {
@@ -9777,6 +10465,14 @@
           "yoy": 29.13
         }
       ]
+    },
+    "turnover": 16.01,
+    "avgTurnover5d": 13.03,
+    "turnovers": {
+      "d1": 16.14,
+      "d5": 13.06,
+      "d10": 11.09,
+      "d20": 6.91
     }
   },
   {
@@ -9967,6 +10663,14 @@
           "yoy": 0.0
         }
       ]
+    },
+    "turnover": 0.79,
+    "avgTurnover5d": 2.14,
+    "turnovers": {
+      "d1": 0.79,
+      "d5": 2.16,
+      "d10": 3.24,
+      "d20": 1.92
     }
   },
   {
@@ -10157,6 +10861,14 @@
           "yoy": -29.45
         }
       ]
+    },
+    "turnover": 0.07,
+    "avgTurnover5d": 0.12,
+    "turnovers": {
+      "d1": 0.07,
+      "d5": 0.12,
+      "d10": 0.17,
+      "d20": 0.14
     }
   },
   {
@@ -10351,6 +11063,14 @@
           "yoy": -5.79
         }
       ]
+    },
+    "turnover": 6.33,
+    "avgTurnover5d": 13.32,
+    "turnovers": {
+      "d1": 6.33,
+      "d5": 13.46,
+      "d10": 22.04,
+      "d20": 14.55
     }
   },
   {
@@ -10537,6 +11257,14 @@
           "yoy": 28.3
         }
       ]
+    },
+    "turnover": 3.9,
+    "avgTurnover5d": 5.57,
+    "turnovers": {
+      "d1": 3.99,
+      "d5": 5.62,
+      "d10": 7.72,
+      "d20": 4.89
     }
   },
   {
@@ -10727,6 +11455,14 @@
           "yoy": 76.92
         }
       ]
+    },
+    "turnover": 0.93,
+    "avgTurnover5d": 1.19,
+    "turnovers": {
+      "d1": 0.94,
+      "d5": 1.18,
+      "d10": 0.99,
+      "d20": 0.78
     }
   },
   {
@@ -10764,7 +11500,15 @@
     "revenueYoY": -38.8,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.06,
+    "avgTurnover5d": 0.12,
+    "turnovers": {
+      "d1": 0.06,
+      "d5": 0.12,
+      "d10": 0.1,
+      "d20": 0.07
+    }
   },
   {
     "id": "2516",
@@ -10803,7 +11547,15 @@
     "revenueYoY": -24.54,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.04,
+    "avgTurnover5d": 0.06,
+    "turnovers": {
+      "d1": 0.04,
+      "d5": 0.06,
+      "d10": 0.05,
+      "d20": 0.04
+    }
   },
   {
     "id": "2520",
@@ -10847,7 +11599,15 @@
     "revenueYoY": 8.23,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.27,
+    "avgTurnover5d": 0.5,
+    "turnovers": {
+      "d1": 0.27,
+      "d5": 0.5,
+      "d10": 0.46,
+      "d20": 0.45
+    }
   },
   {
     "id": "2527",
@@ -10884,7 +11644,15 @@
     "revenueYoY": 3888.16,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.19,
+    "avgTurnover5d": 0.24,
+    "turnovers": {
+      "d1": 0.19,
+      "d5": 0.24,
+      "d10": 0.52,
+      "d20": 0.32
+    }
   },
   {
     "id": "2530",
@@ -10921,7 +11689,15 @@
     "revenueYoY": 1040.72,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.16,
+    "avgTurnover5d": 0.27,
+    "turnovers": {
+      "d1": 0.16,
+      "d5": 0.27,
+      "d10": 0.27,
+      "d20": 0.23
+    }
   },
   {
     "id": "2537",
@@ -11111,6 +11887,14 @@
           "yoy": -89.13
         }
       ]
+    },
+    "turnover": 0.08,
+    "avgTurnover5d": 0.14,
+    "turnovers": {
+      "d1": 0.08,
+      "d5": 0.14,
+      "d10": 0.1,
+      "d20": 0.08
     }
   },
   {
@@ -11155,7 +11939,15 @@
     "revenueYoY": 27.58,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 1.2,
+    "avgTurnover5d": 1.43,
+    "turnovers": {
+      "d1": 1.19,
+      "d5": 1.41,
+      "d10": 1.05,
+      "d20": 0.65
+    }
   },
   {
     "id": "2548",
@@ -11192,7 +11984,15 @@
     "revenueYoY": 81838.76,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.95,
+    "avgTurnover5d": 1.45,
+    "turnovers": {
+      "d1": 0.95,
+      "d5": 1.45,
+      "d10": 1.6,
+      "d20": 2.38
+    }
   },
   {
     "id": "2601",
@@ -11236,7 +12036,15 @@
     "revenueYoY": -67.29,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.07,
+    "avgTurnover5d": 0.08,
+    "turnovers": {
+      "d1": 0.07,
+      "d5": 0.08,
+      "d10": 0.08,
+      "d20": 0.08
+    }
   },
   {
     "id": "2606",
@@ -11428,6 +12236,14 @@
           "yoy": 42.2
         }
       ]
+    },
+    "turnover": 2.64,
+    "avgTurnover5d": 2.83,
+    "turnovers": {
+      "d1": 2.64,
+      "d5": 2.85,
+      "d10": 2.95,
+      "d20": 2.46
     }
   },
   {
@@ -11632,6 +12448,14 @@
           "yoy": -3.39
         }
       ]
+    },
+    "turnover": 0.16,
+    "avgTurnover5d": 0.18,
+    "turnovers": {
+      "d1": 0.16,
+      "d5": 0.18,
+      "d10": 0.15,
+      "d20": 0.14
     }
   },
   {
@@ -11669,7 +12493,15 @@
     "revenueYoY": 4.45,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 1.34,
+    "avgTurnover5d": 1.53,
+    "turnovers": {
+      "d1": 1.33,
+      "d5": 1.53,
+      "d10": 1.31,
+      "d20": 1.4
+    }
   },
   {
     "id": "2636",
@@ -11861,6 +12693,14 @@
           "yoy": -18.57
         }
       ]
+    },
+    "turnover": 0.15,
+    "avgTurnover5d": 0.22,
+    "turnovers": {
+      "d1": 0.15,
+      "d5": 0.22,
+      "d10": 0.2,
+      "d20": 0.2
     }
   },
   {
@@ -12051,6 +12891,14 @@
           "yoy": 66.47
         }
       ]
+    },
+    "turnover": 1.82,
+    "avgTurnover5d": 2.12,
+    "turnovers": {
+      "d1": 1.83,
+      "d5": 2.13,
+      "d10": 2.54,
+      "d20": 1.76
     }
   },
   {
@@ -12095,7 +12943,15 @@
     "revenueYoY": 12.24,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 1.6,
+    "avgTurnover5d": 2.57,
+    "turnovers": {
+      "d1": 1.6,
+      "d5": 2.57,
+      "d10": 2.26,
+      "d20": 1.71
+    }
   },
   {
     "id": "2702",
@@ -12285,6 +13141,14 @@
           "yoy": 471.43
         }
       ]
+    },
+    "turnover": 0.03,
+    "avgTurnover5d": 0.07,
+    "turnovers": {
+      "d1": 0.03,
+      "d5": 0.07,
+      "d10": 0.1,
+      "d20": 0.07
     }
   },
   {
@@ -12409,6 +13273,14 @@
           "yoy": -3.85
         }
       ]
+    },
+    "turnover": 5.13,
+    "avgTurnover5d": 7.3,
+    "turnovers": {
+      "d1": 5.15,
+      "d5": 7.29,
+      "d10": 6.73,
+      "d20": 4.88
     }
   },
   {
@@ -12446,7 +13318,15 @@
     "revenueYoY": 18.84,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.18,
+    "avgTurnover5d": 0.31,
+    "turnovers": {
+      "d1": 0.18,
+      "d5": 0.31,
+      "d10": 0.37,
+      "d20": 0.34
+    }
   },
   {
     "id": "2855",
@@ -12570,6 +13450,14 @@
           "yoy": 155.77
         }
       ]
+    },
+    "turnover": 5.89,
+    "avgTurnover5d": 2.73,
+    "turnovers": {
+      "d1": 5.84,
+      "d5": 2.72,
+      "d10": 2.45,
+      "d20": 2.05
     }
   },
   {
@@ -12723,6 +13611,14 @@
           "yoy": 140.0
         }
       ]
+    },
+    "turnover": 0.67,
+    "avgTurnover5d": 0.78,
+    "turnovers": {
+      "d1": 0.67,
+      "d5": 0.79,
+      "d10": 0.86,
+      "d20": 0.76
     }
   },
   {
@@ -12772,7 +13668,15 @@
     "revenueYoY": 32.61,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 5.39,
+    "avgTurnover5d": 7.12,
+    "turnovers": {
+      "d1": 5.41,
+      "d5": 7.14,
+      "d10": 6.71,
+      "d20": 5.88
+    }
   },
   {
     "id": "2886",
@@ -12823,7 +13727,15 @@
     "revenueYoY": 17.68,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 11.22,
+    "avgTurnover5d": 12.08,
+    "turnovers": {
+      "d1": 11.23,
+      "d5": 12.07,
+      "d10": 9.97,
+      "d20": 10.15
+    }
   },
   {
     "id": "3003",
@@ -12869,7 +13781,15 @@
     "revenueYoY": 25.6,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.47,
+    "avgTurnover5d": 0.56,
+    "turnovers": {
+      "d1": 0.47,
+      "d5": 0.56,
+      "d10": 0.65,
+      "d20": 0.38
+    }
   },
   {
     "id": "3010",
@@ -13061,6 +13981,14 @@
           "yoy": 26.73
         }
       ]
+    },
+    "turnover": 3.61,
+    "avgTurnover5d": 3.76,
+    "turnovers": {
+      "d1": 3.68,
+      "d5": 3.79,
+      "d10": 3.12,
+      "d20": 2.23
     }
   },
   {
@@ -13251,6 +14179,14 @@
           "yoy": -15.91
         }
       ]
+    },
+    "turnover": 0.27,
+    "avgTurnover5d": 0.44,
+    "turnovers": {
+      "d1": 0.28,
+      "d5": 0.44,
+      "d10": 0.3,
+      "d20": 0.21
     }
   },
   {
@@ -13288,7 +14224,15 @@
     "revenueYoY": 40.84,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 8.29,
+    "avgTurnover5d": 10.01,
+    "turnovers": {
+      "d1": 8.26,
+      "d5": 10.09,
+      "d10": 7.16,
+      "d20": 5.38
+    }
   },
   {
     "id": "3014",
@@ -13492,6 +14436,14 @@
           "yoy": -8.25
         }
       ]
+    },
+    "turnover": 1.41,
+    "avgTurnover5d": 2.04,
+    "turnovers": {
+      "d1": 1.41,
+      "d5": 2.04,
+      "d10": 1.59,
+      "d20": 1.13
     }
   },
   {
@@ -13529,7 +14481,15 @@
     "revenueYoY": -10.01,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.13,
+    "avgTurnover5d": 0.18,
+    "turnovers": {
+      "d1": 0.13,
+      "d5": 0.18,
+      "d10": 0.15,
+      "d20": 0.13
+    }
   },
   {
     "id": "3016",
@@ -13723,6 +14683,14 @@
           "yoy": 60.0
         }
       ]
+    },
+    "turnover": 3.78,
+    "avgTurnover5d": 6.03,
+    "turnovers": {
+      "d1": 3.86,
+      "d5": 6.04,
+      "d10": 4.09,
+      "d20": 2.38
     }
   },
   {
@@ -13779,7 +14747,15 @@
     "revenueYoY": -58.1,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.79,
+    "avgTurnover5d": 1.2,
+    "turnovers": {
+      "d1": 0.8,
+      "d5": 1.19,
+      "d10": 0.7,
+      "d20": 0.39
+    }
   },
   {
     "id": "3025",
@@ -13823,7 +14799,15 @@
     "revenueYoY": 85.78,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.37,
+    "avgTurnover5d": 0.53,
+    "turnovers": {
+      "d1": 0.37,
+      "d5": 0.53,
+      "d10": 0.49,
+      "d20": 0.46
+    }
   },
   {
     "id": "3028",
@@ -14015,6 +14999,14 @@
           "yoy": 30.68
         }
       ]
+    },
+    "turnover": 1.53,
+    "avgTurnover5d": 1.94,
+    "turnovers": {
+      "d1": 1.52,
+      "d5": 1.95,
+      "d10": 2.89,
+      "d20": 2.74
     }
   },
   {
@@ -14205,6 +15197,14 @@
           "yoy": 39.29
         }
       ]
+    },
+    "turnover": 1.01,
+    "avgTurnover5d": 1.46,
+    "turnovers": {
+      "d1": 1.01,
+      "d5": 1.46,
+      "d10": 1.49,
+      "d20": 1.3
     }
   },
   {
@@ -14414,6 +15414,14 @@
           "yoy": -23.07
         }
       ]
+    },
+    "turnover": 26.79,
+    "avgTurnover5d": 27.98,
+    "turnovers": {
+      "d1": 26.87,
+      "d5": 28.11,
+      "d10": 20.6,
+      "d20": 18.83
     }
   },
   {
@@ -14453,7 +15461,15 @@
     "revenueYoY": -69.37,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 63.36,
+    "avgTurnover5d": 38.71,
+    "turnovers": {
+      "d1": 62.45,
+      "d5": 38.54,
+      "d10": 22.03,
+      "d20": 12.44
+    }
   },
   {
     "id": "3037",
@@ -14654,6 +15670,14 @@
           "yoy": 5700.0
         }
       ]
+    },
+    "turnover": 75.15,
+    "avgTurnover5d": 56.01,
+    "turnovers": {
+      "d1": 74.2,
+      "d5": 55.55,
+      "d10": 82.36,
+      "d20": 106.8
     }
   },
   {
@@ -14848,6 +15872,14 @@
           "yoy": -22.22
         }
       ]
+    },
+    "turnover": 0.11,
+    "avgTurnover5d": 0.14,
+    "turnovers": {
+      "d1": 0.11,
+      "d5": 0.14,
+      "d10": 0.2,
+      "d20": 0.12
     }
   },
   {
@@ -15040,6 +16072,14 @@
           "yoy": -17.9
         }
       ]
+    },
+    "turnover": 6.7,
+    "avgTurnover5d": 7.47,
+    "turnovers": {
+      "d1": 6.77,
+      "d5": 7.5,
+      "d10": 18.36,
+      "d20": 13.02
     }
   },
   {
@@ -15077,7 +16117,15 @@
     "revenueYoY": -17.38,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.08,
+    "avgTurnover5d": 0.06,
+    "turnovers": {
+      "d1": 0.08,
+      "d5": 0.06,
+      "d10": 0.04,
+      "d20": 0.03
+    }
   },
   {
     "id": "3044",
@@ -15114,7 +16162,15 @@
     "revenueYoY": 24.38,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 36.79,
+    "avgTurnover5d": 33.33,
+    "turnovers": {
+      "d1": 36.96,
+      "d5": 33.4,
+      "d10": 27.2,
+      "d20": 19.34
+    }
   },
   {
     "id": "3045",
@@ -15174,7 +16230,15 @@
     "revenueYoY": 5.76,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 25.29,
+    "avgTurnover5d": 20.41,
+    "turnovers": {
+      "d1": 25.21,
+      "d5": 20.37,
+      "d10": 15.54,
+      "d20": 11.01
+    }
   },
   {
     "id": "3048",
@@ -15364,6 +16428,14 @@
           "yoy": 2075.0
         }
       ]
+    },
+    "turnover": 0.58,
+    "avgTurnover5d": 1.29,
+    "turnovers": {
+      "d1": 0.59,
+      "d5": 1.29,
+      "d10": 1.85,
+      "d20": 1.27
     }
   },
   {
@@ -15559,6 +16631,14 @@
           "yoy": -100.15
         }
       ]
+    },
+    "turnover": 0.18,
+    "avgTurnover5d": 0.23,
+    "turnovers": {
+      "d1": 0.18,
+      "d5": 0.23,
+      "d10": 0.2,
+      "d20": 0.18
     }
   },
   {
@@ -15789,6 +16869,14 @@
           "yoy": -16.13
         }
       ]
+    },
+    "turnover": 3.81,
+    "avgTurnover5d": 1.59,
+    "turnovers": {
+      "d1": 3.81,
+      "d5": 1.6,
+      "d10": 1.12,
+      "d20": 0.77
     }
   },
   {
@@ -15828,7 +16916,15 @@
     "revenueYoY": 29.37,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.72,
+    "avgTurnover5d": 1.03,
+    "turnovers": {
+      "d1": 0.73,
+      "d5": 1.02,
+      "d10": 0.8,
+      "d20": 0.55
+    }
   },
   {
     "id": "3081",
@@ -16020,6 +17116,14 @@
           "yoy": 552.17
         }
       ]
+    },
+    "turnover": 151.51,
+    "avgTurnover5d": 114.32,
+    "turnovers": {
+      "d1": 157.87,
+      "d5": 115.67,
+      "d10": 92.44,
+      "d20": 79.84
     }
   },
   {
@@ -16055,7 +17159,15 @@
     "revenueYoY": 30.52,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.86,
+    "avgTurnover5d": 2.07,
+    "turnovers": {
+      "d1": 0.85,
+      "d5": 2.08,
+      "d10": 2.21,
+      "d20": 1.37
+    }
   },
   {
     "id": "3090",
@@ -16256,6 +17368,14 @@
           "yoy": 29.59
         }
       ]
+    },
+    "turnover": 6.31,
+    "avgTurnover5d": 5.92,
+    "turnovers": {
+      "d1": 6.34,
+      "d5": 6.0,
+      "d10": 8.76,
+      "d20": 5.72
     }
   },
   {
@@ -16293,7 +17413,15 @@
     "revenueYoY": 3.94,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.6,
+    "avgTurnover5d": 0.27,
+    "turnovers": {
+      "d1": 0.59,
+      "d5": 0.26,
+      "d10": 0.15,
+      "d20": 0.08
+    }
   },
   {
     "id": "3162",
@@ -16328,7 +17456,15 @@
     "revenueYoY": 21.34,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 12.8,
+    "avgTurnover5d": 8.73,
+    "turnovers": {
+      "d1": 12.67,
+      "d5": 8.58,
+      "d10": 5.77,
+      "d20": 3.91
+    }
   },
   {
     "id": "3171",
@@ -16525,6 +17661,14 @@
           "yoy": 60.81
         }
       ]
+    },
+    "turnover": 0.12,
+    "avgTurnover5d": 0.11,
+    "turnovers": {
+      "d1": 0.12,
+      "d5": 0.11,
+      "d10": 0.14,
+      "d20": 0.12
     }
   },
   {
@@ -16722,6 +17866,14 @@
           "yoy": 356.36
         }
       ]
+    },
+    "turnover": 294.56,
+    "avgTurnover5d": 228.62,
+    "turnovers": {
+      "d1": 289.43,
+      "d5": 226.67,
+      "d10": 174.39,
+      "d20": 112.98
     }
   },
   {
@@ -16766,7 +17918,15 @@
     "revenueYoY": 76.33,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 70.81,
+    "avgTurnover5d": 72.74,
+    "turnovers": {
+      "d1": 71.71,
+      "d5": 73.17,
+      "d10": 48.78,
+      "d20": 45.52
+    }
   },
   {
     "id": "3224",
@@ -16810,7 +17970,15 @@
     "revenueYoY": 17.77,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.15,
+    "avgTurnover5d": 0.33,
+    "turnovers": {
+      "d1": 0.15,
+      "d5": 0.33,
+      "d10": 0.18,
+      "d20": 0.11
+    }
   },
   {
     "id": "3226",
@@ -16847,7 +18015,15 @@
     "revenueYoY": -28.6,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.0,
+    "avgTurnover5d": 0.0,
+    "turnovers": {
+      "d1": 0.0,
+      "d5": 0.0,
+      "d10": 0.0,
+      "d20": 0.0
+    }
   },
   {
     "id": "3227",
@@ -16886,7 +18062,15 @@
     "revenueYoY": -5.42,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 9.92,
+    "avgTurnover5d": 10.57,
+    "turnovers": {
+      "d1": 10.04,
+      "d5": 10.64,
+      "d10": 6.37,
+      "d20": 3.87
+    }
   },
   {
     "id": "3231",
@@ -17082,6 +18266,14 @@
           "yoy": 41.08
         }
       ]
+    },
+    "turnover": 57.01,
+    "avgTurnover5d": 89.57,
+    "turnovers": {
+      "d1": 56.54,
+      "d5": 89.23,
+      "d10": 68.29,
+      "d20": 51.55
     }
   },
   {
@@ -17119,7 +18311,15 @@
     "revenueYoY": 27.01,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 48.14,
+    "avgTurnover5d": 45.9,
+    "turnovers": {
+      "d1": 47.84,
+      "d5": 45.87,
+      "d10": 40.22,
+      "d20": 35.28
+    }
   },
   {
     "id": "3293",
@@ -17158,7 +18358,15 @@
     "revenueYoY": 17.8,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 9.12,
+    "avgTurnover5d": 12.36,
+    "turnovers": {
+      "d1": 9.18,
+      "d5": 12.4,
+      "d10": 11.95,
+      "d20": 15.02
+    }
   },
   {
     "id": "3294",
@@ -17197,7 +18405,15 @@
     "revenueYoY": 0.31,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.21,
+    "avgTurnover5d": 0.27,
+    "turnovers": {
+      "d1": 0.21,
+      "d5": 0.27,
+      "d10": 0.25,
+      "d20": 0.2
+    }
   },
   {
     "id": "3311",
@@ -17390,6 +18606,14 @@
           "yoy": -17.46
         }
       ]
+    },
+    "turnover": 0.07,
+    "avgTurnover5d": 0.1,
+    "turnovers": {
+      "d1": 0.07,
+      "d5": 0.1,
+      "d10": 0.11,
+      "d20": 0.08
     }
   },
   {
@@ -17439,7 +18663,15 @@
     "revenueYoY": 37.15,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.01,
+    "avgTurnover5d": 0.02,
+    "turnovers": {
+      "d1": 0.01,
+      "d5": 0.02,
+      "d10": 0.02,
+      "d20": 0.02
+    }
   },
   {
     "id": "3323",
@@ -17476,7 +18708,15 @@
     "revenueYoY": -13.63,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.86,
+    "avgTurnover5d": 1.12,
+    "turnovers": {
+      "d1": 0.88,
+      "d5": 1.12,
+      "d10": 0.66,
+      "d20": 0.53
+    }
   },
   {
     "id": "3339",
@@ -17668,6 +18908,14 @@
           "yoy": -450.0
         }
       ]
+    },
+    "turnover": 0.77,
+    "avgTurnover5d": 1.78,
+    "turnovers": {
+      "d1": 0.8,
+      "d5": 1.8,
+      "d10": 4.29,
+      "d20": 4.3
     }
   },
   {
@@ -17705,7 +18953,15 @@
     "revenueYoY": -11.4,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.07,
+    "avgTurnover5d": 0.09,
+    "turnovers": {
+      "d1": 0.08,
+      "d5": 0.09,
+      "d10": 0.07,
+      "d20": 0.06
+    }
   },
   {
     "id": "3357",
@@ -17749,7 +19005,15 @@
     "revenueYoY": 12.06,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 4.06,
+    "avgTurnover5d": 7.52,
+    "turnovers": {
+      "d1": 4.1,
+      "d5": 7.62,
+      "d10": 8.41,
+      "d20": 5.12
+    }
   },
   {
     "id": "3363",
@@ -17786,7 +19050,15 @@
     "revenueYoY": -25.71,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 9.44,
+    "avgTurnover5d": 52.12,
+    "turnovers": {
+      "d1": 9.77,
+      "d5": 52.55,
+      "d10": 48.1,
+      "d20": 29.41
+    }
   },
   {
     "id": "3376",
@@ -17825,7 +19097,15 @@
     "revenueYoY": -9.59,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 21.9,
+    "avgTurnover5d": 25.45,
+    "turnovers": {
+      "d1": 22.33,
+      "d5": 25.51,
+      "d10": 17.64,
+      "d20": 13.96
+    }
   },
   {
     "id": "3380",
@@ -17866,7 +19146,15 @@
     "revenueYoY": 50.48,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 2.63,
+    "avgTurnover5d": 2.56,
+    "turnovers": {
+      "d1": 2.67,
+      "d5": 2.58,
+      "d10": 2.97,
+      "d20": 3.74
+    }
   },
   {
     "id": "3406",
@@ -18063,6 +19351,14 @@
           "yoy": 36.88
         }
       ]
+    },
+    "turnover": 6.27,
+    "avgTurnover5d": 14.73,
+    "turnovers": {
+      "d1": 6.3,
+      "d5": 14.8,
+      "d10": 14.44,
+      "d20": 8.3
     }
   },
   {
@@ -18253,6 +19549,14 @@
           "yoy": -29.74
         }
       ]
+    },
+    "turnover": 7.99,
+    "avgTurnover5d": 8.3,
+    "turnovers": {
+      "d1": 7.95,
+      "d5": 8.31,
+      "d10": 7.41,
+      "d20": 6.73
     }
   },
   {
@@ -18299,7 +19603,15 @@
     "revenueYoY": 156.94,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 1.89,
+    "avgTurnover5d": 2.89,
+    "turnovers": {
+      "d1": 1.92,
+      "d5": 2.93,
+      "d10": 3.64,
+      "d20": 3.7
+    }
   },
   {
     "id": "3499",
@@ -18489,6 +19801,14 @@
           "yoy": -157.14
         }
       ]
+    },
+    "turnover": 0.02,
+    "avgTurnover5d": 0.04,
+    "turnovers": {
+      "d1": 0.02,
+      "d5": 0.04,
+      "d10": 0.04,
+      "d20": 0.04
     }
   },
   {
@@ -18679,6 +19999,14 @@
           "yoy": -54.17
         }
       ]
+    },
+    "turnover": 0.06,
+    "avgTurnover5d": 0.11,
+    "turnovers": {
+      "d1": 0.06,
+      "d5": 0.11,
+      "d10": 0.29,
+      "d20": 0.4
     }
   },
   {
@@ -18869,6 +20197,14 @@
           "yoy": 20.66
         }
       ]
+    },
+    "turnover": 1.31,
+    "avgTurnover5d": 1.94,
+    "turnovers": {
+      "d1": 1.31,
+      "d5": 1.94,
+      "d10": 1.83,
+      "d20": 1.37
     }
   },
   {
@@ -18906,7 +20242,15 @@
     "revenueYoY": -40.25,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.24,
+    "avgTurnover5d": 0.95,
+    "turnovers": {
+      "d1": 0.24,
+      "d5": 0.95,
+      "d10": 0.75,
+      "d20": 0.4
+    }
   },
   {
     "id": "3528",
@@ -18943,7 +20287,15 @@
     "revenueYoY": 132.44,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.43,
+    "avgTurnover5d": 0.39,
+    "turnovers": {
+      "d1": 0.43,
+      "d5": 0.39,
+      "d10": 0.31,
+      "d20": 0.21
+    }
   },
   {
     "id": "3545",
@@ -18991,7 +20343,15 @@
     "revenueYoY": -14.36,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 1.4,
+    "avgTurnover5d": 2.1,
+    "turnovers": {
+      "d1": 1.4,
+      "d5": 2.12,
+      "d10": 1.46,
+      "d20": 1.34
+    }
   },
   {
     "id": "3550",
@@ -19181,6 +20541,14 @@
           "yoy": 46.74
         }
       ]
+    },
+    "turnover": 0.23,
+    "avgTurnover5d": 0.62,
+    "turnovers": {
+      "d1": 0.23,
+      "d5": 0.62,
+      "d10": 0.69,
+      "d20": 0.65
     }
   },
   {
@@ -19216,7 +20584,15 @@
     "revenueYoY": 90.14,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.15,
+    "avgTurnover5d": 0.19,
+    "turnovers": {
+      "d1": 0.15,
+      "d5": 0.19,
+      "d10": 0.18,
+      "d20": 0.21
+    }
   },
   {
     "id": "3607",
@@ -19255,7 +20631,15 @@
     "revenueYoY": 9.04,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.05,
+    "avgTurnover5d": 0.12,
+    "turnovers": {
+      "d1": 0.05,
+      "d5": 0.12,
+      "d10": 0.1,
+      "d20": 0.07
+    }
   },
   {
     "id": "3615",
@@ -19299,7 +20683,15 @@
     "revenueYoY": -27.69,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.37,
+    "avgTurnover5d": 1.19,
+    "turnovers": {
+      "d1": 0.38,
+      "d5": 1.21,
+      "d10": 1.06,
+      "d20": 0.87
+    }
   },
   {
     "id": "3661",
@@ -19491,6 +20883,14 @@
           "yoy": -20.17
         }
       ]
+    },
+    "turnover": 128.18,
+    "avgTurnover5d": 134.08,
+    "turnovers": {
+      "d1": 128.58,
+      "d5": 134.04,
+      "d10": 109.54,
+      "d20": 85.0
     }
   },
   {
@@ -19528,7 +20928,15 @@
     "revenueYoY": -23.43,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 19.01,
+    "avgTurnover5d": 25.58,
+    "turnovers": {
+      "d1": 19.27,
+      "d5": 25.51,
+      "d10": 20.69,
+      "d20": 13.27
+    }
   },
   {
     "id": "3691",
@@ -19565,7 +20973,15 @@
     "revenueYoY": 168.89,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.58,
+    "avgTurnover5d": 1.09,
+    "turnovers": {
+      "d1": 0.58,
+      "d5": 1.1,
+      "d10": 1.87,
+      "d20": 1.28
+    }
   },
   {
     "id": "3694",
@@ -19762,6 +21178,14 @@
           "yoy": 22.58
         }
       ]
+    },
+    "turnover": 0.38,
+    "avgTurnover5d": 0.86,
+    "turnovers": {
+      "d1": 0.38,
+      "d5": 0.87,
+      "d10": 0.88,
+      "d20": 0.62
     }
   },
   {
@@ -19974,6 +21398,14 @@
           "yoy": -1555.56
         }
       ]
+    },
+    "turnover": 11.08,
+    "avgTurnover5d": 14.39,
+    "turnovers": {
+      "d1": 11.53,
+      "d5": 14.47,
+      "d10": 10.71,
+      "d20": 6.38
     }
   },
   {
@@ -20016,7 +21448,15 @@
     "revenueYoY": 28.57,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 16.99,
+    "avgTurnover5d": 16.76,
+    "turnovers": {
+      "d1": 17.04,
+      "d5": 16.83,
+      "d10": 21.3,
+      "d20": 17.26
+    }
   },
   {
     "id": "3704",
@@ -20226,6 +21666,14 @@
           "yoy": -65.87
         }
       ]
+    },
+    "turnover": 0.86,
+    "avgTurnover5d": 1.4,
+    "turnovers": {
+      "d1": 0.87,
+      "d5": 1.4,
+      "d10": 1.55,
+      "d20": 1.28
     }
   },
   {
@@ -20442,6 +21890,14 @@
           "yoy": 75.0
         }
       ]
+    },
+    "turnover": 6.21,
+    "avgTurnover5d": 10.14,
+    "turnovers": {
+      "d1": 6.2,
+      "d5": 10.15,
+      "d10": 10.26,
+      "d20": 8.91
     }
   },
   {
@@ -20483,7 +21939,15 @@
     "revenueYoY": 22.31,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 4.06,
+    "avgTurnover5d": 6.55,
+    "turnovers": {
+      "d1": 4.15,
+      "d5": 6.59,
+      "d10": 5.16,
+      "d20": 3.31
+    }
   },
   {
     "id": "3710",
@@ -20550,7 +22014,15 @@
     "revenueYoY": 2.58,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.05,
+    "avgTurnover5d": 0.21,
+    "turnovers": {
+      "d1": 0.06,
+      "d5": 0.22,
+      "d10": 0.12,
+      "d20": 0.08
+    }
   },
   {
     "id": "3716",
@@ -20596,7 +22068,15 @@
     "revenueYoY": 0.11,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.04,
+    "avgTurnover5d": 0.05,
+    "turnovers": {
+      "d1": 0.04,
+      "d5": 0.05,
+      "d10": 0.05,
+      "d20": 0.04
+    }
   },
   {
     "id": "3717",
@@ -20633,7 +22113,15 @@
     "revenueYoY": null,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": null,
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.17,
+    "avgTurnover5d": 0.25,
+    "turnovers": {
+      "d1": 0.17,
+      "d5": 0.25,
+      "d10": 0.27,
+      "d20": 0.42
+    }
   },
   {
     "id": "4107",
@@ -20830,6 +22318,14 @@
           "yoy": 16.06
         }
       ]
+    },
+    "turnover": 0.05,
+    "avgTurnover5d": 0.09,
+    "turnovers": {
+      "d1": 0.05,
+      "d5": 0.09,
+      "d10": 0.08,
+      "d20": 0.07
     }
   },
   {
@@ -21022,6 +22518,14 @@
           "yoy": -6.1
         }
       ]
+    },
+    "turnover": 0.02,
+    "avgTurnover5d": 0.03,
+    "turnovers": {
+      "d1": 0.02,
+      "d5": 0.03,
+      "d10": 0.03,
+      "d20": 0.03
     }
   },
   {
@@ -21075,7 +22579,15 @@
     "revenueYoY": 2.15,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.04,
+    "avgTurnover5d": 0.03,
+    "turnovers": {
+      "d1": 0.04,
+      "d5": 0.03,
+      "d10": 0.03,
+      "d20": 0.03
+    }
   },
   {
     "id": "4130",
@@ -21269,6 +22781,14 @@
           "yoy": 0.0
         }
       ]
+    },
+    "turnover": 0.15,
+    "avgTurnover5d": 0.47,
+    "turnovers": {
+      "d1": 0.15,
+      "d5": 0.48,
+      "d10": 0.52,
+      "d20": 0.41
     }
   },
   {
@@ -21308,7 +22828,15 @@
     "revenueYoY": 0.49,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.62,
+    "avgTurnover5d": 0.6,
+    "turnovers": {
+      "d1": 0.63,
+      "d5": 0.6,
+      "d10": 0.53,
+      "d20": 0.7
+    }
   },
   {
     "id": "4164",
@@ -21352,7 +22880,15 @@
     "revenueYoY": 3.35,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.34,
+    "avgTurnover5d": 0.67,
+    "turnovers": {
+      "d1": 0.34,
+      "d5": 0.68,
+      "d10": 0.47,
+      "d20": 0.34
+    }
   },
   {
     "id": "4169",
@@ -21463,6 +22999,14 @@
           "yoy": -122.22
         }
       ]
+    },
+    "turnover": 0.6,
+    "avgTurnover5d": 0.77,
+    "turnovers": {
+      "d1": 0.61,
+      "d5": 0.77,
+      "d10": 0.79,
+      "d20": 0.96
     }
   },
   {
@@ -21507,7 +23051,15 @@
     "revenueYoY": -2.49,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.03,
+    "avgTurnover5d": 0.04,
+    "turnovers": {
+      "d1": 0.03,
+      "d5": 0.04,
+      "d10": 0.04,
+      "d20": 0.07
+    }
   },
   {
     "id": "4502",
@@ -21544,7 +23096,15 @@
     "revenueYoY": 38.72,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.0,
+    "avgTurnover5d": 0.01,
+    "turnovers": {
+      "d1": 0.0,
+      "d5": 0.01,
+      "d10": 0.01,
+      "d20": 0.01
+    }
   },
   {
     "id": "4503",
@@ -21743,6 +23303,14 @@
           "yoy": 190.32
         }
       ]
+    },
+    "turnover": 0.11,
+    "avgTurnover5d": 0.15,
+    "turnovers": {
+      "d1": 0.11,
+      "d5": 0.15,
+      "d10": 0.11,
+      "d20": 0.09
     }
   },
   {
@@ -21780,7 +23348,15 @@
     "revenueYoY": 29.18,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.45,
+    "avgTurnover5d": 1.17,
+    "turnovers": {
+      "d1": 0.45,
+      "d5": 1.19,
+      "d10": 1.0,
+      "d20": 0.92
+    }
   },
   {
     "id": "4540",
@@ -21970,6 +23546,14 @@
           "yoy": 129.37
         }
       ]
+    },
+    "turnover": 2.03,
+    "avgTurnover5d": 5.09,
+    "turnovers": {
+      "d1": 2.07,
+      "d5": 5.1,
+      "d10": 5.28,
+      "d20": 2.85
     }
   },
   {
@@ -22169,6 +23753,14 @@
           "yoy": 100.0
         }
       ]
+    },
+    "turnover": 0.03,
+    "avgTurnover5d": 0.05,
+    "turnovers": {
+      "d1": 0.03,
+      "d5": 0.05,
+      "d10": 0.05,
+      "d20": 0.04
     }
   },
   {
@@ -22206,7 +23798,15 @@
     "revenueYoY": -30.62,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.05,
+    "avgTurnover5d": 0.06,
+    "turnovers": {
+      "d1": 0.05,
+      "d5": 0.06,
+      "d10": 0.06,
+      "d20": 0.05
+    }
   },
   {
     "id": "4564",
@@ -22403,6 +24003,14 @@
           "yoy": 13.51
         }
       ]
+    },
+    "turnover": 0.2,
+    "avgTurnover5d": 0.22,
+    "turnovers": {
+      "d1": 0.2,
+      "d5": 0.22,
+      "d10": 0.21,
+      "d20": 0.2
     }
   },
   {
@@ -22440,7 +24048,15 @@
     "revenueYoY": 19.08,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.01,
+    "avgTurnover5d": 0.01,
+    "turnovers": {
+      "d1": 0.01,
+      "d5": 0.01,
+      "d10": 0.01,
+      "d20": 0.01
+    }
   },
   {
     "id": "4707",
@@ -22632,6 +24248,14 @@
           "yoy": 3.7
         }
       ]
+    },
+    "turnover": 0.52,
+    "avgTurnover5d": 1.27,
+    "turnovers": {
+      "d1": 0.53,
+      "d5": 1.27,
+      "d10": 1.11,
+      "d20": 0.73
     }
   },
   {
@@ -22669,7 +24293,15 @@
     "revenueYoY": 98.4,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.24,
+    "avgTurnover5d": 0.7,
+    "turnovers": {
+      "d1": 0.24,
+      "d5": 0.7,
+      "d10": 0.5,
+      "d20": 0.3
+    }
   },
   {
     "id": "4716",
@@ -22706,7 +24338,15 @@
     "revenueYoY": 18.94,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.18,
+    "avgTurnover5d": 0.12,
+    "turnovers": {
+      "d1": 0.19,
+      "d5": 0.12,
+      "d10": 0.15,
+      "d20": 0.09
+    }
   },
   {
     "id": "4737",
@@ -22896,6 +24536,14 @@
           "yoy": -153.7
         }
       ]
+    },
+    "turnover": 0.06,
+    "avgTurnover5d": 0.12,
+    "turnovers": {
+      "d1": 0.06,
+      "d5": 0.12,
+      "d10": 0.13,
+      "d20": 0.16
     }
   },
   {
@@ -22942,7 +24590,15 @@
     "revenueYoY": 103.61,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 9.49,
+    "avgTurnover5d": 9.18,
+    "turnovers": {
+      "d1": 9.79,
+      "d5": 9.18,
+      "d10": 6.63,
+      "d20": 4.53
+    }
   },
   {
     "id": "4744",
@@ -23132,6 +24788,14 @@
           "yoy": 41.12
         }
       ]
+    },
+    "turnover": 0.1,
+    "avgTurnover5d": 0.09,
+    "turnovers": {
+      "d1": 0.1,
+      "d5": 0.09,
+      "d10": 0.14,
+      "d20": 0.27
     }
   },
   {
@@ -23171,7 +24835,15 @@
     "revenueYoY": 6.72,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.03,
+    "avgTurnover5d": 0.03,
+    "turnovers": {
+      "d1": 0.03,
+      "d5": 0.03,
+      "d10": 0.03,
+      "d20": 0.02
+    }
   },
   {
     "id": "4749",
@@ -23208,7 +24880,15 @@
     "revenueYoY": 32.66,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 30.44,
+    "avgTurnover5d": 39.85,
+    "turnovers": {
+      "d1": 30.87,
+      "d5": 39.74,
+      "d10": 28.8,
+      "d20": 20.51
+    }
   },
   {
     "id": "4760",
@@ -23405,6 +25085,14 @@
           "yoy": 24.49
         }
       ]
+    },
+    "turnover": 2.56,
+    "avgTurnover5d": 2.32,
+    "turnovers": {
+      "d1": 2.62,
+      "d5": 2.36,
+      "d10": 3.02,
+      "d20": 3.07
     }
   },
   {
@@ -23597,6 +25285,14 @@
           "yoy": 122.22
         }
       ]
+    },
+    "turnover": 1.7,
+    "avgTurnover5d": 2.23,
+    "turnovers": {
+      "d1": 1.68,
+      "d5": 2.26,
+      "d10": 5.24,
+      "d20": 4.93
     }
   },
   {
@@ -23643,7 +25339,15 @@
     "revenueYoY": 3.64,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 5.65,
+    "avgTurnover5d": 7.43,
+    "turnovers": {
+      "d1": 5.61,
+      "d5": 7.44,
+      "d10": 6.57,
+      "d20": 6.01
+    }
   },
   {
     "id": "4908",
@@ -23833,6 +25537,14 @@
           "yoy": -43.81
         }
       ]
+    },
+    "turnover": 2.28,
+    "avgTurnover5d": 3.01,
+    "turnovers": {
+      "d1": 2.23,
+      "d5": 3.01,
+      "d10": 6.81,
+      "d20": 6.63
     }
   },
   {
@@ -23880,7 +25592,15 @@
     "revenueYoY": 3.82,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 1.42,
+    "avgTurnover5d": 2.35,
+    "turnovers": {
+      "d1": 1.42,
+      "d5": 2.36,
+      "d10": 2.06,
+      "d20": 1.71
+    }
   },
   {
     "id": "4916",
@@ -24073,6 +25793,14 @@
           "yoy": -7.35
         }
       ]
+    },
+    "turnover": 4.64,
+    "avgTurnover5d": 8.54,
+    "turnovers": {
+      "d1": 4.66,
+      "d5": 8.59,
+      "d10": 7.71,
+      "d20": 4.65
     }
   },
   {
@@ -24282,6 +26010,14 @@
           "yoy": -1006.67
         }
       ]
+    },
+    "turnover": 9.47,
+    "avgTurnover5d": 33.9,
+    "turnovers": {
+      "d1": 9.42,
+      "d5": 34.38,
+      "d10": 32.39,
+      "d20": 22.89
     }
   },
   {
@@ -24472,6 +26208,14 @@
           "yoy": -16.1
         }
       ]
+    },
+    "turnover": 18.52,
+    "avgTurnover5d": 17.8,
+    "turnovers": {
+      "d1": 18.78,
+      "d5": 17.78,
+      "d10": 14.92,
+      "d20": 9.14
     }
   },
   {
@@ -24509,7 +26253,15 @@
     "revenueYoY": -34.26,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.02,
+    "avgTurnover5d": 0.02,
+    "turnovers": {
+      "d1": 0.02,
+      "d5": 0.02,
+      "d10": 0.02,
+      "d20": 0.01
+    }
   },
   {
     "id": "4931",
@@ -24548,7 +26300,15 @@
     "revenueYoY": 36.12,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 55.34,
+    "avgTurnover5d": 39.08,
+    "turnovers": {
+      "d1": 57.22,
+      "d5": 39.15,
+      "d10": 22.52,
+      "d20": 14.9
+    }
   },
   {
     "id": "4933",
@@ -24585,7 +26345,15 @@
     "revenueYoY": 3.89,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 1.83,
+    "avgTurnover5d": 0.55,
+    "turnovers": {
+      "d1": 1.8,
+      "d5": 0.54,
+      "d10": 0.32,
+      "d20": 0.21
+    }
   },
   {
     "id": "4938",
@@ -24670,7 +26438,15 @@
     "revenueYoY": -0.79,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 10.24,
+    "avgTurnover5d": 14.33,
+    "turnovers": {
+      "d1": 10.26,
+      "d5": 14.35,
+      "d10": 13.27,
+      "d20": 10.86
+    }
   },
   {
     "id": "4952",
@@ -24725,7 +26501,15 @@
     "revenueYoY": 10.09,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.83,
+    "avgTurnover5d": 1.76,
+    "turnovers": {
+      "d1": 0.84,
+      "d5": 1.74,
+      "d10": 0.94,
+      "d20": 0.52
+    }
   },
   {
     "id": "4960",
@@ -24915,6 +26699,14 @@
           "yoy": -683.33
         }
       ]
+    },
+    "turnover": 4.92,
+    "avgTurnover5d": 5.2,
+    "turnovers": {
+      "d1": 4.81,
+      "d5": 5.18,
+      "d10": 8.1,
+      "d20": 5.92
     }
   },
   {
@@ -24961,7 +26753,15 @@
     "revenueYoY": 2.05,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 2.59,
+    "avgTurnover5d": 4.49,
+    "turnovers": {
+      "d1": 2.61,
+      "d5": 4.5,
+      "d10": 3.02,
+      "d20": 2.48
+    }
   },
   {
     "id": "4967",
@@ -25002,7 +26802,15 @@
     "revenueYoY": 120.49,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 43.29,
+    "avgTurnover5d": 47.09,
+    "turnovers": {
+      "d1": 42.59,
+      "d5": 46.58,
+      "d10": 30.01,
+      "d20": 26.99
+    }
   },
   {
     "id": "4972",
@@ -25199,6 +27007,14 @@
           "yoy": -230.0
         }
       ]
+    },
+    "turnover": 0.0,
+    "avgTurnover5d": 0.01,
+    "turnovers": {
+      "d1": 0.0,
+      "d5": 0.01,
+      "d10": 0.01,
+      "d20": 0.01
     }
   },
   {
@@ -25238,7 +27054,15 @@
     "revenueYoY": 22.89,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.02,
+    "avgTurnover5d": 0.02,
+    "turnovers": {
+      "d1": 0.02,
+      "d5": 0.02,
+      "d10": 0.02,
+      "d20": 0.02
+    }
   },
   {
     "id": "5009",
@@ -25282,7 +27106,15 @@
     "revenueYoY": -4.8,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.74,
+    "avgTurnover5d": 1.14,
+    "turnovers": {
+      "d1": 0.74,
+      "d5": 1.14,
+      "d10": 0.85,
+      "d20": 0.66
+    }
   },
   {
     "id": "5015",
@@ -25474,6 +27306,14 @@
           "yoy": -67.72
         }
       ]
+    },
+    "turnover": 0.01,
+    "avgTurnover5d": 0.02,
+    "turnovers": {
+      "d1": 0.01,
+      "d5": 0.02,
+      "d10": 0.02,
+      "d20": 0.01
     }
   },
   {
@@ -25664,6 +27504,14 @@
           "yoy": -95.0
         }
       ]
+    },
+    "turnover": 0.06,
+    "avgTurnover5d": 0.27,
+    "turnovers": {
+      "d1": 0.06,
+      "d5": 0.28,
+      "d10": 0.15,
+      "d20": 0.1
     }
   },
   {
@@ -25710,7 +27558,15 @@
     "revenueYoY": 28.76,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.01,
+    "avgTurnover5d": 0.01,
+    "turnovers": {
+      "d1": 0.01,
+      "d5": 0.01,
+      "d10": 0.02,
+      "d20": 0.02
+    }
   },
   {
     "id": "5234",
@@ -25900,6 +27756,14 @@
           "yoy": 16.57
         }
       ]
+    },
+    "turnover": 4.9,
+    "avgTurnover5d": 5.08,
+    "turnovers": {
+      "d1": 5.02,
+      "d5": 5.16,
+      "d10": 4.86,
+      "d20": 4.27
     }
   },
   {
@@ -25937,7 +27801,15 @@
     "revenueYoY": 19.06,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.24,
+    "avgTurnover5d": 0.32,
+    "turnovers": {
+      "d1": 0.24,
+      "d5": 0.32,
+      "d10": 0.34,
+      "d20": 0.26
+    }
   },
   {
     "id": "5278",
@@ -25974,7 +27846,15 @@
     "revenueYoY": 19.71,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.12,
+    "avgTurnover5d": 0.15,
+    "turnovers": {
+      "d1": 0.12,
+      "d5": 0.15,
+      "d10": 0.13,
+      "d20": 0.16
+    }
   },
   {
     "id": "5309",
@@ -26029,7 +27909,15 @@
     "revenueYoY": -5.96,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 2.64,
+    "avgTurnover5d": 5.21,
+    "turnovers": {
+      "d1": 2.67,
+      "d5": 5.21,
+      "d10": 3.8,
+      "d20": 2.89
+    }
   },
   {
     "id": "5324",
@@ -26226,6 +28114,14 @@
           "yoy": -55.17
         }
       ]
+    },
+    "turnover": 0.01,
+    "avgTurnover5d": 0.02,
+    "turnovers": {
+      "d1": 0.01,
+      "d5": 0.02,
+      "d10": 0.03,
+      "d20": 0.04
     }
   },
   {
@@ -26416,6 +28312,14 @@
           "yoy": -7.14
         }
       ]
+    },
+    "turnover": 0.0,
+    "avgTurnover5d": 0.01,
+    "turnovers": {
+      "d1": 0.0,
+      "d5": 0.01,
+      "d10": 0.0,
+      "d20": 0.0
     }
   },
   {
@@ -26457,7 +28361,15 @@
     "revenueYoY": 86.54,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 3.03,
+    "avgTurnover5d": 3.06,
+    "turnovers": {
+      "d1": 3.07,
+      "d5": 3.08,
+      "d10": 3.81,
+      "d20": 4.7
+    }
   },
   {
     "id": "5403",
@@ -26647,6 +28559,14 @@
           "yoy": -6.73
         }
       ]
+    },
+    "turnover": 0.19,
+    "avgTurnover5d": 0.12,
+    "turnovers": {
+      "d1": 0.19,
+      "d5": 0.12,
+      "d10": 0.19,
+      "d20": 0.13
     }
   },
   {
@@ -26691,7 +28611,15 @@
     "revenueYoY": 0.41,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 2.44,
+    "avgTurnover5d": 4.94,
+    "turnovers": {
+      "d1": 2.44,
+      "d5": 4.99,
+      "d10": 4.59,
+      "d20": 3.61
+    }
   },
   {
     "id": "5434",
@@ -26735,7 +28663,15 @@
     "revenueYoY": 30.64,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 2.75,
+    "avgTurnover5d": 3.73,
+    "turnovers": {
+      "d1": 2.77,
+      "d5": 3.74,
+      "d10": 4.37,
+      "d20": 4.08
+    }
   },
   {
     "id": "5438",
@@ -26781,7 +28717,15 @@
     "revenueYoY": -52.88,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.01,
+    "avgTurnover5d": 0.02,
+    "turnovers": {
+      "d1": 0.01,
+      "d5": 0.02,
+      "d10": 0.02,
+      "d20": 0.02
+    }
   },
   {
     "id": "5457",
@@ -26827,7 +28771,15 @@
     "revenueYoY": -2.1,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.38,
+    "avgTurnover5d": 0.62,
+    "turnovers": {
+      "d1": 0.38,
+      "d5": 0.62,
+      "d10": 0.55,
+      "d20": 0.48
+    }
   },
   {
     "id": "5464",
@@ -26864,7 +28816,15 @@
     "revenueYoY": 51.54,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.15,
+    "avgTurnover5d": 0.18,
+    "turnovers": {
+      "d1": 0.15,
+      "d5": 0.18,
+      "d10": 0.14,
+      "d20": 0.09
+    }
   },
   {
     "id": "5469",
@@ -27061,6 +29021,14 @@
           "yoy": -30.0
         }
       ]
+    },
+    "turnover": 3.33,
+    "avgTurnover5d": 6.24,
+    "turnovers": {
+      "d1": 3.38,
+      "d5": 6.27,
+      "d10": 5.95,
+      "d20": 4.07
     }
   },
   {
@@ -27114,7 +29082,15 @@
     "revenueYoY": 18.95,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.13,
+    "avgTurnover5d": 0.15,
+    "turnovers": {
+      "d1": 0.13,
+      "d5": 0.15,
+      "d10": 0.16,
+      "d20": 0.17
+    }
   },
   {
     "id": "5483",
@@ -27311,6 +29287,14 @@
           "yoy": 388.89
         }
       ]
+    },
+    "turnover": 19.61,
+    "avgTurnover5d": 26.15,
+    "turnovers": {
+      "d1": 19.53,
+      "d5": 26.27,
+      "d10": 19.19,
+      "d20": 14.02
     }
   },
   {
@@ -27501,6 +29485,14 @@
           "yoy": -26.97
         }
       ]
+    },
+    "turnover": 0.02,
+    "avgTurnover5d": 0.03,
+    "turnovers": {
+      "d1": 0.02,
+      "d5": 0.03,
+      "d10": 0.03,
+      "d20": 0.02
     }
   },
   {
@@ -27538,7 +29530,15 @@
     "revenueYoY": -0.26,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.0,
+    "avgTurnover5d": 0.01,
+    "turnovers": {
+      "d1": 0.0,
+      "d5": 0.01,
+      "d10": 0.01,
+      "d20": 0.01
+    }
   },
   {
     "id": "5536",
@@ -27735,6 +29735,14 @@
           "yoy": 34.5
         }
       ]
+    },
+    "turnover": 35.55,
+    "avgTurnover5d": 28.2,
+    "turnovers": {
+      "d1": 35.52,
+      "d5": 27.98,
+      "d10": 28.24,
+      "d20": 19.64
     }
   },
   {
@@ -27788,7 +29796,15 @@
     "revenueYoY": 21.09,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.01,
+    "avgTurnover5d": 0.01,
+    "turnovers": {
+      "d1": 0.01,
+      "d5": 0.01,
+      "d10": 0.01,
+      "d20": 0.01
+    }
   },
   {
     "id": "5546",
@@ -27825,7 +29841,15 @@
     "revenueYoY": -66.68,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.0,
+    "avgTurnover5d": 0.01,
+    "turnovers": {
+      "d1": 0.0,
+      "d5": 0.01,
+      "d10": 0.01,
+      "d20": 0.01
+    }
   },
   {
     "id": "5864",
@@ -27929,6 +29953,14 @@
           "yoy": 362.26
         }
       ]
+    },
+    "turnover": 1.72,
+    "avgTurnover5d": 0.97,
+    "turnovers": {
+      "d1": 1.71,
+      "d5": 0.97,
+      "d10": 0.81,
+      "d20": 0.67
     }
   },
   {
@@ -28131,6 +30163,14 @@
           "yoy": 12.5
         }
       ]
+    },
+    "turnover": 14.56,
+    "avgTurnover5d": 13.95,
+    "turnovers": {
+      "d1": 14.58,
+      "d5": 13.9,
+      "d10": 12.5,
+      "d20": 10.31
     }
   },
   {
@@ -28330,6 +30370,14 @@
           "yoy": 32.35
         }
       ]
+    },
+    "turnover": 0.01,
+    "avgTurnover5d": 0.03,
+    "turnovers": {
+      "d1": 0.01,
+      "d5": 0.03,
+      "d10": 0.02,
+      "d20": 0.01
     }
   },
   {
@@ -28367,7 +30415,15 @@
     "revenueYoY": 788.41,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.68,
+    "avgTurnover5d": 0.32,
+    "turnovers": {
+      "d1": 0.68,
+      "d5": 0.32,
+      "d10": 0.29,
+      "d20": 0.21
+    }
   },
   {
     "id": "6016",
@@ -28487,6 +30543,14 @@
           "yoy": 200.0
         }
       ]
+    },
+    "turnover": 3.09,
+    "avgTurnover5d": 2.02,
+    "turnovers": {
+      "d1": 3.06,
+      "d5": 2.01,
+      "d10": 1.28,
+      "d20": 0.96
     }
   },
   {
@@ -28675,6 +30739,14 @@
           "yoy": -605.88
         }
       ]
+    },
+    "turnover": 0.33,
+    "avgTurnover5d": 0.37,
+    "turnovers": {
+      "d1": 0.33,
+      "d5": 0.37,
+      "d10": 0.35,
+      "d20": 0.25
     }
   },
   {
@@ -28714,7 +30786,15 @@
     "revenueYoY": 4.62,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 2.94,
+    "avgTurnover5d": 3.28,
+    "turnovers": {
+      "d1": 2.92,
+      "d5": 3.27,
+      "d10": 2.43,
+      "d20": 1.71
+    }
   },
   {
     "id": "6125",
@@ -28763,7 +30843,15 @@
     "revenueYoY": 49.96,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.55,
+    "avgTurnover5d": 0.97,
+    "turnovers": {
+      "d1": 0.55,
+      "d5": 0.98,
+      "d10": 0.94,
+      "d20": 0.75
+    }
   },
   {
     "id": "6139",
@@ -28953,6 +31041,14 @@
           "yoy": 132.04
         }
       ]
+    },
+    "turnover": 24.51,
+    "avgTurnover5d": 36.69,
+    "turnovers": {
+      "d1": 24.81,
+      "d5": 36.84,
+      "d10": 42.63,
+      "d20": 36.37
     }
   },
   {
@@ -29143,6 +31239,14 @@
           "yoy": -29.13
         }
       ]
+    },
+    "turnover": 0.2,
+    "avgTurnover5d": 1.46,
+    "turnovers": {
+      "d1": 0.21,
+      "d5": 1.45,
+      "d10": 1.17,
+      "d20": 0.77
     }
   },
   {
@@ -29344,6 +31448,14 @@
           "yoy": -10.4
         }
       ]
+    },
+    "turnover": 20.96,
+    "avgTurnover5d": 22.62,
+    "turnovers": {
+      "d1": 20.5,
+      "d5": 22.57,
+      "d10": 28.81,
+      "d20": 37.77
     }
   },
   {
@@ -29536,6 +31648,14 @@
           "yoy": -14.02
         }
       ]
+    },
+    "turnover": 3.25,
+    "avgTurnover5d": 8.9,
+    "turnovers": {
+      "d1": 3.31,
+      "d5": 8.88,
+      "d10": 8.64,
+      "d20": 6.66
     }
   },
   {
@@ -29573,7 +31693,15 @@
     "revenueYoY": -26.98,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.08,
+    "avgTurnover5d": 0.15,
+    "turnovers": {
+      "d1": 0.08,
+      "d5": 0.15,
+      "d10": 0.14,
+      "d20": 0.1
+    }
   },
   {
     "id": "6166",
@@ -29761,6 +31889,14 @@
           "yoy": 1.22
         }
       ]
+    },
+    "turnover": 1.08,
+    "avgTurnover5d": 1.76,
+    "turnovers": {
+      "d1": 1.07,
+      "d5": 1.75,
+      "d10": 1.91,
+      "d20": 1.07
     }
   },
   {
@@ -29951,6 +32087,14 @@
           "yoy": 125.0
         }
       ]
+    },
+    "turnover": 1.02,
+    "avgTurnover5d": 2.63,
+    "turnovers": {
+      "d1": 1.04,
+      "d5": 2.67,
+      "d10": 3.37,
+      "d20": 3.55
     }
   },
   {
@@ -29988,7 +32132,15 @@
     "revenueYoY": 64.49,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.18,
+    "avgTurnover5d": 0.37,
+    "turnovers": {
+      "d1": 0.18,
+      "d5": 0.37,
+      "d10": 0.34,
+      "d20": 0.33
+    }
   },
   {
     "id": "6180",
@@ -30027,7 +32179,15 @@
     "revenueYoY": -29.25,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.2,
+    "avgTurnover5d": 0.18,
+    "turnovers": {
+      "d1": 0.2,
+      "d5": 0.18,
+      "d10": 0.19,
+      "d20": 0.16
+    }
   },
   {
     "id": "6182",
@@ -30209,6 +32369,14 @@
           "yoy": 1500.0
         }
       ]
+    },
+    "turnover": 18.95,
+    "avgTurnover5d": 29.67,
+    "turnovers": {
+      "d1": 19.23,
+      "d5": 29.71,
+      "d10": 16.78,
+      "d20": 9.57
     }
   },
   {
@@ -30246,7 +32414,15 @@
     "revenueYoY": 19.58,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 68.61,
+    "avgTurnover5d": 64.85,
+    "turnovers": {
+      "d1": 70.66,
+      "d5": 66.26,
+      "d10": 59.29,
+      "d20": 40.21
+    }
   },
   {
     "id": "6189",
@@ -30290,7 +32466,15 @@
     "revenueYoY": 7.38,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.27,
+    "avgTurnover5d": 0.51,
+    "turnovers": {
+      "d1": 0.27,
+      "d5": 0.51,
+      "d10": 0.42,
+      "d20": 0.3
+    }
   },
   {
     "id": "6190",
@@ -30327,7 +32511,15 @@
     "revenueYoY": 11.86,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 27.23,
+    "avgTurnover5d": 16.35,
+    "turnovers": {
+      "d1": 26.22,
+      "d5": 16.11,
+      "d10": 10.76,
+      "d20": 9.85
+    }
   },
   {
     "id": "6191",
@@ -30524,6 +32716,14 @@
           "yoy": 45.71
         }
       ]
+    },
+    "turnover": 18.38,
+    "avgTurnover5d": 22.5,
+    "turnovers": {
+      "d1": 18.6,
+      "d5": 22.37,
+      "d10": 16.43,
+      "d20": 10.44
     }
   },
   {
@@ -30563,7 +32763,15 @@
     "revenueYoY": -16.66,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 5.07,
+    "avgTurnover5d": 8.7,
+    "turnovers": {
+      "d1": 5.11,
+      "d5": 8.7,
+      "d10": 5.91,
+      "d20": 3.27
+    }
   },
   {
     "id": "6206",
@@ -30602,7 +32810,15 @@
     "revenueYoY": 18.19,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 1.09,
+    "avgTurnover5d": 1.61,
+    "turnovers": {
+      "d1": 1.09,
+      "d5": 1.61,
+      "d10": 1.29,
+      "d20": 0.93
+    }
   },
   {
     "id": "6209",
@@ -30792,6 +33008,14 @@
           "yoy": 295.45
         }
       ]
+    },
+    "turnover": 2.61,
+    "avgTurnover5d": 6.19,
+    "turnovers": {
+      "d1": 2.63,
+      "d5": 6.18,
+      "d10": 5.21,
+      "d20": 3.2
     }
   },
   {
@@ -30829,7 +33053,15 @@
     "revenueYoY": 15.41,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 5.91,
+    "avgTurnover5d": 6.7,
+    "turnovers": {
+      "d1": 5.88,
+      "d5": 6.68,
+      "d10": 14.67,
+      "d20": 18.95
+    }
   },
   {
     "id": "6219",
@@ -31019,6 +33251,14 @@
           "yoy": -51.0
         }
       ]
+    },
+    "turnover": 0.05,
+    "avgTurnover5d": 0.08,
+    "turnovers": {
+      "d1": 0.05,
+      "d5": 0.08,
+      "d10": 0.06,
+      "d20": 0.05
     }
   },
   {
@@ -31056,7 +33296,15 @@
     "revenueYoY": -20.16,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.16,
+    "avgTurnover5d": 0.15,
+    "turnovers": {
+      "d1": 0.17,
+      "d5": 0.16,
+      "d10": 0.21,
+      "d20": 0.18
+    }
   },
   {
     "id": "6221",
@@ -31255,6 +33503,14 @@
           "yoy": -53.64
         }
       ]
+    },
+    "turnover": 0.04,
+    "avgTurnover5d": 0.08,
+    "turnovers": {
+      "d1": 0.04,
+      "d5": 0.08,
+      "d10": 0.09,
+      "d20": 0.06
     }
   },
   {
@@ -31297,7 +33553,15 @@
     "revenueYoY": 14.54,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 12.83,
+    "avgTurnover5d": 12.19,
+    "turnovers": {
+      "d1": 12.97,
+      "d5": 12.32,
+      "d10": 7.31,
+      "d20": 5.93
+    }
   },
   {
     "id": "6233",
@@ -31340,7 +33604,15 @@
     "revenueYoY": 9.36,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.44,
+    "avgTurnover5d": 0.47,
+    "turnovers": {
+      "d1": 0.43,
+      "d5": 0.47,
+      "d10": 0.3,
+      "d20": 0.19
+    }
   },
   {
     "id": "6234",
@@ -31531,6 +33803,14 @@
           "yoy": 90.91
         }
       ]
+    },
+    "turnover": 9.6,
+    "avgTurnover5d": 4.09,
+    "turnovers": {
+      "d1": 9.57,
+      "d5": 4.04,
+      "d10": 2.78,
+      "d20": 1.53
     }
   },
   {
@@ -31723,6 +34003,14 @@
           "yoy": -255.56
         }
       ]
+    },
+    "turnover": 2.4,
+    "avgTurnover5d": 2.49,
+    "turnovers": {
+      "d1": 2.4,
+      "d5": 2.49,
+      "d10": 3.22,
+      "d20": 2.57
     }
   },
   {
@@ -31915,6 +34203,14 @@
           "yoy": 18.83
         }
       ]
+    },
+    "turnover": 1.32,
+    "avgTurnover5d": 2.0,
+    "turnovers": {
+      "d1": 1.34,
+      "d5": 2.01,
+      "d10": 1.67,
+      "d20": 1.25
     }
   },
   {
@@ -32112,6 +34408,14 @@
           "yoy": 1100.0
         }
       ]
+    },
+    "turnover": 0.04,
+    "avgTurnover5d": 0.03,
+    "turnovers": {
+      "d1": 0.04,
+      "d5": 0.03,
+      "d10": 0.03,
+      "d20": 0.03
     }
   },
   {
@@ -32149,7 +34453,15 @@
     "revenueYoY": 8.55,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 2.22,
+    "avgTurnover5d": 5.05,
+    "turnovers": {
+      "d1": 2.22,
+      "d5": 5.06,
+      "d10": 3.36,
+      "d20": 2.56
+    }
   },
   {
     "id": "6278",
@@ -32346,6 +34658,14 @@
           "yoy": 3.32
         }
       ]
+    },
+    "turnover": 7.11,
+    "avgTurnover5d": 11.91,
+    "turnovers": {
+      "d1": 6.93,
+      "d5": 12.15,
+      "d10": 22.64,
+      "d20": 12.24
     }
   },
   {
@@ -32383,7 +34703,15 @@
     "revenueYoY": 18.03,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 10.46,
+    "avgTurnover5d": 17.69,
+    "turnovers": {
+      "d1": 10.62,
+      "d5": 18.0,
+      "d10": 19.3,
+      "d20": 13.54
+    }
   },
   {
     "id": "6283",
@@ -32432,7 +34760,15 @@
     "revenueYoY": 31.64,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.05,
+    "avgTurnover5d": 0.08,
+    "turnovers": {
+      "d1": 0.05,
+      "d5": 0.08,
+      "d10": 0.08,
+      "d20": 0.05
+    }
   },
   {
     "id": "6290",
@@ -32469,7 +34805,15 @@
     "revenueYoY": 16.45,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 102.68,
+    "avgTurnover5d": 54.64,
+    "turnovers": {
+      "d1": 102.36,
+      "d5": 53.92,
+      "d10": 39.38,
+      "d20": 25.22
+    }
   },
   {
     "id": "6405",
@@ -32506,7 +34850,15 @@
     "revenueYoY": -76.0,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.24,
+    "avgTurnover5d": 0.41,
+    "turnovers": {
+      "d1": 0.24,
+      "d5": 0.41,
+      "d10": 0.39,
+      "d20": 0.59
+    }
   },
   {
     "id": "6412",
@@ -32543,7 +34895,15 @@
     "revenueYoY": -5.19,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.94,
+    "avgTurnover5d": 0.82,
+    "turnovers": {
+      "d1": 0.94,
+      "d5": 0.82,
+      "d10": 0.97,
+      "d20": 0.82
+    }
   },
   {
     "id": "6414",
@@ -32731,6 +35091,14 @@
           "yoy": -6.33
         }
       ]
+    },
+    "turnover": 4.13,
+    "avgTurnover5d": 6.61,
+    "turnovers": {
+      "d1": 4.15,
+      "d5": 6.62,
+      "d10": 5.79,
+      "d20": 4.71
     }
   },
   {
@@ -32770,7 +35138,15 @@
     "revenueYoY": 7.86,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.16,
+    "avgTurnover5d": 0.3,
+    "turnovers": {
+      "d1": 0.15,
+      "d5": 0.3,
+      "d10": 0.23,
+      "d20": 0.17
+    }
   },
   {
     "id": "6418",
@@ -32809,7 +35185,15 @@
     "revenueYoY": -19.93,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.16,
+    "avgTurnover5d": 0.16,
+    "turnovers": {
+      "d1": 0.16,
+      "d5": 0.16,
+      "d10": 0.09,
+      "d20": 0.07
+    }
   },
   {
     "id": "6442",
@@ -33008,6 +35392,14 @@
           "yoy": 65.92
         }
       ]
+    },
+    "turnover": 36.23,
+    "avgTurnover5d": 65.6,
+    "turnovers": {
+      "d1": 36.93,
+      "d5": 65.72,
+      "d10": 76.89,
+      "d20": 70.03
     }
   },
   {
@@ -33200,6 +35592,14 @@
           "yoy": -231.3
         }
       ]
+    },
+    "turnover": 2.15,
+    "avgTurnover5d": 2.25,
+    "turnovers": {
+      "d1": 2.15,
+      "d5": 2.26,
+      "d10": 4.46,
+      "d20": 9.87
     }
   },
   {
@@ -33392,6 +35792,14 @@
           "yoy": 429.89
         }
       ]
+    },
+    "turnover": 53.32,
+    "avgTurnover5d": 58.98,
+    "turnovers": {
+      "d1": 54.14,
+      "d5": 58.82,
+      "d10": 49.68,
+      "d20": 32.49
     }
   },
   {
@@ -33582,6 +35990,14 @@
           "yoy": -2.25
         }
       ]
+    },
+    "turnover": 0.24,
+    "avgTurnover5d": 0.27,
+    "turnovers": {
+      "d1": 0.25,
+      "d5": 0.27,
+      "d10": 0.25,
+      "d20": 0.23
     }
   },
   {
@@ -33626,7 +36042,15 @@
     "revenueYoY": 14.77,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.04,
+    "avgTurnover5d": 0.11,
+    "turnovers": {
+      "d1": 0.04,
+      "d5": 0.11,
+      "d10": 0.07,
+      "d20": 0.04
+    }
   },
   {
     "id": "6509",
@@ -33670,7 +36094,15 @@
     "revenueYoY": 7.15,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.62,
+    "avgTurnover5d": 1.23,
+    "turnovers": {
+      "d1": 0.63,
+      "d5": 1.24,
+      "d10": 1.67,
+      "d20": 2.48
+    }
   },
   {
     "id": "6527",
@@ -33860,6 +36292,14 @@
           "yoy": 26.27
         }
       ]
+    },
+    "turnover": 0.03,
+    "avgTurnover5d": 0.05,
+    "turnovers": {
+      "d1": 0.03,
+      "d5": 0.05,
+      "d10": 0.04,
+      "d20": 0.03
     }
   },
   {
@@ -34057,6 +36497,14 @@
           "yoy": 133.33
         }
       ]
+    },
+    "turnover": 0.18,
+    "avgTurnover5d": 0.2,
+    "turnovers": {
+      "d1": 0.18,
+      "d5": 0.2,
+      "d10": 0.28,
+      "d20": 0.27
     }
   },
   {
@@ -34094,7 +36542,15 @@
     "revenueYoY": 20.11,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 7.04,
+    "avgTurnover5d": 12.84,
+    "turnovers": {
+      "d1": 7.17,
+      "d5": 12.99,
+      "d10": 9.19,
+      "d20": 6.72
+    }
   },
   {
     "id": "6576",
@@ -34288,6 +36744,14 @@
           "yoy": 73.86
         }
       ]
+    },
+    "turnover": 0.09,
+    "avgTurnover5d": 0.28,
+    "turnovers": {
+      "d1": 0.09,
+      "d5": 0.27,
+      "d10": 0.19,
+      "d20": 0.13
     }
   },
   {
@@ -34478,6 +36942,14 @@
           "yoy": 213.92
         }
       ]
+    },
+    "turnover": 7.33,
+    "avgTurnover5d": 13.14,
+    "turnovers": {
+      "d1": 7.43,
+      "d5": 13.24,
+      "d10": 9.92,
+      "d20": 5.74
     }
   },
   {
@@ -34522,7 +36994,15 @@
     "revenueYoY": -4.66,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.23,
+    "avgTurnover5d": 0.42,
+    "turnovers": {
+      "d1": 0.23,
+      "d5": 0.42,
+      "d10": 0.36,
+      "d20": 0.46
+    }
   },
   {
     "id": "6620",
@@ -34563,7 +37043,15 @@
     "revenueYoY": 10.99,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.57,
+    "avgTurnover5d": 0.74,
+    "turnovers": {
+      "d1": 0.57,
+      "d5": 0.74,
+      "d10": 0.57,
+      "d20": 0.38
+    }
   },
   {
     "id": "6637",
@@ -34605,7 +37093,15 @@
     "revenueYoY": 19.14,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.02,
+    "avgTurnover5d": 0.02,
+    "turnovers": {
+      "d1": 0.02,
+      "d5": 0.02,
+      "d10": 0.02,
+      "d20": 0.02
+    }
   },
   {
     "id": "6661",
@@ -34651,7 +37147,15 @@
     "revenueYoY": 0.92,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.0,
+    "avgTurnover5d": 0.0,
+    "turnovers": {
+      "d1": 0.0,
+      "d5": 0.0,
+      "d10": 0.0,
+      "d20": 0.0
+    }
   },
   {
     "id": "6669",
@@ -34845,6 +37349,14 @@
           "yoy": 94.32
         }
       ]
+    },
+    "turnover": 208.26,
+    "avgTurnover5d": 139.42,
+    "turnovers": {
+      "d1": 204.14,
+      "d5": 138.11,
+      "d10": 101.92,
+      "d20": 78.73
     }
   },
   {
@@ -35041,6 +37553,14 @@
           "yoy": 43.48
         }
       ]
+    },
+    "turnover": 1.31,
+    "avgTurnover5d": 2.08,
+    "turnovers": {
+      "d1": 1.32,
+      "d5": 2.08,
+      "d10": 1.75,
+      "d20": 1.51
     }
   },
   {
@@ -35078,7 +37598,15 @@
     "revenueYoY": 112.72,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 6.73,
+    "avgTurnover5d": 5.69,
+    "turnovers": {
+      "d1": 6.78,
+      "d5": 5.7,
+      "d10": 5.79,
+      "d20": 4.77
+    }
   },
   {
     "id": "6712",
@@ -35121,7 +37649,15 @@
     "revenueYoY": 15.12,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.33,
+    "avgTurnover5d": 0.51,
+    "turnovers": {
+      "d1": 0.33,
+      "d5": 0.51,
+      "d10": 0.38,
+      "d20": 0.3
+    }
   },
   {
     "id": "6715",
@@ -35165,7 +37701,15 @@
     "revenueYoY": 9.55,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 5.19,
+    "avgTurnover5d": 8.86,
+    "turnovers": {
+      "d1": 5.19,
+      "d5": 8.9,
+      "d10": 9.2,
+      "d20": 7.42
+    }
   },
   {
     "id": "6727",
@@ -35202,7 +37746,15 @@
     "revenueYoY": 30.62,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 7.56,
+    "avgTurnover5d": 5.6,
+    "turnovers": {
+      "d1": 7.75,
+      "d5": 5.69,
+      "d10": 3.37,
+      "d20": 3.76
+    }
   },
   {
     "id": "6739",
@@ -35237,7 +37789,15 @@
     "revenueYoY": 87.84,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 8.16,
+    "avgTurnover5d": 14.91,
+    "turnovers": {
+      "d1": 8.27,
+      "d5": 15.01,
+      "d10": 16.08,
+      "d20": 13.08
+    }
   },
   {
     "id": "6753",
@@ -35425,6 +37985,14 @@
           "yoy": 115.38
         }
       ]
+    },
+    "turnover": 2.31,
+    "avgTurnover5d": 2.83,
+    "turnovers": {
+      "d1": 2.33,
+      "d5": 2.83,
+      "d10": 2.76,
+      "d20": 1.78
     }
   },
   {
@@ -35476,7 +38044,15 @@
     "revenueYoY": 6.23,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 106.27,
+    "avgTurnover5d": 67.22,
+    "turnovers": {
+      "d1": 104.15,
+      "d5": 66.81,
+      "d10": 56.69,
+      "d20": 33.32
+    }
   },
   {
     "id": "6841",
@@ -35664,6 +38240,14 @@
           "yoy": -77.78
         }
       ]
+    },
+    "turnover": 0.11,
+    "avgTurnover5d": 0.18,
+    "turnovers": {
+      "d1": 0.11,
+      "d5": 0.18,
+      "d10": 0.16,
+      "d20": 0.16
     }
   },
   {
@@ -35708,7 +38292,15 @@
     "revenueYoY": 10.6,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.67,
+    "avgTurnover5d": 0.57,
+    "turnovers": {
+      "d1": 0.67,
+      "d5": 0.57,
+      "d10": 0.6,
+      "d20": 0.68
+    }
   },
   {
     "id": "6885",
@@ -35745,7 +38337,15 @@
     "revenueYoY": 3548.48,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.1,
+    "avgTurnover5d": 0.1,
+    "turnovers": {
+      "d1": 0.1,
+      "d5": 0.1,
+      "d10": 0.07,
+      "d20": 0.07
+    }
   },
   {
     "id": "6890",
@@ -35782,7 +38382,15 @@
     "revenueYoY": -20.58,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.71,
+    "avgTurnover5d": 1.41,
+    "turnovers": {
+      "d1": 0.72,
+      "d5": 1.42,
+      "d10": 1.45,
+      "d20": 1.18
+    }
   },
   {
     "id": "6934",
@@ -35875,6 +38483,14 @@
           "yoy": 109.62
         }
       ]
+    },
+    "turnover": 0.19,
+    "avgTurnover5d": 0.19,
+    "turnovers": {
+      "d1": 0.19,
+      "d5": 0.19,
+      "d10": 0.23,
+      "d20": 0.23
     }
   },
   {
@@ -35914,7 +38530,15 @@
     "revenueYoY": 23.44,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 12.15,
+    "avgTurnover5d": 11.95,
+    "turnovers": {
+      "d1": 12.16,
+      "d5": 11.93,
+      "d10": 11.64,
+      "d20": 10.73
+    }
   },
   {
     "id": "7723",
@@ -36028,6 +38652,14 @@
           "yoy": -584.81
         }
       ]
+    },
+    "turnover": 0.02,
+    "avgTurnover5d": 0.04,
+    "turnovers": {
+      "d1": 0.02,
+      "d5": 0.04,
+      "d10": 0.04,
+      "d20": 0.04
     }
   },
   {
@@ -36123,6 +38755,14 @@
           "yoy": 170.77
         }
       ]
+    },
+    "turnover": 28.38,
+    "avgTurnover5d": 20.29,
+    "turnovers": {
+      "d1": 29.23,
+      "d5": 20.22,
+      "d10": 14.6,
+      "d20": 9.7
     }
   },
   {
@@ -36160,7 +38800,15 @@
     "revenueYoY": 111.26,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 69.23,
+    "avgTurnover5d": 72.09,
+    "turnovers": {
+      "d1": 69.79,
+      "d5": 71.83,
+      "d10": 62.22,
+      "d20": 50.78
+    }
   },
   {
     "id": "7770",
@@ -36201,7 +38849,15 @@
     "revenueYoY": -58.05,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.03,
+    "avgTurnover5d": 0.02,
+    "turnovers": {
+      "d1": 0.03,
+      "d5": 0.02,
+      "d10": 0.01,
+      "d20": 0.02
+    }
   },
   {
     "id": "7823",
@@ -36238,7 +38894,15 @@
     "revenueYoY": 33.2,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.01,
+    "avgTurnover5d": 0.02,
+    "turnovers": {
+      "d1": 0.01,
+      "d5": 0.02,
+      "d10": 0.02,
+      "d20": 0.02
+    }
   },
   {
     "id": "8028",
@@ -36275,7 +38939,15 @@
     "revenueYoY": 25.56,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 56.57,
+    "avgTurnover5d": 60.85,
+    "turnovers": {
+      "d1": 55.95,
+      "d5": 60.3,
+      "d10": 39.45,
+      "d20": 32.78
+    }
   },
   {
     "id": "8033",
@@ -36326,7 +38998,15 @@
     "revenueYoY": 5.27,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 11.04,
+    "avgTurnover5d": 12.22,
+    "turnovers": {
+      "d1": 11.09,
+      "d5": 12.16,
+      "d10": 9.49,
+      "d20": 6.37
+    }
   },
   {
     "id": "8044",
@@ -36516,6 +39196,14 @@
           "yoy": -30.19
         }
       ]
+    },
+    "turnover": 0.07,
+    "avgTurnover5d": 0.16,
+    "turnovers": {
+      "d1": 0.07,
+      "d5": 0.16,
+      "d10": 0.19,
+      "d20": 0.14
     }
   },
   {
@@ -36716,6 +39404,14 @@
           "yoy": 38.89
         }
       ]
+    },
+    "turnover": 7.18,
+    "avgTurnover5d": 6.46,
+    "turnovers": {
+      "d1": 7.43,
+      "d5": 6.56,
+      "d10": 5.12,
+      "d20": 3.38
     }
   },
   {
@@ -36755,7 +39451,15 @@
     "revenueYoY": 27.24,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 20.51,
+    "avgTurnover5d": 17.55,
+    "turnovers": {
+      "d1": 19.93,
+      "d5": 17.43,
+      "d10": 15.1,
+      "d20": 11.54
+    }
   },
   {
     "id": "8066",
@@ -36792,7 +39496,15 @@
     "revenueYoY": -35.65,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.0,
+    "avgTurnover5d": 0.01,
+    "turnovers": {
+      "d1": 0.0,
+      "d5": 0.01,
+      "d10": 0.01,
+      "d20": 0.01
+    }
   },
   {
     "id": "8070",
@@ -36989,6 +39701,14 @@
           "yoy": -197.92
         }
       ]
+    },
+    "turnover": 0.95,
+    "avgTurnover5d": 2.62,
+    "turnovers": {
+      "d1": 0.95,
+      "d5": 2.64,
+      "d10": 2.48,
+      "d20": 1.88
     }
   },
   {
@@ -37179,6 +39899,14 @@
           "yoy": 107.69
         }
       ]
+    },
+    "turnover": 5.46,
+    "avgTurnover5d": 14.24,
+    "turnovers": {
+      "d1": 5.52,
+      "d5": 14.26,
+      "d10": 10.13,
+      "d20": 6.01
     }
   },
   {
@@ -37218,7 +39946,15 @@
     "revenueYoY": 25.5,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.22,
+    "avgTurnover5d": 0.26,
+    "turnovers": {
+      "d1": 0.22,
+      "d5": 0.26,
+      "d10": 0.24,
+      "d20": 0.2
+    }
   },
   {
     "id": "8081",
@@ -37412,6 +40148,14 @@
           "yoy": 7.29
         }
       ]
+    },
+    "turnover": 8.0,
+    "avgTurnover5d": 3.33,
+    "turnovers": {
+      "d1": 7.94,
+      "d5": 3.33,
+      "d10": 2.11,
+      "d20": 1.4
     }
   },
   {
@@ -37460,7 +40204,15 @@
     "revenueYoY": 56.38,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.82,
+    "avgTurnover5d": 2.47,
+    "turnovers": {
+      "d1": 0.82,
+      "d5": 2.46,
+      "d10": 1.71,
+      "d20": 1.43
+    }
   },
   {
     "id": "8096",
@@ -37652,6 +40404,14 @@
           "yoy": -8.82
         }
       ]
+    },
+    "turnover": 6.71,
+    "avgTurnover5d": 12.35,
+    "turnovers": {
+      "d1": 6.8,
+      "d5": 12.31,
+      "d10": 11.59,
+      "d20": 18.62
     }
   },
   {
@@ -37844,6 +40604,14 @@
           "yoy": -264.71
         }
       ]
+    },
+    "turnover": 0.05,
+    "avgTurnover5d": 0.07,
+    "turnovers": {
+      "d1": 0.05,
+      "d5": 0.07,
+      "d10": 0.07,
+      "d20": 0.05
     }
   },
   {
@@ -38036,6 +40804,14 @@
           "yoy": 55.91
         }
       ]
+    },
+    "turnover": 5.54,
+    "avgTurnover5d": 5.09,
+    "turnovers": {
+      "d1": 5.56,
+      "d5": 5.07,
+      "d10": 3.36,
+      "d20": 2.12
     }
   },
   {
@@ -38228,6 +41004,14 @@
           "yoy": -32.65
         }
       ]
+    },
+    "turnover": 3.49,
+    "avgTurnover5d": 9.9,
+    "turnovers": {
+      "d1": 3.54,
+      "d5": 10.04,
+      "d10": 8.28,
+      "d20": 4.67
     }
   },
   {
@@ -38274,7 +41058,15 @@
     "revenueYoY": 33.75,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 2.03,
+    "avgTurnover5d": 2.42,
+    "turnovers": {
+      "d1": 2.03,
+      "d5": 2.43,
+      "d10": 2.37,
+      "d20": 2.83
+    }
   },
   {
     "id": "8147",
@@ -38311,7 +41103,15 @@
     "revenueYoY": 15.11,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 3.84,
+    "avgTurnover5d": 2.23,
+    "turnovers": {
+      "d1": 3.92,
+      "d5": 2.25,
+      "d10": 1.87,
+      "d20": 1.3
+    }
   },
   {
     "id": "8183",
@@ -38348,7 +41148,15 @@
     "revenueYoY": 17.86,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.16,
+    "avgTurnover5d": 0.31,
+    "turnovers": {
+      "d1": 0.16,
+      "d5": 0.32,
+      "d10": 0.29,
+      "d20": 0.19
+    }
   },
   {
     "id": "8210",
@@ -38538,6 +41346,14 @@
           "yoy": 120.2
         }
       ]
+    },
+    "turnover": 61.98,
+    "avgTurnover5d": 37.39,
+    "turnovers": {
+      "d1": 60.61,
+      "d5": 37.1,
+      "d10": 37.24,
+      "d20": 31.11
     }
   },
   {
@@ -38728,6 +41544,14 @@
           "yoy": -39.02
         }
       ]
+    },
+    "turnover": 0.19,
+    "avgTurnover5d": 0.75,
+    "turnovers": {
+      "d1": 0.19,
+      "d5": 0.75,
+      "d10": 0.57,
+      "d20": 0.39
     }
   },
   {
@@ -38765,7 +41589,15 @@
     "revenueYoY": -3.14,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.54,
+    "avgTurnover5d": 1.66,
+    "turnovers": {
+      "d1": 0.55,
+      "d5": 1.68,
+      "d10": 1.46,
+      "d20": 1.13
+    }
   },
   {
     "id": "8222",
@@ -38809,7 +41641,15 @@
     "revenueYoY": -10.12,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.11,
+    "avgTurnover5d": 0.15,
+    "turnovers": {
+      "d1": 0.11,
+      "d5": 0.15,
+      "d10": 0.2,
+      "d20": 0.15
+    }
   },
   {
     "id": "8249",
@@ -38846,7 +41686,15 @@
     "revenueYoY": 8.33,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.26,
+    "avgTurnover5d": 0.28,
+    "turnovers": {
+      "d1": 0.26,
+      "d5": 0.29,
+      "d10": 0.26,
+      "d20": 0.24
+    }
   },
   {
     "id": "8255",
@@ -38888,7 +41736,15 @@
     "revenueYoY": -1.99,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.59,
+    "avgTurnover5d": 1.06,
+    "turnovers": {
+      "d1": 0.59,
+      "d5": 1.06,
+      "d10": 0.81,
+      "d20": 0.66
+    }
   },
   {
     "id": "8261",
@@ -39078,6 +41934,14 @@
           "yoy": 5.0
         }
       ]
+    },
+    "turnover": 4.51,
+    "avgTurnover5d": 9.29,
+    "turnovers": {
+      "d1": 4.57,
+      "d5": 9.43,
+      "d10": 7.47,
+      "d20": 4.67
     }
   },
   {
@@ -39119,7 +41983,15 @@
     "revenueYoY": 292.7,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 3.53,
+    "avgTurnover5d": 23.39,
+    "turnovers": {
+      "d1": 3.61,
+      "d5": 23.68,
+      "d10": 17.58,
+      "d20": 12.26
+    }
   },
   {
     "id": "8299",
@@ -39180,7 +42052,15 @@
     "revenueYoY": 221.47,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 115.71,
+    "avgTurnover5d": 143.84,
+    "turnovers": {
+      "d1": 115.94,
+      "d5": 144.13,
+      "d10": 143.81,
+      "d20": 132.04
+    }
   },
   {
     "id": "8349",
@@ -39370,6 +42250,14 @@
           "yoy": -32.73
         }
       ]
+    },
+    "turnover": 0.44,
+    "avgTurnover5d": 0.17,
+    "turnovers": {
+      "d1": 0.44,
+      "d5": 0.17,
+      "d10": 0.15,
+      "d20": 0.12
     }
   },
   {
@@ -39414,7 +42302,15 @@
     "revenueYoY": 37.12,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.07,
+    "avgTurnover5d": 0.29,
+    "turnovers": {
+      "d1": 0.07,
+      "d5": 0.29,
+      "d10": 0.16,
+      "d20": 0.08
+    }
   },
   {
     "id": "8383",
@@ -39625,6 +42521,14 @@
           "yoy": 43.4
         }
       ]
+    },
+    "turnover": 2.95,
+    "avgTurnover5d": 4.94,
+    "turnovers": {
+      "d1": 3.03,
+      "d5": 5.02,
+      "d10": 3.92,
+      "d20": 2.29
     }
   },
   {
@@ -39676,7 +42580,15 @@
     "revenueYoY": -2.02,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.03,
+    "avgTurnover5d": 0.06,
+    "turnovers": {
+      "d1": 0.03,
+      "d5": 0.06,
+      "d10": 0.05,
+      "d20": 0.04
+    }
   },
   {
     "id": "8924",
@@ -39715,7 +42627,15 @@
     "revenueYoY": 29.74,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.07,
+    "avgTurnover5d": 0.1,
+    "turnovers": {
+      "d1": 0.07,
+      "d5": 0.1,
+      "d10": 0.08,
+      "d20": 0.06
+    }
   },
   {
     "id": "8933",
@@ -39752,7 +42672,15 @@
     "revenueYoY": -31.39,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.01,
+    "avgTurnover5d": 0.03,
+    "turnovers": {
+      "d1": 0.01,
+      "d5": 0.03,
+      "d10": 0.02,
+      "d20": 0.03
+    }
   },
   {
     "id": "8938",
@@ -39798,7 +42726,15 @@
     "revenueYoY": -14.31,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.58,
+    "avgTurnover5d": 0.23,
+    "turnovers": {
+      "d1": 0.58,
+      "d5": 0.23,
+      "d10": 0.2,
+      "d20": 0.24
+    }
   },
   {
     "id": "8942",
@@ -39835,7 +42771,15 @@
     "revenueYoY": -33.33,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.24,
+    "avgTurnover5d": 0.33,
+    "turnovers": {
+      "d1": 0.24,
+      "d5": 0.34,
+      "d10": 0.46,
+      "d20": 0.32
+    }
   },
   {
     "id": "9110",
@@ -39884,6 +42828,14 @@
       "grossMarginYoY": [],
       "operatingMarginYoY": [],
       "epsYoY": []
+    },
+    "turnover": 0.0,
+    "avgTurnover5d": 0.0,
+    "turnovers": {
+      "d1": 0.0,
+      "d5": 0.0,
+      "d10": 0.0,
+      "d20": 0.0
     }
   },
   {
@@ -39921,7 +42873,15 @@
     "revenueYoY": 0.15,
     "revenueMonth": "2026-03",
     "revenueFirstSeen": "2026-04-25",
-    "fundamentals": {}
+    "fundamentals": {},
+    "turnover": 0.11,
+    "avgTurnover5d": 0.17,
+    "turnovers": {
+      "d1": 0.11,
+      "d5": 0.17,
+      "d10": 0.16,
+      "d20": 0.15
+    }
   },
   {
     "id": "9941",
@@ -40111,6 +43071,14 @@
           "yoy": 27.03
         }
       ]
+    },
+    "turnover": 1.28,
+    "avgTurnover5d": 1.16,
+    "turnovers": {
+      "d1": 1.28,
+      "d5": 1.16,
+      "d10": 1.13,
+      "d20": 1.22
     }
   },
   {
@@ -40301,6 +43269,14 @@
           "yoy": 70.83
         }
       ]
+    },
+    "turnover": 0.01,
+    "avgTurnover5d": 0.12,
+    "turnovers": {
+      "d1": 0.01,
+      "d5": 0.12,
+      "d10": 0.11,
+      "d20": 0.09
     }
   }
 ]

@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react'
-import type { StockRow, SortState, DataMode, ReturnPeriod } from '../types'
+import type { StockRow, SortState, DataMode, ReturnPeriod, TurnoverPeriod } from '../types'
 import { assignThemeGroup, buildGroupedStocks } from '../constants/themeGroups'
 
 function normalizeRow(raw: Record<string, unknown>): StockRow {
@@ -32,6 +32,7 @@ function normalizeRow(raw: Record<string, unknown>): StockRow {
     price:           Number(raw.price ?? 0),
     marketCap,
     deltaAmount,
+    turnovers:       parseTurnovers(raw.turnovers),
     date:            String(raw.date ?? new Date().toISOString().slice(0, 10)),
     threeMonthReturn: raw.threeMonthReturn != null ? Number(raw.threeMonthReturn) : null,
     subIndustries,
@@ -80,7 +81,19 @@ function parseReturns(raw: unknown): StockRow['returns'] {
   return out
 }
 
-export function useStocks(returnPeriod: ReturnPeriod = 'y1') {
+function parseTurnovers(raw: unknown): StockRow['turnovers'] {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return undefined
+  const r = raw as Record<string, unknown>
+  const periods: Array<'d1'|'d5'|'d10'|'d20'> = ['d1','d5','d10','d20']
+  const out: Record<string, number> = {}
+  for (const k of periods) {
+    const v = r[k]
+    if (v != null) out[k] = Number(v)
+  }
+  return out
+}
+
+export function useStocks(returnPeriod: ReturnPeriod = 'y1', turnoverPeriod: TurnoverPeriod = 'd5') {
   const [stocks,         setStocks]         = useState<StockRow[]>([])
   const [filteredStocks, setFilteredStocks] = useState<StockRow[]>([])
   const [grouped,        setGrouped]        = useState<Record<string, StockRow[]>>({})
@@ -105,6 +118,9 @@ export function useStocks(returnPeriod: ReturnPeriod = 'y1') {
         if (currentSort.key === 'threeMonthReturn') {
           const v = row.returns && row.returns[returnPeriod]
           return v == null ? row.threeMonthReturn : v
+        }
+        if (currentSort.key === 'turnovers') {
+          return row.turnovers?.[turnoverPeriod] ?? 0
         }
         return row[currentSort.key]
       }
@@ -132,7 +148,7 @@ export function useStocks(returnPeriod: ReturnPeriod = 'y1') {
       const sorted = [...filtered].sort(compare)
       setFilteredStocks(sorted)
       setGrouped(buildGroupedStocks(filtered))
-    }, [returnPeriod]
+    }, [returnPeriod, turnoverPeriod]
   )
 
   // 期間切換時重新排序（個股表漲幅欄位依當前期間排）
@@ -141,7 +157,7 @@ export function useStocks(returnPeriod: ReturnPeriod = 'y1') {
       applyFilterSort(stocks, searchRef.current, sort)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [returnPeriod])
+  }, [returnPeriod, turnoverPeriod])
 
   const loadData = useCallback(async (_mode?: DataMode) => {
     setLoading(true)

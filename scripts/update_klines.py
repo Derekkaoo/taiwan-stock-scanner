@@ -139,7 +139,9 @@ def fetch_klines(stock_ids):
 
 def run():
     force = any(a in ("--force", "-f") for a in sys.argv[1:])
-    if not force and _klines_are_fresh():
+    no_fetch = any(a in ("--no-fetch", "--reuse") for a in sys.argv[1:])
+
+    if not force and not no_fetch and _klines_are_fresh():
         logger.info("K 線資料已是最新，無需更新")
         return
 
@@ -152,11 +154,21 @@ def run():
         stocks = json.load(f)
     stock_ids = [s["id"] for s in stocks]
     logger.info("股票清單：%d 支", len(stock_ids))
-    klines = fetch_klines(stock_ids)
-    with open(klines_path, "w", encoding="utf-8") as f:
-        json.dump(klines, f, ensure_ascii=False)
-    size_kb = klines_path.stat().st_size // 1024
-    logger.info("klines.json 更新完成：%d 支，%d KB", len(klines), size_kb)
+
+    if no_fetch:
+        # 用現有 klines.json，不重抓（測試衍生欄位用）
+        if not klines_path.exists():
+            logger.error("找不到 klines.json，--no-fetch 模式需要既存檔")
+            return
+        with open(klines_path, encoding="utf-8") as f:
+            klines = json.load(f)
+        logger.info("沿用既存 klines.json：%d 支股票", len(klines))
+    else:
+        klines = fetch_klines(stock_ids)
+        with open(klines_path, "w", encoding="utf-8") as f:
+            json.dump(klines, f, ensure_ascii=False)
+        size_kb = klines_path.stat().st_size // 1024
+        logger.info("klines.json 更新完成：%d 支，%d KB", len(klines), size_kb)
 
     PERIODS = {"w1": 5, "m1": 21, "m3": 65, "m6": 130, "y1": 252}
     updated = 0
@@ -168,6 +180,7 @@ def run():
         if not last:
             continue
         s["price"] = float(last)
+        # 市值保留原本值（週六 full pipeline 才會刷新）
         returns = {}
         for key, days in PERIODS.items():
             recent = bars if len(bars) <= days else bars[-(days + 1):]
@@ -178,6 +191,27 @@ def run():
                 returns[key] = None
         s["returns"] = returns
         s["threeMonthReturn"] = returns.get("y1")
+
+        # 成交值（億元）：用 typical price 近似
+        # typical_price = (high + low + close) / 3，比單純 close 更接近 VWAP
+        # d1=當日；d5=週均；d10=雙週均；d20=月均
+        def _bar_turnover(b):
+            h = b.get("h") or 0
+            l = b.get("l") or 0
+            c = b.get("c") or 0
+            v = b.get("v") or 0
+            tp = (h + l + c) / 3 if (h and l and c) else c
+            return tp * v
+        turnovers = {}
+        for label, days in [("d1", 1), ("d5", 5), ("d10", 10), ("d20", 20)]:
+            recent = bars[-days:] if len(bars) >= days else bars
+            if recent:
+                total = sum(_bar_turnover(b) for b in recent)
+                turnovers[label] = round(total / len(recent) / 1e8, 2)
+            else:
+                turnovers[label] = 0
+        s["turnovers"] = turnovers
+
         updated += 1
     with open(stocks_path, "w", encoding="utf-8") as f:
         json.dump(stocks, f, ensure_ascii=False, indent=2)
