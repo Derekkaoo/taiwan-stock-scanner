@@ -13,6 +13,9 @@ interface Props {
   returnPeriod: ReturnPeriod
   /** App 層 cache 版本；變動時代表使用者按了「更新資料」，已展開的卡片要重新載入 */
   cacheVersion?: number
+  /** 我的最愛（從 useFavorites 傳進來）*/
+  isFavorite?: (stockId: string) => boolean
+  toggleFavorite?: (stockId: string) => void
 }
 
 function fmt(v: number | null, digits = 2) {
@@ -28,7 +31,7 @@ function getSubsForGroup(stock: StockRow, groupName: string): string[] {
   return stock.subIndustries ?? []
 }
 
-export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnPeriod, cacheVersion }: Props) {
+export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnPeriod, cacheVersion, isFavorite, toggleFavorite }: Props) {
   const [expanded, setExpanded] = useState(false)
   const [klineMap, setKlineMap] = useState<Record<string, KlineBar[]>>({})
   const [loading,  setLoading]  = useState(false)
@@ -209,6 +212,23 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnP
                   <div className="px-2.5 py-1.5 border-b" style={{ borderColor: 'var(--color-border)' }}>
                     <div className="flex items-start justify-between gap-2 mb-0.5">
                       <div className="flex flex-wrap items-center gap-x-2 gap-y-1 flex-1 min-w-0">
+                        {toggleFavorite && (
+                          <button
+                            onClick={(e) => { e.stopPropagation(); toggleFavorite(stock.id) }}
+                            className="cursor-pointer transition-transform hover:scale-110 shrink-0"
+                            style={{
+                              fontSize: 14,
+                              lineHeight: 1,
+                              color: isFavorite?.(stock.id) ? '#fbbf24' : 'var(--color-text-muted)',
+                              background: 'transparent',
+                              border: 'none',
+                              padding: 0,
+                            }}
+                            title={isFavorite?.(stock.id) ? '從最愛移除' : '加入最愛'}
+                          >
+                            {isFavorite?.(stock.id) ? '★' : '☆'}
+                          </button>
+                        )}
                         <span className="font-mono font-bold tabular text-xs" style={{ color: 'var(--color-accent-cyan)' }}>
                           {stock.id}
                         </span>

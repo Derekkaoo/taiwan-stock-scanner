@@ -443,6 +443,8 @@ export default function App() {
                 getFromCache={getFromCache}
                 returnPeriod={returnPeriod}
                 cacheVersion={cacheVersion}
+                isFavorite={fav.isFavorite}
+                toggleFavorite={fav.toggle}
               />
             ))}
           </div>
