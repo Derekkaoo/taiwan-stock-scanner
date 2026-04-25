@@ -181,18 +181,34 @@ def check_what_needs_refresh() -> dict:
             with open(FINANCIALS_PATH, encoding="utf-8") as f:
                 fin = json.load(f)
 
-            # 檢查 1：stocks.json 中有多少 ID 不在 financials（新進股完全沒抓過）
+            # 檢查 1a：stocks.json 中有多少 ID 不在 financials（新進股完全沒抓過）
+            # 檢查 1b：stocks.json 內 fundamentals 空、但 financials.json 有資料的（merge 過時）
             stocks_path = DATA_DIR / "stocks.json"
             if stocks_path.exists():
                 with open(stocks_path, encoding="utf-8") as f:
-                    stocks_ids = {s["id"] for s in json.load(f)}
+                    stocks_data = json.load(f)
+                stocks_ids = {s["id"] for s in stocks_data}
                 fin_ids_with_data = {sid for sid, v in fin.items()
                                       if v.get("revenueYoY") or v.get("epsYoY")}
+
+                # 1a 真的沒抓過
                 missing = stocks_ids - fin_ids_with_data
-                if len(missing) >= max(10, len(stocks_ids) * 0.05):  # 缺 >= 10 支或 5%
+                # 1b 抓過了但 stocks.json 沒 merge 進來
+                stale_merge = sum(
+                    1 for s in stocks_data
+                    if not (s.get("fundamentals") or {}).get("revenueYoY")
+                       and s["id"] in fin_ids_with_data
+                )
+
+                if len(missing) >= max(10, len(stocks_ids) * 0.05):
                     result["financials"] = True
                     result["reasons"].append(
                         f"財報資料缺漏（{len(missing)} 支股票未抓過，例：{list(missing)[:5]}）"
+                    )
+                elif stale_merge >= 5:
+                    result["financials"] = True
+                    result["reasons"].append(
+                        f"財報未合進 stocks.json（{stale_merge} 支已抓但未 merge）"
                     )
 
             # 檢查 2：時間過期（取樣 50 支看 epsYoY 是否到最新季）
