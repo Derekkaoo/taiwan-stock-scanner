@@ -11,5 +11,5 @@
     "isolatedModules": true,
     "esModuleInterop": true
   },
-  "include": ["functions/**/*.ts"]
+  "include": ["../functions/**/*.ts"]
 }
