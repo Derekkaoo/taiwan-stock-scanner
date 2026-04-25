@@ -24,6 +24,29 @@ export interface StockRow {
   revenueMonth?: string | null          // 該月營收資料月份 YYYY-MM
   revenueFirstSeen?: string | null      // 首次抓到此月份營收資料的日期 YYYY-MM-DD
   fundamentals?: Fundamentals           // FinMind 12 月營收 + 8 季財報 YoY 序列
+  companyProfile?: CompanyProfile       // Yahoo 公司基本資料 + 業務介紹
+}
+
+/** 公司基本資料 + 業務介紹（來源：Yahoo 股市 profile）*/
+export interface CompanyProfile {
+  business?: string         // 主要經營業務（一段文字）
+  chairman?: string         // 董事長
+  ceo?: string              // 總經理
+  spokesman?: string        // 發言人
+  deputySpokesman?: string  // 代理發言人
+  foundedDate?: string      // 成立時間
+  listedDate?: string       // 上市/上櫃時間
+  address?: string          // 公司地址
+  phone?: string            // 電話
+  fax?: string              // 傳真
+  email?: string            // 電子郵件
+  website?: string          // 公司網址
+  capital?: string          // 實收資本額
+  sharesOutstanding?: string  // 已發行普通股數
+  employees?: string        // 員工人數
+  group?: string            // 所屬集團
+  auditor?: string          // 簽證會計師
+  englishName?: string      // 英文簡稱
 }
 
 /** FinMind 抓下來的基本面資料 */

@@ -3,6 +3,7 @@ import { RETURN_PERIOD_LABELS, TURNOVER_PERIOD_LABELS } from '../types'
 import { THEME_CSS_MAP, TAG_COLORS, getGroupCssClass } from '../constants/themeGroups'
 import { CandlestickSVG } from './CandlestickSVG'
 import { FundamentalsPanel } from './FundamentalsPanel'
+import { CompanyProfilePanel } from './CompanyProfilePanel'
 import { useState, useEffect } from 'react'
 
 interface ColDef {
@@ -294,6 +295,15 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
                           </span>
                         ))}
                       </div>
+                      {/* 公司簡介（業務介紹，折疊式）*/}
+                      {stock.companyProfile?.business && (
+                        <div
+                          className="mb-2"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <CompanyProfilePanel profile={stock.companyProfile} />
+                        </div>
+                      )}
                       <div className="flex flex-col md:flex-row gap-3 md:gap-4 items-stretch">
                         <div className="w-full md:flex-1 md:min-w-0">
                           {cached && cached.length > 0 ? (

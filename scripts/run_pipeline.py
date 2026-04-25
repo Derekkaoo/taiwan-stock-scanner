@@ -414,6 +414,7 @@ def load_category_map():
 
 REVENUE_PATH = Path(__file__).parent.parent / "backend" / "db" / "monthly_revenue.json"
 FINANCIALS_PATH = Path(__file__).parent.parent / "backend" / "db" / "financials.json"
+PROFILES_PATH = Path(__file__).parent.parent / "backend" / "db" / "yahoo_profiles.json"
 
 
 def load_financials():
@@ -423,6 +424,27 @@ def load_financials():
         return {}
     with open(FINANCIALS_PATH, encoding="utf-8") as f:
         return json.load(f)
+
+
+def load_profiles():
+    """讀 Yahoo profile 資料（若不存在回空 dict）"""
+    if not PROFILES_PATH.exists():
+        logger.warning("Yahoo profile 不存在：%s（請跑 run_yahoo_profiles.py）", PROFILES_PATH)
+        return {}
+    with open(PROFILES_PATH, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def make_company_profile(profile_raw):
+    """從 yahoo_profiles 原始 dict 抽取要存進 stocks.json 的欄位（瘦身版）"""
+    if not profile_raw:
+        return {}
+    # 只取前端要顯示的欄位（業務介紹、董監、基本資料）
+    keep_fields = ["business", "chairman", "ceo", "spokesman", "deputySpokesman",
+                    "foundedDate", "listedDate", "address", "phone", "fax",
+                    "email", "website", "capital", "sharesOutstanding",
+                    "employees", "group", "auditor", "englishName"]
+    return {k: profile_raw[k] for k in keep_fields if profile_raw.get(k)}
 
 
 def refresh_financials():
@@ -549,6 +571,7 @@ def run():
     revenue_map   = load_monthly_revenue()
     refresh_financials()       # 嘗試用 FinMind 更新 12 月營收 + 8 季財報
     financials    = load_financials()
+    profiles      = load_profiles()
     klines        = fetch_klines(stock_ids)
 
     # 神秘金字塔抓不到市值的股票，用 FinMind CommonStocks 反推
@@ -659,6 +682,7 @@ def run():
             "revenueMonth":     curr_month,                  # 該月營收資料月份 YYYY-MM
             "revenueFirstSeen": revenue_first_seen,          # 首次抓到此月份資料的日期 YYYY-MM-DD
             "fundamentals":     financials.get(sid, {}),     # FinMind 12 個月/8 季 YoY 序列
+            "companyProfile":   make_company_profile(profiles.get(sid)),  # Yahoo 公司基本資料 + 業務介紹
         })
 
     with open(DATA_DIR / "stocks.json", "w", encoding="utf-8") as f:

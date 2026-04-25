@@ -43,7 +43,23 @@ function normalizeRow(raw: Record<string, unknown>): StockRow {
     revenueMonth: raw.revenueMonth ? String(raw.revenueMonth) : null,
     revenueFirstSeen: raw.revenueFirstSeen ? String(raw.revenueFirstSeen) : null,
     fundamentals: parseFundamentals(raw.fundamentals),
+    companyProfile: parseCompanyProfile(raw.companyProfile),
   }
+}
+
+function parseCompanyProfile(raw: unknown): StockRow['companyProfile'] {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return undefined
+  const r = raw as Record<string, unknown>
+  const out: Record<string, string> = {}
+  for (const k of [
+    'business', 'chairman', 'ceo', 'spokesman', 'deputySpokesman',
+    'foundedDate', 'listedDate', 'address', 'phone', 'fax', 'email',
+    'website', 'capital', 'sharesOutstanding', 'employees', 'group',
+    'auditor', 'englishName',
+  ]) {
+    if (r[k]) out[k] = String(r[k])
+  }
+  return Object.keys(out).length > 0 ? out : undefined
 }
 
 function parseFundamentals(raw: unknown): StockRow['fundamentals'] {
