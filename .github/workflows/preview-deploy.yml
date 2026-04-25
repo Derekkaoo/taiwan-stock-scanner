@@ -1,0 +1,44 @@
+name: 部署 Preview 分支
+
+on:
+  push:
+    branches-ignore:
+      - master    # master 走 weekly-update.yml 的完整 pipeline；這裡只處理其他分支
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 取得程式碼
+        uses: actions/checkout@v4
+
+      - name: 設定 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 安裝前端套件
+        run: |
+          cd frontend
+          npm install
+
+      - name: 修正執行權限
+        run: chmod -R +x frontend/node_modules/.bin/
+
+      - name: 建置前端
+        run: |
+          cd frontend
+          npm run build
+
+      - name: 複製資料到 dist
+        run: |
+          mkdir -p frontend/dist/data
+          cp frontend/public/data/stocks.json frontend/dist/data/stocks.json 2>/dev/null || true
+          cp frontend/public/data/klines.json frontend/dist/data/klines.json 2>/dev/null || true
+
+      - name: 部署到 Cloudflare Pages (Preview)
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy frontend/dist --project-name=taiwan-stock-scanner --branch=${{ github.ref_name }} --commit-dirty=true
