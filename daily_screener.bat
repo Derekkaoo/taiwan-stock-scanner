@@ -15,9 +15,9 @@ echo ======================================== >> "%LOGFILE%"
 echo Run started: %date% %time% >> "%LOGFILE%"
 echo ======================================== >> "%LOGFILE%"
 
-REM ── 1. 增量更新 K 線（含 returns / turnovers / volumes / pctOf52wHigh）
+REM ── 1. 增量更新 K 線（含 returns / turnovers / volumes / pctOf52wHigh / 200d / MA / dailyChange）
 echo. >> "%LOGFILE%"
-echo [1/3] update_klines... >> "%LOGFILE%"
+echo [1/4] update_klines... >> "%LOGFILE%"
 "%PYTHON%" scripts/update_klines.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     echo X update_klines failed >> "%LOGFILE%"
@@ -27,15 +27,23 @@ if errorlevel 1 (
 
 REM ── 2. 抓 TWII 大盤
 echo. >> "%LOGFILE%"
-echo [2/3] scrape_twii... >> "%LOGFILE%"
+echo [2/4] scrape_twii... >> "%LOGFILE%"
 "%PYTHON%" scripts/scrape_twii.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     echo X scrape_twii failed (continuing without TWII) >> "%LOGFILE%"
 )
 
-REM ── 3. 跑 screener + 發 Telegram
+REM ── 3. 抓三大法人買賣超（給選股 2 用）
 echo. >> "%LOGFILE%"
-echo [3/3] run screeners... >> "%LOGFILE%"
+echo [3/4] scrape_institutional... >> "%LOGFILE%"
+"%PYTHON%" scripts/scrape_institutional.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    echo X scrape_institutional failed (continuing without institutional data) >> "%LOGFILE%"
+)
+
+REM ── 4. 跑 screener + 發 Telegram
+echo. >> "%LOGFILE%"
+echo [4/4] run screeners... >> "%LOGFILE%"
 "%PYTHON%" -m scripts.screeners.runner >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     echo X screener runner failed >> "%LOGFILE%"

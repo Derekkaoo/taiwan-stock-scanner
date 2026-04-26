@@ -24,6 +24,7 @@ if str(ROOT / "scripts") not in sys.path:
 
 from screeners.base import Strategy, ScreenerHit, load_stocks, MarketContext
 from screeners.strategy1 import Strategy1
+from screeners.strategy2 import Strategy2
 from send_telegram import send_message
 
 logger = logging.getLogger(__name__)
@@ -34,7 +35,7 @@ logger = logging.getLogger(__name__)
 # ============================================================
 STRATEGIES: list[Strategy] = [
     Strategy1(),
-    # Strategy2(),  # 之後加
+    Strategy2(),
 ]
 
 
