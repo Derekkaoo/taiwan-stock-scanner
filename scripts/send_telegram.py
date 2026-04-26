@@ -1,5 +1,9 @@
 """
-Telegram bot 發訊息 helper（給 send_notifications 用）
+Telegram bot 發訊息 helper（給 send_notifications + screeners 用）
+
+需 .env 設定：
+  TELEGRAM_BOT_TOKEN=<your-bot-token>
+  TELEGRAM_CHAT_ID=<your-chat-id>
 
 用法：
   # 從 .env 讀 token / chat_id 自動發

@@ -14,3 +14,4 @@ backend/db/*_raw.html
 # Local pipeline run log
 update_data.log
 scripts/dump_yahoo_html.py 
+frontend/node_modules/ 

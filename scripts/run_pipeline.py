@@ -666,6 +666,15 @@ def run():
             turnovers = {"d1": 0, "d5": 0, "d10": 0, "d20": 0}
             volumes   = {"d1": 0, "d5": 0, "d10": 0, "d20": 0}
 
+        # 52 週新高百分比：current_close / max(high[-252:]) × 100
+        pct_of_52w_high = None
+        if bars and price_now:
+            recent252 = bars[-252:] if len(bars) >= 252 else bars
+            highs = [b.get("h") or b.get("c") or 0 for b in recent252]
+            high52w = max(highs) if highs else 0
+            if high52w > 0:
+                pct_of_52w_high = round(price_now / high52w * 100, 2)
+
         stocks.append({
             "id":               sid,
             "name":             name,
@@ -678,6 +687,7 @@ def run():
             "marketCap":        market_cap,
             "turnovers":        turnovers,            # 多期間成交值（億元）：d1/d5/d10/d20
             "volumes":          volumes,              # 多期間成交量（千張）：d1/d5/d10/d20
+            "pctOf52wHigh":     pct_of_52w_high,      # 現價 / 52週最高 ×100（100=創新高）
             "date":             h.get("date", datetime.now().strftime("%Y-%m-%d")),
             "threeMonthReturn": returns.get("y1"),  # 主欄位：預設顯示 1 年漲幅
             "returns":          returns,
