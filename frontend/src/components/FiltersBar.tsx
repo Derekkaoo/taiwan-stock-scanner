@@ -4,10 +4,11 @@
 //  手機（<md）：折疊成「篩選器 (N)」按鈕，點開 modal
 // ============================================================
 import { useEffect, useMemo, useState } from 'react'
-import type { Filters, GrowthQuarters, StockRow } from '../types'
+import type { Filters, GrowthQuarters, InstStreakDays, StockRow } from '../types'
 import {
   DEFAULT_FILTERS, FILTER_BOUNDS, FILTER_LABELS, FILTER_UNITS,
   GROWTH_QUARTERS_OPTIONS, GROWTH_METRIC_LABELS,
+  INST_STREAK_OPTIONS,
 } from '../types'
 import { RangeSlider } from './RangeSlider'
 import { IndustryChips } from './IndustryChips'
@@ -44,6 +45,7 @@ function activeCount(f: Filters): number {
       ranged(f.absValue.grossMargin,     DEFAULT_FILTERS.absValue.grossMargin) ||
       ranged(f.absValue.operatingMargin, DEFAULT_FILTERS.absValue.operatingMargin) ||
       ranged(f.absValue.eps,             DEFAULT_FILTERS.absValue.eps))) n++
+  if (f.institutional.days !== 0 && (f.institutional.foreign || f.institutional.trust)) n++
   return n
 }
 
@@ -72,6 +74,11 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
   })
   const setAbsRange = (k: 'grossMargin' | 'operatingMargin' | 'eps', v: [number, number]) =>
     set({ absValue: { ...filters.absValue, [k]: v } })
+
+  const setInstDays = (d: InstStreakDays) =>
+    set({ institutional: { ...filters.institutional, days: d } })
+  const toggleInstWho = (k: 'foreign' | 'trust') =>
+    set({ institutional: { ...filters.institutional, [k]: !filters.institutional[k] } })
 
   const sliders = (
     <>
@@ -151,6 +158,62 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
               style={{ accentColor: 'var(--color-accent-cyan)' }}
             />
             {GROWTH_METRIC_LABELS[k]}
+          </label>
+        )
+      })}
+    </div>
+  )
+
+  // 連續買超 pill row（外資/投信）
+  const instEnabled = filters.institutional.days !== 0
+  const institutionalBlock = (
+    <div className="flex items-center flex-wrap gap-2">
+      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>連續買超</span>
+      <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>近</span>
+      <div className="flex items-center gap-1">
+        {INST_STREAK_OPTIONS.map(d => {
+          const active = filters.institutional.days === d
+          return (
+            <button
+              key={d}
+              onClick={() => setInstDays(d)}
+              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              style={{
+                background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                color:       active ? '#fff' : 'var(--color-text-secondary)',
+                fontWeight:  active ? 600 : 400,
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {d === 0 ? '不限' : `${d}日`}
+            </button>
+          )
+        })}
+      </div>
+      <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>都買超</span>
+      <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
+      {(['foreign', 'trust'] as const).map(k => {
+        const checked = filters.institutional[k]
+        return (
+          <label
+            key={k}
+            className="inline-flex items-center gap-1 text-[11px] select-none"
+            style={{
+              cursor: instEnabled ? 'pointer' : 'not-allowed',
+              opacity: instEnabled ? 1 : 0.4,
+              color: 'var(--color-text-secondary)',
+            }}
+          >
+            <input
+              type="checkbox"
+              checked={checked}
+              disabled={!instEnabled}
+              onChange={() => toggleInstWho(k)}
+              style={{ accentColor: 'var(--color-accent-cyan)' }}
+            />
+            {k === 'foreign' ? '外資' : '投信'}
           </label>
         )
       })}
@@ -254,6 +317,12 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
       <div className="hidden md:block px-5 py-2 border-b"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
       >
+        {institutionalBlock}
+      </div>
+
+      <div className="hidden md:block px-5 py-2 border-b"
+        style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
+      >
         {absValueBlock}
       </div>
 
@@ -347,6 +416,9 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
               {sliders}
               <div className="border-t pt-3" style={{ borderColor: 'var(--color-border)' }}>
                 {growthBlock}
+              </div>
+              <div className="border-t pt-3" style={{ borderColor: 'var(--color-border)' }}>
+                {institutionalBlock}
               </div>
               <div className="border-t pt-3" style={{ borderColor: 'var(--color-border)' }}>
                 {absValueBlock}

@@ -26,6 +26,8 @@ export interface StockRow {
   revenueFirstSeen?: string | null
   fundamentals?: Fundamentals
   companyProfile?: CompanyProfile
+  foreignBuyStreak?: number   // 外資從最新日往回連續買超天數
+  trustBuyStreak?: number     // 投信從最新日往回連續買超天數
 }
 
 export interface CompanyProfile {
@@ -158,6 +160,15 @@ export interface AbsValueFilter {
   eps:             FilterRange
 }
 
+/** 法人連續買超：days = 0 視為不啟用 */
+export type InstStreakDays = 0 | 1 | 3 | 5 | 20
+
+export interface InstitutionalFilter {
+  days: InstStreakDays
+  foreign: boolean
+  trust: boolean
+}
+
 export interface Filters {
   volume:     FilterRange      // 5 日均成交量（千張）
   marketCap:  FilterRange      // 市值（億）
@@ -166,6 +177,7 @@ export interface Filters {
   industries: string[]
   growth:     GrowthFilter
   absValue:   AbsValueFilter
+  institutional: InstitutionalFilter
 }
 
 export const FILTER_BOUNDS = {
@@ -195,7 +207,10 @@ export const DEFAULT_FILTERS: Filters = {
     operatingMargin: [FILTER_BOUNDS.operatingMargin.min, FILTER_BOUNDS.operatingMargin.max],
     eps:             [FILTER_BOUNDS.eps.min,             FILTER_BOUNDS.eps.max],
   },
+  institutional: { days: 0, foreign: false, trust: false },
 }
+
+export const INST_STREAK_OPTIONS: InstStreakDays[] = [0, 1, 3, 5, 20]
 
 export const FILTER_LABELS = {
   volume:     '今日成交量',

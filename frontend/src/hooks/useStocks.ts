@@ -45,6 +45,8 @@ function normalizeRow(raw: Record<string, unknown>): StockRow {
     revenueFirstSeen: raw.revenueFirstSeen ? String(raw.revenueFirstSeen) : null,
     fundamentals: parseFundamentals(raw.fundamentals),
     companyProfile: parseCompanyProfile(raw.companyProfile),
+    foreignBuyStreak: raw.foreignBuyStreak != null ? Number(raw.foreignBuyStreak) : undefined,
+    trustBuyStreak:   raw.trustBuyStreak   != null ? Number(raw.trustBuyStreak)   : undefined,
   }
 }
 
