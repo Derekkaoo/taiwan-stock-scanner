@@ -5,13 +5,18 @@ runner.py — 跑全部 screener 策略 + 發 Telegram
   1. load stocks.json + twii.json
   2. 跑每個註冊的策略
   3. 組訊息（HTML format）
-  4. 推到 Telegram
+  4. 推到 Telegram（同日同樣內容會 skip，避免重複推送）
+
+CLI flags:
+  --skip-telegram     完全不推 Telegram（只算 + 印 console）
+  --force-telegram    強制推（無視同日重複檢查）
 
 用法：
   python -m scripts.screeners.runner
-  或 cd scripts && python -m screeners.runner
 """
 from __future__ import annotations
+import hashlib
+import json
 import logging
 import sys
 from datetime import datetime
@@ -35,6 +40,9 @@ from screeners.strategy2 import Strategy2
 from send_telegram import send_message
 
 logger = logging.getLogger(__name__)
+
+# 同日重複推送的去重 cache
+TELEGRAM_CACHE_PATH = ROOT / "backend" / "db" / "last_telegram_push.json"
 
 
 # ============================================================
@@ -100,10 +108,57 @@ def build_message(
 
 
 # ============================================================
+#  Telegram 去重 cache
+# ============================================================
+def _content_hash(message: str) -> str:
+    """訊息內容 hash（去掉時間戳前綴後再 hash，避免日期不同就差異）"""
+    # 把開頭的「📊 每日選股報告 YYYY-MM-DD」那行拿掉再 hash
+    body = "\n".join(message.split("\n")[1:])
+    return hashlib.md5(body.encode("utf-8")).hexdigest()[:16]
+
+
+def _should_send_telegram(message: str) -> tuple[bool, str]:
+    """檢查今日是否已推過相同內容。回傳 (要推?, 理由說明)"""
+    today = datetime.now().strftime("%Y-%m-%d")
+    new_hash = _content_hash(message)
+
+    if not TELEGRAM_CACHE_PATH.exists():
+        return True, "首次推送（cache 不存在）"
+
+    try:
+        cache = json.loads(TELEGRAM_CACHE_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return True, "cache 讀取失敗，視為首次"
+
+    last_date = cache.get("date", "")
+    last_hash = cache.get("hash", "")
+
+    if last_date != today:
+        return True, f"新的一天（上次 {last_date}）"
+    if last_hash != new_hash:
+        return True, "今日內容變動（重新推送）"
+    return False, f"今日已推過相同內容（hash {last_hash}）"
+
+
+def _save_telegram_cache(message: str):
+    today = datetime.now().strftime("%Y-%m-%d")
+    cache = {
+        "date": today,
+        "hash": _content_hash(message),
+        "pushed_at": datetime.now().strftime("%Y-%m-%dT%H:%M:%S"),
+    }
+    TELEGRAM_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    TELEGRAM_CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+# ============================================================
 #  主流程
 # ============================================================
 def run() -> int:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+
+    skip_telegram  = "--skip-telegram"  in sys.argv
+    force_telegram = "--force-telegram" in sys.argv
 
     stocks = load_stocks()
     if not stocks:
@@ -126,9 +181,21 @@ def run() -> int:
     print(message)
     print("=" * 60 + "\n")
 
+    if skip_telegram:
+        logger.info("--skip-telegram 指定，不推送")
+        return 0
+
+    if not force_telegram:
+        should_send, reason = _should_send_telegram(message)
+        if not should_send:
+            logger.info("Telegram 跳過：%s", reason)
+            return 0
+        logger.info("Telegram 將推送：%s", reason)
+
     ok = send_message(message)
     if ok:
         logger.info("Telegram 推送成功")
+        _save_telegram_cache(message)
         return 0
     else:
         logger.error("Telegram 推送失敗")
