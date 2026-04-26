@@ -1,8 +1,9 @@
 @echo off
 REM ============================================================
 REM  Daily Screener
-REM  - 每日 19:00 跑（Windows Task Scheduler）
-REM  - 流程：增量更新 K 線 → 抓 TWII → 跑策略 → 發 Telegram
+REM  - runs every weekday 19:00 (Windows Task Scheduler)
+REM  - flow: update_klines -> scrape_twii -> scrape_institutional
+REM         -> run screeners (Telegram) -> commit + push (deploy)
 REM ============================================================
 
 cd /d "%~dp0"
@@ -15,9 +16,9 @@ echo ======================================== >> "%LOGFILE%"
 echo Run started: %date% %time% >> "%LOGFILE%"
 echo ======================================== >> "%LOGFILE%"
 
-REM ── 1. 增量更新 K 線（含 returns / turnovers / volumes / pctOf52wHigh / 200d / MA / dailyChange）
+REM Step 1: incremental K-line update (returns/turnovers/volumes/MA/etc.)
 echo. >> "%LOGFILE%"
-echo [1/4] update_klines... >> "%LOGFILE%"
+echo [1/5] update_klines... >> "%LOGFILE%"
 "%PYTHON%" scripts/update_klines.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     echo X update_klines failed >> "%LOGFILE%"
@@ -25,32 +26,52 @@ if errorlevel 1 (
     exit /b 1
 )
 
-REM ── 2. 抓 TWII 大盤
+REM Step 2: TWII index
 echo. >> "%LOGFILE%"
-echo [2/4] scrape_twii... >> "%LOGFILE%"
+echo [2/5] scrape_twii... >> "%LOGFILE%"
 "%PYTHON%" scripts/scrape_twii.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     echo X scrape_twii failed (continuing without TWII) >> "%LOGFILE%"
 )
 
-REM ── 3. 抓三大法人買賣超（給選股 2 用）
+REM Step 3: institutional investors (foreign / trust / dealer)
 echo. >> "%LOGFILE%"
-echo [3/4] scrape_institutional... >> "%LOGFILE%"
+echo [3/5] scrape_institutional... >> "%LOGFILE%"
 "%PYTHON%" scripts/scrape_institutional.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     echo X scrape_institutional failed (continuing without institutional data) >> "%LOGFILE%"
 )
 
-REM ── 4. 跑 screener + 發 Telegram
+REM Step 4: run screeners + push Telegram
 echo. >> "%LOGFILE%"
-echo [4/4] run screeners... >> "%LOGFILE%"
+echo [4/5] run screeners... >> "%LOGFILE%"
 "%PYTHON%" -m scripts.screeners.runner >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     echo X screener runner failed >> "%LOGFILE%"
     exit /b 1
 )
 
+REM Step 5: commit + push data updates so the website also gets fresh data
 echo. >> "%LOGFILE%"
-echo Done! >> "%LOGFILE%"
+echo [5/5] commit + push data updates... >> "%LOGFILE%"
+git add frontend/public/data backend/db/twii.json backend/db/institutional.json >> "%LOGFILE%" 2>&1
+
+REM skip commit if no actual data change
+git diff --cached --quiet
+if not errorlevel 1 (
+    echo No data changes, skipping commit/push >> "%LOGFILE%"
+    echo Run finished: %date% %time% >> "%LOGFILE%"
+    exit /b 0
+)
+
+git commit -m "data: daily auto-update" >> "%LOGFILE%" 2>&1
+git push >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    echo X push failed >> "%LOGFILE%"
+    exit /b 1
+)
+
+echo. >> "%LOGFILE%"
+echo Done! CI will deploy in ~5 min >> "%LOGFILE%"
 echo Run finished: %date% %time% >> "%LOGFILE%"
 exit /b 0

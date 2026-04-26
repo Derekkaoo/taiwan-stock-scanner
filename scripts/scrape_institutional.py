@@ -205,7 +205,46 @@ def run():
     logger.info("  成功 %d 支 / 跳過 %d / %s",
                 fetched, skipped,
                 "額度用完，部分用快取" if quota_hit else "全部完成")
+
+    # 算每支股票的「連續買超天數」並寫進 stocks.json（給前端 filter 用）
+    enrich_stocks_json(by_stock)
     return 0
+
+
+def _consecutive_buy_streak(history: list[dict], key: str) -> int:
+    """從最新一筆往回，連續買超（key > 0）天數。
+    history 已依 date 升序排好，最新在 [-1]。"""
+    streak = 0
+    for rec in reversed(history):
+        if (rec.get(key) or 0) > 0:
+            streak += 1
+        else:
+            break
+    return streak
+
+
+def enrich_stocks_json(by_stock: dict[str, list[dict]]):
+    """讀 stocks.json，每支股票算外資/投信連續買超天數，寫回。"""
+    stocks_path = DATA_DIR / "stocks.json"
+    if not stocks_path.exists():
+        logger.warning("stocks.json 不存在，跳過 streak 寫入")
+        return
+    try:
+        stocks = json.loads(stocks_path.read_text(encoding="utf-8"))
+    except Exception as e:
+        logger.warning("讀 stocks.json 失敗：%s", e)
+        return
+
+    updated = 0
+    for s in stocks:
+        history = by_stock.get(s["id"]) or []
+        s["foreignBuyStreak"] = _consecutive_buy_streak(history, "foreign")
+        s["trustBuyStreak"]   = _consecutive_buy_streak(history, "trust")
+        updated += 1
+
+    with open(stocks_path, "w", encoding="utf-8") as f:
+        json.dump(stocks, f, ensure_ascii=False, indent=2)
+    logger.info("stocks.json 寫入 buy streak：%d 支", updated)
 
 
 if __name__ == "__main__":
