@@ -17,6 +17,13 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+# Windows console 預設 cp950 吃不下 emoji；強制 UTF-8 + errors=replace 避免 print 爆掉
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
 # 讓 `python scripts/screeners/runner.py` 也能跑（補 sys.path）
 ROOT = Path(__file__).parent.parent.parent
 if str(ROOT / "scripts") not in sys.path:
