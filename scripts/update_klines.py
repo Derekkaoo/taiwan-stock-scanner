@@ -226,6 +226,16 @@ def run():
                 volumes[label] = 0
         s["volumes"] = volumes
 
+        # 52 週新高百分比：current_close / max(high[-252:]) × 100
+        # 100 表示創新高、95 = 距高點 5%、< 80 表示明顯回檔
+        recent252 = bars[-252:] if len(bars) >= 252 else bars
+        highs = [b.get("h") or b.get("c") or 0 for b in recent252]
+        high52w = max(highs) if highs else 0
+        if high52w > 0:
+            s["pctOf52wHigh"] = round(last / high52w * 100, 2)
+        else:
+            s["pctOf52wHigh"] = None
+
         updated += 1
     with open(stocks_path, "w", encoding="utf-8") as f:
         json.dump(stocks, f, ensure_ascii=False, indent=2)
