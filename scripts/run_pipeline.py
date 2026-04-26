@@ -655,7 +655,8 @@ def run():
         turnovers = {}
         volumes = {}
         if bars:
-            for label, days in [("d1", 1), ("d5", 5), ("d10", 10), ("d20", 20)]:
+            # d50 ≈ 10 週均（5 days/wk × 10）
+            for label, days in [("d1", 1), ("d5", 5), ("d10", 10), ("d20", 20), ("d50", 50)]:
                 recent = bars[-days:] if len(bars) >= days else bars
                 total = sum(_bar_turnover(b) for b in recent)
                 turnovers[label] = round(total / len(recent) / 1e8, 2)
@@ -663,10 +664,10 @@ def run():
                 total_v = sum((b.get("v") or 0) for b in recent)
                 volumes[label] = round(total_v / len(recent) / 1e6, 2)
         else:
-            turnovers = {"d1": 0, "d5": 0, "d10": 0, "d20": 0}
-            volumes   = {"d1": 0, "d5": 0, "d10": 0, "d20": 0}
+            turnovers = {"d1": 0, "d5": 0, "d10": 0, "d20": 0, "d50": 0}
+            volumes   = {"d1": 0, "d5": 0, "d10": 0, "d20": 0, "d50": 0}
 
-        # 52 週新高百分比：current_close / max(high[-252:]) × 100
+        # 52 週新高百分比
         pct_of_52w_high = None
         if bars and price_now:
             recent252 = bars[-252:] if len(bars) >= 252 else bars
@@ -674,6 +675,36 @@ def run():
             high52w = max(highs) if highs else 0
             if high52w > 0:
                 pct_of_52w_high = round(price_now / high52w * 100, 2)
+
+        # 200 日新高（給選股 2 條件 03）
+        pct_of_200d_high = None
+        if bars and price_now:
+            recent200 = bars[-200:] if len(bars) >= 200 else bars
+            highs200 = [b.get("h") or b.get("c") or 0 for b in recent200]
+            high200d = max(highs200) if highs200 else 0
+            if high200d > 0:
+                pct_of_200d_high = round(price_now / high200d * 100, 2)
+
+        # 均線 MA10 / MA20 / MA60
+        def _ma_local(n):
+            if not bars or len(bars) < n: return None
+            return round(sum((b.get("c") or 0) for b in bars[-n:]) / n, 2)
+        ma10 = _ma_local(10)
+        ma20 = _ma_local(20)
+        ma60 = _ma_local(60)
+
+        # 20MA 朝上：今日 ma20 vs 5 個交易日前的 ma20
+        ma20_trend = None
+        if bars and len(bars) >= 25 and ma20 is not None:
+            ma20_5d_ago = round(sum((b.get("c") or 0) for b in bars[-25:-5]) / 20, 2)
+            ma20_trend = "up" if ma20 > ma20_5d_ago else ("down" if ma20 < ma20_5d_ago else "flat")
+
+        # 今日單日漲跌幅 %
+        daily_change_pct = None
+        if bars and len(bars) >= 2:
+            prev_c = bars[-2].get("c") or 0
+            if prev_c > 0 and price_now:
+                daily_change_pct = round((price_now - prev_c) / prev_c * 100, 2)
 
         stocks.append({
             "id":               sid,
@@ -685,9 +716,15 @@ def run():
             "delta":            float(h.get("delta", 0)),
             "price":            price_now,
             "marketCap":        market_cap,
-            "turnovers":        turnovers,            # 多期間成交值（億元）：d1/d5/d10/d20
-            "volumes":          volumes,              # 多期間成交量（千張）：d1/d5/d10/d20
-            "pctOf52wHigh":     pct_of_52w_high,      # 現價 / 52週最高 ×100（100=創新高）
+            "turnovers":        turnovers,            # 多期間成交值（億元）：d1/d5/d10/d20/d50
+            "volumes":          volumes,              # 多期間成交量（千張）：d1/d5/d10/d20/d50
+            "pctOf52wHigh":     pct_of_52w_high,      # 現價 / 52週最高 ×100
+            "pctOf200dHigh":    pct_of_200d_high,     # 現價 / 200日最高 ×100
+            "ma10":             ma10,
+            "ma20":             ma20,
+            "ma60":             ma60,
+            "ma20Trend":        ma20_trend,           # "up" / "down" / "flat"
+            "dailyChangePct":   daily_change_pct,     # 今日漲跌幅 %
             "date":             h.get("date", datetime.now().strftime("%Y-%m-%d")),
             "threeMonthReturn": returns.get("y1"),  # 主欄位：預設顯示 1 年漲幅
             "returns":          returns,

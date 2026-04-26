@@ -203,7 +203,8 @@ def run():
             tp = (h + l + c) / 3 if (h and l and c) else c
             return tp * v
         turnovers = {}
-        for label, days in [("d1", 1), ("d5", 5), ("d10", 10), ("d20", 20)]:
+        # d50 ≈ 10 週均（5 trading days/week × 10 = 50）
+        for label, days in [("d1", 1), ("d5", 5), ("d10", 10), ("d20", 20), ("d50", 50)]:
             recent = bars[-days:] if len(bars) >= days else bars
             if recent:
                 total = sum(_bar_turnover(b) for b in recent)
@@ -212,11 +213,8 @@ def run():
                 turnovers[label] = 0
         s["turnovers"] = turnovers
 
-        # 成交量（千張）：FinMind/Yahoo 的 volume 是「股」，1 張 = 1000 股 → ÷ 1000 = 千張，再 / 1000 = 千張的均
-        # 或更直接：v / 1000 / 1000 = 千張（單位 = 1000 張）
-        # 但實務上習慣顯示「張數」單位轉「千張」即 v / 1000 → 1 張 = 1000 股，v 為股 → v/1000 = 張、再 /1000 = 千張
         volumes = {}
-        for label, days in [("d1", 1), ("d5", 5), ("d10", 10), ("d20", 20)]:
+        for label, days in [("d1", 1), ("d5", 5), ("d10", 10), ("d20", 20), ("d50", 50)]:
             recent = bars[-days:] if len(bars) >= days else bars
             if recent:
                 total_shares = sum((b.get("v") or 0) for b in recent)
@@ -227,14 +225,37 @@ def run():
         s["volumes"] = volumes
 
         # 52 週新高百分比：current_close / max(high[-252:]) × 100
-        # 100 表示創新高、95 = 距高點 5%、< 80 表示明顯回檔
         recent252 = bars[-252:] if len(bars) >= 252 else bars
-        highs = [b.get("h") or b.get("c") or 0 for b in recent252]
-        high52w = max(highs) if highs else 0
-        if high52w > 0:
-            s["pctOf52wHigh"] = round(last / high52w * 100, 2)
-        else:
-            s["pctOf52wHigh"] = None
+        highs252 = [b.get("h") or b.get("c") or 0 for b in recent252]
+        high52w = max(highs252) if highs252 else 0
+        s["pctOf52wHigh"] = round(last / high52w * 100, 2) if high52w > 0 else None
+
+        # 200 日新高（給選股 2 條件 03 用）
+        recent200 = bars[-200:] if len(bars) >= 200 else bars
+        highs200 = [b.get("h") or b.get("c") or 0 for b in recent200]
+        high200d = max(highs200) if highs200 else 0
+        s["pctOf200dHigh"] = round(last / high200d * 100, 2) if high200d > 0 else None
+
+        # 均線 MA10 / MA20 / MA60（用收盤）
+        def _ma(n):
+            if len(bars) < n: return None
+            return round(sum((b.get("c") or 0) for b in bars[-n:]) / n, 2)
+        s["ma10"] = _ma(10)
+        s["ma20"] = _ma(20)
+        s["ma60"] = _ma(60)
+
+        # 20MA 朝上：今日 ma20 vs 5 個交易日前的 ma20
+        s["ma20Trend"] = None
+        if len(bars) >= 25 and s["ma20"] is not None:
+            ma20_5d_ago = round(sum((b.get("c") or 0) for b in bars[-25:-5]) / 20, 2)
+            s["ma20Trend"] = "up" if s["ma20"] > ma20_5d_ago else ("down" if s["ma20"] < ma20_5d_ago else "flat")
+
+        # 今日單日漲跌幅 % = (close - prev_close) / prev_close × 100
+        s["dailyChangePct"] = None
+        if len(bars) >= 2:
+            prev_c = bars[-2].get("c") or 0
+            if prev_c > 0:
+                s["dailyChangePct"] = round((last - prev_c) / prev_c * 100, 2)
 
         updated += 1
     with open(stocks_path, "w", encoding="utf-8") as f:

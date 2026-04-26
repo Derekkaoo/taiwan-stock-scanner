@@ -18,6 +18,7 @@ DB_DIR   = Path(__file__).parent.parent.parent / "backend" / "db"
 
 STOCKS_PATH = DATA_DIR / "stocks.json"
 TWII_PATH   = DB_DIR / "twii.json"
+INST_PATH   = DB_DIR / "institutional.json"
 
 
 # ============================================================
@@ -44,10 +45,16 @@ class Stock:
     market_cap: float                         # 億
     delta: float                              # 大戶本週增持 %
     pct_of_52w_high: Optional[float]          # 0~100；100 = 創新高
+    pct_of_200d_high: Optional[float]         # 0~100；給選股 2 條件 03
+    ma10: Optional[float]
+    ma20: Optional[float]
+    ma60: Optional[float]
+    ma20_trend: Optional[str]                 # "up" / "down" / "flat" / None
+    daily_change_pct: Optional[float]         # 今日漲跌幅 %
     revenue_yoy: Optional[float]              # 月營收 YoY %
     returns: dict                             # {w1, m1, m3, m6, y1}
-    turnovers: dict                           # {d1, d5, d10, d20} 億
-    volumes: dict                             # {d1, d5, d10, d20} 千張
+    turnovers: dict                           # {d1, d5, d10, d20, d50} 億
+    volumes: dict                             # {d1, d5, d10, d20, d50} 千張
     fundamentals: dict                        # YoY/abs series
     industry: str
     raw: dict                                 # 原始 dict（fallback 用）
@@ -61,6 +68,12 @@ class Stock:
             market_cap=float(d.get("marketCap") or 0),
             delta=float(d.get("delta") or 0),
             pct_of_52w_high=d.get("pctOf52wHigh"),
+            pct_of_200d_high=d.get("pctOf200dHigh"),
+            ma10=d.get("ma10"),
+            ma20=d.get("ma20"),
+            ma60=d.get("ma60"),
+            ma20_trend=d.get("ma20Trend"),
+            daily_change_pct=d.get("dailyChangePct"),
             revenue_yoy=d.get("revenueYoY"),
             returns=d.get("returns") or {},
             turnovers=d.get("turnovers") or {},
@@ -105,6 +118,19 @@ def load_stocks() -> list[Stock]:
         return []
     raw = json.loads(STOCKS_PATH.read_text(encoding="utf-8"))
     return [Stock.from_dict(s) for s in raw]
+
+
+def load_institutional() -> dict[str, list[dict]]:
+    """回傳 {stock_id: [{date, foreign, trust, dealer}, ...]}（最近 30 個交易日）"""
+    if not INST_PATH.exists():
+        logger.warning("institutional.json 不存在 — 三大法人條件無法判斷")
+        return {}
+    try:
+        d = json.loads(INST_PATH.read_text(encoding="utf-8"))
+        return d.get("by_stock") or {}
+    except Exception as e:
+        logger.warning("讀 institutional.json 失敗：%s", e)
+        return {}
 
 
 # ============================================================
