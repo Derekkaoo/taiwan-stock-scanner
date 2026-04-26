@@ -111,7 +111,15 @@ def _quarter_str(date_str):
 
 
 def parse_financial_yoy(records):
-    """從季財報紀錄算出 grossMarginYoY, operatingMarginYoY, epsYoY。"""
+    """從季財報紀錄算出 6 條序列：3 個 YoY + 3 個絕對值。
+    回傳 dict： {
+        "grossMarginYoY":     [...],   "grossMargin":     [...],   # %
+        "operatingMarginYoY": [...],   "operatingMargin": [...],   # %
+        "epsYoY":             [...],   "eps":             [...],   # 元
+    }
+    YoY 序列: [{"quarter":"2024Q1","yoy":3.2}]；絕對值序列: [{"quarter":"2024Q1","value":53.1}]
+    各取最近 QUARTERS_BACK 季。
+    """
     # by_q = {"2024Q1": {"Revenue": ..., "GrossProfit": ..., "OperatingIncome": ..., "EPS": ...}}
     by_q = defaultdict(dict)
     for r in records:
@@ -125,21 +133,27 @@ def parse_financial_yoy(records):
         if t in ("Revenue", "GrossProfit", "OperatingIncome", "EPS"):
             by_q[qstr][t] = v
 
-    # Build list of quarters sorted
     quarters = sorted(by_q.keys())
 
     def get_yoy_series(compute_metric):
-        """compute_metric(q_data) 回傳 該季指標值；YoY = (curr - prev_year) / abs(prev_year)"""
         series = []
         for q in quarters:
             curr = compute_metric(by_q[q])
-            # 找去年同季
             y, qn = q.split("Q")
             prev_q = f"{int(y)-1}Q{qn}"
             prev = compute_metric(by_q.get(prev_q, {}))
             if curr is not None and prev is not None and abs(prev) > 0.001:
                 yoy = round((curr - prev) / abs(prev) * 100, 2)
                 series.append({"quarter": q, "yoy": yoy})
+        return series[-QUARTERS_BACK:]
+
+    def get_abs_series(compute_metric):
+        """每季絕對值。None 直接跳過、不補。取最近 QUARTERS_BACK 季有值的"""
+        series = []
+        for q in quarters:
+            v = compute_metric(by_q[q])
+            if v is not None:
+                series.append({"quarter": q, "value": round(v, 2)})
         return series[-QUARTERS_BACK:]
 
     def gross_margin(d):
@@ -157,11 +171,14 @@ def parse_financial_yoy(records):
     def eps(d):
         return d.get("EPS")
 
-    return (
-        get_yoy_series(gross_margin),
-        get_yoy_series(op_margin),
-        get_yoy_series(eps),
-    )
+    return {
+        "grossMarginYoY":     get_yoy_series(gross_margin),
+        "operatingMarginYoY": get_yoy_series(op_margin),
+        "epsYoY":             get_yoy_series(eps),
+        "grossMargin":        get_abs_series(gross_margin),
+        "operatingMargin":    get_abs_series(op_margin),
+        "eps":                get_abs_series(eps),
+    }
 
 
 def load_existing():
@@ -221,6 +238,9 @@ def should_refresh_financials(entry, today):
     arr = entry.get("epsYoY") or []
     if not arr:
         return True
+    # 若 entry 還沒有絕對值序列（舊格式），也要重抓補上
+    if not entry.get("eps") or not entry.get("grossMargin") or not entry.get("operatingMargin"):
+        return True
     last = arr[-1].get("quarter", "")
     return last < expected_latest_quarter(today)
 
@@ -271,12 +291,23 @@ def run():
             fin_records = fetch("TaiwanStockFinancialStatements", sid, fin_start)
             time.sleep(0.3)
             if fin_records is not None:
-                gm_yoy, om_yoy, eps_yoy = parse_financial_yoy(fin_records)
-                if gm_yoy or om_yoy or eps_yoy:
-                    entry["grossMarginYoY"]     = gm_yoy
-                    entry["operatingMarginYoY"] = om_yoy
-                    entry["epsYoY"]             = eps_yoy
+                parsed = parse_financial_yoy(fin_records)
+                if any(parsed.values()):
+                    entry.update(parsed)  # 同時寫入 6 條序列
                     fetched_fin += 1
+            else:
+                # FinMind 額度上限或失敗 → 嘗試 Yahoo fallback
+                try:
+                    from scrape_yahoo_financials import fetch_yahoo_financials
+                    yahoo_data = fetch_yahoo_financials(sid)
+                    if yahoo_data and any(yahoo_data.values()):
+                        entry.update(yahoo_data)
+                        fetched_fin += 1
+                        logger.info("  ↳ Yahoo fallback 成功 %s", sid)
+                except ImportError:
+                    pass
+                except Exception as e:
+                    logger.debug("Yahoo fallback %s 失敗：%s", sid, e)
 
         # 若 entry 仍然空的（新股票 + 兩個 API 都失敗），放棄此支
         if entry:

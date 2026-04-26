@@ -33,6 +33,7 @@ function normalizeRow(raw: Record<string, unknown>): StockRow {
     marketCap,
     deltaAmount,
     turnovers:       parseTurnovers(raw.turnovers),
+    volumes:         parseVolumes(raw.volumes),
     date:            String(raw.date ?? new Date().toISOString().slice(0, 10)),
     threeMonthReturn: raw.threeMonthReturn != null ? Number(raw.threeMonthReturn) : null,
     subIndustries,
@@ -77,11 +78,20 @@ function parseFundamentals(raw: unknown): StockRow['fundamentals'] {
         .map(o => ({ quarter: String(o.quarter ?? ''), yoy: Number(o.yoy ?? 0) }))
         .filter(x => x.quarter)
     : undefined
+  const parseAbsArr = (v: unknown) => Array.isArray(v)
+    ? (v as Array<Record<string, unknown>>)
+        .filter(o => o && typeof o === 'object')
+        .map(o => ({ quarter: String(o.quarter ?? ''), value: Number(o.value ?? 0) }))
+        .filter(x => x.quarter)
+    : undefined
   return {
     revenueYoY:         parseDateArr(r.revenueYoY),
     grossMarginYoY:     parseQArr(r.grossMarginYoY),
     operatingMarginYoY: parseQArr(r.operatingMarginYoY),
     epsYoY:             parseQArr(r.epsYoY),
+    grossMargin:        parseAbsArr(r.grossMargin),
+    operatingMargin:    parseAbsArr(r.operatingMargin),
+    eps:                parseAbsArr(r.eps),
   }
 }
 
@@ -105,6 +115,19 @@ function parseTurnovers(raw: unknown): StockRow['turnovers'] {
   for (const k of periods) {
     const v = r[k]
     if (v != null) out[k] = Number(v)
+  }
+  return out
+}
+
+/** 後端 volumes 是「千張」單位，前端統一轉成「張」直覺顯示 */
+function parseVolumes(raw: unknown): StockRow['volumes'] {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return undefined
+  const r = raw as Record<string, unknown>
+  const periods: Array<'d1'|'d5'|'d10'|'d20'> = ['d1','d5','d10','d20']
+  const out: Record<string, number> = {}
+  for (const k of periods) {
+    const v = r[k]
+    if (v != null) out[k] = Math.round(Number(v) * 1000)   // 千張 → 張
   }
   return out
 }
