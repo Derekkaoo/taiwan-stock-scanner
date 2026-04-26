@@ -4,63 +4,65 @@
 
 /** 股票資料列，對應 FastAPI schemas.py */
 export interface StockRow {
-  id: string           // 股票代號
-  name: string         // 股票名稱
-  group: string        // 族群名稱
-  groupDesc: string    // 族群業務說明
-  holdingPct: number   // 大股東持股比例 %
-  delta: number        // 本週增持幅度 %
-  price: number        // 收盤價
-  marketCap: number    // 市值（億）
-  deltaAmount?: number // 本週增持金額（億）= delta% × marketCap，normalizeRow 時衍生
-  turnovers?: Partial<Record<TurnoverPeriod, number>>  // 多期間成交值（億元）
-  date: string         // 資料日期 YYYY-MM-DD
-  threeMonthReturn: number | null  // 近三個月報酬率（從 K 線計算）
+  id: string
+  name: string
+  group: string
+  groupDesc: string
+  holdingPct: number
+  delta: number
+  price: number
+  marketCap: number
+  deltaAmount?: number
+  turnovers?: Partial<Record<TurnoverPeriod, number>>   // 多期間成交值（億元）
+  volumes?: Partial<Record<TurnoverPeriod, number>>     // 多期間成交量（千張）
+  date: string
+  threeMonthReturn: number | null
   subIndustries?: string[]
-  groups?: string[]                         // 股票同時屬於多個產業別
-  subsByGroup?: Record<string, string[]>   // 每個產業別下該股票相關的細產業
-  returns?: Partial<Record<ReturnPeriod, number | null>>  // 各期間漲幅 %
-  revenueYoY?: number | null            // 月營收年增率 %
-  revenueMonth?: string | null          // 該月營收資料月份 YYYY-MM
-  revenueFirstSeen?: string | null      // 首次抓到此月份營收資料的日期 YYYY-MM-DD
-  fundamentals?: Fundamentals           // FinMind 12 月營收 + 8 季財報 YoY 序列
-  companyProfile?: CompanyProfile       // Yahoo 公司基本資料 + 業務介紹
+  groups?: string[]
+  subsByGroup?: Record<string, string[]>
+  returns?: Partial<Record<ReturnPeriod, number | null>>
+  revenueYoY?: number | null
+  revenueMonth?: string | null
+  revenueFirstSeen?: string | null
+  fundamentals?: Fundamentals
+  companyProfile?: CompanyProfile
 }
 
-/** 公司基本資料 + 業務介紹（來源：Yahoo 股市 profile）*/
 export interface CompanyProfile {
-  business?: string         // 主要經營業務（一段文字）
-  chairman?: string         // 董事長
-  ceo?: string              // 總經理
-  spokesman?: string        // 發言人
-  deputySpokesman?: string  // 代理發言人
-  foundedDate?: string      // 成立時間
-  listedDate?: string       // 上市/上櫃時間
-  address?: string          // 公司地址
-  phone?: string            // 電話
-  fax?: string              // 傳真
-  email?: string            // 電子郵件
-  website?: string          // 公司網址
-  capital?: string          // 實收資本額
-  sharesOutstanding?: string  // 已發行普通股數
-  employees?: string        // 員工人數
-  group?: string            // 所屬集團
-  auditor?: string          // 簽證會計師
-  englishName?: string      // 英文簡稱
+  business?: string
+  chairman?: string
+  ceo?: string
+  spokesman?: string
+  deputySpokesman?: string
+  foundedDate?: string
+  listedDate?: string
+  address?: string
+  phone?: string
+  fax?: string
+  email?: string
+  website?: string
+  capital?: string
+  sharesOutstanding?: string
+  employees?: string
+  group?: string
+  auditor?: string
+  englishName?: string
 }
 
-/** FinMind 抓下來的基本面資料 */
+/** FinMind / Yahoo 財報資料 — 同時有 YoY 與絕對值序列 */
 export interface Fundamentals {
-  revenueYoY?: Array<{ date: string; yoy: number }>          // 12 個月
-  grossMarginYoY?: Array<{ quarter: string; yoy: number }>   // 8 季
+  revenueYoY?: Array<{ date: string; yoy: number }>
+  grossMarginYoY?: Array<{ quarter: string; yoy: number }>
   operatingMarginYoY?: Array<{ quarter: string; yoy: number }>
   epsYoY?: Array<{ quarter: string; yoy: number }>
+  // 絕對值序列（後端新增）— 每季的實際數字
+  grossMargin?:     Array<{ quarter: string; value: number }>   // %
+  operatingMargin?: Array<{ quarter: string; value: number }>   // %
+  eps?:             Array<{ quarter: string; value: number }>   // 元
 }
 
-/** 漲幅期間 key */
 export type ReturnPeriod = 'w1' | 'm1' | 'm3' | 'm6' | 'y1'
 
-/** UI 顯示用的期間標籤 */
 export const RETURN_PERIOD_LABELS: Record<ReturnPeriod, string> = {
   w1: '1週',
   m1: '1月',
@@ -69,10 +71,8 @@ export const RETURN_PERIOD_LABELS: Record<ReturnPeriod, string> = {
   y1: '1年',
 }
 
-/** 成交值期間 key */
 export type TurnoverPeriod = 'd1' | 'd5' | 'd10' | 'd20'
 
-/** UI 顯示用的成交值期間標籤 */
 export const TURNOVER_PERIOD_LABELS: Record<TurnoverPeriod, string> = {
   d1:  '1日',
   d5:  '5日均',
@@ -80,17 +80,15 @@ export const TURNOVER_PERIOD_LABELS: Record<TurnoverPeriod, string> = {
   d20: '月均',
 }
 
-/** K 線資料列 */
 export interface KlineBar {
-  date: string   // 日期字串
-  o: number      // 開
-  h: number      // 高
-  l: number      // 低
-  c: number      // 收
-  v: number      // 量
+  date: string
+  o: number
+  h: number
+  l: number
+  c: number
+  v: number
 }
 
-/** 族群統計 */
 export interface GroupStat {
   name: string
   stocks: StockRow[]
@@ -99,16 +97,13 @@ export interface GroupStat {
   cssClass: string
 }
 
-/** 排序狀態 */
 export interface SortState {
   key: keyof StockRow
   dir: 'asc' | 'desc'
 }
 
-/** 資料載入模式 */
 export type DataMode = 'mock' | 'api' | 'static-json'
 
-/** App 全域狀態 */
 export interface AppState {
   mode: DataMode
   stocks: StockRow[]
@@ -124,16 +119,108 @@ export interface AppState {
   lastUpdated: string | null
 }
 
-/** 散點圖資料點 */
 export interface ScatterPoint {
   stock: StockRow
-  x: number   // X 軸：增持幅度 delta
-  y: number   // Y 軸：三個月報酬
+  x: number
+  y: number
 }
 
-/** Toast 通知 */
 export interface Toast {
   id: string
   message: string
   type: 'info' | 'success' | 'error' | 'warn'
 }
+
+// ============================================================
+//  個股列表 toolbar 篩選器
+// ============================================================
+
+export type FilterRange = [number, number]
+
+export type GrowthQuarters = 0 | 1 | 2 | 4 | 8
+
+export interface GrowthFilter {
+  quarters: GrowthQuarters
+  metrics: {
+    eps: boolean
+    grossMargin: boolean
+    operatingMargin: boolean
+  }
+}
+
+/** 絕對值區塊：共用一個季別 picker，3 個 metric 各自的範圍。
+ *  quarter = '' 視為未啟用（不篩、disable 3 個 slider）。
+ *  quarter 字串例：'2024Q3'。 */
+export interface AbsValueFilter {
+  quarter: string
+  grossMargin:     FilterRange
+  operatingMargin: FilterRange
+  eps:             FilterRange
+}
+
+export interface Filters {
+  volume:     FilterRange      // 5 日均成交量（千張）
+  marketCap:  FilterRange      // 市值（億）
+  delta:      FilterRange      // 大戶本週增持 %
+  revenueYoY: FilterRange      // 月營收 YoY %
+  industries: string[]
+  growth:     GrowthFilter
+  absValue:   AbsValueFilter
+}
+
+export const FILTER_BOUNDS = {
+  volume:     { min: 0,    max: 500000 },    // 張（normalizeRow 已 ×1000）
+  marketCap:  { min: 0,    max: 5000 },
+  delta:      { min: 0.1,  max: 5    },
+  revenueYoY: { min: -50,  max: 200  },
+  // 絕對值範圍（依實測分布調整）
+  grossMargin:     { min: -50,  max: 100 },  // % — P5 -0.4、P95 61、max 97
+  operatingMargin: { min: -100, max: 100 },  // % — P5 -35、P95 27、有極端虧損
+  eps:             { min: -10,  max: 100 },  // 元 — P95 8.5、max 74
+} as const
+
+export const DEFAULT_FILTERS: Filters = {
+  volume:     [FILTER_BOUNDS.volume.min,     FILTER_BOUNDS.volume.max],
+  marketCap:  [FILTER_BOUNDS.marketCap.min,  FILTER_BOUNDS.marketCap.max],
+  delta:      [FILTER_BOUNDS.delta.min,      FILTER_BOUNDS.delta.max],
+  revenueYoY: [FILTER_BOUNDS.revenueYoY.min, FILTER_BOUNDS.revenueYoY.max],
+  industries: [],
+  growth: {
+    quarters: 0,
+    metrics: { eps: false, grossMargin: false, operatingMargin: false },
+  },
+  absValue: {
+    quarter: '',
+    grossMargin:     [FILTER_BOUNDS.grossMargin.min,     FILTER_BOUNDS.grossMargin.max],
+    operatingMargin: [FILTER_BOUNDS.operatingMargin.min, FILTER_BOUNDS.operatingMargin.max],
+    eps:             [FILTER_BOUNDS.eps.min,             FILTER_BOUNDS.eps.max],
+  },
+}
+
+export const FILTER_LABELS = {
+  volume:     '今日成交量',
+  marketCap:  '市值',
+  delta:      '大戶本週增持',
+  revenueYoY: '月營收YoY',
+  grossMargin:     '毛利率',
+  operatingMargin: '營利率',
+  eps:             'EPS',
+} as const
+
+export const FILTER_UNITS = {
+  volume:     '張',
+  marketCap:  '億',
+  delta:      '%',
+  revenueYoY: '%',
+  grossMargin:     '%',
+  operatingMargin: '%',
+  eps:             '元',
+} as const
+
+export const GROWTH_QUARTERS_OPTIONS: GrowthQuarters[] = [0, 1, 2, 4, 8]
+
+export const GROWTH_METRIC_LABELS = {
+  eps:             'EPS',
+  grossMargin:     '毛利率',
+  operatingMargin: '營利率',
+} as const

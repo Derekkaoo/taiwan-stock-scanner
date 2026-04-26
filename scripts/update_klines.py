@@ -212,6 +212,20 @@ def run():
                 turnovers[label] = 0
         s["turnovers"] = turnovers
 
+        # 成交量（千張）：FinMind/Yahoo 的 volume 是「股」，1 張 = 1000 股 → ÷ 1000 = 千張，再 / 1000 = 千張的均
+        # 或更直接：v / 1000 / 1000 = 千張（單位 = 1000 張）
+        # 但實務上習慣顯示「張數」單位轉「千張」即 v / 1000 → 1 張 = 1000 股，v 為股 → v/1000 = 張、再 /1000 = 千張
+        volumes = {}
+        for label, days in [("d1", 1), ("d5", 5), ("d10", 10), ("d20", 20)]:
+            recent = bars[-days:] if len(bars) >= days else bars
+            if recent:
+                total_shares = sum((b.get("v") or 0) for b in recent)
+                avg_lots_k = total_shares / len(recent) / 1000 / 1000  # 股 → 張 → 千張
+                volumes[label] = round(avg_lots_k, 2)
+            else:
+                volumes[label] = 0
+        s["volumes"] = volumes
+
         updated += 1
     with open(stocks_path, "w", encoding="utf-8") as f:
         json.dump(stocks, f, ensure_ascii=False, indent=2)

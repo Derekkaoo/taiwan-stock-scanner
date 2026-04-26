@@ -653,13 +653,18 @@ def run():
             tp = (h + l + c) / 3 if (h and l and c) else c
             return tp * v
         turnovers = {}
+        volumes = {}
         if bars:
             for label, days in [("d1", 1), ("d5", 5), ("d10", 10), ("d20", 20)]:
                 recent = bars[-days:] if len(bars) >= days else bars
                 total = sum(_bar_turnover(b) for b in recent)
                 turnovers[label] = round(total / len(recent) / 1e8, 2)
+                # 成交量（千張）：v 是股，÷ 1e6 = 千張
+                total_v = sum((b.get("v") or 0) for b in recent)
+                volumes[label] = round(total_v / len(recent) / 1e6, 2)
         else:
             turnovers = {"d1": 0, "d5": 0, "d10": 0, "d20": 0}
+            volumes   = {"d1": 0, "d5": 0, "d10": 0, "d20": 0}
 
         stocks.append({
             "id":               sid,
@@ -672,6 +677,7 @@ def run():
             "price":            price_now,
             "marketCap":        market_cap,
             "turnovers":        turnovers,            # 多期間成交值（億元）：d1/d5/d10/d20
+            "volumes":          volumes,              # 多期間成交量（千張）：d1/d5/d10/d20
             "date":             h.get("date", datetime.now().strftime("%Y-%m-%d")),
             "threeMonthReturn": returns.get("y1"),  # 主欄位：預設顯示 1 年漲幅
             "returns":          returns,

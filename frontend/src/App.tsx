@@ -1,11 +1,13 @@
-import { useState, useCallback, useEffect, useRef } from 'react'
-import type { Toast, ReturnPeriod, TurnoverPeriod } from './types'
-import { RETURN_PERIOD_LABELS, TURNOVER_PERIOD_LABELS } from './types'
+import { useState, useCallback, useEffect, useRef, useMemo } from 'react'
+import type { Toast, ReturnPeriod, TurnoverPeriod, Filters } from './types'
+import { RETURN_PERIOD_LABELS, TURNOVER_PERIOD_LABELS, DEFAULT_FILTERS } from './types'
 import { useStocks } from './hooks/useStocks'
 import { useKline, calcThreeMonthReturn } from './hooks/useKline'
 import { StockTable } from './components/StockTable'
 import { GroupCard } from './components/GroupCard'
 import { Footer } from './components/Footer'
+import { FiltersBar } from './components/FiltersBar'
+import { applyFilters } from './utils/filters'
 
 type View = 'group' | 'table'
 type GroupSort = 'delta' | 'return'
@@ -102,7 +104,14 @@ export default function App() {
   const [view,      setView]      = useState<View>('group')
   const [groupSort, setGroupSort] = useState<GroupSort>('delta')
   const [toasts,    setToasts]    = useState<Toast[]>([])
+  const [filters,   setFilters]   = useState<Filters>(DEFAULT_FILTERS)
   const searchTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
+
+  // 套用 slider/chip 篩選器（只影響個股列表 view，族群總覽不受影響）
+  const filteredByFilters = useMemo(
+    () => applyFilters(filteredStocks, filters),
+    [filteredStocks, filters]
+  )
 
   const toast = useCallback((message: string, type: Toast['type'] = 'info') => {
     const id = Math.random().toString(36).slice(2)
@@ -345,6 +354,15 @@ export default function App() {
         />
       </div>
 
+      {/* 個股列表才顯示篩選器（族群總覽不需要）*/}
+      {view === 'table' && filteredStocks.length > 0 && (
+        <FiltersBar
+          stocks={filteredStocks}
+          filters={filters}
+          onChange={setFilters}
+        />
+      )}
+
       <div
         className="flex items-center gap-4 px-5 py-1.5 border-b text-[11px]"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
@@ -357,7 +375,10 @@ export default function App() {
           animation: loading ? 'pulse 1.2s infinite' : 'none',
         }} />
         <span style={{ color: 'var(--color-text-secondary)' }}>
-          {error ? `錯誤：${error}` : loading ? '載入中…' : `共 ${stockCount} 筆 / ${groupCount} 族群`}
+          {error ? `錯誤：${error}` : loading ? '載入中…' :
+            view === 'table' && filteredByFilters.length !== stockCount
+              ? `篩出 ${filteredByFilters.length} / ${stockCount} 筆`
+              : `共 ${stockCount} 筆 / ${groupCount} 族群`}
         </span>
         {!loading && !error && stockCount > 0 && (
           <>
@@ -422,7 +443,7 @@ export default function App() {
 
         {view === 'table' && stockCount > 0 && (
           <StockTable
-            stocks={filteredStocks}
+            stocks={filteredByFilters}
             sort={sort}
             onSort={key => updateSort(key)}
             returnPeriod={returnPeriod}
