@@ -40,8 +40,13 @@ jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      # ref: master 強制拿最新 master HEAD（不用 schedule 排程時 cache 住的舊 SHA）
+      # 解決 cron 被 GitHub 延遲 + 期間有新 push 導致 checkout 舊版的 race
       - name: 取得程式碼
         uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0    # 抓完整歷史，rebase 才不會出怪事
 
       - name: 設定 Python
         uses: actions/setup-python@v5
@@ -104,7 +109,8 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
       # commit 任何資料變動（給後面 deploy 用）
-      # 加 retry：避免跟其他 workflow / 本地 push race condition 時 silent fail
+      # 加 retry + 衝突自動解：避免跟其他 workflow / 本地 push race 時 silent fail
+      # -X theirs：rebase 衝突時 keep 我們的新資料（cron 抓的永遠最新，不會錯）
       - name: Commit data updates
         run: |
           git config user.name "github-actions[bot]"
@@ -115,14 +121,20 @@ jobs:
             exit 0
           fi
           git commit -m "data: cloud auto-update"
-          # retry 最多 5 次，每次失敗 pull --rebase 再 push
+          # retry 最多 5 次，每次失敗：abort 任何進行中 rebase → 用 -X theirs 重 rebase → push
           for i in 1 2 3 4 5; do
             if git push; then
               echo "Push succeeded on attempt $i"
               exit 0
             fi
-            echo "Push attempt $i failed, rebasing and retrying..."
-            git pull --rebase --autostash || true
+            echo "Push attempt $i failed, syncing with origin..."
+            # 清掉前一次失敗 retry 留下的 partial rebase 狀態
+            git rebase --abort 2>/dev/null || true
+            # 拉最新並用 theirs 策略解衝突（資料檔以我們新抓的為準）
+            if ! git pull --rebase --strategy-option=theirs --autostash; then
+              echo "Rebase 仍有衝突，abort 後 retry"
+              git rebase --abort 2>/dev/null || true
+            fi
             sleep $((i * 3))
           done
           echo "ERROR: Failed to push after 5 attempts"
