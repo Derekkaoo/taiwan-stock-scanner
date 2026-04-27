@@ -152,14 +152,27 @@ def run():
     stock_ids = load_stock_ids()
     if not stock_ids:
         return 1
+
+    db = load_existing()
+    by_stock = db.get("by_stock") or {}
+
+    # smart-skip：若今天已抓過（不論是 cloud 或 local 跑的），直接用 cache 重算
+    # streak 寫回 stocks.json，省 372 次 FinMind API 呼叫，也避免撞 402 額度
+    # 用 --force 旗標可繞過（週六完整 pipeline 強制重抓時用）
+    if "--force" not in sys.argv:
+        today = time.strftime("%Y-%m-%d")
+        last_updated = (db.get("updated") or "")[:10]
+        if last_updated == today and by_stock:
+            logger.info("institutional 今天已抓過（updated=%s）→ 跳過 FinMind，"
+                        "直接用 cache 重算 buy streak", db.get("updated"))
+            enrich_stocks_json(by_stock)
+            return 0
+
     logger.info("共 %d 支股票要抓三大法人", len(stock_ids))
 
     # 起始日：今天往前 LOOKBACK_DAYS 天
     from datetime import datetime, timedelta
     start_date = (datetime.now() - timedelta(days=LOOKBACK_DAYS)).strftime("%Y-%m-%d")
-
-    db = load_existing()
-    by_stock = db.get("by_stock") or {}
 
     fetched = 0
     skipped = 0
