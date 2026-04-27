@@ -29,6 +29,7 @@ JSON 結構：
 import json
 import logging
 import os
+import re
 import sys
 import time
 from collections import defaultdict
@@ -125,6 +126,114 @@ def normalize_records(records: list[dict]) -> dict[str, dict]:
         # 同類別累加（外資自營商 + 一般外資 都計入 foreign）
         by_date[date][cat] += round(net)
     return dict(by_date)
+
+
+# ============================================================
+#  Yahoo TW finance fallback（FinMind 撞 402 後的備援）
+#  資料源：tw.stock.yahoo.com/quote/{id}.{TW|TWO}/institutional-trading
+#  特點：每次回傳 100 天歷史（比 FinMind 30 天多）；無 quota 但需控制頻率
+# ============================================================
+
+YAHOO_INST_URL = "https://tw.stock.yahoo.com/quote/{stock_id}.{suffix}/institutional-trading"
+# 動態快取 stock_id → suffix（'TW' 或 'TWO'），避免每次都試錯
+_yahoo_suffix_cache: dict = {}
+
+
+def _fetch_yahoo_one(stock_id: str, suffix: str) -> list | None:
+    """單次嘗試指定 suffix 的 Yahoo 頁面，回傳 trades list 或 None。"""
+    url = YAHOO_INST_URL.format(stock_id=stock_id, suffix=suffix)
+    try:
+        r = requests.get(url, timeout=30, headers={"User-Agent": USER_AGENT})
+        if r.status_code != 200:
+            return None
+        html = r.text
+    except Exception as e:
+        logger.debug("Yahoo [%s.%s] HTTP 例外: %s", stock_id, suffix, e)
+        return None
+
+    # 找 institutionBuySell-100-day-{stock_id}.{suffix} 的 trades array
+    # JSON: "key":{"data":{"trades":[...],"refreshedTs":"..."},...}
+    key = f"institutionBuySell-100-day-{stock_id}.{suffix}"
+    pattern = re.compile(
+        r'"' + re.escape(key) + r'":\{"data":\{"trades":(\[.*?\]),"refreshedTs"',
+        re.DOTALL
+    )
+    m = pattern.search(html)
+    if not m:
+        return None
+    try:
+        return json.loads(m.group(1))
+    except Exception as e:
+        logger.debug("Yahoo [%s.%s] JSON parse 失敗: %s", stock_id, suffix, e)
+        return None
+
+
+def fetch_yahoo_institutional(stock_id: str) -> list[dict] | None:
+    """從 Yahoo TW 抓單支股票 100 天三大法人歷史。
+    自動偵測 .TW (上市) / .TWO (上櫃) suffix，cache 後續使用。
+    回傳 list of {date, foreign, trust, dealer}（單位：張），最舊→最新排序。
+    None = 兩個 suffix 都 fail。"""
+    cached = _yahoo_suffix_cache.get(stock_id)
+    suffixes_to_try = []
+    if cached:
+        suffixes_to_try.append(cached)
+    for s in ("TW", "TWO"):
+        if s != cached:
+            suffixes_to_try.append(s)
+
+    trades = None
+    used_suffix = None
+    for suffix in suffixes_to_try:
+        trades = _fetch_yahoo_one(stock_id, suffix)
+        if trades:
+            used_suffix = suffix
+            break
+
+    if not trades:
+        return None
+
+    _yahoo_suffix_cache[stock_id] = used_suffix
+
+    result = []
+    for t in trades:
+        date = (t.get("date") or "")[:10]
+        if not date:
+            continue
+        try:
+            foreign = int(t.get("foreignDiffVolK") or 0)
+            trust   = int(t.get("investmentTrustDiffVolK") or 0)
+            dealer  = int(t.get("dealerDiffVolK") or 0)
+        except (ValueError, TypeError):
+            continue
+        result.append({
+            "date":    date,
+            "foreign": foreign,
+            "trust":   trust,
+            "dealer":  dealer,
+        })
+    # Yahoo 已是時間序，但保險起見再 sort 一次
+    result.sort(key=lambda x: x["date"])
+    return result
+
+
+def _merge_yahoo_records(by_stock: dict, sid: str, yahoo_records: list[dict]):
+    """把 Yahoo 抓到的 trades merge 進 by_stock 歷史。"""
+    existing_history = by_stock.get(sid) or []
+    existing_dates = {h["date"] for h in existing_history}
+    for rec in yahoo_records:
+        date = rec["date"]
+        vals = {k: rec[k] for k in ("foreign", "trust", "dealer")}
+        if date in existing_dates:
+            for h in existing_history:
+                if h["date"] == date:
+                    h.update(vals)
+                    break
+        else:
+            existing_history.append({"date": date, **vals})
+            existing_dates.add(date)
+    existing_history.sort(key=lambda x: x.get("date", ""))
+    existing_history = existing_history[-KEEP_DAYS:]
+    by_stock[sid] = existing_history
 
 
 def load_stock_ids() -> list[str]:
@@ -224,36 +333,55 @@ def run():
 
     fetched = 0
     skipped = 0
-    quota_hit = False
+    quota_hit = False           # FinMind 是否已撞 402
+    yahoo_fetched = 0           # 用 Yahoo 補抓的支數（log 用）
     for i, sid in enumerate(stock_ids, 1):
-        records = fetch_finmind(sid, start_date)
-        if records is None:
-            quota_hit = True   # FinMind 額度可能用完，後面就用 cache
-            break
-        if not records:
-            skipped += 1
-        else:
-            new_data = normalize_records(records)
-            # merge（同日覆蓋，保留歷史 KEEP_DAYS 天）
-            existing_history = by_stock.get(sid) or []
-            existing_dates = {h["date"] for h in existing_history}
-            for date, vals in new_data.items():
-                if date in existing_dates:
-                    # 覆蓋
-                    for h in existing_history:
-                        if h["date"] == date:
-                            h.update(vals)
-                            break
-                else:
-                    existing_history.append({"date": date, **vals})
-            existing_history.sort(key=lambda x: x.get("date", ""))
-            existing_history = existing_history[-KEEP_DAYS:]
-            by_stock[sid] = existing_history
-            fetched += 1
+        # ─── PRIMARY: FinMind ───
+        if not quota_hit:
+            records = fetch_finmind(sid, start_date)
+            if records is None:
+                quota_hit = True
+                logger.warning("FinMind 402 額度用完（at %d/%d, %s）→ 切到 Yahoo fallback",
+                               i, len(stock_ids), sid)
+                # 不 break，這支也試 Yahoo
+            elif not records:
+                skipped += 1
+                time.sleep(0.5)
+                continue
+            else:
+                new_data = normalize_records(records)
+                existing_history = by_stock.get(sid) or []
+                existing_dates = {h["date"] for h in existing_history}
+                for date, vals in new_data.items():
+                    if date in existing_dates:
+                        for h in existing_history:
+                            if h["date"] == date:
+                                h.update(vals)
+                                break
+                    else:
+                        existing_history.append({"date": date, **vals})
+                existing_history.sort(key=lambda x: x.get("date", ""))
+                existing_history = existing_history[-KEEP_DAYS:]
+                by_stock[sid] = existing_history
+                fetched += 1
+                time.sleep(0.5)   # 從 0.15 調高，避免 FinMind soft throttle
+                if i % 30 == 0:
+                    logger.info("進度 %d/%d（FinMind 成功 %d / 跳過 %d）",
+                                i, len(stock_ids), fetched, skipped)
+                continue
 
-        time.sleep(0.15)  # 節流，避免被 ban
+        # ─── FALLBACK: Yahoo ───（FinMind 402 後執行）
+        yahoo_records = fetch_yahoo_institutional(sid)
+        if yahoo_records:
+            _merge_yahoo_records(by_stock, sid, yahoo_records)
+            fetched += 1
+            yahoo_fetched += 1
+        else:
+            skipped += 1
+        time.sleep(0.5)
         if i % 30 == 0:
-            logger.info("進度 %d/%d（成功 %d / 跳過 %d）", i, len(stock_ids), fetched, skipped)
+            logger.info("進度 %d/%d（Yahoo 補了 %d 支 / 累計成功 %d / 跳過 %d）",
+                        i, len(stock_ids), yahoo_fetched, fetched, skipped)
 
     # 統一用 TW 時區寫 timestamp（不管在 Windows local 還是 Linux runner 都一致）
     from datetime import datetime as _dt2, timedelta as _td2
