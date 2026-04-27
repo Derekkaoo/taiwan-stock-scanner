@@ -99,13 +99,29 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
       # commit 任何資料變動（給後面 deploy 用）
+      # 加 retry：避免跟其他 workflow / 本地 push race condition 時 silent fail
       - name: Commit data updates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add frontend/public/data backend/db/twii.json backend/db/institutional.json backend/db/financials.json backend/db/last_telegram_push.json || true
-          git diff --cached --quiet || git commit -m "data: cloud auto-update"
-          git push || true
+          if git diff --cached --quiet; then
+            echo "No data changes to commit"
+            exit 0
+          fi
+          git commit -m "data: cloud auto-update"
+          # retry 最多 5 次，每次失敗 pull --rebase 再 push
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "Push succeeded on attempt $i"
+              exit 0
+            fi
+            echo "Push attempt $i failed, rebasing and retrying..."
+            git pull --rebase --autostash || true
+            sleep $((i * 3))
+          done
+          echo "ERROR: Failed to push after 5 attempts"
+          exit 1
 
       - name: 設定 Node.js
         uses: actions/setup-node@v4
