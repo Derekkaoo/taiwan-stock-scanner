@@ -31,6 +31,11 @@ concurrency:
   group: weekly-update-${{ github.ref }}
   cancel-in-progress: false
 
+# 明確聲明 GITHUB_TOKEN 需要寫入權限（不靠 repo 預設值，避免設定 UI 出包）
+# contents: write 才能 git push（bot 拉資料變動回 master）
+permissions:
+  contents: write
+
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
