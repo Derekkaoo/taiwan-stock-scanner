@@ -1,10 +1,10 @@
 @echo off
 REM ============================================================
-REM  Daily Screener (Local backup)
+REM  Daily Screener (Local FULL pipeline backup)
 REM  - runs every weekday at 15:00 and 19:00 (Windows Task Scheduler)
-REM  - flow: update_klines -> scrape_twii -> commit + push (deploy)
-REM  - smart-skip: if cloud (GitHub Actions) already updated, this exits early
-REM  - institutional / screener / Telegram are handled by cloud cron
+REM  - flow: pull -> klines -> twii -> institutional -> screener -> commit/push
+REM  - Telegram dedup is built-in (won't double-push with cloud)
+REM  - smart-skip everywhere; safe to re-run
 REM ============================================================
 
 cd /d "%~dp0"
@@ -17,12 +17,12 @@ echo ======================================== >> "%LOGFILE%"
 echo Run started: %date% %time% >> "%LOGFILE%"
 echo ======================================== >> "%LOGFILE%"
 
-REM Pull latest first so we don't fight the cloud cron's commit
+REM Pull latest first so we don't fight cloud cron commits
 git pull --rebase >> "%LOGFILE%" 2>&1
 
-REM Step 1: incremental K-line update (returns/turnovers/volumes/MA/etc.)
+REM Step 1: incremental K-line update
 echo. >> "%LOGFILE%"
-echo [1/3] update_klines... >> "%LOGFILE%"
+echo [1/5] update_klines... >> "%LOGFILE%"
 "%PYTHON%" scripts/update_klines.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     echo X update_klines failed >> "%LOGFILE%"
@@ -32,16 +32,32 @@ if errorlevel 1 (
 
 REM Step 2: TWII index
 echo. >> "%LOGFILE%"
-echo [2/3] scrape_twii... >> "%LOGFILE%"
+echo [2/5] scrape_twii... >> "%LOGFILE%"
 "%PYTHON%" scripts/scrape_twii.py >> "%LOGFILE%" 2>&1
 if errorlevel 1 (
     echo X scrape_twii failed (continuing) >> "%LOGFILE%"
 )
 
-REM Step 3: commit + push if data changed
+REM Step 3: institutional buy/sell + buy streak
 echo. >> "%LOGFILE%"
-echo [3/3] commit + push data updates... >> "%LOGFILE%"
-git add frontend/public/data backend/db/twii.json >> "%LOGFILE%" 2>&1
+echo [3/5] scrape_institutional... >> "%LOGFILE%"
+"%PYTHON%" scripts/scrape_institutional.py >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    echo X scrape_institutional failed (continuing) >> "%LOGFILE%"
+)
+
+REM Step 4: run screeners + push Telegram (dedup against cloud via hash)
+echo. >> "%LOGFILE%"
+echo [4/5] screeners + telegram... >> "%LOGFILE%"
+"%PYTHON%" -m scripts.screeners.runner >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    echo X screener runner failed (continuing) >> "%LOGFILE%"
+)
+
+REM Step 5: commit + push if data changed (triggers cloud deploy via push trigger)
+echo. >> "%LOGFILE%"
+echo [5/5] commit + push data updates... >> "%LOGFILE%"
+git add frontend/public/data backend/db/twii.json backend/db/institutional.json backend/db/last_telegram_push.json >> "%LOGFILE%" 2>&1
 
 git diff --cached --quiet
 if not errorlevel 1 (
