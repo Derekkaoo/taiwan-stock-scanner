@@ -1879,10 +1879,6 @@
       ],
       "epsYoY": [
         {
-          "quarter": "2023Q4",
-          "yoy": 266.67
-        },
-        {
           "quarter": "2024Q1",
           "yoy": 300.0
         },
@@ -2010,7 +2006,7 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.08
+          "value": 0.07
         }
       ]
     },
@@ -62179,11 +62175,19 @@
       "epsYoY": [],
       "grossMargin": [
         {
+          "quarter": "2025Q3",
+          "value": 13.96
+        },
+        {
           "quarter": "2025Q4",
           "value": 19.34
         }
       ],
       "operatingMargin": [
+        {
+          "quarter": "2025Q3",
+          "value": -0.19
+        },
         {
           "quarter": "2025Q4",
           "value": 7.12
@@ -62196,7 +62200,7 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.36
+          "value": 0.37
         }
       ]
     },
