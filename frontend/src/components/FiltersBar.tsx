@@ -4,11 +4,11 @@
 //  手機（<md）：折疊成「篩選器 (N)」按鈕，點開 modal
 // ============================================================
 import { useEffect, useMemo, useState } from 'react'
-import type { Filters, GrowthQuarters, InstStreakDays, StockRow } from '../types'
+import type { Filters, GrowthQuarters, InstStreakDays, MarketFilter, StockRow } from '../types'
 import {
   DEFAULT_FILTERS, FILTER_BOUNDS, FILTER_LABELS, FILTER_UNITS,
   GROWTH_QUARTERS_OPTIONS, GROWTH_METRIC_LABELS,
-  INST_STREAK_OPTIONS,
+  INST_STREAK_OPTIONS, MARKET_OPTIONS,
 } from '../types'
 import { RangeSlider } from './RangeSlider'
 import { IndustryChips } from './IndustryChips'
@@ -46,6 +46,7 @@ function activeCount(f: Filters): number {
       ranged(f.absValue.operatingMargin, DEFAULT_FILTERS.absValue.operatingMargin) ||
       ranged(f.absValue.eps,             DEFAULT_FILTERS.absValue.eps))) n++
   if (f.institutional.days !== 0 && (f.institutional.foreign || f.institutional.trust)) n++
+  if (f.market !== 'all') n++
   return n
 }
 
@@ -79,6 +80,8 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     set({ institutional: { ...filters.institutional, days: d } })
   const toggleInstWho = (k: 'foreign' | 'trust') =>
     set({ institutional: { ...filters.institutional, [k]: !filters.institutional[k] } })
+
+  const setMarket = (m: MarketFilter) => set({ market: m })
 
   const sliders = (
     <>
@@ -220,6 +223,35 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     </div>
   )
 
+  // 市場別 chip row（全部 / 上市 / 上櫃 三選一）
+  const marketBlock = (
+    <div className="flex items-center flex-wrap gap-2">
+      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>市場</span>
+      <div className="flex items-center gap-1">
+        {MARKET_OPTIONS.map(opt => {
+          const active = filters.market === opt.value
+          return (
+            <button
+              key={opt.value}
+              onClick={() => setMarket(opt.value)}
+              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              style={{
+                background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                color:       active ? '#fff' : 'var(--color-text-secondary)',
+                fontWeight:  active ? 600 : 400,
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {opt.label}
+            </button>
+          )
+        })}
+      </div>
+    </div>
+  )
+
   const absEnabled = !!filters.absValue.quarter
 
   const absValueBlock = (
@@ -323,6 +355,12 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
       <div className="hidden md:block px-5 py-2 border-b"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
       >
+        {marketBlock}
+      </div>
+
+      <div className="hidden md:block px-5 py-2 border-b"
+        style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
+      >
         {absValueBlock}
       </div>
 
@@ -419,6 +457,9 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
               </div>
               <div className="border-t pt-3" style={{ borderColor: 'var(--color-border)' }}>
                 {institutionalBlock}
+              </div>
+              <div className="border-t pt-3" style={{ borderColor: 'var(--color-border)' }}>
+                {marketBlock}
               </div>
               <div className="border-t pt-3" style={{ borderColor: 'var(--color-border)' }}>
                 {absValueBlock}

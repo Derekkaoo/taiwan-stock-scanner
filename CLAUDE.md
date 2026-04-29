@@ -72,7 +72,24 @@ taiwan-stock-scanner/
 
 ## 排程架構
 
-### 雲端（GitHub Actions）
+### 主力：cron-job.org → workflow_dispatch（最可靠）
+
+外部 cron 服務打 GitHub API 觸發 workflow，不依賴 GitHub schedule（後者實測連兩天 0% 成功率）。
+
+```
+平日 (Mon-Fri):
+  15:05, 15:35, 16:35, 17:35, 18:35 TW
+```
+
+設定值：
+- URL: `POST https://api.github.com/repos/Derekkaoo/taiwan-stock-scanner/actions/workflows/weekly-update.yml/dispatches`
+- Headers: `Authorization: Bearer <PAT>`, `Accept: application/vnd.github+json`
+- Body: `{"ref":"master"}`
+- PAT scope: `workflow`（含 repo），無到期日
+
+### 第二層：GitHub Actions schedule（保險，有時會掛）
+
+`.github/workflows/weekly-update.yml` 內定的 cron：
 
 ```yaml
 平日 (Mon-Fri):
@@ -89,7 +106,9 @@ taiwan-stock-scanner/
   14:43 TW  # 季財報 + 自結補抓
 ```
 
-每次 cron 跑：
+**注意**：GitHub schedule 在熱門時段常被跳過。月初/月中的 full / financials mode 還是要靠這個觸發（cron-job.org 那 5 個只觸發平日 mode=klines）。
+
+每次 workflow run 跑：
 1. K 線更新（mode=klines/full/financials 看日期決定）
 2. `scrape_twii.py`
 3. `scrape_institutional.py`（含 FinMind → Yahoo fallback）
@@ -97,31 +116,34 @@ taiwan-stock-scanner/
 5. Commit data updates → push（retry 5 次 + `-X theirs` 衝突自動解）
 6. Build frontend + deploy Firebase + Cloudflare
 
-### 本地（Windows Task Scheduler）
+### 第三層：本地 Windows Task Scheduler（最後備援）
 
 ```
-平日 15:00, 19:00 TW: daily_screener.bat
+平日 19:00 TW: daily_screener.bat
   → git pull --rebase
   → update_klines, scrape_twii, scrape_institutional
   → screeners + Telegram (hash 去重，不會跟 cloud 雙推)
   → commit + push
 ```
 
-設定方式（PowerShell）：
+設定方式（管理員 PowerShell）：
 ```powershell
 $action = New-ScheduledTaskAction -Execute "C:\Users\Derek\Desktop\taiwan-stock-scanner\taiwan-stock-scanner\daily_screener.bat"
-$trigger1 = New-ScheduledTaskTrigger -Daily -At 15:00
-$trigger2 = New-ScheduledTaskTrigger -Daily -At 19:00
-$settings = New-ScheduledTaskSettingsSet -WakeToRun -StartWhenAvailable
-Register-ScheduledTask -TaskName "TaiwanStockDailyScreener" -Action $action -Trigger @($trigger1,$trigger2) -Settings $settings
+$trigger = New-ScheduledTaskTrigger -Daily -At 19:00
+$settings = New-ScheduledTaskSettingsSet -WakeToRun -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
+Register-ScheduledTask -TaskName "TaiwanStockDailyScreener" -Action $action -Trigger $trigger -Settings $settings -RunLevel Highest
 ```
 
-### 容錯層級
+### 容錯層級總計
 
 ```
-雲端 5 個 cron + 本地 2 個排程 = 一天 7 次嘗試
-任一成功 → 後面的 smart-skip 秒過
-全失敗（極罕見）→ 隔天 smart-skip 偵測 cache 過期 → 重抓
+平日一天觸發機會：
+  cron-job.org × 5     ← 最可靠 (>99.9%)
+  GitHub schedule × 5  ← 不穩 (今天 0%)
+  本地 19:00 × 1       ← 看電腦狀態
+  ───────────────────────
+  共 11 次嘗試
+任一成功 → 後續 smart-skip 秒過
 ```
 
 ## Frontend Filters

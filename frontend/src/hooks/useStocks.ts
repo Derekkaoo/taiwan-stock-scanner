@@ -47,6 +47,7 @@ function normalizeRow(raw: Record<string, unknown>): StockRow {
     companyProfile: parseCompanyProfile(raw.companyProfile),
     foreignBuyStreak: raw.foreignBuyStreak != null ? Number(raw.foreignBuyStreak) : undefined,
     trustBuyStreak:   raw.trustBuyStreak   != null ? Number(raw.trustBuyStreak)   : undefined,
+    market:           raw.market === '上市' || raw.market === '上櫃' ? raw.market : undefined,
   }
 }
 

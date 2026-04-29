@@ -8,7 +8,7 @@
 //  - 按季篩選：選定季別後，勾選的 metric 範圍要符合；找不到該季 → 排除
 //  - 成交量：5 日均（千張）；缺資料時排除（同 revenueYoY 邏輯）
 // ============================================================
-import type { Filters, GrowthFilter, AbsValueFilter, InstitutionalFilter, StockRow } from '../types'
+import type { Filters, GrowthFilter, AbsValueFilter, InstitutionalFilter, MarketFilter, StockRow } from '../types'
 import { DEFAULT_FILTERS } from '../types'
 
 const eps = 1e-6
@@ -50,6 +50,15 @@ function findQuarterValue(
   if (!arr || !quarter) return null
   for (const x of arr) if (x.quarter === quarter) return x.value
   return null
+}
+
+function passMarket(s: StockRow, m: MarketFilter): boolean {
+  if (m === 'all') return true
+  // 沒抓到 market 欄位 → 不確定，slider 動過就排除（與 volume 同邏輯）
+  if (!s.market) return false
+  if (m === 'listed') return s.market === '上市'
+  if (m === 'otc')    return s.market === '上櫃'
+  return true
 }
 
 function passInstitutional(s: StockRow, f: InstitutionalFilter): boolean {
@@ -109,8 +118,9 @@ export function applyFilters(stocks: StockRow[], f: Filters): StockRow[] {
   )
   const instActive = f.institutional.days !== 0 &&
     (f.institutional.foreign || f.institutional.trust)
+  const marketActive = f.market !== 'all'
 
-  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive) return stocks
+  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive) return stocks
 
   return stocks.filter(s => {
     if (volActive) {
@@ -132,6 +142,7 @@ export function applyFilters(stocks: StockRow[], f: Filters): StockRow[] {
     if (growActive && !passGrowth(s, f.growth)) return false
     if (absActive  && !passAbsValue(s, f.absValue)) return false
     if (instActive && !passInstitutional(s, f.institutional)) return false
+    if (marketActive && !passMarket(s, f.market)) return false
     return true
   })
 }
