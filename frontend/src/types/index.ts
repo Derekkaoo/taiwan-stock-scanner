@@ -28,6 +28,7 @@ export interface StockRow {
   companyProfile?: CompanyProfile
   foreignBuyStreak?: number   // 外資從最新日往回連續買超天數
   trustBuyStreak?: number     // 投信從最新日往回連續買超天數
+  market?: '上市' | '上櫃'    // 市場別（從 Yahoo exchangeName 抓）
 }
 
 export interface CompanyProfile {
@@ -169,6 +170,9 @@ export interface InstitutionalFilter {
   trust: boolean
 }
 
+/** 市場別篩選：'all' = 不篩、'listed' = 上市、'otc' = 上櫃 */
+export type MarketFilter = 'all' | 'listed' | 'otc'
+
 export interface Filters {
   volume:     FilterRange      // 5 日均成交量（千張）
   marketCap:  FilterRange      // 市值（億）
@@ -178,6 +182,7 @@ export interface Filters {
   growth:     GrowthFilter
   absValue:   AbsValueFilter
   institutional: InstitutionalFilter
+  market:     MarketFilter
 }
 
 export const FILTER_BOUNDS = {
@@ -208,9 +213,16 @@ export const DEFAULT_FILTERS: Filters = {
     eps:             [FILTER_BOUNDS.eps.min,             FILTER_BOUNDS.eps.max],
   },
   institutional: { days: 0, foreign: false, trust: false },
+  market: 'all',
 }
 
 export const INST_STREAK_OPTIONS: InstStreakDays[] = [0, 1, 3, 5, 20]
+
+export const MARKET_OPTIONS: Array<{ value: MarketFilter; label: string }> = [
+  { value: 'all',    label: '全部' },
+  { value: 'listed', label: '上市' },
+  { value: 'otc',    label: '上櫃' },
+]
 
 export const FILTER_LABELS = {
   volume:     '今日成交量',
