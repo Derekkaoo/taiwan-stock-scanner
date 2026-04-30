@@ -5,6 +5,7 @@ import { CandlestickSVG } from './CandlestickSVG'
 import { FundamentalsPanel } from './FundamentalsPanel'
 import { CompanyProfilePanel } from './CompanyProfilePanel'
 import { EntryAnalysisPanel } from './EntryAnalysisPanel'
+import { MAToggleBar } from './MAToggleBar'
 import { useEntryAnalysis } from '../hooks/useEntryAnalysis'
 import { useState, useEffect } from 'react'
 
@@ -53,9 +54,15 @@ interface Props {
   /** 我的最愛（從 useFavorites 傳進來）*/
   isFavorite?: (stockId: string) => boolean
   toggleFavorite?: (stockId: string) => void
+  /** K 線圖均線顯示偏好（從 App 持久化）*/
+  maPeriods: number[]
+  setMaPeriods: (p: number[]) => void
+  /** K 線圖時間框架（D=日 / W=週 / M=月）*/
+  timeframe: 'D' | 'W' | 'M'
+  setTimeframe: (t: 'D' | 'W' | 'M') => void
 }
 
-export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod, fetchGroup, getFromCache, cacheVersion, isFavorite, toggleFavorite }: Props) {
+export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod, fetchGroup, getFromCache, cacheVersion, isFavorite, toggleFavorite, maPeriods, setMaPeriods, timeframe, setTimeframe }: Props) {
   const COLS: ColDef[] = [
     { key: 'id', label: '代號', align: 'left', mono: true,
       render: (s) => {
@@ -337,15 +344,22 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
                       <div className="flex flex-col md:flex-row gap-3 md:gap-4 items-stretch">
                         <div className="w-full md:flex-1 md:min-w-0">
                           {cached && cached.length > 0 ? (
-                            <CandlestickSVG
-                              data={cached.slice(-90)}
-                              fullData={cached}
-                              width={600}
-                              height={200}
-                              showVolume={true}
-                              showMA={true}
-                              className="w-full"
-                            />
+                            <>
+                              <div className="mb-1.5" onClick={(e) => e.stopPropagation()}>
+                                <MAToggleBar selected={maPeriods} onChange={setMaPeriods} />
+                              </div>
+                              <CandlestickSVG
+                                bars={cached}
+                                timeframe={timeframe}
+                                onTimeframeChange={setTimeframe}
+                                width={600}
+                                height={200}
+                                showVolume={true}
+                                showMA={true}
+                                maPeriods={maPeriods}
+                                className="w-full"
+                              />
+                            </>
                           ) : (
                             <span style={{ color: 'var(--color-text-muted)', fontSize: 11 }}>⚠ 無 K 線資料</span>
                           )}

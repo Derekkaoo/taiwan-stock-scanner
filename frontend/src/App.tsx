@@ -107,6 +107,33 @@ export default function App() {
   const [toasts,    setToasts]    = useState<Toast[]>([])
   const [filters,   setFilters]   = useState<Filters>(DEFAULT_FILTERS)
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false)
+  // K 線圖均線顯示偏好（持久化到 localStorage）
+  const [maPeriods, setMaPeriods] = useState<number[]>(() => {
+    try {
+      const stored = localStorage.getItem('chartMaPeriods')
+      if (stored) {
+        const parsed = JSON.parse(stored)
+        if (Array.isArray(parsed) && parsed.every(x => typeof x === 'number')) {
+          return parsed
+        }
+      }
+    } catch {}
+    return [20, 60]
+  })
+  useEffect(() => {
+    try { localStorage.setItem('chartMaPeriods', JSON.stringify(maPeriods)) } catch {}
+  }, [maPeriods])
+  // K 線圖時間框架偏好（D=日 / W=週 / M=月，預設日，持久化到 localStorage）
+  const [timeframe, setTimeframe] = useState<'D' | 'W' | 'M'>(() => {
+    try {
+      const stored = localStorage.getItem('chartTimeframe')
+      if (stored === 'D' || stored === 'W' || stored === 'M') return stored
+    } catch {}
+    return 'D'
+  })
+  useEffect(() => {
+    try { localStorage.setItem('chartTimeframe', timeframe) } catch {}
+  }, [timeframe])
   const searchTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   // 我的最愛（後端同步）
@@ -464,6 +491,10 @@ export default function App() {
                 cacheVersion={cacheVersion}
                 isFavorite={fav.isFavorite}
                 toggleFavorite={fav.toggle}
+                maPeriods={maPeriods}
+                setMaPeriods={setMaPeriods}
+                timeframe={timeframe}
+                setTimeframe={setTimeframe}
               />
             ))}
           </div>
@@ -481,6 +512,10 @@ export default function App() {
             cacheVersion={cacheVersion}
             isFavorite={fav.isFavorite}
             toggleFavorite={fav.toggle}
+            maPeriods={maPeriods}
+            setMaPeriods={setMaPeriods}
+            timeframe={timeframe}
+            setTimeframe={setTimeframe}
           />
         )}
       </main>
