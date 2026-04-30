@@ -48,6 +48,7 @@ function normalizeRow(raw: Record<string, unknown>): StockRow {
     foreignBuyStreak: raw.foreignBuyStreak != null ? Number(raw.foreignBuyStreak) : undefined,
     trustBuyStreak:   raw.trustBuyStreak   != null ? Number(raw.trustBuyStreak)   : undefined,
     market:           raw.market === '上市' || raw.market === '上櫃' ? raw.market : undefined,
+    industry:         typeof raw.industry === 'string' ? raw.industry : undefined,
   }
 }
 
@@ -181,11 +182,19 @@ export function useStocks(returnPeriod: ReturnPeriod = 'y1', turnoverPeriod: Tur
       }
       const q = query.toLowerCase().trim()
       const filtered = q
-        ? allStocks.filter(s =>
-            s.id.includes(q) ||
-            s.name.toLowerCase().includes(q) ||
-            s.group.toLowerCase().includes(q)
-          )
+        ? allStocks.filter(s => {
+            // 代號
+            if (s.id.includes(q)) return true
+            // 名稱
+            if (s.name.toLowerCase().includes(q)) return true
+            // 族群（主要 + 多重）
+            if (s.group.toLowerCase().includes(q)) return true
+            if (s.groups?.some(g => g.toLowerCase().includes(q))) return true
+            // TWSE 產業別 + 子產業
+            if (s.industry?.toLowerCase().includes(q)) return true
+            if (s.subIndustries?.some(si => si.toLowerCase().includes(q))) return true
+            return false
+          })
         : [...allStocks]
       const sorted = [...filtered].sort(compare)
       setFilteredStocks(sorted)
