@@ -29,6 +29,7 @@ export interface StockRow {
   foreignBuyStreak?: number   // 外資從最新日往回連續買超天數
   trustBuyStreak?: number     // 投信從最新日往回連續買超天數
   market?: '上市' | '上櫃'    // 市場別（從 Yahoo exchangeName 抓）
+  industry?: string           // TWSE 產業別（如「半導體業」）
 }
 
 export interface CompanyProfile {
