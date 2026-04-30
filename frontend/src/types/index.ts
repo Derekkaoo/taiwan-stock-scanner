@@ -224,6 +224,81 @@ export const MARKET_OPTIONS: Array<{ value: MarketFilter; label: string }> = [
   { value: 'otc',    label: '上櫃' },
 ]
 
+// ============================================================
+//  進場分析（多頭觸發回測研究）
+// ============================================================
+export type EntryStrategy = 'breakout' | 'ma5' | 'ma10' | 'ma20'
+export type ExitStrategy  = 'ma5' | 'ma10' | 'ma20'
+
+export interface EntryStrategyStats {
+  count:      number
+  winCount:   number
+  winRate:    number | null
+  avgReturn:  number | null
+  avgMae:     number | null
+  rrRatio:    number | null
+}
+
+export interface EntryAnalysisBest {
+  entry:      EntryStrategy
+  exit:       ExitStrategy
+  count:      number
+  winRate:    number
+  avgReturn:  number
+  avgMae:     number
+  rrRatio:    number
+}
+
+export interface EntryEventByExit {
+  ma5:  { returnPct: number; maePct: number } | null
+  ma10: { returnPct: number; maePct: number } | null
+  ma20: { returnPct: number; maePct: number } | null
+}
+
+export interface EntryEventEntryPoint {
+  date:        string
+  entryClose:  number
+  daysFromTrigger?: number
+  byExit:      EntryEventByExit
+}
+
+export interface EntryEvent {
+  triggerDate:   string
+  triggerClose:  number
+  highestClose:  number
+  ongoing:       boolean
+  exits: {
+    ma5:  { date: string; close: number }
+    ma10: { date: string; close: number }
+    ma20: { date: string; close: number }
+  }
+  breakout: EntryEventEntryPoint
+  ma5:  EntryEventEntryPoint | null
+  ma10: EntryEventEntryPoint | null
+  ma20: EntryEventEntryPoint | null
+}
+
+export interface EntryAnalysis {
+  stockId:      string
+  sampleSize:   number
+  best:         EntryAnalysisBest | null
+  strategies:   Record<EntryStrategy, Record<ExitStrategy, EntryStrategyStats>>
+  events:       EntryEvent[]
+}
+
+export const ENTRY_LABELS: Record<EntryStrategy, string> = {
+  breakout: '突破直入',
+  ma5:      '回測 MA5',
+  ma10:     '回測 MA10',
+  ma20:     '回測 MA20',
+}
+
+export const EXIT_LABELS: Record<ExitStrategy, string> = {
+  ma5:  '<MA5 退',
+  ma10: '<MA10 退',
+  ma20: '<MA20 退',
+}
+
 export const FILTER_LABELS = {
   volume:     '今日成交量',
   marketCap:  '市值',
