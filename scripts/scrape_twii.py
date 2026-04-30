@@ -35,8 +35,8 @@ USER_AGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
               "AppleWebKit/537.36 (KHTML, like Gecko) "
               "Chrome/124.0.0.0 Safari/537.36")
 
-YAHOO_URL = "https://query1.finance.yahoo.com/v8/finance/chart/%5ETWII?interval=1d&range=1y"
-YAHOO_URL2 = "https://query2.finance.yahoo.com/v8/finance/chart/%5ETWII?interval=1d&range=1y"
+YAHOO_URL = "https://query1.finance.yahoo.com/v8/finance/chart/%5ETWII?interval=1d&range=3y"
+YAHOO_URL2 = "https://query2.finance.yahoo.com/v8/finance/chart/%5ETWII?interval=1d&range=3y"
 
 OUT_PATH = Path(__file__).parent.parent / "backend" / "db" / "twii.json"
 
@@ -97,7 +97,7 @@ def run():
         "ma20":   ma20,
         "ma60":   ma60,
         "regime": "bull" if (ma20 and ma60 and ma20 > ma60) else "bear",
-        "history": bars[-60:],   # 給未來其他計算用
+        "history": bars,   # 完整 3 年歷史（給 analyze_entry_points 等查歷史 regime 用）
     }
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)

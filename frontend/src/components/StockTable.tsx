@@ -4,6 +4,8 @@ import { THEME_CSS_MAP, TAG_COLORS, getGroupCssClass } from '../constants/themeG
 import { CandlestickSVG } from './CandlestickSVG'
 import { FundamentalsPanel } from './FundamentalsPanel'
 import { CompanyProfilePanel } from './CompanyProfilePanel'
+import { EntryAnalysisPanel } from './EntryAnalysisPanel'
+import { useEntryAnalysis } from '../hooks/useEntryAnalysis'
 import { useState, useEffect } from 'react'
 
 interface ColDef {
@@ -12,6 +14,12 @@ interface ColDef {
   align: 'left' | 'right'
   mono?: boolean
   render?: (v: StockRow) => React.ReactNode
+}
+
+// 包裝 useEntryAnalysis hook（只能在 component 裡用）
+function StockEntryAnalysisInline({ stockId }: { stockId: string }) {
+  const { data, loading } = useEntryAnalysis(stockId)
+  return <EntryAnalysisPanel data={data} loading={loading} />
 }
 
 /**
@@ -344,6 +352,21 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
                         >
                           <FundamentalsPanel fundamentals={stock.fundamentals} />
                         </div>
+                      </div>
+                      {/* 進場分析（多頭觸發 + 4×3 策略對比）*/}
+                      <div
+                        aria-hidden
+                        className="my-3"
+                        style={{
+                          height: 1,
+                          background: 'linear-gradient(to right, transparent, var(--color-border) 15%, var(--color-border) 85%, transparent)',
+                        }}
+                      />
+                      <div onClick={(e) => e.stopPropagation()}>
+                        <div className="text-[10px] mb-2" style={{ color: 'var(--color-text-muted)' }}>
+                          📊 進場分析（多頭觸發後的歷史回測模式）
+                        </div>
+                        <StockEntryAnalysisInline stockId={stock.id} />
                       </div>
                       </div>
                     </td>
