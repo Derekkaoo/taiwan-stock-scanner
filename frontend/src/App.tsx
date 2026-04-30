@@ -5,7 +5,6 @@ import { useStocks } from './hooks/useStocks'
 import { useKline, calcThreeMonthReturn } from './hooks/useKline'
 import { StockTable } from './components/StockTable'
 import { GroupCard } from './components/GroupCard'
-import { MAToggleBar } from './components/MAToggleBar'
 import { Footer } from './components/Footer'
 import { FiltersBar } from './components/FiltersBar'
 import { applyFilters } from './utils/filters'
@@ -122,6 +121,17 @@ export default function App() {
   useEffect(() => {
     try { localStorage.setItem('chartMaPeriods', JSON.stringify(maPeriods)) } catch {}
   }, [maPeriods])
+  // K 線圖時間框架偏好（D=日 / W=週 / M=月，預設日，持久化到 localStorage）
+  const [timeframe, setTimeframe] = useState<'D' | 'W' | 'M'>(() => {
+    try {
+      const stored = localStorage.getItem('chartTimeframe')
+      if (stored === 'D' || stored === 'W' || stored === 'M') return stored
+    } catch {}
+    return 'D'
+  })
+  useEffect(() => {
+    try { localStorage.setItem('chartTimeframe', timeframe) } catch {}
+  }, [timeframe])
   const searchTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   // 套用 slider/chip 篩選器（只影響個股列表 view，族群總覽不受影響）
@@ -438,10 +448,6 @@ export default function App() {
 
         {view === 'group' && stockCount > 0 && (
           <div className="flex flex-col gap-2">
-            <div className="px-3 py-2 mb-1 rounded"
-              style={{ background: 'var(--color-bg-700)', border: '1px solid var(--color-border)' }}>
-              <MAToggleBar selected={maPeriods} onChange={setMaPeriods} />
-            </div>
             {sortedGroupEntries.map(([name, stks]) => (
               <GroupCard
                 key={name}
@@ -458,6 +464,9 @@ export default function App() {
                 returnPeriod={returnPeriod}
                 cacheVersion={cacheVersion}
                 maPeriods={maPeriods}
+                setMaPeriods={setMaPeriods}
+                timeframe={timeframe}
+                setTimeframe={setTimeframe}
               />
             ))}
           </div>
@@ -475,6 +484,8 @@ export default function App() {
             cacheVersion={cacheVersion}
             maPeriods={maPeriods}
             setMaPeriods={setMaPeriods}
+            timeframe={timeframe}
+            setTimeframe={setTimeframe}
           />
         )}
       </main>

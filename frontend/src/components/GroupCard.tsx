@@ -3,6 +3,7 @@ import type { StockRow, KlineBar, ReturnPeriod } from '../types'
 import { RETURN_PERIOD_LABELS } from '../types'
 import { THEME_CSS_MAP, TAG_COLORS, getGroupCssClass } from '../constants/themeGroups'
 import { CandlestickSVG } from './CandlestickSVG'
+import { MAToggleBar } from './MAToggleBar'
 import { calcThreeMonthReturn } from '../hooks/useKline'
 
 interface Props {
@@ -15,6 +16,10 @@ interface Props {
   cacheVersion?: number
   /** K 線圖均線顯示偏好（從 App 持久化）*/
   maPeriods?: number[]
+  setMaPeriods?: (p: number[]) => void
+  /** K 線圖時間框架（D=日 / W=週 / M=月）*/
+  timeframe?: 'D' | 'W' | 'M'
+  setTimeframe?: (t: 'D' | 'W' | 'M') => void
 }
 
 function fmt(v: number | null, digits = 2) {
@@ -30,7 +35,7 @@ function getSubsForGroup(stock: StockRow, groupName: string): string[] {
   return stock.subIndustries ?? []
 }
 
-export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnPeriod, cacheVersion, maPeriods }: Props) {
+export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnPeriod, cacheVersion, maPeriods, setMaPeriods, timeframe, setTimeframe }: Props) {
   const [expanded, setExpanded] = useState(false)
   const [klineMap, setKlineMap] = useState<Record<string, KlineBar[]>>({})
   const [loading,  setLoading]  = useState(false)
@@ -246,16 +251,24 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnP
 
                   <div className="p-1">
                     {bars && bars.length > 0 ? (
-                      <CandlestickSVG
-                        data={bars.slice(-65)}
-                        fullData={bars}
-                        width={400}
-                        height={200}
-                        showVolume={true}
-                        showMA={true}
-                        maPeriods={maPeriods}
-                        className="w-full"
-                      />
+                      <>
+                        {maPeriods && setMaPeriods && (
+                          <div className="mb-1.5" onClick={(e) => e.stopPropagation()}>
+                            <MAToggleBar selected={maPeriods} onChange={setMaPeriods} />
+                          </div>
+                        )}
+                        <CandlestickSVG
+                          bars={bars}
+                          timeframe={timeframe}
+                          onTimeframeChange={setTimeframe}
+                          width={400}
+                          height={200}
+                          showVolume={true}
+                          showMA={true}
+                          maPeriods={maPeriods}
+                          className="w-full"
+                        />
+                      </>
                     ) : (
                       <div className="flex items-center justify-center text-xs h-[150px]"
                         style={{ color: 'var(--color-text-muted)' }}>

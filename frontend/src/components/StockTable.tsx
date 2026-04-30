@@ -54,9 +54,12 @@ interface Props {
   /** K 線圖均線顯示偏好（從 App 持久化）*/
   maPeriods: number[]
   setMaPeriods: (p: number[]) => void
+  /** K 線圖時間框架（D=日 / W=週 / M=月）*/
+  timeframe: 'D' | 'W' | 'M'
+  setTimeframe: (t: 'D' | 'W' | 'M') => void
 }
 
-export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod, fetchGroup, getFromCache, cacheVersion, maPeriods, setMaPeriods }: Props) {
+export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod, fetchGroup, getFromCache, cacheVersion, maPeriods, setMaPeriods, timeframe, setTimeframe }: Props) {
   const COLS: ColDef[] = [
     { key: 'id', label: '代號', align: 'left', mono: true,
       render: (s) => {
@@ -324,8 +327,9 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
                                 <MAToggleBar selected={maPeriods} onChange={setMaPeriods} />
                               </div>
                               <CandlestickSVG
-                                data={cached.slice(-90)}
-                                fullData={cached}
+                                bars={cached}
+                                timeframe={timeframe}
+                                onTimeframeChange={setTimeframe}
                                 width={600}
                                 height={200}
                                 showVolume={true}
