@@ -1,5 +1,17 @@
 import type { KlineBar } from '../types'
 
+// 各 MA 的固定顏色（避開漲跌色）
+export const MA_COLORS: Record<number, string> = {
+  5:   '#ec4899',  // pink
+  10:  '#06b6d4',  // cyan
+  20:  '#f59e0b',  // orange
+  60:  '#3b82f6',  // blue
+  120: '#a855f7',  // purple
+}
+
+export const ALL_MA_PERIODS = [5, 10, 20, 60, 120] as const
+export const DEFAULT_MA_PERIODS: number[] = [20, 60]
+
 interface Props {
   data: KlineBar[]
   fullData?: KlineBar[]  // 完整資料，用來計算 MA
@@ -7,6 +19,7 @@ interface Props {
   height?: number
   showVolume?: boolean
   showMA?: boolean
+  maPeriods?: number[]   // 要顯示哪幾條 MA（預設 [20, 60]）
   className?: string
 }
 
@@ -25,7 +38,9 @@ function shortDate(dateStr: string): string {
 
 export function CandlestickSVG({
   data, fullData, width = 400, height = 200,
-  showVolume = true, showMA = true, className,
+  showVolume = true, showMA = true,
+  maPeriods = DEFAULT_MA_PERIODS,
+  className,
 }: Props) {
   if (!data || data.length === 0) return null
 
@@ -42,11 +57,14 @@ export function CandlestickSVG({
   // MA 用完整資料計算，只取最後 data.length 筆
   const sourceData = fullData && fullData.length >= data.length ? fullData : data
   const sourceCloses = sourceData.map(d => d.c)
-  const fullMA20 = calcMA(sourceCloses, 20)
-  const fullMA60 = calcMA(sourceCloses, 60)
   const offset = sourceData.length - data.length
-  const ma20 = fullMA20.slice(offset)
-  const ma60 = fullMA60.slice(offset)
+  // 排序後的 maPeriods（升序），渲染時 deeper MA 畫在後面（避免短期 MA 被蓋住）
+  const sortedPeriods = [...maPeriods].sort((a, b) => a - b)
+  const maData = sortedPeriods.map(period => ({
+    period,
+    color:  MA_COLORS[period] ?? '#888',
+    values: calcMA(sourceCloses, period).slice(offset),
+  }))
 
   const rawMin = Math.min(...lows)
   const rawMax = Math.max(...highs)
@@ -143,9 +161,10 @@ export function CandlestickSVG({
         )
       })}
 
-      {/* MA 線 */}
-      {showMA && maPath(ma20, '#f59e0b')}
-      {showMA && maPath(ma60, '#3b82f6')}
+      {/* MA 線（依 period 由短到長，短的後畫蓋在上面）*/}
+      {showMA && maData.map(({ period, color, values }) => (
+        <g key={period}>{maPath(values, color)}</g>
+      ))}
 
       {/* 右側分隔線 */}
       <line
@@ -193,15 +212,27 @@ export function CandlestickSVG({
         )
       })}
 
-      {/* MA 圖例（日期軸下方） */}
-      {showMA && (
-        <g>
-          <rect x={width - 96} y={maLegendY - 10} width={8} height={8} fill="#f59e0b" rx="1" />
-          <text x={width - 85} y={maLegendY} fontSize={11} fill={mutedColor} fontFamily="monospace">MA20</text>
-          <rect x={width - 46} y={maLegendY - 10} width={8} height={8} fill="#3b82f6" rx="1" />
-          <text x={width - 35} y={maLegendY} fontSize={11} fill={mutedColor} fontFamily="monospace">MA60</text>
-        </g>
-      )}
+      {/* MA 圖例（日期軸下方，依條數動態排列，從右側往左）*/}
+      {showMA && maData.length > 0 && (() => {
+        const itemW = 50  // 每個 MA 標籤寬度
+        const totalW = maData.length * itemW
+        const startX = width - totalW - 4
+        return (
+          <g>
+            {maData.map(({ period, color }, i) => {
+              const x = startX + i * itemW
+              return (
+                <g key={period}>
+                  <rect x={x} y={maLegendY - 10} width={8} height={8} fill={color} rx="1" />
+                  <text x={x + 11} y={maLegendY} fontSize={11} fill={mutedColor} fontFamily="monospace">
+                    MA{period}
+                  </text>
+                </g>
+              )
+            })}
+          </g>
+        )
+      })()}
     </svg>
   )
 }

@@ -5,6 +5,7 @@ import { useStocks } from './hooks/useStocks'
 import { useKline, calcThreeMonthReturn } from './hooks/useKline'
 import { StockTable } from './components/StockTable'
 import { GroupCard } from './components/GroupCard'
+import { MAToggleBar } from './components/MAToggleBar'
 import { Footer } from './components/Footer'
 import { FiltersBar } from './components/FiltersBar'
 import { applyFilters } from './utils/filters'
@@ -105,6 +106,22 @@ export default function App() {
   const [groupSort, setGroupSort] = useState<GroupSort>('delta')
   const [toasts,    setToasts]    = useState<Toast[]>([])
   const [filters,   setFilters]   = useState<Filters>(DEFAULT_FILTERS)
+  // K 線圖均線顯示偏好（持久化到 localStorage）
+  const [maPeriods, setMaPeriods] = useState<number[]>(() => {
+    try {
+      const stored = localStorage.getItem('chartMaPeriods')
+      if (stored) {
+        const parsed = JSON.parse(stored)
+        if (Array.isArray(parsed) && parsed.every(x => typeof x === 'number')) {
+          return parsed
+        }
+      }
+    } catch {}
+    return [20, 60]
+  })
+  useEffect(() => {
+    try { localStorage.setItem('chartMaPeriods', JSON.stringify(maPeriods)) } catch {}
+  }, [maPeriods])
   const searchTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   // 套用 slider/chip 篩選器（只影響個股列表 view，族群總覽不受影響）
@@ -421,6 +438,10 @@ export default function App() {
 
         {view === 'group' && stockCount > 0 && (
           <div className="flex flex-col gap-2">
+            <div className="px-3 py-2 mb-1 rounded"
+              style={{ background: 'var(--color-bg-700)', border: '1px solid var(--color-border)' }}>
+              <MAToggleBar selected={maPeriods} onChange={setMaPeriods} />
+            </div>
             {sortedGroupEntries.map(([name, stks]) => (
               <GroupCard
                 key={name}
@@ -436,6 +457,7 @@ export default function App() {
                 getFromCache={getFromCache}
                 returnPeriod={returnPeriod}
                 cacheVersion={cacheVersion}
+                maPeriods={maPeriods}
               />
             ))}
           </div>
@@ -451,6 +473,8 @@ export default function App() {
             fetchGroup={fetchGroup}
             getFromCache={getFromCache}
             cacheVersion={cacheVersion}
+            maPeriods={maPeriods}
+            setMaPeriods={setMaPeriods}
           />
         )}
       </main>

@@ -13,6 +13,8 @@ interface Props {
   returnPeriod: ReturnPeriod
   /** App 層 cache 版本；變動時代表使用者按了「更新資料」，已展開的卡片要重新載入 */
   cacheVersion?: number
+  /** K 線圖均線顯示偏好（從 App 持久化）*/
+  maPeriods?: number[]
 }
 
 function fmt(v: number | null, digits = 2) {
@@ -28,7 +30,7 @@ function getSubsForGroup(stock: StockRow, groupName: string): string[] {
   return stock.subIndustries ?? []
 }
 
-export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnPeriod, cacheVersion }: Props) {
+export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnPeriod, cacheVersion, maPeriods }: Props) {
   const [expanded, setExpanded] = useState(false)
   const [klineMap, setKlineMap] = useState<Record<string, KlineBar[]>>({})
   const [loading,  setLoading]  = useState(false)
@@ -251,6 +253,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnP
                         height={200}
                         showVolume={true}
                         showMA={true}
+                        maPeriods={maPeriods}
                         className="w-full"
                       />
                     ) : (
