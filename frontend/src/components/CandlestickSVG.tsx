@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState, useRef, useEffect } from 'react'
 import type { KlineBar } from '../types'
 import { aggregateForTimeframe, type Timeframe } from '../utils/klineAggregate'
 
@@ -13,6 +13,10 @@ export const MA_COLORS: Record<number, string> = {
 
 export const ALL_MA_PERIODS = [5, 10, 20, 60, 120] as const
 export const DEFAULT_MA_PERIODS: number[] = [20, 60]
+
+// 各 timeframe 的預設顯示根數
+const DEFAULT_VISIBLE: Record<Timeframe, number> = { D: 90, W: 60, M: 36 }
+const MIN_VISIBLE = 10
 
 interface Props {
   /** 完整日 K 線（時間升序）。會依 timeframe 內部聚合 + 切到顯示範圍。 */
@@ -46,6 +50,25 @@ function shortDate(dateStr: string): string {
   return dateStr
 }
 
+/** 帶年份的日期（用 YY/MM/DD 縮寫年份）*/
+function dateWithYear(dateStr: string): string {
+  const parts = dateStr.replace(/-/g, '/').split('/')
+  if (parts.length >= 3) return `${parts[0].slice(2)}/${parts[1]}/${parts[2]}`
+  return dateStr
+}
+
+/** 從 date 字串取年份（YYYY）*/
+function getYear(dateStr: string | undefined): string {
+  if (!dateStr) return ''
+  return dateStr.replace(/-/g, '/').split('/')[0]
+}
+
+function touchDist(t1: Touch, t2: Touch): number {
+  const dx = t1.clientX - t2.clientX
+  const dy = t1.clientY - t2.clientY
+  return Math.sqrt(dx * dx + dy * dy)
+}
+
 export function CandlestickSVG({
   bars, data, fullData,
   timeframe = 'D', onTimeframeChange,
@@ -54,14 +77,146 @@ export function CandlestickSVG({
   maPeriods = DEFAULT_MA_PERIODS,
   className,
 }: Props) {
-  // 新舊 API 兼容：優先用 bars + timeframe，沒有就用舊的 data + fullData
-  const { displayData, sourceData } = useMemo(() => {
+  const svgRef = useRef<SVGSVGElement>(null)
+
+  // 聚合（依 timeframe）→ sourceData = 完整聚合後 K 線（給 MA 算 + 平移底）
+  const sourceData = useMemo(() => {
     if (bars && bars.length > 0) {
-      const { full, display } = aggregateForTimeframe(bars, timeframe)
-      return { displayData: display, sourceData: full }
+      const { full } = aggregateForTimeframe(bars, timeframe)
+      return full
     }
-    return { displayData: data ?? [], sourceData: fullData ?? data ?? [] }
+    return fullData ?? data ?? []
   }, [bars, timeframe, data, fullData])
+
+  // 縮放 + 平移 state
+  // zoomCount: 顯示根數（null = 用 timeframe 預設值）
+  // panOffset: 從最新往前偏移的根數（0 = 看到最新；正值 = 往歷史滾）
+  const [zoomCount, setZoomCount] = useState<number | null>(null)
+  const [panOffset, setPanOffset] = useState(0)
+
+  // bars 或 timeframe 改變 → 重置（避免狀態污染）
+  useEffect(() => {
+    setZoomCount(null)
+    setPanOffset(0)
+  }, [bars, timeframe])
+
+  // 計算實際顯示範圍
+  const totalBars = sourceData.length
+  const defaultCount = DEFAULT_VISIBLE[timeframe] ?? 90
+  const effectiveCount = Math.min(
+    Math.max(MIN_VISIBLE, zoomCount ?? defaultCount),
+    Math.max(MIN_VISIBLE, totalBars)
+  )
+  const maxOffset = Math.max(0, totalBars - effectiveCount)
+  const clampedOffset = Math.min(Math.max(0, panOffset), maxOffset)
+  const endIdx = totalBars - clampedOffset
+  const startIdx = Math.max(0, endIdx - effectiveCount)
+  const displayData = sourceData.slice(startIdx, endIdx)
+
+  // 手勢狀態（不需 re-render，只在事件中暫存初始值）
+  const gestureRef = useRef<{
+    mode?: 'pinch' | 'pan'
+    initialDist?: number
+    initialZoomCount?: number
+    initialX?: number
+    initialPanOffset?: number
+  }>({})
+  const [isMouseDown, setIsMouseDown] = useState(false)
+
+  // ─── 桌面滾輪 + 手機 touchmove（passive: false 才能 preventDefault）───
+  useEffect(() => {
+    const svg = svgRef.current
+    if (!svg) return
+
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault()
+      // 滾輪向下（deltaY > 0）→ 拉遠（看更多根）；向上 → 拉近
+      const ratio = e.deltaY > 0 ? 1.15 : 1 / 1.15
+      const baseCount = zoomCount ?? defaultCount
+      const newCount = Math.round(baseCount * ratio)
+      setZoomCount(Math.max(MIN_VISIBLE, Math.min(totalBars, newCount)))
+    }
+
+    const onTouchMove = (e: TouchEvent) => {
+      const g = gestureRef.current
+      if (g.mode === 'pinch' && e.touches.length === 2) {
+        e.preventDefault()
+        const newDist = touchDist(e.touches[0], e.touches[1])
+        const initial = g.initialDist ?? newDist
+        // 兩指張開（newDist > initial）→ ratio < 1 → zoomCount 減少 → 拉近 ✓
+        // 兩指捏合（newDist < initial）→ ratio > 1 → zoomCount 增加 → 拉遠 ✓
+        const ratio = initial / newDist
+        const newCount = Math.round((g.initialZoomCount ?? effectiveCount) * ratio)
+        setZoomCount(Math.max(MIN_VISIBLE, Math.min(totalBars, newCount)))
+      } else if (g.mode === 'pan' && e.touches.length === 1) {
+        e.preventDefault()
+        const delta = e.touches[0].clientX - (g.initialX ?? 0)
+        const barWidth = (width - 18 - 54) / effectiveCount
+        const deltaBar = Math.round(delta / barWidth)
+        // 向右拖（delta 正）→ 看更早的歷史 → panOffset 增加
+        const newOffset = (g.initialPanOffset ?? 0) + deltaBar
+        setPanOffset(Math.max(0, Math.min(maxOffset, newOffset)))
+      }
+    }
+
+    svg.addEventListener('wheel', onWheel, { passive: false })
+    svg.addEventListener('touchmove', onTouchMove, { passive: false })
+    return () => {
+      svg.removeEventListener('wheel', onWheel)
+      svg.removeEventListener('touchmove', onTouchMove)
+    }
+  }, [effectiveCount, totalBars, maxOffset, width, zoomCount, defaultCount])
+
+  // ─── 觸控開始/結束（記初始值；移動由上面 onTouchMove 處理）───
+  const onTouchStart = (e: React.TouchEvent) => {
+    if (e.touches.length === 2) {
+      gestureRef.current = {
+        mode: 'pinch',
+        initialDist: touchDist(e.touches[0] as unknown as Touch, e.touches[1] as unknown as Touch),
+        initialZoomCount: effectiveCount,
+      }
+    } else if (e.touches.length === 1) {
+      gestureRef.current = {
+        mode: 'pan',
+        initialX: e.touches[0].clientX,
+        initialPanOffset: clampedOffset,
+      }
+    }
+  }
+  const onTouchEnd = () => {
+    gestureRef.current = {}
+  }
+
+  // ─── 桌面滑鼠拖動 (pan) ───
+  const onMouseDown = (e: React.MouseEvent) => {
+    const target = e.target as Element
+    if (target.closest('[data-no-pan]')) return  // 點到 tab 不要 pan
+    setIsMouseDown(true)
+    gestureRef.current = {
+      mode: 'pan',
+      initialX: e.clientX,
+      initialPanOffset: clampedOffset,
+    }
+  }
+  const onMouseMove = (e: React.MouseEvent) => {
+    if (!isMouseDown) return
+    const g = gestureRef.current
+    if (g.mode !== 'pan') return
+    const delta = e.clientX - (g.initialX ?? 0)
+    const barWidth = (width - 18 - 54) / effectiveCount
+    const deltaBar = Math.round(delta / barWidth)
+    const newOffset = (g.initialPanOffset ?? 0) + deltaBar
+    setPanOffset(Math.max(0, Math.min(maxOffset, newOffset)))
+  }
+  const onMouseUp = () => {
+    setIsMouseDown(false)
+    gestureRef.current = {}
+  }
+
+  const onDoubleClick = () => {
+    setZoomCount(null)
+    setPanOffset(0)
+  }
 
   if (!displayData || displayData.length === 0) return null
 
@@ -75,15 +230,13 @@ export function CandlestickSVG({
   const lows    = displayData.map(d => d.l)
   const volumes = displayData.map(d => d.v)
 
-  // MA 用完整資料計算，只取最後 displayData.length 筆
+  // MA 用完整聚合資料計算 → 切到當前顯示範圍
   const sourceCloses = sourceData.map(d => d.c)
-  const offset = Math.max(0, sourceData.length - displayData.length)
-  // 排序後的 maPeriods（升序），渲染時 deeper MA 畫在後面（避免短期 MA 被蓋住）
   const sortedPeriods = [...maPeriods].sort((a, b) => a - b)
   const maData = sortedPeriods.map(period => ({
     period,
     color:  MA_COLORS[period] ?? '#888',
-    values: calcMA(sourceCloses, period).slice(offset),
+    values: calcMA(sourceCloses, period).slice(startIdx, endIdx),
   }))
 
   const rawMin = Math.min(...lows)
@@ -137,10 +290,23 @@ export function CandlestickSVG({
 
   return (
     <svg
+      ref={svgRef}
       width={width} height={height}
       viewBox={`0 0 ${width} ${height}`}
       className={className}
-      style={{ display: 'block', width: '100%', height: 'auto' }}
+      style={{
+        display: 'block', width: '100%', height: 'auto',
+        cursor: isMouseDown ? 'grabbing' : 'grab',
+        touchAction: 'none',  // 阻擋瀏覽器預設 touch 行為（給我們自訂 pan/pinch）
+        userSelect: 'none',
+      }}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+      onMouseDown={onMouseDown}
+      onMouseMove={onMouseMove}
+      onMouseUp={onMouseUp}
+      onMouseLeave={onMouseUp}
+      onDoubleClick={onDoubleClick}
     >
       {/* Y 軸格線 */}
       {yTicks.map((t, i) => (
@@ -216,25 +382,36 @@ export function CandlestickSVG({
       <line x1={padL} y1={dateLineY} x2={width - padR} y2={dateLineY}
         stroke={mutedColor} strokeWidth="0.5" opacity="0.3" />
 
-      {/* 4 個日期刻度 */}
+      {/* 4 個日期刻度
+         跨年範圍：「跟前一個 tick 年份不同」的 tick 帶年份（不含 leftmost，避免邊界裁切）
+         單一年範圍：所有 tick 只顯示 MM/DD */}
       {tickIndices.map((idx, ti) => {
-        const x    = px(idx)
-        const date = displayData[idx]?.date ? shortDate(displayData[idx].date) : ''
+        const x = px(idx)
+        const dateStr = displayData[idx]?.date
+        if (!dateStr) return null
+        // leftmost (ti=0) 永遠不帶年份；其他 tick 跟前一個比，年份不同就帶
+        let showYear = false
+        if (ti > 0) {
+          const prevYear = getYear(displayData[tickIndices[ti - 1]]?.date)
+          const thisYear = getYear(dateStr)
+          if (prevYear && thisYear && prevYear !== thisYear) showYear = true
+        }
+        const label = showYear ? dateWithYear(dateStr) : shortDate(dateStr)
         return (
           <g key={ti}>
             <line x1={x} y1={dateLineY} x2={x} y2={dateLineY + 3}
               stroke={mutedColor} strokeWidth="0.5" opacity="0.5" />
             <text x={x} y={dateAxisY} fontSize={12} fill={mutedColor}
               fontFamily="monospace" textAnchor="middle">
-              {date}
+              {label}
             </text>
           </g>
         )
       })}
 
-      {/* 左下角：時間框架 tab（[日][週][月]）*/}
+      {/* 左下角：時間框架 tab（[日][週][月]） — data-no-pan 阻止點到時觸發 pan */}
       {onTimeframeChange && (
-        <g>
+        <g data-no-pan="true">
           {(['D', 'W', 'M'] as const).map((t, i) => {
             const x = padL + i * 28
             const active = timeframe === t
@@ -242,6 +419,7 @@ export function CandlestickSVG({
             return (
               <g key={t}
                 onClick={(e) => { e.stopPropagation(); onTimeframeChange(t) }}
+                onMouseDown={(e) => e.stopPropagation()}
                 style={{ cursor: 'pointer' }}
               >
                 <rect
