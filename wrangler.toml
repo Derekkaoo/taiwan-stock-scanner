@@ -10,3 +10,9 @@ pages_build_output_dir = "frontend/dist"
 binding = "DB"
 database_name = "stock-scanner-favorites"
 database_id = "7631cf70-84d4-477a-9627-9994a7806685"
+
+# 環境變數（前端 Google Client ID 是 public，但放這裡讓 Pages Functions 也能讀）
+# Cloudflare Pages dashboard → Settings → Environment variables 也要設一份
+# （部署環境吃 dashboard 的，本地 wrangler dev 吃這裡的）
+[vars]
+GOOGLE_CLIENT_ID = "225818828453-n5g26iet76lg8jngc4u6kujjlsp7fdih.apps.googleusercontent.com"

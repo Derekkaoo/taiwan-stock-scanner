@@ -4,11 +4,15 @@ import { RETURN_PERIOD_LABELS, TURNOVER_PERIOD_LABELS, DEFAULT_FILTERS } from '.
 import { useStocks } from './hooks/useStocks'
 import { useKline, calcThreeMonthReturn } from './hooks/useKline'
 import { useFavorites } from './hooks/useFavorites'
+import { useGoogleAuth } from './hooks/useGoogleAuth'
 import { StockTable } from './components/StockTable'
 import { GroupCard } from './components/GroupCard'
 import { Footer } from './components/Footer'
 import { FiltersBar } from './components/FiltersBar'
+import { GoogleSignInButton } from './components/GoogleSignInButton'
+import { StrategyManager } from './components/StrategyManager'
 import { applyFilters } from './utils/filters'
+import { GOOGLE_CLIENT_ID } from './config'
 
 type View = 'group' | 'table'
 type GroupSort = 'delta' | 'return'
@@ -139,6 +143,9 @@ export default function App() {
   // 我的最愛（後端同步）
   const fav = useFavorites()
 
+  // Google 登入（已登入後可用 idToken 跟 /api/strategies 串接）
+  const auth = useGoogleAuth({ clientId: GOOGLE_CLIENT_ID })
+
   // Filter pipeline: stocks → search/sort → slider/chip → 只看最愛
   const filteredByFilters = useMemo(
     () => applyFilters(filteredStocks, filters),
@@ -258,6 +265,11 @@ export default function App() {
           >
             {lastUpdated ? `最後更新 ${lastUpdated}` : '載入中…'}
           </span>
+          <GoogleSignInButton
+            user={auth.user}
+            isReady={auth.isReady}
+            signOut={auth.signOut}
+          />
         </div>
       </header>
 
@@ -409,11 +421,28 @@ export default function App() {
 
       {/* 個股列表才顯示篩選器（族群總覽不需要）*/}
       {view === 'table' && filteredStocks.length > 0 && (
-        <FiltersBar
-          stocks={filteredStocks}
-          filters={filters}
-          onChange={setFilters}
-        />
+        <>
+          <FiltersBar
+            stocks={filteredStocks}
+            filters={filters}
+            onChange={setFilters}
+          />
+          {auth.isSignedIn && (
+            <div
+              className="px-5 py-2 border-b"
+              style={{
+                background: 'var(--color-bg-700)',
+                borderColor: 'var(--color-border)',
+              }}
+            >
+              <StrategyManager
+                idToken={auth.idToken}
+                filters={filters}
+                setFilters={setFilters}
+              />
+            </div>
+          )}
+        </>
       )}
 
       <div
