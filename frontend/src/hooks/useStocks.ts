@@ -2,7 +2,7 @@ import { useState, useCallback, useRef, useEffect } from 'react'
 import type { StockRow, SortState, DataMode, ReturnPeriod, TurnoverPeriod } from '../types'
 import { assignThemeGroup, buildGroupedStocks } from '../constants/themeGroups'
 
-function normalizeRow(raw: Record<string, unknown>): StockRow {
+export function normalizeRow(raw: Record<string, unknown>): StockRow {
   const groups = Array.isArray(raw.groups)
     ? (raw.groups as unknown[]).map(g => String(g).trim()).filter(Boolean)
     : undefined
@@ -49,6 +49,8 @@ function normalizeRow(raw: Record<string, unknown>): StockRow {
     trustBuyStreak:   raw.trustBuyStreak   != null ? Number(raw.trustBuyStreak)   : undefined,
     market:           raw.market === '上市' || raw.market === '上櫃' ? raw.market : undefined,
     industry:         typeof raw.industry === 'string' ? raw.industry : undefined,
+    // archive 帶來的「最後一次入榜」日期（給 ghost row UI 顯示「資料 N 週前」）
+    _lastSeenDate:    typeof raw._lastSeenDate === 'string' ? raw._lastSeenDate : undefined,
   }
 }
 

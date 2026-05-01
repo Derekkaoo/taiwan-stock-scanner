@@ -385,35 +385,32 @@ def fetch_holdings():
     回傳 list of dict（成功）或 raise HoldingsFetchError（失敗，含 kind + detail）。
     Caller 應該 catch + telegram + fallback 到舊資料。
 
-    抓兩次 norway：growthrate=0（>=0% 增持，主流量）+ growthrate=-0.1（補負成長），union dedupe。
+    Plan E：只抓 growthrate=0.1（≥ 0.1% 大戶增持，當週入榜的主清單）。
+    < 0.1% 的最愛由 frontend lazy-load stocks_archive.json 補資料 + 標 ghost。
     """
-    logger.info("Step 1: 抓取持股名單（兩次 union：growthrate=0 + -0.1）…")
+    logger.info("Step 1: 抓取持股名單（growthrate=0.1，只取本週入榜）…")
 
     rows: list[dict] = []
     seen_ids: set[str] = set()
     last_date_str = ""
 
-    for gr in ["0", "-0.1"]:
-        url = (f"https://norway.twsthr.info/StockHoldersContinue.aspx"
-               f"?Show=2&continue=Y&weeks=1&growthrate={gr}"
-               f"&beforeweek=1&price=5000&valuerank=1-3000&display=0")
-        try:
-            r = _fetch_norway(url)
-        except Exception as e:
-            # 第一次失敗就 raise；第二次失敗 log warning 但不中止（已有 growthrate=0 資料）
-            if not rows:
-                raise HoldingsFetchError("network", str(e)[:200]) from e
-            logger.warning("growthrate=%s 抓取失敗（已有主資料，繼續）：%s", gr, e)
-            continue
+    gr = "0.1"
+    url = (f"https://norway.twsthr.info/StockHoldersContinue.aspx"
+           f"?Show=2&continue=Y&weeks=1&growthrate={gr}"
+           f"&beforeweek=1&price=5000&valuerank=1-3000&display=0")
+    try:
+        r = _fetch_norway(url)
+    except Exception as e:
+        raise HoldingsFetchError("network", str(e)[:200]) from e
 
-        d = _parse_holdings_response(r, gr, seen_ids, rows)
-        if d:
-            last_date_str = d
+    d = _parse_holdings_response(r, gr, seen_ids, rows)
+    if d:
+        last_date_str = d
 
     if not rows:
         raise HoldingsFetchError(
             "no_rows",
-            "兩次抓取都解析出 0 筆（HTML 結構可能變動）"
+            "解析出 0 筆（HTML 結構可能變動）"
         )
 
     logger.info("持股名單：%d 筆，資料日期：%s", len(rows), last_date_str)
@@ -579,12 +576,16 @@ def make_company_profile(profile_raw):
     return {k: profile_raw[k] for k in keep_fields if profile_raw.get(k)}
 
 
-def refresh_financials():
-    """嘗試用 fetch_financials.py 增量更新（需要 .env 裡的 FINMIND_TOKEN）"""
+def refresh_financials(stock_ids: list[str] | None = None):
+    """嘗試用 fetch_financials.py 增量更新（需要 .env 裡的 FINMIND_TOKEN）
+
+    Plan E：傳當週入榜的 stock_ids（≥0.1%），只更新本週 310 支的財報；
+    其他歷史股票（archive 內）保留舊 cache，不再更新（給 ghost row 用）。
+    """
     try:
         sys.path.insert(0, str(Path(__file__).parent))
         import fetch_financials
-        fetch_financials.run()
+        fetch_financials.run(stock_ids=stock_ids)
     except SystemExit:
         logger.warning("FinMind scraper 呼叫 sys.exit，保留現有快取")
     except Exception as e:
@@ -728,7 +729,8 @@ def run():
     category_map  = load_category_map()
     refresh_monthly_revenue()  # 嘗試從 MOPS 重抓最新月營收
     revenue_map   = load_monthly_revenue()
-    refresh_financials()       # 嘗試用 FinMind 更新 12 月營收 + 8 季財報
+    # Plan E：只更新本週入榜（310 支）的財報，archive 內其他股票保留舊 cache
+    refresh_financials(stock_ids=stock_ids)
     financials    = load_financials()
     profiles      = load_profiles()
     klines        = fetch_klines(stock_ids)
@@ -900,6 +902,39 @@ def run():
     with open(DATA_DIR / "stocks.json", "w", encoding="utf-8") as f:
         json.dump(stocks, f, ensure_ascii=False, indent=2)
     logger.info("stocks.json：%d 筆", len(stocks))
+
+    # 同步維護 stocks_archive.json（歷史累積版）：
+    # - 包含所有曾經出現過的股票（即使本週 <0.1% 不在當週 stocks.json）
+    # - 每支股票多帶 _lastSeenDate（給 frontend ghost row 標示「資料 X 週前」）
+    # - 收藏功能要用：使用者收藏的股票本週掉出榜時，仍能從 archive 拿到 K 線/基本面
+    archive_path = DATA_DIR / "stocks_archive.json"
+    today_str = datetime.now().strftime("%Y-%m-%d")
+    archive: dict = {}
+    if archive_path.exists():
+        try:
+            with open(archive_path, "r", encoding="utf-8") as f:
+                archive = json.load(f)
+        except Exception as e:
+            logger.warning("讀 stocks_archive.json 失敗，重建：%s", e)
+            archive = {}
+
+    archive_added = 0
+    archive_updated = 0
+    for s_row in stocks:
+        sid = s_row.get("id")
+        if not sid:
+            continue
+        is_new = sid not in archive
+        archive[sid] = {**s_row, "_lastSeenDate": today_str}
+        if is_new:
+            archive_added += 1
+        else:
+            archive_updated += 1
+
+    with open(archive_path, "w", encoding="utf-8") as f:
+        json.dump(archive, f, ensure_ascii=False, indent=2)
+    logger.info("stocks_archive.json：總 %d 支（新增 %d / 更新 %d）",
+                len(archive), archive_added, archive_updated)
 
     # 按族群拆分 klines 檔（lazy-load 用），不再寫單一 klines.json
     import urllib.parse

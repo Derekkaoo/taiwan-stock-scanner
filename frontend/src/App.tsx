@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect, useRef, useMemo } from 'react'
-import type { Toast, ReturnPeriod, TurnoverPeriod, Filters } from './types'
+import type { Toast, ReturnPeriod, TurnoverPeriod, Filters, StockRow } from './types'
 import { RETURN_PERIOD_LABELS, TURNOVER_PERIOD_LABELS, DEFAULT_FILTERS } from './types'
-import { useStocks } from './hooks/useStocks'
+import { useStocks, normalizeRow } from './hooks/useStocks'
 import { useKline, calcThreeMonthReturn } from './hooks/useKline'
 import { useFavorites } from './hooks/useFavorites'
 import { useGoogleAuth } from './hooks/useGoogleAuth'
@@ -158,6 +158,41 @@ export default function App() {
     onLimitExceeded: () => setFavLimitPrompt(true),
   })
 
+  // 歷史累積榜（stocks_archive.json）：lazy-load，僅在進入「只看我的最愛」模式時才抓
+  // 後端 norway 只能抓 ≥ 0.1% 的股票，當週掉出榜的最愛要從這裡撈舊資料（K 線 + 基本面）
+  // 注意：archive 是 dict 格式 {id: {…stock, _lastSeenDate}}，不是 array
+  const [archiveById, setArchiveById] = useState<Record<string, StockRow>>({})
+  const [archiveLoaded, setArchiveLoaded] = useState(false)
+  const loadArchive = useCallback(async () => {
+    if (archiveLoaded) return
+    try {
+      const resp = await fetch('/data/stocks_archive.json?t=' + Date.now())
+      if (!resp.ok) {
+        // 沒檔案不算錯（首次部署、後端尚未跑過）
+        setArchiveLoaded(true)
+        return
+      }
+      const raw = await resp.json()
+      if (raw && typeof raw === 'object') {
+        // 跑 normalizeRow 確保所有欄位（turnovers / volumes / fundamentals 等）都正確 parse
+        const out: Record<string, StockRow> = {}
+        for (const [sid, entry] of Object.entries(raw as Record<string, unknown>)) {
+          if (entry && typeof entry === 'object') {
+            out[sid] = normalizeRow(entry as Record<string, unknown>)
+          }
+        }
+        setArchiveById(out)
+      }
+    } catch {
+      // 網路失敗不致命，靜默忽略；ghost 會 fallback 到 id-only
+    } finally {
+      setArchiveLoaded(true)
+    }
+  }, [archiveLoaded])
+  useEffect(() => {
+    if (showFavoritesOnly) loadArchive()
+  }, [showFavoritesOnly, loadArchive])
+
   // Filter pipeline: stocks → search/sort → slider/chip → 只看最愛
   const filteredByFilters = useMemo(
     () => applyFilters(filteredStocks, filters),
@@ -165,14 +200,33 @@ export default function App() {
   )
   const visibleStocks = useMemo(() => {
     if (!showFavoritesOnly) return filteredByFilters
-    // 我的最愛模式：從原始 stocks（全部，含 < 0.1%）抓完整資料
-    // delta < 0.1 的標記 _isGhost = true 給 UI 灰底渲染
-    const allFavs = stocks.filter(s => fav.isFavorite(s.id))
-    return allFavs.map(s => ({
-      ...s,
-      _isGhost: s.delta < 0.1,  // 本週未入榜 = delta < 0.1%
-    }))
-  }, [stocks, filteredByFilters, showFavoritesOnly, fav])
+    // 我的最愛模式：本週入榜的從 stocks 抓；本週掉出榜的從 archive 抓（ghost）
+    // 後端 norway 只抓 ≥ 0.1% → 不在 stocks 裡的最愛標記為 ghost，並從 archive 補資料
+    const inWeekById = new Map(stocks.map(s => [s.id, s]))
+    const favIds = fav.favoritesArray
+    const result: StockRow[] = []
+    for (const fid of favIds) {
+      const cur = inWeekById.get(fid)
+      if (cur) {
+        result.push({ ...cur, _isGhost: false })
+      } else {
+        const arc = archiveById[fid]
+        if (arc) {
+          result.push({ ...arc, _isGhost: true })
+        } else {
+          // 沒在 archive 裡：可能 archive 還沒 load 完，或這是跨機器舊收藏
+          // 給最低限度 row（id + name placeholder），避免使用者看不到自己收藏的東西
+          result.push({
+            id: fid, name: fid, group: '', groupDesc: '',
+            holdingPct: 0, delta: 0, price: 0, marketCap: 0,
+            date: '', threeMonthReturn: null,
+            _isGhost: true,
+          })
+        }
+      }
+    }
+    return result
+  }, [stocks, filteredByFilters, showFavoritesOnly, fav.favoritesArray, archiveById])
 
   const toast = useCallback((message: string, type: Toast['type'] = 'info') => {
     const id = Math.random().toString(36).slice(2)
@@ -199,21 +253,20 @@ export default function App() {
     searchTimer.current = setTimeout(() => setSearchQuery(q), 200)
   }
 
-  // 我的最愛模式 → 重新 group 包含 ghost stocks（delta < 0.1 也顯示，按 groups 欄位歸類）
+  // 我的最愛模式 → 重新 group：本週入榜的從 stocks，掉出榜的從 archive（ghost）
   const effectiveGrouped = useMemo(() => {
     if (!showFavoritesOnly) return grouped
-    const result: Record<string, typeof stocks> = {}
-    const allFavs = stocks.filter(s => fav.isFavorite(s.id))
-    for (const s of allFavs) {
-      const stockWithGhost = { ...s, _isGhost: s.delta < 0.1 }
+    const result: Record<string, StockRow[]> = {}
+    // visibleStocks 已經把所有最愛（含 ghost）算好了，直接拿來分群
+    for (const s of visibleStocks) {
       const gs = (s.groups && s.groups.length > 0) ? s.groups : [s.group || '其他/未分類']
       for (const g of gs) {
         if (!result[g]) result[g] = []
-        result[g].push(stockWithGhost)
+        result[g].push(s)
       }
     }
     return result
-  }, [stocks, grouped, showFavoritesOnly, fav])
+  }, [grouped, showFavoritesOnly, visibleStocks])
 
   const groupEntries = Object.entries(effectiveGrouped)
   const stockCount = filteredStocks.length

@@ -39,6 +39,19 @@ function formatDeltaAmount(yi: number): string {
   return `${sign}${wan.toFixed(1)} 萬`
 }
 
+/** 把 lastSeenDate（YYYY-MM-DD）轉成「N 天前 / N 週前 / N 月前」 */
+function formatStaleness(lastSeenDate?: string): string {
+  if (!lastSeenDate) return ''
+  const last = new Date(lastSeenDate)
+  if (isNaN(last.getTime())) return ''
+  const days = Math.max(0, Math.floor((Date.now() - last.getTime()) / 86400000))
+  if (days < 7) return `${days} 天前`
+  const weeks = Math.floor(days / 7)
+  if (weeks < 8) return `${weeks} 週前`
+  const months = Math.floor(days / 30)
+  return `${months} 月前`
+}
+
 
 
 interface Props {
@@ -308,7 +321,7 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
                           {String(stock[col.key] ?? '—')}
                         </span>
                       )}
-                      {/* 在第一個欄位後加「本週未入榜」徽章 */}
+                      {/* 在第一個欄位後加「本週未入榜」徽章（含「資料 X 週前 · 不再更新」hint） */}
                       {isGhost && colIdx === 0 && (
                         <span
                           className="ml-2 text-[10px] px-1.5 py-0.5 rounded"
@@ -316,10 +329,21 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
                             background: 'var(--color-bg-600)',
                             color: 'var(--color-text-muted)',
                             border: '1px solid var(--color-border)',
+                            whiteSpace: 'nowrap',
                           }}
-                          title="本週大戶持股增幅未達 0.1%"
+                          title={
+                            `本週大戶持股增幅 < 0.1%，未進入當週榜單。\n` +
+                            `顯示的 K 線/基本面是上次入榜時的舊資料` +
+                            (stock._lastSeenDate ? `（${formatStaleness(stock._lastSeenDate)}）` : '') +
+                            `，不再每週更新。`
+                          }
                         >
                           本週未入榜
+                          {stock._lastSeenDate && (
+                            <span style={{ marginLeft: 4, opacity: 0.7 }}>
+                              · 資料 {formatStaleness(stock._lastSeenDate)}
+                            </span>
+                          )}
                         </span>
                       )}
                     </td>

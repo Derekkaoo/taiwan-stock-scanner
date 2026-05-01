@@ -30,6 +30,19 @@ function fmt(v: number | null, digits = 2) {
   return v.toFixed(digits)
 }
 
+/** 把 lastSeenDate（YYYY-MM-DD）轉成「N 天前 / N 週前 / N 月前」 */
+function formatStaleness(lastSeenDate?: string): string {
+  if (!lastSeenDate) return ''
+  const last = new Date(lastSeenDate)
+  if (isNaN(last.getTime())) return ''
+  const days = Math.max(0, Math.floor((Date.now() - last.getTime()) / 86400000))
+  if (days < 7) return `${days} 天前`
+  const weeks = Math.floor(days / 7)
+  if (weeks < 8) return `${weeks} 週前`
+  const months = Math.floor(days / 30)
+  return `${months} 月前`
+}
+
 /** 取這個股票在「本族群」下相關的細產業；若沒 subsByGroup 則 fallback 用全部 */
 function getSubsForGroup(stock: StockRow, groupName: string): string[] {
   if (stock.subsByGroup && stock.subsByGroup[groupName]) {
@@ -252,10 +265,21 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnP
                               background: 'var(--color-bg-600)',
                               color: 'var(--color-text-muted)',
                               border: '1px solid var(--color-border)',
+                              whiteSpace: 'nowrap',
                             }}
-                            title="本週大戶持股增幅未達 0.1%"
+                            title={
+                              `本週大戶持股增幅 < 0.1%，未進入當週榜單。\n` +
+                              `顯示的 K 線/基本面是上次入榜時的舊資料` +
+                              (stock._lastSeenDate ? `（${formatStaleness(stock._lastSeenDate)}）` : '') +
+                              `，不再每週更新。`
+                            }
                           >
                             本週未入榜
+                            {stock._lastSeenDate && (
+                              <span style={{ marginLeft: 4, opacity: 0.7 }}>
+                                · 資料 {formatStaleness(stock._lastSeenDate)}
+                              </span>
+                            )}
                           </span>
                         )}
                         {stockSubs.map(si => (

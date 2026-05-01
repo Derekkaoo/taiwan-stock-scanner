@@ -32,6 +32,8 @@ export interface StockRow {
   industry?: string           // TWSE 產業別（如「半導體業」）
   /** 內部 flag：本週未入榜的最愛（僅有 id，其他資料用預設值，UI 用灰底渲染）*/
   _isGhost?: boolean
+  /** 從 stocks_archive.json 帶來的「最後一次入榜日期」(YYYY-MM-DD)，給 ghost row UI 顯示「資料 X 週前」*/
+  _lastSeenDate?: string
 }
 
 export interface CompanyProfile {
