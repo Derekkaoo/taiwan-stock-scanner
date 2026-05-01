@@ -1,4 +1,0 @@
-# Cloudflare Pages SPA fallback
-# 所有非 API / 非靜態檔的路徑 → 回 index.html，由 React Router 接管
-# 注意：Pages Functions (/api/*) 永遠優先 match，這條只接 SPA route
-/*  /index.html  200
