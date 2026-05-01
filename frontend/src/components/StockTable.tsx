@@ -273,6 +273,48 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
           {stocks.map(stock => {
             const isExpanded = expandedId === stock.id
             const cached = getFromCache(stock.id)
+
+            // 本週未入榜的最愛 → 灰底簡化 row（不可展開、無 K 線、只能取消收藏）
+            if (stock._isGhost) {
+              return (
+                <tr
+                  key={stock.id}
+                  className="border-b"
+                  style={{
+                    borderColor: 'var(--color-border)',
+                    background: 'var(--color-bg-700)',
+                    opacity: 0.6,
+                  }}
+                >
+                  <td colSpan={COLS.length} className="px-3 py-2">
+                    <div className="flex items-center gap-3 text-xs" style={{ color: 'var(--color-text-secondary)' }}>
+                      {toggleFavorite && (
+                        <button
+                          onClick={() => toggleFavorite(stock.id)}
+                          style={{
+                            background: 'transparent',
+                            border: 'none',
+                            cursor: 'pointer',
+                            fontSize: 16,
+                            color: 'var(--color-accent-yellow)',
+                          }}
+                          title="取消收藏"
+                        >
+                          ⭐
+                        </button>
+                      )}
+                      <span className="font-mono tabular" style={{ color: 'var(--color-text-primary)' }}>
+                        {stock.id}
+                      </span>
+                      <span style={{ color: 'var(--color-text-muted)', fontStyle: 'italic' }}>
+                        本週未入榜（不符合大戶週增持條件）
+                      </span>
+                    </div>
+                  </td>
+                </tr>
+              )
+            }
+
             return (
               <>
                 <tr

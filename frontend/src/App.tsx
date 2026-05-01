@@ -12,6 +12,7 @@ import { FiltersBar } from './components/FiltersBar'
 import { GoogleSignInButton } from './components/GoogleSignInButton'
 import { StrategyManager } from './components/StrategyManager'
 import { AlertModal } from './components/AlertModal'
+import { VipPanel } from './components/VipPanel'
 import { applyFilters } from './utils/filters'
 import { GOOGLE_CLIENT_ID } from './config'
 
@@ -148,6 +149,8 @@ export default function App() {
   const [loginPrompt, setLoginPrompt] = useState(false)
   const [favLimitPrompt, setFavLimitPrompt] = useState(false)
   const [strategyLimitPrompt, setStrategyLimitPrompt] = useState(false)
+  // VIP 訂閱頁面（conditional render，不用 router）
+  const [showVip, setShowVip] = useState(false)
 
   // 我的最愛：登入後跨裝置同步；未登入點 ⭐ 跳「請先登入」；超過 10 筆跳 VIP
   const fav = useFavorites(auth.idToken, auth.user?.sub ?? null, {
@@ -162,7 +165,25 @@ export default function App() {
   )
   const visibleStocks = useMemo(() => {
     if (!showFavoritesOnly) return filteredByFilters
-    return filteredByFilters.filter(s => fav.isFavorite(s.id))
+    // 1. 本週入榜且為最愛
+    const inListFavs = filteredByFilters.filter(s => fav.isFavorite(s.id))
+    // 2. 本週未入榜的最愛 → 建立 ghost rows（_isGhost: true，UI 灰底渲染）
+    const inListIds = new Set(inListFavs.map(s => s.id))
+    const ghostIds = [...fav.favorites].filter(id => !inListIds.has(id))
+    const ghostRows: typeof filteredByFilters = ghostIds.map(id => ({
+      id,
+      name: '本週未入榜',
+      group: '其他/未分類',
+      groupDesc: '',
+      holdingPct: 0,
+      delta: 0,
+      price: 0,
+      marketCap: 0,
+      date: '',
+      threeMonthReturn: null,
+      _isGhost: true,
+    }))
+    return [...inListFavs, ...ghostRows]
   }, [filteredByFilters, showFavoritesOnly, fav])
 
   const toast = useCallback((message: string, type: Toast['type'] = 'info') => {
@@ -251,6 +272,11 @@ export default function App() {
       tooltip: '本週單一股票大股東持股週增幅最高值（非股價漲跌）',
     },
   ]
+
+  // VIP 訂閱頁面（conditional render，整個畫面替換主畫面）
+  if (showVip) {
+    return <VipPanel onBack={() => setShowVip(false)} />
+  }
 
   return (
     <div className="flex flex-col min-h-screen" style={{ background: 'var(--color-bg-800)' }}>
@@ -605,7 +631,7 @@ export default function App() {
           label: '了解 VIP 方案',
           onClick: () => {
             setFavLimitPrompt(false)
-            // TODO: 導向 VIP 頁面（尚未實作）
+            setShowVip(true)
           },
         }}
         secondary={{
@@ -631,7 +657,7 @@ export default function App() {
           label: '了解 VIP 方案',
           onClick: () => {
             setStrategyLimitPrompt(false)
-            // TODO: 導向 VIP 頁面（尚未實作）
+            setShowVip(true)
           },
         }}
         secondary={{
