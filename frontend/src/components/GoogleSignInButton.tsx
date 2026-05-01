@@ -6,9 +6,11 @@ import type { GoogleUser } from '../hooks/useGoogleAuth'
  *
  * 已登入：頭像 + 名字 + 登出
  * 未登入：自訂 dark-themed 按鈕（跟整個 app 配色一致）
- *   底層仍用 Google GIS 官方 renderButton（隱藏在 absolute 框內）
- *   我們的按鈕點下去會程式呼叫 hidden 那顆的 click，
- *   因此符合 Google 的 GIS guideline（按鈕功能未被取代，只是 UI 換皮）
+ *
+ * 實作技巧（避免 GIS 按鈕醜但又要保留官方點擊行為）：
+ *   - 真正的 Google 按鈕渲染在 wrapper，opacity 0.01 = 視覺看不到但 click 仍 work
+ *   - 我們的視覺 overlay 蓋上去，pointer-events: none → 點擊穿透到下面真按鈕
+ *   - 兩者寬高完全重疊
  */
 interface Props {
   user: GoogleUser | null
@@ -16,38 +18,30 @@ interface Props {
   signOut: () => void
 }
 
+const BUTTON_WIDTH = 180
+const BUTTON_HEIGHT = 36
+
 export function GoogleSignInButton({ user, isReady, signOut }: Props) {
-  const hiddenBtnRef = useRef<HTMLDivElement>(null)
+  const realBtnRef = useRef<HTMLDivElement>(null)
   const [hover, setHover] = useState(false)
 
-  // 渲染隱藏的 Google 官方按鈕 (即使視覺隱藏，仍是 functional click target)
   useEffect(() => {
     if (user) return
     if (!isReady) return
-    if (!hiddenBtnRef.current) return
+    if (!realBtnRef.current) return
     if (!window.google?.accounts?.id) return
 
-    hiddenBtnRef.current.innerHTML = ''
-    window.google.accounts.id.renderButton(hiddenBtnRef.current, {
+    realBtnRef.current.innerHTML = ''
+    window.google.accounts.id.renderButton(realBtnRef.current, {
       type: 'standard',
       theme: 'filled_black',
       size: 'large',
       text: 'signin_with',
-      shape: 'rectangular',
-      logo_alignment: 'left',
-      width: 240,
+      shape: 'pill',
+      logo_alignment: 'center',
+      width: BUTTON_WIDTH,
     })
   }, [user, isReady])
-
-  const triggerGoogleClick = () => {
-    if (!hiddenBtnRef.current) return
-    // GIS 渲染後 DOM 結構：div > div[role="button"]
-    const realBtn =
-      hiddenBtnRef.current.querySelector<HTMLElement>('div[role="button"]') ||
-      hiddenBtnRef.current.querySelector<HTMLElement>('button') ||
-      (hiddenBtnRef.current.firstElementChild as HTMLElement | null)
-    realBtn?.click()
-  }
 
   if (user) {
     return (
@@ -103,41 +97,53 @@ export function GoogleSignInButton({ user, isReady, signOut }: Props) {
     )
   }
 
-  // 未登入：自訂按鈕 + 隱藏 Google 真按鈕
+  // 未登入：overlay 結構
   return (
-    <div className="relative">
-      {/* 真正的 Google 按鈕，視覺隱藏但 click 可達 */}
+    <div
+      style={{
+        position: 'relative',
+        display: 'inline-block',
+        width: BUTTON_WIDTH,
+        height: BUTTON_HEIGHT,
+        cursor: isReady ? 'pointer' : 'wait',
+      }}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      {/* 真正的 Google 按鈕：opacity 接近 0 但 click 仍 work */}
       <div
-        ref={hiddenBtnRef}
+        ref={realBtnRef}
         style={{
           position: 'absolute',
-          opacity: 0,
-          pointerEvents: 'none',
-          width: 1,
-          height: 1,
-          overflow: 'hidden',
+          inset: 0,
+          opacity: 0.01,
         }}
-        aria-hidden="true"
       />
-      {/* 我們自己的漂亮按鈕 */}
-      <button
-        type="button"
-        onClick={triggerGoogleClick}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-        disabled={!isReady}
-        className="flex items-center gap-2 px-3 py-1 rounded-md border transition-all"
+
+      {/* 視覺 overlay：pointer-events: none → 點擊穿透到下面 */}
+      <div
         style={{
+          position: 'absolute',
+          inset: 0,
+          pointerEvents: 'none',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: 8,
+          padding: '0 14px',
           background: hover ? 'var(--color-bg-600)' : 'transparent',
+          border: '1px solid',
           borderColor: hover ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+          borderRadius: 9999,
           color: 'var(--color-text-secondary)',
           fontSize: 12,
           fontWeight: 500,
-          cursor: isReady ? 'pointer' : 'not-allowed',
+          transition: 'all 0.15s',
           opacity: isReady ? 1 : 0.5,
+          userSelect: 'none',
         }}
       >
-        {/* Google G logo (官方多色版 SVG) */}
+        {/* Google G logo (官方 4 色) */}
         <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
           <path
             fill="#4285F4"
@@ -157,7 +163,7 @@ export function GoogleSignInButton({ user, isReady, signOut }: Props) {
           />
         </svg>
         <span>{isReady ? '使用 Google 登入' : '載入中…'}</span>
-      </button>
+      </div>
     </div>
   )
 }
