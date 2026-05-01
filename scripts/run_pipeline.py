@@ -937,42 +937,77 @@ def run():
                 len(archive), archive_added, archive_updated)
 
     # 按族群拆分 klines 檔（lazy-load 用），不再寫單一 klines.json
+    # Plan E：保留 archive 內歷史股票的 K 線（不在當週榜單，但有最愛收藏會用到）
     import urllib.parse
     klines_dir = DATA_DIR / "klines"
-    # 清空舊目錄，避免累積已被移除的族群檔
+
+    # 1. 先讀進已存在的 klines/<group>.json（給 archive 股票保留 K 線用）
+    existing_klines_by_group: dict[str, dict] = {}
+    if klines_dir.exists():
+        for f in klines_dir.glob("*.json"):
+            try:
+                with open(f, "r", encoding="utf-8") as fp:
+                    existing_klines_by_group[f.stem] = json.load(fp)
+            except Exception as e:
+                logger.warning("讀舊 klines/%s 失敗：%s", f.name, e)
+
+    # 2. 清空舊目錄，準備重寫
     if klines_dir.exists():
         for old_file in klines_dir.glob("*.json"):
             old_file.unlink()
     klines_dir.mkdir(parents=True, exist_ok=True)
 
-    # 蒐集每個族群應包含的股票 → klines
-    group_to_stocks = {}
-    for s_row in stocks:
-        for g in s_row.get("groups", [s_row.get("group", "")]):
+    # 3. 從 archive 蒐集每個族群應包含的股票（archive 已 union 當週 + 歷史）
+    group_to_stocks: dict[str, set[str]] = {}
+    for sid, arc_row in archive.items():
+        for g in arc_row.get("groups", [arc_row.get("group", "")]):
             if not g:
                 continue
-            group_to_stocks.setdefault(g, set()).add(s_row["id"])
+            group_to_stocks.setdefault(g, set()).add(sid)
 
+    # 4. 寫每個族群的 klines/<group>.json
+    #    當週入榜（在 klines dict 內）→ 用 fresh K 線
+    #    archive-only（不在 klines dict）→ 從 existing_klines_by_group 撈舊 K 線
     total_kb = 0
+    archive_kept = 0   # log 用：保留了幾支 archive 舊 K 線
     for group_name, sid_set in group_to_stocks.items():
-        subset = {sid: klines[sid] for sid in sid_set if sid in klines}
+        # 檔名用原始中文（只把 / 換成 _ 避開路徑分隔符）
+        safe = group_name.replace("/", "_").replace("\\", "_")
+        old_data = existing_klines_by_group.get(safe, {})
+
+        subset = {}
+        for sid in sid_set:
+            if sid in klines:
+                subset[sid] = klines[sid]                # fresh
+            elif sid in old_data:
+                subset[sid] = old_data[sid]              # 保留舊 K 線
+                archive_kept += 1
         if not subset:
             continue
-        # 檔名用原始中文（只把 / 換成 _ 避開路徑分隔符）
-        # 這樣 Vite/Firebase 的 URL 解碼才能對應到檔案
-        safe = group_name.replace("/", "_").replace("\\", "_")
         out_path = klines_dir / f"{safe}.json"
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(subset, f, ensure_ascii=False)
         total_kb += out_path.stat().st_size // 1024
-    logger.info("klines/：拆分為 %d 個族群檔，共 %d KB", len(group_to_stocks), total_kb)
+    logger.info("klines/：拆分為 %d 個族群檔，共 %d KB（保留 archive 舊 K 線 %d 筆）",
+                len(group_to_stocks), total_kb, archive_kept)
 
     # 向後相容：保留一個完整的 klines.json（供 StockTable 全部展開用）
-    # 若擔心頻寬可日後再移除，先保留
-    with open(DATA_DIR / "klines.json", "w", encoding="utf-8") as f:
-        json.dump(klines, f, ensure_ascii=False)
-    size_kb = (DATA_DIR / "klines.json").stat().st_size // 1024
-    logger.info("klines.json（備援）：%d 支，%d KB", len(klines), size_kb)
+    # Plan E：union 當週 fresh klines + 已存的 klines.json（給 archive 股票）
+    klines_full = {}
+    old_klines_full_path = DATA_DIR / "klines.json"
+    if old_klines_full_path.exists():
+        try:
+            with open(old_klines_full_path, "r", encoding="utf-8") as f:
+                klines_full = json.load(f)
+        except Exception as e:
+            logger.warning("讀舊 klines.json 失敗，重建：%s", e)
+            klines_full = {}
+    # 用當週 fresh 覆蓋同 id；不在當週的保留舊資料
+    klines_full.update(klines)
+    with open(old_klines_full_path, "w", encoding="utf-8") as f:
+        json.dump(klines_full, f, ensure_ascii=False)
+    size_kb = old_klines_full_path.stat().st_size // 1024
+    logger.info("klines.json（備援，含歷史 union）：%d 支，%d KB", len(klines_full), size_kb)
 
     group_counts = Counter(g for s in stocks for g in s["groups"])
     multi = sum(1 for s in stocks if len(s["groups"]) > 1)
