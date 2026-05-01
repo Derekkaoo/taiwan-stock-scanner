@@ -648,6 +648,13 @@ def run():
 
     holdings = fetch_holdings()
     if not holdings:
+        # 通知 Telegram（不中止流程，但讓你知道大戶資料抓取失敗了）
+        _notify_telegram(
+            "⚠️ <b>大戶持股抓取失敗</b>\n"
+            "🔴 norway.twsthr.info 沒回資料（可能 403 / 結構變動）\n"
+            f"⏱ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+            "\n👉 將使用舊 stocks.json 繼續，但大戶資料會逾期"
+        )
         old_path = DATA_DIR / "stocks.json"
         if old_path.exists():
             with open(old_path, encoding="utf-8") as f:
@@ -655,6 +662,7 @@ def run():
             logger.warning("使用舊資料：%d 筆", len(holdings))
         else:
             logger.error("無法取得資料，中止")
+            _notify_failure("Step 1 - fetch_holdings", RuntimeError("無資料且無 fallback"))
             return
 
     stock_ids = list({
@@ -888,6 +896,37 @@ def run():
 
     logger.info("Pipeline 完成！")
 
+    # === 成功通知（Telegram）===
+    _notify_telegram(
+        "✅ <b>Pipeline 成功</b>\n"
+        f"📊 持股名單：<code>{len(holdings)}</code> 支\n"
+        f"📅 資料日期：<code>{holdings[0].get('date', 'N/A') if holdings else 'N/A'}</code>\n"
+        f"🏷️ 族群數：<code>{len(group_counts)}</code>\n"
+        f"⏱ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+    )
+
+
+def _notify_telegram(msg: str):
+    """送 telegram 訊息（包 try/except，發送失敗不影響 pipeline）"""
+    try:
+        sys.path.insert(0, str(Path(__file__).parent))
+        from send_telegram import send_message
+        send_message(msg)
+    except Exception as e:
+        logger.warning("Telegram 通知失敗（不影響 pipeline）：%s", e)
+
+
+def _notify_failure(stage: str, error: Exception):
+    """Pipeline 失敗時通知 Telegram"""
+    err_str = str(error)[:300]
+    _notify_telegram(
+        "❌ <b>Pipeline 失敗</b>\n"
+        f"🔴 階段：<code>{stage}</code>\n"
+        f"📝 錯誤：<code>{err_str}</code>\n"
+        f"⏱ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
+        "\n👉 請檢查 GitHub Actions log 或 daily_screener.log"
+    )
+
 
 def load_existing_klines():
     """從 frontend/public/data/klines.json 載入既有 K 線（給 --skip-klines 用）"""
@@ -906,4 +945,9 @@ def load_existing_klines():
 
 
 if __name__ == "__main__":
-    run()
+    try:
+        run()
+    except Exception as e:
+        logger.exception("Pipeline 未預期錯誤")
+        _notify_failure("Pipeline 未預期錯誤", e)
+        sys.exit(1)
