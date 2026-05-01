@@ -8,6 +8,11 @@ import {
 } from '../api/strategies'
 import type { Filters } from '../types'
 
+interface UseStrategiesOptions {
+  /** 已達上限（5）時 → 觸發此 callback（用來顯示「升級 VIP」modal） */
+  onLimitExceeded?: () => void
+}
+
 /**
  * useStrategies — 管理已登入使用者的篩選策略列表
  *
@@ -15,7 +20,10 @@ import type { Filters } from '../types'
  * - idToken 改變時會重抓
  * - 提供 create / rename / overwrite / remove 函式
  */
-export function useStrategies(idToken: string | null) {
+export function useStrategies(
+  idToken: string | null,
+  opts?: UseStrategiesOptions,
+) {
   const [strategies, setStrategies] = useState<Strategy[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -50,11 +58,16 @@ export function useStrategies(idToken: string | null) {
         setStrategies(prev => [s, ...prev])
         return s
       } catch (e) {
-        setError(e instanceof Error ? e.message : 'create failed')
+        const msg = e instanceof Error ? e.message : 'create failed'
+        if (msg === 'limit_exceeded') {
+          opts?.onLimitExceeded?.()
+        } else {
+          setError(msg)
+        }
         return null
       }
     },
-    [idToken],
+    [idToken, opts],
   )
 
   const rename = useCallback(

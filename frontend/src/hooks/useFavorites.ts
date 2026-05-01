@@ -3,15 +3,26 @@ import { fetchFavorites, addFavorite, removeFavorite, getUserToken } from '../ap
 
 const MIGRATED_KEY_PREFIX = 'stock-scanner-favs-migrated-'
 
+interface UseFavoritesOptions {
+  /** 未登入時點 ⭐ 加入最愛 → 觸發此 callback（用來顯示「請先登入」modal） */
+  onLoginRequired?: () => void
+  /** 已達上限（10）時 → 觸發此 callback（用來顯示「升級 VIP」modal） */
+  onLimitExceeded?: () => void
+}
+
 /**
  * useFavorites
- *  - 未登入：用裝置 UUID（localStorage），裝置綁定
+ *  - 未登入：可看現有 UUID 收藏，但點 ⭐ 加新的會跳「請先登入」
  *  - 已登入：用 Google ID Token，跨裝置同步
  *  - 切換登入狀態時自動重抓
  *  - 首次登入到某個 Google 帳號時，把當下 UUID 收藏自動 merge 上雲
- *  - 樂觀更新（optimistic update）：點 ⭐ 立即改 UI，背景送 API
+ *  - 樂觀更新：點 ⭐ 立即改 UI，背景送 API；失敗 rollback
  */
-export function useFavorites(idToken: string | null, userSub: string | null) {
+export function useFavorites(
+  idToken: string | null,
+  userSub: string | null,
+  opts?: UseFavoritesOptions,
+) {
   const [favorites, setFavorites] = useState<Set<string>>(new Set())
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -88,6 +99,12 @@ export function useFavorites(idToken: string | null, userSub: string | null) {
   const toggle = useCallback(async (stockId: string) => {
     const wasIn = favorites.has(stockId)
 
+    // 未登入 + 嘗試新增 → 跳「請先登入」（不做任何動作）
+    if (!wasIn && !idToken) {
+      opts?.onLoginRequired?.()
+      return
+    }
+
     // 樂觀更新
     setFavorites(prev => {
       const next = new Set(prev)
@@ -110,9 +127,14 @@ export function useFavorites(idToken: string | null, userSub: string | null) {
         else next.delete(stockId)
         return next
       })
-      setError(e instanceof Error ? e.message : 'Toggle 失敗')
+      const msg = e instanceof Error ? e.message : 'Toggle 失敗'
+      if (msg === 'limit_exceeded') {
+        opts?.onLimitExceeded?.()
+      } else {
+        setError(msg)
+      }
     }
-  }, [favorites, idToken])
+  }, [favorites, idToken, opts])
 
   // 觸發 token 確認（getUserToken 也會自己生成）
   useEffect(() => { getUserToken() }, [])

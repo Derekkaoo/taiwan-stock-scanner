@@ -20,6 +20,7 @@ interface Props {
   idToken: string | null
   filters: Filters
   setFilters: (f: Filters) => void
+  onLimitExceeded?: () => void
 }
 
 /**
@@ -90,9 +91,9 @@ const styles = {
   } as React.CSSProperties,
 }
 
-export function StrategyManager({ idToken, filters, setFilters }: Props) {
+export function StrategyManager({ idToken, filters, setFilters, onLimitExceeded }: Props) {
   const { strategies, loading, error, create, rename, overwrite, remove } =
-    useStrategies(idToken)
+    useStrategies(idToken, { onLimitExceeded })
 
   const [selectedId, setSelectedId] = useState<number | null>(null)
   const [mode, setMode] = useState<'idle' | 'naming' | 'renaming'>('idle')

@@ -11,6 +11,7 @@ import { Footer } from './components/Footer'
 import { FiltersBar } from './components/FiltersBar'
 import { GoogleSignInButton } from './components/GoogleSignInButton'
 import { StrategyManager } from './components/StrategyManager'
+import { AlertModal } from './components/AlertModal'
 import { applyFilters } from './utils/filters'
 import { GOOGLE_CLIENT_ID } from './config'
 
@@ -143,8 +144,16 @@ export default function App() {
   // Google 登入
   const auth = useGoogleAuth({ clientId: GOOGLE_CLIENT_ID })
 
-  // 我的最愛：登入後跨裝置同步（用 Google sub 當 user_token），未登入用裝置 UUID
-  const fav = useFavorites(auth.idToken, auth.user?.sub ?? null)
+  // 限制提示 modal state
+  const [loginPrompt, setLoginPrompt] = useState(false)
+  const [favLimitPrompt, setFavLimitPrompt] = useState(false)
+  const [strategyLimitPrompt, setStrategyLimitPrompt] = useState(false)
+
+  // 我的最愛：登入後跨裝置同步；未登入點 ⭐ 跳「請先登入」；超過 10 筆跳 VIP
+  const fav = useFavorites(auth.idToken, auth.user?.sub ?? null, {
+    onLoginRequired: () => setLoginPrompt(true),
+    onLimitExceeded: () => setFavLimitPrompt(true),
+  })
 
   // Filter pipeline: stocks → search/sort → slider/chip → 只看最愛
   const filteredByFilters = useMemo(
@@ -439,6 +448,7 @@ export default function App() {
                 idToken={auth.idToken}
                 filters={filters}
                 setFilters={setFilters}
+                onLimitExceeded={() => setStrategyLimitPrompt(true)}
               />
             </div>
           )}
@@ -550,6 +560,77 @@ export default function App() {
       </main>
 
       <Footer />
+
+      {/* 提示 modal：未登入點 ⭐ */}
+      <AlertModal
+        open={loginPrompt}
+        onClose={() => setLoginPrompt(false)}
+        icon="login"
+        title="請先登入"
+        message={
+          <>
+            登入 Google 帳號後即可使用「我的最愛」功能，
+            <br />
+            還能跨裝置同步收藏與篩選策略 ✨
+          </>
+        }
+        primary={{
+          label: '我知道了',
+          onClick: () => setLoginPrompt(false),
+        }}
+      />
+
+      {/* 提示 modal：收藏超過 10 筆 */}
+      <AlertModal
+        open={favLimitPrompt}
+        onClose={() => setFavLimitPrompt(false)}
+        icon="crown"
+        title="已達到收藏上限"
+        message={
+          <>
+            目前免費版可收藏 10 支股票，
+            <br />
+            如需收藏更多，請升級至 VIP 方案。
+          </>
+        }
+        primary={{
+          label: '了解 VIP 方案',
+          onClick: () => {
+            setFavLimitPrompt(false)
+            // TODO: 導向 VIP 頁面（尚未實作）
+          },
+        }}
+        secondary={{
+          label: '稍後再說',
+          onClick: () => setFavLimitPrompt(false),
+        }}
+      />
+
+      {/* 提示 modal：策略超過 5 筆 */}
+      <AlertModal
+        open={strategyLimitPrompt}
+        onClose={() => setStrategyLimitPrompt(false)}
+        icon="crown"
+        title="已達到策略上限"
+        message={
+          <>
+            目前免費版可儲存 5 組篩選策略，
+            <br />
+            如需儲存更多，請升級至 VIP 方案。
+          </>
+        }
+        primary={{
+          label: '了解 VIP 方案',
+          onClick: () => {
+            setStrategyLimitPrompt(false)
+            // TODO: 導向 VIP 頁面（尚未實作）
+          },
+        }}
+        secondary={{
+          label: '稍後再說',
+          onClick: () => setStrategyLimitPrompt(false),
+        }}
+      />
 
       <div className="fixed bottom-5 right-5 z-[9999] flex flex-col gap-2">
         {toasts.map(t => (

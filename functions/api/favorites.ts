@@ -11,10 +11,16 @@
  */
 
 import { verifyGoogleIdToken } from '../_lib/google-auth'
+import { LIMITS, ERROR_LIMIT_EXCEEDED, isWhitelisted } from '../_lib/limits'
 
 interface Env {
   DB: D1Database
   GOOGLE_CLIENT_ID: string
+}
+
+interface UserContext {
+  token: string
+  email?: string
 }
 
 function getRawToken(request: Request): string | null {
@@ -24,28 +30,27 @@ function getRawToken(request: Request): string | null {
 }
 
 /**
- * 把 raw bearer 轉成 D1 用的 user_token：
- *   - JWT (有 2 個 .)        → 驗簽成功用 `google:<sub>`，失敗回 null（拒絕）
- *   - 其他（純 UUID/字串）   → 原樣使用（舊裝置綁定流程）
+ * 把 raw bearer 轉成 user context：
+ *   - JWT (有 2 個 .)        → 驗簽成功用 `google:<sub>` + email
+ *   - 其他（純 UUID/字串）   → token 原樣使用（舊裝置綁定流程，無 email）
+ *   - 失敗 / 缺 token        → null
  */
-async function resolveUserToken(
+async function resolveUserContext(
   request: Request,
   env: Env,
-): Promise<string | null> {
+): Promise<UserContext | null> {
   const raw = getRawToken(request)
   if (!raw) return null
-  // JWT 偵測：3 段 base64url 用 . 分隔
   if (raw.split('.').length === 3) {
     if (!env.GOOGLE_CLIENT_ID) return null
     try {
       const payload = await verifyGoogleIdToken(raw, env.GOOGLE_CLIENT_ID)
-      return `google:${payload.sub}`
+      return { token: `google:${payload.sub}`, email: payload.email }
     } catch {
       return null
     }
   }
-  // UUID flow（向下相容）
-  return raw
+  return { token: raw }
 }
 
 function isValidStockId(s: unknown): s is string {
@@ -72,12 +77,12 @@ export const onRequestOptions: PagesFunction<Env> = async () => {
 
 // GET：列出該使用者所有最愛
 export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
-  const token = await resolveUserToken(request, env)
-  if (!token) return jsonResponse({ error: 'Missing or invalid token' }, 401)
+  const ctx = await resolveUserContext(request, env)
+  if (!ctx) return jsonResponse({ error: 'Missing or invalid token' }, 401)
 
   const { results } = await env.DB
     .prepare('SELECT stock_id, added_at FROM favorites WHERE user_token = ? ORDER BY added_at DESC')
-    .bind(token)
+    .bind(ctx.token)
     .all<{ stock_id: string; added_at: number }>()
 
   return jsonResponse({
@@ -88,8 +93,8 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
 
 // POST：加進最愛
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
-  const token = await resolveUserToken(request, env)
-  if (!token) return jsonResponse({ error: 'Missing or invalid token' }, 401)
+  const ctx = await resolveUserContext(request, env)
+  if (!ctx) return jsonResponse({ error: 'Missing or invalid token' }, 401)
 
   let body: { stock_id?: unknown }
   try {
@@ -102,9 +107,31 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     return jsonResponse({ error: 'Invalid stock_id' }, 400)
   }
 
+  // 上限檢查（白名單繞過）：先看是否已收藏，沒收藏才檢查上限
+  if (!isWhitelisted(ctx.email)) {
+    // 先確認該股票是不是已經在最愛（已存在 → 視為 idempotent OK，不算超限）
+    const exists = await env.DB
+      .prepare('SELECT 1 AS found FROM favorites WHERE user_token = ? AND stock_id = ? LIMIT 1')
+      .bind(ctx.token, body.stock_id)
+      .first<{ found: number }>()
+    if (!exists) {
+      const cntRow = await env.DB
+        .prepare('SELECT COUNT(*) AS cnt FROM favorites WHERE user_token = ?')
+        .bind(ctx.token)
+        .first<{ cnt: number }>()
+      const cnt = cntRow?.cnt ?? 0
+      if (cnt >= LIMITS.FAVORITES) {
+        return jsonResponse(
+          { error: ERROR_LIMIT_EXCEEDED, limit: LIMITS.FAVORITES, type: 'favorites' },
+          403,
+        )
+      }
+    }
+  }
+
   await env.DB
     .prepare('INSERT OR IGNORE INTO favorites (user_token, stock_id) VALUES (?, ?)')
-    .bind(token, body.stock_id)
+    .bind(ctx.token, body.stock_id)
     .run()
 
   return jsonResponse({ ok: true, stock_id: body.stock_id })
@@ -112,8 +139,8 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
 // DELETE：從最愛移除
 export const onRequestDelete: PagesFunction<Env> = async ({ request, env }) => {
-  const token = await resolveUserToken(request, env)
-  if (!token) return jsonResponse({ error: 'Missing or invalid token' }, 401)
+  const ctx = await resolveUserContext(request, env)
+  if (!ctx) return jsonResponse({ error: 'Missing or invalid token' }, 401)
 
   let body: { stock_id?: unknown }
   try {
@@ -128,7 +155,7 @@ export const onRequestDelete: PagesFunction<Env> = async ({ request, env }) => {
 
   await env.DB
     .prepare('DELETE FROM favorites WHERE user_token = ? AND stock_id = ?')
-    .bind(token, body.stock_id)
+    .bind(ctx.token, body.stock_id)
     .run()
 
   return jsonResponse({ ok: true, stock_id: body.stock_id })

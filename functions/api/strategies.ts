@@ -17,6 +17,7 @@
  */
 
 import { authenticateRequest, GoogleIdTokenPayload } from '../_lib/google-auth'
+import { LIMITS, ERROR_LIMIT_EXCEEDED, isWhitelisted } from '../_lib/limits'
 
 interface Env {
   DB: D1Database
@@ -129,6 +130,21 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   }
   if (filtersJson.length > 32 * 1024) {
     return jsonResponse({ error: 'filters too large' }, 400)
+  }
+
+  // 上限檢查（白名單繞過）
+  if (!isWhitelisted(user.email)) {
+    const cntRow = await env.DB
+      .prepare('SELECT COUNT(*) AS cnt FROM strategies WHERE user_uid = ?')
+      .bind(user.sub)
+      .first<{ cnt: number }>()
+    const cnt = cntRow?.cnt ?? 0
+    if (cnt >= LIMITS.STRATEGIES) {
+      return jsonResponse(
+        { error: ERROR_LIMIT_EXCEEDED, limit: LIMITS.STRATEGIES, type: 'strategies' },
+        403,
+      )
+    }
   }
 
   const insertRes = await env.DB
