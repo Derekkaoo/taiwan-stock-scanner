@@ -1,17 +1,21 @@
 /**
  * Cloudflare Pages Function: /api/favorites
  *
- * GET    /api/favorites         → 回傳該 user 的所有最愛 stock_id 陣列
- * POST   /api/favorites         → body: {"stock_id": "2330"}，加進最愛
- * DELETE /api/favorites         → body: {"stock_id": "2330"}，從最愛移除
+ * GET    /api/favorites
+ * POST   /api/favorites    body: {"stock_id": "2330"}
+ * DELETE /api/favorites    body: {"stock_id": "2330"}
  *
- * 認證：Authorization: Bearer <token>
- *   - 若是 Google ID Token (3-part JWT) → 後端驗簽 → user_token = `google:<sub>` （跨裝置同步）
- *   - 若是 UUID（不含 .）→ user_token = bearer 原值 （裝置綁定，舊版相容）
+ * Auth: Authorization: Bearer <token>
+ *   - Google ID Token (3-part JWT) -> verify -> user_token = google:<sub>
+ *   - UUID (no dot)                -> user_token = bearer raw (legacy device-bound)
  */
 
 import { verifyGoogleIdToken } from '../_lib/google-auth'
-import { LIMITS, ERROR_LIMIT_EXCEEDED, isWhitelisted } from '../_lib/limits'
+import {
+  ERROR_LIMIT_EXCEEDED,
+  exceedsFavoritesLimit,
+  getUserAccess,
+} from '../_lib/access'
 
 interface Env {
   DB: D1Database
@@ -19,8 +23,12 @@ interface Env {
 }
 
 interface UserContext {
+  /** D1 user_token: google:<sub> or raw uuid */
   token: string
+  /** Google email (whitelist matching), undefined for UUID user */
   email?: string
+  /** Google sub (D1 user_status PK), undefined for UUID user */
+  sub?: string
 }
 
 function getRawToken(request: Request): string | null {
@@ -29,12 +37,6 @@ function getRawToken(request: Request): string | null {
   return match ? match[1] : null
 }
 
-/**
- * 把 raw bearer 轉成 user context：
- *   - JWT (有 2 個 .)        → 驗簽成功用 `google:<sub>` + email
- *   - 其他（純 UUID/字串）   → token 原樣使用（舊裝置綁定流程，無 email）
- *   - 失敗 / 缺 token        → null
- */
 async function resolveUserContext(
   request: Request,
   env: Env,
@@ -45,7 +47,11 @@ async function resolveUserContext(
     if (!env.GOOGLE_CLIENT_ID) return null
     try {
       const payload = await verifyGoogleIdToken(raw, env.GOOGLE_CLIENT_ID)
-      return { token: `google:${payload.sub}`, email: payload.email }
+      return {
+        token: `google:${payload.sub}`,
+        email: payload.email,
+        sub: payload.sub,
+      }
     } catch {
       return null
     }
@@ -70,12 +76,10 @@ function jsonResponse(body: unknown, status = 200) {
   })
 }
 
-// CORS preflight
 export const onRequestOptions: PagesFunction<Env> = async () => {
   return new Response(null, { status: 204, headers: CORS_HEADERS })
 }
 
-// GET：列出該使用者所有最愛
 export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   const ctx = await resolveUserContext(request, env)
   if (!ctx) return jsonResponse({ error: 'Missing or invalid token' }, 401)
@@ -91,7 +95,6 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   })
 }
 
-// POST：加進最愛
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   const ctx = await resolveUserContext(request, env)
   if (!ctx) return jsonResponse({ error: 'Missing or invalid token' }, 401)
@@ -107,9 +110,8 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     return jsonResponse({ error: 'Invalid stock_id' }, 400)
   }
 
-  // 上限檢查（白名單繞過）：先看是否已收藏，沒收藏才檢查上限
-  if (!isWhitelisted(ctx.email)) {
-    // 先確認該股票是不是已經在最愛（已存在 → 視為 idempotent OK，不算超限）
+  const access = await getUserAccess(ctx.sub ?? null, ctx.email ?? null, env.DB)
+  if (access.limits.favorites !== null) {
     const exists = await env.DB
       .prepare('SELECT 1 AS found FROM favorites WHERE user_token = ? AND stock_id = ? LIMIT 1')
       .bind(ctx.token, body.stock_id)
@@ -120,9 +122,14 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
         .bind(ctx.token)
         .first<{ cnt: number }>()
       const cnt = cntRow?.cnt ?? 0
-      if (cnt >= LIMITS.FAVORITES) {
+      if (exceedsFavoritesLimit(access, cnt)) {
         return jsonResponse(
-          { error: ERROR_LIMIT_EXCEEDED, limit: LIMITS.FAVORITES, type: 'favorites' },
+          {
+            error: ERROR_LIMIT_EXCEEDED,
+            limit: access.limits.favorites,
+            type: 'favorites',
+            tier: access.tier,
+          },
           403,
         )
       }
@@ -137,7 +144,6 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   return jsonResponse({ ok: true, stock_id: body.stock_id })
 }
 
-// DELETE：從最愛移除
 export const onRequestDelete: PagesFunction<Env> = async ({ request, env }) => {
   const ctx = await resolveUserContext(request, env)
   if (!ctx) return jsonResponse({ error: 'Missing or invalid token' }, 401)

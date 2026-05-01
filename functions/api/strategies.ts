@@ -1,23 +1,22 @@
 /**
  * Cloudflare Pages Function: /api/strategies
  *
- * 認證：Authorization: Bearer <Google ID Token>
+ * Auth: Authorization: Bearer <Google ID Token>
  *
- * GET    /api/strategies            → 列出登入者所有策略
- * POST   /api/strategies            → body: {"name": "...", "filters": {...}} → 新增策略
- * PUT    /api/strategies/:id        → body: {"name"?, "filters"?} → 更新策略
- * DELETE /api/strategies/:id        → 刪除策略
+ * GET    /api/strategies           list user strategies
+ * POST   /api/strategies           body: {"name", "filters"} -> create
+ * PUT    /api/strategies/:id       body: {"name"?, "filters"?} -> update (in [id].ts)
+ * DELETE /api/strategies/:id       delete (in [id].ts)
  *
- * 所有 endpoint 都會驗 ID Token 並用 sub claim 當 user_uid。
- *
- * 注意：Pages Functions 的 dynamic route 是用檔名 [id].ts 處理，
- * 但這裡我們把 list/create 跟 update/delete 拆兩個檔案：
- *   - functions/api/strategies.ts        → GET / POST
- *   - functions/api/strategies/[id].ts   → PUT / DELETE
+ * All endpoints verify ID Token and use sub claim as user_uid.
  */
 
 import { authenticateRequest, GoogleIdTokenPayload } from '../_lib/google-auth'
-import { LIMITS, ERROR_LIMIT_EXCEEDED, isWhitelisted } from '../_lib/limits'
+import {
+  ERROR_LIMIT_EXCEEDED,
+  exceedsStrategiesLimit,
+  getUserAccess,
+} from '../_lib/access'
 
 interface Env {
   DB: D1Database
@@ -79,12 +78,10 @@ async function authOrError(
   }
 }
 
-// CORS preflight
 export const onRequestOptions: PagesFunction<Env> = async () => {
   return new Response(null, { status: 204, headers: CORS_HEADERS })
 }
 
-// GET：列出該使用者所有策略
 export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   const result = await authOrError(request, env)
   if ('error' in result) return result.error
@@ -102,7 +99,6 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   })
 }
 
-// POST：新增策略
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   const result = await authOrError(request, env)
   if ('error' in result) return result.error
@@ -132,16 +128,21 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     return jsonResponse({ error: 'filters too large' }, 400)
   }
 
-  // 上限檢查（白名單繞過）
-  if (!isWhitelisted(user.email)) {
+  const access = await getUserAccess(user.sub, user.email ?? null, env.DB)
+  if (access.limits.strategies !== null) {
     const cntRow = await env.DB
       .prepare('SELECT COUNT(*) AS cnt FROM strategies WHERE user_uid = ?')
       .bind(user.sub)
       .first<{ cnt: number }>()
     const cnt = cntRow?.cnt ?? 0
-    if (cnt >= LIMITS.STRATEGIES) {
+    if (exceedsStrategiesLimit(access, cnt)) {
       return jsonResponse(
-        { error: ERROR_LIMIT_EXCEEDED, limit: LIMITS.STRATEGIES, type: 'strategies' },
+        {
+          error: ERROR_LIMIT_EXCEEDED,
+          limit: access.limits.strategies,
+          type: 'strategies',
+          tier: access.tier,
+        },
         403,
       )
     }

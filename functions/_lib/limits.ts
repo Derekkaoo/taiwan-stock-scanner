@@ -1,32 +1,20 @@
 /**
- * 各功能上限 + 白名單機制
+ * @deprecated 已遷移到 _lib/access.ts（多 tier 系統）。
  *
- * 設計：
- *   - 一般使用者套用 LIMITS 內的數量上限
- *   - 白名單 email 直接繞過所有上限（不必等 VIP 上線）
- *   - 白名單只在後端檢查，前端永遠不該知道誰在白名單
+ * 這個檔案保留是為了向後相容（避免遺漏的 import 爆掉），
+ * 之後確認沒人引用後可整個刪除。
  *
- * 之後若要做 VIP 訂閱：
- *   - 增加 isVip(email) 函式（讀 D1 vip 表 / Stripe webhook 同步）
- *   - bypass 邏輯：isVip(email) || isWhitelisted(email)
+ * 新 code 一律用 _lib/access.ts：
+ *   import { getUserAccess, exceedsFavoritesLimit, ... } from '../_lib/access'
  */
 
-export const LIMITS = {
-  FAVORITES: 10,
-  STRATEGIES: 5,
-} as const
-
-export const ERROR_LIMIT_EXCEEDED = 'limit_exceeded'
+export { LIMITS, ERROR_LIMIT_EXCEEDED } from './access'
 
 /**
- * 白名單 email（小寫比對，繞過所有上限）。
- * 之後可改讀環境變數 / KV / D1 表，現階段先 hardcode。
+ * @deprecated 用 getUserAccess(uid, email, db) 取代。
+ * 老的「白名單繞過」語意 = 開發者 hardcode 為 INTERNAL_VIP / FRIEND tier。
  */
-const WHITELIST_EMAILS = new Set<string>([
-  'stiau334@gmail.com',
-])
-
-export function isWhitelisted(email: string | null | undefined): boolean {
-  if (!email) return false
-  return WHITELIST_EMAILS.has(email.toLowerCase())
+export function isWhitelisted(_email: string | null | undefined): boolean {
+  // 不再使用：完全交給 getUserAccess() 判斷
+  return false
 }
