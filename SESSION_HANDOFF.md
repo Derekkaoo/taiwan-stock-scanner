@@ -5,6 +5,126 @@
 
 ---
 
+## 🔥 立即接手任務（continuation note，2026-05-01 下午追加）
+
+> 第一個 cowork session 寫完 handoff 後，user 又開了第二個 cowork 嘗試做 Phase 1（VIP UI + access tier），但結果 UI 不滿意。已 stash 全部改動。第三個 cowork（你）的任務：**從 stash 救出後端架構，UI 從新規劃**。
+
+### 當前狀態快照（不一致警告）
+
+**Disk 上 commit**：`319b16a docs: add data-conflict prevention rules` （= 第一個 session 結束時的乾淨狀態）
+
+**但 D1 production / local 兩邊都已經有 `user_status` 表**（user 在第二個 session 用 Cloudflare Console 跑 migration 建好了）：
+
+```sql
+CREATE TABLE user_status (
+  uid TEXT PRIMARY KEY,
+  email TEXT,
+  tier TEXT NOT NULL DEFAULT 'FREE',
+  vip_until INTEGER,
+  trial_until INTEGER,
+  note TEXT,
+  created_at INTEGER NOT NULL DEFAULT (CAST(strftime('%s', 'now') AS INTEGER)),
+  updated_at INTEGER NOT NULL DEFAULT (CAST(strftime('%s', 'now') AS INTEGER))
+);
+CREATE INDEX idx_user_status_tier ON user_status(tier);
+```
+
+**所以 D1 schema 跟 disk 上的 code 不一致**：表存在但沒人引用（無害，因為現有 code 走 hardcoded `WHITELIST_EMAILS`）。
+
+### Stash@{0} 內容（第二個 session 的成果）
+
+```
+git stash list:
+  stash@{0}: 新 session VIP UI 試做（不採用）
+```
+
+裡面有：
+
+| 檔案 | 狀態 | 評估 |
+|---|---|---|
+| `migrations/0003_user_status.sql` | 新增 | ✅ 救（schema 已 deploy）|
+| `functions/_lib/access.ts` | 新增 | ✅ 救（多 tier 系統，後端邏輯）|
+| `functions/_lib/limits.ts` | 修改成 deprecation shim | ✅ 救（向後相容）|
+| `functions/api/favorites.ts` | 改用 `getUserAccess` | ✅ 救（新 access 邏輯）|
+| `functions/api/strategies.ts` | 改用 `getUserAccess` | ✅ 救 |
+| `frontend/public/_redirects` | 新增（SPA fallback）| ✅ 救（之後 router 必需）|
+| `frontend/src/App.tsx` | 改成 Router shell | ❌ 丟（user 不滿意）|
+| `frontend/src/pages/MainPage.tsx` | 新增（從 App.tsx 搬出來）| ❌ 丟 |
+| `frontend/src/pages/VipPage.tsx` | 新增（VIP 訂閱頁）| ❌ 丟（UI 不滿意）|
+| `frontend/package.json` | 加 react-router-dom | ❌ 丟（先不裝 router）|
+| `frontend/package-lock.json` | 同上 | ❌ 丟 |
+| `frontend/node_modules/.vite/...` | build cache | ❌ 丟 |
+
+### 第三個 cowork session 的 task list
+
+**Step 1：選擇性 cherry-pick 後端檔案（從 stash）**
+
+```powershell
+# 從 stash 取出 6 個後端 / config 檔（UI 不取）
+git checkout "stash@{0}" -- functions/_lib/access.ts
+git checkout "stash@{0}" -- functions/_lib/limits.ts
+git checkout "stash@{0}" -- functions/api/favorites.ts
+git checkout "stash@{0}" -- functions/api/strategies.ts
+git checkout "stash@{0}" -- migrations/0003_user_status.sql
+git checkout "stash@{0}" -- frontend/public/_redirects
+
+# 看一下
+git status
+
+# 用戶 review，沒問題就 commit
+git add functions/_lib/ functions/api/favorites.ts functions/api/strategies.ts migrations/0003_user_status.sql frontend/public/_redirects
+git commit -m "feat(access): multi-tier system + 0003_user_status migration (UI 待重做)"
+git push
+
+# Cherry-pick 到 master
+git log -1 --pretty=format:"%H"
+git checkout master
+git pull --rebase
+git cherry-pick <SHA>
+git push
+git checkout feature/favorites-v2
+```
+
+**Step 2：跑 typecheck 確保 imports 不爆**
+
+```powershell
+cd frontend
+npx tsc --noEmit
+cd ..
+```
+
+**Step 3：拋掉舊 stash**
+
+```powershell
+git stash drop "stash@{0}"
+```
+
+**Step 4：VIP UI 重新規劃（不要急著動 code）**
+
+User 強調：
+- ❌ **不要**直接寫 VIP page TSX
+- ❌ **不要**裝 react-router-dom
+- ✅ 先用文字描述 mockup（佈局、按鈕文字、互動）
+- ✅ 等 user 同意設計細節，再動 code
+- ✅ 整合方式：問 user「modal 還是 conditional render 還是新路由」（之前討論過，user 已同意 router 方案，但因為實作出包，這次重做時建議**先用 modal 或 conditional render**，比較簡單不需 router）
+
+**Step 5：更新 CLAUDE.md 跟這份 SESSION_HANDOFF.md**
+
+- 把 user_status 表寫進 CLAUDE.md「資料庫」段
+- access.ts 提及在 CLAUDE.md「後端架構」
+- 這份 handoff 第 11 節加入新 phase
+
+### 給第三個 cowork 的提醒
+
+1. **看 stash 內容前先讀這段交接附註**，知道哪些救哪些丟
+2. **動 code 前先給 user 計畫**（user 強調過兩次，第二個 session 沒遵守導致 UI 改糟）
+3. **不要嘗試重寫 daily_screener.bat**（之前 5 次都炸，CLAUDE.md 跟第 6 節 quirks 有警告）
+4. **發現新 quirk 就更新這份 handoff doc**（讓未來 session 不再踩雷）
+
+---
+
+---
+
 ## 0. 專案演進時間軸（從零到現在）
 
 > Derek 跟 AI（Claude / Cowork）合作從零打造這個專案。下面是按時序累積的功能與決定，每個 ✅ 都代表一段協作 session 的成果。
