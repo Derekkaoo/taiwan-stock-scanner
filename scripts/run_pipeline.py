@@ -304,87 +304,116 @@ def _fetch_norway(url):
     raise RuntimeError("非 403 失敗")
 
 
+class HoldingsFetchError(Exception):
+    """fetch_holdings 失敗時帶具體類別 + 錯誤訊息"""
+    def __init__(self, kind: str, detail: str):
+        self.kind = kind  # 'network' / 'no_table' / 'no_rows' / 'parse_error'
+        self.detail = detail
+        super().__init__(f"[{kind}] {detail}")
+
+
 def fetch_holdings():
+    """
+    回傳 list of dict（成功）或 raise HoldingsFetchError（失敗，含 kind + detail）。
+    Caller 應該 catch + telegram + fallback 到舊資料。
+    """
     logger.info("Step 1: 抓取持股名單…")
     url = ("https://norway.twsthr.info/StockHoldersContinue.aspx"
            "?Show=2&continue=Y&weeks=1&growthrate=0.1"
            "&beforeweek=1&price=5000&valuerank=1-3000&display=0")
+
+    # 階段 1：發 request（network / 403 / cloudscraper 失敗）
     try:
         r = _fetch_norway(url)
-        soup = BeautifulSoup(r.text, "lxml")
-        # 神秘金字塔現在把上市 / 上櫃拆成兩張 table，要把所有符合條件的 table 都 parse
-        data_tables = []
-        for t in soup.find_all("table"):
-            ths = [th.text.strip() for th in t.find_all("th")]
-            if any("股票" in h for h in ths) and len(t.find_all("tr")) > 10:
-                data_tables.append(t)
-        if not data_tables:
-            logger.warning("找不到資料表格")
-            return []
-        logger.info("找到 %d 張資料表（上市 + 上櫃）", len(data_tables))
-
-        # 找最新資料日期（兩張 table 通常一致，取第一個有效的）
-        date_str = ""
-        for dt in data_tables:
-            for th in dt.find_all("th"):
-                txt = th.text.strip()
-                if re.match(r"^\d{8}$", txt):
-                    date_str = f"{txt[:4]}-{txt[4:6]}-{txt[6:]}"
-                    break
-            if date_str:
-                break
-
-        # 合併所有 table 的 rows，依 stock_id 去重（保留第一筆出現的）
-        rows = []
-        seen_ids = set()
-        for table_idx, dt in enumerate(data_tables):
-            table_added = 0
-            table_dup = 0
-            table_skip = 0
-            for tr in dt.find_all("tr"):
-                tds = tr.find_all("td")
-                if len(tds) < 7:
-                    table_skip += 1
-                    continue
-                cell = tds[3].text.strip()
-                m = re.match(r"^(\d{4})\s+(.+)$", cell)
-                if not m:
-                    table_skip += 1
-                    continue
-                stock_id = m.group(1)
-                if stock_id in seen_ids:
-                    table_dup += 1
-                    continue
-                try:
-                    delta_text = tds[5].text.strip()
-                    delta = float(delta_text)
-                    col6 = tds[6].text.strip()
-                    holding_pct = float(col6.replace(delta_text, "", 1))
-                    # td[18] = 市值(億)；部分股票為空則回 0，後續用 FinMind fallback
-                    market_cap = 0.0
-                    if len(tds) > 18:
-                        mc_text = tds[18].text.strip().replace(",", "")
-                        if mc_text:
-                            try:
-                                market_cap = float(mc_text)
-                            except ValueError:
-                                market_cap = 0.0
-                    rows.append({
-                        "id": stock_id, "name": sanitize_name(m.group(2).strip()),
-                        "delta": delta, "holdingPct": holding_pct,
-                        "marketCap": market_cap, "date": date_str,
-                    })
-                    seen_ids.add(stock_id)
-                    table_added += 1
-                except:
-                    continue
-            logger.info("  table[%d]: 新增 %d 筆，重複 %d 筆，跳過 %d 列",
-                        table_idx, table_added, table_dup, table_skip)
-        logger.info("持股名單：%d 筆，資料日期：%s", len(rows), date_str)
-        return rows
     except Exception as e:
-        logger.error("持股名單抓取失敗：%s", e)
-        return []
+        raise HoldingsFetchError("network", str(e)[:200]) from e
+
+    # 階段 2：parse HTML 結構（找不到符合條件的 table）
+    try:
+        soup = BeautifulSoup(r.text, "lxml")
+    except Exception as e:
+        raise HoldingsFetchError("parse_error", f"BeautifulSoup 解析失敗：{e}") from e
+
+    # 神秘金字塔把上市 / 上櫃拆成兩張 table，把所有符合條件的 table 都 parse
+    data_tables = []
+    for t in soup.find_all("table"):
+        ths = [th.text.strip() for th in t.find_all("th")]
+        if any("股票" in h for h in ths) and len(t.find_all("tr")) > 10:
+            data_tables.append(t)
+    if not data_tables:
+        raise HoldingsFetchError(
+            "no_table",
+            f"找不到符合條件的資料表（HTML 結構可能變動，HTTP {r.status_code}, len {len(r.text)}）"
+        )
+    logger.info("找到 %d 張資料表（上市 + 上櫃）", len(data_tables))
+
+    # 找最新資料日期（兩張 table 通常一致，取第一個有效的）
+    date_str = ""
+    for dt in data_tables:
+        for th in dt.find_all("th"):
+            txt = th.text.strip()
+            if re.match(r"^\d{8}$", txt):
+                date_str = f"{txt[:4]}-{txt[4:6]}-{txt[6:]}"
+                break
+        if date_str:
+            break
+
+    # 合併所有 table 的 rows，依 stock_id 去重（保留第一筆出現的）
+    rows = []
+    seen_ids = set()
+    for table_idx, dt in enumerate(data_tables):
+        table_added = 0
+        table_dup = 0
+        table_skip = 0
+        for tr in dt.find_all("tr"):
+            tds = tr.find_all("td")
+            if len(tds) < 7:
+                table_skip += 1
+                continue
+            cell = tds[3].text.strip()
+            m = re.match(r"^(\d{4})\s+(.+)$", cell)
+            if not m:
+                table_skip += 1
+                continue
+            stock_id = m.group(1)
+            if stock_id in seen_ids:
+                table_dup += 1
+                continue
+            try:
+                delta_text = tds[5].text.strip()
+                delta = float(delta_text)
+                col6 = tds[6].text.strip()
+                holding_pct = float(col6.replace(delta_text, "", 1))
+                # td[18] = 市值(億)；部分股票為空則回 0，後續用 FinMind fallback
+                market_cap = 0.0
+                if len(tds) > 18:
+                    mc_text = tds[18].text.strip().replace(",", "")
+                    if mc_text:
+                        try:
+                            market_cap = float(mc_text)
+                        except ValueError:
+                            market_cap = 0.0
+                rows.append({
+                    "id": stock_id, "name": sanitize_name(m.group(2).strip()),
+                    "delta": delta, "holdingPct": holding_pct,
+                    "marketCap": market_cap, "date": date_str,
+                })
+                seen_ids.add(stock_id)
+                table_added += 1
+            except Exception:
+                continue
+        logger.info("  table[%d]: 新增 %d 筆，重複 %d 筆，跳過 %d 列",
+                    table_idx, table_added, table_dup, table_skip)
+
+    # 0 筆代表 HTML 結構雖然有 table 但欄位變了 → 主動 raise
+    if not rows:
+        raise HoldingsFetchError(
+            "no_rows",
+            f"資料表存在但解析出 0 筆（td 欄位順序/格式可能變動，掃了 {len(data_tables)} 張 table）"
+        )
+
+    logger.info("持股名單：%d 筆，資料日期：%s", len(rows), date_str)
+    return rows
 
 
 def fetch_industry_map():
@@ -646,12 +675,31 @@ def run():
         except Exception as e:
             logger.warning("讀既有 stocks.json 失敗（不影響流程）：%s", e)
 
-    holdings = fetch_holdings()
-    if not holdings:
-        # 通知 Telegram（不中止流程，但讓你知道大戶資料抓取失敗了）
+    holdings = []
+    holdings_err: HoldingsFetchError | None = None
+    try:
+        holdings = fetch_holdings()
+    except HoldingsFetchError as e:
+        holdings_err = e
+        logger.error("持股名單抓取失敗 [%s]：%s", e.kind, e.detail)
+    except Exception as e:
+        # 不預期的錯誤包成 HoldingsFetchError 統一處理
+        holdings_err = HoldingsFetchError("unexpected", str(e)[:200])
+        logger.exception("持股名單抓取失敗（unexpected）")
+
+    if holdings_err is not None:
+        # 通知 Telegram，訊息帶具體類別 → 你看了就知道是 IP 被擋還是結構變了
+        kind_label = {
+            "network": "網路 / 403 / IP 封鎖",
+            "no_table": "HTML 結構變動（找不到資料表）",
+            "no_rows": "HTML 結構變動（td 欄位順序變了）",
+            "parse_error": "HTML 解析失敗",
+            "unexpected": "未預期錯誤",
+        }.get(holdings_err.kind, holdings_err.kind)
         _notify_telegram(
             "⚠️ <b>大戶持股抓取失敗</b>\n"
-            "🔴 norway.twsthr.info 沒回資料（可能 403 / 結構變動）\n"
+            f"🔴 類別：<b>{kind_label}</b>\n"
+            f"📝 細節：<code>{holdings_err.detail[:250]}</code>\n"
             f"⏱ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n"
             "\n👉 將使用舊 stocks.json 繼續，但大戶資料會逾期"
         )
@@ -662,7 +710,7 @@ def run():
             logger.warning("使用舊資料：%d 筆", len(holdings))
         else:
             logger.error("無法取得資料，中止")
-            _notify_failure("Step 1 - fetch_holdings", RuntimeError("無資料且無 fallback"))
+            _notify_failure("Step 1 - fetch_holdings", RuntimeError(f"{holdings_err.kind}: {holdings_err.detail}"))
             return
 
     stock_ids = list({
