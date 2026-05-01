@@ -260,35 +260,57 @@ def check_what_needs_refresh() -> dict:
     return result
 
 
+def _fetch_norway(url):
+    """先試 requests.Session（本機通常 OK），3 次 403 後 fallback 到 cloudscraper（給 GitHub Actions IP 被擋用）"""
+    # 階段 1：requests.Session
+    sess = requests.Session()
+    try:
+        sess.get("https://norway.twsthr.info/", headers=HEADERS, timeout=15)
+    except Exception:
+        pass
+
+    last_403 = False
+    for attempt in range(3):
+        try:
+            r = sess.get(url, headers=NORWAY_HEADERS, timeout=30)
+            r.raise_for_status()
+            return r
+        except requests.HTTPError as e:
+            if e.response is not None and e.response.status_code == 403:
+                last_403 = True
+                logger.warning(f"403 第 {attempt + 1}/3 次（requests），等 {2 ** attempt} 秒")
+                time.sleep(2 ** attempt)
+                continue
+            raise
+
+    # 階段 2：cloudscraper fallback（如果是 403 才試）
+    if last_403:
+        logger.info("requests 被擋，改用 cloudscraper（處理 Cloudflare-like 反爬）…")
+        try:
+            import cloudscraper
+        except ImportError:
+            raise RuntimeError("requests 被擋且 cloudscraper 沒裝，請 pip install cloudscraper")
+        scraper = cloudscraper.create_scraper(
+            browser={'browser': 'chrome', 'platform': 'windows', 'mobile': False},
+        )
+        try:
+            scraper.get("https://norway.twsthr.info/", headers=HEADERS, timeout=15)
+        except Exception:
+            pass
+        r = scraper.get(url, headers=NORWAY_HEADERS, timeout=30)
+        r.raise_for_status()
+        return r
+
+    raise RuntimeError("非 403 失敗")
+
+
 def fetch_holdings():
     logger.info("Step 1: 抓取持股名單…")
     url = ("https://norway.twsthr.info/StockHoldersContinue.aspx"
            "?Show=2&continue=Y&weeks=1&growthrate=0.1"
            "&beforeweek=1&price=5000&valuerank=1-3000&display=0")
     try:
-        # 用 session 維持 cookie / 連線，加 Referer，3 次 retry with backoff
-        sess = requests.Session()
-        # 先 GET 首頁取得任何 set-cookie（神秘金字塔有時會吐 ASP.NET_SessionId）
-        try:
-            sess.get("https://norway.twsthr.info/", headers=HEADERS, timeout=15)
-        except Exception:
-            pass
-
-        last_err = None
-        for attempt in range(3):
-            try:
-                r = sess.get(url, headers=NORWAY_HEADERS, timeout=30)
-                r.raise_for_status()
-                break
-            except requests.HTTPError as e:
-                last_err = e
-                if e.response is not None and e.response.status_code == 403:
-                    logger.warning(f"403 第 {attempt + 1} 次，等 {2 ** attempt} 秒重試")
-                    time.sleep(2 ** attempt)
-                    continue
-                raise
-        else:
-            raise last_err if last_err else RuntimeError("3 次都失敗")
+        r = _fetch_norway(url)
         soup = BeautifulSoup(r.text, "lxml")
         # 神秘金字塔現在把上市 / 上櫃拆成兩張 table，要把所有符合條件的 table 都 parse
         data_tables = []
