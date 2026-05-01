@@ -190,11 +190,53 @@ export function useGoogleAuth({ clientId }: UseGoogleAuthOptions) {
     }
   }, [])
 
+  /**
+   * 程式呼叫登入：先試 Google One Tap (prompt)，
+   * 若 Google 因為 cooldown / FedCM 政策不顯示，
+   * fallback 去點 header 裡 GoogleSignInButton 內的隱藏真按鈕。
+   */
+  const signIn = useCallback(() => {
+    const clickHiddenButton = () => {
+      // GoogleSignInButton 內的真 Google 按鈕（opacity 0.01）— 嘗試找出來 click
+      const candidates = Array.from(
+        document.querySelectorAll<HTMLElement>('div[role="button"][aria-labelledby]'),
+      )
+      const realBtn =
+        candidates.find(el => el.closest('[aria-hidden]') === null) ||
+        candidates[0] ||
+        document.querySelector<HTMLElement>('div[role="button"]')
+      realBtn?.click()
+    }
+
+    if (!window.google?.accounts?.id) {
+      clickHiddenButton()
+      return
+    }
+    try {
+      // Google 官方 API：顯示 One Tap 或 sign-in dialog
+      // notification 回 callback 才知道 prompt 有沒有顯示
+      // 若沒顯示（被 cooldown / FedCM 擋）→ fallback 用點按鈕
+      ;(window.google.accounts.id as unknown as {
+        prompt: (cb?: (n: {
+          isNotDisplayed?: () => boolean
+          isSkippedMoment?: () => boolean
+        }) => void) => void
+      }).prompt(notification => {
+        if (notification?.isNotDisplayed?.() || notification?.isSkippedMoment?.()) {
+          clickHiddenButton()
+        }
+      })
+    } catch {
+      clickHiddenButton()
+    }
+  }, [])
+
   return {
     user,
     idToken,
     isSignedIn: !!user,
     isReady,
     signOut,
+    signIn,
   }
 }

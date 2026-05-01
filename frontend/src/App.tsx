@@ -575,7 +575,15 @@ export default function App() {
           </>
         }
         primary={{
-          label: '我知道了',
+          label: '立馬登入',
+          onClick: () => {
+            setLoginPrompt(false)
+            // 等 modal 關閉動畫後再觸發登入（避免被 modal 蓋住）
+            setTimeout(() => auth.signIn(), 100)
+          },
+        }}
+        secondary={{
+          label: '我再想想',
           onClick: () => setLoginPrompt(false),
         }}
       />
