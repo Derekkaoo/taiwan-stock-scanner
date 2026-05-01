@@ -101,7 +101,7 @@ export default function App() {
   const [turnoverPeriod, setTurnoverPeriod] = useState<TurnoverPeriod>('d5')
 
   const {
-    filteredStocks, grouped, sort, loading, error,
+    stocks, filteredStocks, grouped, sort, loading, error,
     searchQuery, lastUpdated, dataDate,
     loadData, setSearchQuery, updateSort, updateStockReturn,
   } = useStocks(returnPeriod, turnoverPeriod)
@@ -165,26 +165,14 @@ export default function App() {
   )
   const visibleStocks = useMemo(() => {
     if (!showFavoritesOnly) return filteredByFilters
-    // 1. 本週入榜且為最愛
-    const inListFavs = filteredByFilters.filter(s => fav.isFavorite(s.id))
-    // 2. 本週未入榜的最愛 → 建立 ghost rows（_isGhost: true，UI 灰底渲染）
-    const inListIds = new Set(inListFavs.map(s => s.id))
-    const ghostIds = [...fav.favorites].filter(id => !inListIds.has(id))
-    const ghostRows: typeof filteredByFilters = ghostIds.map(id => ({
-      id,
-      name: '本週未入榜',
-      group: '其他/未分類',
-      groupDesc: '',
-      holdingPct: 0,
-      delta: 0,
-      price: 0,
-      marketCap: 0,
-      date: '',
-      threeMonthReturn: null,
-      _isGhost: true,
+    // 我的最愛模式：從原始 stocks（全部，含 < 0.1%）抓完整資料
+    // delta < 0.1 的標記 _isGhost = true 給 UI 灰底渲染
+    const allFavs = stocks.filter(s => fav.isFavorite(s.id))
+    return allFavs.map(s => ({
+      ...s,
+      _isGhost: s.delta < 0.1,  // 本週未入榜 = delta < 0.1%
     }))
-    return [...inListFavs, ...ghostRows]
-  }, [filteredByFilters, showFavoritesOnly, fav])
+  }, [stocks, filteredByFilters, showFavoritesOnly, fav])
 
   const toast = useCallback((message: string, type: Toast['type'] = 'info') => {
     const id = Math.random().toString(36).slice(2)
@@ -211,7 +199,23 @@ export default function App() {
     searchTimer.current = setTimeout(() => setSearchQuery(q), 200)
   }
 
-  const groupEntries = Object.entries(grouped)
+  // 我的最愛模式 → 重新 group 包含 ghost stocks（delta < 0.1 也顯示，按 groups 欄位歸類）
+  const effectiveGrouped = useMemo(() => {
+    if (!showFavoritesOnly) return grouped
+    const result: Record<string, typeof stocks> = {}
+    const allFavs = stocks.filter(s => fav.isFavorite(s.id))
+    for (const s of allFavs) {
+      const stockWithGhost = { ...s, _isGhost: s.delta < 0.1 }
+      const gs = (s.groups && s.groups.length > 0) ? s.groups : [s.group || '其他/未分類']
+      for (const g of gs) {
+        if (!result[g]) result[g] = []
+        result[g].push(stockWithGhost)
+      }
+    }
+    return result
+  }, [stocks, grouped, showFavoritesOnly, fav])
+
+  const groupEntries = Object.entries(effectiveGrouped)
   const stockCount = filteredStocks.length
   const groupCount = groupEntries.length
   const avgDelta = stockCount

@@ -274,46 +274,8 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
             const isExpanded = expandedId === stock.id
             const cached = getFromCache(stock.id)
 
-            // 本週未入榜的最愛 → 灰底簡化 row（不可展開、無 K 線、只能取消收藏）
-            if (stock._isGhost) {
-              return (
-                <tr
-                  key={stock.id}
-                  className="border-b"
-                  style={{
-                    borderColor: 'var(--color-border)',
-                    background: 'var(--color-bg-700)',
-                    opacity: 0.6,
-                  }}
-                >
-                  <td colSpan={COLS.length} className="px-3 py-2">
-                    <div className="flex items-center gap-3 text-xs" style={{ color: 'var(--color-text-secondary)' }}>
-                      {toggleFavorite && (
-                        <button
-                          onClick={() => toggleFavorite(stock.id)}
-                          style={{
-                            background: 'transparent',
-                            border: 'none',
-                            cursor: 'pointer',
-                            fontSize: 16,
-                            color: 'var(--color-accent-yellow)',
-                          }}
-                          title="取消收藏"
-                        >
-                          ⭐
-                        </button>
-                      )}
-                      <span className="font-mono tabular" style={{ color: 'var(--color-text-primary)' }}>
-                        {stock.id}
-                      </span>
-                      <span style={{ color: 'var(--color-text-muted)', fontStyle: 'italic' }}>
-                        本週未入榜（不符合大戶週增持條件）
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-              )
-            }
+            // 本週未入榜的最愛 → 仍正常渲染（含 K 線），但加灰底 + 「未入榜」徽章
+            const isGhost = stock._isGhost === true
 
             return (
               <>
@@ -323,6 +285,7 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
                   style={{
                     borderColor: 'var(--color-border)',
                     background: isExpanded ? 'var(--color-bg-500)' : '',
+                    opacity: isGhost ? 0.7 : 1,
                   }}
                   onClick={() => handleRowClick(stock.id)}
                   onMouseEnter={e => {
@@ -334,7 +297,7 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
                       (e.currentTarget as HTMLElement).style.background = ''
                   }}
                 >
-                  {COLS.map(col => (
+                  {COLS.map((col, colIdx) => (
                     <td
                       key={col.key}
                       className="px-3 py-1.5 whitespace-nowrap"
@@ -343,6 +306,20 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
                       {col.render ? col.render(stock) : (
                         <span className={col.mono ? 'font-mono tabular' : ''}>
                           {String(stock[col.key] ?? '—')}
+                        </span>
+                      )}
+                      {/* 在第一個欄位後加「本週未入榜」徽章 */}
+                      {isGhost && colIdx === 0 && (
+                        <span
+                          className="ml-2 text-[10px] px-1.5 py-0.5 rounded"
+                          style={{
+                            background: 'var(--color-bg-600)',
+                            color: 'var(--color-text-muted)',
+                            border: '1px solid var(--color-border)',
+                          }}
+                          title="本週大戶持股增幅未達 0.1%"
+                        >
+                          本週未入榜
                         </span>
                       )}
                     </td>

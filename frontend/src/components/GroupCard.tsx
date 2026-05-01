@@ -212,9 +212,14 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnP
                 : ret >= 0 ? 'var(--color-up)' : 'var(--color-down)'
               const stockSubs = getSubsForGroup(stock, groupName)
 
+              const isGhost = stock._isGhost === true
               return (
                 <div key={stock.id} className="rounded border overflow-hidden"
-                  style={{ borderColor: 'var(--color-border)', background: 'var(--color-bg-700)' }}>
+                  style={{
+                    borderColor: 'var(--color-border)',
+                    background: 'var(--color-bg-700)',
+                    opacity: isGhost ? 0.7 : 1,
+                  }}>
 
                   <div className="px-2.5 py-1.5 border-b" style={{ borderColor: 'var(--color-border)' }}>
                     <div className="flex items-start justify-between gap-2 mb-0.5">
@@ -240,6 +245,19 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnP
                           {stock.id}
                         </span>
                         <span className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>{stock.name}</span>
+                        {isGhost && (
+                          <span
+                            className="text-[10px] px-1.5 py-0.5 rounded"
+                            style={{
+                              background: 'var(--color-bg-600)',
+                              color: 'var(--color-text-muted)',
+                              border: '1px solid var(--color-border)',
+                            }}
+                            title="本週大戶持股增幅未達 0.1%"
+                          >
+                            本週未入榜
+                          </span>
+                        )}
                         {stockSubs.map(si => (
                           <span key={si} className="text-[11px] px-1.5 py-0.5 rounded"
                             style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-secondary)', border: '1px solid var(--color-border)' }}>

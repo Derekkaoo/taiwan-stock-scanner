@@ -181,8 +181,12 @@ export function useStocks(returnPeriod: ReturnPeriod = 'y1', turnoverPeriod: Tur
         return currentSort.dir === 'asc' ? cmp : -cmp
       }
       const q = query.toLowerCase().trim()
+      // 預設只顯示「本週入榜」（delta >= 0.1%）的股票
+      // 後端現在抓全部股票（含 < 0.1% / 負值）→ 主畫面前端過濾
+      // 「我的最愛」模式在 App.tsx 內繞過此過濾，從原始 stocks 抓完整資料
+      const inWeek = allStocks.filter(s => s.delta >= 0.1)
       const filtered = q
-        ? allStocks.filter(s => {
+        ? inWeek.filter(s => {
             // 代號
             if (s.id.includes(q)) return true
             // 名稱
@@ -195,7 +199,7 @@ export function useStocks(returnPeriod: ReturnPeriod = 'y1', turnoverPeriod: Tur
             if (s.subIndustries?.some(si => si.toLowerCase().includes(q))) return true
             return false
           })
-        : [...allStocks]
+        : [...inWeek]
       const sorted = [...filtered].sort(compare)
       setFilteredStocks(sorted)
       setGrouped(buildGroupedStocks(filtered))

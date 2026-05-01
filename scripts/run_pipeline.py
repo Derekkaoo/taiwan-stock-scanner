@@ -312,29 +312,13 @@ class HoldingsFetchError(Exception):
         super().__init__(f"[{kind}] {detail}")
 
 
-def fetch_holdings():
-    """
-    回傳 list of dict（成功）或 raise HoldingsFetchError（失敗，含 kind + detail）。
-    Caller 應該 catch + telegram + fallback 到舊資料。
-    """
-    logger.info("Step 1: 抓取持股名單…")
-    url = ("https://norway.twsthr.info/StockHoldersContinue.aspx"
-           "?Show=2&continue=Y&weeks=1&growthrate=0.1"
-           "&beforeweek=1&price=5000&valuerank=1-3000&display=0")
-
-    # 階段 1：發 request（network / 403 / cloudscraper 失敗）
-    try:
-        r = _fetch_norway(url)
-    except Exception as e:
-        raise HoldingsFetchError("network", str(e)[:200]) from e
-
-    # 階段 2：parse HTML 結構（找不到符合條件的 table）
+def _parse_holdings_response(r, growthrate_label: str, seen_ids: set, rows_out: list) -> str:
+    """解析一次 norway 回應，把新 stock 加進 rows_out（dedupe by id）。回傳 date_str。"""
     try:
         soup = BeautifulSoup(r.text, "lxml")
     except Exception as e:
         raise HoldingsFetchError("parse_error", f"BeautifulSoup 解析失敗：{e}") from e
 
-    # 神秘金字塔把上市 / 上櫃拆成兩張 table，把所有符合條件的 table 都 parse
     data_tables = []
     for t in soup.find_all("table"):
         ths = [th.text.strip() for th in t.find_all("th")]
@@ -343,11 +327,10 @@ def fetch_holdings():
     if not data_tables:
         raise HoldingsFetchError(
             "no_table",
-            f"找不到符合條件的資料表（HTML 結構可能變動，HTTP {r.status_code}, len {len(r.text)}）"
+            f"找不到符合條件的資料表（HTML 結構可能變動，HTTP {r.status_code}, len {len(r.text)}, growthrate={growthrate_label}）"
         )
-    logger.info("找到 %d 張資料表（上市 + 上櫃）", len(data_tables))
 
-    # 找最新資料日期（兩張 table 通常一致，取第一個有效的）
+    # 找最新資料日期
     date_str = ""
     for dt in data_tables:
         for th in dt.find_all("th"):
@@ -358,33 +341,24 @@ def fetch_holdings():
         if date_str:
             break
 
-    # 合併所有 table 的 rows，依 stock_id 去重（保留第一筆出現的）
-    rows = []
-    seen_ids = set()
-    for table_idx, dt in enumerate(data_tables):
-        table_added = 0
-        table_dup = 0
-        table_skip = 0
+    added = 0
+    for dt in data_tables:
         for tr in dt.find_all("tr"):
             tds = tr.find_all("td")
             if len(tds) < 7:
-                table_skip += 1
                 continue
             cell = tds[3].text.strip()
             m = re.match(r"^(\d{4})\s+(.+)$", cell)
             if not m:
-                table_skip += 1
                 continue
             stock_id = m.group(1)
             if stock_id in seen_ids:
-                table_dup += 1
                 continue
             try:
                 delta_text = tds[5].text.strip()
                 delta = float(delta_text)
                 col6 = tds[6].text.strip()
                 holding_pct = float(col6.replace(delta_text, "", 1))
-                # td[18] = 市值(億)；部分股票為空則回 0，後續用 FinMind fallback
                 market_cap = 0.0
                 if len(tds) > 18:
                     mc_text = tds[18].text.strip().replace(",", "")
@@ -393,26 +367,56 @@ def fetch_holdings():
                             market_cap = float(mc_text)
                         except ValueError:
                             market_cap = 0.0
-                rows.append({
+                rows_out.append({
                     "id": stock_id, "name": sanitize_name(m.group(2).strip()),
                     "delta": delta, "holdingPct": holding_pct,
                     "marketCap": market_cap, "date": date_str,
                 })
                 seen_ids.add(stock_id)
-                table_added += 1
+                added += 1
             except Exception:
                 continue
-        logger.info("  table[%d]: 新增 %d 筆，重複 %d 筆，跳過 %d 列",
-                    table_idx, table_added, table_dup, table_skip)
+    logger.info("  growthrate=%s 新增 %d 筆", growthrate_label, added)
+    return date_str
 
-    # 0 筆代表 HTML 結構雖然有 table 但欄位變了 → 主動 raise
+
+def fetch_holdings():
+    """
+    回傳 list of dict（成功）或 raise HoldingsFetchError（失敗，含 kind + detail）。
+    Caller 應該 catch + telegram + fallback 到舊資料。
+
+    抓兩次 norway：growthrate=0（>=0% 增持，主流量）+ growthrate=-0.1（補負成長），union dedupe。
+    """
+    logger.info("Step 1: 抓取持股名單（兩次 union：growthrate=0 + -0.1）…")
+
+    rows: list[dict] = []
+    seen_ids: set[str] = set()
+    last_date_str = ""
+
+    for gr in ["0", "-0.1"]:
+        url = (f"https://norway.twsthr.info/StockHoldersContinue.aspx"
+               f"?Show=2&continue=Y&weeks=1&growthrate={gr}"
+               f"&beforeweek=1&price=5000&valuerank=1-3000&display=0")
+        try:
+            r = _fetch_norway(url)
+        except Exception as e:
+            # 第一次失敗就 raise；第二次失敗 log warning 但不中止（已有 growthrate=0 資料）
+            if not rows:
+                raise HoldingsFetchError("network", str(e)[:200]) from e
+            logger.warning("growthrate=%s 抓取失敗（已有主資料，繼續）：%s", gr, e)
+            continue
+
+        d = _parse_holdings_response(r, gr, seen_ids, rows)
+        if d:
+            last_date_str = d
+
     if not rows:
         raise HoldingsFetchError(
             "no_rows",
-            f"資料表存在但解析出 0 筆（td 欄位順序/格式可能變動，掃了 {len(data_tables)} 張 table）"
+            "兩次抓取都解析出 0 筆（HTML 結構可能變動）"
         )
 
-    logger.info("持股名單：%d 筆，資料日期：%s", len(rows), date_str)
+    logger.info("持股名單：%d 筆，資料日期：%s", len(rows), last_date_str)
     return rows
 
 
