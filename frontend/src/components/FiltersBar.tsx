@@ -407,18 +407,38 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
 
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-[100] flex items-end md:hidden"
-          style={{ background: 'rgba(0,0,0,0.6)' }}
+          className="fixed left-0 right-0 top-0 z-[9999] md:hidden"
+          style={{
+            // 100dvh = dynamic viewport height（會跟著 iOS Safari URL bar 收合動態調整）
+            // 所有 modern 瀏覽器都支援（Safari 15.4+、Chrome 108+、Firefox 101+）
+            height: '100dvh',
+            background: 'var(--color-bg-800)',
+            display: 'flex',
+            flexDirection: 'column',
+            overscrollBehavior: 'contain',
+            touchAction: 'pan-y',
+          }}
           onClick={() => setMobileOpen(false)}
         >
           <div
-            className="w-full rounded-t-lg max-h-[85vh] overflow-y-auto animate-fadein"
-            style={{ background: 'var(--color-bg-700)', borderTop: '1px solid var(--color-border)' }}
+            className="w-full overflow-y-auto animate-fadein flex flex-col flex-1"
+            style={{
+              background: 'var(--color-bg-800)',
+              // 處理 iPhone notch / Dynamic Island 安全區域
+              paddingTop: 'env(safe-area-inset-top, 0)',
+              paddingBottom: 'env(safe-area-inset-bottom, 0)',
+              overscrollBehavior: 'contain',
+            }}
             onClick={e => e.stopPropagation()}
           >
             <div
               className="sticky top-0 flex items-center justify-between px-4 py-3 border-b"
-              style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
+              style={{
+                background: 'var(--color-bg-700)',
+                borderColor: 'var(--color-border)',
+                // RangeSlider thumb 用 z-index 3~4，sticky 要比它高才不會被圓圈蓋住
+                zIndex: 10,
+              }}
             >
               <span className="text-sm font-bold" style={{ color: 'var(--color-text-primary)' }}>
                 篩選條件{n > 0 ? ` · ${n} 項` : ''}

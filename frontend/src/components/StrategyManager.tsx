@@ -8,16 +8,86 @@ import { DEFAULT_FILTERS } from '../types'
  *
  * 已登入時：
  *   - 下拉選單顯示已存策略
- *   - 「儲存目前條件」按鈕：開 inline input 命名後 POST
+ *   - 「儲存目前條件」按鈕
  *   - 選某個策略 → 自動套用 filters 並通知 parent
  *   - 「覆蓋」「改名」「刪除」三個小按鈕
  *
  * 未登入時：null
+ *
+ * 樣式：跟整個 app 的深色主題一致（var(--color-bg-600) etc.）
  */
 interface Props {
   idToken: string | null
   filters: Filters
   setFilters: (f: Filters) => void
+}
+
+/**
+ * 把存在 server 的 filters 跟最新 DEFAULT_FILTERS 合併（深層）。
+ * 為了避免 schema 升級後舊策略缺欄位導致 React render 炸掉。
+ */
+function applyServerFilters(saved: Partial<Filters> | undefined): Filters {
+  const f = (saved || {}) as Partial<Filters>
+  return {
+    ...DEFAULT_FILTERS,
+    ...f,
+    growth: {
+      ...DEFAULT_FILTERS.growth,
+      ...(f.growth || {}),
+      metrics: {
+        ...DEFAULT_FILTERS.growth.metrics,
+        ...((f.growth && f.growth.metrics) || {}),
+      },
+    },
+    absValue: {
+      ...DEFAULT_FILTERS.absValue,
+      ...(f.absValue || {}),
+    },
+    institutional: {
+      ...DEFAULT_FILTERS.institutional,
+      ...(f.institutional || {}),
+    },
+  }
+}
+
+const styles = {
+  select: {
+    background: 'var(--color-bg-600)',
+    borderColor: 'var(--color-border)',
+    color: 'var(--color-text-primary)',
+    // 關鍵：拿掉瀏覽器預設外觀，自畫下拉箭頭
+    appearance: 'none',
+    WebkitAppearance: 'none',
+    MozAppearance: 'none',
+    // 通知瀏覽器這是深色 UI（讓下拉開啟後的 option list 也走深色）
+    colorScheme: 'dark',
+    // 自畫一個小箭頭（SVG data URI，淺灰色）
+    backgroundImage:
+      "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23a0a8b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E\")",
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'right 6px center',
+    paddingRight: 24,
+  } as React.CSSProperties,
+  primaryBtn: {
+    background: 'var(--color-accent-cyan)',
+    borderColor: 'var(--color-accent-cyan)',
+    color: '#fff',
+  } as React.CSSProperties,
+  ghostBtn: {
+    background: 'var(--color-bg-600)',
+    borderColor: 'var(--color-border)',
+    color: 'var(--color-text-secondary)',
+  } as React.CSSProperties,
+  dangerBtn: {
+    background: 'var(--color-bg-600)',
+    borderColor: 'var(--color-accent-red)' + '66',
+    color: 'var(--color-accent-red)',
+  } as React.CSSProperties,
+  input: {
+    background: 'var(--color-bg-600)',
+    borderColor: 'var(--color-accent-cyan)',
+    color: 'var(--color-text-primary)',
+  } as React.CSSProperties,
 }
 
 export function StrategyManager({ idToken, filters, setFilters }: Props) {
@@ -44,8 +114,8 @@ export function StrategyManager({ idToken, filters, setFilters }: Props) {
     setSelectedId(id)
     const s = strategies.find(x => x.id === id)
     if (s) {
-      // 套用策略 filters；缺欄位用 DEFAULT_FILTERS 補
-      setFilters({ ...DEFAULT_FILTERS, ...s.filters })
+      const next = applyServerFilters(s.filters as Partial<Filters>)
+      setFilters(next)
     }
   }
 
@@ -85,14 +155,15 @@ export function StrategyManager({ idToken, filters, setFilters }: Props) {
   }
 
   return (
-    <div className="flex flex-wrap items-center gap-2 text-sm">
-      <span className="text-gray-600 font-medium">策略：</span>
+    <div className="flex flex-wrap items-center gap-2" style={{ fontSize: 12 }}>
+      <span style={{ color: 'var(--color-text-muted)' }}>策略：</span>
 
       <select
         value={selectedId ?? ''}
         onChange={e => onSelect(e.target.value)}
         disabled={loading || mode !== 'idle'}
-        className="px-2 py-1 border border-gray-300 rounded-md bg-white text-gray-700 max-w-[180px]"
+        className="px-2 py-1 border rounded outline-none cursor-pointer"
+        style={{ ...styles.select, maxWidth: 180 }}
       >
         <option value="">— 選擇 —</option>
         {strategies.map(s => (
@@ -110,7 +181,8 @@ export function StrategyManager({ idToken, filters, setFilters }: Props) {
               setDraftName('')
               setMode('naming')
             }}
-            className="px-2 py-1 rounded-md bg-blue-600 text-white text-xs hover:bg-blue-700"
+            className="px-2 py-1 rounded border transition-colors"
+            style={styles.primaryBtn}
             title="把目前篩選條件存為新策略"
           >
             ＋ 儲存目前條件
@@ -120,7 +192,8 @@ export function StrategyManager({ idToken, filters, setFilters }: Props) {
             <>
               <button
                 onClick={onOverwrite}
-                className="px-2 py-1 rounded-md border border-gray-300 text-gray-600 text-xs hover:bg-gray-100"
+                className="px-2 py-1 rounded border transition-colors"
+                style={styles.ghostBtn}
                 title="用目前條件覆蓋"
               >
                 覆蓋
@@ -130,13 +203,15 @@ export function StrategyManager({ idToken, filters, setFilters }: Props) {
                   setDraftName(selected.name)
                   setMode('renaming')
                 }}
-                className="px-2 py-1 rounded-md border border-gray-300 text-gray-600 text-xs hover:bg-gray-100"
+                className="px-2 py-1 rounded border transition-colors"
+                style={styles.ghostBtn}
               >
                 改名
               </button>
               <button
                 onClick={onRemove}
-                className="px-2 py-1 rounded-md border border-red-300 text-red-600 text-xs hover:bg-red-50"
+                className="px-2 py-1 rounded border transition-colors"
+                style={styles.dangerBtn}
               >
                 刪除
               </button>
@@ -164,11 +239,13 @@ export function StrategyManager({ idToken, filters, setFilters }: Props) {
             }}
             placeholder={mode === 'naming' ? '策略名稱' : '新名稱'}
             maxLength={50}
-            className="px-2 py-1 border border-blue-400 rounded-md text-gray-700 w-[140px]"
+            className="px-2 py-1 border rounded outline-none"
+            style={{ ...styles.input, width: 140 }}
           />
           <button
             onClick={mode === 'naming' ? onSaveNew : onRename}
-            className="px-2 py-1 rounded-md bg-blue-600 text-white text-xs hover:bg-blue-700"
+            className="px-2 py-1 rounded border"
+            style={styles.primaryBtn}
           >
             確認
           </button>
@@ -177,7 +254,8 @@ export function StrategyManager({ idToken, filters, setFilters }: Props) {
               setMode('idle')
               setDraftName('')
             }}
-            className="px-2 py-1 rounded-md border border-gray-300 text-gray-600 text-xs hover:bg-gray-100"
+            className="px-2 py-1 rounded border"
+            style={styles.ghostBtn}
           >
             取消
           </button>
@@ -185,7 +263,7 @@ export function StrategyManager({ idToken, filters, setFilters }: Props) {
       )}
 
       {error && (
-        <span className="text-xs text-red-500" title={error}>
+        <span style={{ color: 'var(--color-accent-red)', fontSize: 11 }} title={error}>
           ⚠ {error.length > 30 ? error.slice(0, 30) + '...' : error}
         </span>
       )}

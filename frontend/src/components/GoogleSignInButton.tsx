@@ -2,15 +2,15 @@ import { useEffect, useRef, useState } from 'react'
 import type { GoogleUser } from '../hooks/useGoogleAuth'
 
 /**
- * GoogleSignInButton
+ * GoogleSignInButton — 自訂 dark-themed Google 登入按鈕
  *
- * 已登入：頭像 + 名字 + 登出
- * 未登入：自訂 dark-themed 按鈕（跟整個 app 配色一致）
+ * Layout：
+ *   - 桌機（≥640px）：圓角 pill 按鈕 + G logo + 「使用 Google 登入」文字（180×36）
+ *   - 手機（<640px）：圓形按鈕 + 只有 G logo（36×36）
  *
- * 實作技巧（避免 GIS 按鈕醜但又要保留官方點擊行為）：
- *   - 真正的 Google 按鈕渲染在 wrapper，opacity 0.01 = 視覺看不到但 click 仍 work
- *   - 我們的視覺 overlay 蓋上去，pointer-events: none → 點擊穿透到下面真按鈕
- *   - 兩者寬高完全重疊
+ * 點擊穿透設計：
+ *   - 真正的 Google 官方按鈕底層渲染（opacity 0.01）→ 確保所有原生功能 work
+ *   - 我們的視覺 overlay 在上層（pointer-events: none）→ 點擊穿透到底下
  */
 interface Props {
   user: GoogleUser | null
@@ -18,12 +18,28 @@ interface Props {
   signOut: () => void
 }
 
-const BUTTON_WIDTH = 180
-const BUTTON_HEIGHT = 36
+const DESKTOP_WIDTH = 180
+const MOBILE_WIDTH = 36
+const HEIGHT = 36
+
+function useIsMobile() {
+  const [mobile, setMobile] = useState(() =>
+    typeof window !== 'undefined' ? window.innerWidth < 640 : false,
+  )
+  useEffect(() => {
+    const onResize = () => setMobile(window.innerWidth < 640)
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+  return mobile
+}
 
 export function GoogleSignInButton({ user, isReady, signOut }: Props) {
   const realBtnRef = useRef<HTMLDivElement>(null)
   const [hover, setHover] = useState(false)
+  const isMobile = useIsMobile()
+
+  const width = isMobile ? MOBILE_WIDTH : DESKTOP_WIDTH
 
   useEffect(() => {
     if (user) return
@@ -33,19 +49,19 @@ export function GoogleSignInButton({ user, isReady, signOut }: Props) {
 
     realBtnRef.current.innerHTML = ''
     window.google.accounts.id.renderButton(realBtnRef.current, {
-      type: 'standard',
+      type: isMobile ? 'icon' : 'standard',
       theme: 'filled_black',
       size: 'large',
       text: 'signin_with',
-      shape: 'pill',
+      shape: isMobile ? 'circle' : 'pill',
       logo_alignment: 'center',
-      width: BUTTON_WIDTH,
+      width: isMobile ? undefined : DESKTOP_WIDTH,
     })
-  }, [user, isReady])
+  }, [user, isReady, isMobile])
 
   if (user) {
     return (
-      <div className="flex items-center gap-2 text-xs">
+      <div className="flex items-center gap-2" style={{ fontSize: 12 }}>
         {user.picture ? (
           <img
             src={user.picture}
@@ -56,10 +72,12 @@ export function GoogleSignInButton({ user, isReady, signOut }: Props) {
           />
         ) : (
           <div
-            className="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold"
+            className="w-6 h-6 rounded-full flex items-center justify-center"
             style={{
               background: 'var(--color-accent-cyan)',
               color: '#fff',
+              fontSize: 10,
+              fontWeight: 700,
             }}
           >
             {(user.name || user.email || '?').slice(0, 1).toUpperCase()}
@@ -103,14 +121,15 @@ export function GoogleSignInButton({ user, isReady, signOut }: Props) {
       style={{
         position: 'relative',
         display: 'inline-block',
-        width: BUTTON_WIDTH,
-        height: BUTTON_HEIGHT,
+        width,
+        height: HEIGHT,
         cursor: isReady ? 'pointer' : 'wait',
       }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      title="使用 Google 登入"
     >
-      {/* 真正的 Google 按鈕：opacity 接近 0 但 click 仍 work */}
+      {/* 真正的 Google 按鈕 */}
       <div
         ref={realBtnRef}
         style={{
@@ -120,7 +139,7 @@ export function GoogleSignInButton({ user, isReady, signOut }: Props) {
         }}
       />
 
-      {/* 視覺 overlay：pointer-events: none → 點擊穿透到下面 */}
+      {/* 視覺 overlay */}
       <div
         style={{
           position: 'absolute',
@@ -129,8 +148,8 @@ export function GoogleSignInButton({ user, isReady, signOut }: Props) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: 8,
-          padding: '0 14px',
+          gap: isMobile ? 0 : 8,
+          padding: isMobile ? 0 : '0 14px',
           background: hover ? 'var(--color-bg-600)' : 'transparent',
           border: '1px solid',
           borderColor: hover ? 'var(--color-accent-cyan)' : 'var(--color-border)',
@@ -143,7 +162,6 @@ export function GoogleSignInButton({ user, isReady, signOut }: Props) {
           userSelect: 'none',
         }}
       >
-        {/* Google G logo (官方 4 色) */}
         <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
           <path
             fill="#4285F4"
@@ -162,7 +180,9 @@ export function GoogleSignInButton({ user, isReady, signOut }: Props) {
             d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
           />
         </svg>
-        <span>{isReady ? '使用 Google 登入' : '載入中…'}</span>
+        {!isMobile && (
+          <span>{isReady ? '使用 Google 登入' : '載入中…'}</span>
+        )}
       </div>
     </div>
   )

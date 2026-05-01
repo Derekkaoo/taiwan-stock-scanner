@@ -140,11 +140,11 @@ export default function App() {
   }, [timeframe])
   const searchTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
-  // 我的最愛（後端同步）
-  const fav = useFavorites()
-
-  // Google 登入（已登入後可用 idToken 跟 /api/strategies 串接）
+  // Google 登入
   const auth = useGoogleAuth({ clientId: GOOGLE_CLIENT_ID })
+
+  // 我的最愛：登入後跨裝置同步（用 Google sub 當 user_token），未登入用裝置 UUID
+  const fav = useFavorites(auth.idToken, auth.user?.sub ?? null)
 
   // Filter pipeline: stocks → search/sort → slider/chip → 只看最愛
   const filteredByFilters = useMemo(
