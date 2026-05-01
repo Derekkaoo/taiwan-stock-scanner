@@ -10,3 +10,4 @@ python-dotenv==1.0.1
 pydantic==2.10.3
 pydantic-settings==2.7.0
 apscheduler==3.11.0   # 定時排程（每週自動抓取）
+cloudscraper==1.2.71  # 神秘金字塔反爬（GitHub Actions IP 段被擋時 fallback）
