@@ -61,7 +61,7 @@ git add frontend/public/data backend/db/twii.json backend/db/institutional.json 
 
 git diff --cached --quiet
 if not errorlevel 1 (
-    echo No data changes (cloud already updated), skipping commit/push >> "%LOGFILE%"
+    echo No data changes ^(cloud already updated^), skipping commit/push >> "%LOGFILE%"
     echo Run finished: %date% %time% >> "%LOGFILE%"
     exit /b 0
 )

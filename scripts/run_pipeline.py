@@ -20,7 +20,30 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 DB_PATH = Path(__file__).parent.parent / "backend" / "db" / "stock_industry_map.json"
 
-HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    ),
+    "Accept": (
+        "text/html,application/xhtml+xml,application/xml;q=0.9,"
+        "image/avif,image/webp,image/apng,*/*;q=0.8"
+    ),
+    "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.8",
+    # 只用 gzip/deflate；不加 br，因為 requests 預設沒裝 brotli decoder，
+    # 加了會拿到無法解壓的壓縮 bytes（symptom：HTML 看起來像亂碼）
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Cache-Control": "max-age=0",
+}
+
+# norway.twsthr.info 有時會檢查 Referer
+NORWAY_HEADERS = {**HEADERS, "Referer": "https://norway.twsthr.info/"}
 
 # 資料源常見的字元錯誤修正（norway.twsthr.info 會把某些 Big-5 字元吐成兩個錯誤字元）
 # key = 錯字, value = 正字
@@ -243,53 +266,98 @@ def fetch_holdings():
            "?Show=2&continue=Y&weeks=1&growthrate=0.1"
            "&beforeweek=1&price=5000&valuerank=1-3000&display=0")
     try:
-        r = requests.get(url, headers=HEADERS, timeout=30)
-        r.raise_for_status()
+        # 用 session 維持 cookie / 連線，加 Referer，3 次 retry with backoff
+        sess = requests.Session()
+        # 先 GET 首頁取得任何 set-cookie（神秘金字塔有時會吐 ASP.NET_SessionId）
+        try:
+            sess.get("https://norway.twsthr.info/", headers=HEADERS, timeout=15)
+        except Exception:
+            pass
+
+        last_err = None
+        for attempt in range(3):
+            try:
+                r = sess.get(url, headers=NORWAY_HEADERS, timeout=30)
+                r.raise_for_status()
+                break
+            except requests.HTTPError as e:
+                last_err = e
+                if e.response is not None and e.response.status_code == 403:
+                    logger.warning(f"403 第 {attempt + 1} 次，等 {2 ** attempt} 秒重試")
+                    time.sleep(2 ** attempt)
+                    continue
+                raise
+        else:
+            raise last_err if last_err else RuntimeError("3 次都失敗")
         soup = BeautifulSoup(r.text, "lxml")
-        data_table = None
+        # 神秘金字塔現在把上市 / 上櫃拆成兩張 table，要把所有符合條件的 table 都 parse
+        data_tables = []
         for t in soup.find_all("table"):
             ths = [th.text.strip() for th in t.find_all("th")]
             if any("股票" in h for h in ths) and len(t.find_all("tr")) > 10:
-                data_table = t
-        if not data_table:
+                data_tables.append(t)
+        if not data_tables:
             logger.warning("找不到資料表格")
             return []
+        logger.info("找到 %d 張資料表（上市 + 上櫃）", len(data_tables))
+
+        # 找最新資料日期（兩張 table 通常一致，取第一個有效的）
         date_str = ""
-        for th in data_table.find_all("th"):
-            txt = th.text.strip()
-            if re.match(r"^\d{8}$", txt):
-                date_str = f"{txt[:4]}-{txt[4:6]}-{txt[6:]}"
+        for dt in data_tables:
+            for th in dt.find_all("th"):
+                txt = th.text.strip()
+                if re.match(r"^\d{8}$", txt):
+                    date_str = f"{txt[:4]}-{txt[4:6]}-{txt[6:]}"
+                    break
+            if date_str:
                 break
+
+        # 合併所有 table 的 rows，依 stock_id 去重（保留第一筆出現的）
         rows = []
-        for tr in data_table.find_all("tr"):
-            tds = tr.find_all("td")
-            if len(tds) < 7:
-                continue
-            cell = tds[3].text.strip()
-            m = re.match(r"^(\d{4})\s+(.+)$", cell)
-            if not m:
-                continue
-            try:
-                delta_text = tds[5].text.strip()
-                delta = float(delta_text)
-                col6 = tds[6].text.strip()
-                holding_pct = float(col6.replace(delta_text, "", 1))
-                # td[18] = 市值(億)；部分股票為空則回 0，後續用 FinMind fallback
-                market_cap = 0.0
-                if len(tds) > 18:
-                    mc_text = tds[18].text.strip().replace(",", "")
-                    if mc_text:
-                        try:
-                            market_cap = float(mc_text)
-                        except ValueError:
-                            market_cap = 0.0
-                rows.append({
-                    "id": m.group(1), "name": sanitize_name(m.group(2).strip()),
-                    "delta": delta, "holdingPct": holding_pct,
-                    "marketCap": market_cap, "date": date_str,
-                })
-            except:
-                continue
+        seen_ids = set()
+        for table_idx, dt in enumerate(data_tables):
+            table_added = 0
+            table_dup = 0
+            table_skip = 0
+            for tr in dt.find_all("tr"):
+                tds = tr.find_all("td")
+                if len(tds) < 7:
+                    table_skip += 1
+                    continue
+                cell = tds[3].text.strip()
+                m = re.match(r"^(\d{4})\s+(.+)$", cell)
+                if not m:
+                    table_skip += 1
+                    continue
+                stock_id = m.group(1)
+                if stock_id in seen_ids:
+                    table_dup += 1
+                    continue
+                try:
+                    delta_text = tds[5].text.strip()
+                    delta = float(delta_text)
+                    col6 = tds[6].text.strip()
+                    holding_pct = float(col6.replace(delta_text, "", 1))
+                    # td[18] = 市值(億)；部分股票為空則回 0，後續用 FinMind fallback
+                    market_cap = 0.0
+                    if len(tds) > 18:
+                        mc_text = tds[18].text.strip().replace(",", "")
+                        if mc_text:
+                            try:
+                                market_cap = float(mc_text)
+                            except ValueError:
+                                market_cap = 0.0
+                    rows.append({
+                        "id": stock_id, "name": sanitize_name(m.group(2).strip()),
+                        "delta": delta, "holdingPct": holding_pct,
+                        "marketCap": market_cap, "date": date_str,
+                    })
+                    seen_ids.add(stock_id)
+                    table_added += 1
+                except:
+                    continue
+            logger.info("  table[%d]: 新增 %d 筆，重複 %d 筆，跳過 %d 列",
+                        table_idx, table_added, table_dup, table_skip)
         logger.info("持股名單：%d 筆，資料日期：%s", len(rows), date_str)
         return rows
     except Exception as e:
@@ -327,6 +395,15 @@ def fetch_industry_map():
 
 
 def fetch_klines(stock_ids):
+    # --skip-klines flag：從既有 klines.json 載入，不重抓
+    if "--skip-klines" in sys.argv:
+        cached = load_existing_klines()
+        if cached is not None:
+            result = {sid: cached[sid] for sid in stock_ids if sid in cached}
+            logger.info("Step 4: 跳過抓取，從 cache 載入 %d/%d 支 K 線",
+                        len(result), len(stock_ids))
+            return result
+        logger.warning("klines.json 不存在，--skip-klines 失效，正常抓取")
     logger.info("Step 4: 抓取 K 線（%d 支）…", len(stock_ids))
     klines = {}
     for i, sid in enumerate(stock_ids):
@@ -788,6 +865,22 @@ def run():
     logger.info("其中 %d 支股票同時屬於多個族群", multi)
 
     logger.info("Pipeline 完成！")
+
+
+def load_existing_klines():
+    """從 frontend/public/data/klines.json 載入既有 K 線（給 --skip-klines 用）"""
+    path = Path(__file__).parent.parent / "frontend" / "public" / "data" / "klines.json"
+    if not path.exists():
+        logger.warning("klines.json 不存在，無法 skip K 線；將正常抓取")
+        return None
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        logger.info("Step 4: 跳過 K 線抓取，從現有 klines.json 載入：%d 支", len(data))
+        return data
+    except Exception as e:
+        logger.warning("讀取 klines.json 失敗：%s；將正常抓取", e)
+        return None
 
 
 if __name__ == "__main__":
