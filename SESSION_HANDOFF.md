@@ -292,6 +292,26 @@ git log master..feature/favorites-v2 --oneline
 6. **bat 在 feature 分支跑會 push 到 feature** — 沒做自動切 master 邏輯（嘗試過炸 5 次，現約定人工先切 master 再跑）。
 7. **資料 commit 大量重疊 → 容易 rebase 衝突** — feature/master 兩邊都會自動 commit data。處理流程：用 `git checkout <branch> -- <paths>` 直接覆蓋而非 merge。
 
+### 7.1 預防 data conflict 的規則（重要）
+
+- **bat 永遠在 master 跑**：跑 `daily_screener.bat` 前先 `git checkout master`，跑完才切回 feature
+- **feature 不 commit data**：純 code 開發，data 從 master 同步過來
+- **每週 sync master → feature**（單向）：
+
+```powershell
+git checkout feature/favorites-v2
+git fetch origin
+git merge origin/master --no-edit
+# 如有 data 衝突，全部用 master 版本：
+git checkout origin/master -- frontend/public/data backend/db
+git add frontend/public/data backend/db
+git commit --no-edit
+git push
+```
+
+- **永遠不要 `git merge feature` 進 master**（除非 feature 真的要 release）
+- **跨分支同步 code 用 cherry-pick，不要 merge**（避免帶 data）
+
 ---
 
 ## 7. 環境設置驗證指令（新 session 開始前跑一次）
