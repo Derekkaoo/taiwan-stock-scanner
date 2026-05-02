@@ -11,7 +11,7 @@ import { Footer } from './components/Footer'
 import { FiltersBar } from './components/FiltersBar'
 import { GoogleSignInButton } from './components/GoogleSignInButton'
 import { StrategyManager } from './components/StrategyManager'
-import { TelegramPanel } from './components/TelegramPanel'
+import { SettingsPanel } from './components/SettingsPanel'
 import { AlertModal } from './components/AlertModal'
 import { VipPanel } from './components/VipPanel'
 import { applyFilters } from './utils/filters'
@@ -152,6 +152,8 @@ export default function App() {
   const [strategyLimitPrompt, setStrategyLimitPrompt] = useState(false)
   // VIP 訂閱頁面（conditional render，不用 router）
   const [showVip, setShowVip] = useState(false)
+  // 推播設定頁面（conditional render，跟 VipPanel 同模式）
+  const [showSettings, setShowSettings] = useState(false)
 
   // 我的最愛：登入後跨裝置同步；未登入點 ⭐ 跳「請先登入」；超過 10 筆跳 VIP
   const fav = useFavorites(auth.idToken, auth.user?.sub ?? null, {
@@ -336,6 +338,20 @@ export default function App() {
     return <VipPanel onBack={() => setShowVip(false)} />
   }
 
+  // 推播設定頁面
+  if (showSettings) {
+    return (
+      <SettingsPanel
+        idToken={auth.idToken}
+        onBack={() => setShowSettings(false)}
+        onShowVip={() => {
+          setShowSettings(false)
+          setShowVip(true)
+        }}
+      />
+    )
+  }
+
   return (
     <div className="flex flex-col min-h-screen" style={{ background: 'var(--color-bg-800)' }}>
 
@@ -358,6 +374,44 @@ export default function App() {
           >
             {lastUpdated ? `最後更新 ${lastUpdated}` : '載入中…'}
           </span>
+          {auth.isSignedIn && (
+            <button
+              onClick={() => setShowSettings(true)}
+              className="rounded-full border transition-colors flex items-center justify-center"
+              style={{
+                width: 32,
+                height: 32,
+                background: 'var(--color-bg-600)',
+                borderColor: 'var(--color-border)',
+                color: 'var(--color-text-secondary)',
+                cursor: 'pointer',
+              }}
+              title="推播設定"
+              onMouseEnter={e => {
+                e.currentTarget.style.color = 'var(--color-accent-cyan)'
+                e.currentTarget.style.borderColor = 'var(--color-accent-cyan)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.color = 'var(--color-text-secondary)'
+                e.currentTarget.style.borderColor = 'var(--color-border)'
+              }}
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+                <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+              </svg>
+            </button>
+          )}
           <GoogleSignInButton
             user={auth.user}
             isReady={auth.isReady}
@@ -522,7 +576,7 @@ export default function App() {
           />
           {auth.isSignedIn && (
             <div
-              className="px-5 py-2 border-b flex flex-col gap-2"
+              className="px-5 py-2 border-b"
               style={{
                 background: 'var(--color-bg-700)',
                 borderColor: 'var(--color-border)',
@@ -534,7 +588,6 @@ export default function App() {
                 setFilters={setFilters}
                 onLimitExceeded={() => setStrategyLimitPrompt(true)}
               />
-              <TelegramPanel idToken={auth.idToken} />
             </div>
           )}
         </>
