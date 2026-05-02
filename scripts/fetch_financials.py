@@ -245,8 +245,13 @@ def should_refresh_financials(entry, today):
     return last < expected_latest_quarter(today)
 
 
-def run():
-    stock_ids = load_stock_ids()
+def run(stock_ids: list[str] | None = None):
+    """跑財報抓取。
+    - stock_ids=None：從 stocks.json 讀（舊行為）
+    - stock_ids=[…]：只跑指定股票（Plan E：本週入榜的 310 支，archive 內其他股票保留舊資料）
+    """
+    if stock_ids is None:
+        stock_ids = load_stock_ids()
     if not stock_ids:
         return
     logger.info("共 %d 支股票要抓", len(stock_ids))

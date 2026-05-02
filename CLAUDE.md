@@ -78,7 +78,7 @@ taiwan-stock-scanner/
 
 ```
 平日 (Mon-Fri):
-  15:05, 15:35, 16:35, 17:35, 18:35 TW
+  15:00, 17:00 TW   # 主觸發（精簡後）
 ```
 
 設定值：
@@ -93,7 +93,7 @@ taiwan-stock-scanner/
 
 ```yaml
 平日 (Mon-Fri):
-  15:07, 15:37, 16:37, 17:37, 18:37 TW   # 5 個冗餘時段
+  15:37, 16:37 TW   # 2 個備援，補 cron-job.org 失敗的情境
 
 週六:
   12:00 TW  # 完整 pipeline + 推 Telegram

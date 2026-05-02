@@ -312,29 +312,13 @@ class HoldingsFetchError(Exception):
         super().__init__(f"[{kind}] {detail}")
 
 
-def fetch_holdings():
-    """
-    回傳 list of dict（成功）或 raise HoldingsFetchError（失敗，含 kind + detail）。
-    Caller 應該 catch + telegram + fallback 到舊資料。
-    """
-    logger.info("Step 1: 抓取持股名單…")
-    url = ("https://norway.twsthr.info/StockHoldersContinue.aspx"
-           "?Show=2&continue=Y&weeks=1&growthrate=0.1"
-           "&beforeweek=1&price=5000&valuerank=1-3000&display=0")
-
-    # 階段 1：發 request（network / 403 / cloudscraper 失敗）
-    try:
-        r = _fetch_norway(url)
-    except Exception as e:
-        raise HoldingsFetchError("network", str(e)[:200]) from e
-
-    # 階段 2：parse HTML 結構（找不到符合條件的 table）
+def _parse_holdings_response(r, growthrate_label: str, seen_ids: set, rows_out: list) -> str:
+    """解析一次 norway 回應，把新 stock 加進 rows_out（dedupe by id）。回傳 date_str。"""
     try:
         soup = BeautifulSoup(r.text, "lxml")
     except Exception as e:
         raise HoldingsFetchError("parse_error", f"BeautifulSoup 解析失敗：{e}") from e
 
-    # 神秘金字塔把上市 / 上櫃拆成兩張 table，把所有符合條件的 table 都 parse
     data_tables = []
     for t in soup.find_all("table"):
         ths = [th.text.strip() for th in t.find_all("th")]
@@ -343,11 +327,10 @@ def fetch_holdings():
     if not data_tables:
         raise HoldingsFetchError(
             "no_table",
-            f"找不到符合條件的資料表（HTML 結構可能變動，HTTP {r.status_code}, len {len(r.text)}）"
+            f"找不到符合條件的資料表（HTML 結構可能變動，HTTP {r.status_code}, len {len(r.text)}, growthrate={growthrate_label}）"
         )
-    logger.info("找到 %d 張資料表（上市 + 上櫃）", len(data_tables))
 
-    # 找最新資料日期（兩張 table 通常一致，取第一個有效的）
+    # 找最新資料日期
     date_str = ""
     for dt in data_tables:
         for th in dt.find_all("th"):
@@ -358,33 +341,24 @@ def fetch_holdings():
         if date_str:
             break
 
-    # 合併所有 table 的 rows，依 stock_id 去重（保留第一筆出現的）
-    rows = []
-    seen_ids = set()
-    for table_idx, dt in enumerate(data_tables):
-        table_added = 0
-        table_dup = 0
-        table_skip = 0
+    added = 0
+    for dt in data_tables:
         for tr in dt.find_all("tr"):
             tds = tr.find_all("td")
             if len(tds) < 7:
-                table_skip += 1
                 continue
             cell = tds[3].text.strip()
             m = re.match(r"^(\d{4})\s+(.+)$", cell)
             if not m:
-                table_skip += 1
                 continue
             stock_id = m.group(1)
             if stock_id in seen_ids:
-                table_dup += 1
                 continue
             try:
                 delta_text = tds[5].text.strip()
                 delta = float(delta_text)
                 col6 = tds[6].text.strip()
                 holding_pct = float(col6.replace(delta_text, "", 1))
-                # td[18] = 市值(億)；部分股票為空則回 0，後續用 FinMind fallback
                 market_cap = 0.0
                 if len(tds) > 18:
                     mc_text = tds[18].text.strip().replace(",", "")
@@ -393,26 +367,53 @@ def fetch_holdings():
                             market_cap = float(mc_text)
                         except ValueError:
                             market_cap = 0.0
-                rows.append({
+                rows_out.append({
                     "id": stock_id, "name": sanitize_name(m.group(2).strip()),
                     "delta": delta, "holdingPct": holding_pct,
                     "marketCap": market_cap, "date": date_str,
                 })
                 seen_ids.add(stock_id)
-                table_added += 1
+                added += 1
             except Exception:
                 continue
-        logger.info("  table[%d]: 新增 %d 筆，重複 %d 筆，跳過 %d 列",
-                    table_idx, table_added, table_dup, table_skip)
+    logger.info("  growthrate=%s 新增 %d 筆", growthrate_label, added)
+    return date_str
 
-    # 0 筆代表 HTML 結構雖然有 table 但欄位變了 → 主動 raise
+
+def fetch_holdings():
+    """
+    回傳 list of dict（成功）或 raise HoldingsFetchError（失敗，含 kind + detail）。
+    Caller 應該 catch + telegram + fallback 到舊資料。
+
+    Plan E：只抓 growthrate=0.1（≥ 0.1% 大戶增持，當週入榜的主清單）。
+    < 0.1% 的最愛由 frontend lazy-load stocks_archive.json 補資料 + 標 ghost。
+    """
+    logger.info("Step 1: 抓取持股名單（growthrate=0.1，只取本週入榜）…")
+
+    rows: list[dict] = []
+    seen_ids: set[str] = set()
+    last_date_str = ""
+
+    gr = "0.1"
+    url = (f"https://norway.twsthr.info/StockHoldersContinue.aspx"
+           f"?Show=2&continue=Y&weeks=1&growthrate={gr}"
+           f"&beforeweek=1&price=5000&valuerank=1-3000&display=0")
+    try:
+        r = _fetch_norway(url)
+    except Exception as e:
+        raise HoldingsFetchError("network", str(e)[:200]) from e
+
+    d = _parse_holdings_response(r, gr, seen_ids, rows)
+    if d:
+        last_date_str = d
+
     if not rows:
         raise HoldingsFetchError(
             "no_rows",
-            f"資料表存在但解析出 0 筆（td 欄位順序/格式可能變動，掃了 {len(data_tables)} 張 table）"
+            "解析出 0 筆（HTML 結構可能變動）"
         )
 
-    logger.info("持股名單：%d 筆，資料日期：%s", len(rows), date_str)
+    logger.info("持股名單：%d 筆，資料日期：%s", len(rows), last_date_str)
     return rows
 
 
@@ -575,12 +576,16 @@ def make_company_profile(profile_raw):
     return {k: profile_raw[k] for k in keep_fields if profile_raw.get(k)}
 
 
-def refresh_financials():
-    """嘗試用 fetch_financials.py 增量更新（需要 .env 裡的 FINMIND_TOKEN）"""
+def refresh_financials(stock_ids: list[str] | None = None):
+    """嘗試用 fetch_financials.py 增量更新（需要 .env 裡的 FINMIND_TOKEN）
+
+    Plan E：傳當週入榜的 stock_ids（≥0.1%），只更新本週 310 支的財報；
+    其他歷史股票（archive 內）保留舊 cache，不再更新（給 ghost row 用）。
+    """
     try:
         sys.path.insert(0, str(Path(__file__).parent))
         import fetch_financials
-        fetch_financials.run()
+        fetch_financials.run(stock_ids=stock_ids)
     except SystemExit:
         logger.warning("FinMind scraper 呼叫 sys.exit，保留現有快取")
     except Exception as e:
@@ -724,7 +729,8 @@ def run():
     category_map  = load_category_map()
     refresh_monthly_revenue()  # 嘗試從 MOPS 重抓最新月營收
     revenue_map   = load_monthly_revenue()
-    refresh_financials()       # 嘗試用 FinMind 更新 12 月營收 + 8 季財報
+    # Plan E：只更新本週入榜（310 支）的財報，archive 內其他股票保留舊 cache
+    refresh_financials(stock_ids=stock_ids)
     financials    = load_financials()
     profiles      = load_profiles()
     klines        = fetch_klines(stock_ids)
@@ -897,43 +903,111 @@ def run():
         json.dump(stocks, f, ensure_ascii=False, indent=2)
     logger.info("stocks.json：%d 筆", len(stocks))
 
+    # 同步維護 stocks_archive.json（歷史累積版）：
+    # - 包含所有曾經出現過的股票（即使本週 <0.1% 不在當週 stocks.json）
+    # - 每支股票多帶 _lastSeenDate（給 frontend ghost row 標示「資料 X 週前」）
+    # - 收藏功能要用：使用者收藏的股票本週掉出榜時，仍能從 archive 拿到 K 線/基本面
+    archive_path = DATA_DIR / "stocks_archive.json"
+    today_str = datetime.now().strftime("%Y-%m-%d")
+    archive: dict = {}
+    if archive_path.exists():
+        try:
+            with open(archive_path, "r", encoding="utf-8") as f:
+                archive = json.load(f)
+        except Exception as e:
+            logger.warning("讀 stocks_archive.json 失敗，重建：%s", e)
+            archive = {}
+
+    archive_added = 0
+    archive_updated = 0
+    for s_row in stocks:
+        sid = s_row.get("id")
+        if not sid:
+            continue
+        is_new = sid not in archive
+        archive[sid] = {**s_row, "_lastSeenDate": today_str}
+        if is_new:
+            archive_added += 1
+        else:
+            archive_updated += 1
+
+    with open(archive_path, "w", encoding="utf-8") as f:
+        json.dump(archive, f, ensure_ascii=False, indent=2)
+    logger.info("stocks_archive.json：總 %d 支（新增 %d / 更新 %d）",
+                len(archive), archive_added, archive_updated)
+
     # 按族群拆分 klines 檔（lazy-load 用），不再寫單一 klines.json
+    # Plan E：保留 archive 內歷史股票的 K 線（不在當週榜單，但有最愛收藏會用到）
     import urllib.parse
     klines_dir = DATA_DIR / "klines"
-    # 清空舊目錄，避免累積已被移除的族群檔
+
+    # 1. 先讀進已存在的 klines/<group>.json（給 archive 股票保留 K 線用）
+    existing_klines_by_group: dict[str, dict] = {}
+    if klines_dir.exists():
+        for f in klines_dir.glob("*.json"):
+            try:
+                with open(f, "r", encoding="utf-8") as fp:
+                    existing_klines_by_group[f.stem] = json.load(fp)
+            except Exception as e:
+                logger.warning("讀舊 klines/%s 失敗：%s", f.name, e)
+
+    # 2. 清空舊目錄，準備重寫
     if klines_dir.exists():
         for old_file in klines_dir.glob("*.json"):
             old_file.unlink()
     klines_dir.mkdir(parents=True, exist_ok=True)
 
-    # 蒐集每個族群應包含的股票 → klines
-    group_to_stocks = {}
-    for s_row in stocks:
-        for g in s_row.get("groups", [s_row.get("group", "")]):
+    # 3. 從 archive 蒐集每個族群應包含的股票（archive 已 union 當週 + 歷史）
+    group_to_stocks: dict[str, set[str]] = {}
+    for sid, arc_row in archive.items():
+        for g in arc_row.get("groups", [arc_row.get("group", "")]):
             if not g:
                 continue
-            group_to_stocks.setdefault(g, set()).add(s_row["id"])
+            group_to_stocks.setdefault(g, set()).add(sid)
 
+    # 4. 寫每個族群的 klines/<group>.json
+    #    當週入榜（在 klines dict 內）→ 用 fresh K 線
+    #    archive-only（不在 klines dict）→ 從 existing_klines_by_group 撈舊 K 線
     total_kb = 0
+    archive_kept = 0   # log 用：保留了幾支 archive 舊 K 線
     for group_name, sid_set in group_to_stocks.items():
-        subset = {sid: klines[sid] for sid in sid_set if sid in klines}
+        # 檔名用原始中文（只把 / 換成 _ 避開路徑分隔符）
+        safe = group_name.replace("/", "_").replace("\\", "_")
+        old_data = existing_klines_by_group.get(safe, {})
+
+        subset = {}
+        for sid in sid_set:
+            if sid in klines:
+                subset[sid] = klines[sid]                # fresh
+            elif sid in old_data:
+                subset[sid] = old_data[sid]              # 保留舊 K 線
+                archive_kept += 1
         if not subset:
             continue
-        # 檔名用原始中文（只把 / 換成 _ 避開路徑分隔符）
-        # 這樣 Vite/Firebase 的 URL 解碼才能對應到檔案
-        safe = group_name.replace("/", "_").replace("\\", "_")
         out_path = klines_dir / f"{safe}.json"
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(subset, f, ensure_ascii=False)
         total_kb += out_path.stat().st_size // 1024
-    logger.info("klines/：拆分為 %d 個族群檔，共 %d KB", len(group_to_stocks), total_kb)
+    logger.info("klines/：拆分為 %d 個族群檔，共 %d KB（保留 archive 舊 K 線 %d 筆）",
+                len(group_to_stocks), total_kb, archive_kept)
 
     # 向後相容：保留一個完整的 klines.json（供 StockTable 全部展開用）
-    # 若擔心頻寬可日後再移除，先保留
-    with open(DATA_DIR / "klines.json", "w", encoding="utf-8") as f:
-        json.dump(klines, f, ensure_ascii=False)
-    size_kb = (DATA_DIR / "klines.json").stat().st_size // 1024
-    logger.info("klines.json（備援）：%d 支，%d KB", len(klines), size_kb)
+    # Plan E：union 當週 fresh klines + 已存的 klines.json（給 archive 股票）
+    klines_full = {}
+    old_klines_full_path = DATA_DIR / "klines.json"
+    if old_klines_full_path.exists():
+        try:
+            with open(old_klines_full_path, "r", encoding="utf-8") as f:
+                klines_full = json.load(f)
+        except Exception as e:
+            logger.warning("讀舊 klines.json 失敗，重建：%s", e)
+            klines_full = {}
+    # 用當週 fresh 覆蓋同 id；不在當週的保留舊資料
+    klines_full.update(klines)
+    with open(old_klines_full_path, "w", encoding="utf-8") as f:
+        json.dump(klines_full, f, ensure_ascii=False)
+    size_kb = old_klines_full_path.stat().st_size // 1024
+    logger.info("klines.json（備援，含歷史 union）：%d 支，%d KB", len(klines_full), size_kb)
 
     group_counts = Counter(g for s in stocks for g in s["groups"])
     multi = sum(1 for s in stocks if len(s["groups"]) > 1)
