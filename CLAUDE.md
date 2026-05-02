@@ -1,7 +1,8 @@
 # Taiwan Stock Scanner — 專案總覽（給 Claude 看的）
 
 > 這份文件給未來新 Cowork / Claude Code session 用。讀完這份就有完整背景，不用花時間摸索。
-> 最後更新：2026-04-27（晚上完成 Yahoo fallback + workflow race 修正）
+> **配合 `SESSION_HANDOFF.md` 一起讀** — 那份是最近 session 的詳細交接 + 下個 session 該做什麼。
+> 最後更新：2026-05-02（晚）— Plan E 完成 + Telegram 推播後端 M1+M2 通過 /start 測試
 
 ## 一句話說明
 
