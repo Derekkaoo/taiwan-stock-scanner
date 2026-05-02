@@ -1,472 +1,296 @@
-# Session Handoff — 2026-05-01
+# Session Handoff — 2026-05-02 晚
 
 > 給下一個 Cowork session 用。先讀 `CLAUDE.md`（專案總覽），再讀這份（最近改動 + 待辦）。
-> 這份是 2026-05-01 一整天 debug + 規劃討論的濃縮，加上整個專案從零到現在的演進歷程。
+> 這份是 2026-05-02 一整天（M3 + M4 + 新 filters + 假日支援）的濃縮。
 
 ---
 
-## 0. 專案演進時間軸（從零到現在）
+## 🔥 立即接手任務
 
-> Derek 跟 AI（Claude / Cowork）合作從零打造這個專案。下面是按時序累積的功能與決定，每個 ✅ 都代表一段協作 session 的成果。
+User 已經完成今天三大塊（M3 / M4 / 新 filters）。**目前有兩個分支同步**：
 
-### Phase 1 — 篩選器 UI 基礎建設（4 月中）
+- **`master`** ← 最新基礎，所有今天的功能都進去了
+- **`feature/favorites-v2`** ← 已 merge master，含收藏 + Telegram 完整套件
 
-✅ Filters 型別設計 + 預設值常數（`types/index.ts`）
-✅ 分段刻度 helper（market cap、turnover 用對數刻度）
-✅ RangeSlider 雙把手元件（共用所有區間篩選）
-✅ IndustryChips 產業多選元件（預設折疊）
-✅ FiltersBar（桌面 inline / 手機 modal 雙模式）
-✅ useStocks hook 套用 filters
-✅ 「我的最愛」⭐ 按鈕（純前端 localStorage）
-
-### Phase 2 — 後端資料源 + 基本面篩選（4 月中下旬）
-
-✅ `fetch_financials.py` 抓季財報 + 月營收（FinMind）
-✅ Yahoo income-statement fallback scraper（FinMind 撞 quota 用）
-✅ `update_klines.py` 加 volumes（千張單位）
-✅ 前端加 fundamentals 絕對值 slider（毛利率 / 營利率 / EPS）
-✅ 連續 YoY 成長篩選（共用 N 季 picker + 3 個 metric checkbox）
-✅ 連續買超 pill row（外資 / 投信 1/3/5/20 天）
-
-### Phase 3 — 每日選股策略 + Telegram 推播（4 月 25-26 日）
-
-✅ `scrape_twii.py` 抓大盤 + 算 20/60 MA（多頭判斷）
-✅ `update_klines.py` 加 pctOf52wHigh 欄位
-✅ `screeners/base.py`（Strategy abstract + Stock dataclass）
-✅ Strategy 1（5 條件 AND：突破前高、漲幅、量、股價、大戶）
-✅ Strategy 2（13 條件多頭強勢，含連續買超 / 量價 / 基本面）
-✅ `screeners/runner.py` 跑全部策略 + 推 Telegram
-✅ `daily_screener.bat` + Windows Task Scheduler 19:00 排程
-
-### Phase 4 — 雲端 cron 架構大改（4 月 26-27 日）
-
-> 起因：GitHub Actions schedule 在熱門時段被跳過，連兩天 0% 成功率。
-
-✅ `.github/workflows/weekly-update.yml` 完整 5-step pipeline
-✅ cron-job.org 外部觸發（workflow_dispatch，>99.9% 觸發率）
-✅ Permission 修正（repo Settings + workflow `permissions: contents: write`）
-✅ Push 重試策略（5 次 retry + `-X theirs` 自動解衝突）
-✅ Schedule SHA 卡舊版修復（`actions/checkout@v4` with `ref: master`）
-✅ FinMind throttle 從 0.15s 調 0.5s（避免軟限流）
-✅ Yahoo TW finance fallback for institutional（無 quota 限制）
-✅ `runner.py` 加「同日 hash 不重推」邏輯
-
-### Phase 5 — 三大法人 + 連續買超完整化（4 月底）
-
-✅ `scrape_institutional.py` 抓三大法人 + smart-skip
-✅ Buy streak 計算寫進 stocks.json
-✅ Yahoo institutional fallback（FinMind 402 後接手）
-✅ Smart-skip 邏輯：90% 涵蓋率門檻、1 小時 retry 視窗
-✅ 前端 types + applyFilters 加 institutional 欄位
-
-### Phase 6 — 收藏雲端同步基礎（4 月底 / 5 月初）
-
-✅ Cloudflare D1 資料庫設置（`stock-scanner-favorites`）
-✅ migration 0001：favorites table（user_token + stock_id）
-✅ Pages Function `/api/favorites`（GET / POST / DELETE）
-✅ 前端 useFavorites hook + 樂觀更新
-
-### Phase 7 — 篩選 UI 大量優化 + K 線升級（5/1 上午）
-
-✅ 搜尋擴展（id、name、group、groups[]、industry、subIndustries[]）
-✅ K 線時間框架切換（日 90 / 週 60 / 月 36，狀態 localStorage）
-✅ Pinch-to-zoom + pan（手機兩指縮放、單指拖曳；桌機滾輪 + 拖曳）
-✅ Year on date axis（跨年度 K 線顯示年份，最左邊不顯示避免裁切）
-✅ MA toggle 每張圖獨立但同步狀態（族群總覽 + 個股列表）
-✅ 拿掉「60/155」神秘數字
-✅ 修個股列表最左日期被裁
-
-### Phase 8 — Google 登入 + 篩選策略雲端儲存（5/1 中午）
-
-✅ Cloudflare Pages Functions 接 Google ID Token 自驗（無 firebase-admin）
-✅ `functions/_lib/google-auth.ts`（Web Crypto API + JWKS）
-✅ migration 0002：strategies table（user_uid + filters_json）
-✅ Pages Function `/api/strategies`（GET / POST / PUT / DELETE）
-✅ 前端 `useGoogleAuth` + `useStrategies` hooks
-✅ `GoogleSignInButton`（自訂 dark-themed UI，覆蓋 GIS 預設按鈕）
-✅ `StrategyManager`（下拉選單 + 儲存 / 覆蓋 / 改名 / 刪除）
-✅ 收藏跨裝置同步（登入後用 Google sub 當 user_token + 一次性 migration）
-✅ 行動版 Google 按鈕（icon-only 36×36）
-
-### Phase 9 — 收藏 / 策略上限 + 白名單機制（5/1 中午）
-
-✅ `functions/_lib/limits.ts`（FAVORITES=10, STRATEGIES=5）
-✅ `WHITELIST_EMAILS`（後端 hardcode，前端看不到）
-✅ 後端 POST 達上限 → 403 `limit_exceeded`
-✅ `AlertModal` 元件（通用 icon + title + 雙按鈕）
-✅ 「請先登入」modal（未登入點 ⭐ 觸發）
-✅ 「⭐ 已達上限」modal（超過 10 收藏觸發）
-✅ 「📂 已達策略上限」modal（超過 5 策略觸發）
-✅ 「立馬登入」按鈕（觸發 `auth.signIn()` Google One Tap）
-
-### Phase 10 — 行動版 UI 大修（5/1 中午）
-
-✅ 篩選器全螢幕 modal（`100dvh` + `safe-area-inset-top`）
-✅ Sticky title 不被 RangeSlider thumb 覆蓋（zIndex: 10）
-✅ StrategyManager 深色主題（`appearance:none` + `colorScheme:dark`）
-✅ 自訂下拉箭頭 SVG（避免瀏覽器原生白色）
-✅ UUID fallback for non-secure context（手機 HTTP 訪問不再 crash）
-
-### Phase 11 — 神秘金字塔大救援 + 通知系統（5/1 下午）
-
-> 起因：早上手動觸發 cron 發現 norway 抓不到資料，連續好幾天都用舊資料。
-
-✅ Headers 完整化（完整 Chrome UA + Accept-Language + 全套 Sec-Fetch headers + Referer）
-✅ Cookie session 維持（先 GET 首頁拿 ASP.NET cookie）
-✅ 3 次 retry with exponential backoff
-✅ Cloudscraper fallback（GitHub Actions IP 段被擋時用）
-✅ Multi-table merge with dedup（norway 把上市/上櫃拆兩張表）
-✅ 拿掉 `br` 從 Accept-Encoding（沒裝 brotli decoder 會拿到亂碼）
-✅ `HoldingsFetchError` 帶 5 種 kind（network / no_table / no_rows / parse_error / unexpected）
-✅ Telegram 通知系統（成功 / 失敗 / 大戶降級三種訊息）
-✅ Production 即時更新（cherry-pick + 手動 sync 到 master）
-
-### 戰略討論（這次 session 做的決策）
-
-🎯 VIP 訂閱定價：NT$128/月、288/季、888/年
-🎯 朋友分級：FRIEND tier 解上限但**不解 push**（push 留給 VIP）
-🎯 金流商選型：Paddle 為主（中文客服、MoR 處理稅務）+ Lemon Squeezy 備胎
-🎯 試用期：14 天免綁卡 trial（不選 30 天，避免 user 適應免費版）
-🎯 Push 通知設計：daily 收盤摘要 + 突破警示 + 大戶異動 + 個人策略命中
+下個 session 直接從 **視覺驗證新 filters 在 production** 開始（task pending：user 還沒在線上點過 N 日漲幅 + 創新高），其他都已驗證通過。
 
 ---
 
-## 1. Session 開始時的問題
+## 0. 今天完成的 4 大塊
 
-早上手動觸發 GitHub Actions 發現 norway.twsthr.info 抓不到大戶持股資料：
+### A. Telegram M3 — 前端綁定 UI（推播設定頁）✅
 
+- **新元件 `frontend/src/components/SettingsPanel.tsx`**：全頁佈局（跟 VipPanel 同模式），3 張卡片 — VIP 狀態 + 通知頻道（Telegram 行）+ 通知類型（每日選股 placeholder）
+- **入口**：header 在 GoogleSignInButton 旁加鈴鐺 SVG 按鈕（登入時才顯示）
+- **新 hook `useTelegramBinding.ts`** + **新 API client `api/telegram.ts`** — 封裝 binding state + 3 秒輪詢自動偵測綁定完成
+- **BindModal 內嵌 SettingsPanel**：code 顯示、複製、開啟 Telegram deeplink、倒數、輪詢狀態、>30s 提示
+- **Telegram 安裝引導**：modal 上方加「請先安裝 Telegram 桌面/手機 app」提示 + 三個下載連結（桌面 / iOS / Android）— Telegram Web 的 START BOT 按鈕常常點不動
+- **Webhook `/start <code>` deeplink**：functions/api/telegram/webhook.ts 改 `handleStart` 偵測 args，有 args 就 reuse `handleBind` → 一鍵綁定流程通
+
+### B. Telegram M4 — 個人化每日選股推播（path A + path B 都完工）✅
+
+**path A — 本地版（`--source d1` 走 wrangler）：**
+- `scripts/screeners/user_filters.py` — Python port of `frontend/src/utils/filters.ts`（applyFilters 完整對等）
+- `scripts/push_user_strategies.py` — 主腳本：`wrangler d1 execute --remote` 撈 bindings + strategies → applyFilters → Telegram sendMessage（per chat_id）
+- 訊息格式：`📊 你的每日選股 (YYYY/MM/DD 週X)` 標題、`🎯 策略名` + `✅ N 支符合 / ℹ️ 今日無符合`、`─────` 分隔、footer 含網址
+- Flags：`--dry-run` / `--user EMAIL` / `--top N` / `--skip-empty` / `--source d1|endpoint`
+- ✅ 本地測通：user Telegram 收到訊息 (sent=1 failed=0)
+
+**path B — 雲端版（`--source endpoint` 走 HTTPS）：**
+- `functions/api/internal/cron/bound-users.ts` — admin GET endpoint，回所有 bindings + strategies；用 `INTERNAL_CRON_TOKEN` Bearer 驗證
+- push 腳本 `--source endpoint` mode：用 `PUSH_API_BASE` + `INTERNAL_CRON_TOKEN` env 打 HTTPS（不依賴 wrangler，CI 可跑）
+- `.github/workflows/daily-push.yml` — workflow_dispatch + schedule（cron `'0 11 * * 1-5'` = 19:00 TW 平日）
+- ✅ 已部署 + GitHub Actions 手動觸發測通 + cron-job.org 加好平日 19:00 排程
+
+**環境變數（user 已在 3 處設好）：**
+- `.env`（本地）
+- Cloudflare Pages → Production + Preview
+- GitHub Secrets
+
+### C. 新 filters — N 日漲跌幅 + 創 N 日新高 ✅
+
+**Schema（`types/index.ts`）：**
+```ts
+NDayReturnFilter { days: 0|1|3|5|10|20, range: [lo, hi] }
+NDayHighFilter   { days: 0|5|10|20|60|120|200 }
 ```
-Error: 持股名單抓取失敗：403 Client Error: Forbidden
-Warning: 使用舊資料：372 筆
-```
+（FILTER_BOUNDS.nDayReturn = -10~50，DEFAULT_FILTERS 都加進去）
 
-這個 cron 已連續好幾天用舊資料（最新 2026-04-24，距今 7 天），但都沒人通知。
+**前端即時算（讀 klines.json）：**
+- `utils/filters.ts` — 加 `passNDayReturn` / `passNDayHigh`，applyFilters 接 `klines: KlinesById` 第 3 參數
+- `useKline.ts` — 加 `getAllKlines()` 暴露整個 cache
+- `App.tsx` — `klineFiltersActive` useEffect lazy 觸發 `loadFromJson()`（klines.json 6MB，一次性載入）
+- `applyFilters` 重算 dep 加 `cacheVersion`（K 線 lazy-load 完會 bump）
 
----
+**FiltersBar 重構（大改）：**
+- 4 個 collapsible sections：📊 基本面 / 📈 技術面 / 💰 籌碼面 / 🏷 其他
+- 默認全收起（user 偏好），展開狀態存 localStorage `filtersbar_open_sections_v1`
+- 每個 section header 顯示 active count badge
+- 全域「清除全部 (N)」按鈕在最頂端
+- 桌機 + 手機 modal 共用同一套 collapsible 邏輯
+- N 日漲幅 RangeSlider 寬度 cap 在 `min-w-[180px] max-w-[260px]`（不再 flex-1 撐滿）
 
-## 2. 解決過程（按時間軸）
+**分類：**
+- 基本面：市值、月營收 YoY、連續 YoY 成長、按季絕對值
+- 技術面：今日成交量、N 日漲跌幅（新）、創 N 日新高（新）
+- 籌碼面：大戶本週增持、連續買超
+- 其他：市場別、產業 chips
 
-### 2.1 Norway scraper 健壯化
+**Python 端同步：**
+- `scripts/screeners/user_filters.py` — 加 `_pass_n_day_return` / `_pass_n_day_high`，apply_filters 接 `klines` 第 3 參數
+- `scripts/push_user_strategies.py` — load `klines.json` 一起傳進去
 
-**問題鏈**：headers 殘缺 → 加 cloudscraper → HTML 結構改了 → 兩張 table 要 merge → Brotli 沒裝。
+### D. 國定假日 + 神秘金字塔對齊 ✅
 
-最終解法（commits）：
-- `a6c40a8 / 5bf58f7` — 完整 browser headers + Referer + 3 次 retry with backoff + multi-table dedup + 拿掉 `br` 從 `Accept-Encoding`（避免 brotli 解碼問題）
-- `55aef89 / dcd499f` — cloudscraper fallback（GitHub Actions IP 段被擋時自動接手）
-- `39abfba / 8b25a21` — `HoldingsFetchError` 帶 5 種 kind（`network` / `no_table` / `no_rows` / `parse_error` / `unexpected`）
+**問題：** 5/1 勞動節 TWSE 沒交易，原 smart-skip `expected_trading_day` 直接 weekday 算 → 永遠覺得「該抓 5/1 但抓不到」一直重試。  
+**還有：** 神秘金字塔（norway.twsthr.info）在「該週最後交易日 + 1 天」publish；正常週是 Sat，但假日 Fri 週會變 Fri publish — 原來的 7 天 rolling check 抓不到「應該提早一天 publish」。
 
-### 2.2 Telegram 通知系統（P0）
+**新模組 `scripts/trading_calendar.py`：**
+- 用 `holidays` 套件（pip install holidays）— 自動含 2024-2030 所有 TW 假日
+- `is_trading_day(d)` / `previous_trading_day(d)` — 跳過週末 + 假日
+- `expected_latest_trading_day(now)` — K 線 / 三大法人 smart-skip 用，14:00 切換點
+- `last_completed_trading_week_end(now, publish_hour=14)` — holdings smart-skip 用，**對齊 norway publish 節奏**（會偵測 holiday-Fri 週的早一天 publish）
 
-`scripts/run_pipeline.py` 加了 `_notify_telegram()` 跟 `_notify_failure()`：
-- **成功**：`✅ Pipeline 成功` + 持股數 + 資料日期 + 族群數
-- **失敗**：`❌ Pipeline 失敗` + 階段 + 錯誤訊息
-- **大戶降級**：`⚠️ 大戶持股抓取失敗` + 具體 kind label（網路 / 結構變動 / 解析失敗）
+**3 支 script refactor：**
+- `run_pipeline.py` — `expected_latest_trading_day` 改 import 共用模組；holdings 從「7 天 rolling」改成「對齊 last_completed_trading_week_end」
+- `update_klines.py` — `_expected_trading_day` 改 import 共用模組
+- `scrape_institutional.py` — inline expected 計算改 import 共用模組
 
-驗證指令（三個都收到 = 通過）：
-```powershell
-# 1. 成功通知（直接跑 pipeline）
-python scripts/run_pipeline.py --force --skip-klines
+**Workflow yaml 改動：**
+- `weekly-update.yml` 加 `IS_PUBLISH_DAY` 判斷：「昨天交易 + 今天非交易」→ mode=full（捕捉 holiday-Fri 那天）
+- 加 `holidays` 進 `pip install` 步驟
+- **新 schedule 11:30 平日 + Sat**（神秘金字塔 ~10:30 publish 後 1 小時）— user 要求
+- 月營收 / 季財報 cron 從 14:43 改 **20:00**（user 要求）
 
-# 2. 失敗通知（程式直接觸發）
-python -c "import sys; sys.path.insert(0, 'scripts'); from run_pipeline import _notify_failure; _notify_failure('TEST', RuntimeError('test'))"
-
-# 3. 大戶降級通知（程式直接觸發）
-python -c "import sys; sys.path.insert(0, 'scripts'); from run_pipeline import _notify_telegram; from datetime import datetime; _notify_telegram('⚠️ <b>大戶持股抓取失敗</b>\n🔴 ...')"
-```
-
-### 2.3 Production 即時更新
-
-cherry-pick scraper code 到 master + 直接 sync feature 上的最新資料到 master：
-```powershell
-git checkout master
-git checkout feature/favorites-v2 -- backend/db/ frontend/public/data/
-git commit -m "data: sync latest holdings from feature (norway 2026-04-30, 310 stocks)"
-git push
-```
-
----
-
-## 3. 系統當前狀態（2026-05-01 結束時）
-
-### 分支
-| 分支 | 最新 commit | 內容 |
-|---|---|---|
-| **master** | `41a462c` | scraper fix + telegram 通知 + bat 補的 K 線資料更新（剛剛驗證 bat 用的）|
-| **feature/favorites-v2** | `39abfba` | 同上 + Google 登入 + 篩選策略 + 收藏跨裝置同步 + AlertModal + 限制白名單機制 |
-
-### feature/favorites-v2 比 master 多的功能（still in dev）
-- Google 帳號登入（`useGoogleAuth.ts`、`GoogleSignInButton.tsx`）
-- 篩選策略雲端儲存（`StrategyManager.tsx` + `/api/strategies` Pages Function + D1 `strategies` table）
-- 收藏跨裝置同步（用 Google sub 當 user_token，未登入用 UUID）
-- 收藏 10 / 策略 5 上限 + email 白名單繞過（`functions/_lib/limits.ts`）
-- 「請先登入」「VIP 限制」AlertModal
-
-要看 feature 多出來的所有 commits：
-```powershell
-git log master..feature/favorites-v2 --oneline
-```
-
-### 部署狀態
-- **production**：https://taiwan-stock-scanner.pages.dev/（master deploy）— 顯示 2026-04-30 大戶資料 + 310 支股票
-- **預覽**：https://feature-favorites-v2.taiwan-stock-scanner.pages.dev/（feature deploy）— 多了 Google 登入 + 策略儲存
+**8 個測試案例全 OK：**
+- Sat 5/2 12:00 → 4/30 ✅（Labor Fri 跳過）
+- Fri 5/1 17:00 → 4/30 ✅（assumed publish 已過）
+- Fri 5/1 10:00 → 4/24 ✅（pre-publish，回上週）
+- Sat 5/9 14:30 → 5/8 ✅（normal Sat post-publish）
+- Sat 5/9 10:00 → 4/30 ✅（normal Sat pre-publish）
+- Mon 5/4 → 4/30 ✅
+- Fri 5/8 17:00 → 4/30 ✅（normal Fri，pre-Sat-publish）
+- Sun 12/27 → 12/24 ✅（12/25 Constitution Fri 假日週）
 
 ---
 
-## 4. 戰略討論（這次 session 的重要對話）
+## 1. 當前 Git 狀態
 
-### 4.1 VIP 訂閱規劃（pending）
+**master**：所有今天功能都進去（最後 commit ~ `feat(schedule): holidays-aware holdings + 11:30 + monthly 20:00`）
 
-**已決定**：
-- 收藏上限 10、策略上限 5（已實作 + 可白名單繞過）
-- 朋友分級：FRIEND tier 解上限但**沒有 push**（push 留給 VIP）
-- 較遠朋友走 discount code（Paddle / Lemon Squeezy 內建）
+**feature/favorites-v2**：已 merge master，含全套：
+- 收藏 favorites
+- ghost UI for stocks_archive.json
+- VipPanel
+- StrategyManager + 策略 D1
+- Telegram 後端 endpoints + webhook + bot
+- Telegram 前端 SettingsPanel + 鈴鐺
+- 新 filters（N 日漲幅 + 創 N 日新高）
+- collapsible sections
+- TW holidays 支援
 
-**還沒做**：
-- D1 加 `user_status` 表（vip_until / trial_until）
-- `_lib/access.ts` 取代現有 `limits.ts`（多 tier 系統）
-- VIP 訂閱頁面 UI（mockup，未接金流）
-- 預設策略市集（10 個專家策略，free 跟 vip 區分）
-
-### 4.2 Push 通知（VIP 核心 feature）
-
-**現有**：你個人的 Telegram bot 跑兩個策略 daily push（**只給你**，不給其他 user）
-
-**規劃**：
-- VIP user 綁定自己 chat_id（`/start <token>` 流程）
-- daily summary（13:30 收盤後推 user 的 favorites 表現）
-- 突破 / 跌破 MA20 警示
-- 大戶異動（favorites 中本週增 ≥ 0.5%）
-- 個人策略命中（user 自己存的策略每天跑）
-- 大盤 ±1% 即時推
-
-### 4.3 金流商選擇（pending user 申請）
-
-**結論：Paddle 為主，Lemon Squeezy 當備胎**
-- Paddle：5% + $0.50 / 多語言客服（含中文）/ 老牌 / 退款 UX 流暢
-- 兩家都申請帳號（並行做）但只整合一家
-- 個人開發者不開公司直接走 MoR（Merchant of Record），他們處理稅務發票
-
-**理由**：用戶要求「客戶易聯絡、不能難找」，MoR 最符合。退款由 Paddle 處理，user 不用當 24/7 客服。
-
-### 4.4 試用期策略
-
-**選 14 天免綁卡 trial**（不是 30 天，不是綁卡 trial）。
-理由：免費版已很完整，試用 30 天 user 反而適應免費；trial 結束推播停掉，FOMO 觸發訂閱。
+**Merge 過程**：master → feature/favorites-v2 有 70+ data file 衝突（klines/stocks.json 等），全用 `git checkout --theirs` 取 master；M4 scripts (push_user_strategies.py / user_filters.py) add/add 衝突也取 master superset；App.tsx 一個衝突手動合（feature 的 auth/Telegram/favorites + master 的 klines lazy load 兩邊都保留）。
 
 ---
 
-## 5. 未完成 TODO（按優先順序）
+## 2. 未完成 / 下個 session 待辦
 
-### 短期（next 1-2 sessions）
+### 立即 — 視覺驗證（user 還沒測線上）
 
-| 優先 | 任務 | 預估工時 |
-|---|---|---|
-| 🔴 P0 | Phase 1：朋友分級系統重構（`_lib/access.ts` + D1 `user_status` 表 + tier check） | 0.5 天 |
-| 🔴 P0 | VIP 訂閱頁面 UI（仿 Cowork 截圖那個 NT$128/288/888 三欄）— 不接金流 | 0.5-1 天 |
-| 🟡 P1 | Telegram per-user 綁定流程（`/start <token>` → 寫進 D1 → user 自己拿 chat_id）| 1 天 |
-| 🟡 P1 | Daily push cron：favorites + 個人策略命中通知 | 2 天 |
-| 🟢 P2 | 預設策略市集（10 個寫死的專家策略）| 1 天 |
-| 🟢 P2 | 申請 Paddle / Lemon Squeezy 帳號 | 並行做、1-3 天等審核 |
+- [ ] master：打開正式網站，點 N 日漲幅「5日」chip → 看是否 lazy-load klines.json + 滑桿生效
+- [ ] master：點「20日新高」→ 看是否只顯示創新高股
+- [ ] master：4 個 sections 全展開/收起 + localStorage 狀態跨重整保留
+- [ ] feature/favorites-v2 preview：同上 + 設定頁、Telegram 綁定
+- [ ] **儲存帶 N 日 filter 的策略**（StrategyManager）→ 跑 push_user_strategies.py → 看 Telegram 收到對的篩選結果
+
+### 短期改善
+
+- [ ] **Telegram 推播訊息去重**：目前 push_user_strategies.py 沒做 hash 去重（`screeners/runner.py` 有），雲端 cron 多次觸發會重複推。可仿 runner.py 加 `last_user_push.json` cache（per-user hash）
+- [ ] **D1 `last_push_at` 回寫**：endpoint 已預留欄位，腳本還沒呼 PATCH 更新 `last_push_at` / `last_push_status`。要新增 `POST /api/internal/cron/last-push` endpoint
+- [ ] master 還沒併 telegram code（webhook、bind-code、binding endpoints、SettingsPanel）→ 等 favorites-v2 整套穩了再合過去 production；目前 telegram webhook 仍指 feature preview
+- [ ] FiltersBar 默認全收起後，新使用者第一次來會看不到任何 filter — 觀察一陣子，如果太多人不知道有篩選器，考慮預設展開「基本面」一個 section
 
 ### 長期
 
-- 接 Paddle webhook + checkout flow + cancel + 續訂處理（2-3 天）
-- 公開 14 天 trial → 觀察轉換率
-- 上正式訂閱
-
-### 不急但要做
-
-- bat 重寫成 PowerShell `.ps1`（cmd 太脆弱，今天嘗試 5 次都炸；當前 bat 能用但沒 master-switch / 沒 autostash）
-- `.gitignore` 清理 UTF-16 亂碼殘留
-- 把已 track 的 `__pycache__/*.pyc` 從 repo 移除
+- [ ] 設計更多策略 / 加更多 filter（user 提過想做：成交額、波動度、ETF 排除）
+- [ ] Telegram bot 自動推播 + admin 統計（多少人綁了、推播成功率）
+- [ ] 月底掃 cron 命中率（11:30 跟 20:00 兩個新 schedule 加進去後）
 
 ---
 
-## 6. 已知 quirks（接手前要知道）
+## 3. 已知 quirks（今天踩到的）
 
-1. **cmd batch 對複雜流程容錯極差** — 加 if-block 內 echo 含括號、subroutine `:label`、中文 REM 都會炸。bat 改動要極保守。
-2. **`crypto.randomUUID()` 在 HTTP non-localhost 會 throw** — 已修（用純 JS fallback）；若再加 secure-context-only API 要記得 fallback。
-3. **GitHub Actions IP 段被 norway 擋** — 已加 cloudscraper fallback，但若 cloudscraper 之後也擋，最終 backup 是本機 daily_screener.bat 從家裡 IP 抓。
-4. **Telegram 推播的 log 中文亂碼** — Windows cmd CP950 vs Python UTF-8 編碼。實際 telegram 是好的，只有寫 log 時被 cmd 重編碼。讀 log 用 `Get-Content -Encoding UTF8`。
-5. **PowerShell 字面字符 `<>`** — 不能在指令裡打 `<placeholder>`，PS 會吃掉（當 redirect）。給 user 指令時用 PS 變數：`$SHA = "..."; git cherry-pick $SHA`。
-6. **bat 在 feature 分支跑會 push 到 feature** — 沒做自動切 master 邏輯（嘗試過炸 5 次，現約定人工先切 master 再跑）。
-7. **資料 commit 大量重疊 → 容易 rebase 衝突** — feature/master 兩邊都會自動 commit data。處理流程：用 `git checkout <branch> -- <paths>` 直接覆蓋而非 merge。
-
-### 7.1 預防 data conflict 的規則（重要）
-
-- **bat 永遠在 master 跑**：跑 `daily_screener.bat` 前先 `git checkout master`，跑完才切回 feature
-- **feature 不 commit data**：純 code 開發，data 從 master 同步過來
-- **每週 sync master → feature**（單向）：
-
-```powershell
-git checkout feature/favorites-v2
-git fetch origin
-git merge origin/master --no-edit
-# 如有 data 衝突，全部用 master 版本：
-git checkout origin/master -- frontend/public/data backend/db
-git add frontend/public/data backend/db
-git commit --no-edit
-git push
-```
-
-- **永遠不要 `git merge feature` 進 master**（除非 feature 真的要 release）
-- **跨分支同步 code 用 cherry-pick，不要 merge**（避免帶 data）
+1. **Telegram Web 的 START BOT 點不動** — 切換 Telegram 帳號後尤其常見。Modal 上方已加引導文字提示用桌面/手機 app
+2. **Cloudflare Pages env 改完不會 auto-redeploy** — 要 push commit 或 dashboard 手動 retry。SOP：改 env → push 一個 `--allow-empty` commit
+3. **PowerShell 的 `set` 不是 cmd 的 `set`** — PS 設環境變數要 `$env:VAR = "..."`，不能 `set VAR=...`（後者只設 PS 變數）
+4. **bash sandbox 對大檔（>~5MB 或 >300 行）會 truncate** — Read tool 看到的內容才是真檔案；webhook.ts、stocks.json、klines.json、run_pipeline.py 都中過。要在 bash 跑 Python 測試時，建議拆小檔或直接 inline 整段 code
+5. **bash sandbox 偶爾把 `.git/index` 讀成 corrupt** — git 操作都在 Windows 跑
+6. **跨分支 merge 時資料檔大量衝突** — 對策：`git checkout --theirs frontend/public/data/ backend/db/` 全取（master 的資料更新）
+7. **cron-job.org 設定時忘了 PAT 是用同一個** — 重用 weekly-update 那條的 Bearer token 即可
+8. **GitHub Actions workflow_dispatch UI 只在 default branch 的 yaml 顯示** — 我們把 daily-push.yml + 必要 scripts cherry-pick 到 master 才看得到
+9. **Workflow 的 mode 判斷在 Sat 12:00 之外用 `IS_PUBLISH_DAY` 偵測** — 假日 Fri 那天 cron 自動切 mode=full（trading_calendar 判斷邏輯：昨天交易 + 今天非交易）
+10. **YAML multi-line block 裡 inline python `-c "..."` 會帶縮排 → IndentationError** — 寫成單行 + `PYTHONPATH=scripts` 才行。例：`IS_PUBLISH_DAY=$(PYTHONPATH=scripts python3 -c 'from datetime ...; ...')`
 
 ---
 
-## 7. 環境設置驗證指令（新 session 開始前跑一次）
+## 4. 環境變數總覽
 
-```powershell
-# 1. 確認在正確路徑
-cd C:\Users\Derek\Desktop\taiwan-stock-scanner\taiwan-stock-scanner
-git branch --show-current
-
-# 2. 確認 master 是最新
-git checkout master
-git pull --rebase
-git log -3 --oneline
-# 預期看到：
-#   41a462c data: local backup auto-update
-#   8b25a21 feat(scrape): HoldingsFetchError ...
-#   1d9165c feat(notify): telegram alert ...
-
-# 3. 切回 feature 繼續開發
-git checkout feature/favorites-v2
-git pull --rebase
-git log -5 --oneline
-
-# 4. 確認 telegram 還能用
-python scripts/send_telegram.py "🤖 new cowork session test"
-# 預期：你的 telegram 收到 "new cowork session test"
-
-# 5. 確認 typescript 沒有 lint error
-cd frontend
-npx tsc --noEmit
-# 預期：tsc exit: 0
-cd ..
-```
+| 名稱 | 位置 | 用途 |
+|---|---|---|
+| `FINMIND_TOKEN` | .env / GH Secrets | 抓財報 + 法人 |
+| `TELEGRAM_BOT_TOKEN` | .env / GH Secrets / Cloudflare Pages env | Bot API |
+| `TELEGRAM_CHAT_ID` | .env / GH Secrets | admin alerts（pipeline log 推送）|
+| `TELEGRAM_WEBHOOK_SECRET` | Cloudflare Pages env | 驗證 webhook 來源 |
+| `TELEGRAM_BOT_USERNAME` | Cloudflare Pages env (Plaintext) | 給前端 deeplink |
+| `INTERNAL_CRON_TOKEN` | .env / GH Secrets / Cloudflare Pages env | M4 admin endpoint 認證 |
+| `PUSH_API_BASE` | .env / workflow yaml env | M4 endpoint URL（目前指 feature preview）|
+| `GOOGLE_CLIENT_ID` | Cloudflare Pages env | Google ID Token 驗證 |
+| `FIREBASE_SERVICE_ACCOUNT_TAIWAN_STOCK_SCANNER` | GH Secrets | Firebase deploy |
+| `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` | GH Secrets | Cloudflare deploy |
+| `USER_FAVORITES_TOKEN` | .env | （legacy，沒在用？）|
 
 ---
 
-## 8. 給下一個 Cowork session 的接手 prompt
+## 5. 排程總覽（目前狀態）
 
-複製以下整段給新 session：
+**weekly-update.yml（GitHub schedule）：**
 
-```
-我是 Derek，台股篩選器（Taiwan Stock Scanner）的開發者。
+| Cron (UTC) | TW 時間 | 用途 |
+|---|---|---|
+| `30 3 * * 6` | Sat 11:30 | 神秘金字塔 publish 後 1 小時拉資料 |
+| `30 3 * * 1-5` | 平日 11:30 | 同上（IS_PUBLISH_DAY 偵測 holiday-Fri）|
+| `0 4 * * 6` | Sat 12:00 | 主觸發備援 |
+| `37 7 * * 1-5` | 平日 15:37 | K 線備援 1 |
+| `37 8 * * 1-5` | 平日 16:37 | K 線備援 2 |
+| `0 12 1-10 * *` | 1-10 號 20:00 | 月營收 YoY 更新 |
+| `0 12 15 * *` | 15 號 20:00 | 季財報 + 自結補抓 |
+| `0 10 * * 6` | Sat 18:00 | Sat 補跑 |
 
-請依序讀以下兩份文件了解完整專案背景，再開始任何工作：
-1. C:\Users\Derek\Desktop\taiwan-stock-scanner\taiwan-stock-scanner\CLAUDE.md
-   （專案總覽：架構、資料流、排程、已知 quirks）
-2. C:\Users\Derek\Desktop\taiwan-stock-scanner\taiwan-stock-scanner\SESSION_HANDOFF.md
-   （2026-05-01 上一個 session 的完整紀錄 + 戰略討論 + 待辦清單）
+**daily-push.yml：**
 
-讀完後請回我：
-- 簡短摘要你理解的「目前系統狀態」（master 跟 feature 各自狀態 / 最近完成的事）
-- 下一步建議優先做什麼（看 SESSION_HANDOFF.md 第 5 節 TODO）
+| Cron | TW | 用途 |
+|---|---|---|
+| `0 11 * * 1-5` | 平日 19:00 | 個人化每日選股推播（M4 path B）|
 
-不要直接動 code 或下指令，先確認背景對齊。
+**cron-job.org（user 設）：**
 
-我目前在 feature/favorites-v2 分支。今天可能想做的事：
-[TBD — 開新 session 時告訴 Claude 你今天想做什麼]
-```
+| 時間 | 觸發 |
+|---|---|
+| 平日 15:00 / 17:00 | weekly-update.yml dispatch |
+| 平日 19:00 | daily-push.yml dispatch |
+
+**本地 Windows Task Scheduler：**
+
+| 時間 | 動作 |
+|---|---|
+| 平日 19:00 | `daily_screener.bat`（最後備援，僅 admin alert）|
 
 ---
 
-## 9. 重要檔案 quick reference
+## 6. 關鍵檔案地圖（更新版）
 
 ```
-backend/
-  └── db/                              # JSON cache（不直接給前端）
-      ├── financials.json              # 季財報
-      ├── monthly_revenue.json         # 月營收
-      ├── institutional.json           # 三大法人 30 天滾動
-      ├── twii.json                    # 大盤
-      └── last_telegram_push.json      # Telegram 去重 hash
+backend (Python pipeline):
+  scripts/run_pipeline.py            — pipeline 入口（含 archive 寫入、K-line preserve、holidays smart-skip）
+  scripts/trading_calendar.py        — 共用日曆模組（holidays 套件 + 公開函式）⭐ NEW
+  scripts/update_klines.py           — K 線（用 trading_calendar）
+  scripts/scrape_institutional.py    — 三大法人 + buy streak（用 trading_calendar）
+  scripts/fetch_financials.py        — 月營收 + 季財報
+  scripts/send_telegram.py           — admin alerts (TELEGRAM_CHAT_ID env)
+  scripts/screeners/runner.py        — strategy 1/2 跑 admin Telegram
+  scripts/screeners/user_filters.py  — Python port of frontend filters.ts ⭐ NEW
+  scripts/push_user_strategies.py    — 個人化推播主腳本（--source d1|endpoint）⭐ NEW
 
-frontend/
-  ├── src/
-  │   ├── App.tsx                      # main 元件，串接所有功能
-  │   ├── components/
-  │   │   ├── FiltersBar.tsx           # 桌面 inline / 手機 modal 篩選器
-  │   │   ├── StrategyManager.tsx      # 策略 CRUD UI（feature only）
-  │   │   ├── GoogleSignInButton.tsx   # 自訂 dark-themed Google 登入（feature only）
-  │   │   ├── AlertModal.tsx           # 通用提示型 modal（feature only）
-  │   │   └── ...
-  │   ├── hooks/
-  │   │   ├── useStocks.ts             # 載入 stocks.json + 篩選排序
-  │   │   ├── useFavorites.ts          # 我的最愛 + 跨裝置同步（feature only）
-  │   │   ├── useStrategies.ts         # 策略 CRUD（feature only）
-  │   │   └── useGoogleAuth.ts         # Google 登入（feature only）
-  │   ├── api/
-  │   │   ├── favorites.ts             # /api/favorites client
-  │   │   └── strategies.ts            # /api/strategies client（feature only）
-  │   └── config.ts                    # GOOGLE_CLIENT_ID（feature only）
-  └── public/data/
-      ├── stocks.json                  # 主清單
-      └── klines/*.json                # K 線（按族群拆檔）
+functions (Cloudflare Pages):
+  functions/_lib/google-auth.ts
+  functions/_lib/telegram.ts
+  functions/_lib/access.ts
+  functions/_lib/limits.ts
+  functions/api/favorites.ts
+  functions/api/strategies.ts + strategies/[id].ts
+  functions/api/telegram/
+    bind-code.ts                     — POST 產 6 位 code
+    binding.ts                       — GET / DELETE
+    webhook.ts                       — bot 收訊息（含 /start <code> deeplink）
+  functions/api/internal/cron/
+    bound-users.ts                   — admin GET（INTERNAL_CRON_TOKEN）⭐ NEW
 
-functions/  (Cloudflare Pages Functions)
-  ├── _lib/
-  │   ├── google-auth.ts               # 自驗 Google ID Token (feature only)
-  │   └── limits.ts                    # 收藏 / 策略上限 + 白名單 (feature only)
-  └── api/
-      ├── favorites.ts                 # 收藏 CRUD（master 也有，但 feature 多了 JWT 驗證）
-      └── strategies.ts                # 策略 CRUD（feature only）
+frontend (React):
+  src/App.tsx                        — favorites mode + archive lazy-load + bell + showSettings + klines lazy
+  src/components/SettingsPanel.tsx   — 推播設定全頁（VIP / 通知頻道 / 通知類型）⭐ NEW
+  src/components/VipPanel.tsx
+  src/components/StrategyManager.tsx
+  src/components/StockTable.tsx + GroupCard.tsx — ghost row badge
+  src/components/FiltersBar.tsx      — 4 collapsible sections（大改）
+  src/api/telegram.ts                — Telegram API client ⭐ NEW
+  src/hooks/useStocks.ts
+  src/hooks/useKline.ts              — exposes getAllKlines()
+  src/hooks/useFavorites.ts
+  src/hooks/useGoogleAuth.ts
+  src/hooks/useStrategies.ts
+  src/hooks/useTelegramBinding.ts    — binding state + 3s poll ⭐ NEW
+  src/utils/filters.ts               — 加 passNDayReturn / passNDayHigh
 
-scripts/
-  ├── run_pipeline.py                  # 主 pipeline + telegram 通知
-  ├── update_klines.py                 # 增量 K 線更新
-  ├── scrape_twii.py                   # 大盤
-  ├── scrape_institutional.py          # 三大法人 + buy streak
-  ├── send_telegram.py                 # Telegram 通知 helper
-  ├── debug_norway.py                  # 神秘金字塔 debug 腳本（這次新增）
-  └── screeners/
-      ├── runner.py                    # 跑全部策略 + Telegram 推播
-      ├── strategy1.py / strategy2.py
-      └── base.py
+migrations:
+  0001_init.sql                      — favorites
+  0002_strategies.sql                — saved filter strategies
+  0003_user_status.sql               — VIP/FREE tier
+  0004_telegram.sql                  — telegram_bindings + telegram_bind_codes
 
-migrations/
-  ├── 0001_init.sql                    # favorites table
-  └── 0002_strategies.sql              # strategies table（feature only，已 deploy 到 prod D1）
+.github/workflows/
+  weekly-update.yml                  — 大幅擴充（11:30 schedule + IS_PUBLISH_DAY + holidays）
+  daily-push.yml                     — 個人化推播 ⭐ NEW
 ```
 
 ---
 
-## 10. 環境變數 / Secrets 檢查清單
+## 7. 給下個 session 的開頭 Checklist
 
-`.env` 應有：
-```
-FINMIND_TOKEN=...
-TELEGRAM_BOT_TOKEN=...
-TELEGRAM_CHAT_ID=...
-USER_FAVORITES_TOKEN=...
-```
+1. ☐ 讀 `CLAUDE.md` + 這份 `SESSION_HANDOFF.md`
+2. ☐ `git log --oneline -15` 看最近 commits
+3. ☐ `git status`、`git branch --show-current` 確認分支乾淨
+4. ☐ user 想接視覺驗證、推播去重、其他？
+5. ☐ 開始前看 `src/components/FiltersBar.tsx`（重構後 ~700 行）+ `src/components/SettingsPanel.tsx`（~500 行）熟悉新結構
+6. ☐ 任何涉及 K 線即時計算的 filter，記得 `applyFilters` 第 3 參數要傳 klines map
 
-GitHub Secrets（cron 用）：
-- `FINMIND_TOKEN`
-- `TELEGRAM_BOT_TOKEN`
-- `TELEGRAM_CHAT_ID`
-- `FIREBASE_SERVICE_ACCOUNT_TAIWAN_STOCK_SCANNER`
-- `CLOUDFLARE_API_TOKEN`
-- `CLOUDFLARE_ACCOUNT_ID`
-
-Cloudflare：
-- D1 binding `DB` → `stock-scanner-favorites` (id `7631cf70-84d4-477a-9627-9994a7806685`)
-- Pages var `GOOGLE_CLIENT_ID = 225818828453-n5g26iet76lg8jngc4u6kujjlsp7fdih.apps.googleusercontent.com`
-
-Google Cloud Console OAuth Authorized origins：
-- `https://taiwan-stock-scanner.pages.dev`
-- `https://feature-favorites-v2.taiwan-stock-scanner.pages.dev`
-- `http://localhost:5173`
-- `http://localhost:8788`
-
----
-
-## 11. 給未來自己的話
-
-今天從 09:00 debug 到 15:00 主要在「讓系統知道自己壞了」這個 meta 問題（之前是 user 手動觸發才發現失敗）。現在 telegram 通知機制完整，未來資料源變動 → 5 分鐘內收到通知，不用再經歷今天這種 6 小時 debug。
-
-下次 session 應該回到正題：**做 VIP feature**。但記得不要忘了驗證 cron 真的能 work（明天看雲端有沒有自動跑 + 收到 telegram「✅ Pipeline 成功」）。
-
-End of session 2026-05-01.
+祝順利 ⚡

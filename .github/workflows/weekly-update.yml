@@ -71,18 +71,8 @@ jobs:
           else
             DOW=$(date +%u)
             DOM=$(date +%-d)
-            # 假日 publish day 偵測：用 Python 算（要考慮國定假日）
-            IS_PUBLISH_DAY=$(python3 -c "
-            import sys
-            sys.path.insert(0, 'scripts')
-            from datetime import datetime, timedelta
-            from trading_calendar import is_trading_day
-            now = datetime.utcnow() + timedelta(hours=8)
-            today = now.date()
-            yest  = today - timedelta(days=1)
-            # 昨天是交易日 + 今天非交易日 → 今天是 norway publish day
-            print('1' if (is_trading_day(yest) and not is_trading_day(today)) else '0')
-            ")
+            # 假日 publish day 偵測（昨天交易 + 今天非交易 → 今天是 norway publish day）
+            IS_PUBLISH_DAY=$(PYTHONPATH=scripts python3 -c 'from datetime import datetime, timedelta; from trading_calendar import is_trading_day; n=datetime.utcnow()+timedelta(hours=8); t=n.date(); y=t-timedelta(days=1); print("1" if (is_trading_day(y) and not is_trading_day(t)) else "0")')
             if [ "$DOW" = "6" ] || [ "$DOM" -le 10 ] || [ "$IS_PUBLISH_DAY" = "1" ]; then
               echo "mode=full" >> $GITHUB_OUTPUT
             elif [ "$DOM" = "15" ]; then
