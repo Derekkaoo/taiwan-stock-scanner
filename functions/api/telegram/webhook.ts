@@ -270,41 +270,64 @@ async function handleUnknown(env: Env, msg: TelegramMessage): Promise<void> {
 }
 
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
+  console.log('[webhook] received POST')
+
   // 1. 驗證 secret token（如果有設定）
   if (env.TELEGRAM_WEBHOOK_SECRET) {
     const incoming = request.headers.get('X-Telegram-Bot-Api-Secret-Token')
-    if (incoming !== env.TELEGRAM_WEBHOOK_SECRET) {
-      // 偽造的 webhook 請求 — 直接回 200 假裝接受，避免攻擊者發現 secret 不對
+    const expected = env.TELEGRAM_WEBHOOK_SECRET
+    const incomingLen = incoming?.length ?? 0
+    const expectedLen = expected.length
+    if (incoming !== expected) {
+      console.error(
+        `[webhook] secret mismatch! incomingLen=${incomingLen} expectedLen=${expectedLen} ` +
+          `incomingHead=${incoming?.slice(0, 4) ?? 'null'} expectedHead=${expected.slice(0, 4)}`,
+      )
       return ok()
     }
+    console.log('[webhook] secret matched')
+  } else {
+    console.warn('[webhook] no TELEGRAM_WEBHOOK_SECRET configured — skipping secret check')
   }
 
   if (!env.TELEGRAM_BOT_TOKEN) {
+    console.error('[webhook] TELEGRAM_BOT_TOKEN missing in env!')
     return ok()
   }
+  console.log(`[webhook] bot token loaded (length=${env.TELEGRAM_BOT_TOKEN.length})`)
 
   // 2. 解析 update
   let update: TelegramUpdate
   try {
     update = await request.json()
-  } catch {
+  } catch (e) {
+    console.error('[webhook] failed to parse JSON:', e)
     return ok()
   }
 
   const msg = update.message
-  if (!msg || !msg.text) return ok()
+  if (!msg || !msg.text) {
+    console.log('[webhook] update has no message.text — ignored')
+    return ok()
+  }
+
+  console.log(
+    `[webhook] message from chat=${msg.chat.id} type=${msg.chat.type} text=${JSON.stringify(msg.text.slice(0, 50))}`,
+  )
 
   // 群組 / 頻道訊息忽略 — 這個 bot 設計只接受私訊綁定
   if (msg.chat.type !== 'private') {
-    await sendMessage(
+    const r = await sendMessage(
       env.TELEGRAM_BOT_TOKEN,
       String(msg.chat.id),
       '請以私訊的方式跟 bot 對話，群組綁定不支援。',
     )
+    console.log(`[webhook] sent group-warning, ok=${r.ok} status=${r.status} desc=${r.description ?? ''}`)
     return ok()
   }
 
   const { cmd, args } = parseCommand(msg.text)
+  console.log(`[webhook] cmd=${cmd} args=${JSON.stringify(args)}`)
 
   try {
     switch (cmd) {
@@ -323,9 +346,10 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
       default:
         await handleUnknown(env, msg)
     }
+    console.log(`[webhook] handler ${cmd} done`)
   } catch (e) {
     // 任何未預期錯誤 — 寫 log，但回 200 讓 Telegram 不重送
-    console.error('webhook handler error:', e)
+    console.error('[webhook] handler error:', e)
   }
 
   return ok()

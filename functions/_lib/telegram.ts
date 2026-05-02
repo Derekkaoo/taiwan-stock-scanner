@@ -49,8 +49,18 @@ export async function sendMessage(
       }),
     })
     const j = (await r.json()) as { ok: boolean; description?: string }
+    if (!j.ok) {
+      console.error(
+        `[sendMessage] FAILED chat=${chatId} status=${r.status} desc=${j.description ?? ''}`,
+      )
+    } else {
+      console.log(`[sendMessage] sent to chat=${chatId} status=${r.status}`)
+    }
     return { ok: j.ok === true, status: r.status, description: j.description }
   } catch (e) {
+    console.error(
+      `[sendMessage] EXCEPTION chat=${chatId} err=${e instanceof Error ? e.message : String(e)}`,
+    )
     return { ok: false, status: 0, description: e instanceof Error ? e.message : String(e) }
   }
 }
