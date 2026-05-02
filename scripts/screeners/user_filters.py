@@ -33,6 +33,7 @@ FILTER_BOUNDS = {
     "grossMargin":     {"min": -50,  "max": 100},
     "operatingMargin": {"min": -100, "max": 100},
     "eps":             {"min": -10,  "max": 100},
+    "nDayReturn":      {"min": -10,  "max": 50},
 }
 
 
@@ -60,6 +61,11 @@ DEFAULT_FILTERS: Dict[str, Any] = {
     },
     "institutional": {"days": 0, "foreign": False, "trust": False},
     "market": "all",
+    "nDayReturn": {
+        "days": 0,
+        "range": list(_b("nDayReturn")),
+    },
+    "nDayHigh": {"days": 0},
 }
 
 
@@ -175,15 +181,65 @@ def _pass_abs_value(s: Dict[str, Any], a: Dict[str, Any]) -> bool:
     return True
 
 
-def apply_filters(stocks: Iterable[Dict[str, Any]], f: Dict[str, Any]) -> List[Dict[str, Any]]:
+def _calc_n_day_return(bars: Optional[List[Dict[str, Any]]], n: int) -> Optional[float]:
+    """最近 N 日漲跌幅 %（最新 close vs N 根前 close）。資料不足回 None。"""
+    if not bars or len(bars) < n + 1:
+        return None
+    try:
+        last = bars[-1].get("c")
+        prev = bars[-1 - n].get("c")
+    except Exception:
+        return None
+    if not last or not prev:
+        return None
+    return ((last - prev) / prev) * 100.0
+
+
+def _pass_n_day_return(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
+    days = f.get("days", 0)
+    if days == 0:
+        return True
+    bars = klines.get(str(s.get("id", ""))) if klines else None
+    r = _calc_n_day_return(bars, days)
+    if r is None:
+        return False
+    rng = f.get("range") or DEFAULT_FILTERS["nDayReturn"]["range"]
+    if not _range_active(rng, DEFAULT_FILTERS["nDayReturn"]["range"]):
+        return True
+    return _in_range(r, rng)
+
+
+def _pass_n_day_high(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
+    days = f.get("days", 0)
+    if days == 0:
+        return True
+    bars = klines.get(str(s.get("id", ""))) if klines else None
+    if not bars or len(bars) < days:
+        return False
+    last = bars[-1]
+    last_h = last.get("h")
+    if not last_h:
+        return False
+    window = bars[-days:]
+    max_h = max((b.get("h") or float("-inf")) for b in window)
+    return last_h >= max_h - 1e-6
+
+
+def apply_filters(
+    stocks: Iterable[Dict[str, Any]],
+    f: Dict[str, Any],
+    klines: Optional[Dict[str, List[Dict[str, Any]]]] = None,
+) -> List[Dict[str, Any]]:
     """跟 frontend filters.ts 的 applyFilters 邏輯對等。
 
     Args:
         stocks: stock dict 列表（直接從 stocks.json 讀進來的格式）
         f: filter dict（從 D1 strategies.filters_json 解出來，schema 同前端 Filters）
+        klines: stock_id → bars list（給 nDayReturn / nDayHigh 用，沒給就視為空）
     Returns:
         match 的 stock list（順序維持輸入順序）
     """
+    klines = klines or {}
     # 補齊缺欄位（舊 strategy 在 schema 升級後可能缺欄位，跟前端 applyServerFilters 同邏輯）
     f = _merge_with_defaults(f)
 
@@ -211,9 +267,15 @@ def apply_filters(stocks: Iterable[Dict[str, Any]], f: Dict[str, Any]) -> List[D
 
     market_active = f["market"] != "all"
 
+    n_ret = f["nDayReturn"]
+    n_ret_active = n_ret.get("days", 0) != 0
+    n_high = f["nDayHigh"]
+    n_high_active = n_high.get("days", 0) != 0
+
     # 沒有任何 filter 啟用 → 全傳回（這跟前端一致：等同沒篩）
     if not (vol_active or mc_active or d_active or r_active or ind_active or
-            grow_active or abs_active or inst_active or market_active):
+            grow_active or abs_active or inst_active or market_active or
+            n_ret_active or n_high_active):
         return list(stocks)
 
     out: List[Dict[str, Any]] = []
@@ -244,6 +306,10 @@ def apply_filters(stocks: Iterable[Dict[str, Any]], f: Dict[str, Any]) -> List[D
             continue
         if market_active and not _pass_market(s, f["market"]):
             continue
+        if n_ret_active and not _pass_n_day_return(s, n_ret, klines):
+            continue
+        if n_high_active and not _pass_n_day_high(s, n_high, klines):
+            continue
         out.append(s)
     return out
 
@@ -271,6 +337,14 @@ def _merge_with_defaults(f: Dict[str, Any]) -> Dict[str, Any]:
     out["institutional"] = {
         **DEFAULT_FILTERS["institutional"],
         **(f.get("institutional") or {}),
+    }
+    out["nDayReturn"] = {
+        **DEFAULT_FILTERS["nDayReturn"],
+        **(f.get("nDayReturn") or {}),
+    }
+    out["nDayHigh"] = {
+        **DEFAULT_FILTERS["nDayHigh"],
+        **(f.get("nDayHigh") or {}),
     }
     return out
 

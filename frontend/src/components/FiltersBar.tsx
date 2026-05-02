@@ -1,14 +1,18 @@
 // ============================================================
 //  個股列表 toolbar 的篩選器集合
-//  桌面（md+）：sliders inline + 連續成長 + 絕對值 + 產業 chips 各一行
-//  手機（<md）：折疊成「篩選器 (N)」按鈕，點開 modal
+//  桌機 + 手機都用 collapsible sections（基本面 / 技術面 / 籌碼面 / 其他）
+//  默認全收起；展開狀態持久化到 localStorage
 // ============================================================
 import { useEffect, useMemo, useState } from 'react'
-import type { Filters, GrowthQuarters, InstStreakDays, MarketFilter, StockRow } from '../types'
+import type {
+  Filters, GrowthQuarters, InstStreakDays, MarketFilter,
+  NReturnDays, NHighDays, StockRow,
+} from '../types'
 import {
   DEFAULT_FILTERS, FILTER_BOUNDS, FILTER_LABELS, FILTER_UNITS,
   GROWTH_QUARTERS_OPTIONS, GROWTH_METRIC_LABELS,
   INST_STREAK_OPTIONS, MARKET_OPTIONS,
+  N_RETURN_OPTIONS, N_HIGH_OPTIONS,
 } from '../types'
 import { RangeSlider } from './RangeSlider'
 import { IndustryChips } from './IndustryChips'
@@ -28,32 +32,84 @@ const REVENUE_SCALE    = makeLinearScale(FILTER_BOUNDS.revenueYoY.min, FILTER_BO
 const GM_SCALE         = makeLinearScale(FILTER_BOUNDS.grossMargin.min,     FILTER_BOUNDS.grossMargin.max)
 const OM_SCALE         = makeLinearScale(FILTER_BOUNDS.operatingMargin.min, FILTER_BOUNDS.operatingMargin.max)
 const EPS_SCALE        = makePiecewiseScale([-10, 0, 5, 20, 100])         // EPS：0~5 大公司密集，>20 少數
+const N_RETURN_SCALE   = makeLinearScale(FILTER_BOUNDS.nDayReturn.min, FILTER_BOUNDS.nDayReturn.max)
 
-function activeCount(f: Filters): number {
+const EPS = 1e-6
+const ranged = (a: [number, number], b: [number, number]) =>
+  Math.abs(a[0] - b[0]) > EPS || Math.abs(a[1] - b[1]) > EPS
+
+type SectionKey = 'fund' | 'tech' | 'chips' | 'meta'
+
+const SECTION_LABELS: Record<SectionKey, string> = {
+  fund:  '📊 基本面',
+  tech:  '📈 技術面',
+  chips: '💰 籌碼面',
+  meta:  '🏷 其他',
+}
+
+function activeCountForSection(key: SectionKey, f: Filters): number {
   let n = 0
-  const eps = 1e-6
-  const ranged = (a: [number, number], b: [number, number]) =>
-    Math.abs(a[0] - b[0]) > eps || Math.abs(a[1] - b[1]) > eps
-  if (ranged(f.volume,     DEFAULT_FILTERS.volume))     n++
-  if (ranged(f.marketCap,  DEFAULT_FILTERS.marketCap))  n++
-  if (ranged(f.delta,      DEFAULT_FILTERS.delta))      n++
-  if (ranged(f.revenueYoY, DEFAULT_FILTERS.revenueYoY)) n++
-  if (f.industries.length > 0) n++
-  if (f.growth.quarters !== 0 &&
-      (f.growth.metrics.eps || f.growth.metrics.grossMargin || f.growth.metrics.operatingMargin)) n++
-  if (f.absValue.quarter && (
-      ranged(f.absValue.grossMargin,     DEFAULT_FILTERS.absValue.grossMargin) ||
-      ranged(f.absValue.operatingMargin, DEFAULT_FILTERS.absValue.operatingMargin) ||
-      ranged(f.absValue.eps,             DEFAULT_FILTERS.absValue.eps))) n++
-  if (f.institutional.days !== 0 && (f.institutional.foreign || f.institutional.trust)) n++
-  if (f.market !== 'all') n++
-  return n
+  switch (key) {
+    case 'fund':
+      if (ranged(f.marketCap,  DEFAULT_FILTERS.marketCap))  n++
+      if (ranged(f.revenueYoY, DEFAULT_FILTERS.revenueYoY)) n++
+      if (f.growth.quarters !== 0 &&
+          (f.growth.metrics.eps || f.growth.metrics.grossMargin || f.growth.metrics.operatingMargin)) n++
+      if (f.absValue.quarter && (
+          ranged(f.absValue.grossMargin,     DEFAULT_FILTERS.absValue.grossMargin) ||
+          ranged(f.absValue.operatingMargin, DEFAULT_FILTERS.absValue.operatingMargin) ||
+          ranged(f.absValue.eps,             DEFAULT_FILTERS.absValue.eps))) n++
+      return n
+    case 'tech':
+      if (ranged(f.volume, DEFAULT_FILTERS.volume)) n++
+      if (f.nDayReturn.days !== 0) n++
+      if (f.nDayHigh.days   !== 0) n++
+      return n
+    case 'chips':
+      if (ranged(f.delta, DEFAULT_FILTERS.delta)) n++
+      if (f.institutional.days !== 0 && (f.institutional.foreign || f.institutional.trust)) n++
+      return n
+    case 'meta':
+      if (f.market !== 'all')      n++
+      if (f.industries.length > 0) n++
+      return n
+  }
+}
+
+function totalActiveCount(f: Filters): number {
+  return activeCountForSection('fund', f)
+       + activeCountForSection('tech', f)
+       + activeCountForSection('chips', f)
+       + activeCountForSection('meta', f)
+}
+
+const STORAGE_KEY = 'filtersbar_open_sections_v1'
+function loadOpenSections(): Set<SectionKey> {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY)
+    if (raw) {
+      const arr = JSON.parse(raw) as string[]
+      const valid = new Set<SectionKey>()
+      for (const k of arr) {
+        if (k === 'fund' || k === 'tech' || k === 'chips' || k === 'meta') valid.add(k)
+      }
+      return valid
+    }
+  } catch { /* ignore */ }
+  return new Set() // 預設全收起
+}
+function saveOpenSections(s: Set<SectionKey>) {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])) } catch { /* ignore */ }
 }
 
 export function FiltersBar({ stocks, filters, onChange }: Props) {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const n = useMemo(() => activeCount(filters), [filters])
+  const [openSections, setOpenSections] = useState<Set<SectionKey>>(() => loadOpenSections())
+
+  const totalActive = useMemo(() => totalActiveCount(filters), [filters])
   const quarters = useMemo(() => recentQuarters(stocks, 4), [stocks])
+
+  useEffect(() => { saveOpenSections(openSections) }, [openSections])
 
   useEffect(() => {
     if (!mobileOpen) return
@@ -61,6 +117,15 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     document.body.style.overflow = 'hidden'
     return () => { document.body.style.overflow = prev }
   }, [mobileOpen])
+
+  const toggleSection = (k: SectionKey) => {
+    setOpenSections(prev => {
+      const next = new Set(prev)
+      if (next.has(k)) next.delete(k)
+      else next.add(k)
+      return next
+    })
+  }
 
   const set = (patch: Partial<Filters>) => onChange({ ...filters, ...patch })
   const reset = () => onChange(DEFAULT_FILTERS)
@@ -83,35 +148,48 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
 
   const setMarket = (m: MarketFilter) => set({ market: m })
 
-  const sliders = (
-    <>
-      <RangeSlider
-        label={FILTER_LABELS.volume} unit={FILTER_UNITS.volume}
-        value={filters.volume} bounds={FILTER_BOUNDS.volume}
-        scale={VOLUME_SCALE} display={{ snapTo: 1000, digits: 0 }}
-        onChange={v => set({ volume: v })}
-      />
-      <RangeSlider
-        label={FILTER_LABELS.marketCap} unit={FILTER_UNITS.marketCap}
-        value={filters.marketCap} bounds={FILTER_BOUNDS.marketCap}
-        scale={MARKET_CAP_SCALE} display={{ snapTo: 10, digits: 0 }}
-        onChange={v => set({ marketCap: v })}
-      />
-      <RangeSlider
-        label={FILTER_LABELS.delta} unit={FILTER_UNITS.delta}
-        value={filters.delta} bounds={FILTER_BOUNDS.delta}
-        scale={DELTA_SCALE} display={{ snapTo: 0.1, digits: 1 }}
-        onChange={v => set({ delta: v })}
-      />
-      <RangeSlider
-        label={FILTER_LABELS.revenueYoY} unit={FILTER_UNITS.revenueYoY}
-        value={filters.revenueYoY} bounds={FILTER_BOUNDS.revenueYoY}
-        scale={REVENUE_SCALE} display={{ snapTo: 1, digits: 0 }}
-        onChange={v => set({ revenueYoY: v })}
-      />
-    </>
+  const setNReturnDays = (d: NReturnDays) =>
+    set({ nDayReturn: { ...filters.nDayReturn, days: d } })
+  const setNReturnRange = (v: [number, number]) =>
+    set({ nDayReturn: { ...filters.nDayReturn, range: v } })
+  const setNHighDays = (d: NHighDays) =>
+    set({ nDayHigh: { days: d } })
+
+  // === 個別 sliders（拆出來方便分到各 section）===
+  const volumeSlider = (
+    <RangeSlider
+      label={FILTER_LABELS.volume} unit={FILTER_UNITS.volume}
+      value={filters.volume} bounds={FILTER_BOUNDS.volume}
+      scale={VOLUME_SCALE} display={{ snapTo: 1000, digits: 0 }}
+      onChange={v => set({ volume: v })}
+    />
+  )
+  const marketCapSlider = (
+    <RangeSlider
+      label={FILTER_LABELS.marketCap} unit={FILTER_UNITS.marketCap}
+      value={filters.marketCap} bounds={FILTER_BOUNDS.marketCap}
+      scale={MARKET_CAP_SCALE} display={{ snapTo: 10, digits: 0 }}
+      onChange={v => set({ marketCap: v })}
+    />
+  )
+  const deltaSlider = (
+    <RangeSlider
+      label={FILTER_LABELS.delta} unit={FILTER_UNITS.delta}
+      value={filters.delta} bounds={FILTER_BOUNDS.delta}
+      scale={DELTA_SCALE} display={{ snapTo: 0.1, digits: 1 }}
+      onChange={v => set({ delta: v })}
+    />
+  )
+  const revenueYoYSlider = (
+    <RangeSlider
+      label={FILTER_LABELS.revenueYoY} unit={FILTER_UNITS.revenueYoY}
+      value={filters.revenueYoY} bounds={FILTER_BOUNDS.revenueYoY}
+      scale={REVENUE_SCALE} display={{ snapTo: 1, digits: 0 }}
+      onChange={v => set({ revenueYoY: v })}
+    />
   )
 
+  // === Block JSX（同一 block 內含 chips 跟 sliders）===
   const growthBlock = (
     <div className="flex items-center flex-wrap gap-2">
       <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>連續 YoY 成長</span>
@@ -167,7 +245,6 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     </div>
   )
 
-  // 連續買超 pill row（外資/投信）
   const instEnabled = filters.institutional.days !== 0
   const institutionalBlock = (
     <div className="flex items-center flex-wrap gap-2">
@@ -223,7 +300,6 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     </div>
   )
 
-  // 市場別 chip row（全部 / 上市 / 上櫃 三選一）
   const marketBlock = (
     <div className="flex items-center flex-wrap gap-2">
       <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>市場</span>
@@ -252,8 +328,81 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     </div>
   )
 
-  const absEnabled = !!filters.absValue.quarter
+  const nReturnEnabled = filters.nDayReturn.days !== 0
+  const nReturnBlock = (
+    <div className="flex items-center flex-wrap gap-2">
+      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>N 日漲跌幅</span>
+      <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>近</span>
+      <div className="flex items-center gap-1">
+        {N_RETURN_OPTIONS.map(d => {
+          const active = filters.nDayReturn.days === d
+          return (
+            <button
+              key={d}
+              onClick={() => setNReturnDays(d)}
+              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              style={{
+                background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                color:       active ? '#fff' : 'var(--color-text-secondary)',
+                fontWeight:  active ? 600 : 400,
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {d === 0 ? '不限' : `${d}日`}
+            </button>
+          )
+        })}
+      </div>
+      <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
+      <div
+        className="min-w-[180px] max-w-[260px]"
+        style={{ opacity: nReturnEnabled ? 1 : 0.4, pointerEvents: nReturnEnabled ? 'auto' : 'none' }}
+      >
+        <RangeSlider
+          label="漲跌幅範圍"
+          unit={FILTER_UNITS.nDayReturn}
+          value={filters.nDayReturn.range}
+          bounds={FILTER_BOUNDS.nDayReturn}
+          scale={N_RETURN_SCALE}
+          display={{ snapTo: 0.5, digits: 1 }}
+          onChange={setNReturnRange}
+        />
+      </div>
+    </div>
+  )
 
+  const nHighBlock = (
+    <div className="flex items-center flex-wrap gap-2">
+      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>創新高</span>
+      <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>盤中創</span>
+      <div className="flex items-center gap-1 flex-wrap">
+        {N_HIGH_OPTIONS.map(d => {
+          const active = filters.nDayHigh.days === d
+          return (
+            <button
+              key={d}
+              onClick={() => setNHighDays(d)}
+              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              style={{
+                background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                color:       active ? '#fff' : 'var(--color-text-secondary)',
+                fontWeight:  active ? 600 : 400,
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {d === 0 ? '不限' : `${d}日新高`}
+            </button>
+          )
+        })}
+      </div>
+    </div>
+  )
+
+  const absEnabled = !!filters.absValue.quarter
   const absValueBlock = (
     <div className="flex flex-col gap-2">
       <div className="flex items-center flex-wrap gap-2">
@@ -315,65 +464,121 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     </div>
   )
 
-  return (
-    <>
-      <div className="hidden md:flex items-start gap-3 px-5 py-2 border-b flex-wrap"
-        style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
-      >
-        <div className="flex items-center gap-4 flex-wrap flex-1 min-w-0">
-          {sliders}
+  // === 各 section 內容 ===
+  const sectionContent: Record<SectionKey, React.ReactNode> = {
+    fund: (
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center gap-4 flex-wrap">{marketCapSlider}{revenueYoYSlider}</div>
+        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{growthBlock}</div>
+        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{absValueBlock}</div>
+      </div>
+    ),
+    tech: (
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center gap-4 flex-wrap">{volumeSlider}</div>
+        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{nReturnBlock}</div>
+        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{nHighBlock}</div>
+      </div>
+    ),
+    chips: (
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center gap-4 flex-wrap">{deltaSlider}</div>
+        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{institutionalBlock}</div>
+      </div>
+    ),
+    meta: (
+      <div className="flex flex-col gap-2">
+        {marketBlock}
+        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>
+          <div className="text-[10px] mb-2" style={{ color: 'var(--color-text-muted)' }}>產業別（多選任一）</div>
+          <IndustryChips
+            stocks={stocks}
+            selected={filters.industries}
+            onChange={v => set({ industries: v })}
+          />
         </div>
-        {n > 0 && (
-          <button
-            onClick={reset}
-            className="text-[10px] px-2 py-1 rounded border self-center transition-colors shrink-0"
-            style={{
-              background: 'var(--color-bg-600)',
-              borderColor: 'var(--color-border)',
-              color: 'var(--color-text-secondary)',
-              cursor: 'pointer',
-            }}
-            title="清除所有篩選條件"
-          >
-            清除 ({n})
-          </button>
+      </div>
+    ),
+  }
+
+  // === Collapsible Section header + body 渲染 ===
+  const renderSection = (key: SectionKey) => {
+    const open = openSections.has(key)
+    const count = activeCountForSection(key, filters)
+    return (
+      <div
+        key={key}
+        className="border-b"
+        style={{ borderColor: 'var(--color-border)', background: 'var(--color-bg-700)' }}
+      >
+        <button
+          onClick={() => toggleSection(key)}
+          className="w-full flex items-center justify-between px-5 py-2 text-xs select-none transition-colors"
+          style={{ background: 'transparent', cursor: 'pointer', color: 'var(--color-text-primary)' }}
+          onMouseEnter={e => { e.currentTarget.style.background = 'var(--color-bg-600)' }}
+          onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}
+          aria-expanded={open}
+        >
+          <span className="flex items-center gap-2 font-medium">
+            <span style={{ display: 'inline-block', width: 12, color: 'var(--color-text-muted)' }}>
+              {open ? '▾' : '▸'}
+            </span>
+            {SECTION_LABELS[key]}
+            {count > 0 && (
+              <span
+                className="rounded-full px-1.5 py-0.5 text-[10px] font-mono tabular"
+                style={{
+                  background: 'var(--color-accent-cyan)',
+                  color: '#fff',
+                  minWidth: 18,
+                  textAlign: 'center',
+                }}
+              >
+                {count}
+              </span>
+            )}
+          </span>
+        </button>
+        {open && (
+          <div className="px-5 pb-3 pt-1">
+            {sectionContent[key]}
+          </div>
         )}
       </div>
+    )
+  }
 
-      <div className="hidden md:block px-5 py-2 border-b"
-        style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
-      >
-        {growthBlock}
+  const allSections: SectionKey[] = ['fund', 'tech', 'chips', 'meta']
+
+  return (
+    <>
+      {/* 桌機 */}
+      <div className="hidden md:block">
+        {/* 全域工具列：清除按鈕（有任何 filter 啟用時顯示） */}
+        {totalActive > 0 && (
+          <div
+            className="flex items-center justify-end px-5 py-1.5 border-b"
+            style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
+          >
+            <button
+              onClick={reset}
+              className="text-[10px] px-2 py-1 rounded border transition-colors"
+              style={{
+                background: 'var(--color-bg-600)',
+                borderColor: 'var(--color-border)',
+                color: 'var(--color-text-secondary)',
+                cursor: 'pointer',
+              }}
+              title="清除所有篩選條件"
+            >
+              清除全部 ({totalActive})
+            </button>
+          </div>
+        )}
+        {allSections.map(renderSection)}
       </div>
 
-      <div className="hidden md:block px-5 py-2 border-b"
-        style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
-      >
-        {institutionalBlock}
-      </div>
-
-      <div className="hidden md:block px-5 py-2 border-b"
-        style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
-      >
-        {marketBlock}
-      </div>
-
-      <div className="hidden md:block px-5 py-2 border-b"
-        style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
-      >
-        {absValueBlock}
-      </div>
-
-      <div className="hidden md:block px-5 py-2 border-b"
-        style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
-      >
-        <IndustryChips
-          stocks={stocks}
-          selected={filters.industries}
-          onChange={v => set({ industries: v })}
-        />
-      </div>
-
+      {/* 手機按鈕 */}
       <div className="flex md:hidden items-center gap-2 px-5 py-2 border-b"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
       >
@@ -381,15 +586,15 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
           onClick={() => setMobileOpen(true)}
           className="text-xs px-3 py-1 rounded border font-medium transition-colors"
           style={{
-            background: n > 0 ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-            borderColor: n > 0 ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-            color: n > 0 ? '#fff' : 'var(--color-text-secondary)',
+            background: totalActive > 0 ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+            borderColor: totalActive > 0 ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+            color: totalActive > 0 ? '#fff' : 'var(--color-text-secondary)',
             cursor: 'pointer',
           }}
         >
-          篩選器{n > 0 ? ` (${n})` : ''}
+          篩選器{totalActive > 0 ? ` (${totalActive})` : ''}
         </button>
-        {n > 0 && (
+        {totalActive > 0 && (
           <button
             onClick={reset}
             className="text-[10px] px-2 py-1 rounded border transition-colors"
@@ -405,6 +610,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
         )}
       </div>
 
+      {/* 手機 modal */}
       {mobileOpen && (
         <div
           className="fixed left-0 right-0 top-0 z-[9999] md:hidden"
@@ -441,10 +647,10 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
               }}
             >
               <span className="text-sm font-bold" style={{ color: 'var(--color-text-primary)' }}>
-                篩選條件{n > 0 ? ` · ${n} 項` : ''}
+                篩選條件{totalActive > 0 ? ` · ${totalActive} 項` : ''}
               </span>
               <div className="flex items-center gap-2">
-                {n > 0 && (
+                {totalActive > 0 && (
                   <button
                     onClick={reset}
                     className="text-xs px-2 py-1 rounded border"
@@ -470,30 +676,8 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
                 </button>
               </div>
             </div>
-            <div className="flex flex-col gap-4 p-4">
-              {sliders}
-              <div className="border-t pt-3" style={{ borderColor: 'var(--color-border)' }}>
-                {growthBlock}
-              </div>
-              <div className="border-t pt-3" style={{ borderColor: 'var(--color-border)' }}>
-                {institutionalBlock}
-              </div>
-              <div className="border-t pt-3" style={{ borderColor: 'var(--color-border)' }}>
-                {marketBlock}
-              </div>
-              <div className="border-t pt-3" style={{ borderColor: 'var(--color-border)' }}>
-                {absValueBlock}
-              </div>
-              <div className="border-t pt-3" style={{ borderColor: 'var(--color-border)' }}>
-                <div className="text-[10px] mb-2" style={{ color: 'var(--color-text-muted)' }}>
-                  產業別（多選任一）
-                </div>
-                <IndustryChips
-                  stocks={stocks}
-                  selected={filters.industries}
-                  onChange={v => set({ industries: v })}
-                />
-              </div>
+            <div>
+              {allSections.map(renderSection)}
             </div>
           </div>
         </div>

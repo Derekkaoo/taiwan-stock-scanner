@@ -8,8 +8,20 @@
 //  - 按季篩選：選定季別後，勾選的 metric 範圍要符合；找不到該季 → 排除
 //  - 成交量：5 日均（千張）；缺資料時排除（同 revenueYoY 邏輯）
 // ============================================================
-import type { Filters, GrowthFilter, AbsValueFilter, InstitutionalFilter, MarketFilter, StockRow } from '../types'
-import { DEFAULT_FILTERS } from '../types'
+import type {
+  Filters, GrowthFilter, AbsValueFilter, InstitutionalFilter, MarketFilter,
+  NDayReturnFilter, NDayHighFilter, StockRow, KlineBar,
+} from '../types'
+import { DEFAULT_FILTERS, FILTER_BOUNDS } from '../types'
+
+/** 提供給 applyFilters 的 K 線資料來源；id → 升序 K 棒陣列（最新在最後） */
+export type KlinesById = Record<string, KlineBar[] | undefined> | Map<string, KlineBar[]>
+
+function getBars(klines: KlinesById | undefined, id: string): KlineBar[] | undefined {
+  if (!klines) return undefined
+  if (klines instanceof Map) return klines.get(id)
+  return klines[id]
+}
 
 const eps = 1e-6
 
@@ -102,7 +114,40 @@ function passAbsValue(s: StockRow, a: AbsValueFilter): boolean {
   return true
 }
 
-export function applyFilters(stocks: StockRow[], f: Filters): StockRow[] {
+/** 計算「最近 N 日漲跌幅 %」— 用最新一根 close 對 N 根前 close 比。
+ *  N=1 表「跟昨天比」；資料不足或 prev/last 無效 → null。 */
+function calcNDayReturn(bars: KlineBar[] | undefined, n: number): number | null {
+  if (!bars || bars.length < n + 1) return null
+  const last = bars[bars.length - 1]?.c
+  const prev = bars[bars.length - 1 - n]?.c
+  if (!last || !prev) return null
+  return ((last - prev) / prev) * 100
+}
+
+function passNDayReturn(s: StockRow, f: NDayReturnFilter, klines: KlinesById | undefined): boolean {
+  if (f.days === 0) return true
+  const r = calcNDayReturn(getBars(klines, s.id), f.days)
+  if (r == null) return false
+  // 預設範圍 → 只篩「有資料」、不限定範圍
+  if (!rangeActive(f.range, [FILTER_BOUNDS.nDayReturn.min, FILTER_BOUNDS.nDayReturn.max])) return true
+  return inRange(r, f.range)
+}
+
+function passNDayHigh(s: StockRow, f: NDayHighFilter, klines: KlinesById | undefined): boolean {
+  if (f.days === 0) return true
+  const bars = getBars(klines, s.id)
+  if (!bars || bars.length < f.days) return false
+  const last = bars[bars.length - 1]
+  if (!last || !last.h) return false
+  // 看「最近 N 根（含今天）的 high」最大值是否 == 今日 high
+  const window = bars.slice(-f.days)
+  let maxH = -Infinity
+  for (const b of window) if (b.h && b.h > maxH) maxH = b.h
+  // 浮點誤差小容差
+  return last.h >= maxH - 1e-6
+}
+
+export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById): StockRow[] {
   const volActive = rangeActive(f.volume,     DEFAULT_FILTERS.volume)
   const mcActive  = rangeActive(f.marketCap,  DEFAULT_FILTERS.marketCap)
   const dActive   = rangeActive(f.delta,      DEFAULT_FILTERS.delta)
@@ -119,8 +164,10 @@ export function applyFilters(stocks: StockRow[], f: Filters): StockRow[] {
   const instActive = f.institutional.days !== 0 &&
     (f.institutional.foreign || f.institutional.trust)
   const marketActive = f.market !== 'all'
+  const nRetActive  = f.nDayReturn.days !== 0
+  const nHighActive = f.nDayHigh.days   !== 0
 
-  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive) return stocks
+  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive) return stocks
 
   return stocks.filter(s => {
     if (volActive) {
@@ -143,6 +190,8 @@ export function applyFilters(stocks: StockRow[], f: Filters): StockRow[] {
     if (absActive  && !passAbsValue(s, f.absValue)) return false
     if (instActive && !passInstitutional(s, f.institutional)) return false
     if (marketActive && !passMarket(s, f.market)) return false
+    if (nRetActive  && !passNDayReturn(s, f.nDayReturn, klines)) return false
+    if (nHighActive && !passNDayHigh(s,   f.nDayHigh,   klines)) return false
     return true
   })
 }

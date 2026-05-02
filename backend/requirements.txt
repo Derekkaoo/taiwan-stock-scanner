@@ -11,3 +11,4 @@ pydantic==2.10.3
 pydantic-settings==2.7.0
 apscheduler==3.11.0   # 定時排程（每週自動抓取）
 cloudscraper==1.2.71  # 神秘金字塔反爬（GitHub Actions IP 段被擋時 fallback）
+holidays>=0.60        # 台股交易日曆判斷（scripts/trading_calendar.py 用）

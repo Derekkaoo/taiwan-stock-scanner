@@ -107,7 +107,7 @@ export default function App() {
     loadData, setSearchQuery, updateSort, updateStockReturn,
   } = useStocks(returnPeriod, turnoverPeriod)
 
-  const { fetchGroup, getFromCache, loadFromJson, cacheVersion, clearCache } = useKline()
+  const { fetchGroup, getFromCache, getAllKlines, loadFromJson, cacheVersion, clearCache } = useKline()
 
   const [view,      setView]      = useState<View>('group')
   const [groupSort, setGroupSort] = useState<GroupSort>('delta')
@@ -196,10 +196,22 @@ export default function App() {
     if (showFavoritesOnly) loadArchive()
   }, [showFavoritesOnly, loadArchive])
 
+  // K 線即時 filter（N 日漲幅 / 創 N 日新高）任一啟用 → 一次性 lazy-load 整包 klines.json
+  const klineFiltersActive = filters.nDayReturn.days !== 0 || filters.nDayHigh.days !== 0
+  useEffect(() => {
+    if (klineFiltersActive) {
+      // loadFromJson 內部會跳過已 cached 的，重複呼叫等於 no-op
+      loadFromJson()
+    }
+  }, [klineFiltersActive, loadFromJson])
+
   // Filter pipeline: stocks → search/sort → slider/chip → 只看最愛
+  // 套用 slider/chip 篩選器（只影響個股列表 view，族群總覽不受影響）
+  // cacheVersion 變動時重算（K 線 lazy-load 完成 / 重新整理）
   const filteredByFilters = useMemo(
-    () => applyFilters(filteredStocks, filters),
-    [filteredStocks, filters]
+    () => applyFilters(filteredStocks, filters, getAllKlines()),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [filteredStocks, filters, cacheVersion]
   )
   const visibleStocks = useMemo(() => {
     if (!showFavoritesOnly) return filteredByFilters

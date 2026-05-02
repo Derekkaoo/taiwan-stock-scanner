@@ -12,24 +12,9 @@ logger = logging.getLogger(__name__)
 DATA_DIR = Path(__file__).parent.parent / "frontend" / "public" / "data"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
 
-
-def _expected_trading_day(now=None):
-    """14:00 TW 為切換時點（收盤 13:30 後資料才更新）
-
-    注意：GitHub Actions 跑在 UTC，必須強制換算成台灣時間。
-    utcnow + 8 小時 = TW 時間，本機 / CI 都正確。
-    """
-    if now is None:
-        now = datetime.utcnow() + timedelta(hours=8)
-    wd = now.weekday()
-    if wd >= 5:
-        return (now - timedelta(days=wd - 4)).date()
-    cutoff = now.replace(hour=14, minute=0, second=0, microsecond=0)
-    if now >= cutoff:
-        return now.date()
-    if wd == 0:
-        return (now - timedelta(days=3)).date()
-    return (now - timedelta(days=1)).date()
+# 預期最新交易日 — 共用模組（考慮國定假日）
+sys.path.insert(0, str(Path(__file__).parent))
+from trading_calendar import expected_latest_trading_day as _expected_trading_day  # noqa: E402
 
 
 def _klines_are_fresh():
