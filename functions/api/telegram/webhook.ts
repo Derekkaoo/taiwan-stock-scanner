@@ -242,13 +242,20 @@ async function handleStatus(env: Env, msg: TelegramMessage): Promise<void> {
   )
 }
 
-async function handleStart(env: Env, msg: TelegramMessage): Promise<void> {
+async function handleStart(env: Env, msg: TelegramMessage, args: string): Promise<void> {
+  // Telegram deeplink `https://t.me/<bot>?start=<code>` 會把 code 當作 /start 的參數
+  // 帶進來。如果 args 看起來像個 bind code，直接走 bind 流程，使用者就一鍵完成綁定。
+  if (args.trim()) {
+    await handleBind(env, msg, args)
+    return
+  }
+
   await sendMessage(
     env.TELEGRAM_BOT_TOKEN,
     String(msg.chat.id),
     `👋 歡迎使用 <b>千張大戶持股追蹤器</b>！\n\n` +
       `這支 bot 會在每天 19:00 推播你儲存的選股策略命中結果。\n\n` +
-      `🔗 開始：到 <a href="https://taiwan-stock-scanner.pages.dev">網站</a> 登入 Google → 設定 → Telegram 推播 → 點「綁定」拿綁定碼，回到這邊輸入：\n\n` +
+      `🔗 開始：到 <a href="https://taiwan-stock-scanner.pages.dev">網站</a> 登入 Google → 設定 → Telegram 推播 → 點「綁定」按鈕（一鍵帶你回來），或手動輸入：\n\n` +
       `<code>/bind ABC123</code>\n\n` +
       `📋 指令清單：\n` +
       `<code>/bind &lt;code&gt;</code> — 綁定帳號\n` +
@@ -332,7 +339,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   try {
     switch (cmd) {
       case 'start':
-        await handleStart(env, msg)
+        await handleStart(env, msg, args)
         break
       case 'bind':
         await handleBind(env, msg, args)

@@ -11,6 +11,7 @@ import { Footer } from './components/Footer'
 import { FiltersBar } from './components/FiltersBar'
 import { GoogleSignInButton } from './components/GoogleSignInButton'
 import { StrategyManager } from './components/StrategyManager'
+import { TelegramPanel } from './components/TelegramPanel'
 import { AlertModal } from './components/AlertModal'
 import { VipPanel } from './components/VipPanel'
 import { applyFilters } from './utils/filters'
@@ -521,7 +522,7 @@ export default function App() {
           />
           {auth.isSignedIn && (
             <div
-              className="px-5 py-2 border-b"
+              className="px-5 py-2 border-b flex flex-col gap-2"
               style={{
                 background: 'var(--color-bg-700)',
                 borderColor: 'var(--color-border)',
@@ -533,6 +534,7 @@ export default function App() {
                 setFilters={setFilters}
                 onLimitExceeded={() => setStrategyLimitPrompt(true)}
               />
+              <TelegramPanel idToken={auth.idToken} />
             </div>
           )}
         </>
