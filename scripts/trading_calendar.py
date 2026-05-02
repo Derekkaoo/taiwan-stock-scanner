@@ -70,8 +70,56 @@ def expected_latest_trading_day(now: Optional[datetime] = None) -> date:
     return previous_trading_day(today)
 
 
+def last_completed_trading_week_end(now: Optional[datetime] = None,
+                                     publish_hour: int = 14) -> date:
+    """norway 大戶持股資料『現在應該已 publish 的最新一筆對應日期』。
+
+    背景：
+      norway.twsthr.info 約在「該週最後交易日 + 1 天」publish 該週資料。
+        - 正常週：Fri = 最後交易日 → Sat publish
+        - 假日 Fri 週：Thu = 最後交易日 → Fri publish
+      這個函式回傳「依現在時間推算，norway 應該已經有的最新資料日期」。
+
+    規則：
+      回退尋找最近的「week-end 候選日」，定義為：
+        d 是交易日 AND d+1 不是交易日（即 d 是該週最後一個交易日）
+      然後檢查 publish day = d + 1：
+        - publish_day < today → 已過 → 回傳 d
+        - publish_day == today AND now.hour >= publish_hour → 已過 → 回傳 d
+        - 否則繼續往前找上一個 week-end
+
+    Args:
+      now: TW 時區 datetime；不傳就用 utcnow + 8 小時。
+      publish_hour: 假設當天的 publish 時間（預設 14:00），保守估計。
+
+    Returns:
+      應該已 publish 的最新 week-end 日期（== stocks.json 預期 date）。
+    """
+    if now is None:
+        now = datetime.utcnow() + timedelta(hours=8)
+    today = now.date()
+
+    # 從昨天往回找（最多 21 天 = 涵蓋連續長假）
+    for delta in range(1, 22):
+        d = today - timedelta(days=delta)
+        if not is_trading_day(d):
+            continue
+        nxt = d + timedelta(days=1)
+        if is_trading_day(nxt):
+            continue  # d 不是 week-end（後面還有交易日）
+        publish_day = nxt
+        if publish_day < today:
+            return d
+        if publish_day == today and now.hour >= publish_hour:
+            return d
+        # 還沒到 publish 時間 → 繼續往前找上一個 week-end
+    # fallback：找不到（理論上不會），回傳 21 天前
+    return today - timedelta(days=21)
+
+
 __all__ = [
     "is_trading_day",
     "previous_trading_day",
     "expected_latest_trading_day",
+    "last_completed_trading_week_end",
 ]

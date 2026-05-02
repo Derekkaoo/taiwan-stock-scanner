@@ -142,11 +142,15 @@ def check_what_needs_refresh() -> dict:
         result["holdings"] = True
         result["reasons"].append("大戶持股資料不存在")
     else:
-        days_old = (today - holdings_date).days
-        if days_old >= 7:
+        # norway 約在「該週最後交易日 + 1 天」publish。對齊 publish 節奏判斷是否落後：
+        #   - 正常週：Fri = 最後交易日 → Sat publish
+        #   - 假日 Fri 週：Thu = 最後交易日 → Fri publish（早一天）
+        from trading_calendar import last_completed_trading_week_end
+        expected_holdings = last_completed_trading_week_end(now)
+        if holdings_date < expected_holdings:
             result["holdings"] = True
             result["reasons"].append(
-                f"大戶持股超過 7 天未更新（最新 {holdings_date}，距今 {days_old} 天）"
+                f"大戶持股過期（最新 {holdings_date}，預期 {expected_holdings}）"
             )
 
     # 3. 月營收：對照 expected_latest_revenue_month
