@@ -16,3 +16,9 @@ database_id = "7631cf70-84d4-477a-9627-9994a7806685"
 # （部署環境吃 dashboard 的，本地 wrangler dev 吃這裡的）
 [vars]
 GOOGLE_CLIENT_ID = "225818828453-n5g26iet76lg8jngc4u6kujjlsp7fdih.apps.googleusercontent.com"
+TELEGRAM_BOT_USERNAME = "derek_taiwanstock_bot"
+
+# 以下 secrets 不寫入 wrangler.toml（避免 commit 到 git）
+# 必須在 Cloudflare Pages dashboard → Settings → Environment variables 手動設定：
+#   TELEGRAM_BOT_TOKEN       — bot 的 HTTP API token，從 BotFather 拿
+#   TELEGRAM_WEBHOOK_SECRET  — 隨機字串，setWebhook 時跟 Telegram 約定，驗證 webhook 來源
