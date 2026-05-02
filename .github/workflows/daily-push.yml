@@ -1,0 +1,54 @@
+name: 每日選股 Telegram 推播（個人化）
+
+# M4 path B — 每平日 19:00 自動推播每位使用者的策略命中
+#
+# 觸發來源（多層備援）：
+#   1. cron-job.org → workflow_dispatch（最穩定 >99.9%）
+#   2. GitHub schedule（11:00 UTC ≈ 19:00 TW，平日，備援用）
+#   3. 手動 workflow_dispatch（debug）
+#
+# 跟 weekly-update.yml 切開的理由：
+#   - weekly-update 是「資料抓取 + 部署」，跑很久（5-10 分鐘）
+#   - daily-push 是「讀資料 → 推 Telegram」，超快（< 30 秒）
+#   - 切開後就算 weekly-update 出包，daily-push 還是能推（讀 master 上次 commit 的 stocks.json）
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 平日 11:00 UTC = 台灣時間 19:00（GitHub schedule 不穩，cron-job.org 才是主觸發）
+    - cron: '0 11 * * 1-5'
+
+# 同分支同時間只跑一個，避免重複推送
+concurrency:
+  group: daily-push-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      # 拿最新 master HEAD，stocks.json 必須是 weekly-update 跑完的版本
+      - name: Checkout master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python deps
+        run: pip install requests
+
+      - name: Push user strategies to Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          INTERNAL_CRON_TOKEN: ${{ secrets.INTERNAL_CRON_TOKEN }}
+          # 目前 telegram code 還在 feature/favorites-v2 preview，等 telegram 整套合到 master
+          # 後可改成 https://taiwan-stock-scanner.pages.dev
+          PUSH_API_BASE: https://feature-favorites-v2.taiwan-stock-scanner.pages.dev
+        run: python scripts/push_user_strategies.py --source endpoint
