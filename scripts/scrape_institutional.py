@@ -272,18 +272,11 @@ def run():
     #   （這 case 通常是 FinMind 還沒 publish 今日資料，下次 cron 再試）
     # 用 --force 旗標可繞過（週六完整 pipeline 強制重抓時用）
     if "--force" not in sys.argv and by_stock:
-        from datetime import datetime as _dt, timedelta as _td
-        # 預期最新交易日（強制 TW 時區，14:00 為切換點，週末回到上週五）
-        _now_tw = _dt.utcnow() + _td(hours=8)
-        _wd = _now_tw.weekday()
-        if _wd >= 5:
-            _expected = (_now_tw - _td(days=_wd - 4)).date()
-        elif _now_tw.hour >= 14:
-            _expected = _now_tw.date()
-        elif _wd == 0:
-            _expected = (_now_tw - _td(days=3)).date()
-        else:
-            _expected = (_now_tw - _td(days=1)).date()
+        # 預期最新交易日 — 走共用模組（會跳過國定假日 + 週末，14:00 切換點）
+        from pathlib import Path as _Path
+        sys.path.insert(0, str(_Path(__file__).parent))
+        from trading_calendar import expected_latest_trading_day as _expected_fn
+        _expected = _expected_fn()
         expected_str = _expected.strftime("%Y-%m-%d")
 
         # 看 cache 中「達到 expected_str」的股票占比（不能用 max，因為只要 1 支

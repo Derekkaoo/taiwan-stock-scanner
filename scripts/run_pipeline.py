@@ -9,6 +9,7 @@ from datetime import datetime, timedelta
 from collections import Counter
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent))  # 讓 from trading_calendar import ... 找得到
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
@@ -70,26 +71,8 @@ def load_moneydj_map():
         return json.load(f)
 
 
-def expected_latest_trading_day(now=None):
-    """預期資料應該更新到的最近交易日（不考慮假日；14:00 TW 為切換時點）
-
-    重要：GitHub Actions 跑在 UTC，必須強制換算成台灣時間才能正確判斷。
-    本機 Windows 跑 datetime.now() 是 local time (TW)，轉一次還是 TW，沒差。
-    """
-    if now is None:
-        # utcnow + 8 小時 = TW 時間（無論 runner 在哪個時區都 work）
-        now = datetime.utcnow() + timedelta(hours=8)
-    wd = now.weekday()  # 0=Mon..6=Sun
-    if wd >= 5:
-        # 週末：回到上週五
-        return (now - timedelta(days=wd - 4)).date()
-    # 平日：14:00 後算今天，之前用前一個工作日
-    cutoff = now.replace(hour=14, minute=0, second=0, microsecond=0)
-    if now >= cutoff:
-        return now.date()
-    if wd == 0:
-        return (now - timedelta(days=3)).date()  # 週一早上 → 上週五
-    return (now - timedelta(days=1)).date()
+# 預期最新交易日 — 委派給共用模組（會考慮國定假日 + 週末）
+from trading_calendar import expected_latest_trading_day  # noqa: E402,F401
 
 
 def check_what_needs_refresh() -> dict:
