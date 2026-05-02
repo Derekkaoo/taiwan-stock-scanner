@@ -202,5 +202,12 @@ export function useKline() {
     return cache.current.get(stockId) ?? null
   }, [])
 
-  return { fetchOne, fetchGroup, getFromCache, loadFromJson, statusMap, cacheVersion, clearCache }
+  /** 拿整個 cache 給 applyFilters 用（filters 需要所有股票 klines）。
+   *  注意：回傳的 Map 是 ref，外面要搭 cacheVersion 重算 */
+  const getAllKlines = useCallback(() => cache.current, [])
+
+  return {
+    fetchOne, fetchGroup, getFromCache, getAllKlines,
+    loadFromJson, statusMap, cacheVersion, clearCache,
+  }
 }

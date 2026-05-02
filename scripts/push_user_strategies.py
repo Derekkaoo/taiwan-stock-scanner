@@ -67,6 +67,7 @@ from screeners.user_filters import apply_filters  # noqa: E402
 logger = logging.getLogger(__name__)
 
 STOCKS_JSON = ROOT / "frontend" / "public" / "data" / "stocks.json"
+KLINES_JSON = ROOT / "frontend" / "public" / "data" / "klines.json"
 WEBSITE_URL = "https://taiwan-stock-scanner.pages.dev"
 
 WEEKDAY_TW = ["週一", "週二", "週三", "週四", "週五", "週六", "週日"]
@@ -349,6 +350,17 @@ def run() -> int:
     stocks = json.loads(STOCKS_JSON.read_text(encoding="utf-8"))
     logger.info("載入 %d 支股票", len(stocks))
 
+    # 讀 klines.json（給 nDayReturn / nDayHigh filter 用）。沒有也不擋整體流程。
+    klines: Dict[str, List[Dict[str, Any]]] = {}
+    if KLINES_JSON.exists():
+        try:
+            klines = json.loads(KLINES_JSON.read_text(encoding="utf-8"))
+            logger.info("載入 %d 支 K 線", len(klines))
+        except Exception as e:
+            logger.warning("klines.json 讀取失敗：%s（K 線相關 filter 會無效）", e)
+    else:
+        logger.warning("klines.json 不存在（K 線相關 filter 會無效）")
+
     if args.source == "endpoint":
         api_base = env.get("PUSH_API_BASE", "").strip()
         token = env.get("INTERNAL_CRON_TOKEN", "").strip()
@@ -388,7 +400,7 @@ def run() -> int:
         matches_list: List[List[Dict[str, Any]]] = []
         for s in strategies:
             try:
-                matches = apply_filters(stocks, s["filters"])
+                matches = apply_filters(stocks, s["filters"], klines)
             except Exception as e:
                 logger.error("策略 %s (id=%s) apply_filters 失敗：%s", s["name"], s["id"], e)
                 matches = []

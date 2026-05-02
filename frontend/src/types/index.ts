@@ -174,6 +174,20 @@ export interface InstitutionalFilter {
 /** 市場別篩選：'all' = 不篩、'listed' = 上市、'otc' = 上櫃 */
 export type MarketFilter = 'all' | 'listed' | 'otc'
 
+/** N 日漲跌幅：days = 0 視為不啟用 */
+export type NReturnDays = 0 | 1 | 3 | 5 | 10 | 20
+export interface NDayReturnFilter {
+  days:  NReturnDays
+  /** 漲跌幅範圍 %；range = 預設範圍 視為不啟用（即使 days 已選） */
+  range: FilterRange
+}
+
+/** 創 N 日新高：days = 0 視為不啟用，>0 表示「今日 high ≥ 過去 N 根 K 棒最高」 */
+export type NHighDays = 0 | 5 | 10 | 20 | 60 | 120 | 200
+export interface NDayHighFilter {
+  days: NHighDays
+}
+
 export interface Filters {
   volume:     FilterRange      // 5 日均成交量（千張）
   marketCap:  FilterRange      // 市值（億）
@@ -184,6 +198,8 @@ export interface Filters {
   absValue:   AbsValueFilter
   institutional: InstitutionalFilter
   market:     MarketFilter
+  nDayReturn: NDayReturnFilter
+  nDayHigh:   NDayHighFilter
 }
 
 export const FILTER_BOUNDS = {
@@ -195,6 +211,8 @@ export const FILTER_BOUNDS = {
   grossMargin:     { min: -50,  max: 100 },  // % — P5 -0.4、P95 61、max 97
   operatingMargin: { min: -100, max: 100 },  // % — P5 -35、P95 27、有極端虧損
   eps:             { min: -10,  max: 100 },  // 元 — P95 8.5、max 74
+  // N 日漲幅範圍 % — 涵蓋常見區間（1 日 ±10%、N 日 ±50%）
+  nDayReturn:      { min: -10,  max: 50 },
 } as const
 
 export const DEFAULT_FILTERS: Filters = {
@@ -215,6 +233,11 @@ export const DEFAULT_FILTERS: Filters = {
   },
   institutional: { days: 0, foreign: false, trust: false },
   market: 'all',
+  nDayReturn: {
+    days: 0,
+    range: [FILTER_BOUNDS.nDayReturn.min, FILTER_BOUNDS.nDayReturn.max],
+  },
+  nDayHigh: { days: 0 },
 }
 
 export const INST_STREAK_OPTIONS: InstStreakDays[] = [0, 1, 3, 5, 20]
@@ -224,6 +247,10 @@ export const MARKET_OPTIONS: Array<{ value: MarketFilter; label: string }> = [
   { value: 'listed', label: '上市' },
   { value: 'otc',    label: '上櫃' },
 ]
+
+export const N_RETURN_OPTIONS: NReturnDays[] = [0, 1, 3, 5, 10, 20]
+
+export const N_HIGH_OPTIONS: NHighDays[] = [0, 5, 10, 20, 60, 120, 200]
 
 // ============================================================
 //  進場分析（多頭觸發回測研究）
@@ -308,6 +335,7 @@ export const FILTER_LABELS = {
   grossMargin:     '毛利率',
   operatingMargin: '營利率',
   eps:             'EPS',
+  nDayReturn:      'N 日漲跌幅',
 } as const
 
 export const FILTER_UNITS = {
@@ -318,6 +346,7 @@ export const FILTER_UNITS = {
   grossMargin:     '%',
   operatingMargin: '%',
   eps:             '元',
+  nDayReturn:      '%',
 } as const
 
 export const GROWTH_QUARTERS_OPTIONS: GrowthQuarters[] = [0, 1, 2, 4, 8]
