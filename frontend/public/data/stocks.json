@@ -35,13 +35,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.56,
     "date": "2026-04-30",
-    "threeMonthReturn": -10.7,
+    "threeMonthReturn": -7.77,
     "returns": {
       "w1": -0.37,
       "m1": -2.02,
       "m3": 1.91,
       "m6": 3.89,
-      "y1": -10.7
+      "y1": -7.77
     },
     "industry": "食品工業",
     "subIndustries": [
@@ -323,7 +323,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 9,
+    "trustBuyStreak": 0
   },
   {
     "id": "1215",
@@ -360,13 +362,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.07,
     "date": "2026-04-30",
-    "threeMonthReturn": 38.5,
+    "threeMonthReturn": 42.78,
     "returns": {
       "w1": -1.07,
       "m1": -1.07,
       "m3": -6.73,
       "m6": -1.07,
-      "y1": 38.5
+      "y1": 42.78
     },
     "industry": "食品工業",
     "subIndustries": [
@@ -644,7 +646,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1219",
@@ -682,13 +686,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": -4.59,
+    "threeMonthReturn": -0.74,
     "returns": {
       "w1": -1.1,
       "m1": -4.93,
       "m3": -1.46,
       "m6": 0.0,
-      "y1": -4.59
+      "y1": -0.74
     },
     "industry": "食品工業",
     "subIndustries": [
@@ -972,7 +976,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1303",
@@ -1013,13 +1019,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -2.18,
     "date": "2026-04-30",
-    "threeMonthReturn": 192.81,
+    "threeMonthReturn": 187.64,
     "returns": {
       "w1": 5.16,
       "m1": 10.07,
       "m3": 28.55,
       "m6": 113.84,
-      "y1": 192.81
+      "y1": 187.64
     },
     "industry": "塑膠工業",
     "subIndustries": [
@@ -1337,7 +1343,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1304",
@@ -1373,13 +1381,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 4.36,
     "date": "2026-04-30",
-    "threeMonthReturn": 40.69,
+    "threeMonthReturn": 41.38,
     "returns": {
       "w1": -2.05,
       "m1": -19.38,
       "m3": 20.59,
       "m6": 29.86,
-      "y1": 40.69
+      "y1": 41.38
     },
     "industry": "塑膠工業",
     "subIndustries": [
@@ -1657,7 +1665,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "1308",
@@ -1669,37 +1679,37 @@
     "groupDesc": "",
     "holdingPct": 47.76,
     "delta": 0.41,
-    "price": 0.0,
+    "price": 15.05,
     "marketCap": 80.9,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.9,
+      "d5": 0.7,
+      "d10": 0.86,
+      "d20": 1.8,
+      "d50": 2.17
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 6.06,
+      "d5": 4.62,
+      "d10": 5.63,
+      "d20": 10.62,
+      "d50": 12.78
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 71.16,
+    "pctOf200dHigh": 71.16,
+    "ma10": 15.16,
+    "ma20": 16.13,
+    "ma60": 15.3,
+    "ma20Trend": "down",
+    "dailyChangePct": 3.44,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": 14.02,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": -3.83,
+      "m1": -22.42,
+      "m3": 7.12,
+      "m6": 10.26,
+      "y1": 14.02
     },
     "industry": "塑膠工業",
     "subIndustries": [
@@ -1973,7 +1983,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1313",
@@ -2009,13 +2021,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.33,
     "date": "2026-04-30",
-    "threeMonthReturn": 33.41,
+    "threeMonthReturn": 35.53,
     "returns": {
       "w1": -4.72,
       "m1": -17.47,
       "m3": 2.78,
       "m6": 2.78,
-      "y1": 33.41
+      "y1": 35.53
     },
     "industry": "塑膠工業",
     "subIndustries": [
@@ -2291,7 +2303,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "1319",
@@ -2327,13 +2341,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": -43.12,
+    "threeMonthReturn": -41.56,
     "returns": {
       "w1": -1.06,
       "m1": -8.78,
       "m3": -28.76,
       "m6": -18.25,
-      "y1": -43.12
+      "y1": -41.56
     },
     "industry": "汽車工業",
     "subIndustries": [
@@ -2609,7 +2623,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1
   },
   {
     "id": "1325",
@@ -2645,13 +2661,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -2.24,
     "date": "2026-04-30",
-    "threeMonthReturn": -7.58,
+    "threeMonthReturn": 9.17,
     "returns": {
       "w1": -0.76,
       "m1": -4.2,
       "m3": -12.23,
       "m6": -13.82,
-      "y1": -7.58
+      "y1": 9.17
     },
     "industry": "塑膠工業",
     "subIndustries": [
@@ -2923,7 +2939,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1326",
@@ -2962,13 +2980,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.38,
     "date": "2026-04-30",
-    "threeMonthReturn": 110.04,
+    "threeMonthReturn": 106.31,
     "returns": {
       "w1": 5.87,
       "m1": 7.5,
       "m3": 51.81,
       "m6": 79.11,
-      "y1": 110.04
+      "y1": 106.31
     },
     "industry": "塑膠工業",
     "subIndustries": [
@@ -3276,7 +3294,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 6,
+    "trustBuyStreak": 0
   },
   {
     "id": "1337",
@@ -3313,13 +3333,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -2.33,
     "date": "2026-04-30",
-    "threeMonthReturn": -13.45,
+    "threeMonthReturn": -9.39,
     "returns": {
       "w1": -4.02,
       "m1": -21.93,
       "m3": 3.08,
       "m6": -0.4,
-      "y1": -13.45
+      "y1": -9.39
     },
     "industry": "塑膠工業",
     "subIndustries": [
@@ -3597,7 +3617,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "1340",
@@ -3634,13 +3656,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.35,
     "date": "2026-04-30",
-    "threeMonthReturn": -20.19,
+    "threeMonthReturn": -21.28,
     "returns": {
       "w1": -4.63,
       "m1": -11.91,
       "m3": -13.88,
       "m6": -18.85,
-      "y1": -20.19
+      "y1": -21.28
     },
     "industry": "塑膠工業",
     "subIndustries": [
@@ -3918,7 +3940,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1402",
@@ -3937,37 +3961,37 @@
     "groupDesc": "",
     "holdingPct": 85.34,
     "delta": 0.15,
-    "price": 0.0,
+    "price": 25.75,
     "marketCap": 1547.0,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 3.04,
+      "d5": 2.55,
+      "d10": 3.31,
+      "d20": 3.82,
+      "d50": 4.65
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 11.73,
+      "d5": 9.78,
+      "d10": 12.7,
+      "d20": 14.49,
+      "d50": 17.0
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 70.84,
+    "pctOf200dHigh": 75.07,
+    "ma10": 26.06,
+    "ma20": 26.33,
+    "ma60": 27.29,
+    "ma20Trend": "down",
+    "dailyChangePct": -1.15,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": -21.01,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": -1.53,
+      "m1": -2.09,
+      "m3": -9.65,
+      "m6": -5.33,
+      "y1": -21.01
     },
     "industry": "紡織纖維",
     "subIndustries": [
@@ -4283,7 +4307,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1409",
@@ -4321,13 +4347,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.18,
     "date": "2026-04-30",
-    "threeMonthReturn": 34.94,
+    "threeMonthReturn": 36.59,
     "returns": {
       "w1": 0.0,
       "m1": 5.99,
       "m3": 8.74,
       "m6": 21.74,
-      "y1": 34.94
+      "y1": 36.59
     },
     "industry": "紡織纖維",
     "subIndustries": [
@@ -4479,7 +4505,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1423",
@@ -4516,13 +4544,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.48,
     "date": "2026-04-30",
-    "threeMonthReturn": 26.83,
+    "threeMonthReturn": 28.4,
     "returns": {
       "w1": -1.65,
       "m1": 4.0,
       "m3": 9.19,
       "m6": 9.33,
-      "y1": 26.83
+      "y1": 28.4
     },
     "industry": "紡織纖維",
     "subIndustries": [
@@ -4798,7 +4826,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1457",
@@ -4836,13 +4866,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.03,
     "date": "2026-04-30",
-    "threeMonthReturn": -15.0,
+    "threeMonthReturn": -15.74,
     "returns": {
       "w1": -1.37,
       "m1": -3.67,
       "m3": -7.67,
       "m6": -11.62,
-      "y1": -15.0
+      "y1": -15.74
     },
     "industry": "紡織纖維",
     "subIndustries": [
@@ -5124,7 +5154,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1460",
@@ -5160,13 +5192,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": 3.41,
+    "threeMonthReturn": 1.6,
     "returns": {
       "w1": 3.71,
       "m1": -2.79,
       "m3": 7.38,
       "m6": 21.39,
-      "y1": 3.41
+      "y1": 1.6
     },
     "industry": "紡織纖維",
     "subIndustries": [
@@ -5450,7 +5482,9 @@
       "group": "遠東",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "EVEREST"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1467",
@@ -5480,7 +5514,7 @@
       "d20": 0.55,
       "d50": 0.31
     },
-    "pctOf52wHigh": 77.06,
+    "pctOf52wHigh": 74.09,
     "pctOf200dHigh": 84.46,
     "ma10": 7.35,
     "ma20": 7.2,
@@ -5488,13 +5522,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -4.04,
     "date": "2026-04-30",
-    "threeMonthReturn": -21.67,
+    "threeMonthReturn": -20.0,
     "returns": {
       "w1": -11.0,
       "m1": 0.28,
       "m3": -10.89,
       "m6": -4.94,
-      "y1": -21.67
+      "y1": -20.0
     },
     "industry": "紡織纖維",
     "subIndustries": [
@@ -5770,7 +5804,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "1514",
@@ -5806,13 +5842,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.9,
     "date": "2026-04-30",
-    "threeMonthReturn": 21.83,
+    "threeMonthReturn": 21.95,
     "returns": {
       "w1": -0.9,
       "m1": 4.76,
       "m3": 5.77,
       "m6": 8.37,
-      "y1": 21.83
+      "y1": 21.95
     },
     "industry": "電機機械",
     "subIndustries": [
@@ -6092,7 +6128,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "1519",
@@ -6128,13 +6166,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.95,
     "date": "2026-04-30",
-    "threeMonthReturn": 132.02,
+    "threeMonthReturn": 144.81,
     "returns": {
       "w1": 1.25,
       "m1": 6.47,
       "m3": -2.09,
       "m6": 60.0,
-      "y1": 132.02
+      "y1": 144.81
     },
     "industry": "電機機械",
     "subIndustries": [
@@ -6408,7 +6446,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "1527",
@@ -6444,13 +6484,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": -12.63,
+    "threeMonthReturn": -9.34,
     "returns": {
       "w1": 0.78,
       "m1": -0.46,
       "m3": -1.81,
       "m6": -0.91,
-      "y1": -12.63
+      "y1": -9.34
     },
     "industry": "電機機械",
     "subIndustries": [
@@ -6724,7 +6764,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 0
   },
   {
     "id": "1528",
@@ -6762,13 +6804,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 3.78,
     "date": "2026-04-30",
-    "threeMonthReturn": 113.33,
+    "threeMonthReturn": 136.07,
     "returns": {
       "w1": 8.27,
       "m1": 17.55,
       "m3": 11.63,
       "m6": 89.47,
-      "y1": 113.33
+      "y1": 136.07
     },
     "industry": "電機機械",
     "subIndustries": [
@@ -7052,7 +7094,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1536",
@@ -7088,13 +7132,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": -18.51,
+    "threeMonthReturn": -11.36,
     "returns": {
       "w1": 4.04,
       "m1": 3.21,
       "m3": -13.3,
       "m6": -14.88,
-      "y1": -18.51
+      "y1": -11.36
     },
     "industry": "汽車工業",
     "subIndustries": [
@@ -7368,7 +7412,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "1563",
@@ -7404,13 +7450,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.12,
     "date": "2026-04-30",
-    "threeMonthReturn": -33.15,
+    "threeMonthReturn": -29.75,
     "returns": {
       "w1": -1.31,
       "m1": -6.22,
       "m3": -13.65,
       "m6": -9.6,
-      "y1": -33.15
+      "y1": -29.75
     },
     "industry": "汽車工業",
     "subIndustries": [
@@ -7678,7 +7724,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "1569",
@@ -7714,13 +7762,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -3.99,
     "date": "2026-04-30",
-    "threeMonthReturn": 19.18,
+    "threeMonthReturn": -1.37,
     "returns": {
       "w1": -1.7,
       "m1": 17.12,
       "m3": 13.56,
       "m6": -0.86,
-      "y1": 19.18
+      "y1": -1.37
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -8008,7 +8056,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Bin Chuan"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1586",
@@ -8046,13 +8096,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.46,
     "date": "2026-04-30",
-    "threeMonthReturn": -22.5,
+    "threeMonthReturn": -20.66,
     "returns": {
       "w1": -3.56,
       "m1": -3.98,
       "m3": -22.08,
       "m6": -18.11,
-      "y1": -22.5
+      "y1": -20.66
     },
     "industry": "電機機械",
     "subIndustries": [
@@ -8334,7 +8384,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1590",
@@ -8370,13 +8422,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -2.35,
     "date": "2026-04-30",
-    "threeMonthReturn": 65.34,
+    "threeMonthReturn": 78.09,
     "returns": {
       "w1": 5.43,
       "m1": 47.42,
       "m3": 43.35,
       "m6": 68.99,
-      "y1": 65.34
+      "y1": 78.09
     },
     "industry": "電機機械",
     "subIndustries": [
@@ -8648,7 +8700,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1595",
@@ -8684,13 +8738,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 9.97,
     "date": "2026-04-30",
-    "threeMonthReturn": 111.32,
+    "threeMonthReturn": 118.29,
     "returns": {
       "w1": 20.13,
       "m1": 70.09,
       "m3": 77.56,
       "m6": 90.08,
-      "y1": 111.32
+      "y1": 118.29
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -8978,7 +9032,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "CBT"
-    }
+    },
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "1597",
@@ -9014,13 +9070,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 9.96,
     "date": "2026-04-30",
-    "threeMonthReturn": 63.07,
+    "threeMonthReturn": 109.18,
     "returns": {
       "w1": 33.49,
       "m1": 64.38,
       "m3": 82.57,
       "m6": 82.34,
-      "y1": 63.07
+      "y1": 109.18
     },
     "industry": "電機機械",
     "subIndustries": [
@@ -9292,7 +9348,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "1598",
@@ -9320,7 +9378,7 @@
       "d20": 0.36,
       "d50": 0.38
     },
-    "pctOf52wHigh": 84.21,
+    "pctOf52wHigh": 81.89,
     "pctOf200dHigh": 84.55,
     "ma10": 20.35,
     "ma20": 20.06,
@@ -9328,13 +9386,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.95,
     "date": "2026-04-30",
-    "threeMonthReturn": -11.86,
+    "threeMonthReturn": -18.11,
     "returns": {
       "w1": 7.49,
       "m1": 6.39,
       "m3": -5.02,
       "m6": -7.76,
-      "y1": -11.86
+      "y1": -18.11
     },
     "industry": "運動休閒",
     "subIndustries": [
@@ -9620,7 +9678,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Dyaco"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1611",
@@ -9657,13 +9717,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.84,
     "date": "2026-04-30",
-    "threeMonthReturn": -12.13,
+    "threeMonthReturn": -8.08,
     "returns": {
       "w1": -0.42,
       "m1": -2.45,
       "m3": -13.09,
       "m6": -8.08,
-      "y1": -12.13
+      "y1": -8.08
     },
     "industry": "電器電纜",
     "subIndustries": [
@@ -9941,7 +10001,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1612",
@@ -9953,37 +10015,37 @@
     "groupDesc": "",
     "holdingPct": 56.6,
     "delta": 0.63,
-    "price": 0.0,
+    "price": 35.65,
     "marketCap": 30.4,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.28,
+      "d5": 0.25,
+      "d10": 0.25,
+      "d20": 0.21,
+      "d50": 0.25
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.79,
+      "d5": 0.72,
+      "d10": 0.71,
+      "d20": 0.59,
+      "d50": 0.71
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 87.06,
+    "pctOf200dHigh": 87.06,
+    "ma10": 35.41,
+    "ma20": 35.22,
+    "ma60": 35.47,
+    "ma20Trend": "up",
+    "dailyChangePct": 0.28,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": 16.69,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": 1.28,
+      "m1": 2.3,
+      "m3": 1.28,
+      "m6": -8.0,
+      "y1": 16.69
     },
     "industry": "電器電纜",
     "subIndustries": [
@@ -10255,7 +10317,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 3
   },
   {
     "id": "1626",
@@ -10291,13 +10355,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.34,
     "date": "2026-04-30",
-    "threeMonthReturn": -6.2,
+    "threeMonthReturn": -4.62,
     "returns": {
       "w1": 3.18,
       "m1": 11.82,
       "m3": 2.25,
       "m6": -5.42,
-      "y1": -6.2
+      "y1": -4.62
     },
     "industry": "電器電纜",
     "subIndustries": [
@@ -10569,7 +10633,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "1708",
@@ -10606,13 +10672,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.18,
     "date": "2026-04-30",
-    "threeMonthReturn": 26.09,
+    "threeMonthReturn": 29.21,
     "returns": {
       "w1": 6.09,
       "m1": -1.99,
       "m3": 26.48,
       "m6": 37.27,
-      "y1": 26.09
+      "y1": 29.21
     },
     "industry": "化學工業",
     "subIndustries": [
@@ -10894,7 +10960,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "1711",
@@ -10931,13 +10999,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.22,
     "date": "2026-04-30",
-    "threeMonthReturn": 237.31,
+    "threeMonthReturn": 239.34,
     "returns": {
       "w1": 0.0,
       "m1": 48.29,
       "m3": 135.91,
       "m6": 188.27,
-      "y1": 237.31
+      "y1": 239.34
     },
     "industry": "化學工業",
     "subIndustries": [
@@ -11217,7 +11285,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 0
   },
   {
     "id": "1727",
@@ -11230,37 +11300,37 @@
     "groupDesc": "",
     "holdingPct": 57.09,
     "delta": 4.13,
-    "price": 0.0,
+    "price": 81.5,
     "marketCap": 14.2,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 22.96,
+      "d5": 20.0,
+      "d10": 14.9,
+      "d20": 9.21,
+      "d50": 6.15
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 27.97,
+      "d5": 26.58,
+      "d10": 21.16,
+      "d20": 13.76,
+      "d50": 10.22
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 96.34,
+    "pctOf200dHigh": 96.34,
+    "ma10": 68.69,
+    "ma20": 60.8,
+    "ma60": 52.27,
+    "ma20Trend": "up",
+    "dailyChangePct": -2.04,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": 258.24,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": 26.75,
+      "m1": 66.33,
+      "m3": 71.76,
+      "m6": 105.29,
+      "y1": 258.24
     },
     "industry": "化學工業",
     "subIndustries": [
@@ -11540,7 +11610,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1760",
@@ -11555,37 +11627,37 @@
     "groupDesc": "",
     "holdingPct": 33.58,
     "delta": 1.19,
-    "price": 0.0,
+    "price": 68.2,
     "marketCap": 68.1,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.66,
+      "d5": 0.75,
+      "d10": 0.44,
+      "d20": 0.28,
+      "d50": 0.17
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.96,
+      "d5": 1.07,
+      "d10": 0.64,
+      "d20": 0.41,
+      "d50": 0.26
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 75.86,
+    "pctOf200dHigh": 89.27,
+    "ma10": 65.65,
+    "ma20": 64.93,
+    "ma60": 63.35,
+    "ma20Trend": "up",
+    "dailyChangePct": -0.29,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": 3.18,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": 5.74,
+      "m1": 8.25,
+      "m3": 3.49,
+      "m6": 2.25,
+      "y1": 3.18
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -11881,7 +11953,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1773",
@@ -11917,13 +11991,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -2.91,
     "date": "2026-04-30",
-    "threeMonthReturn": 50.68,
+    "threeMonthReturn": 52.4,
     "returns": {
       "w1": -4.02,
       "m1": 17.19,
       "m3": 6.37,
       "m6": 15.17,
-      "y1": 50.68
+      "y1": 52.4
     },
     "industry": "化學工業",
     "subIndustries": [
@@ -12213,7 +12287,9 @@
       "group": "-",
       "auditor": "國富浩華聯合會計師事務所",
       "englishName": "SHINY  CHEMICAL"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1785",
@@ -12251,13 +12327,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -4.89,
     "date": "2026-04-30",
-    "threeMonthReturn": 212.26,
+    "threeMonthReturn": 228.37,
     "returns": {
       "w1": 14.53,
       "m1": 81.27,
       "m3": 157.79,
       "m6": 165.65,
-      "y1": 212.26
+      "y1": 228.37
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -12539,7 +12615,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1805",
@@ -12567,7 +12645,7 @@
       "d20": 0.1,
       "d50": 0.15
     },
-    "pctOf52wHigh": 69.33,
+    "pctOf52wHigh": 68.45,
     "pctOf200dHigh": 75.87,
     "ma10": 10.72,
     "ma20": 10.74,
@@ -12575,13 +12653,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.93,
     "date": "2026-04-30",
-    "threeMonthReturn": -28.62,
+    "threeMonthReturn": -27.91,
     "returns": {
       "w1": 2.84,
       "m1": 1.4,
       "m3": -12.15,
       "m6": 2.84,
-      "y1": -28.62
+      "y1": -27.91
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -12853,7 +12931,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "1906",
@@ -12889,13 +12969,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.88,
     "date": "2026-04-30",
-    "threeMonthReturn": -12.45,
+    "threeMonthReturn": -10.36,
     "returns": {
       "w1": -2.6,
       "m1": -11.07,
       "m3": -6.64,
       "m6": -14.77,
-      "y1": -12.45
+      "y1": -10.36
     },
     "industry": "造紙工業",
     "subIndustries": [
@@ -13181,7 +13261,9 @@
       "group": "-",
       "auditor": "立本台灣聯合會計師事務所",
       "englishName": "Baolong Intl."
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2010",
@@ -13218,13 +13300,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.4,
     "date": "2026-04-30",
-    "threeMonthReturn": 36.36,
+    "threeMonthReturn": 32.0,
     "returns": {
       "w1": 0.61,
       "m1": -1.0,
       "m3": 14.85,
       "m6": 21.92,
-      "y1": 36.36
+      "y1": 32.0
     },
     "industry": "鋼鐵工業",
     "subIndustries": [
@@ -13502,7 +13584,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2022",
@@ -13538,13 +13622,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.46,
     "date": "2026-04-30",
-    "threeMonthReturn": -0.73,
+    "threeMonthReturn": -0.61,
     "returns": {
       "w1": -2.17,
       "m1": -10.87,
       "m3": -10.96,
       "m6": 2.01,
-      "y1": -0.73
+      "y1": -0.61
     },
     "industry": "鋼鐵工業",
     "subIndustries": [
@@ -13830,7 +13914,9 @@
       "group": "-",
       "auditor": "安永聯合會計師事務所",
       "englishName": "TYCOONS"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2023",
@@ -13866,13 +13952,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.71,
     "date": "2026-04-30",
-    "threeMonthReturn": -11.39,
+    "threeMonthReturn": -9.97,
     "returns": {
       "w1": 0.72,
       "m1": -3.11,
       "m3": -6.98,
       "m6": -5.41,
-      "y1": -11.39
+      "y1": -9.97
     },
     "industry": "鋼鐵工業",
     "subIndustries": [
@@ -14146,7 +14232,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2027",
@@ -14176,7 +14264,7 @@
       "d20": 25.94,
       "d50": 23.06
     },
-    "pctOf52wHigh": 86.77,
+    "pctOf52wHigh": 81.69,
     "pctOf200dHigh": 86.77,
     "ma10": 37.15,
     "ma20": 37.56,
@@ -14184,13 +14272,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.95,
     "date": "2026-04-30",
-    "threeMonthReturn": -9.92,
+    "threeMonthReturn": -17.14,
     "returns": {
       "w1": 4.0,
       "m1": 2.45,
       "m3": 1.75,
       "m6": -2.84,
-      "y1": -9.92
+      "y1": -17.14
     },
     "industry": "鋼鐵工業",
     "subIndustries": [
@@ -14476,7 +14564,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "2033",
@@ -14488,37 +14578,37 @@
     "groupDesc": "",
     "holdingPct": 60.71,
     "delta": 0.17,
-    "price": 0.0,
+    "price": 15.5,
     "marketCap": 7.6,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.06,
+      "d5": 0.03,
+      "d10": 0.03,
+      "d20": 0.02,
+      "d50": 0.03
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.39,
+      "d5": 0.17,
+      "d10": 0.16,
+      "d20": 0.14,
+      "d50": 0.16
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 69.04,
+    "pctOf200dHigh": 69.04,
+    "ma10": 16.24,
+    "ma20": 16.29,
+    "ma60": 16.17,
+    "ma20Trend": "up",
+    "dailyChangePct": -3.43,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": -15.3,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": -4.91,
+      "m1": -1.27,
+      "m3": -6.06,
+      "m6": -13.65,
+      "y1": -15.3
     },
     "industry": "鋼鐵工業",
     "subIndustries": [
@@ -14798,7 +14888,9 @@
       "group": "-",
       "auditor": "南台聯合會計師事務所",
       "englishName": "CHIA TA"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2049",
@@ -14834,13 +14926,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.3,
     "date": "2026-04-30",
-    "threeMonthReturn": 42.05,
+    "threeMonthReturn": 61.08,
     "returns": {
       "w1": 3.48,
       "m1": 26.52,
       "m3": 46.71,
       "m6": 45.01,
-      "y1": 42.05
+      "y1": 61.08
     },
     "industry": "電機機械",
     "subIndustries": [
@@ -15126,7 +15218,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "HIWIN"
-    }
+    },
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 3
   },
   {
     "id": "2059",
@@ -15162,13 +15256,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -6.01,
     "date": "2026-04-30",
-    "threeMonthReturn": 124.07,
+    "threeMonthReturn": 149.04,
     "returns": {
       "w1": 9.07,
       "m1": 13.01,
       "m3": 15.0,
       "m6": 5.11,
-      "y1": 124.07
+      "y1": 149.04
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -15440,7 +15534,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 5
   },
   {
     "id": "2061",
@@ -15452,37 +15548,37 @@
     "groupDesc": "",
     "holdingPct": 38.59,
     "delta": 2.5,
-    "price": 0.0,
+    "price": 19.35,
     "marketCap": 5.8,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.21,
+      "d5": 0.29,
+      "d10": 0.16,
+      "d20": 0.09,
+      "d50": 0.05
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 1.07,
+      "d5": 1.57,
+      "d10": 0.87,
+      "d20": 0.5,
+      "d50": 0.3
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 93.48,
+    "pctOf200dHigh": 93.48,
+    "ma10": 17.28,
+    "ma20": 16.95,
+    "ma60": 17.43,
+    "ma20Trend": "up",
+    "dailyChangePct": 0.78,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": 7.2,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": 25.24,
+      "m1": 21.32,
+      "m3": 2.65,
+      "m6": 0.0,
+      "y1": 7.2
     },
     "industry": "電器電纜",
     "subIndustries": [
@@ -15754,7 +15850,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2107",
@@ -15770,37 +15868,37 @@
     "groupDesc": "",
     "holdingPct": 55.15,
     "delta": 0.17,
-    "price": 0.0,
+    "price": 26.25,
     "marketCap": 64.9,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.06,
+      "d5": 0.09,
+      "d10": 0.1,
+      "d20": 0.08,
+      "d50": 0.07
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.24,
+      "d5": 0.33,
+      "d10": 0.37,
+      "d20": 0.31,
+      "d50": 0.27
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 95.8,
+    "pctOf200dHigh": 99.24,
+    "ma10": 26.08,
+    "ma20": 25.84,
+    "ma60": 25.39,
+    "ma20Trend": "up",
+    "dailyChangePct": 0.38,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": 5.0,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": 0.19,
+      "m1": 3.35,
+      "m3": 5.0,
+      "m6": 9.38,
+      "y1": 5.0
     },
     "industry": "橡膠工業",
     "subIndustries": [
@@ -16108,7 +16206,9 @@
       "group": "-",
       "auditor": "正風聯合會計師事務所",
       "englishName": "FRG"
-    }
+    },
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "2201",
@@ -16147,13 +16247,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.74,
     "date": "2026-04-30",
-    "threeMonthReturn": -31.3,
+    "threeMonthReturn": -27.03,
     "returns": {
       "w1": -1.64,
       "m1": -2.7,
       "m3": -16.15,
       "m6": -18.31,
-      "y1": -31.3
+      "y1": -27.03
     },
     "industry": "汽車工業",
     "subIndustries": [
@@ -16439,7 +16539,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2231",
@@ -16475,13 +16577,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": 34.19,
+    "threeMonthReturn": 36.16,
     "returns": {
       "w1": -11.07,
       "m1": -12.36,
       "m3": 24.23,
       "m6": 1.26,
-      "y1": 34.19
+      "y1": 36.16
     },
     "industry": "汽車工業",
     "subIndustries": [
@@ -16769,7 +16871,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "CUB"
-    }
+    },
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "2233",
@@ -16808,13 +16912,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 9.89,
     "date": "2026-04-30",
-    "threeMonthReturn": 72.91,
+    "threeMonthReturn": 100.0,
     "returns": {
       "w1": 25.26,
       "m1": 33.04,
       "m3": 23.97,
       "m6": 48.51,
-      "y1": 72.91
+      "y1": 100.0
     },
     "industry": "汽車工業",
     "subIndustries": [
@@ -17116,7 +17220,9 @@
       "group": "-",
       "auditor": "安永聯合會計師事務所",
       "englishName": "TURVO"
-    }
+    },
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "2241",
@@ -17152,13 +17258,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.83,
     "date": "2026-04-30",
-    "threeMonthReturn": 18.25,
+    "threeMonthReturn": 22.63,
     "returns": {
       "w1": -11.31,
       "m1": -1.32,
       "m3": -17.91,
       "m6": -14.37,
-      "y1": 18.25
+      "y1": 22.63
     },
     "industry": "汽車工業",
     "subIndustries": [
@@ -17428,7 +17534,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "2243",
@@ -17464,13 +17572,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -3.37,
     "date": "2026-04-30",
-    "threeMonthReturn": 104.89,
+    "threeMonthReturn": 110.42,
     "returns": {
       "w1": 13.54,
       "m1": 19.0,
       "m3": 141.15,
       "m6": 110.42,
-      "y1": 104.89
+      "y1": 110.42
     },
     "industry": "汽車工業",
     "subIndustries": [
@@ -17754,7 +17862,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "HS"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2301",
@@ -17799,13 +17909,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -3.49,
     "date": "2026-04-30",
-    "threeMonthReturn": 72.92,
+    "threeMonthReturn": 86.94,
     "returns": {
       "w1": 0.91,
       "m1": 11.04,
       "m3": 0.61,
       "m6": -1.19,
-      "y1": 72.92
+      "y1": 86.94
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -18149,7 +18259,9 @@
       "group": "光寶",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "LTC"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2313",
@@ -18185,13 +18297,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 6.3,
     "date": "2026-04-30",
-    "threeMonthReturn": 336.61,
+    "threeMonthReturn": 357.87,
     "returns": {
       "w1": 9.89,
       "m1": -7.03,
       "m3": 73.4,
       "m6": 177.53,
-      "y1": 336.61
+      "y1": 357.87
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -18465,7 +18577,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 1
   },
   {
     "id": "2317",
@@ -18514,13 +18628,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -2.44,
     "date": "2026-04-30",
-    "threeMonthReturn": 55.12,
+    "threeMonthReturn": 61.4,
     "returns": {
       "w1": -2.44,
       "m1": 13.14,
       "m3": -6.0,
       "m6": 3.05,
-      "y1": 55.12
+      "y1": 61.4
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -18892,7 +19006,9 @@
       "group": "鴻海",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "HON HAI"
-    }
+    },
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 0
   },
   {
     "id": "2327",
@@ -18928,13 +19044,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.55,
     "date": "2026-04-30",
-    "threeMonthReturn": 176.25,
+    "threeMonthReturn": 181.78,
     "returns": {
       "w1": 7.46,
       "m1": 22.87,
       "m3": 15.9,
       "m6": 78.09,
-      "y1": 176.25
+      "y1": 181.78
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -19214,7 +19330,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 0
   },
   {
     "id": "2328",
@@ -19251,13 +19369,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 4.98,
     "date": "2026-04-30",
-    "threeMonthReturn": 31.78,
+    "threeMonthReturn": 36.69,
     "returns": {
       "w1": 9.26,
       "m1": 11.47,
       "m3": -1.49,
       "m6": -8.58,
-      "y1": 31.78
+      "y1": 36.69
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -19537,7 +19655,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2331",
@@ -19574,13 +19694,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.49,
     "date": "2026-04-30",
-    "threeMonthReturn": 33.01,
+    "threeMonthReturn": 35.2,
     "returns": {
       "w1": -0.96,
       "m1": -4.2,
       "m3": -29.02,
       "m6": 1.23,
-      "y1": 33.01
+      "y1": 35.2
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -19864,7 +19984,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2337",
@@ -19900,13 +20022,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -7.78,
     "date": "2026-04-30",
-    "threeMonthReturn": 675.82,
+    "threeMonthReturn": 702.08,
     "returns": {
       "w1": 22.22,
       "m1": 20.31,
       "m3": 148.79,
       "m6": 475.7,
-      "y1": 675.82
+      "y1": 702.08
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -20178,7 +20300,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2338",
@@ -20214,13 +20338,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.74,
     "date": "2026-04-30",
-    "threeMonthReturn": 51.61,
+    "threeMonthReturn": 52.35,
     "returns": {
       "w1": -3.29,
       "m1": 3.3,
       "m3": 21.45,
       "m6": 18.69,
-      "y1": 51.61
+      "y1": 52.35
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -20492,7 +20616,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2344",
@@ -20528,13 +20654,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -3.13,
     "date": "2026-04-30",
-    "threeMonthReturn": 470.16,
+    "threeMonthReturn": 477.49,
     "returns": {
       "w1": 2.28,
       "m1": -3.44,
       "m3": -9.48,
       "m6": 108.84,
-      "y1": 470.16
+      "y1": 477.49
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -20818,7 +20944,9 @@
       "group": "華新",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "WEC"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2355",
@@ -20854,13 +20982,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.79,
     "date": "2026-04-30",
-    "threeMonthReturn": 58.76,
+    "threeMonthReturn": 67.32,
     "returns": {
       "w1": 1.59,
       "m1": -0.39,
       "m3": 43.02,
       "m6": 49.05,
-      "y1": 58.76
+      "y1": 67.32
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -21132,7 +21260,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "2356",
@@ -21168,13 +21298,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.86,
     "date": "2026-04-30",
-    "threeMonthReturn": 12.92,
+    "threeMonthReturn": 13.61,
     "returns": {
       "w1": -0.86,
       "m1": 10.87,
       "m3": 3.96,
       "m6": 1.44,
-      "y1": 12.92
+      "y1": 13.61
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -21466,7 +21596,9 @@
       "group": "英業達",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "INVENTEC"
-    }
+    },
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "2362",
@@ -21504,13 +21636,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.52,
     "date": "2026-04-30",
-    "threeMonthReturn": -19.79,
+    "threeMonthReturn": -16.58,
     "returns": {
       "w1": 0.13,
       "m1": 0.52,
       "m3": -1.28,
       "m6": -2.53,
-      "y1": -19.79
+      "y1": -16.58
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -21792,7 +21924,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2365",
@@ -21829,13 +21963,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -2.84,
     "date": "2026-04-30",
-    "threeMonthReturn": -6.75,
+    "threeMonthReturn": 15.06,
     "returns": {
       "w1": 4.66,
       "m1": 14.33,
       "m3": -0.28,
       "m6": -9.91,
-      "y1": -6.75
+      "y1": 15.06
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -22117,7 +22251,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "2367",
@@ -22153,13 +22289,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.35,
     "date": "2026-04-30",
-    "threeMonthReturn": 139.42,
+    "threeMonthReturn": 148.17,
     "returns": {
       "w1": -5.56,
       "m1": -24.58,
       "m3": 55.53,
       "m6": 116.51,
-      "y1": 139.42
+      "y1": 148.17
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -22431,7 +22567,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2368",
@@ -22467,13 +22605,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 2.21,
     "date": "2026-04-30",
-    "threeMonthReturn": 625.85,
+    "threeMonthReturn": 659.56,
     "returns": {
       "w1": 9.88,
       "m1": 54.79,
       "m3": 108.08,
       "m6": 226.67,
-      "y1": 625.85
+      "y1": 659.56
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -22759,7 +22897,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "GCE"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1
   },
   {
     "id": "2405",
@@ -22796,13 +22936,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.66,
     "date": "2026-04-30",
-    "threeMonthReturn": -10.21,
+    "threeMonthReturn": -9.12,
     "returns": {
       "w1": -2.92,
       "m1": -3.86,
       "m3": -13.33,
       "m6": -21.32,
-      "y1": -10.21
+      "y1": -9.12
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -23090,7 +23230,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Shuttle"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2406",
@@ -23126,13 +23268,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": 151.44,
+    "threeMonthReturn": 177.73,
     "returns": {
       "w1": 3.04,
       "m1": -10.54,
       "m3": -5.86,
       "m6": 57.47,
-      "y1": 151.44
+      "y1": 177.73
     },
     "industry": "光電業",
     "subIndustries": [
@@ -23420,7 +23562,9 @@
       "group": "國碩",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "GSC"
-    }
+    },
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 0
   },
   {
     "id": "2408",
@@ -23456,13 +23600,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -8.3,
     "date": "2026-04-30",
-    "threeMonthReturn": 498.61,
+    "threeMonthReturn": 558.02,
     "returns": {
       "w1": 3.61,
       "m1": -2.27,
       "m3": -9.26,
       "m6": 125.42,
-      "y1": 498.61
+      "y1": 558.02
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -23734,7 +23878,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2415",
@@ -23771,13 +23917,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -2.03,
     "date": "2026-04-30",
-    "threeMonthReturn": 14.41,
+    "threeMonthReturn": 20.36,
     "returns": {
       "w1": -3.8,
       "m1": -8.75,
       "m3": -1.85,
       "m6": 10.37,
-      "y1": 14.41
+      "y1": 20.36
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -24057,7 +24203,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2417",
@@ -24093,13 +24241,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 9.91,
     "date": "2026-04-30",
-    "threeMonthReturn": 21.99,
+    "threeMonthReturn": 27.95,
     "returns": {
       "w1": 14.72,
       "m1": 36.87,
       "m3": 17.87,
       "m6": 17.29,
-      "y1": 21.99
+      "y1": 27.95
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -24387,7 +24535,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "AVERMEDIA"
-    }
+    },
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "2421",
@@ -24423,13 +24573,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.02,
     "date": "2026-04-30",
-    "threeMonthReturn": 68.41,
+    "threeMonthReturn": 78.79,
     "returns": {
       "w1": 2.47,
       "m1": 10.69,
       "m3": -5.23,
       "m6": 10.69,
-      "y1": 68.41
+      "y1": 78.79
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -24701,7 +24851,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "2425",
@@ -24737,13 +24889,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.51,
     "date": "2026-04-30",
-    "threeMonthReturn": -14.65,
+    "threeMonthReturn": -7.62,
     "returns": {
       "w1": 2.02,
       "m1": 10.99,
       "m3": -3.81,
       "m6": -2.88,
-      "y1": -14.65
+      "y1": -7.62
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -25021,7 +25173,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 0
   },
   {
     "id": "2426",
@@ -25059,13 +25213,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -3.7,
     "date": "2026-04-30",
-    "threeMonthReturn": 261.51,
+    "threeMonthReturn": 272.08,
     "returns": {
       "w1": 17.66,
       "m1": 63.71,
       "m3": 226.5,
       "m6": 225.57,
-      "y1": 261.51
+      "y1": 272.08
     },
     "industry": "光電業",
     "subIndustries": [
@@ -25353,7 +25507,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2427",
@@ -25390,13 +25546,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.47,
     "date": "2026-04-30",
-    "threeMonthReturn": -15.09,
+    "threeMonthReturn": -14.75,
     "returns": {
       "w1": -3.87,
       "m1": -8.46,
       "m3": -20.97,
       "m6": -18.22,
-      "y1": -15.09
+      "y1": -14.75
     },
     "industry": "資訊服務業",
     "subIndustries": [
@@ -25674,7 +25830,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2431",
@@ -25710,13 +25868,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.46,
     "date": "2026-04-30",
-    "threeMonthReturn": -6.9,
+    "threeMonthReturn": -3.57,
     "returns": {
       "w1": -2.7,
       "m1": -8.86,
       "m3": -14.29,
       "m6": -16.6,
-      "y1": -6.9
+      "y1": -3.57
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -25988,7 +26146,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 0
   },
   {
     "id": "2451",
@@ -26024,13 +26184,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -5.78,
     "date": "2026-04-30",
-    "threeMonthReturn": 152.5,
+    "threeMonthReturn": 160.58,
     "returns": {
       "w1": 0.4,
       "m1": 10.75,
       "m3": 6.09,
       "m6": 106.97,
-      "y1": 152.5
+      "y1": 160.58
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -26306,7 +26466,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2454",
@@ -26343,13 +26505,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.36,
     "date": "2026-04-30",
-    "threeMonthReturn": 93.33,
+    "threeMonthReturn": 91.21,
     "returns": {
       "w1": 17.83,
       "m1": 72.85,
       "m3": 75.17,
       "m6": 98.48,
-      "y1": 93.33
+      "y1": 91.21
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -26661,7 +26823,9 @@
       "group": "聯發科",
       "auditor": "安永聯合會計師事務所",
       "englishName": "MediaTek"
-    }
+    },
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 13
   },
   {
     "id": "2457",
@@ -26697,13 +26861,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": -6.81,
+    "threeMonthReturn": -5.89,
     "returns": {
       "w1": -2.84,
       "m1": -3.82,
       "m3": -18.4,
       "m6": -2.04,
-      "y1": -6.81
+      "y1": -5.89
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -26975,7 +27139,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 0
   },
   {
     "id": "2461",
@@ -27012,13 +27178,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.59,
     "date": "2026-04-30",
-    "threeMonthReturn": -0.59,
+    "threeMonthReturn": 4.01,
     "returns": {
       "w1": -2.6,
       "m1": -6.65,
       "m3": -2.03,
       "m6": 8.71,
-      "y1": -0.59
+      "y1": 4.01
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -27308,7 +27474,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "K LASER"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2464",
@@ -27347,13 +27515,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.87,
     "date": "2026-04-30",
-    "threeMonthReturn": 84.55,
+    "threeMonthReturn": 101.96,
     "returns": {
       "w1": 34.16,
       "m1": 59.86,
       "m3": 69.91,
       "m6": 77.9,
-      "y1": 84.55
+      "y1": 101.96
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -27657,7 +27825,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Mirle"
-    }
+    },
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "2476",
@@ -27693,13 +27863,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 2.63,
     "date": "2026-04-30",
-    "threeMonthReturn": 60.94,
+    "threeMonthReturn": 71.55,
     "returns": {
       "w1": -0.43,
       "m1": 38.46,
       "m3": 26.08,
       "m6": 15.27,
-      "y1": 60.94
+      "y1": 71.55
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -27985,7 +28155,9 @@
       "group": "-",
       "auditor": "致遠聯合會計師事務所",
       "englishName": "GS"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2477",
@@ -28021,13 +28193,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.18,
     "date": "2026-04-30",
-    "threeMonthReturn": -5.63,
+    "threeMonthReturn": -4.77,
     "returns": {
       "w1": -14.49,
       "m1": -11.6,
       "m3": -18.8,
       "m6": -10.47,
-      "y1": -5.63
+      "y1": -4.77
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -28299,7 +28471,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2484",
@@ -28335,13 +28509,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.62,
     "date": "2026-04-30",
-    "threeMonthReturn": 89.23,
+    "threeMonthReturn": 98.74,
     "returns": {
       "w1": -8.45,
       "m1": 40.5,
       "m3": 46.48,
       "m6": 82.68,
-      "y1": 89.23
+      "y1": 98.74
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -28617,7 +28791,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2485",
@@ -28654,13 +28830,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -3.61,
     "date": "2026-04-30",
-    "threeMonthReturn": 397.46,
+    "threeMonthReturn": 408.23,
     "returns": {
       "w1": -8.14,
       "m1": -26.26,
       "m3": 60.6,
       "m6": 314.84,
-      "y1": 397.46
+      "y1": 408.23
     },
     "industry": "通信網路業",
     "subIndustries": [
@@ -28938,7 +29114,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2486",
@@ -28976,13 +29154,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 6.71,
     "date": "2026-04-30",
-    "threeMonthReturn": 245.47,
+    "threeMonthReturn": 254.06,
     "returns": {
       "w1": 21.85,
       "m1": 84.64,
       "m3": 201.9,
       "m6": 226.3,
-      "y1": 245.47
+      "y1": 254.06
     },
     "industry": "光電業",
     "subIndustries": [
@@ -29266,7 +29444,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2493",
@@ -29303,13 +29483,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.2,
     "date": "2026-04-30",
-    "threeMonthReturn": 40.41,
+    "threeMonthReturn": 47.48,
     "returns": {
       "w1": 2.5,
       "m1": 13.36,
       "m3": -3.15,
       "m6": 32.54,
-      "y1": 40.41
+      "y1": 47.48
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -29589,7 +29769,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2497",
@@ -29625,13 +29807,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": 14.2,
+    "threeMonthReturn": 21.5,
     "returns": {
       "w1": -10.11,
       "m1": 13.61,
       "m3": 6.58,
       "m6": 20.83,
-      "y1": 14.2
+      "y1": 21.5
     },
     "industry": "汽車工業",
     "subIndustries": [
@@ -29909,7 +30091,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "2506",
@@ -29945,13 +30129,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 1.02,
     "date": "2026-04-30",
-    "threeMonthReturn": -12.84,
+    "threeMonthReturn": -10.2,
     "returns": {
       "w1": 1.02,
       "m1": -1.22,
       "m3": -2.2,
       "m6": -6.52,
-      "y1": -12.84
+      "y1": -10.2
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -30225,7 +30409,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 0
   },
   {
     "id": "2515",
@@ -30262,13 +30448,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.88,
     "date": "2026-04-30",
-    "threeMonthReturn": 29.98,
+    "threeMonthReturn": 37.08,
     "returns": {
       "w1": -1.88,
       "m1": -4.04,
       "m3": -2.61,
       "m6": 26.33,
-      "y1": 29.98
+      "y1": 37.08
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -30548,7 +30734,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2516",
@@ -30584,13 +30772,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.73,
     "date": "2026-04-30",
-    "threeMonthReturn": -25.82,
+    "threeMonthReturn": -16.77,
     "returns": {
       "w1": 5.41,
       "m1": -1.8,
       "m3": -8.7,
       "m6": -9.3,
-      "y1": -25.82
+      "y1": -16.77
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -30878,7 +31066,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "New Asia"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2528",
@@ -30914,13 +31104,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.22,
     "date": "2026-04-30",
-    "threeMonthReturn": -33.82,
+    "threeMonthReturn": -30.1,
     "returns": {
       "w1": -0.44,
       "m1": -11.94,
       "m3": -24.37,
       "m6": -24.75,
-      "y1": -33.82
+      "y1": -30.1
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -31192,7 +31382,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 8,
+    "trustBuyStreak": 0
   },
   {
     "id": "2535",
@@ -31228,13 +31420,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -4.76,
     "date": "2026-04-30",
-    "threeMonthReturn": 28.29,
+    "threeMonthReturn": 33.27,
     "returns": {
       "w1": -4.5,
       "m1": 1.26,
       "m3": 6.97,
       "m6": 24.53,
-      "y1": 28.29
+      "y1": 33.27
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -31508,7 +31700,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2537",
@@ -31544,13 +31738,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -2.39,
     "date": "2026-04-30",
-    "threeMonthReturn": -3.77,
+    "threeMonthReturn": -1.45,
     "returns": {
       "w1": -3.77,
       "m1": -0.97,
       "m3": -12.07,
       "m6": -9.73,
-      "y1": -3.77
+      "y1": -1.45
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -31836,7 +32030,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "WE & WIN"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2542",
@@ -31872,13 +32068,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.11,
     "date": "2026-04-30",
-    "threeMonthReturn": 3.32,
+    "threeMonthReturn": 4.1,
     "returns": {
       "w1": 7.35,
       "m1": 13.42,
       "m3": 1.77,
       "m6": 3.08,
-      "y1": 3.32
+      "y1": 4.1
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -32150,7 +32346,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2548",
@@ -32186,13 +32384,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.18,
     "date": "2026-04-30",
-    "threeMonthReturn": 27.21,
+    "threeMonthReturn": 28.44,
     "returns": {
       "w1": -3.82,
       "m1": 2.86,
       "m3": 12.0,
       "m6": 27.27,
-      "y1": 27.21
+      "y1": 28.44
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -32478,7 +32676,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "HUAKU"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 4
   },
   {
     "id": "2596",
@@ -32514,13 +32714,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.54,
     "date": "2026-04-30",
-    "threeMonthReturn": -10.3,
+    "threeMonthReturn": -10.16,
     "returns": {
       "w1": -3.85,
       "m1": -10.71,
       "m3": -21.56,
       "m6": -3.52,
-      "y1": -10.3
+      "y1": -10.16
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -32792,7 +32992,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2603",
@@ -32828,13 +33030,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.25,
     "date": "2026-04-30",
-    "threeMonthReturn": -2.18,
+    "threeMonthReturn": -5.16,
     "returns": {
       "w1": 0.5,
       "m1": -0.74,
       "m3": 3.59,
       "m6": 12.85,
-      "y1": -2.18
+      "y1": -5.16
     },
     "industry": "航運業",
     "subIndustries": [
@@ -33106,7 +33308,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 0
   },
   {
     "id": "2640",
@@ -33119,37 +33323,37 @@
     "groupDesc": "",
     "holdingPct": 58.21,
     "delta": 1.52,
-    "price": 0.0,
+    "price": 178.5,
     "marketCap": 36.9,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.09,
+      "d5": 0.08,
+      "d10": 0.11,
+      "d20": 0.18,
+      "d50": 0.22
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.05,
+      "d5": 0.05,
+      "d10": 0.06,
+      "d20": 0.1,
+      "d50": 0.14
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 89.7,
+    "pctOf200dHigh": 89.7,
+    "ma10": 177.85,
+    "ma20": 176.85,
+    "ma60": 150.99,
+    "ma20Trend": "down",
+    "dailyChangePct": 2.88,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": 39.45,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": 4.08,
+      "m1": -7.99,
+      "m3": 38.91,
+      "m6": 40.55,
+      "y1": 39.45
     },
     "industry": "數位雲端",
     "subIndustries": [
@@ -33425,7 +33629,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "2704",
@@ -33461,13 +33667,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -2.34,
     "date": "2026-04-30",
-    "threeMonthReturn": -7.13,
+    "threeMonthReturn": -8.25,
     "returns": {
       "w1": -0.6,
       "m1": -0.83,
       "m3": -3.7,
       "m6": -0.36,
-      "y1": -7.13
+      "y1": -8.25
     },
     "industry": "觀光餐旅",
     "subIndustries": [
@@ -33741,7 +33947,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2705",
@@ -33779,13 +33987,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.83,
     "date": "2026-04-30",
-    "threeMonthReturn": -2.63,
+    "threeMonthReturn": -1.19,
     "returns": {
       "w1": -0.6,
       "m1": 1.22,
       "m3": 0.3,
       "m6": -1.19,
-      "y1": -2.63
+      "y1": -1.19
     },
     "industry": "觀光餐旅",
     "subIndustries": [
@@ -34063,7 +34271,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2723",
@@ -34100,13 +34310,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.32,
     "date": "2026-04-30",
-    "threeMonthReturn": -30.9,
+    "threeMonthReturn": -30.68,
     "returns": {
       "w1": -2.76,
       "m1": -7.43,
       "m3": -14.19,
       "m6": -11.06,
-      "y1": -30.9
+      "y1": -30.68
     },
     "industry": "觀光餐旅",
     "subIndustries": [
@@ -34386,7 +34596,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 0
   },
   {
     "id": "2832",
@@ -34422,13 +34634,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.97,
     "date": "2026-04-30",
-    "threeMonthReturn": 6.73,
+    "threeMonthReturn": 14.42,
     "returns": {
       "w1": 2.15,
       "m1": 12.35,
       "m3": 4.39,
       "m6": 2.13,
-      "y1": 6.73
+      "y1": 14.42
     },
     "industry": "金融保險業",
     "subIndustries": [
@@ -34700,7 +34912,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 0
   },
   {
     "id": "2851",
@@ -34736,13 +34950,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.82,
     "date": "2026-04-30",
-    "threeMonthReturn": 14.86,
+    "threeMonthReturn": 18.24,
     "returns": {
       "w1": 0.0,
       "m1": -1.79,
       "m3": 10.64,
       "m6": 26.95,
-      "y1": 14.86
+      "y1": 18.24
     },
     "industry": "金融保險業",
     "subIndustries": [
@@ -35018,7 +35232,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2855",
@@ -35054,13 +35270,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.42,
     "date": "2026-04-30",
-    "threeMonthReturn": 66.67,
+    "threeMonthReturn": 74.42,
     "returns": {
       "w1": 4.71,
       "m1": 11.95,
       "m3": 30.64,
       "m6": 49.58,
-      "y1": 66.67
+      "y1": 74.42
     },
     "industry": "金融保險業",
     "subIndustries": [
@@ -35214,7 +35430,9 @@
       "group": "統一",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "PSC"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1
   },
   {
     "id": "2867",
@@ -35250,13 +35468,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.41,
     "date": "2026-04-30",
-    "threeMonthReturn": 39.93,
+    "threeMonthReturn": 36.7,
     "returns": {
       "w1": -0.9,
       "m1": 0.39,
       "m3": -0.64,
       "m6": 26.19,
-      "y1": 39.93
+      "y1": 36.7
     },
     "industry": "金融保險業",
     "subIndustries": [
@@ -35542,7 +35760,9 @@
       "group": "三商行",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Mercuries Life"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2881",
@@ -35578,13 +35798,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.42,
     "date": "2026-04-30",
-    "threeMonthReturn": 9.44,
+    "threeMonthReturn": 15.16,
     "returns": {
       "w1": 1.93,
       "m1": 4.17,
       "m3": -4.36,
       "m6": 2.51,
-      "y1": 9.44
+      "y1": 15.16
     },
     "industry": "金融保險業",
     "subIndustries": [
@@ -35872,7 +36092,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 0
   },
   {
     "id": "2882",
@@ -35908,13 +36130,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.78,
     "date": "2026-04-30",
-    "threeMonthReturn": 31.97,
+    "threeMonthReturn": 40.88,
     "returns": {
       "w1": 3.21,
       "m1": 9.66,
       "m3": 2.66,
       "m6": 18.22,
-      "y1": 31.97
+      "y1": 40.88
     },
     "industry": "金融保險業",
     "subIndustries": [
@@ -36070,7 +36292,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "2883",
@@ -36106,13 +36330,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.92,
     "date": "2026-04-30",
-    "threeMonthReturn": 31.58,
+    "threeMonthReturn": 37.91,
     "returns": {
       "w1": 6.44,
       "m1": 10.82,
       "m3": 22.51,
       "m6": 42.38,
-      "y1": 31.58
+      "y1": 37.91
     },
     "industry": "金融保險業",
     "subIndustries": [
@@ -36256,7 +36480,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 0
   },
   {
     "id": "2886",
@@ -36292,13 +36518,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -2.49,
     "date": "2026-04-30",
-    "threeMonthReturn": 3.58,
+    "threeMonthReturn": 4.27,
     "returns": {
       "w1": -1.76,
       "m1": 1.16,
       "m3": -3.81,
       "m6": -6.12,
-      "y1": 3.58
+      "y1": 4.27
     },
     "industry": "金融保險業",
     "subIndustries": [
@@ -36466,7 +36692,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "MEGA FHC"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2908",
@@ -36502,13 +36730,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.72,
     "date": "2026-04-30",
-    "threeMonthReturn": 1.72,
+    "threeMonthReturn": 5.63,
     "returns": {
       "w1": 3.25,
       "m1": 2.99,
       "m3": 1.98,
       "m6": 3.77,
-      "y1": 1.72
+      "y1": 5.63
     },
     "industry": "貿易百貨業",
     "subIndustries": [
@@ -36784,7 +37012,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2911",
@@ -36820,13 +37050,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -3.95,
     "date": "2026-04-30",
-    "threeMonthReturn": -2.3,
+    "threeMonthReturn": -0.97,
     "returns": {
       "w1": 2.0,
       "m1": 0.0,
       "m3": -0.2,
       "m6": 0.0,
-      "y1": -2.3
+      "y1": -0.97
     },
     "industry": "貿易百貨業",
     "subIndustries": [
@@ -37100,7 +37330,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2915",
@@ -37139,13 +37371,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.11,
     "date": "2026-04-30",
-    "threeMonthReturn": -18.37,
+    "threeMonthReturn": -17.01,
     "returns": {
       "w1": 0.45,
       "m1": -5.1,
       "m3": -15.91,
       "m6": -13.64,
-      "y1": -18.37
+      "y1": -17.01
     },
     "industry": "貿易百貨業",
     "subIndustries": [
@@ -37431,7 +37663,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "3003",
@@ -37468,13 +37702,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.44,
     "date": "2026-04-30",
-    "threeMonthReturn": -0.73,
+    "threeMonthReturn": 8.96,
     "returns": {
       "w1": 1.3,
       "m1": 10.51,
       "m3": 13.96,
       "m6": 8.96,
-      "y1": -0.73
+      "y1": 8.96
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -37768,7 +38002,9 @@
       "group": "-",
       "auditor": "安永聯合會計師事務所",
       "englishName": "KST"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3006",
@@ -37804,13 +38040,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -3.14,
     "date": "2026-04-30",
-    "threeMonthReturn": 229.77,
+    "threeMonthReturn": 235.64,
     "returns": {
       "w1": 9.0,
       "m1": 1.8,
       "m3": 11.88,
       "m6": 107.47,
-      "y1": 229.77
+      "y1": 235.64
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -38086,7 +38322,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "3013",
@@ -38122,13 +38360,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -6.7,
     "date": "2026-04-30",
-    "threeMonthReturn": 18.48,
+    "threeMonthReturn": 23.67,
     "returns": {
       "w1": -4.13,
       "m1": 0.0,
       "m3": -15.04,
       "m6": -11.06,
-      "y1": 18.48
+      "y1": 23.67
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -38414,7 +38652,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "UNEEC"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3014",
@@ -38450,13 +38690,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": -4.25,
+    "threeMonthReturn": -2.75,
     "returns": {
       "w1": 0.4,
       "m1": 7.36,
       "m3": 7.36,
       "m6": -4.98,
-      "y1": -4.25
+      "y1": -2.75
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -38756,7 +38996,9 @@
       "group": "聯電",
       "auditor": "安永聯合會計師事務所",
       "englishName": "ITE"
-    }
+    },
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "3016",
@@ -38792,13 +39034,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 9.93,
     "date": "2026-04-30",
-    "threeMonthReturn": 164.99,
+    "threeMonthReturn": 180.31,
     "returns": {
       "w1": 29.44,
       "m1": 64.59,
       "m3": 52.03,
       "m6": 71.84,
-      "y1": 164.99
+      "y1": 180.31
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -39088,7 +39330,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "EPi"
-    }
+    },
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "3023",
@@ -39124,13 +39368,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.35,
     "date": "2026-04-30",
-    "threeMonthReturn": 28.28,
+    "threeMonthReturn": 36.96,
     "returns": {
       "w1": 1.98,
       "m1": 10.96,
       "m3": 43.18,
       "m6": 28.86,
-      "y1": 28.28
+      "y1": 36.96
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -39404,7 +39648,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 19,
+    "trustBuyStreak": 0
   },
   {
     "id": "3024",
@@ -39443,13 +39689,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -3.05,
     "date": "2026-04-30",
-    "threeMonthReturn": -16.45,
+    "threeMonthReturn": -11.5,
     "returns": {
       "w1": -9.61,
       "m1": 25.74,
       "m3": 11.89,
       "m6": -1.93,
-      "y1": -16.45
+      "y1": -11.5
     },
     "industry": "光電業",
     "subIndustries": [
@@ -39751,7 +39997,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "ACTION"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3029",
@@ -39780,7 +40028,7 @@
       "d20": 1.47,
       "d50": 1.59
     },
-    "pctOf52wHigh": 77.27,
+    "pctOf52wHigh": 74.45,
     "pctOf200dHigh": 77.86,
     "ma10": 96.68,
     "ma20": 96.7,
@@ -39788,13 +40036,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 7.03,
     "date": "2026-04-30",
-    "threeMonthReturn": -17.74,
+    "threeMonthReturn": -11.3,
     "returns": {
       "w1": 5.26,
       "m1": 7.14,
       "m3": -8.93,
       "m6": -10.53,
-      "y1": -17.74
+      "y1": -11.3
     },
     "industry": "資訊服務業",
     "subIndustries": [
@@ -40076,7 +40324,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 1
   },
   {
     "id": "3030",
@@ -40088,37 +40338,37 @@
     "groupDesc": "",
     "holdingPct": 53.93,
     "delta": 0.67,
-    "price": 0.0,
+    "price": 342.5,
     "marketCap": 108.9,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 23.66,
+      "d5": 20.42,
+      "d10": 26.37,
+      "d20": 24.76,
+      "d50": 19.43
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 6.82,
+      "d5": 6.21,
+      "d10": 7.83,
+      "d20": 7.94,
+      "d50": 7.09
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 91.46,
+    "pctOf200dHigh": 91.46,
+    "ma10": 334.5,
+    "ma20": 309.18,
+    "ma60": 252.17,
+    "ma20Trend": "up",
+    "dailyChangePct": -0.58,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": 244.22,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": 6.2,
+      "m1": 28.04,
+      "m3": 98.55,
+      "m6": 123.13,
+      "y1": 244.22
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -40390,7 +40640,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3033",
@@ -40426,13 +40678,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.28,
     "date": "2026-04-30",
-    "threeMonthReturn": 8.99,
+    "threeMonthReturn": 13.31,
     "returns": {
       "w1": 2.14,
       "m1": 10.68,
       "m3": 16.45,
       "m6": 23.28,
-      "y1": 8.99
+      "y1": 13.31
     },
     "industry": "電子通路業",
     "subIndustries": [
@@ -40718,7 +40970,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Weikeng"
-    }
+    },
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 1
   },
   {
     "id": "3034",
@@ -40755,13 +41009,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.12,
     "date": "2026-04-30",
-    "threeMonthReturn": -21.19,
+    "threeMonthReturn": -16.7,
     "returns": {
       "w1": 0.74,
       "m1": 4.6,
       "m3": 7.77,
       "m6": -1.21,
-      "y1": -21.19
+      "y1": -16.7
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -41065,7 +41319,9 @@
       "group": "聯電",
       "auditor": "安永聯合會計師事務所",
       "englishName": "NOVATEK"
-    }
+    },
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 0
   },
   {
     "id": "3038",
@@ -41093,7 +41349,7 @@
       "d20": 0.54,
       "d50": 0.41
     },
-    "pctOf52wHigh": 91.97,
+    "pctOf52wHigh": 90.69,
     "pctOf200dHigh": 92.53,
     "ma10": 23.11,
     "ma20": 22.17,
@@ -41101,13 +41357,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.22,
     "date": "2026-04-30",
-    "threeMonthReturn": -4.38,
+    "threeMonthReturn": 0.66,
     "returns": {
       "w1": -0.65,
       "m1": 12.81,
       "m3": -4.78,
       "m6": 11.17,
-      "y1": -4.38
+      "y1": 0.66
     },
     "industry": "光電業",
     "subIndustries": [
@@ -41397,7 +41653,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "EDT"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3041",
@@ -41409,37 +41667,37 @@
     "groupDesc": "",
     "holdingPct": 19.84,
     "delta": 0.71,
-    "price": 0.0,
+    "price": 23.5,
     "marketCap": 33.0,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.24,
+      "d5": 0.37,
+      "d10": 0.71,
+      "d20": 0.42,
+      "d50": 0.3
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.99,
+      "d5": 1.54,
+      "d10": 2.89,
+      "d20": 1.74,
+      "d50": 1.24
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 71.98,
+    "pctOf200dHigh": 71.98,
+    "ma10": 23.74,
+    "ma20": 22.85,
+    "ma60": 23.94,
+    "ma20Trend": "up",
+    "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": -0.84,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": -0.42,
+      "m1": 5.38,
+      "m3": -11.99,
+      "m6": -14.55,
+      "y1": -0.84
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -41715,7 +41973,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "3043",
@@ -41751,13 +42011,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.49,
     "date": "2026-04-30",
-    "threeMonthReturn": -20.39,
+    "threeMonthReturn": -17.84,
     "returns": {
       "w1": -8.07,
       "m1": 1.23,
       "m3": -7.03,
       "m6": -11.83,
-      "y1": -20.39
+      "y1": -17.84
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -42039,7 +42299,9 @@
       "group": "-",
       "auditor": "德昌聯合會計師事務所",
       "englishName": "PCM"
-    }
+    },
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "3056",
@@ -42068,7 +42330,7 @@
       "d20": 1.24,
       "d50": 1.46
     },
-    "pctOf52wHigh": 48.25,
+    "pctOf52wHigh": 48.05,
     "pctOf200dHigh": 51.69,
     "ma10": 14.24,
     "ma20": 14.54,
@@ -42076,13 +42338,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.71,
     "date": "2026-04-30",
-    "threeMonthReturn": -50.02,
+    "threeMonthReturn": -47.59,
     "returns": {
       "w1": -2.46,
       "m1": -4.47,
       "m3": -22.56,
       "m6": -31.7,
-      "y1": -50.02
+      "y1": -47.59
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -42372,7 +42634,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Fu Hua"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3059",
@@ -42414,13 +42678,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.23,
     "date": "2026-04-30",
-    "threeMonthReturn": 11.02,
+    "threeMonthReturn": 19.94,
     "returns": {
       "w1": 9.96,
       "m1": 11.63,
       "m3": 0.25,
       "m6": -19.24,
-      "y1": 11.02
+      "y1": 19.94
     },
     "industry": "光電業",
     "subIndustries": [
@@ -42740,7 +43004,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "Altek"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3081",
@@ -42776,13 +43042,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 7.98,
     "date": "2026-04-30",
-    "threeMonthReturn": 905.71,
+    "threeMonthReturn": 986.42,
     "returns": {
       "w1": -12.58,
       "m1": 54.39,
       "m3": 292.86,
       "m6": 520.45,
-      "y1": 905.71
+      "y1": 986.42
     },
     "industry": "通信網路業",
     "subIndustries": [
@@ -43070,7 +43336,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "LandMark"
-    }
+    },
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 1
   },
   {
     "id": "3149",
@@ -43108,13 +43376,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.84,
     "date": "2026-04-30",
-    "threeMonthReturn": 53.57,
+    "threeMonthReturn": 56.88,
     "returns": {
       "w1": 12.49,
       "m1": 4.42,
       "m3": 4.88,
       "m6": 11.16,
-      "y1": 53.57
+      "y1": 56.88
     },
     "industry": "光電業",
     "subIndustries": [
@@ -43398,7 +43666,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3171",
@@ -43435,13 +43705,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.14,
     "date": "2026-04-30",
-    "threeMonthReturn": 75.6,
+    "threeMonthReturn": 78.78,
     "returns": {
       "w1": -1.0,
       "m1": 3.13,
       "m3": 43.66,
       "m6": 28.44,
-      "y1": 75.6
+      "y1": 78.78
     },
     "industry": "居家生活",
     "subIndustries": [
@@ -43733,7 +44003,9 @@
       "group": "炎洲",
       "auditor": "安永聯合會計師事務所",
       "englishName": "YCD"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3188",
@@ -43745,37 +44017,37 @@
     "groupDesc": "",
     "holdingPct": 69.3,
     "delta": 0.64,
-    "price": 0.0,
+    "price": 25.75,
     "marketCap": 17.9,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.14,
+      "d5": 0.15,
+      "d10": 0.13,
+      "d20": 0.11,
+      "d50": 0.2
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.56,
+      "d5": 0.59,
+      "d10": 0.49,
+      "d20": 0.43,
+      "d50": 0.66
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 72.03,
+    "pctOf200dHigh": 72.03,
+    "ma10": 25.68,
+    "ma20": 26.48,
+    "ma60": 29.71,
+    "ma20Trend": "down",
+    "dailyChangePct": 0.98,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": -0.39,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": -0.77,
+      "m1": -6.7,
+      "m3": -13.59,
+      "m6": -5.68,
+      "y1": -0.39
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -44043,7 +44315,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3209",
@@ -44080,13 +44354,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 2.15,
     "date": "2026-04-30",
-    "threeMonthReturn": 35.94,
+    "threeMonthReturn": 46.84,
     "returns": {
       "w1": 5.35,
       "m1": 24.58,
       "m3": 55.36,
       "m6": 67.58,
-      "y1": 35.94
+      "y1": 46.84
     },
     "industry": "電子通路業",
     "subIndustries": [
@@ -44370,7 +44644,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "3217",
@@ -44406,13 +44682,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.19,
     "date": "2026-04-30",
-    "threeMonthReturn": 15.22,
+    "threeMonthReturn": 26.14,
     "returns": {
       "w1": -10.72,
       "m1": 8.82,
       "m3": -2.92,
       "m6": -6.98,
-      "y1": 15.22
+      "y1": 26.14
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -44684,7 +44960,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "3218",
@@ -44720,13 +44998,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -2.16,
     "date": "2026-04-30",
-    "threeMonthReturn": -23.81,
+    "threeMonthReturn": -25.68,
     "returns": {
       "w1": 5.84,
       "m1": 3.42,
       "m3": -9.03,
       "m6": -5.23,
-      "y1": -23.81
+      "y1": -25.68
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -44998,7 +45276,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 3
   },
   {
     "id": "3231",
@@ -45034,13 +45314,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -2.49,
     "date": "2026-04-30",
-    "threeMonthReturn": 34.98,
+    "threeMonthReturn": 37.41,
     "returns": {
       "w1": -1.79,
       "m1": 9.16,
       "m3": -4.53,
       "m6": -5.84,
-      "y1": 34.98
+      "y1": 37.41
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -45332,7 +45612,9 @@
       "group": "緯創資通",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Wistron"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3234",
@@ -45369,13 +45651,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 6.57,
     "date": "2026-04-30",
-    "threeMonthReturn": 243.94,
+    "threeMonthReturn": 237.8,
     "returns": {
       "w1": 4.13,
       "m1": 26.67,
       "m3": 148.9,
       "m6": 249.23,
-      "y1": 243.94
+      "y1": 237.8
     },
     "industry": "通信網路業",
     "subIndustries": [
@@ -45653,7 +45935,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3290",
@@ -45689,13 +45973,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.58,
     "date": "2026-04-30",
-    "threeMonthReturn": 13.98,
+    "threeMonthReturn": 16.83,
     "returns": {
       "w1": -3.72,
       "m1": 9.76,
       "m3": 6.26,
       "m6": 5.07,
-      "y1": 13.98
+      "y1": 16.83
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -45969,7 +46253,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3310",
@@ -46006,13 +46292,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.14,
     "date": "2026-04-30",
-    "threeMonthReturn": -13.38,
+    "threeMonthReturn": -7.05,
     "returns": {
       "w1": 3.56,
       "m1": -6.05,
       "m3": -12.41,
       "m6": 7.54,
-      "y1": -13.38
+      "y1": -7.05
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -46290,7 +46576,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3312",
@@ -46326,13 +46614,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.69,
     "date": "2026-04-30",
-    "threeMonthReturn": -23.45,
+    "threeMonthReturn": -4.78,
     "returns": {
       "w1": -4.45,
       "m1": 17.92,
       "m3": -1.69,
       "m6": 2.0,
-      "y1": -23.45
+      "y1": -4.78
     },
     "industry": "電子通路業",
     "subIndustries": [
@@ -46604,7 +46892,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "3313",
@@ -46642,13 +46932,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 1.26,
     "date": "2026-04-30",
-    "threeMonthReturn": -5.12,
+    "threeMonthReturn": -5.49,
     "returns": {
       "w1": -2.03,
       "m1": -6.23,
       "m3": -17.47,
       "m6": -27.84,
-      "y1": -5.12
+      "y1": -5.49
     },
     "industry": "其他業",
     "subIndustries": [
@@ -46940,7 +47230,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "FCD"
-    }
+    },
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "3339",
@@ -46976,13 +47268,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.18,
     "date": "2026-04-30",
-    "threeMonthReturn": 62.13,
+    "threeMonthReturn": 98.19,
     "returns": {
       "w1": -11.9,
       "m1": 39.62,
       "m3": 96.42,
       "m6": 83.89,
-      "y1": 62.13
+      "y1": 98.19
     },
     "industry": "光電業",
     "subIndustries": [
@@ -47270,7 +47562,9 @@
       "group": "億光",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "TEKCORE"
-    }
+    },
+    "foreignBuyStreak": 7,
+    "trustBuyStreak": 0
   },
   {
     "id": "3346",
@@ -47306,13 +47600,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.15,
     "date": "2026-04-30",
-    "threeMonthReturn": -39.93,
+    "threeMonthReturn": -40.86,
     "returns": {
       "w1": -5.51,
       "m1": -7.55,
       "m3": -18.53,
       "m6": -22.57,
-      "y1": -39.93
+      "y1": -40.86
     },
     "industry": "汽車工業",
     "subIndustries": [
@@ -47598,7 +47892,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Laster Tech"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3363",
@@ -47634,13 +47930,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.99,
     "date": "2026-04-30",
-    "threeMonthReturn": 313.44,
+    "threeMonthReturn": 352.35,
     "returns": {
       "w1": -15.59,
       "m1": 25.86,
       "m3": 88.03,
       "m6": 113.61,
-      "y1": 313.44
+      "y1": 352.35
     },
     "industry": "通信網路業",
     "subIndustries": [
@@ -47922,7 +48218,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "FOCI"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3374",
@@ -47958,13 +48256,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.23,
     "date": "2026-04-30",
-    "threeMonthReturn": 50.19,
+    "threeMonthReturn": 54.23,
     "returns": {
       "w1": 9.26,
       "m1": 27.3,
       "m3": 11.7,
       "m6": 42.2,
-      "y1": 50.19
+      "y1": 54.23
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -48238,7 +48536,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3416",
@@ -48274,13 +48574,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.29,
     "date": "2026-04-30",
-    "threeMonthReturn": 15.38,
+    "threeMonthReturn": 18.42,
     "returns": {
       "w1": 0.96,
       "m1": 7.88,
       "m3": 5.35,
       "m6": -7.62,
-      "y1": 15.38
+      "y1": 18.42
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -48550,7 +48850,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3419",
@@ -48587,13 +48889,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -4.13,
     "date": "2026-04-30",
-    "threeMonthReturn": 1.34,
+    "threeMonthReturn": 4.86,
     "returns": {
       "w1": -6.5,
       "m1": -7.36,
       "m3": 3.42,
       "m6": 7.86,
-      "y1": 1.34
+      "y1": 4.86
     },
     "industry": "通信網路業",
     "subIndustries": [
@@ -48871,7 +49173,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "3443",
@@ -48907,13 +49211,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 3.4,
     "date": "2026-04-30",
-    "threeMonthReturn": 315.61,
+    "threeMonthReturn": 340.99,
     "returns": {
       "w1": 8.95,
       "m1": 84.42,
       "m3": 70.06,
       "m6": 184.0,
-      "y1": 315.61
+      "y1": 340.99
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -49187,7 +49491,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 1
   },
   {
     "id": "3465",
@@ -49223,13 +49529,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -2.4,
     "date": "2026-04-30",
-    "threeMonthReturn": -41.44,
+    "threeMonthReturn": -42.98,
     "returns": {
       "w1": -1.37,
       "m1": -13.33,
       "m3": -36.4,
       "m6": -26.97,
-      "y1": -41.44
+      "y1": -42.98
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -49501,7 +49807,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "3489",
@@ -49529,7 +49837,7 @@
       "d20": 0.15,
       "d50": 0.16
     },
-    "pctOf52wHigh": 86.84,
+    "pctOf52wHigh": 86.67,
     "pctOf200dHigh": 89.11,
     "ma10": 22.6,
     "ma20": 23.11,
@@ -49537,13 +49845,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.9,
     "date": "2026-04-30",
-    "threeMonthReturn": -4.95,
+    "threeMonthReturn": -1.78,
     "returns": {
       "w1": -2.0,
       "m1": -3.49,
       "m3": -0.23,
       "m6": 11.62,
-      "y1": -4.95
+      "y1": -1.78
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -49815,7 +50123,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3490",
@@ -49852,13 +50162,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.33,
     "date": "2026-04-30",
-    "threeMonthReturn": 29.24,
+    "threeMonthReturn": 38.32,
     "returns": {
       "w1": 2.35,
       "m1": 15.97,
       "m3": 19.84,
       "m6": 26.56,
-      "y1": 29.24
+      "y1": 38.32
     },
     "industry": "光電業",
     "subIndustries": [
@@ -50140,7 +50450,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "3498",
@@ -50177,13 +50489,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 9.9,
     "date": "2026-04-30",
-    "threeMonthReturn": 129.58,
+    "threeMonthReturn": 152.74,
     "returns": {
       "w1": 10.04,
       "m1": 17.88,
       "m3": 64.54,
       "m6": 83.28,
-      "y1": 129.58
+      "y1": 152.74
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -50477,7 +50789,9 @@
       "group": "鴻海",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "USUN"
-    }
+    },
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "3504",
@@ -50491,37 +50805,37 @@
     "groupDesc": "",
     "holdingPct": 59.52,
     "delta": 0.12,
-    "price": 0.0,
+    "price": 63.3,
     "marketCap": 97.9,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.49,
+      "d5": 0.74,
+      "d10": 1.93,
+      "d20": 1.15,
+      "d50": 0.79
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.76,
+      "d5": 1.12,
+      "d10": 2.77,
+      "d20": 1.7,
+      "d50": 1.22
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 84.63,
+    "pctOf200dHigh": 84.63,
+    "ma10": 67.77,
+    "ma20": 61.47,
+    "ma60": 58.53,
+    "ma20Trend": "up",
+    "dailyChangePct": -2.62,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": 43.86,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": -5.94,
+      "m1": 19.21,
+      "m3": 10.09,
+      "m6": 10.09,
+      "y1": 43.86
     },
     "industry": "光電業",
     "subIndustries": [
@@ -50805,7 +51119,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3518",
@@ -50817,37 +51133,37 @@
     "groupDesc": "",
     "holdingPct": 30.1,
     "delta": 0.99,
-    "price": 0.0,
+    "price": 32.8,
     "marketCap": 16.9,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.3,
+      "d5": 0.27,
+      "d10": 0.7,
+      "d20": 0.44,
+      "d50": 0.21
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.9,
+      "d5": 0.87,
+      "d10": 2.29,
+      "d20": 1.53,
+      "d50": 0.78
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 97.19,
+    "pctOf200dHigh": 97.19,
+    "ma10": 30.79,
+    "ma20": 26.21,
+    "ma60": 22.93,
+    "ma20Trend": "up",
+    "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": 84.79,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": 7.19,
+      "m1": 56.56,
+      "m3": 52.56,
+      "m6": 56.19,
+      "y1": 84.79
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -51129,7 +51445,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "PT TECH."
-    }
+    },
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 0
   },
   {
     "id": "3541",
@@ -51165,13 +51483,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.21,
     "date": "2026-04-30",
-    "threeMonthReturn": -15.95,
+    "threeMonthReturn": -12.34,
     "returns": {
       "w1": -1.05,
       "m1": -2.29,
       "m3": -7.31,
       "m6": -7.13,
-      "y1": -15.95
+      "y1": -12.34
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -51443,7 +51761,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3548",
@@ -51479,13 +51799,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.94,
     "date": "2026-04-30",
-    "threeMonthReturn": -15.83,
+    "threeMonthReturn": -15.49,
     "returns": {
       "w1": -5.61,
       "m1": 24.69,
       "m3": 12.85,
       "m6": 6.09,
-      "y1": -15.83
+      "y1": -15.49
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -51757,7 +52077,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3577",
@@ -51793,13 +52115,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 6.08,
     "date": "2026-04-30",
-    "threeMonthReturn": 64.1,
+    "threeMonthReturn": 66.6,
     "returns": {
       "w1": 4.8,
       "m1": 19.92,
       "m3": 33.28,
       "m6": 28.76,
-      "y1": 64.1
+      "y1": 66.6
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -52083,7 +52405,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "ICP DAS"
-    }
+    },
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "3580",
@@ -52119,13 +52443,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 2.51,
     "date": "2026-04-30",
-    "threeMonthReturn": 14.84,
+    "threeMonthReturn": 47.59,
     "returns": {
       "w1": 10.27,
       "m1": 20.31,
       "m3": 20.31,
       "m6": 40.59,
-      "y1": 14.84
+      "y1": 47.59
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -52397,7 +52721,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "3588",
@@ -52433,13 +52759,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": 24.14,
+    "threeMonthReturn": 31.9,
     "returns": {
       "w1": -9.73,
       "m1": 26.06,
       "m3": 17.02,
       "m6": 25.28,
-      "y1": 24.14
+      "y1": 31.9
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -52713,7 +53039,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "3591",
@@ -52749,13 +53077,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.21,
     "date": "2026-04-30",
-    "threeMonthReturn": 18.53,
+    "threeMonthReturn": 26.9,
     "returns": {
       "w1": -1.48,
       "m1": 15.59,
       "m3": 14.46,
       "m6": 29.01,
-      "y1": 18.53
+      "y1": 26.9
     },
     "industry": "光電業",
     "subIndustries": [
@@ -53029,7 +53357,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3592",
@@ -53350,7 +53680,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 5
   },
   {
     "id": "3594",
@@ -53386,13 +53718,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.19,
     "date": "2026-04-30",
-    "threeMonthReturn": 14.51,
+    "threeMonthReturn": 22.3,
     "returns": {
       "w1": 0.19,
       "m1": 34.8,
       "m3": 39.87,
       "m6": 22.44,
-      "y1": 14.51
+      "y1": 22.3
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -53662,7 +53994,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "3605",
@@ -53698,13 +54032,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 5.58,
     "date": "2026-04-30",
-    "threeMonthReturn": 82.41,
+    "threeMonthReturn": 81.84,
     "returns": {
       "w1": 11.95,
       "m1": 54.16,
       "m3": 40.94,
       "m6": 28.28,
-      "y1": 82.41
+      "y1": 81.84
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -53980,7 +54314,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "3615",
@@ -54017,13 +54353,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -2.9,
     "date": "2026-04-30",
-    "threeMonthReturn": 34.39,
+    "threeMonthReturn": 51.31,
     "returns": {
       "w1": 2.08,
       "m1": -0.78,
       "m3": 21.56,
       "m6": 36.7,
-      "y1": 34.39
+      "y1": 51.31
     },
     "industry": "光電業",
     "subIndustries": [
@@ -54315,7 +54651,9 @@
       "group": "錸德",
       "auditor": "安永聯合會計師事務所",
       "englishName": "AimCore"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3622",
@@ -54352,13 +54690,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 1.27,
     "date": "2026-04-30",
-    "threeMonthReturn": 10.74,
+    "threeMonthReturn": 15.68,
     "returns": {
       "w1": 0.72,
       "m1": -3.8,
       "m3": -17.36,
       "m6": 2.01,
-      "y1": 10.74
+      "y1": 15.68
     },
     "industry": "光電業",
     "subIndustries": [
@@ -54636,7 +54974,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3661",
@@ -54672,13 +55012,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 3.25,
     "date": "2026-04-30",
-    "threeMonthReturn": 94.59,
+    "threeMonthReturn": 90.55,
     "returns": {
       "w1": 3.89,
       "m1": 50.36,
       "m3": 24.55,
       "m6": 22.7,
-      "y1": 94.59
+      "y1": 90.55
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -54966,7 +55306,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Alchip"
-    }
+    },
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "3707",
@@ -55002,13 +55344,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 9.97,
     "date": "2026-04-30",
-    "threeMonthReturn": 84.4,
+    "threeMonthReturn": 97.91,
     "returns": {
       "w1": 14.34,
       "m1": 28.05,
       "m3": 15.73,
       "m6": 13.75,
-      "y1": 84.4
+      "y1": 97.91
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -55298,7 +55640,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "EPISIL"
-    }
+    },
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "3708",
@@ -55335,13 +55679,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": 57.86,
+    "threeMonthReturn": 65.25,
     "returns": {
       "w1": -6.8,
       "m1": -7.91,
       "m3": 0.0,
       "m6": 0.43,
-      "y1": 57.86
+      "y1": 65.25
     },
     "industry": "綠能環保",
     "subIndustries": [
@@ -55611,7 +55955,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "3712",
@@ -55647,13 +55993,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -3.87,
     "date": "2026-04-30",
-    "threeMonthReturn": -57.49,
+    "threeMonthReturn": -55.59,
     "returns": {
       "w1": -3.64,
       "m1": -11.58,
       "m3": -23.21,
       "m6": -46.64,
-      "y1": -57.49
+      "y1": -55.59
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -55923,7 +56269,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4105",
@@ -55959,13 +56307,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.41,
     "date": "2026-04-30",
-    "threeMonthReturn": -3.76,
+    "threeMonthReturn": 1.37,
     "returns": {
       "w1": 2.91,
       "m1": 1.37,
       "m3": -10.71,
       "m6": -7.94,
-      "y1": -3.76
+      "y1": 1.37
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -56239,7 +56587,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 4
   },
   {
     "id": "4111",
@@ -56275,13 +56625,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.34,
     "date": "2026-04-30",
-    "threeMonthReturn": -0.1,
+    "threeMonthReturn": 2.58,
     "returns": {
       "w1": 0.68,
       "m1": 0.86,
       "m3": -1.17,
       "m6": -2.48,
-      "y1": -0.1
+      "y1": 2.58
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -56569,7 +56919,9 @@
       "group": "-",
       "auditor": "安永聯合會計師事務所",
       "englishName": "CHI  SHENG"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4121",
@@ -56607,13 +56959,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.67,
     "date": "2026-04-30",
-    "threeMonthReturn": -2.97,
+    "threeMonthReturn": 7.3,
     "returns": {
       "w1": 0.68,
       "m1": -6.67,
       "m3": -3.61,
       "m6": -1.01,
-      "y1": -2.97
+      "y1": 7.3
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -56913,7 +57265,9 @@
       "group": "生達",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "ROSSMAX"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4130",
@@ -56949,13 +57303,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.26,
     "date": "2026-04-30",
-    "threeMonthReturn": 35.89,
+    "threeMonthReturn": 38.29,
     "returns": {
       "w1": -8.5,
       "m1": -21.23,
       "m3": -16.06,
       "m6": 37.25,
-      "y1": 35.89
+      "y1": 38.29
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -57245,7 +57599,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "GBL"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4142",
@@ -57281,13 +57637,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.39,
     "date": "2026-04-30",
-    "threeMonthReturn": -10.61,
+    "threeMonthReturn": -5.35,
     "returns": {
       "w1": -1.12,
       "m1": -4.32,
       "m3": -15.51,
       "m6": -3.54,
-      "y1": -10.61
+      "y1": -5.35
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -57559,7 +57915,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4157",
@@ -57595,13 +57953,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.48,
     "date": "2026-04-30",
-    "threeMonthReturn": 0.0,
+    "threeMonthReturn": 6.04,
     "returns": {
       "w1": 0.0,
       "m1": -10.71,
       "m3": -31.74,
       "m6": 13.64,
-      "y1": 0.0
+      "y1": 6.04
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -57875,7 +58233,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4167",
@@ -57911,13 +58271,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.79,
     "date": "2026-04-30",
-    "threeMonthReturn": -1.56,
+    "threeMonthReturn": 7.37,
     "returns": {
       "w1": -1.56,
       "m1": -11.03,
       "m3": -4.53,
       "m6": 8.29,
-      "y1": -1.56
+      "y1": 7.37
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -58191,7 +58551,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4402",
@@ -58228,13 +58590,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.04,
     "date": "2026-04-30",
-    "threeMonthReturn": -30.49,
+    "threeMonthReturn": -31.49,
     "returns": {
       "w1": -7.17,
       "m1": -15.68,
       "m3": -28.75,
       "m6": -23.39,
-      "y1": -30.49
+      "y1": -31.49
     },
     "industry": "紡織纖維",
     "subIndustries": [
@@ -58494,7 +58856,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "4417",
@@ -58530,13 +58894,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.95,
     "date": "2026-04-30",
-    "threeMonthReturn": 6.67,
+    "threeMonthReturn": 6.31,
     "returns": {
       "w1": -0.53,
       "m1": -6.08,
       "m3": -10.36,
       "m6": -7.55,
-      "y1": 6.67
+      "y1": 6.31
     },
     "industry": "紡織纖維",
     "subIndustries": [
@@ -58808,7 +59172,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4502",
@@ -58844,13 +59210,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.31,
     "date": "2026-04-30",
-    "threeMonthReturn": -3.94,
+    "threeMonthReturn": -7.04,
     "returns": {
       "w1": 0.63,
       "m1": 0.63,
       "m3": -1.86,
       "m6": -4.52,
-      "y1": -3.94
+      "y1": -7.04
     },
     "industry": "電機機械",
     "subIndustries": [
@@ -59132,7 +59498,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "RT"
-    }
+    },
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "4540",
@@ -59168,13 +59536,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 7.87,
     "date": "2026-04-30",
-    "threeMonthReturn": 71.68,
+    "threeMonthReturn": 86.9,
     "returns": {
       "w1": 24.77,
       "m1": 62.32,
       "m3": 75.87,
       "m6": 70.82,
-      "y1": 71.68
+      "y1": 86.9
     },
     "industry": "電機機械",
     "subIndustries": [
@@ -59460,7 +59828,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "TBI MOTION"
-    }
+    },
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "4542",
@@ -59496,13 +59866,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.53,
     "date": "2026-04-30",
-    "threeMonthReturn": 240.75,
+    "threeMonthReturn": 236.72,
     "returns": {
       "w1": 18.45,
       "m1": 10.56,
       "m3": 99.2,
       "m6": 208.53,
-      "y1": 240.75
+      "y1": 236.72
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -59776,7 +60146,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "4562",
@@ -59813,13 +60185,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -3.76,
     "date": "2026-04-30",
-    "threeMonthReturn": -27.94,
+    "threeMonthReturn": -11.15,
     "returns": {
       "w1": 10.99,
       "m1": 18.12,
       "m3": -9.81,
       "m6": -13.93,
-      "y1": -27.94
+      "y1": -11.15
     },
     "industry": "電機機械",
     "subIndustries": [
@@ -60095,7 +60467,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4722",
@@ -60131,13 +60505,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.8,
     "date": "2026-04-30",
-    "threeMonthReturn": 241.33,
+    "threeMonthReturn": 243.87,
     "returns": {
       "w1": -1.6,
       "m1": 9.47,
       "m3": 10.78,
       "m6": -9.31,
-      "y1": 241.33
+      "y1": 243.87
     },
     "industry": "化學工業",
     "subIndustries": [
@@ -60409,7 +60783,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4737",
@@ -60445,13 +60821,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.96,
     "date": "2026-04-30",
-    "threeMonthReturn": 21.1,
+    "threeMonthReturn": 36.6,
     "returns": {
       "w1": -0.16,
       "m1": -6.05,
       "m3": 13.11,
       "m6": -4.46,
-      "y1": 21.1
+      "y1": 36.6
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -60737,7 +61113,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "BIONIME"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4747",
@@ -60773,13 +61151,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.36,
     "date": "2026-04-30",
-    "threeMonthReturn": -21.88,
+    "threeMonthReturn": -20.29,
     "returns": {
       "w1": 5.36,
       "m1": 1.48,
       "m3": -7.41,
       "m6": -21.99,
-      "y1": -21.88
+      "y1": -20.29
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -61067,7 +61445,9 @@
       "group": "-",
       "auditor": "安永聯合會計師事務所",
       "englishName": "JCP"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4764",
@@ -61103,13 +61483,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 4.45,
     "date": "2026-04-30",
-    "threeMonthReturn": 523.19,
+    "threeMonthReturn": 558.16,
     "returns": {
       "w1": 29.65,
       "m1": 103.15,
       "m3": 93.98,
       "m6": 523.19,
-      "y1": 523.19
+      "y1": 558.16
     },
     "industry": "化學工業",
     "subIndustries": [
@@ -61397,7 +61777,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "DBC"
-    }
+    },
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "4768",
@@ -61433,13 +61815,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.61,
     "date": "2026-04-30",
-    "threeMonthReturn": 342.25,
+    "threeMonthReturn": 357.77,
     "returns": {
       "w1": -3.31,
       "m1": 5.74,
       "m3": 17.91,
       "m6": 91.15,
-      "y1": 342.25
+      "y1": 357.77
     },
     "industry": "化學工業",
     "subIndustries": [
@@ -61711,7 +62093,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4772",
@@ -61747,13 +62131,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.12,
     "date": "2026-04-30",
-    "threeMonthReturn": 74.5,
+    "threeMonthReturn": 73.03,
     "returns": {
       "w1": -1.28,
       "m1": 9.41,
       "m3": -15.62,
       "m6": -6.67,
-      "y1": 74.5
+      "y1": 73.03
     },
     "industry": "化學工業",
     "subIndustries": [
@@ -61985,7 +62369,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4906",
@@ -62021,13 +62407,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": 21.2,
+    "threeMonthReturn": 29.43,
     "returns": {
       "w1": -3.24,
       "m1": -2.0,
       "m3": 22.94,
       "m6": 33.2,
-      "y1": 21.2
+      "y1": 29.43
     },
     "industry": "通信網路業",
     "subIndustries": [
@@ -62301,7 +62687,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "4956",
@@ -62337,13 +62725,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -3.67,
     "date": "2026-04-30",
-    "threeMonthReturn": 108.15,
+    "threeMonthReturn": 129.37,
     "returns": {
       "w1": -4.55,
       "m1": 45.38,
       "m3": 127.71,
       "m6": 141.69,
-      "y1": 108.15
+      "y1": 129.37
     },
     "industry": "光電業",
     "subIndustries": [
@@ -62617,7 +63005,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4960",
@@ -62653,13 +63043,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.3,
     "date": "2026-04-30",
-    "threeMonthReturn": 202.33,
+    "threeMonthReturn": 214.52,
     "returns": {
       "w1": -3.7,
       "m1": 44.44,
       "m3": 175.62,
       "m6": 174.65,
-      "y1": 202.33
+      "y1": 214.52
     },
     "industry": "光電業",
     "subIndustries": [
@@ -62945,7 +63335,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "CMMT"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "4961",
@@ -62958,37 +63350,37 @@
     "groupDesc": "",
     "holdingPct": 32.46,
     "delta": 0.84,
-    "price": 0.0,
+    "price": 152.5,
     "marketCap": 63.3,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 2.13,
+      "d5": 1.71,
+      "d10": 3.0,
+      "d20": 2.37,
+      "d50": 1.67
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 1.38,
+      "d5": 1.08,
+      "d10": 1.86,
+      "d20": 1.5,
+      "d50": 1.1
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 66.16,
+    "pctOf200dHigh": 76.06,
+    "ma10": 157.9,
+    "ma20": 155.0,
+    "ma60": 149.0,
+    "ma20Trend": "up",
+    "dailyChangePct": -2.87,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": -22.98,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": -5.86,
+      "m1": 1.67,
+      "m3": 2.35,
+      "m6": -5.28,
+      "y1": -22.98
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -63282,7 +63674,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "FITIPOWER"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "5201",
@@ -63318,13 +63712,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.33,
     "date": "2026-04-30",
-    "threeMonthReturn": -44.55,
+    "threeMonthReturn": -38.38,
     "returns": {
       "w1": 0.0,
       "m1": -22.39,
       "m3": -32.6,
       "m6": -35.38,
-      "y1": -44.55
+      "y1": -38.38
     },
     "industry": "資訊服務業",
     "subIndustries": [
@@ -63610,7 +64004,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "KWAY"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "5222",
@@ -63647,13 +64043,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.75,
     "date": "2026-04-30",
-    "threeMonthReturn": 38.42,
+    "threeMonthReturn": 35.82,
     "returns": {
       "w1": -7.39,
       "m1": 0.0,
       "m3": -4.01,
       "m6": -15.16,
-      "y1": 38.42
+      "y1": 35.82
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -63933,7 +64329,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "5225",
@@ -63969,13 +64367,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.26,
     "date": "2026-04-30",
-    "threeMonthReturn": -25.99,
+    "threeMonthReturn": -13.45,
     "returns": {
       "w1": -1.03,
       "m1": -5.08,
       "m3": -28.74,
       "m6": -29.07,
-      "y1": -25.99
+      "y1": -13.45
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -64247,7 +64645,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "5278",
@@ -64283,13 +64683,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.21,
     "date": "2026-04-30",
-    "threeMonthReturn": -19.97,
+    "threeMonthReturn": -19.28,
     "returns": {
       "w1": 1.28,
       "m1": -5.4,
       "m3": -21.43,
       "m6": -26.55,
-      "y1": -19.97
+      "y1": -19.28
     },
     "industry": "數位雲端",
     "subIndustries": [
@@ -64575,7 +64975,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "Sunfun"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "5284",
@@ -64611,13 +65013,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.78,
     "date": "2026-04-30",
-    "threeMonthReturn": 142.4,
+    "threeMonthReturn": 176.61,
     "returns": {
       "w1": 2.08,
       "m1": 23.16,
       "m3": 27.04,
       "m6": 19.1,
-      "y1": 142.4
+      "y1": 176.61
     },
     "industry": "其他業",
     "subIndustries": [
@@ -64889,7 +65291,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "5291",
@@ -64926,13 +65330,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 9.84,
     "date": "2026-04-30",
-    "threeMonthReturn": 156.67,
+    "threeMonthReturn": 159.34,
     "returns": {
       "w1": 1.96,
       "m1": -19.56,
       "m3": 55.28,
       "m6": 150.5,
-      "y1": 156.67
+      "y1": 159.34
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -65210,7 +65614,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "5328",
@@ -65246,13 +65652,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.8,
     "date": "2026-04-30",
-    "threeMonthReturn": 83.9,
+    "threeMonthReturn": 92.55,
     "returns": {
       "w1": 1.45,
       "m1": 1.87,
       "m3": -5.03,
       "m6": 47.01,
-      "y1": 83.9
+      "y1": 92.55
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -65524,7 +65930,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "5347",
@@ -65560,13 +65968,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.04,
     "date": "2026-04-30",
-    "threeMonthReturn": 61.85,
+    "threeMonthReturn": 58.5,
     "returns": {
       "w1": 6.99,
       "m1": 24.36,
       "m3": 14.57,
       "m6": 46.23,
-      "y1": 61.85
+      "y1": 58.5
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -65838,7 +66246,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "5351",
@@ -65874,13 +66284,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -2.1,
     "date": "2026-04-30",
-    "threeMonthReturn": 144.06,
+    "threeMonthReturn": 197.65,
     "returns": {
       "w1": 5.92,
       "m1": -1.69,
       "m3": 12.58,
       "m6": 82.48,
-      "y1": 144.06
+      "y1": 197.65
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -66156,7 +66566,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "5403",
@@ -66192,13 +66604,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.11,
     "date": "2026-04-30",
-    "threeMonthReturn": -24.96,
+    "threeMonthReturn": -21.83,
     "returns": {
       "w1": 0.64,
       "m1": -6.2,
       "m3": -17.72,
       "m6": -23.74,
-      "y1": -24.96
+      "y1": -21.83
     },
     "industry": "資訊服務業",
     "subIndustries": [
@@ -66484,7 +66896,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "DDSC"
-    }
+    },
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 0
   },
   {
     "id": "5425",
@@ -66521,13 +66935,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -2.79,
     "date": "2026-04-30",
-    "threeMonthReturn": 35.05,
+    "threeMonthReturn": 50.78,
     "returns": {
       "w1": 6.26,
       "m1": 14.81,
       "m3": -3.09,
       "m6": 23.14,
-      "y1": 35.05
+      "y1": 50.78
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -66819,7 +67233,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "TSC"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "5443",
@@ -66855,13 +67271,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 6.15,
     "date": "2026-04-30",
-    "threeMonthReturn": 84.74,
+    "threeMonthReturn": 100.78,
     "returns": {
       "w1": 16.67,
       "m1": 28.22,
       "m3": 30.81,
       "m6": 30.94,
-      "y1": 84.74
+      "y1": 100.78
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -67139,7 +67555,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "5489",
@@ -67175,13 +67593,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.25,
     "date": "2026-04-30",
-    "threeMonthReturn": -32.48,
+    "threeMonthReturn": -17.97,
     "returns": {
       "w1": -0.24,
       "m1": 2.64,
       "m3": -1.21,
       "m6": 2.64,
-      "y1": -32.48
+      "y1": -17.97
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -67467,7 +67885,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "DYNACOLOR"
-    }
+    },
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "5498",
@@ -67504,13 +67924,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.93,
     "date": "2026-04-30",
-    "threeMonthReturn": 707.65,
+    "threeMonthReturn": 735.97,
     "returns": {
       "w1": -4.27,
       "m1": 31.96,
       "m3": 11.13,
       "m6": 259.61,
-      "y1": 707.65
+      "y1": 735.97
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -67788,7 +68208,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "5521",
@@ -67824,13 +68246,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": -7.35,
+    "threeMonthReturn": -0.44,
     "returns": {
       "w1": -3.81,
       "m1": -11.33,
       "m3": -56.68,
       "m6": -3.4,
-      "y1": -7.35
+      "y1": -0.44
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -68102,7 +68524,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "5536",
@@ -68139,13 +68563,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -4.18,
     "date": "2026-04-30",
-    "threeMonthReturn": 105.48,
+    "threeMonthReturn": 139.83,
     "returns": {
       "w1": -13.07,
       "m1": 11.04,
       "m3": 2.74,
       "m6": -0.72,
-      "y1": 105.48
+      "y1": 139.83
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -68437,7 +68861,9 @@
       "group": "聖暉",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "ACTER"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "5608",
@@ -68473,13 +68899,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.65,
     "date": "2026-04-30",
-    "threeMonthReturn": -5.88,
+    "threeMonthReturn": -7.32,
     "returns": {
       "w1": -2.25,
       "m1": -7.88,
       "m3": -15.32,
       "m6": -11.88,
-      "y1": -5.88
+      "y1": -7.32
     },
     "industry": "航運業",
     "subIndustries": [
@@ -68751,7 +69177,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "5609",
@@ -68787,13 +69215,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.13,
     "date": "2026-04-30",
-    "threeMonthReturn": 5.98,
+    "threeMonthReturn": 1.96,
     "returns": {
       "w1": -1.52,
       "m1": -0.89,
       "m3": -2.5,
       "m6": 1.96,
-      "y1": 5.98
+      "y1": 1.96
     },
     "industry": "航運業",
     "subIndustries": [
@@ -69065,7 +69493,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "5864",
@@ -69101,13 +69531,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 3.83,
     "date": "2026-04-30",
-    "threeMonthReturn": 122.66,
+    "threeMonthReturn": 127.09,
     "returns": {
       "w1": 11.55,
       "m1": 19.25,
       "m3": 57.89,
       "m6": 93.22,
-      "y1": 122.66
+      "y1": 127.09
     },
     "industry": "金融保險業",
     "subIndustries": [
@@ -69241,7 +69671,9 @@
       "group": "-",
       "auditor": "正風聯合會計師事務所",
       "englishName": "CIS"
-    }
+    },
+    "foreignBuyStreak": 9,
+    "trustBuyStreak": 0
   },
   {
     "id": "5904",
@@ -69557,7 +69989,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "6015",
@@ -69593,13 +70027,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.07,
     "date": "2026-04-30",
-    "threeMonthReturn": 37.86,
+    "threeMonthReturn": 39.9,
     "returns": {
       "w1": 6.37,
       "m1": 7.17,
       "m3": 9.65,
       "m6": 29.68,
-      "y1": 37.86
+      "y1": 39.9
     },
     "industry": "金融保險業",
     "subIndustries": [
@@ -69753,7 +70187,9 @@
       "group": "三商行",
       "auditor": "安永聯合會計師事務所",
       "englishName": "HORIZON Sec."
-    }
+    },
+    "foreignBuyStreak": 9,
+    "trustBuyStreak": 0
   },
   {
     "id": "6016",
@@ -69789,13 +70225,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.52,
     "date": "2026-04-30",
-    "threeMonthReturn": 83.66,
+    "threeMonthReturn": 88.47,
     "returns": {
       "w1": 7.76,
       "m1": 17.17,
       "m3": 26.3,
       "m6": 52.55,
-      "y1": 83.66
+      "y1": 88.47
     },
     "industry": "金融保險業",
     "subIndustries": [
@@ -70077,7 +70513,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "concords"
-    }
+    },
+    "foreignBuyStreak": 12,
+    "trustBuyStreak": 0
   },
   {
     "id": "6026",
@@ -70113,13 +70551,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.66,
     "date": "2026-04-30",
-    "threeMonthReturn": 24.8,
+    "threeMonthReturn": 27.92,
     "returns": {
       "w1": 4.78,
       "m1": 5.86,
       "m3": 8.1,
       "m6": 32.9,
-      "y1": 24.8
+      "y1": 27.92
     },
     "industry": "金融保險業",
     "subIndustries": [
@@ -70383,7 +70821,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "6111",
@@ -70419,13 +70859,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.45,
     "date": "2026-04-30",
-    "threeMonthReturn": -13.7,
+    "threeMonthReturn": -11.67,
     "returns": {
       "w1": -7.3,
       "m1": 8.55,
       "m3": -7.49,
       "m6": -10.44,
-      "y1": -13.7
+      "y1": -11.67
     },
     "industry": "文化創意業",
     "subIndustries": [
@@ -70709,7 +71149,9 @@
       "group": "-",
       "auditor": "安永聯合會計師事務所",
       "englishName": "SFG"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6126",
@@ -70745,13 +71187,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -2.2,
     "date": "2026-04-30",
-    "threeMonthReturn": 30.95,
+    "threeMonthReturn": 38.84,
     "returns": {
       "w1": -2.51,
       "m1": 4.19,
       "m3": -7.72,
       "m6": 1.8,
-      "y1": 30.95
+      "y1": 38.84
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -71023,7 +71465,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6142",
@@ -71059,13 +71503,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.01,
     "date": "2026-04-30",
-    "threeMonthReturn": -0.11,
+    "threeMonthReturn": 3.15,
     "returns": {
       "w1": -2.64,
       "m1": -8.86,
       "m3": -10.15,
       "m6": -10.15,
-      "y1": -0.11
+      "y1": 3.15
     },
     "industry": "通信網路業",
     "subIndustries": [
@@ -71339,7 +71783,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6147",
@@ -71376,13 +71822,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 3.16,
     "date": "2026-04-30",
-    "threeMonthReturn": 156.69,
+    "threeMonthReturn": 181.03,
     "returns": {
       "w1": 21.64,
       "m1": 112.52,
       "m3": 188.5,
       "m6": 187.99,
-      "y1": 156.69
+      "y1": 181.03
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -71678,7 +72124,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "CHIPBOND"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 2
   },
   {
     "id": "6152",
@@ -71715,13 +72163,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -2.88,
     "date": "2026-04-30",
-    "threeMonthReturn": 37.76,
+    "threeMonthReturn": 48.84,
     "returns": {
       "w1": -9.09,
       "m1": -17.93,
       "m3": 5.06,
       "m6": 47.54,
-      "y1": 37.76
+      "y1": 48.84
     },
     "industry": "通信網路業",
     "subIndustries": [
@@ -71999,7 +72447,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6170",
@@ -72038,13 +72488,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.97,
     "date": "2026-04-30",
-    "threeMonthReturn": 3.99,
+    "threeMonthReturn": 5.04,
     "returns": {
       "w1": 1.36,
       "m1": 1.76,
       "m3": 3.58,
       "m6": 6.11,
-      "y1": 3.99
+      "y1": 5.04
     },
     "industry": "通信網路業",
     "subIndustries": [
@@ -72334,7 +72784,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "6171",
@@ -72370,13 +72822,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": -26.72,
+    "threeMonthReturn": -26.09,
     "returns": {
       "w1": -0.78,
       "m1": -6.59,
       "m3": -9.73,
       "m6": -9.09,
-      "y1": -26.72
+      "y1": -26.09
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -72648,7 +73100,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6175",
@@ -72684,13 +73138,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.73,
     "date": "2026-04-30",
-    "threeMonthReturn": 83.53,
+    "threeMonthReturn": 95.92,
     "returns": {
       "w1": -0.95,
       "m1": 25.18,
       "m3": 12.23,
       "m6": 59.8,
-      "y1": 83.53
+      "y1": 95.92
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -72962,7 +73416,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6177",
@@ -72998,13 +73454,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.3,
     "date": "2026-04-30",
-    "threeMonthReturn": 3.08,
+    "threeMonthReturn": 3.29,
     "returns": {
       "w1": -1.62,
       "m1": -4.41,
       "m3": -13.5,
       "m6": -3.7,
-      "y1": 3.08
+      "y1": 3.29
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -73276,7 +73732,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6187",
@@ -73312,13 +73770,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 10.0,
     "date": "2026-04-30",
-    "threeMonthReturn": 374.51,
+    "threeMonthReturn": 402.07,
     "returns": {
       "w1": -3.59,
       "m1": 34.44,
       "m3": 220.53,
       "m6": 225.71,
-      "y1": 374.51
+      "y1": 402.07
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -73604,7 +74062,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "ALL RING"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1
   },
   {
     "id": "6202",
@@ -73640,13 +74100,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.93,
     "date": "2026-04-30",
-    "threeMonthReturn": 33.17,
+    "threeMonthReturn": 40.6,
     "returns": {
       "w1": -2.17,
       "m1": 10.05,
       "m3": 41.15,
       "m6": 36.18,
-      "y1": 33.17
+      "y1": 40.6
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -73926,7 +74386,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "6205",
@@ -73962,13 +74424,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -5.67,
     "date": "2026-04-30",
-    "threeMonthReturn": 72.65,
+    "threeMonthReturn": 80.02,
     "returns": {
       "w1": 10.19,
       "m1": 58.72,
       "m3": 39.07,
       "m6": 112.27,
-      "y1": 72.65
+      "y1": 80.02
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -74256,7 +74718,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "COXOC"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6217",
@@ -74292,13 +74756,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 4.91,
     "date": "2026-04-30",
-    "threeMonthReturn": 907.25,
+    "threeMonthReturn": 981.71,
     "returns": {
       "w1": -1.42,
       "m1": 53.17,
       "m3": 440.86,
       "m6": 431.55,
-      "y1": 907.25
+      "y1": 981.71
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -74584,7 +75048,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "C.C.P."
-    }
+    },
+    "foreignBuyStreak": 10,
+    "trustBuyStreak": 0
   },
   {
     "id": "6218",
@@ -74621,13 +75087,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 4.71,
     "date": "2026-04-30",
-    "threeMonthReturn": 97.36,
+    "threeMonthReturn": 125.48,
     "returns": {
       "w1": 24.89,
       "m1": 61.06,
       "m3": 64.27,
       "m6": 109.41,
-      "y1": 97.36
+      "y1": 125.48
     },
     "industry": "通信網路業",
     "subIndustries": [
@@ -74905,7 +75371,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6219",
@@ -74941,13 +75409,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.76,
     "date": "2026-04-30",
-    "threeMonthReturn": -50.44,
+    "threeMonthReturn": -52.58,
     "returns": {
       "w1": 2.76,
       "m1": -12.12,
       "m3": -30.4,
       "m6": -30.95,
-      "y1": -50.44
+      "y1": -52.58
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -75233,7 +75701,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "FULL WANG"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6220",
@@ -75269,13 +75739,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": 34.01,
+    "threeMonthReturn": 38.41,
     "returns": {
       "w1": -4.68,
       "m1": -10.73,
       "m3": 14.76,
       "m6": 45.93,
-      "y1": 34.01
+      "y1": 38.41
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -75561,7 +76031,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "YFC-BonEagle"
-    }
+    },
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "6244",
@@ -75597,13 +76069,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 3.4,
     "date": "2026-04-30",
-    "threeMonthReturn": 45.74,
+    "threeMonthReturn": 53.5,
     "returns": {
       "w1": -2.14,
       "m1": -0.9,
       "m3": 17.09,
       "m6": 63.1,
-      "y1": 45.74
+      "y1": 53.5
     },
     "industry": "光電業",
     "subIndustries": [
@@ -75891,7 +76363,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "MOTECH"
-    }
+    },
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "6248",
@@ -75928,13 +76402,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.26,
     "date": "2026-04-30",
-    "threeMonthReturn": -23.93,
+    "threeMonthReturn": -21.64,
     "returns": {
       "w1": -1.01,
       "m1": -3.69,
       "m3": -9.49,
       "m6": -3.22,
-      "y1": -23.93
+      "y1": -21.64
     },
     "industry": "鋼鐵工業",
     "subIndustries": [
@@ -76226,7 +76700,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "TMP"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6265",
@@ -76263,13 +76739,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -8.4,
     "date": "2026-04-30",
-    "threeMonthReturn": 299.2,
+    "threeMonthReturn": 306.12,
     "returns": {
       "w1": 8.74,
       "m1": 1.02,
       "m3": -11.75,
       "m6": 214.62,
-      "y1": 299.2
+      "y1": 306.12
     },
     "industry": "電子通路業",
     "subIndustries": [
@@ -76549,7 +77025,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6274",
@@ -76585,13 +77063,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 3.59,
     "date": "2026-04-30",
-    "threeMonthReturn": 642.65,
+    "threeMonthReturn": 624.01,
     "returns": {
       "w1": 6.32,
       "m1": 67.77,
       "m3": 109.98,
       "m6": 201.94,
-      "y1": 642.65
+      "y1": 624.01
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -76863,7 +77341,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "6276",
@@ -76899,13 +77379,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.94,
     "date": "2026-04-30",
-    "threeMonthReturn": -28.41,
+    "threeMonthReturn": -18.18,
     "returns": {
       "w1": 0.8,
       "m1": -5.12,
       "m3": -17.97,
       "m6": -29.69,
-      "y1": -28.41
+      "y1": -18.18
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -77179,7 +77659,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6278",
@@ -77216,13 +77698,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 4.02,
     "date": "2026-04-30",
-    "threeMonthReturn": 64.71,
+    "threeMonthReturn": 80.65,
     "returns": {
       "w1": 17.89,
       "m1": 77.4,
       "m3": 74.82,
       "m6": 56.28,
-      "y1": 64.71
+      "y1": 80.65
     },
     "industry": "光電業",
     "subIndustries": [
@@ -77514,7 +77996,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "TSMT"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6282",
@@ -77550,13 +78034,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.35,
     "date": "2026-04-30",
-    "threeMonthReturn": 84.24,
+    "threeMonthReturn": 80.38,
     "returns": {
       "w1": -1.35,
       "m1": 0.0,
       "m3": -16.19,
       "m6": 44.14,
-      "y1": 84.24
+      "y1": 80.38
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -77842,7 +78326,9 @@
       "group": "金仁寶",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "AcBel"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6285",
@@ -77879,13 +78365,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.41,
     "date": "2026-04-30",
-    "threeMonthReturn": 71.43,
+    "threeMonthReturn": 77.78,
     "returns": {
       "w1": -0.69,
       "m1": 20.67,
       "m3": 99.08,
       "m6": 80.0,
-      "y1": 71.43
+      "y1": 77.78
     },
     "industry": "通信網路業",
     "subIndustries": [
@@ -78165,7 +78651,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "6405",
@@ -78177,37 +78665,37 @@
     "groupDesc": "",
     "holdingPct": 41.21,
     "delta": 3.39,
-    "price": 0.0,
+    "price": 50.9,
     "marketCap": 9.3,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.98,
+      "d5": 1.18,
+      "d10": 0.8,
+      "d20": 0.81,
+      "d50": 0.44
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 1.93,
+      "d5": 2.81,
+      "d10": 1.97,
+      "d20": 2.1,
+      "d50": 1.21
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 100.0,
+    "pctOf200dHigh": 100.0,
+    "ma10": 39.64,
+    "ma20": 37.89,
+    "ma60": 33.32,
+    "ma20Trend": "up",
+    "dailyChangePct": 9.94,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": 129.8,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": 41.78,
+      "m1": 61.33,
+      "m3": 66.89,
+      "m6": 92.8,
+      "y1": 129.8
     },
     "industry": "光電業",
     "subIndustries": [
@@ -78493,7 +78981,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "ONANO"
-    }
+    },
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "6438",
@@ -78505,37 +78995,37 @@
     "groupDesc": "",
     "holdingPct": 23.72,
     "delta": 1.28,
-    "price": 0.0,
+    "price": 176.0,
     "marketCap": 31.4,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 3.45,
+      "d5": 3.75,
+      "d10": 5.85,
+      "d20": 5.86,
+      "d50": 5.43
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 1.97,
+      "d5": 2.14,
+      "d10": 3.26,
+      "d20": 3.28,
+      "d50": 3.17
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 83.61,
+    "pctOf200dHigh": 83.61,
+    "ma10": 177.45,
+    "ma20": 176.82,
+    "ma60": 162.07,
+    "ma20Trend": "up",
+    "dailyChangePct": 1.15,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": 15.79,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": 2.33,
+      "m1": 2.62,
+      "m3": 20.14,
+      "m6": 7.98,
+      "y1": 15.79
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -78809,7 +79299,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "6442",
@@ -78846,13 +79338,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 5.24,
     "date": "2026-04-30",
-    "threeMonthReturn": 494.37,
+    "threeMonthReturn": 515.16,
     "returns": {
       "w1": 4.46,
       "m1": 0.0,
       "m3": 59.85,
       "m6": 138.42,
-      "y1": 494.37
+      "y1": 515.16
     },
     "industry": "通信網路業",
     "subIndustries": [
@@ -79146,7 +79638,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Ezconn"
-    }
+    },
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 0
   },
   {
     "id": "6443",
@@ -79182,13 +79676,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": 126.6,
+    "threeMonthReturn": 149.82,
     "returns": {
       "w1": -5.73,
       "m1": -17.12,
       "m3": -8.42,
       "m6": 144.64,
-      "y1": 126.6
+      "y1": 149.82
     },
     "industry": "光電業",
     "subIndustries": [
@@ -79476,7 +79970,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "TSEC"
-    }
+    },
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "6456",
@@ -79512,13 +80008,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -3.54,
     "date": "2026-04-30",
-    "threeMonthReturn": 62.65,
+    "threeMonthReturn": 84.5,
     "returns": {
       "w1": 0.4,
       "m1": 34.63,
       "m3": 75.37,
       "m6": 36.8,
-      "y1": 62.65
+      "y1": 84.5
     },
     "industry": "光電業",
     "subIndustries": [
@@ -79790,7 +80286,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6492",
@@ -79826,13 +80324,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.99,
     "date": "2026-04-30",
-    "threeMonthReturn": 50.08,
+    "threeMonthReturn": 52.37,
     "returns": {
       "w1": -5.13,
       "m1": -2.35,
       "m3": 11.26,
       "m6": 32.71,
-      "y1": 50.08
+      "y1": 52.37
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -80118,7 +80616,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "SH"
-    }
+    },
+    "foreignBuyStreak": 6,
+    "trustBuyStreak": 0
   },
   {
     "id": "6509",
@@ -80155,13 +80655,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -4.55,
     "date": "2026-04-30",
-    "threeMonthReturn": 25.27,
+    "threeMonthReturn": 30.18,
     "returns": {
       "w1": -7.32,
       "m1": -12.5,
       "m3": 17.01,
       "m6": 23.34,
-      "y1": 25.27
+      "y1": 30.18
     },
     "industry": "化學工業",
     "subIndustries": [
@@ -80453,7 +80953,9 @@
       "group": "永豐餘",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "HOPAX"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6525",
@@ -80489,13 +80991,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.32,
     "date": "2026-04-30",
-    "threeMonthReturn": 42.15,
+    "threeMonthReturn": 43.93,
     "returns": {
       "w1": 0.76,
       "m1": 14.22,
       "m3": 19.69,
       "m6": 16.52,
-      "y1": 42.15
+      "y1": 43.93
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -80765,7 +81267,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1
   },
   {
     "id": "6531",
@@ -80801,13 +81305,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 2.44,
     "date": "2026-04-30",
-    "threeMonthReturn": 252.94,
+    "threeMonthReturn": 268.42,
     "returns": {
       "w1": 7.01,
       "m1": 73.2,
       "m3": 78.72,
       "m6": 133.01,
-      "y1": 252.94
+      "y1": 268.42
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -81083,7 +81587,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1
   },
   {
     "id": "6534",
@@ -81096,37 +81602,37 @@
     "groupDesc": "",
     "holdingPct": 73.99,
     "delta": 0.38,
-    "price": 0.0,
+    "price": 92.5,
     "marketCap": 0.0,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.05,
+      "d5": 0.13,
+      "d10": 0.17,
+      "d20": 0.28,
+      "d50": 0.26
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.05,
+      "d5": 0.14,
+      "d10": 0.18,
+      "d20": 0.29,
+      "d50": 0.3
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 74.9,
+    "pctOf200dHigh": 74.9,
+    "ma10": 97.19,
+    "ma20": 96.51,
+    "ma60": 88.58,
+    "ma20Trend": "up",
+    "dailyChangePct": -0.96,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": 23.33,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": -6.38,
+      "m1": 5.71,
+      "m3": 2.89,
+      "m6": -15.14,
+      "y1": 23.33
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -81418,7 +81924,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "CHBIO"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6576",
@@ -81454,13 +81962,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.87,
     "date": "2026-04-30",
-    "threeMonthReturn": 18.52,
+    "threeMonthReturn": 24.8,
     "returns": {
       "w1": -1.23,
       "m1": 3.9,
       "m3": 0.0,
       "m6": -1.48,
-      "y1": 18.52
+      "y1": 24.8
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -81750,7 +82258,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "Foresee"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6589",
@@ -82064,7 +82574,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6592",
@@ -82101,13 +82613,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.45,
     "date": "2026-04-30",
-    "threeMonthReturn": -9.87,
+    "threeMonthReturn": -10.0,
     "returns": {
       "w1": -2.08,
       "m1": -2.08,
       "m3": -2.08,
       "m6": -5.12,
-      "y1": -9.87
+      "y1": -10.0
     },
     "industry": "其他業",
     "subIndustries": [
@@ -82399,7 +82911,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "HOTAI FINANCE"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6606",
@@ -82435,13 +82949,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.23,
     "date": "2026-04-30",
-    "threeMonthReturn": -3.6,
+    "threeMonthReturn": -4.37,
     "returns": {
       "w1": -0.62,
       "m1": 0.63,
       "m3": -3.6,
       "m6": -4.93,
-      "y1": -3.6
+      "y1": -4.37
     },
     "industry": "電機機械",
     "subIndustries": [
@@ -82715,7 +83229,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6617",
@@ -82727,37 +83243,37 @@
     "groupDesc": "",
     "holdingPct": 59.14,
     "delta": 0.33,
-    "price": 0.0,
+    "price": 74.9,
     "marketCap": 0.0,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.26,
+      "d5": 0.48,
+      "d10": 0.33,
+      "d20": 0.23,
+      "d50": 0.21
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.34,
+      "d5": 0.67,
+      "d10": 0.48,
+      "d20": 0.34,
+      "d50": 0.3
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 63.47,
+    "pctOf200dHigh": 63.47,
+    "ma10": 67.51,
+    "ma20": 67.32,
+    "ma60": 72.39,
+    "ma20Trend": "up",
+    "dailyChangePct": -0.66,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": -3.73,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": 24.21,
+      "m1": 11.13,
+      "m3": -6.84,
+      "m6": -23.49,
+      "y1": -3.73
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -83019,7 +83535,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6620",
@@ -83055,13 +83573,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.66,
     "date": "2026-04-30",
-    "threeMonthReturn": 0.81,
+    "threeMonthReturn": 7.29,
     "returns": {
       "w1": -4.57,
       "m1": 8.37,
       "m3": -17.29,
       "m6": -49.6,
-      "y1": 0.81
+      "y1": 7.29
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -83253,7 +83771,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Handa Pharma"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6679",
@@ -83289,13 +83809,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.88,
     "date": "2026-04-30",
-    "threeMonthReturn": 31.49,
+    "threeMonthReturn": 40.89,
     "returns": {
       "w1": 2.14,
       "m1": 17.7,
       "m3": 64.84,
       "m6": 34.27,
-      "y1": 31.49
+      "y1": 40.89
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -83587,7 +84107,9 @@
       "group": "聯發科",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "ZILLTEK"
-    }
+    },
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "6689",
@@ -83623,13 +84145,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.72,
     "date": "2026-04-30",
-    "threeMonthReturn": -23.01,
+    "threeMonthReturn": -21.42,
     "returns": {
       "w1": -5.12,
       "m1": -8.53,
       "m3": 12.46,
       "m6": -4.99,
-      "y1": -23.01
+      "y1": -21.42
     },
     "industry": "數位雲端",
     "subIndustries": [
@@ -83901,7 +84423,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "6691",
@@ -83937,13 +84461,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.79,
     "date": "2026-04-30",
-    "threeMonthReturn": 80.96,
+    "threeMonthReturn": 81.19,
     "returns": {
       "w1": -6.66,
       "m1": 8.98,
       "m3": 1.12,
       "m6": 39.91,
-      "y1": 80.96
+      "y1": 81.19
     },
     "industry": "其他電子業",
     "subIndustries": [
@@ -84229,7 +84753,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "YANKEY"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6706",
@@ -84266,13 +84792,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 3.06,
     "date": "2026-04-30",
-    "threeMonthReturn": 111.0,
+    "threeMonthReturn": 127.14,
     "returns": {
       "w1": 15.21,
       "m1": 23.67,
       "m3": 31.74,
       "m6": 109.54,
-      "y1": 111.0
+      "y1": 127.14
     },
     "industry": "光電業",
     "subIndustries": [
@@ -84552,7 +85078,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 1
   },
   {
     "id": "6712",
@@ -84588,13 +85116,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.39,
     "date": "2026-04-30",
-    "threeMonthReturn": -15.1,
+    "threeMonthReturn": -15.61,
     "returns": {
       "w1": -3.75,
       "m1": -8.54,
       "m3": -19.69,
       "m6": -25.29,
-      "y1": -15.1
+      "y1": -15.61
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -84886,7 +85414,9 @@
       "group": "-",
       "auditor": "安永聯合會計師事務所",
       "englishName": "Ever Supreme"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6719",
@@ -84923,13 +85453,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.87,
     "date": "2026-04-30",
-    "threeMonthReturn": -7.1,
+    "threeMonthReturn": 2.41,
     "returns": {
       "w1": -2.86,
       "m1": 1.19,
       "m3": -6.85,
       "m6": -13.92,
-      "y1": -7.1
+      "y1": 2.41
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -85207,7 +85737,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6727",
@@ -85243,13 +85775,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -2.43,
     "date": "2026-04-30",
-    "threeMonthReturn": 524.18,
+    "threeMonthReturn": 546.36,
     "returns": {
       "w1": -8.5,
       "m1": 16.46,
       "m3": 113.41,
       "m6": 103.19,
-      "y1": 524.18
+      "y1": 546.36
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -85535,7 +86067,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "AMI"
-    }
+    },
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "6741",
@@ -85572,13 +86106,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.15,
     "date": "2026-04-30",
-    "threeMonthReturn": -21.74,
+    "threeMonthReturn": -20.61,
     "returns": {
       "w1": 7.03,
       "m1": 6.85,
       "m3": -10.15,
       "m6": -15.27,
-      "y1": -21.74
+      "y1": -20.61
     },
     "industry": "數位雲端",
     "subIndustries": [
@@ -85856,7 +86390,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6757",
@@ -85892,13 +86428,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.1,
     "date": "2026-04-30",
-    "threeMonthReturn": -39.82,
+    "threeMonthReturn": -44.53,
     "returns": {
       "w1": 2.27,
       "m1": -1.1,
       "m3": -25.45,
       "m6": -34.06,
-      "y1": -39.82
+      "y1": -44.53
     },
     "industry": "航運業",
     "subIndustries": [
@@ -86170,7 +86706,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "6762",
@@ -86206,13 +86744,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 1.06,
     "date": "2026-04-30",
-    "threeMonthReturn": -32.64,
+    "threeMonthReturn": -31.1,
     "returns": {
       "w1": -10.31,
       "m1": -13.03,
       "m3": -18.7,
       "m6": -35.94,
-      "y1": -32.64
+      "y1": -31.1
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -86482,7 +87020,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "6768",
@@ -86494,37 +87034,37 @@
     "groupDesc": "",
     "holdingPct": 77.35,
     "delta": 0.44,
-    "price": 0.0,
+    "price": 78.1,
     "marketCap": 0.0,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.42,
+      "d5": 0.7,
+      "d10": 0.62,
+      "d20": 0.64,
+      "d50": 0.59
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.53,
+      "d5": 0.91,
+      "d10": 0.78,
+      "d20": 0.79,
+      "d50": 0.67
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 62.48,
+    "pctOf200dHigh": 62.48,
+    "ma10": 80.1,
+    "ma20": 82.08,
+    "ma60": 92.28,
+    "ma20Trend": "down",
+    "dailyChangePct": 1.03,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": -22.67,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": -1.14,
+      "m1": -11.25,
+      "m3": -27.35,
+      "m6": -33.81,
+      "y1": -22.67
     },
     "industry": "運動休閒",
     "subIndustries": [
@@ -86796,7 +87336,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 4
   },
   {
     "id": "6805",
@@ -86832,13 +87374,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": 351.47,
+    "threeMonthReturn": 381.96,
     "returns": {
       "w1": 8.38,
       "m1": 13.11,
       "m3": 61.72,
       "m6": 79.22,
-      "y1": 351.47
+      "y1": 381.96
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -87110,7 +87652,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 1
   },
   {
     "id": "6859",
@@ -87431,7 +87975,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "6873",
@@ -87468,13 +88014,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 1.59,
     "date": "2026-04-30",
-    "threeMonthReturn": -48.94,
+    "threeMonthReturn": -47.08,
     "returns": {
       "w1": -0.45,
       "m1": 5.56,
       "m3": -13.4,
       "m6": -28.06,
-      "y1": -48.94
+      "y1": -47.08
     },
     "industry": "綠能環保",
     "subIndustries": [
@@ -87766,7 +88312,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "HDRE"
-    }
+    },
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "6919",
@@ -87803,13 +88351,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -6.31,
     "date": "2026-04-30",
-    "threeMonthReturn": 55.69,
+    "threeMonthReturn": 73.33,
     "returns": {
       "w1": -5.02,
       "m1": 32.48,
       "m3": -36.97,
       "m6": -36.59,
-      "y1": 55.69
+      "y1": 73.33
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -88019,7 +88567,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6949",
@@ -88055,13 +88605,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -2.03,
     "date": "2026-04-30",
-    "threeMonthReturn": 500.0,
+    "threeMonthReturn": 516.8,
     "returns": {
       "w1": -10.87,
       "m1": 35.26,
       "m3": 119.66,
       "m6": 98.2,
-      "y1": 500.0
+      "y1": 516.8
     },
     "industry": "生技醫療業",
     "subIndustries": [
@@ -88301,7 +88851,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "7760",
@@ -88337,13 +88889,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.14,
     "date": "2026-04-30",
-    "threeMonthReturn": -29.9,
+    "threeMonthReturn": -30.04,
     "returns": {
       "w1": -2.91,
       "m1": -12.48,
       "m3": -7.64,
       "m6": -12.16,
-      "y1": -29.9
+      "y1": -30.04
     },
     "industry": "觀光餐旅",
     "subIndustries": [],
@@ -88473,7 +89025,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "7769",
@@ -88679,7 +89233,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "HON"
-    }
+    },
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 0
   },
   {
     "id": "7811",
@@ -88716,13 +89272,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -1.86,
     "date": "2026-04-30",
-    "threeMonthReturn": -36.06,
+    "threeMonthReturn": -43.73,
     "returns": {
       "w1": -0.94,
       "m1": -6.64,
       "m3": -34.32,
       "m6": -37.01,
-      "y1": -36.06
+      "y1": -43.73
     },
     "industry": "運動休閒",
     "subIndustries": [
@@ -88866,7 +89422,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "8038",
@@ -88902,13 +89460,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.12,
     "date": "2026-04-30",
-    "threeMonthReturn": 107.11,
+    "threeMonthReturn": 111.78,
     "returns": {
       "w1": -7.24,
       "m1": 5.49,
       "m3": -23.18,
       "m6": -13.78,
-      "y1": 107.11
+      "y1": 111.78
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -89182,7 +89740,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "8044",
@@ -89210,7 +89770,7 @@
       "d20": 0.59,
       "d50": 0.56
     },
-    "pctOf52wHigh": 57.2,
+    "pctOf52wHigh": 55.93,
     "pctOf200dHigh": 59.61,
     "ma10": 23.82,
     "ma20": 23.31,
@@ -89218,13 +89778,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.66,
     "date": "2026-04-30",
-    "threeMonthReturn": -39.44,
+    "threeMonthReturn": -36.11,
     "returns": {
       "w1": -7.17,
       "m1": -2.16,
       "m3": -24.5,
       "m6": -32.19,
-      "y1": -39.44
+      "y1": -36.11
     },
     "industry": "數位雲端",
     "subIndustries": [
@@ -89510,7 +90070,9 @@
       "group": "統一",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "PChome online"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "8046",
@@ -89547,13 +90109,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 9.72,
     "date": "2026-04-30",
-    "threeMonthReturn": 917.21,
+    "threeMonthReturn": 1026.68,
     "returns": {
       "w1": 26.42,
       "m1": 73.28,
       "m3": 281.4,
       "m6": 275.7,
-      "y1": 917.21
+      "y1": 1026.68
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -89831,7 +90393,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 12
   },
   {
     "id": "8064",
@@ -89867,13 +90431,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 9.59,
     "date": "2026-04-30",
-    "threeMonthReturn": 173.32,
+    "threeMonthReturn": 203.21,
     "returns": {
       "w1": 35.77,
       "m1": 55.92,
       "m3": 83.1,
       "m6": 135.83,
-      "y1": 173.32
+      "y1": 203.21
     },
     "industry": "光電業",
     "subIndustries": [
@@ -90161,7 +90725,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "CONTREL"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "8070",
@@ -90198,13 +90764,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 2.35,
     "date": "2026-04-30",
-    "threeMonthReturn": 11.77,
+    "threeMonthReturn": 27.02,
     "returns": {
       "w1": 1.59,
       "m1": 6.79,
       "m3": 2.68,
       "m6": 5.5,
-      "y1": 11.77
+      "y1": 27.02
     },
     "industry": "電子通路業",
     "subIndustries": [
@@ -90496,7 +91062,9 @@
       "group": "-",
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "CHANG WAH"
-    }
+    },
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 1
   },
   {
     "id": "8087",
@@ -90533,13 +91101,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 1.96,
     "date": "2026-04-30",
-    "threeMonthReturn": -18.82,
+    "threeMonthReturn": -15.37,
     "returns": {
       "w1": -0.59,
       "m1": -0.73,
       "m3": 10.62,
       "m6": 0.3,
-      "y1": -18.82
+      "y1": -15.37
     },
     "industry": "綠能環保",
     "subIndustries": [
@@ -90819,7 +91387,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "8096",
@@ -90855,13 +91425,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -3.25,
     "date": "2026-04-30",
-    "threeMonthReturn": 59.57,
+    "threeMonthReturn": 54.06,
     "returns": {
       "w1": -1.22,
       "m1": -3.78,
       "m3": 73.88,
       "m6": 96.69,
-      "y1": 59.57
+      "y1": 54.06
     },
     "industry": "電子通路業",
     "subIndustries": [
@@ -91149,7 +91719,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "CoAsia"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "8103",
@@ -91185,13 +91757,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.4,
     "date": "2026-04-30",
-    "threeMonthReturn": 127.77,
+    "threeMonthReturn": 160.74,
     "returns": {
       "w1": 23.76,
       "m1": 53.94,
       "m3": 31.58,
       "m6": 97.85,
-      "y1": 127.77
+      "y1": 160.74
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -91479,7 +92051,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "CviLux"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "8105",
@@ -91515,13 +92089,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.48,
     "date": "2026-04-30",
-    "threeMonthReturn": 1.14,
+    "threeMonthReturn": 12.24,
     "returns": {
       "w1": -3.97,
       "m1": 5.56,
       "m3": -7.64,
       "m6": 4.31,
-      "y1": 1.14
+      "y1": 12.24
     },
     "industry": "光電業",
     "subIndustries": [
@@ -91793,7 +92367,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "8109",
@@ -91829,13 +92405,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.84,
     "date": "2026-04-30",
-    "threeMonthReturn": 42.0,
+    "threeMonthReturn": 46.95,
     "returns": {
       "w1": -1.67,
       "m1": 12.38,
       "m3": 6.79,
       "m6": 19.43,
-      "y1": 42.0
+      "y1": 46.95
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -92107,7 +92683,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "8147",
@@ -92143,13 +92721,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.78,
     "date": "2026-04-30",
-    "threeMonthReturn": 73.64,
+    "threeMonthReturn": 95.06,
     "returns": {
       "w1": 3.75,
       "m1": 19.86,
       "m3": 58.85,
       "m6": 40.68,
-      "y1": 73.64
+      "y1": 95.06
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -92435,7 +93013,9 @@
       "group": "-",
       "auditor": "資誠聯合會計師事務所",
       "englishName": "NEXTRON"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "8271",
@@ -92471,13 +93051,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 0.92,
     "date": "2026-04-30",
-    "threeMonthReturn": 379.3,
+    "threeMonthReturn": 416.43,
     "returns": {
       "w1": -0.9,
       "m1": 52.78,
       "m3": 81.82,
       "m6": 137.84,
-      "y1": 379.3
+      "y1": 416.43
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -92767,7 +93347,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Apacer"
-    }
+    },
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 0
   },
   {
     "id": "8299",
@@ -92805,13 +93387,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -8.21,
     "date": "2026-04-30",
-    "threeMonthReturn": 324.58,
+    "threeMonthReturn": 317.12,
     "returns": {
       "w1": 11.44,
       "m1": 18.38,
       "m3": 5.85,
       "m6": 124.59,
-      "y1": 324.58
+      "y1": 317.12
     },
     "industry": "半導體業",
     "subIndustries": [
@@ -93119,7 +93701,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Phison"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 4
   },
   {
     "id": "8354",
@@ -93156,13 +93740,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.31,
     "date": "2026-04-30",
-    "threeMonthReturn": 1.93,
+    "threeMonthReturn": 4.28,
     "returns": {
       "w1": -8.12,
       "m1": 5.32,
       "m3": 0.96,
       "m6": 5.67,
-      "y1": 1.93
+      "y1": 4.28
     },
     "industry": "其他業",
     "subIndustries": [
@@ -93454,7 +94038,9 @@
       "group": "-",
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "KH"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "8358",
@@ -93490,13 +94076,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 5.14,
     "date": "2026-04-30",
-    "threeMonthReturn": 717.03,
+    "threeMonthReturn": 734.59,
     "returns": {
       "w1": 5.0,
       "m1": 66.38,
       "m3": 44.96,
       "m6": 75.4,
-      "y1": 717.03
+      "y1": 734.59
     },
     "industry": "電子零組件業",
     "subIndustries": [
@@ -93768,7 +94354,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 7,
+    "trustBuyStreak": 0
   },
   {
     "id": "8464",
@@ -93804,13 +94392,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.14,
     "date": "2026-04-30",
-    "threeMonthReturn": -10.23,
+    "threeMonthReturn": -0.28,
     "returns": {
       "w1": -3.17,
       "m1": 4.93,
       "m3": -17.02,
       "m6": -12.9,
-      "y1": -10.23
+      "y1": -0.28
     },
     "industry": "居家生活",
     "subIndustries": [
@@ -94082,7 +94670,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "8924",
@@ -94094,37 +94684,37 @@
     "groupDesc": "",
     "holdingPct": 29.66,
     "delta": 0.18,
-    "price": 0.0,
+    "price": 68.7,
     "marketCap": 39.0,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.03,
+      "d5": 0.06,
+      "d10": 0.08,
+      "d20": 0.06,
+      "d50": 0.07
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.04,
+      "d5": 0.09,
+      "d10": 0.11,
+      "d20": 0.09,
+      "d50": 0.1
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 89.92,
+    "pctOf200dHigh": 89.92,
+    "ma10": 68.6,
+    "ma20": 68.09,
+    "ma60": 69.17,
+    "ma20Trend": "up",
+    "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": 11.17,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": -0.43,
+      "m1": 2.23,
+      "m3": -5.11,
+      "m6": -3.38,
+      "y1": 11.17
     },
     "industry": "運動休閒",
     "subIndustries": [
@@ -94412,7 +95002,9 @@
       "group": "-",
       "auditor": "安永聯合會計師事務所",
       "englishName": "O-TA"
-    }
+    },
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "8926",
@@ -94448,13 +95040,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -1.66,
     "date": "2026-04-30",
-    "threeMonthReturn": 8.69,
+    "threeMonthReturn": 10.45,
     "returns": {
       "w1": -2.2,
       "m1": 0.68,
       "m3": 4.59,
       "m6": -8.45,
-      "y1": 8.69
+      "y1": 10.45
     },
     "industry": "油電燃氣業",
     "subIndustries": [
@@ -94726,7 +95318,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "8927",
@@ -94763,13 +95357,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -9.98,
     "date": "2026-04-30",
-    "threeMonthReturn": -48.79,
+    "threeMonthReturn": -53.04,
     "returns": {
       "w1": -13.88,
       "m1": -14.07,
       "m3": -17.81,
       "m6": -24.67,
-      "y1": -48.79
+      "y1": -53.04
     },
     "industry": "油電燃氣業",
     "subIndustries": [
@@ -95047,7 +95641,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "8932",
@@ -95083,13 +95679,13 @@
     "ma20Trend": "up",
     "dailyChangePct": -0.78,
     "date": "2026-04-30",
-    "threeMonthReturn": 106.65,
+    "threeMonthReturn": 122.03,
     "returns": {
       "w1": -5.59,
       "m1": 8.22,
       "m3": -4.79,
       "m6": -13.53,
-      "y1": 106.65
+      "y1": 122.03
     },
     "industry": "其他業",
     "subIndustries": [
@@ -95361,7 +95957,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "8940",
@@ -95398,13 +95996,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.57,
     "date": "2026-04-30",
-    "threeMonthReturn": -19.91,
+    "threeMonthReturn": -16.07,
     "returns": {
       "w1": 3.86,
       "m1": -5.41,
       "m3": -14.63,
       "m6": -12.94,
-      "y1": -19.91
+      "y1": -16.07
     },
     "industry": "觀光餐旅",
     "subIndustries": [
@@ -95682,7 +96280,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "9103",
@@ -95721,13 +96321,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.21,
     "date": "2026-04-30",
-    "threeMonthReturn": -10.67,
+    "threeMonthReturn": -5.06,
     "returns": {
       "w1": -2.29,
       "m1": -6.57,
       "m3": -1.26,
       "m6": -2.7,
-      "y1": -10.67
+      "y1": -5.06
     },
     "industry": "",
     "subIndustries": [
@@ -95760,7 +96360,9 @@
     "revenueMonth": "2026-03",
     "revenueFirstSeen": null,
     "fundamentals": {},
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 0
   },
   {
     "id": "9110",
@@ -95797,13 +96399,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -3.72,
     "date": "2026-04-30",
-    "threeMonthReturn": -53.73,
+    "threeMonthReturn": -52.5,
     "returns": {
       "w1": -8.06,
       "m1": -7.77,
       "m3": -10.09,
       "m6": -38.04,
-      "y1": -53.73
+      "y1": -52.5
     },
     "industry": "",
     "subIndustries": [
@@ -95840,7 +96442,9 @@
       "group": "-",
       "auditor": "-",
       "englishName": "VMEP Holdings"
-    }
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "9906",
@@ -95876,13 +96480,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.13,
     "date": "2026-04-30",
-    "threeMonthReturn": -56.44,
+    "threeMonthReturn": -56.68,
     "returns": {
       "w1": -3.41,
       "m1": -6.36,
       "m3": -21.86,
       "m6": -28.5,
-      "y1": -56.44
+      "y1": -56.68
     },
     "industry": "建材營造業",
     "subIndustries": [
@@ -96154,7 +96758,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 8,
+    "trustBuyStreak": 0
   },
   {
     "id": "9912",
@@ -96190,13 +96796,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 1.19,
     "date": "2026-04-30",
-    "threeMonthReturn": 7.59,
+    "threeMonthReturn": 9.44,
     "returns": {
       "w1": 4.51,
       "m1": 2.0,
       "m3": 5.81,
       "m6": 7.59,
-      "y1": 7.59
+      "y1": 9.44
     },
     "industry": "電腦及週邊設備業",
     "subIndustries": [
@@ -96468,7 +97074,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "9914",
@@ -96505,13 +97113,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.0,
     "date": "2026-04-30",
-    "threeMonthReturn": -56.14,
+    "threeMonthReturn": -56.3,
     "returns": {
       "w1": -3.34,
       "m1": -11.87,
       "m3": -33.68,
       "m6": -41.98,
-      "y1": -56.14
+      "y1": -56.3
     },
     "industry": "運動休閒",
     "subIndustries": [
@@ -96789,7 +97397,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "9926",
@@ -96825,13 +97435,13 @@
     "ma20Trend": "down",
     "dailyChangePct": 0.2,
     "date": "2026-04-30",
-    "threeMonthReturn": -2.95,
+    "threeMonthReturn": 0.1,
     "returns": {
       "w1": 0.0,
       "m1": -0.7,
       "m3": -0.1,
       "m6": -0.8,
-      "y1": -2.95
+      "y1": 0.1
     },
     "industry": "油電燃氣業",
     "subIndustries": [
@@ -97103,7 +97713,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "9933",
@@ -97139,13 +97751,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.68,
     "date": "2026-04-30",
-    "threeMonthReturn": 47.0,
+    "threeMonthReturn": 3.67,
     "returns": {
       "w1": -0.54,
       "m1": 3.96,
       "m3": 9.54,
       "m6": 20.29,
-      "y1": 47.0
+      "y1": 3.67
     },
     "industry": "其他業",
     "subIndustries": [
@@ -97417,7 +98029,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 8,
+    "trustBuyStreak": 0
   },
   {
     "id": "9935",
@@ -97453,13 +98067,13 @@
     "ma20Trend": "down",
     "dailyChangePct": -0.82,
     "date": "2026-04-30",
-    "threeMonthReturn": -25.51,
+    "threeMonthReturn": -24.74,
     "returns": {
       "w1": -0.82,
       "m1": -5.93,
       "m3": -10.54,
       "m6": -4.7,
-      "y1": -25.51
+      "y1": -24.74
     },
     "industry": "居家生活",
     "subIndustries": [
@@ -97731,7 +98345,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "9958",
@@ -97743,37 +98359,37 @@
     "groupDesc": "",
     "holdingPct": 46.59,
     "delta": 0.1,
-    "price": 0.0,
+    "price": 101.0,
     "marketCap": 153.7,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 1.22,
+      "d5": 1.21,
+      "d10": 1.53,
+      "d20": 1.82,
+      "d50": 1.71
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 1.2,
+      "d5": 1.18,
+      "d10": 1.45,
+      "d20": 1.71,
+      "d50": 1.47
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
+    "pctOf52wHigh": 40.81,
+    "pctOf200dHigh": 40.81,
+    "ma10": 104.65,
+    "ma20": 105.7,
+    "ma60": 120.31,
+    "ma20Trend": "down",
+    "dailyChangePct": -1.94,
     "date": "2026-04-30",
-    "threeMonthReturn": null,
+    "threeMonthReturn": -41.95,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": -3.81,
+      "m1": -14.77,
+      "m3": -28.87,
+      "m6": -40.59,
+      "y1": -41.95
     },
     "industry": "鋼鐵工業",
     "subIndustries": [
@@ -98045,7 +98661,9 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "9960",
@@ -98082,13 +98700,13 @@
     "ma20Trend": "up",
     "dailyChangePct": 9.94,
     "date": "2026-04-30",
-    "threeMonthReturn": 37.2,
+    "threeMonthReturn": 38.31,
     "returns": {
       "w1": 24.28,
       "m1": 42.92,
       "m3": 48.48,
       "m6": 60.66,
-      "y1": 37.2
+      "y1": 38.31
     },
     "industry": "運動休閒",
     "subIndustries": [
@@ -98368,6 +98986,8 @@
         }
       ]
     },
-    "companyProfile": {}
+    "companyProfile": {},
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   }
 ]
