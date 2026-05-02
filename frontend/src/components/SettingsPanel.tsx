@@ -259,7 +259,7 @@ export function SettingsPanel({ onBack, onShowVip, idToken }: Props) {
               border: '1px dashed var(--color-border)',
             }}
           >
-            💡 綁定後，每平日 19:00 自動推播你的選股策略命中結果到 Telegram。LINE 推播即將推出。
+            💡 綁定後，每平日 19:00 自動推播你的選股策略命中結果到 Telegram。
           </div>
         </div>
 
@@ -272,12 +272,6 @@ export function SettingsPanel({ onBack, onShowVip, idToken }: Props) {
             checked={true}
             disabled={true}
             hint="預設開啟。所有已綁定的策略命中結果會合併成一則訊息推播。"
-          />
-          <NotifyTypeRow
-            label="最愛股大戶異動提醒"
-            checked={false}
-            disabled={true}
-            hint="即將推出。每週大戶持股變動超過閾值時即時通知。"
           />
         </div>
       </main>
@@ -467,6 +461,51 @@ function BindModal({ code, pollingActive, onCancel }: BindModalProps) {
           >
             {copied ? '已複製' : '複製'}
           </button>
+        </div>
+
+        {/* 安裝提示 + 下載連結 */}
+        <div
+          style={{
+            padding: '8px 10px',
+            background: 'var(--color-bg-600)',
+            border: '1px solid var(--color-border)',
+            borderRadius: 6,
+            marginBottom: 10,
+            fontSize: 11,
+            color: 'var(--color-text-secondary)',
+          }}
+        >
+          <div style={{ marginBottom: 6 }}>
+            ⚠️ 請先安裝 <b>Telegram 桌面版或手機 App</b>（網頁版按 Start 常常沒反應）。
+          </div>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+            <a
+              href="https://desktop.telegram.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--color-accent-cyan)', textDecoration: 'underline' }}
+            >
+              桌面版
+            </a>
+            <span style={{ color: 'var(--color-text-muted)' }}>·</span>
+            <a
+              href="https://apps.apple.com/app/telegram-messenger/id686449807"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--color-accent-cyan)', textDecoration: 'underline' }}
+            >
+              iOS
+            </a>
+            <span style={{ color: 'var(--color-text-muted)' }}>·</span>
+            <a
+              href="https://play.google.com/store/apps/details?id=org.telegram.messenger"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--color-accent-cyan)', textDecoration: 'underline' }}
+            >
+              Android
+            </a>
+          </div>
         </div>
 
         <a
