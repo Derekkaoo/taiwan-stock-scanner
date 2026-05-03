@@ -216,6 +216,9 @@ def expected_latest_quarter(today):
         return f"{y-1}Q4"
 
 
+_RETRY_THROTTLE_SEC = 6 * 3600  # 6 小時內已嘗試過抓「不夠新」資料就跳過
+
+
 def should_refresh_revenue(entry, today):
     if not entry:
         return True
@@ -223,7 +226,13 @@ def should_refresh_revenue(entry, today):
     if not arr:
         return True
     last = arr[-1].get("date", "")
-    return last < expected_latest_revenue_month(today)
+    if last >= expected_latest_revenue_month(today):
+        return False  # 已是預期月份 → 跳過
+    # 沒到預期月份但 throttle：6 小時內試過 → 暫時跳過（FinMind 不太可能有新資料）
+    last_attempt = entry.get("_last_rev_attempt_ts", 0)
+    if time.time() - last_attempt < _RETRY_THROTTLE_SEC:
+        return False
+    return True
 
 
 def should_refresh_financials(entry, today):
@@ -236,7 +245,13 @@ def should_refresh_financials(entry, today):
     if not entry.get("eps") or not entry.get("grossMargin") or not entry.get("operatingMargin"):
         return True
     last = arr[-1].get("quarter", "")
-    return last < expected_latest_quarter(today)
+    if last >= expected_latest_quarter(today):
+        return False
+    # throttle 跟 revenue 同邏輯
+    last_attempt = entry.get("_last_fin_attempt_ts", 0)
+    if time.time() - last_attempt < _RETRY_THROTTLE_SEC:
+        return False
+    return True
 
 
 def run(stock_ids: list[str] | None = None):
@@ -280,6 +295,7 @@ def run(stock_ids: list[str] | None = None):
         if need_rev:
             rev_records = fetch("TaiwanStockMonthRevenue", sid, rev_start)
             time.sleep(0.3)
+            entry["_last_rev_attempt_ts"] = int(time.time())  # throttle 用
             if rev_records is not None:
                 revenue_yoy = parse_revenue_yoy(rev_records)
                 if revenue_yoy:
@@ -289,6 +305,7 @@ def run(stock_ids: list[str] | None = None):
         if need_fin:
             fin_records = fetch("TaiwanStockFinancialStatements", sid, fin_start)
             time.sleep(0.3)
+            entry["_last_fin_attempt_ts"] = int(time.time())  # throttle 用
             if fin_records is not None:
                 parsed = parse_financial_yoy(fin_records)
                 if any(parsed.values()):
