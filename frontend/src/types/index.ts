@@ -188,6 +188,24 @@ export interface NDayHighFilter {
   days: NHighDays
 }
 
+/** 成交量創 N 日新高：days = 0 視為不啟用 */
+export type VolumeNewHighDays = 0 | 5 | 10 | 20 | 60
+export interface VolumeNewHighFilter {
+  days: VolumeNewHighDays
+}
+
+/** 成交爆量：今日 volume ≥ baseline × multiplier
+ *  baseline:
+ *    'prev' = 昨量（最新一根之前的那根）
+ *    'ma5' / 'ma10' / 'ma60' = 過去 N 根 K 棒平均（不含最新一根）
+ *  multiplier = 0 視為不啟用 */
+export type VolumeSurgeBaseline = 'prev' | 'ma5' | 'ma10' | 'ma60'
+export type VolumeSurgeMultiplier = 0 | 1 | 2 | 3 | 5
+export interface VolumeSurgeFilter {
+  baseline:   VolumeSurgeBaseline
+  multiplier: VolumeSurgeMultiplier
+}
+
 export interface Filters {
   volume:     FilterRange      // 5 日均成交量（千張）
   marketCap:  FilterRange      // 市值（億）
@@ -197,9 +215,11 @@ export interface Filters {
   growth:     GrowthFilter
   absValue:   AbsValueFilter
   institutional: InstitutionalFilter
-  market:     MarketFilter
-  nDayReturn: NDayReturnFilter
-  nDayHigh:   NDayHighFilter
+  market:        MarketFilter
+  nDayReturn:    NDayReturnFilter
+  nDayHigh:      NDayHighFilter
+  volumeNewHigh: VolumeNewHighFilter
+  volumeSurge:   VolumeSurgeFilter
 }
 
 export const FILTER_BOUNDS = {
@@ -237,7 +257,9 @@ export const DEFAULT_FILTERS: Filters = {
     days: 0,
     range: [FILTER_BOUNDS.nDayReturn.min, FILTER_BOUNDS.nDayReturn.max],
   },
-  nDayHigh: { days: 0 },
+  nDayHigh:      { days: 0 },
+  volumeNewHigh: { days: 0 },
+  volumeSurge:   { baseline: 'ma5', multiplier: 0 },
 }
 
 export const INST_STREAK_OPTIONS: InstStreakDays[] = [0, 1, 3, 5, 20]
@@ -251,6 +273,17 @@ export const MARKET_OPTIONS: Array<{ value: MarketFilter; label: string }> = [
 export const N_RETURN_OPTIONS: NReturnDays[] = [0, 1, 3, 5, 10, 20]
 
 export const N_HIGH_OPTIONS: NHighDays[] = [0, 5, 10, 20, 60, 120, 200]
+
+export const VOLUME_NEW_HIGH_OPTIONS: VolumeNewHighDays[] = [0, 5, 10, 20, 60]
+
+export const VOLUME_SURGE_BASELINE_OPTIONS: Array<{ value: VolumeSurgeBaseline; label: string }> = [
+  { value: 'prev', label: '昨量' },
+  { value: 'ma5',  label: '5日均量' },
+  { value: 'ma10', label: '10日均量' },
+  { value: 'ma60', label: '60日均量' },
+]
+
+export const VOLUME_SURGE_MULTIPLIER_OPTIONS: VolumeSurgeMultiplier[] = [0, 1, 2, 3, 5]
 
 // ============================================================
 //  進場分析（多頭觸發回測研究）
