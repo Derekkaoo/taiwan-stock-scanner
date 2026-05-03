@@ -450,6 +450,23 @@ def fetch_klines(stock_ids):
                         len(result), len(stock_ids))
             return result
         logger.warning("klines.json 不存在，--skip-klines 失效，正常抓取")
+
+    # Smart-skip：klines.json 已是預期交易日 → 直接用 cache，不重抓 Yahoo 310 支
+    # （考慮國定假日；委派給 update_klines._klines_are_fresh）
+    if "--force" not in sys.argv:
+        try:
+            sys.path.insert(0, str(Path(__file__).parent))
+            import update_klines
+            if update_klines._klines_are_fresh():
+                cached = load_existing_klines()
+                if cached is not None:
+                    result = {sid: cached[sid] for sid in stock_ids if sid in cached}
+                    logger.info("Step 4: K 線已是最新，跳過抓取，從 cache 載入 %d/%d 支",
+                                len(result), len(stock_ids))
+                    return result
+        except Exception as e:
+            logger.warning("Step 4 smart-skip 檢查失敗：%s（繼續正常抓取）", e)
+
     logger.info("Step 4: 抓取 K 線（%d 支）…", len(stock_ids))
     klines = {}
     for i, sid in enumerate(stock_ids):
