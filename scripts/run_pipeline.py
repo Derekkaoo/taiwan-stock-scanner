@@ -167,7 +167,14 @@ def check_what_needs_refresh() -> dict:
             with open(REVENUE_PATH, encoding="utf-8") as f:
                 rev = json.load(f)
             cached_month = rev.get("month") or ""
-            if cached_month < exp_rev:
+            # 1-15 號是「公司逐日公告月營收的窗口」— 每天嘗試 incremental 更新
+            # 即使 cached_month 已經 >= expected，也要 refresh（per-stock merge 會跳過已抓的）
+            if today.day <= 15:
+                result["revenue"] = True
+                result["reasons"].append(
+                    f"月營收公告窗口（{today.day}/15 號），incremental 更新"
+                )
+            elif cached_month < exp_rev:
                 result["revenue"] = True
                 result["reasons"].append(
                     f"月營收過期（最新 {cached_month or '無'}，預期 {exp_rev}）"

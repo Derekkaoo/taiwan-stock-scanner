@@ -193,19 +193,13 @@ def load_existing():
 
 
 def expected_latest_revenue_month(today):
-    """今天可以預期拿到的最新月營收（MOPS 規定隔月 10 號前公告，以 10 號為界線）"""
-    y, m, d = today.year, today.month, today.day
-    if d >= 10:
-        # 10 號（含）以後，上個月資料已公告
-        prev_y, prev_m = (y, m - 1) if m > 1 else (y - 1, 12)
-    else:
-        # 1~9 號，上個月還沒全部公告 → 用上上月
-        if m > 2:
-            prev_y, prev_m = y, m - 2
-        elif m == 2:
-            prev_y, prev_m = y - 1, 12
-        else:
-            prev_y, prev_m = y - 1, 11
+    """月營收預期 = 上個月（公司 1 號起就會陸續公告，10 號前公告完）。
+
+    注意：1-9 號跑時上月可能還沒全部公告，per-stock should_refresh_revenue 會
+    各自決定是否 fetch（已抓過上月的跳過、沒抓過的試 FinMind 一次）。
+    """
+    y, m = today.year, today.month
+    prev_y, prev_m = (y, m - 1) if m > 1 else (y - 1, 12)
     return f"{prev_y:04d}-{prev_m:02d}"
 
 

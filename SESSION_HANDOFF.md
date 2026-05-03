@@ -145,6 +145,7 @@ NDayHighFilter   { days: 0|5|10|20|60|120|200 }
 
 ### 短期改善
 
+- [ ] **Yahoo revenue fallback 啟用**：`fetch_monthly_revenue.py` 已寫好 `fetch_yahoo_revenue()` 函式但 0 成功率（猜的 HTML 結構抓不到 Yahoo TW 的 inline JSON）。要啟用：(1) PowerShell `curl.exe -A "Mozilla/5.0" "https://tw.stock.yahoo.com/quote/2330.TW/revenue" -o test.html` 抓樣本，(2) grep 出 inline JSON 的 revenue key pattern（仿 institutional 的 `institutionBuySell-100-day-{id}.{TW|TWO}`），(3) 修 fetch_yahoo_revenue 的 regex。目前預設 `--yahoo` 才啟用，安全
 - [ ] **Telegram 推播訊息去重**：目前 push_user_strategies.py 沒做 hash 去重（`screeners/runner.py` 有），雲端 cron 多次觸發會重複推。可仿 runner.py 加 `last_user_push.json` cache（per-user hash）
 - [ ] **D1 `last_push_at` 回寫**：endpoint 已預留欄位，腳本還沒呼 PATCH 更新 `last_push_at` / `last_push_status`。要新增 `POST /api/internal/cron/last-push` endpoint
 - [ ] master 還沒併 telegram code（webhook、bind-code、binding endpoints、SettingsPanel）→ 等 favorites-v2 整套穩了再合過去 production；目前 telegram webhook 仍指 feature preview
