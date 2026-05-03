@@ -4432,8 +4432,74 @@
           "yoy": 4.84
         }
       ],
-      "grossMarginYoY": [],
-      "operatingMarginYoY": [],
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q1",
+          "yoy": 21.91
+        },
+        {
+          "quarter": "2024Q2",
+          "yoy": 10.16
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": 18.32
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 50.29
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 19.12
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -42.11
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 55.41
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 36.25
+        }
+      ],
+      "operatingMarginYoY": [
+        {
+          "quarter": "2024Q1",
+          "yoy": 118.18
+        },
+        {
+          "quarter": "2024Q2",
+          "yoy": 29.57
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": 30.23
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 438.23
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 23.82
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -135.44
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 119.82
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 31.02
+        }
+      ],
       "epsYoY": [
         {
           "quarter": "2024Q1",
@@ -4468,8 +4534,74 @@
           "yoy": -4.35
         }
       ],
-      "grossMargin": [],
-      "operatingMargin": [],
+      "grossMargin": [
+        {
+          "quarter": "2024Q1",
+          "value": 16.38
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 17.4
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 17.45
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 16.73
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 19.51
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 10.07
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 27.12
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 22.79
+        }
+      ],
+      "operatingMargin": [
+        {
+          "quarter": "2024Q1",
+          "value": 6.35
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 7.24
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 6.84
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 6.61
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 7.86
+        },
+        {
+          "quarter": "2025Q2",
+          "value": -2.57
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 15.04
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 8.66
+        }
+      ],
       "eps": [
         {
           "quarter": "2024Q1",
@@ -34699,7 +34831,40 @@
           "yoy": 35.86
         }
       ],
-      "grossMarginYoY": [],
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q1",
+          "yoy": 19.93
+        },
+        {
+          "quarter": "2024Q2",
+          "yoy": -4.2
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -15.17
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 3.83
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -4.03
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": 6.74
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 21.28
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 26.62
+        }
+      ],
       "operatingMarginYoY": [
         {
           "quarter": "2024Q1",
@@ -34761,14 +34926,47 @@
         },
         {
           "quarter": "2025Q3",
-          "yoy": 46.91
+          "yoy": 34.57
         },
         {
           "quarter": "2025Q4",
-          "yoy": 141.67
+          "yoy": 102.08
         }
       ],
-      "grossMargin": [],
+      "grossMargin": [
+        {
+          "quarter": "2024Q1",
+          "value": 46.76
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 39.1
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 36.97
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 34.26
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 44.87
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 41.73
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 44.84
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 43.38
+        }
+      ],
       "operatingMargin": [
         {
           "quarter": "2024Q1",
@@ -34830,11 +35028,11 @@
         },
         {
           "quarter": "2025Q3",
-          "value": 1.19
+          "value": 1.09
         },
         {
           "quarter": "2025Q4",
-          "value": 1.16
+          "value": 0.97
         }
       ]
     },
@@ -34953,7 +35151,40 @@
           "yoy": -68.84
         }
       ],
-      "grossMarginYoY": [],
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q1",
+          "yoy": 36.23
+        },
+        {
+          "quarter": "2024Q2",
+          "yoy": 28.06
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -33.15
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -23.94
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -30.18
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -59.77
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 155.17
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 97.97
+        }
+      ],
       "operatingMarginYoY": [
         {
           "quarter": "2024Q1",
@@ -35003,7 +35234,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -26.09
+          "yoy": -24.64
         },
         {
           "quarter": "2025Q1",
@@ -35015,14 +35246,47 @@
         },
         {
           "quarter": "2025Q3",
-          "yoy": 241.38
+          "yoy": 237.93
         },
         {
           "quarter": "2025Q4",
-          "yoy": 225.49
+          "yoy": 221.15
         }
       ],
-      "grossMargin": [],
+      "grossMargin": [
+        {
+          "quarter": "2024Q1",
+          "value": 22.72
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 17.86
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 7.18
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 12.62
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 15.86
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 7.19
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 18.31
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 24.99
+        }
+      ],
       "operatingMargin": [
         {
           "quarter": "2024Q1",
@@ -35072,7 +35336,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.51
+          "value": 0.52
         },
         {
           "quarter": "2025Q1",
@@ -35084,11 +35348,11 @@
         },
         {
           "quarter": "2025Q3",
-          "value": 0.99
+          "value": 0.98
         },
         {
           "quarter": "2025Q4",
-          "value": 1.66
+          "value": 1.67
         }
       ]
     },
@@ -35879,8 +36143,74 @@
           "yoy": -57.44
         }
       ],
-      "grossMarginYoY": [],
-      "operatingMarginYoY": [],
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q1",
+          "yoy": -37.9
+        },
+        {
+          "quarter": "2024Q2",
+          "yoy": 16.99
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": 3.84
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -56.0
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 8.06
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": 803.88
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -44.99
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -30.61
+        }
+      ],
+      "operatingMarginYoY": [
+        {
+          "quarter": "2024Q1",
+          "yoy": -10.37
+        },
+        {
+          "quarter": "2024Q2",
+          "yoy": 31.43
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": 15.36
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 213.8
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 20.66
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": 239.81
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -46.54
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -34.78
+        }
+      ],
       "epsYoY": [
         {
           "quarter": "2024Q1",
@@ -35892,7 +36222,7 @@
         },
         {
           "quarter": "2024Q3",
-          "yoy": 50.0
+          "yoy": 53.4
         },
         {
           "quarter": "2024Q4",
@@ -35908,15 +36238,81 @@
         },
         {
           "quarter": "2025Q3",
-          "yoy": 3.79
+          "yoy": -3.75
         },
         {
           "quarter": "2025Q4",
           "yoy": -0.93
         }
       ],
-      "grossMargin": [],
-      "operatingMargin": [],
+      "grossMargin": [
+        {
+          "quarter": "2024Q1",
+          "value": 62.74
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 90.89
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 100.26
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 60.82
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 67.8
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 821.56
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 55.15
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 42.21
+        }
+      ],
+      "operatingMargin": [
+        {
+          "quarter": "2024Q1",
+          "value": 39.23
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 64.34
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 67.32
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 34.44
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 47.34
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 218.62
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 35.99
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 22.46
+        }
+      ],
       "eps": [
         {
           "quarter": "2024Q1",
@@ -35928,7 +36324,7 @@
         },
         {
           "quarter": "2024Q3",
-          "value": 2.64
+          "value": 2.93
         },
         {
           "quarter": "2024Q4",
@@ -35944,7 +36340,7 @@
         },
         {
           "quarter": "2025Q3",
-          "value": 2.74
+          "value": 2.82
         },
         {
           "quarter": "2025Q4",
@@ -36079,8 +36475,74 @@
           "yoy": -37.94
         }
       ],
-      "grossMarginYoY": [],
-      "operatingMarginYoY": [],
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q1",
+          "yoy": 30.79
+        },
+        {
+          "quarter": "2024Q2",
+          "yoy": 44.69
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -3.77
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 97.74
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 4.09
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": 99.66
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -31.5
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 26.11
+        }
+      ],
+      "operatingMarginYoY": [
+        {
+          "quarter": "2024Q1",
+          "yoy": 250.54
+        },
+        {
+          "quarter": "2024Q2",
+          "yoy": 56.77
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": 4.22
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 138.62
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -5.41
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": 23.06
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -41.99
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 290.17
+        }
+      ],
       "epsYoY": [
         {
           "quarter": "2024Q1",
@@ -36115,8 +36577,74 @@
           "yoy": 335.29
         }
       ],
-      "grossMargin": [],
-      "operatingMargin": [],
+      "grossMargin": [
+        {
+          "quarter": "2024Q1",
+          "value": 58.38
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 87.67
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 69.81
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 49.39
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 60.77
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 175.03
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 47.82
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 62.29
+        }
+      ],
+      "operatingMargin": [
+        {
+          "quarter": "2024Q1",
+          "value": 37.08
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 52.41
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 42.11
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 7.84
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 35.08
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 64.5
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 24.43
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 30.59
+        }
+      ],
       "eps": [
         {
           "quarter": "2024Q1",
@@ -36267,8 +36795,74 @@
           "yoy": -49.83
         }
       ],
-      "grossMarginYoY": [],
-      "operatingMarginYoY": [],
+      "grossMarginYoY": [
+        {
+          "quarter": "2023Q3",
+          "yoy": 195.03
+        },
+        {
+          "quarter": "2024Q1",
+          "yoy": 26.04
+        },
+        {
+          "quarter": "2024Q2",
+          "yoy": 87.22
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -48.6
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -84.34
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -39.68
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 146.77
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 13.95
+        }
+      ],
+      "operatingMarginYoY": [
+        {
+          "quarter": "2023Q3",
+          "yoy": 216.36
+        },
+        {
+          "quarter": "2024Q1",
+          "yoy": 121.72
+        },
+        {
+          "quarter": "2024Q2",
+          "yoy": 119.61
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -45.31
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 61.67
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -39.52
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 146.8
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 52.76
+        }
+      ],
       "epsYoY": [
         {
           "quarter": "2024Q1",
@@ -36284,7 +36878,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 225.0
+          "yoy": 188.89
         },
         {
           "quarter": "2025Q1",
@@ -36303,8 +36897,74 @@
           "yoy": 150.0
         }
       ],
-      "grossMargin": [],
-      "operatingMargin": [],
+      "grossMargin": [
+        {
+          "quarter": "2023Q4",
+          "value": 439.19
+        },
+        {
+          "quarter": "2024Q1",
+          "value": 117.94
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 169.39
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 99.98
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 68.78
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 71.15
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 246.72
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 78.38
+        }
+      ],
+      "operatingMargin": [
+        {
+          "quarter": "2023Q4",
+          "value": 15.85
+        },
+        {
+          "quarter": "2024Q1",
+          "value": 63.06
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 93.54
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 59.21
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 25.62
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 38.14
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 146.13
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 39.14
+        }
+      ],
       "eps": [
         {
           "quarter": "2024Q1",
@@ -70868,9 +71528,79 @@
           "yoy": 191.85
         }
       ],
-      "grossMarginYoY": [],
-      "operatingMarginYoY": [],
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q1",
+          "yoy": -0.64
+        },
+        {
+          "quarter": "2024Q2",
+          "yoy": 3.7
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -10.05
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -6.09
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -7.05
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -13.7
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 11.59
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 4.7
+        }
+      ],
+      "operatingMarginYoY": [
+        {
+          "quarter": "2024Q1",
+          "yoy": -6.93
+        },
+        {
+          "quarter": "2024Q2",
+          "yoy": 62.53
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -72.22
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -58.25
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -68.67
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -130.51
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 256.26
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 126.97
+        }
+      ],
       "epsYoY": [
+        {
+          "quarter": "2023Q4",
+          "yoy": 1500.0
+        },
         {
           "quarter": "2024Q1",
           "yoy": 0.0
@@ -70885,7 +71615,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -73.17
+          "yoy": -76.19
         },
         {
           "quarter": "2025Q1",
@@ -70897,11 +71627,77 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 827.27
+          "yoy": 930.0
         }
       ],
-      "grossMargin": [],
-      "operatingMargin": [],
+      "grossMargin": [
+        {
+          "quarter": "2024Q1",
+          "value": 94.91
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 95.05
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 85.5
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 89.62
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 88.22
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 82.03
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 95.41
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 93.83
+        }
+      ],
+      "operatingMargin": [
+        {
+          "quarter": "2024Q1",
+          "value": 59.78
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 53.44
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 16.06
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 19.59
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 18.73
+        },
+        {
+          "quarter": "2025Q2",
+          "value": -16.31
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 57.23
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 44.47
+        }
+      ],
       "eps": [
         {
           "quarter": "2024Q1",
@@ -70917,7 +71713,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.11
+          "value": 0.1
         },
         {
           "quarter": "2025Q1",
@@ -70933,7 +71729,7 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 1.02
+          "value": 1.03
         }
       ]
     },
@@ -96471,7 +97267,31 @@
     "revenueYoY": null,
     "revenueMonth": "2026-04",
     "revenueFirstSeen": null,
-    "fundamentals": {},
+    "fundamentals": {
+      "grossMarginYoY": [],
+      "operatingMarginYoY": [],
+      "epsYoY": [],
+      "grossMargin": [],
+      "operatingMargin": [],
+      "eps": [
+        {
+          "quarter": "2023Q2",
+          "value": 0.0
+        },
+        {
+          "quarter": "2023Q4",
+          "value": 0.0
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 0.0
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 0.0
+        }
+      ]
+    },
     "companyProfile": {},
     "foreignBuyStreak": 4,
     "trustBuyStreak": 0
@@ -96548,10 +97368,6 @@
       "operatingMargin": [],
       "eps": [
         {
-          "quarter": "2024Q4",
-          "value": 0.0
-        },
-        {
           "quarter": "2025Q1",
           "value": 0.03
         },
@@ -96561,6 +97377,10 @@
         },
         {
           "quarter": "2025Q3",
+          "value": 0.0
+        },
+        {
+          "quarter": "2025Q4",
           "value": 0.0
         }
       ]
