@@ -652,7 +652,119 @@ def assign_group(sid, moneydj_map, category_map):
     return assign_groups(sid, moneydj_map, category_map)[0]
 
 
+def _build_summary_stats() -> dict:
+    """讀各 JSON 檔案，產生 summary 統計給 Telegram 通知用。"""
+    stats = {}
+    # K 線：klines.json 第一支股票的最後 bar 日期 + 總支數
+    try:
+        with open(DATA_DIR / "klines.json", encoding="utf-8") as f:
+            kl = json.load(f)
+        first_id = next(iter(kl), None)
+        if first_id and kl[first_id]:
+            stats["kline_latest"] = kl[first_id][-1].get("date", "?")
+            stats["kline_count"] = len(kl)
+    except Exception:
+        pass
+    # 月營收：file month + per-stock month 分布
+    try:
+        with open(REVENUE_PATH, encoding="utf-8") as f:
+            rev = json.load(f)
+        stats["rev_file_month"] = rev.get("month", "?")
+        data = rev.get("data", {})
+        stats["rev_total"] = len(data)
+        # 用 expected_latest_revenue_month 算目標月（永遠回上月）
+        try:
+            sys.path.insert(0, str(Path(__file__).parent))
+            import fetch_financials as _ff
+            target = _ff.expected_latest_revenue_month(datetime.now())
+            stats["rev_target"] = target
+            stats["rev_target_count"] = sum(1 for v in data.values() if v.get("month") == target)
+        except Exception:
+            pass
+    except Exception:
+        pass
+    # 財報：throttle 時間戳覆蓋率（已嘗試抓過的支數）
+    try:
+        with open(DB_PATH.parent / "financials.json", encoding="utf-8") as f:
+            fin = json.load(f)
+        stats["fin_total"] = len(fin)
+        stats["fin_with_ts"] = sum(
+            1 for v in fin.values() if v.get("_last_rev_attempt_ts", 0) > 0
+        )
+    except Exception:
+        pass
+    # 三大法人：updated 欄位 + cache 中最新 date
+    try:
+        with open(DB_PATH.parent / "institutional.json", encoding="utf-8") as f:
+            inst = json.load(f)
+        latest = max(
+            (h[-1].get("date", "") for h in inst.get("by_stock", {}).values() if h),
+            default="?"
+        )
+        stats["inst_latest"] = latest
+    except Exception:
+        pass
+    # TWII（大盤）
+    try:
+        with open(DB_PATH.parent / "twii.json", encoding="utf-8") as f:
+            twii = json.load(f)
+        if twii.get("series"):
+            stats["twii_latest"] = twii["series"][-1].get("date", "?")
+    except Exception:
+        pass
+    return stats
+
+
+def _format_success_msg(holdings, group_counts, elapsed_sec: float) -> str:
+    """組成功通知訊息（含各模組 latest 狀態）。"""
+    s = _build_summary_stats()
+    lines = ["✅ <b>Pipeline 成功</b>", ""]
+
+    # 持股 + 族群
+    holdings_date = (holdings[0].get("date", "N/A") if holdings else "N/A")
+    lines.append(
+        f"📊 持股 <code>{len(holdings)}</code> 支（<code>{holdings_date}</code>）"
+        f" · 族群 <code>{len(group_counts)}</code>"
+    )
+
+    # K 線
+    if "kline_latest" in s:
+        lines.append(
+            f"📈 K 線：<code>{s['kline_count']}</code> 支"
+            f"（最新 <code>{s['kline_latest']}</code>）"
+        )
+
+    # 月營收
+    if "rev_file_month" in s:
+        target = s.get("rev_target", "?")
+        cnt = s.get("rev_target_count", 0)
+        lines.append(
+            f"💰 月營收：<code>{s.get('rev_total', 0)}</code> 支"
+            f"（{cnt} 已到 <code>{target}</code>）"
+        )
+
+    # 財報 throttle
+    if "fin_total" in s:
+        lines.append(
+            f"💼 財報：<code>{s['fin_with_ts']}</code>/<code>{s['fin_total']}</code>"
+            f" 已建立 throttle 時間戳"
+        )
+
+    # 三大法人 + TWII
+    if "inst_latest" in s:
+        lines.append(f"🏛 三大法人：最新 <code>{s['inst_latest']}</code>")
+    if "twii_latest" in s:
+        lines.append(f"📉 大盤 TWII：最新 <code>{s['twii_latest']}</code>")
+
+    lines.append("")
+    mins = int(elapsed_sec // 60)
+    secs = int(elapsed_sec % 60)
+    lines.append(f"⏱ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} · 跑了 {mins}m {secs}s")
+    return "\n".join(lines)
+
+
 def run():
+    _pipeline_start_ts = time.time()
     force = any(a in ("--force", "-f") for a in sys.argv[1:])
     if force:
         logger.info("--force 指定，略過『已是最新』檢查")
@@ -1030,13 +1142,8 @@ def run():
     logger.info("Pipeline 完成！")
 
     # === 成功通知（Telegram）===
-    _notify_telegram(
-        "✅ <b>Pipeline 成功</b>\n"
-        f"📊 持股名單：<code>{len(holdings)}</code> 支\n"
-        f"📅 資料日期：<code>{holdings[0].get('date', 'N/A') if holdings else 'N/A'}</code>\n"
-        f"🏷️ 族群數：<code>{len(group_counts)}</code>\n"
-        f"⏱ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-    )
+    elapsed = time.time() - _pipeline_start_ts
+    _notify_telegram(_format_success_msg(holdings, group_counts, elapsed))
 
 
 def _notify_telegram(msg: str):
