@@ -135,7 +135,11 @@ export default function App() {
   const searchTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
 
   // K 線即時 filter（N 日漲幅 / 創 N 日新高）任一啟用 → 一次性 lazy-load 整包 klines.json
-  const klineFiltersActive = filters.nDayReturn.days !== 0 || filters.nDayHigh.days !== 0
+  const klineFiltersActive =
+    filters.nDayReturn.days !== 0 ||
+    filters.nDayHigh.days !== 0 ||
+    filters.volumeNewHigh.days !== 0 ||
+    filters.volumeSurge.multiplier !== 0
   useEffect(() => {
     if (klineFiltersActive) {
       // loadFromJson 內部會跳過已 cached 的，重複呼叫等於 no-op
