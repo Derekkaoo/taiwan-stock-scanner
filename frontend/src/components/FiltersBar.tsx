@@ -6,13 +6,16 @@
 import { useEffect, useMemo, useState } from 'react'
 import type {
   Filters, GrowthQuarters, InstStreakDays, MarketFilter,
-  NReturnDays, NHighDays, StockRow,
+  NReturnDays, NHighDays,
+  VolumeNewHighDays, VolumeSurgeBaseline, VolumeSurgeMultiplier,
+  StockRow,
 } from '../types'
 import {
   DEFAULT_FILTERS, FILTER_BOUNDS, FILTER_LABELS, FILTER_UNITS,
   GROWTH_QUARTERS_OPTIONS, GROWTH_METRIC_LABELS,
   INST_STREAK_OPTIONS, MARKET_OPTIONS,
   N_RETURN_OPTIONS, N_HIGH_OPTIONS,
+  VOLUME_NEW_HIGH_OPTIONS, VOLUME_SURGE_BASELINE_OPTIONS, VOLUME_SURGE_MULTIPLIER_OPTIONS,
 } from '../types'
 import { RangeSlider } from './RangeSlider'
 import { IndustryChips } from './IndustryChips'
@@ -64,6 +67,8 @@ function activeCountForSection(key: SectionKey, f: Filters): number {
       if (ranged(f.volume, DEFAULT_FILTERS.volume)) n++
       if (f.nDayReturn.days !== 0) n++
       if (f.nDayHigh.days   !== 0) n++
+      if (f.volumeNewHigh.days !== 0) n++
+      if (f.volumeSurge.multiplier !== 0) n++
       return n
     case 'chips':
       if (ranged(f.delta, DEFAULT_FILTERS.delta)) n++
@@ -154,6 +159,13 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     set({ nDayReturn: { ...filters.nDayReturn, range: v } })
   const setNHighDays = (d: NHighDays) =>
     set({ nDayHigh: { days: d } })
+
+  const setVolumeNewHighDays = (d: VolumeNewHighDays) =>
+    set({ volumeNewHigh: { days: d } })
+  const setVolumeSurgeBaseline = (b: VolumeSurgeBaseline) =>
+    set({ volumeSurge: { ...filters.volumeSurge, baseline: b } })
+  const setVolumeSurgeMultiplier = (m: VolumeSurgeMultiplier) =>
+    set({ volumeSurge: { ...filters.volumeSurge, multiplier: m } })
 
   // === 個別 sliders（拆出來方便分到各 section）===
   const volumeSlider = (
@@ -402,6 +414,97 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     </div>
   )
 
+  // 成交量創 N 日新高
+  const volumeNewHighBlock = (
+    <div className="flex items-center flex-wrap gap-2">
+      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>成交量創新高</span>
+      <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>盤中創</span>
+      <div className="flex items-center gap-1 flex-wrap">
+        {VOLUME_NEW_HIGH_OPTIONS.map(d => {
+          const active = filters.volumeNewHigh.days === d
+          return (
+            <button
+              key={d}
+              onClick={() => setVolumeNewHighDays(d)}
+              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              style={{
+                background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                color:       active ? '#fff' : 'var(--color-text-secondary)',
+                fontWeight:  active ? 600 : 400,
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {d === 0 ? '不限' : `${d}日新高`}
+            </button>
+          )
+        })}
+      </div>
+    </div>
+  )
+
+  // 成交爆量（baseline + multiplier 兩列 chip）
+  const volumeSurgeEnabled = filters.volumeSurge.multiplier !== 0
+  const volumeSurgeBlock = (
+    <div className="flex flex-col gap-1">
+      <div className="flex items-center flex-wrap gap-2">
+        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>成交爆量</span>
+        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>大於</span>
+        <div className="flex items-center gap-1 flex-wrap">
+          {VOLUME_SURGE_MULTIPLIER_OPTIONS.map(m => {
+            const active = filters.volumeSurge.multiplier === m
+            return (
+              <button
+                key={m}
+                onClick={() => setVolumeSurgeMultiplier(m)}
+                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+                style={{
+                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                  color:       active ? '#fff' : 'var(--color-text-secondary)',
+                  fontWeight:  active ? 600 : 400,
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {m === 0 ? '不限' : `${m}倍`}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+      <div
+        className="flex items-center flex-wrap gap-2 ml-1"
+        style={{ opacity: volumeSurgeEnabled ? 1 : 0.4, pointerEvents: volumeSurgeEnabled ? 'auto' : 'none' }}
+      >
+        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>基準</span>
+        <div className="flex items-center gap-1 flex-wrap">
+          {VOLUME_SURGE_BASELINE_OPTIONS.map(opt => {
+            const active = filters.volumeSurge.baseline === opt.value
+            return (
+              <button
+                key={opt.value}
+                onClick={() => setVolumeSurgeBaseline(opt.value)}
+                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+                style={{
+                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                  color:       active ? '#fff' : 'var(--color-text-secondary)',
+                  fontWeight:  active ? 600 : 400,
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {opt.label}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+    </div>
+  )
+
   const absEnabled = !!filters.absValue.quarter
   const absValueBlock = (
     <div className="flex flex-col gap-2">
@@ -478,6 +581,8 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
         <div className="flex items-center gap-4 flex-wrap">{volumeSlider}</div>
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{nReturnBlock}</div>
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{nHighBlock}</div>
+        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{volumeNewHighBlock}</div>
+        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{volumeSurgeBlock}</div>
       </div>
     ),
     chips: (

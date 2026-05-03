@@ -65,7 +65,9 @@ DEFAULT_FILTERS: Dict[str, Any] = {
         "days": 0,
         "range": list(_b("nDayReturn")),
     },
-    "nDayHigh": {"days": 0},
+    "nDayHigh":      {"days": 0},
+    "volumeNewHigh": {"days": 0},
+    "volumeSurge":   {"baseline": "ma5", "multiplier": 0},
 }
 
 
@@ -225,6 +227,50 @@ def _pass_n_day_high(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, Lis
     return last_h >= max_h - 1e-6
 
 
+def _pass_volume_new_high(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
+    days = f.get("days", 0)
+    if days == 0:
+        return True
+    bars = klines.get(str(s.get("id", ""))) if klines else None
+    if not bars or len(bars) < days:
+        return False
+    last_v = bars[-1].get("v")
+    if not last_v:
+        return False
+    window = bars[-days:]
+    max_v = max((b.get("v") or float("-inf")) for b in window)
+    return last_v >= max_v - 1e-6
+
+
+def _pass_volume_surge(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
+    mult = f.get("multiplier", 0)
+    if mult == 0:
+        return True
+    bars = klines.get(str(s.get("id", ""))) if klines else None
+    if not bars or len(bars) < 2:
+        return False
+    last_v = bars[-1].get("v")
+    if not last_v:
+        return False
+
+    baseline_kind = f.get("baseline", "ma5")
+    if baseline_kind == "prev":
+        baseline = bars[-2].get("v")
+    else:
+        n = 5 if baseline_kind == "ma5" else 10 if baseline_kind == "ma10" else 60
+        if len(bars) < n + 1:
+            return False
+        window = bars[-n - 1:-1]  # 不含最新一根
+        vols = [b.get("v") for b in window if b.get("v") and b.get("v") > 0]
+        if not vols:
+            return False
+        baseline = sum(vols) / len(vols)
+
+    if not baseline or baseline <= 0:
+        return False
+    return last_v >= baseline * mult
+
+
 def apply_filters(
     stocks: Iterable[Dict[str, Any]],
     f: Dict[str, Any],
@@ -272,10 +318,15 @@ def apply_filters(
     n_high = f["nDayHigh"]
     n_high_active = n_high.get("days", 0) != 0
 
+    v_new_high = f["volumeNewHigh"]
+    v_new_high_active = v_new_high.get("days", 0) != 0
+    v_surge = f["volumeSurge"]
+    v_surge_active = v_surge.get("multiplier", 0) != 0
+
     # 沒有任何 filter 啟用 → 全傳回（這跟前端一致：等同沒篩）
     if not (vol_active or mc_active or d_active or r_active or ind_active or
             grow_active or abs_active or inst_active or market_active or
-            n_ret_active or n_high_active):
+            n_ret_active or n_high_active or v_new_high_active or v_surge_active):
         return list(stocks)
 
     out: List[Dict[str, Any]] = []
@@ -309,6 +360,10 @@ def apply_filters(
         if n_ret_active and not _pass_n_day_return(s, n_ret, klines):
             continue
         if n_high_active and not _pass_n_day_high(s, n_high, klines):
+            continue
+        if v_new_high_active and not _pass_volume_new_high(s, v_new_high, klines):
+            continue
+        if v_surge_active and not _pass_volume_surge(s, v_surge, klines):
             continue
         out.append(s)
     return out
@@ -345,6 +400,14 @@ def _merge_with_defaults(f: Dict[str, Any]) -> Dict[str, Any]:
     out["nDayHigh"] = {
         **DEFAULT_FILTERS["nDayHigh"],
         **(f.get("nDayHigh") or {}),
+    }
+    out["volumeNewHigh"] = {
+        **DEFAULT_FILTERS["volumeNewHigh"],
+        **(f.get("volumeNewHigh") or {}),
+    }
+    out["volumeSurge"] = {
+        **DEFAULT_FILTERS["volumeSurge"],
+        **(f.get("volumeSurge") or {}),
     }
     return out
 

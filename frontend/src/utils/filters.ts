@@ -10,7 +10,9 @@
 // ============================================================
 import type {
   Filters, GrowthFilter, AbsValueFilter, InstitutionalFilter, MarketFilter,
-  NDayReturnFilter, NDayHighFilter, StockRow, KlineBar,
+  NDayReturnFilter, NDayHighFilter,
+  VolumeNewHighFilter, VolumeSurgeFilter,
+  StockRow, KlineBar,
 } from '../types'
 import { DEFAULT_FILTERS, FILTER_BOUNDS } from '../types'
 
@@ -147,6 +149,48 @@ function passNDayHigh(s: StockRow, f: NDayHighFilter, klines: KlinesById | undef
   return last.h >= maxH - 1e-6
 }
 
+function passVolumeNewHigh(s: StockRow, f: VolumeNewHighFilter, klines: KlinesById | undefined): boolean {
+  if (f.days === 0) return true
+  const bars = getBars(klines, s.id)
+  if (!bars || bars.length < f.days) return false
+  const last = bars[bars.length - 1]
+  if (!last || !last.v) return false
+  // 「最近 N 根（含今天）的 volume」最大值是否 == 今日 volume
+  const window = bars.slice(-f.days)
+  let maxV = -Infinity
+  for (const b of window) if (b.v && b.v > maxV) maxV = b.v
+  return last.v >= maxV - 1e-6
+}
+
+function passVolumeSurge(s: StockRow, f: VolumeSurgeFilter, klines: KlinesById | undefined): boolean {
+  if (f.multiplier === 0) return true
+  const bars = getBars(klines, s.id)
+  if (!bars || bars.length < 2) return false
+  const last = bars[bars.length - 1]
+  if (!last || !last.v) return false
+
+  // baseline 永遠用「最新一根之前」的資料 — 盤中盤後語意一致
+  let baseline: number | null = null
+  if (f.baseline === 'prev') {
+    const prev = bars[bars.length - 2]
+    baseline = prev?.v ?? null
+  } else {
+    const n = f.baseline === 'ma5' ? 5 : f.baseline === 'ma10' ? 10 : 60
+    if (bars.length < n + 1) return false
+    const window = bars.slice(-n - 1, -1)  // 不含最新一根
+    let sum = 0, count = 0
+    for (const b of window) {
+      if (b.v && b.v > 0) {
+        sum += b.v
+        count++
+      }
+    }
+    baseline = count > 0 ? sum / count : null
+  }
+  if (baseline == null || baseline <= 0) return false
+  return last.v >= baseline * f.multiplier
+}
+
 export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById): StockRow[] {
   const volActive = rangeActive(f.volume,     DEFAULT_FILTERS.volume)
   const mcActive  = rangeActive(f.marketCap,  DEFAULT_FILTERS.marketCap)
@@ -166,8 +210,10 @@ export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById
   const marketActive = f.market !== 'all'
   const nRetActive  = f.nDayReturn.days !== 0
   const nHighActive = f.nDayHigh.days   !== 0
+  const vNewHighActive = f.volumeNewHigh.days !== 0
+  const vSurgeActive   = f.volumeSurge.multiplier !== 0
 
-  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive) return stocks
+  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive && !vNewHighActive && !vSurgeActive) return stocks
 
   return stocks.filter(s => {
     if (volActive) {
@@ -192,6 +238,8 @@ export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById
     if (marketActive && !passMarket(s, f.market)) return false
     if (nRetActive  && !passNDayReturn(s, f.nDayReturn, klines)) return false
     if (nHighActive && !passNDayHigh(s,   f.nDayHigh,   klines)) return false
+    if (vNewHighActive && !passVolumeNewHigh(s, f.volumeNewHigh, klines)) return false
+    if (vSurgeActive   && !passVolumeSurge(s,   f.volumeSurge,   klines)) return false
     return true
   })
 }
