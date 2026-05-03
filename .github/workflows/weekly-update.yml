@@ -88,12 +88,17 @@ jobs:
         run: python scripts/run_pipeline.py
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
+          # run_pipeline.py 結尾會發成功通知到 admin Telegram（_notify_telegram）
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
 
       - name: 季財報補抓（每月 15 號）
         if: steps.mode.outputs.mode == 'financials'
         run: python scripts/fetch_financials.py
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
 
       - name: K 線更新（週一至五）
         if: steps.mode.outputs.mode == 'klines'
