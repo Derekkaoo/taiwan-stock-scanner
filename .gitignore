@@ -23,3 +23,6 @@ norway_debug.html
 
 # === Deprecated scripts ===
 scripts/dump_yahoo_html.py
+
+__pycache__/
+*.pyc
