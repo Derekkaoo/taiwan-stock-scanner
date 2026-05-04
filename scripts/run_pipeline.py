@@ -930,7 +930,9 @@ def run():
         rev_entry = revenue_map.get("data", {}).get(sid, {})
         # 計算 revenueFirstSeen：這個 (股票 × 月份) 組合第一次看到的日期
         curr_yoy   = rev_entry.get("yoy")
-        curr_month = revenue_map.get("month")
+        # 優先用 per-stock month（merge 模式才有）；舊格式 fallback file-level month
+        # 注意：file-level month 是「整批最大月份」，不是該股票實際的月份 → 用 per-stock 才正確
+        curr_month = rev_entry.get("month") or revenue_map.get("month")
         prev_s     = prev_stocks.get(sid, {})
         today_str  = datetime.now().strftime("%Y-%m-%d")
         if curr_yoy is None:
