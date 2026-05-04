@@ -168,6 +168,25 @@ def _fetch_yahoo_one(stock_id: str, suffix: str) -> list | None:
         return None
 
 
+def get_yahoo_latest_date(sentinel_id: str = "2330") -> str | None:
+    """從 Yahoo 抓 sentinel stock（預設 2330 台積電）的最新 institutional date。
+
+    用來取代日曆推算 — 因為 Yahoo 反映 TWSE 真實 publish 狀態，比
+    `expected_latest_trading_day()` 的日曆 + 14:00 切換點更精準。
+
+    Returns:
+      'YYYY-MM-DD' 字串；HTTP / parse 失敗回 None
+    """
+    bars = _fetch_yahoo_one(sentinel_id, "TW")
+    if not bars:
+        bars = _fetch_yahoo_one(sentinel_id, "TWO")
+    if not bars:
+        return None
+    last = bars[-1]
+    date_raw = (last.get("date") or "")[:10]
+    return date_raw if date_raw else None
+
+
 def fetch_yahoo_institutional(stock_id: str) -> list[dict] | None:
     """從 Yahoo TW 抓單支股票 100 天三大法人歷史。
     自動偵測 .TW (上市) / .TWO (上櫃) suffix，cache 後續使用。
@@ -265,64 +284,56 @@ def run():
     db = load_existing()
     by_stock = db.get("by_stock") or {}
 
-    # smart-skip：用「cache 中最新一筆 date」對比「預期最新交易日」
-    # 若 cache 已有預期最新交易日的資料 → 跳過 FinMind，省 quota
-    # 若 cache 落後（例如還停在週五但今天週一已收盤）→ 重抓
-    # 但若 cache 落後 ＆ 1 小時內試過（updated 在 1 小時內）→ 仍跳過避免浪費 quota
-    #   （這 case 通常是 FinMind 還沒 publish 今日資料，下次 cron 再試）
-    # 用 --force 旗標可繞過（週六完整 pipeline 強制重抓時用）
+    # smart-skip 設計（2026-05-04 重構：Yahoo-sentinel + per-stock skip）：
+    #   1. 從 Yahoo 抓 sentinel（2330 台積電）的最新 institutional date
+    #      → Yahoo 反映 TWSE 真實 publish 狀態，比日曆推算精準
+    #   2. 計算 cache 中已到該 date 的股票覆蓋率
+    #   3. ≥ 90% → 全 skip
+    #   4. < 90% → 進 fetch loop，per-stock 跳過已有資料的股票，只抓缺的
+    #   Yahoo 失敗 → fallback 用日曆推算 + 17:00 hour guard
+    #   --force 旗標可繞過所有檢查
+    expected_str = ""
     if "--force" not in sys.argv and by_stock:
-        # 預期最新交易日 — 走共用模組（會跳過國定假日 + 週末，14:00 切換點）
-        from pathlib import Path as _Path
-        sys.path.insert(0, str(_Path(__file__).parent))
-        from trading_calendar import expected_latest_trading_day as _expected_fn
-        _expected = _expected_fn()
-        expected_str = _expected.strftime("%Y-%m-%d")
+        # 預期最新 publish date — 優先用 Yahoo sentinel（反映 TWSE 真實狀態）
+        yahoo_date = get_yahoo_latest_date()
+        if yahoo_date:
+            expected_str = yahoo_date
+            logger.info("Yahoo sentinel（2330）顯示最新 publish date = %s", expected_str)
+        else:
+            # Yahoo 失敗 → fallback 日曆推算 + 17:00 hour guard
+            from pathlib import Path as _Path
+            sys.path.insert(0, str(_Path(__file__).parent))
+            from trading_calendar import expected_latest_trading_day as _expected_fn, is_trading_day
+            _expected = _expected_fn()
+            expected_str = _expected.strftime("%Y-%m-%d")
+            logger.warning("Yahoo sentinel 抓不到，fallback 日曆推算 expected=%s", expected_str)
+            if is_trading_day(_now_tw.date()) and _now_tw.hour < 17:
+                logger.info("（fallback 模式）17:00 前 TWSE 通常沒 publish，跳過")
+                enrich_stocks_json(by_stock)
+                return 0
 
-        # 看 cache 中「達到 expected_str」的股票占比（不能用 max，因為只要 1 支
-        # 抓到就會誤判全體 OK；實際很可能是部分 402 中斷導致只有少數抓到）
+        # 看 cache 中「達到 expected_str」的股票占比
         total = len(by_stock)
         at_expected = sum(
             1 for h in by_stock.values()
             if h and h[-1].get("date", "") >= expected_str
         )
         coverage = at_expected / total if total else 0
-        # cache 中所有股票最新一筆 date 的最大值（log 用）
         latest_in_cache = max(
             (h[-1].get("date", "") for h in by_stock.values() if h),
             default=""
         )
 
-        # 90% 以上股票都到了 expected_date → 安全，跳過
+        # ≥ 90% 已涵蓋 → 全 skip
         if coverage >= 0.9:
-            logger.info("institutional cache 涵蓋率 %.0f%%（%d/%d 支已到 %s）→ 跳過 FinMind，"
-                        "直接用 cache 重算 buy streak",
+            logger.info("institutional cache 涵蓋率 %.0f%%（%d/%d 支已到 %s）→ 跳過 FinMind",
                         coverage * 100, at_expected, total, expected_str)
             enrich_stocks_json(by_stock)
             return 0
 
-        # cache 落後但「今天 17:00 後已跑過」→ 跳過（資料應已完整 publish）
-        # 邏輯：三大法人 TWSE 大約 17:00 完整公告，之前抓的可能是 partial
-        #   - 17:00 前的 cron（11:30/15:00）→ 抓到的可能不完整 → 後續觸發仍要重抓
-        #   - 17:00 後的 cron（17:00/20:00）→ 抓到的視為當天 final → skip 後續
-        FINAL_PUBLISH_HOUR = 17
-        last_updated = db.get("updated") or ""
-        try:
-            last_dt = _dt.fromisoformat(last_updated)
-            already_today_final = (
-                last_dt.date() == _now_tw.date()
-                and last_dt.hour >= FINAL_PUBLISH_HOUR
-            )
-        except Exception:
-            already_today_final = False
-        if already_today_final:
-            logger.info("institutional 今天 17:00 後已跑過（updated %s，涵蓋 %.0f%% 已到 %s）→ 跳過",
-                        last_updated, coverage * 100, expected_str)
-            enrich_stocks_json(by_stock)
-            return 0
-
-        logger.info("institutional cache 落後（涵蓋 %.0f%%，cache max=%s，預期 %s）→ 重抓",
-                    coverage * 100, latest_in_cache, expected_str)
+        logger.info("institutional cache 涵蓋 %.0f%%（%d/%d 支已到 %s，cache max=%s）"
+                    "→ 進 fetch 流程，per-stock 跳過已有資料",
+                    coverage * 100, at_expected, total, expected_str, latest_in_cache)
 
     logger.info("共 %d 支股票要抓三大法人", len(stock_ids))
 
@@ -335,6 +346,14 @@ def run():
     quota_hit = False           # FinMind 是否已撞 402
     yahoo_fetched = 0           # 用 Yahoo 補抓的支數（log 用）
     for i, sid in enumerate(stock_ids, 1):
+        # ─── PER-STOCK SKIP: 已有 expected_str（今天）資料 → 跳過 ───
+        # 確保 17:00 抓到部分後，後續 18:00/19:00 cron 只補抓缺的，不重抓已有的
+        if expected_str:
+            h = by_stock.get(sid) or []
+            if h and h[-1].get("date", "") >= expected_str:
+                skipped += 1
+                continue
+
         # ─── PRIMARY: FinMind ───
         if not quota_hit:
             records = fetch_finmind(sid, start_date)
