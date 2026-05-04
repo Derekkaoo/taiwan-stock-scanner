@@ -41,9 +41,10 @@ concurrency:
   group: weekly-update-${{ github.ref }}
   cancel-in-progress: false
 
-# 明確聲明 GITHUB_TOKEN 需要寫入權限
+# 明確聲明 GITHUB_TOKEN 需要寫入權限 + 觸發其他 workflow 的權限
 permissions:
   contents: write
+  actions: write   # 給結尾 dispatch deploy.yml 用
 
 jobs:
   update-data:
@@ -179,3 +180,20 @@ jobs:
           done
           echo "WARNING: feature/favorites-v2 sync 失敗 5 次"
           git checkout master
+
+      # 明確觸發 deploy.yml — 因為 bot 用 GITHUB_TOKEN push 的 commit
+      # **不會** 自動觸發其他 push-trigger 的 workflow（GitHub 防無限迴圈設計）
+      # 這條確保 bot push 完資料後 Cloudflare / Firebase 一定會 deploy 新版
+      - name: 觸發 deploy.yml
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'deploy.yml',
+              ref: 'master',
+            });
+            console.log('✅ deploy.yml dispatched');
