@@ -612,6 +612,31 @@ def load_monthly_revenue():
         return json.load(f)
 
 
+def _augment_fundamentals_with_mops(
+    fundamentals: dict,
+    sid: str,
+    mops_data: dict,
+    file_level_month: str,
+) -> dict:
+    """補強 fundamentals.revenueYoY 序列：FinMind mirror MOPS 通常有 1-2 天延遲，
+    導致 frontend 的營收 bar chart 看到的是舊月份（即使 list 上的單值 revenueYoY 已是新月）。
+    解法：若 MOPS 對該股票有比 FinMind 序列尾更新的月份 → append 進序列。
+    """
+    out = dict(fundamentals or {})
+    rev_series = list(out.get("revenueYoY") or [])
+    last_finmind_date = rev_series[-1].get("date", "") if rev_series else ""
+
+    mops_entry = mops_data.get(sid) or {}
+    mops_yoy = mops_entry.get("yoy")
+    # 若 monthly_revenue.json 是新格式（per-stock month），用那個；否則用 file-level month
+    mops_month = mops_entry.get("month") or file_level_month
+
+    if mops_month and mops_yoy is not None and mops_month > last_finmind_date:
+        rev_series.append({"date": mops_month, "yoy": mops_yoy})
+        out["revenueYoY"] = rev_series
+    return out
+
+
 def refresh_monthly_revenue():
     """嘗試自動更新月營收 JSON（從 MOPS 重抓）；失敗就用既有的"""
     try:
@@ -1018,7 +1043,11 @@ def run():
             "revenueYoY":       curr_yoy,                    # 月營收年增率 %
             "revenueMonth":     curr_month,                  # 該月營收資料月份 YYYY-MM
             "revenueFirstSeen": revenue_first_seen,          # 首次抓到此月份資料的日期 YYYY-MM-DD
-            "fundamentals":     financials.get(sid, {}),     # FinMind 12 個月/8 季 YoY 序列
+            "fundamentals":     _augment_fundamentals_with_mops(
+                financials.get(sid, {}), sid,
+                revenue_map.get("data", {}),
+                revenue_map.get("month", ""),
+            ),     # FinMind 12 個月/8 季 YoY 序列 + MOPS 補上最新月份（FinMind 有延遲）
             "companyProfile":   make_company_profile(profiles.get(sid)),  # Yahoo 公司基本資料 + 業務介紹
         })
 
