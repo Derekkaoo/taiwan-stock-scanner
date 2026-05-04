@@ -1,0 +1,69 @@
+name: 部署到 Firebase + Cloudflare
+
+# 只負責「build + deploy」，不抓資料。觸發條件：master 任何 push（不論是 user code 還是 bot data）
+# 拆分理由：把資料抓取（weekly-update.yml）跟部署分離，避免 user 改 code push 也跑全套資料抓取
+#
+# Cloudflare Pages preview 分支（feature/favorites-v2）由 Cloudflare 自己偵測 push 自動部署，
+# 這裡只處理 master / production deploy。
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+# 同時間只跑一個（多次 push 連著進來時排隊執行）
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 取得程式碼
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: 設定 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 安裝前端套件
+        run: |
+          cd frontend
+          npm install
+
+      - name: 修正執行權限
+        run: chmod -R +x frontend/node_modules/.bin/
+
+      - name: 建置前端
+        run: |
+          cd frontend
+          npm run build
+
+      - name: 複製資料到 dist（給 SPA 直接讀）
+        run: |
+          mkdir -p frontend/dist/data
+          cp frontend/public/data/stocks.json frontend/dist/data/stocks.json
+          cp frontend/public/data/klines.json frontend/dist/data/klines.json
+
+      - name: 部署到 Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TAIWAN_STOCK_SCANNER }}
+          channelId: live
+          projectId: taiwan-stock-scanner
+
+      - name: 部署到 Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy frontend/dist --project-name=taiwan-stock-scanner --branch=master --commit-dirty=true
