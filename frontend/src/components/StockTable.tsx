@@ -60,6 +60,15 @@ interface Props {
 }
 
 export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod, fetchGroup, getFromCache, cacheVersion, maPeriods, setMaPeriods, timeframe, setTimeframe }: Props) {
+  // 「新」徽章用：找出整批 stocks 中最大的 revenueMonth（最新公告月）
+  // 只有 revenueMonth == 這個最大值的股票才秀「新」（區分已公告 vs 還在公告中）
+  let latestRevenueMonth = ''
+  for (const s of stocks) {
+    if (s.revenueMonth && s.revenueMonth > latestRevenueMonth) {
+      latestRevenueMonth = s.revenueMonth
+    }
+  }
+
   const COLS: ColDef[] = [
     { key: 'id', label: '代號', align: 'left', mono: true,
       render: (s) => {
@@ -145,10 +154,42 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
       render: (s) => {
         const r = s.revenueYoY
         if (r == null) return <span style={{ color: 'var(--color-text-muted)' }}>—</span>
+        // 「新」徽章：兩個條件都符合才秀
+        //   1. revenueMonth == 整批最大月份（區分已公告 vs 還沒公告）
+        //   2. 今天在 revenueMonth + 1 月的 1-10 號（公告期內，過了 10 號 = 不再算新）
+        let isFresh = false
+        if (s.revenueMonth && s.revenueMonth === latestRevenueMonth) {
+          const m = /^(\d{4})-(\d{2})$/.exec(s.revenueMonth)
+          if (m) {
+            const yy = parseInt(m[1], 10)
+            const mm = parseInt(m[2], 10)
+            const pubYear  = mm === 12 ? yy + 1 : yy
+            const pubMonth = mm === 12 ? 1 : mm + 1
+            const now = new Date()
+            isFresh = now.getFullYear() === pubYear
+                   && now.getMonth() + 1 === pubMonth
+                   && now.getDate() >= 1
+                   && now.getDate() <= 10
+          }
+        }
         return (
-          <span className="tabular font-mono"
-            style={{ color: r >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-            {r >= 0 ? '+' : ''}{r.toFixed(1)}%
+          <span className="inline-flex items-center gap-1 tabular font-mono justify-end">
+            {isFresh && (
+              <span
+                className="text-[9px] px-1 py-0 rounded font-semibold"
+                style={{
+                  color: '#fff',
+                  background: 'var(--color-accent-cyan)',
+                  letterSpacing: '0.5px',
+                }}
+                title={`已公告 ${s.revenueMonth} 月營收（公告期 1-10 號內）`}
+              >
+                新
+              </span>
+            )}
+            <span style={{ color: r >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
+              {r >= 0 ? '+' : ''}{r.toFixed(1)}%
+            </span>
           </span>
         )
       }
