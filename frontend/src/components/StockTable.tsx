@@ -145,38 +145,10 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
       render: (s) => {
         const r = s.revenueYoY
         if (r == null) return <span style={{ color: 'var(--color-text-muted)' }}>—</span>
-        // 判斷是否為「近期新公佈」：今天在該營收月份的「下一個月 1-10 號」
-        // （MOPS 在隔月 1-10 號陸續公告當月營收）
-        let isFresh = false
-        if (s.revenueMonth) {
-          const m = /^(\d{4})-(\d{2})$/.exec(s.revenueMonth)
-          if (m) {
-            const yy = parseInt(m[1], 10)
-            const mm = parseInt(m[2], 10)
-            const pubYear = mm === 12 ? yy + 1 : yy
-            const pubMonth = mm === 12 ? 1 : mm + 1
-            const now = new Date()
-            isFresh = now.getFullYear() === pubYear
-                   && now.getMonth() + 1 === pubMonth
-                   && now.getDate() >= 1
-                   && now.getDate() <= 10
-          }
-        }
         return (
-          <span className="inline-flex items-center gap-1 tabular font-mono justify-end">
-            {isFresh && (
-              <span className="text-[9px] px-1 py-0 rounded font-semibold"
-                style={{
-                  color: '#fff',
-                  background: 'var(--color-accent-cyan)',
-                  letterSpacing: '0.5px',
-                }}>
-                新
-              </span>
-            )}
-            <span style={{ color: r >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-              {r >= 0 ? '+' : ''}{r.toFixed(1)}%
-            </span>
+          <span className="tabular font-mono"
+            style={{ color: r >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
+            {r >= 0 ? '+' : ''}{r.toFixed(1)}%
           </span>
         )
       }
