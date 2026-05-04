@@ -151,6 +151,38 @@ jobs:
           echo "ERROR: Failed to push after 5 attempts"
           exit 1
 
+      # 同步資料檔到 feature/favorites-v2（讓 preview URL 也吃到最新資料）
+      # 只同步「資料檔」目錄，不碰 code（保留 feature 的 telegram / favorites 改動）
+      - name: 同步資料到 feature/favorites-v2
+        if: success()
+        run: |
+          git fetch origin feature/favorites-v2:feature/favorites-v2 || {
+            echo "feature/favorites-v2 不存在或拉不到，跳過 sync"
+            exit 0
+          }
+          git checkout feature/favorites-v2
+          # 用 master 上最新版本覆蓋資料檔（保留 feature 的 code）
+          git checkout master -- frontend/public/data backend/db
+          git add frontend/public/data backend/db || true
+          if git diff --cached --quiet; then
+            echo "feature 分支資料檔已是最新，無需同步"
+            git checkout master
+            exit 0
+          fi
+          git commit -m "data: sync from master (cloud auto-update)"
+          for i in 1 2 3 4 5; do
+            if git push origin feature/favorites-v2; then
+              echo "Sync push succeeded on attempt $i"
+              git checkout master
+              exit 0
+            fi
+            echo "Sync push attempt $i failed, retry after rebase..."
+            git pull --rebase --strategy-option=theirs --autostash origin feature/favorites-v2 || true
+            sleep $((i * 3))
+          done
+          echo "WARNING: feature/favorites-v2 sync 失敗 5 次，繼續部署 master"
+          git checkout master
+
       - name: 設定 Node.js
         uses: actions/setup-node@v4
         with:
