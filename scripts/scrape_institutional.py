@@ -301,22 +301,28 @@ def run():
             enrich_stocks_json(by_stock)
             return 0
 
-        # cache 落後但 1 小時內已試過 → 假設 FinMind 還沒 publish，避免浪費 quota
-        # 統一用 TW 時區比（updated 也是 TW 時區寫的）
+        # cache 落後但「今天 17:00 後已跑過」→ 跳過（資料應已完整 publish）
+        # 邏輯：三大法人 TWSE 大約 17:00 完整公告，之前抓的可能是 partial
+        #   - 17:00 前的 cron（11:30/15:00）→ 抓到的可能不完整 → 後續觸發仍要重抓
+        #   - 17:00 後的 cron（17:00/20:00）→ 抓到的視為當天 final → skip 後續
+        FINAL_PUBLISH_HOUR = 17
         last_updated = db.get("updated") or ""
         try:
             last_dt = _dt.fromisoformat(last_updated)
-            age_min = (_now_tw - last_dt).total_seconds() / 60
+            already_today_final = (
+                last_dt.date() == _now_tw.date()
+                and last_dt.hour >= FINAL_PUBLISH_HOUR
+            )
         except Exception:
-            age_min = 9999
-        if 0 <= age_min < 60:
-            logger.info("institutional cache 落後（最新 %s < 預期 %s）但 %.0f 分鐘前已試過，"
-                        "可能 FinMind 還沒發，跳過省 quota", latest_in_cache, expected_str, age_min)
+            already_today_final = False
+        if already_today_final:
+            logger.info("institutional 今天 17:00 後已跑過（updated %s，涵蓋 %.0f%% 已到 %s）→ 跳過",
+                        last_updated, coverage * 100, expected_str)
             enrich_stocks_json(by_stock)
             return 0
 
-        logger.info("institutional cache 落後（最新 %s < 預期 %s）→ 重抓",
-                    latest_in_cache, expected_str)
+        logger.info("institutional cache 落後（涵蓋 %.0f%%，cache max=%s，預期 %s）→ 重抓",
+                    coverage * 100, latest_in_cache, expected_str)
 
     logger.info("共 %d 支股票要抓三大法人", len(stock_ids))
 
