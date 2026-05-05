@@ -213,14 +213,14 @@ export interface VolumeSurgeFilter {
 /** 均線多頭排列：選 2-5 個 MA 期數，要求短期 MA > 長期 MA（價格上）
  *  例 periods=[5,10,20] 表示要求 MA5 > MA10 > MA20
  *  periods.length < 2 視為不啟用 */
-export type MaAlignmentPeriod = 5 | 10 | 20 | 60 | 120 | 240
+export type MaAlignmentPeriod = 5 | 10 | 20 | 60 | 120
 export interface MaAlignmentFilter {
   periods: MaAlignmentPeriod[]
 }
 
 /** 均線方向朝上：選任意 MA 期數，每條都要求「今日 MA > 昨日 MA」（AND 邏輯）
  *  periods.length === 0 視為不啟用 */
-export type MaDirectionPeriod = 5 | 10 | 20 | 60 | 120 | 240
+export type MaDirectionPeriod = 5 | 10 | 20 | 60 | 120
 export interface MaDirectionFilter {
   periods: MaDirectionPeriod[]
 }
@@ -229,7 +229,7 @@ export interface MaDirectionFilter {
  *  「該日 close > 該日 MA AND 前一日 close ≤ 前一日 MA」即視為突破。
  *  days = 0 或 period = 0 視為不啟用。 */
 export type MaBreakoutDays = 0 | 1 | 3 | 5 | 10 | 20
-export type MaBreakoutPeriod = 0 | 5 | 10 | 20 | 60 | 120 | 240
+export type MaBreakoutPeriod = 0 | 5 | 10 | 20 | 60 | 120
 export interface MaBreakoutFilter {
   days:   MaBreakoutDays
   period: MaBreakoutPeriod
@@ -320,13 +320,13 @@ export const VOLUME_SURGE_BASELINE_OPTIONS: Array<{ value: VolumeSurgeBaseline; 
 
 export const VOLUME_SURGE_MULTIPLIER_OPTIONS: VolumeSurgeMultiplier[] = [0, 1, 2, 3, 5]
 
-export const MA_ALIGNMENT_OPTIONS: MaAlignmentPeriod[] = [5, 10, 20, 60, 120, 240]
+export const MA_ALIGNMENT_OPTIONS: MaAlignmentPeriod[] = [5, 10, 20, 60, 120]
 export const MA_ALIGNMENT_DEFAULT: MaAlignmentPeriod[] = [5, 10, 20]
 
-export const MA_DIRECTION_OPTIONS: MaDirectionPeriod[] = [5, 10, 20, 60, 120, 240]
+export const MA_DIRECTION_OPTIONS: MaDirectionPeriod[] = [5, 10, 20, 60, 120]
 
 export const MA_BREAKOUT_DAYS_OPTIONS:   MaBreakoutDays[]   = [0, 1, 3, 5, 10, 20]
-export const MA_BREAKOUT_PERIOD_OPTIONS: MaBreakoutPeriod[] = [0, 5, 10, 20, 60, 120, 240]
+export const MA_BREAKOUT_PERIOD_OPTIONS: MaBreakoutPeriod[] = [0, 5, 10, 20, 60, 120]
 
 // ============================================================
 //  進場分析（多頭觸發回測研究）
