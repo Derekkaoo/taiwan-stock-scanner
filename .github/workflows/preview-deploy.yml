@@ -1,0 +1,50 @@
+name: 部署 Preview 分支
+
+# 非 master 分支（如 feature/favorites-v2）push 時自動 build + deploy 到 Cloudflare Pages preview URL。
+# master 走 deploy.yml；這裡只 cover 其他 branch，避免 master 被雙跑。
+#
+# 註：本檔案在 4/25 commit 68a0a75 首次加入，後續某次 git 操作把它從 master/feature 上抹掉，
+#     導致 preview URL 從 5/5 7:27 PM 後不再自動更新。已重新加回。
+
+on:
+  push:
+    branches-ignore:
+      - master
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 取得程式碼
+        uses: actions/checkout@v4
+
+      - name: 設定 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 安裝前端套件
+        run: |
+          cd frontend
+          npm install
+
+      - name: 修正執行權限
+        run: chmod -R +x frontend/node_modules/.bin/
+
+      - name: 建置前端
+        run: |
+          cd frontend
+          npm run build
+
+      - name: 複製資料到 dist（給 SPA 直接讀）
+        run: |
+          mkdir -p frontend/dist/data
+          cp frontend/public/data/stocks.json frontend/dist/data/stocks.json 2>/dev/null || true
+          cp frontend/public/data/klines.json frontend/dist/data/klines.json 2>/dev/null || true
+
+      - name: 部署到 Cloudflare Pages (Preview)
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy frontend/dist --project-name=taiwan-stock-scanner --branch=${{ github.ref_name }} --commit-dirty=true
