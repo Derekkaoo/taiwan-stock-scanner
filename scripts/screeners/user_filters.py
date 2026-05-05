@@ -68,9 +68,11 @@ DEFAULT_FILTERS: Dict[str, Any] = {
     "nDayHigh":      {"days": 0},
     "volumeNewHigh": {"days": 0},
     "volumeSurge":   {"baseline": "ma5", "multiplier": 0},
-    "maAlignment":   {"periods": []},
-    "maDirection":   {"periods": []},
-    "maBreakout":    {"days": 0, "period": 0},
+    "maAlignment":    {"periods": []},
+    "maDirection":    {"periods": []},
+    "maBreakout":     {"days": 0, "period": 0},
+    "maContinuation": {"direction": "off", "period": 0},
+    "maSustained":    {"days": 0, "period": 0},
 }
 
 
@@ -337,6 +339,56 @@ def _pass_ma_breakout(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, Li
     return False
 
 
+def _pass_ma_continuation(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
+    """明日 MA 續揚 / 下彎（扣抵值預測）：
+    扣抵值 = 明日將從 MA 計算窗口扣掉的那根 close = bars[len - period].c
+    - up:   今日 close > 扣抵值（即使明日盤平，MA 也會上揚）
+    - down: 今日 close < 扣抵值（即使明日盤平，MA 也會下彎）
+    """
+    direction = f.get("direction", "off")
+    period = f.get("period", 0) or 0
+    if direction == "off" or period == 0:
+        return True
+    bars = klines.get(str(s.get("id", ""))) if klines else None
+    if not bars or len(bars) < period:
+        return False
+    last_close = bars[-1].get("c") if bars[-1] else None
+    dropout_close = bars[-period].get("c") if bars[-period] else None  # N 天前 close
+    if not last_close or not dropout_close:
+        return False
+    if direction == "up":
+        return last_close > dropout_close
+    if direction == "down":
+        return last_close < dropout_close
+    return True
+
+
+def _pass_ma_sustained(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
+    """未來 N 日 MA 不下彎（扣抵保護）：
+    未來第 d 日（d=1..N）的扣抵值 = bars[len - period + d - 1].c
+    條件：每個 d 的扣抵值都 < 今日 close
+    → 即使股價盤整不漲，MA 仍會連續上揚 N 天。
+    """
+    days = f.get("days", 0) or 0
+    period = f.get("period", 0) or 0
+    if days == 0 or period == 0:
+        return True
+    bars = klines.get(str(s.get("id", ""))) if klines else None
+    if not bars or len(bars) < period:
+        return False
+    last_close = bars[-1].get("c") if bars[-1] else None
+    if not last_close:
+        return False
+    for d in range(1, days + 1):
+        idx = len(bars) - period + d - 1
+        dropout = bars[idx].get("c") if bars[idx] else None
+        if not dropout:
+            return False
+        if last_close <= dropout:
+            return False
+    return True
+
+
 def _pass_volume_surge(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
     mult = f.get("multiplier", 0)
     if mult == 0:
@@ -427,11 +479,18 @@ def apply_filters(
     ma_break = f["maBreakout"]
     ma_break_active = (ma_break.get("days", 0) or 0) != 0 and (ma_break.get("period", 0) or 0) != 0
 
+    ma_cont = f["maContinuation"]
+    ma_cont_active = (ma_cont.get("direction", "off") or "off") != "off" and (ma_cont.get("period", 0) or 0) != 0
+
+    ma_sust = f["maSustained"]
+    ma_sust_active = (ma_sust.get("days", 0) or 0) != 0 and (ma_sust.get("period", 0) or 0) != 0
+
     # 沒有任何 filter 啟用 → 全傳回（這跟前端一致：等同沒篩）
     if not (vol_active or mc_active or d_active or r_active or ind_active or
             grow_active or abs_active or inst_active or market_active or
             n_ret_active or n_high_active or v_new_high_active or v_surge_active or
-            ma_align_active or ma_dir_active or ma_break_active):
+            ma_align_active or ma_dir_active or ma_break_active or
+            ma_cont_active or ma_sust_active):
         return list(stocks)
 
     out: List[Dict[str, Any]] = []
@@ -475,6 +534,10 @@ def apply_filters(
         if ma_dir_active and not _pass_ma_direction(s, ma_dir, klines):
             continue
         if ma_break_active and not _pass_ma_breakout(s, ma_break, klines):
+            continue
+        if ma_cont_active and not _pass_ma_continuation(s, ma_cont, klines):
+            continue
+        if ma_sust_active and not _pass_ma_sustained(s, ma_sust, klines):
             continue
         out.append(s)
     return out
@@ -531,6 +594,14 @@ def _merge_with_defaults(f: Dict[str, Any]) -> Dict[str, Any]:
     out["maBreakout"] = {
         **DEFAULT_FILTERS["maBreakout"],
         **(f.get("maBreakout") or {}),
+    }
+    out["maContinuation"] = {
+        **DEFAULT_FILTERS["maContinuation"],
+        **(f.get("maContinuation") or {}),
+    }
+    out["maSustained"] = {
+        **DEFAULT_FILTERS["maSustained"],
+        **(f.get("maSustained") or {}),
     }
     return out
 

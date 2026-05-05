@@ -12,7 +12,7 @@ import type {
   Filters, GrowthFilter, AbsValueFilter, InstitutionalFilter, MarketFilter,
   NDayReturnFilter, NDayHighFilter,
   VolumeNewHighFilter, VolumeSurgeFilter, MaAlignmentFilter, MaDirectionFilter,
-  MaBreakoutFilter,
+  MaBreakoutFilter, MaContinuationFilter, MaSustainedFilter,
   StockRow, KlineBar,
 } from '../types'
 import { DEFAULT_FILTERS, FILTER_BOUNDS } from '../types'
@@ -251,6 +251,41 @@ function passMaBreakout(s: StockRow, f: MaBreakoutFilter, klines: KlinesById | u
   return false
 }
 
+/** 明日 MA 續揚 / 下彎（扣抵值預測）：
+ *  扣抵值 = 明日將從 MA 計算窗口扣掉的那根 close = bars[len - period].c
+ *  - up:   today close > 扣抵值（即使明日盤平，MA 也會上揚）
+ *  - down: today close < 扣抵值（即使明日盤平，MA 也會下彎） */
+function passMaContinuation(s: StockRow, f: MaContinuationFilter, klines: KlinesById | undefined): boolean {
+  if (f.direction === 'off' || f.period === 0) return true
+  const bars = getBars(klines, s.id)
+  if (!bars || bars.length < f.period) return false
+  const lastClose = bars[bars.length - 1]?.c
+  const dropoutClose = bars[bars.length - f.period]?.c  // N 天前 close（明日扣抵值）
+  if (!lastClose || !dropoutClose) return false
+  if (f.direction === 'up')   return lastClose > dropoutClose
+  if (f.direction === 'down') return lastClose < dropoutClose
+  return true
+}
+
+/** 未來 N 日 MA 不下彎（扣抵保護）：
+ *  未來第 d 日（d=1..N）的扣抵值 = bars[len - period + d - 1].c
+ *  條件：每個 d 的扣抵值都 < 今日 close
+ *  → 即使股價盤整不漲，MA 仍會連續上揚 N 天 */
+function passMaSustained(s: StockRow, f: MaSustainedFilter, klines: KlinesById | undefined): boolean {
+  if (f.days === 0 || f.period === 0) return true
+  const bars = getBars(klines, s.id)
+  if (!bars || bars.length < f.period) return false
+  const lastClose = bars[bars.length - 1]?.c
+  if (!lastClose) return false
+  for (let d = 1; d <= f.days; d++) {
+    const idx = bars.length - f.period + d - 1
+    const dropoutClose = bars[idx]?.c
+    if (!dropoutClose) return false
+    if (lastClose <= dropoutClose) return false
+  }
+  return true
+}
+
 function passVolumeSurge(s: StockRow, f: VolumeSurgeFilter, klines: KlinesById | undefined): boolean {
   if (f.multiplier === 0) return true
   const bars = getBars(klines, s.id)
@@ -304,8 +339,10 @@ export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById
   const maAlignActive  = (f.maAlignment?.periods?.length ?? 0) >= 2
   const maDirActive    = (f.maDirection?.periods?.length ?? 0) >= 1
   const maBreakActive  = (f.maBreakout?.days ?? 0) !== 0 && (f.maBreakout?.period ?? 0) !== 0
+  const maContActive   = (f.maContinuation?.direction ?? 'off') !== 'off' && (f.maContinuation?.period ?? 0) !== 0
+  const maSustActive   = (f.maSustained?.days ?? 0) !== 0 && (f.maSustained?.period ?? 0) !== 0
 
-  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive && !vNewHighActive && !vSurgeActive && !maAlignActive && !maDirActive && !maBreakActive) return stocks
+  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive && !vNewHighActive && !vSurgeActive && !maAlignActive && !maDirActive && !maBreakActive && !maContActive && !maSustActive) return stocks
 
   return stocks.filter(s => {
     if (volActive) {
@@ -332,9 +369,11 @@ export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById
     if (nHighActive && !passNDayHigh(s,   f.nDayHigh,   klines)) return false
     if (vNewHighActive && !passVolumeNewHigh(s, f.volumeNewHigh, klines)) return false
     if (vSurgeActive   && !passVolumeSurge(s,   f.volumeSurge,   klines)) return false
-    if (maAlignActive  && !passMaAlignment(s,   f.maAlignment,   klines)) return false
-    if (maDirActive    && !passMaDirection(s,   f.maDirection,   klines)) return false
-    if (maBreakActive  && !passMaBreakout(s,    f.maBreakout,    klines)) return false
+    if (maAlignActive  && !passMaAlignment(s,    f.maAlignment,    klines)) return false
+    if (maDirActive    && !passMaDirection(s,    f.maDirection,    klines)) return false
+    if (maBreakActive  && !passMaBreakout(s,     f.maBreakout,     klines)) return false
+    if (maContActive   && !passMaContinuation(s, f.maContinuation, klines)) return false
+    if (maSustActive   && !passMaSustained(s,    f.maSustained,    klines)) return false
     return true
   })
 }
