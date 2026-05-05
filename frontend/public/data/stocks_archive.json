@@ -18446,9 +18446,9 @@
         "印刷電路板"
       ]
     },
-    "revenueYoY": 11.12,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": -2.86,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-05",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -18498,6 +18498,10 @@
         {
           "date": "2026-03",
           "yoy": 11.12
+        },
+        {
+          "date": "2026-04",
+          "yoy": -2.86
         }
       ],
       "grossMarginYoY": [
@@ -18861,9 +18865,9 @@
         "電子製造服務"
       ]
     },
-    "revenueYoY": 45.57,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 29.73,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-05",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -18913,6 +18917,10 @@
         {
           "date": "2026-03",
           "yoy": 45.57
+        },
+        {
+          "date": "2026-04",
+          "yoy": 29.73
         }
       ],
       "grossMarginYoY": [
@@ -38731,9 +38739,9 @@
         "類比IC"
       ]
     },
-    "revenueYoY": 188.11,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 349.21,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-05",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -38783,6 +38791,10 @@
         {
           "date": "2026-03",
           "yoy": 188.11
+        },
+        {
+          "date": "2026-04",
+          "yoy": 349.21
         }
       ],
       "grossMarginYoY": [
@@ -66983,9 +66995,9 @@
         "高速傳輸介面IC"
       ]
     },
-    "revenueYoY": 399.62,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 417.06,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-05",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -67035,6 +67047,10 @@
         {
           "date": "2026-03",
           "yoy": 399.62
+        },
+        {
+          "date": "2026-04",
+          "yoy": 417.06
         }
       ],
       "grossMarginYoY": [
@@ -78042,9 +78058,9 @@
         "銅箔基板"
       ]
     },
-    "revenueYoY": 72.34,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 97.96,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-05",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -78094,6 +78110,10 @@
         {
           "date": "2026-03",
           "yoy": 72.34
+        },
+        {
+          "date": "2026-04",
+          "yoy": 97.96
         }
       ],
       "grossMarginYoY": [
@@ -80987,9 +81007,9 @@
         "觸控面板"
       ]
     },
-    "revenueYoY": -15.22,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": -34.46,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-05",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -81039,6 +81059,10 @@
         {
           "date": "2026-03",
           "yoy": -15.22
+        },
+        {
+          "date": "2026-04",
+          "yoy": -34.46
         }
       ],
       "grossMarginYoY": [
@@ -82615,9 +82639,9 @@
         "農業生技"
       ]
     },
-    "revenueYoY": 2.46,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 4.36,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-05",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -82667,6 +82691,10 @@
         {
           "date": "2026-03",
           "yoy": 2.46
+        },
+        {
+          "date": "2026-04",
+          "yoy": 4.36
         }
       ],
       "grossMarginYoY": [
@@ -84720,7 +84748,7 @@
           "value": 1.09
         }
       ],
-      "_last_rev_attempt_ts": 1777964863,
+      "_last_rev_attempt_ts": 1777972363,
       "revenueYoY": [
         {
           "date": "2026-03",
@@ -89998,7 +90026,7 @@
           "value": 0.05
         }
       ],
-      "_last_rev_attempt_ts": 1777964861,
+      "_last_rev_attempt_ts": 1777972355,
       "revenueYoY": [
         {
           "date": "2026-03",
@@ -90401,7 +90429,7 @@
           "value": 2.66
         }
       ],
-      "_last_rev_attempt_ts": 1777964864,
+      "_last_rev_attempt_ts": 1777972351,
       "revenueYoY": [
         {
           "date": "2026-03",
@@ -97348,10 +97376,6 @@
       "operatingMargin": [],
       "eps": [
         {
-          "quarter": "2023Q2",
-          "value": 0.0
-        },
-        {
           "quarter": "2023Q4",
           "value": 0.0
         },
@@ -97362,10 +97386,14 @@
         {
           "quarter": "2025Q2",
           "value": 0.0
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 0.0
         }
       ],
-      "_last_rev_attempt_ts": 1777964868,
-      "_last_fin_attempt_ts": 1777964870
+      "_last_rev_attempt_ts": 1777972365,
+      "_last_fin_attempt_ts": 1777972366
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-05"
@@ -97458,8 +97486,8 @@
           "value": 0.0
         }
       ],
-      "_last_rev_attempt_ts": 1777964865,
-      "_last_fin_attempt_ts": 1777964866
+      "_last_rev_attempt_ts": 1777972335,
+      "_last_fin_attempt_ts": 1777972343
     },
     "companyProfile": {
       "business": "生產製造機車\r\n生產製造機車零組件\r\n製造金屬零件自行開發模具",
