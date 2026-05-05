@@ -206,6 +206,14 @@ export interface VolumeSurgeFilter {
   multiplier: VolumeSurgeMultiplier
 }
 
+/** 均線多頭排列：選 2-5 個 MA 期數，要求短期 MA > 長期 MA（價格上）
+ *  例 periods=[5,10,20] 表示要求 MA5 > MA10 > MA20
+ *  periods.length < 2 視為不啟用 */
+export type MaAlignmentPeriod = 5 | 10 | 20 | 60 | 120 | 240
+export interface MaAlignmentFilter {
+  periods: MaAlignmentPeriod[]
+}
+
 export interface Filters {
   volume:     FilterRange      // 5 日均成交量（千張）
   marketCap:  FilterRange      // 市值（億）
@@ -220,6 +228,7 @@ export interface Filters {
   nDayHigh:      NDayHighFilter
   volumeNewHigh: VolumeNewHighFilter
   volumeSurge:   VolumeSurgeFilter
+  maAlignment:   MaAlignmentFilter
 }
 
 export const FILTER_BOUNDS = {
@@ -260,6 +269,7 @@ export const DEFAULT_FILTERS: Filters = {
   nDayHigh:      { days: 0 },
   volumeNewHigh: { days: 0 },
   volumeSurge:   { baseline: 'ma5', multiplier: 0 },
+  maAlignment:   { periods: [] },  // 預設不啟用；user 啟用建議 [5,10,20]
 }
 
 export const INST_STREAK_OPTIONS: InstStreakDays[] = [0, 1, 3, 5, 20]
@@ -284,6 +294,9 @@ export const VOLUME_SURGE_BASELINE_OPTIONS: Array<{ value: VolumeSurgeBaseline; 
 ]
 
 export const VOLUME_SURGE_MULTIPLIER_OPTIONS: VolumeSurgeMultiplier[] = [0, 1, 2, 3, 5]
+
+export const MA_ALIGNMENT_OPTIONS: MaAlignmentPeriod[] = [5, 10, 20, 60, 120, 240]
+export const MA_ALIGNMENT_DEFAULT: MaAlignmentPeriod[] = [5, 10, 20]
 
 // ============================================================
 //  進場分析（多頭觸發回測研究）

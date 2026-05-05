@@ -68,6 +68,7 @@ DEFAULT_FILTERS: Dict[str, Any] = {
     "nDayHigh":      {"days": 0},
     "volumeNewHigh": {"days": 0},
     "volumeSurge":   {"baseline": "ma5", "multiplier": 0},
+    "maAlignment":   {"periods": []},
 }
 
 
@@ -242,6 +243,38 @@ def _pass_volume_new_high(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str
     return last_v >= max_v - 1e-6
 
 
+def _calc_last_ma(bars: List[Dict[str, Any]], period: int) -> Optional[float]:
+    """算最後一根 bar 的 N 日 MA（簡單均線）。資料不足或缺值 → None。"""
+    if not bars or len(bars) < period:
+        return None
+    total = 0.0
+    for b in bars[-period:]:
+        c = b.get("c")
+        if not c:
+            return None
+        total += c
+    return total / period
+
+
+def _pass_ma_alignment(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
+    periods = f.get("periods") or []
+    if len(periods) < 2:
+        return True
+    bars = klines.get(str(s.get("id", ""))) if klines else None
+    if not bars:
+        return False
+    sorted_periods = sorted(periods)
+    prev_value = float("inf")
+    for p in sorted_periods:
+        v = _calc_last_ma(bars, p)
+        if v is None:
+            return False
+        if v >= prev_value:
+            return False
+        prev_value = v
+    return True
+
+
 def _pass_volume_surge(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
     mult = f.get("multiplier", 0)
     if mult == 0:
@@ -323,10 +356,14 @@ def apply_filters(
     v_surge = f["volumeSurge"]
     v_surge_active = v_surge.get("multiplier", 0) != 0
 
+    ma_align = f["maAlignment"]
+    ma_align_active = len(ma_align.get("periods") or []) >= 2
+
     # 沒有任何 filter 啟用 → 全傳回（這跟前端一致：等同沒篩）
     if not (vol_active or mc_active or d_active or r_active or ind_active or
             grow_active or abs_active or inst_active or market_active or
-            n_ret_active or n_high_active or v_new_high_active or v_surge_active):
+            n_ret_active or n_high_active or v_new_high_active or v_surge_active or
+            ma_align_active):
         return list(stocks)
 
     out: List[Dict[str, Any]] = []
@@ -364,6 +401,8 @@ def apply_filters(
         if v_new_high_active and not _pass_volume_new_high(s, v_new_high, klines):
             continue
         if v_surge_active and not _pass_volume_surge(s, v_surge, klines):
+            continue
+        if ma_align_active and not _pass_ma_alignment(s, ma_align, klines):
             continue
         out.append(s)
     return out
@@ -408,6 +447,10 @@ def _merge_with_defaults(f: Dict[str, Any]) -> Dict[str, Any]:
     out["volumeSurge"] = {
         **DEFAULT_FILTERS["volumeSurge"],
         **(f.get("volumeSurge") or {}),
+    }
+    out["maAlignment"] = {
+        **DEFAULT_FILTERS["maAlignment"],
+        **(f.get("maAlignment") or {}),
     }
     return out
 

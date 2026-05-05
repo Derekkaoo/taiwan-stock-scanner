@@ -11,7 +11,7 @@
 import type {
   Filters, GrowthFilter, AbsValueFilter, InstitutionalFilter, MarketFilter,
   NDayReturnFilter, NDayHighFilter,
-  VolumeNewHighFilter, VolumeSurgeFilter,
+  VolumeNewHighFilter, VolumeSurgeFilter, MaAlignmentFilter,
   StockRow, KlineBar,
 } from '../types'
 import { DEFAULT_FILTERS, FILTER_BOUNDS } from '../types'
@@ -162,6 +162,35 @@ function passVolumeNewHigh(s: StockRow, f: VolumeNewHighFilter, klines: KlinesBy
   return last.v >= maxV - 1e-6
 }
 
+/** 算最後一根 bar 的 N 日 MA（簡單均線，等權重）*/
+function calcLastMA(bars: KlineBar[], period: number): number | null {
+  if (!bars || bars.length < period) return null
+  let sum = 0
+  for (let i = bars.length - period; i < bars.length; i++) {
+    const c = bars[i]?.c
+    if (!c) return null
+    sum += c
+  }
+  return sum / period
+}
+
+function passMaAlignment(s: StockRow, f: MaAlignmentFilter, klines: KlinesById | undefined): boolean {
+  const periods = f.periods || []
+  if (periods.length < 2) return true
+  const bars = getBars(klines, s.id)
+  if (!bars) return false
+  // 短期 MA > 長期 MA：依期數遞增遍歷，要求 MA 值嚴格遞減
+  const sorted = [...periods].sort((a, b) => a - b)
+  let prevValue = Infinity
+  for (const p of sorted) {
+    const v = calcLastMA(bars, p)
+    if (v == null) return false
+    if (v >= prevValue) return false
+    prevValue = v
+  }
+  return true
+}
+
 function passVolumeSurge(s: StockRow, f: VolumeSurgeFilter, klines: KlinesById | undefined): boolean {
   if (f.multiplier === 0) return true
   const bars = getBars(klines, s.id)
@@ -212,8 +241,9 @@ export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById
   const nHighActive = f.nDayHigh.days   !== 0
   const vNewHighActive = f.volumeNewHigh.days !== 0
   const vSurgeActive   = f.volumeSurge.multiplier !== 0
+  const maAlignActive  = (f.maAlignment?.periods?.length ?? 0) >= 2
 
-  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive && !vNewHighActive && !vSurgeActive) return stocks
+  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive && !vNewHighActive && !vSurgeActive && !maAlignActive) return stocks
 
   return stocks.filter(s => {
     if (volActive) {
@@ -240,6 +270,7 @@ export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById
     if (nHighActive && !passNDayHigh(s,   f.nDayHigh,   klines)) return false
     if (vNewHighActive && !passVolumeNewHigh(s, f.volumeNewHigh, klines)) return false
     if (vSurgeActive   && !passVolumeSurge(s,   f.volumeSurge,   klines)) return false
+    if (maAlignActive  && !passMaAlignment(s,   f.maAlignment,   klines)) return false
     return true
   })
 }
