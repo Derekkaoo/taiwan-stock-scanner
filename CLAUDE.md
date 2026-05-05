@@ -2,7 +2,7 @@
 
 > 這份文件給未來新 Cowork / Claude Code session 用。讀完這份就有完整背景，不用花時間摸索。
 > **配合 `SESSION_HANDOFF.md` 一起讀** — 那份是最近 session 的詳細交接 + 待辦事項。
-> 最後更新：2026-05-02（完成 Telegram M3+M4 全套 + N 日漲幅/創新高 filter + 4-section collapsible UI + TW 國定假日 smart-skip）
+> 最後更新：2026-05-05（新增三個扣抵值 / 突破系列 filter：N 日內突破 MA、明日 MA 續揚/下彎、未來 N 日 MA 易續揚 + mobile-friendly InfoPopup tooltip + 240MA 從 MA filter 選項移除）
 
 ## 一句話說明
 
@@ -230,6 +230,9 @@ type daily_screener.log | findstr /N "Run started"
 8. **Windows cmd 中文編碼坑** — `time` / `date` 顯示週幾用 cp950，`type ... | findstr` 對長行會炸。讀 JSON 一律加 `encoding='utf-8'`。`runner.py` 強制 stdout reconfigure 成 UTF-8 避免 emoji 推爆。
 9. **`stocks.json` 沒 market 欄位** — 還沒辦法直接從 stocks.json 判斷上市/上櫃。要做這個 filter 之前要先補欄位（建議從 Yahoo 的 `exchangeName` 抓）。
 10. **bat 跟 user push race** — 本地排程跑到 commit step 時，user 剛好同時 commit 同樣檔案，bat 的 `git diff --cached --quiet` 會誤判「沒變動」就 exit。資料還是會上去（被 user commit 帶上），但 bat 不會留下 `data: local backup auto-update` commit。
+11. **Cloudflare Pages commit message UTF-8 bug** — 多行中文 commit message + 特殊字元（`<=`、全形括號）會讓 wrangler 在傳 Cloudflare API 時截斷在 multi-byte UTF-8 char 中間，部署 fail with `Invalid commit message [code 8000111]`。Firebase 那邊 OK，只 Cloudflare 中招。**SOP**：commit message 一律單行短英文（中文敘述放 PR / handoff）。修法：`git commit --amend -m "短訊息"` + `git push --force-with-lease`。
+12. **多檔 commit 容易漏 add** — 5 檔以上的大 commit 容易漏 add（曾踩：FiltersBar 上去了 types/utils/App/Python 沒上去 → master build 壞）。**SOP**：commit 前 `git status` 確認 staged 數對。修法：補 commit 把缺檔再 push 一次即可。
+13. **localStorage stale schema** — `ALL_MA_PERIODS` 增刪期數時，舊使用者 `chartMaPeriods` 可能存著無效值（如拿掉 240 後仍有 240 殘留），`MAToggleBar` 不顯示但 chart 還在畫鬼魂線。**SOP**：之後改 localStorage-driven 的 schema 時，加 valid set 過濾（App.tsx useState init 時 filter against `ALL_MA_PERIODS`）。臨時解：教使用者 console 跑 `localStorage.removeItem('chartMaPeriods'); location.reload()`。
 
 ## 環境變數（`.env`）
 
