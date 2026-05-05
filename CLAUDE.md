@@ -233,6 +233,45 @@ type daily_screener.log | findstr /N "Run started"
 11. **Cloudflare Pages commit message UTF-8 bug** — 多行中文 commit message + 特殊字元（`<=`、全形括號）會讓 wrangler 在傳 Cloudflare API 時截斷在 multi-byte UTF-8 char 中間，部署 fail with `Invalid commit message [code 8000111]`。Firebase 那邊 OK，只 Cloudflare 中招。**SOP**：commit message 一律單行短英文（中文敘述放 PR / handoff）。修法：`git commit --amend -m "短訊息"` + `git push --force-with-lease`。
 12. **多檔 commit 容易漏 add** — 5 檔以上的大 commit 容易漏 add（曾踩：FiltersBar 上去了 types/utils/App/Python 沒上去 → master build 壞）。**SOP**：commit 前 `git status` 確認 staged 數對。修法：補 commit 把缺檔再 push 一次即可。
 13. **localStorage stale schema** — `ALL_MA_PERIODS` 增刪期數時，舊使用者 `chartMaPeriods` 可能存著無效值（如拿掉 240 後仍有 240 殘留），`MAToggleBar` 不顯示但 chart 還在畫鬼魂線。**SOP**：之後改 localStorage-driven 的 schema 時，加 valid set 過濾（App.tsx useState init 時 filter against `ALL_MA_PERIODS`）。臨時解：教使用者 console 跑 `localStorage.removeItem('chartMaPeriods'); location.reload()`。
+14. **🚨 `git reset --hard master` 在 feature/favorites-v2 是地雷** — 2026-05-05 踩過：當 master 被 amend 換 hash 後，誤用 `git reset --hard master` 想「同步」feature 分支，結果 feature 自己 95+ 個 commit（favorites/Telegram/strategies/migrations）**全部被覆蓋**。靠 git reflog 才救回（找到 8232137 是最後好狀態，cherry-pick 8 筆 master 新 commit 還原）。**鐵律：分支同步永遠用 merge，不用 reset --hard，除非你 100% 確定要丟掉當前分支歷史**。
+
+## 分支同步 SOP（master → feature/favorites-v2）
+
+每次 master 推完想同步到 feature/favorites-v2：
+
+```bash
+git checkout feature/favorites-v2
+git pull --rebase                      # 拉 cron bot 的 data commits
+git merge master --no-edit             # ✅ 安全：保留兩邊歷史
+git push origin feature/favorites-v2
+git checkout master
+```
+
+**絕對不要**：
+
+```bash
+git reset --hard master                # ❌ 會吃掉 feature 自己的 commits
+git reset --hard origin/master         # ❌ 同上
+```
+
+**如果 master 被 amend / rebase / force-pushed 換了 hash**：
+- feature 應該 `git merge master --no-edit`（會做 merge commit，OK）
+- 或者 `git rebase master`（更乾淨但要小心 — 會 rewrite feature 的 commits）
+- **不要** reset
+
+**事故救援步驟**（如果不小心 reset 把分支搞掉）：
+
+```bash
+git reflog --all | grep "feature/favorites-v2"           # 找最後好狀態的 commit hash
+git checkout feature/favorites-v2
+git reset --hard <good_hash>                              # 救回
+# 然後 cherry-pick 期間 master 多出來的 commit 一筆一筆套上
+git log --oneline <good_hash>..origin/master
+git cherry-pick <hash1> <hash2> ...
+git push --force-with-lease origin feature/favorites-v2
+```
+
+reflog 預設保留 30 天（可設 90 天），所以**24 小時內發現幾乎都救得回**。
 
 ## 環境變數（`.env`）
 
