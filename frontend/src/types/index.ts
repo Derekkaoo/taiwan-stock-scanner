@@ -235,6 +235,29 @@ export interface MaBreakoutFilter {
   period: MaBreakoutPeriod
 }
 
+/** 明日 MA 續揚 / 下彎（扣抵值預測）：
+ *  扣抵值 = N 天前的 close = bars[len - period].c
+ *  - direction='up'  → 命中條件：今日 close > 扣抵值（明日 MA 必然上揚，前提：明日 close ≥ 扣抵值）
+ *  - direction='down'→ 命中條件：今日 close < 扣抵值（明日 MA 必然下彎）
+ *  direction='off' 或 period=0 視為不啟用 */
+export type MaContinuationDirection = 'off' | 'up' | 'down'
+export type MaContinuationPeriod    = 0 | 5 | 10 | 20 | 60 | 120
+export interface MaContinuationFilter {
+  direction: MaContinuationDirection
+  period:    MaContinuationPeriod
+}
+
+/** 未來 N 日 MA 不下彎（扣抵保護）：
+ *  未來 N 天每天的扣抵值都 < 今日 close
+ *  → 即使股價盤整不漲，MA 仍會連續上揚 N 天
+ *  days = 0 或 period = 0 視為不啟用 */
+export type MaSustainedDays   = 0 | 3 | 5 | 10
+export type MaSustainedPeriod = 0 | 5 | 10 | 20 | 60 | 120
+export interface MaSustainedFilter {
+  days:   MaSustainedDays
+  period: MaSustainedPeriod
+}
+
 export interface Filters {
   volume:     FilterRange      // 5 日均成交量（千張）
   marketCap:  FilterRange      // 市值（億）
@@ -249,9 +272,11 @@ export interface Filters {
   nDayHigh:      NDayHighFilter
   volumeNewHigh: VolumeNewHighFilter
   volumeSurge:   VolumeSurgeFilter
-  maAlignment:   MaAlignmentFilter
-  maDirection:   MaDirectionFilter
-  maBreakout:    MaBreakoutFilter
+  maAlignment:    MaAlignmentFilter
+  maDirection:    MaDirectionFilter
+  maBreakout:     MaBreakoutFilter
+  maContinuation: MaContinuationFilter
+  maSustained:    MaSustainedFilter
 }
 
 export const FILTER_BOUNDS = {
@@ -292,9 +317,11 @@ export const DEFAULT_FILTERS: Filters = {
   nDayHigh:      { days: 0 },
   volumeNewHigh: { days: 0 },
   volumeSurge:   { baseline: 'ma5', multiplier: 0 },
-  maAlignment:   { periods: [] },  // 預設不啟用；user 啟用建議 [5,10,20]
-  maDirection:   { periods: [] },  // 預設不啟用
-  maBreakout:    { days: 0, period: 0 },  // 預設不啟用（兩個 chip 都需要選）
+  maAlignment:    { periods: [] },  // 預設不啟用；user 啟用建議 [5,10,20]
+  maDirection:    { periods: [] },  // 預設不啟用
+  maBreakout:     { days: 0, period: 0 },  // 預設不啟用（兩個 chip 都需要選）
+  maContinuation: { direction: 'off', period: 0 },  // 預設不啟用
+  maSustained:    { days: 0, period: 0 },           // 預設不啟用
 }
 
 export const INST_STREAK_OPTIONS: InstStreakDays[] = [0, 1, 3, 5, 20]
@@ -327,6 +354,16 @@ export const MA_DIRECTION_OPTIONS: MaDirectionPeriod[] = [5, 10, 20, 60, 120]
 
 export const MA_BREAKOUT_DAYS_OPTIONS:   MaBreakoutDays[]   = [0, 1, 3, 5, 10, 20]
 export const MA_BREAKOUT_PERIOD_OPTIONS: MaBreakoutPeriod[] = [0, 5, 10, 20, 60, 120]
+
+export const MA_CONTINUATION_DIRECTION_OPTIONS: Array<{ value: MaContinuationDirection; label: string }> = [
+  { value: 'off',  label: '關閉' },
+  { value: 'up',   label: '續揚 ▲' },
+  { value: 'down', label: '下彎 ▼' },
+]
+export const MA_CONTINUATION_PERIOD_OPTIONS: MaContinuationPeriod[] = [0, 5, 10, 20, 60, 120]
+
+export const MA_SUSTAINED_DAYS_OPTIONS:   MaSustainedDays[]   = [0, 3, 5, 10]
+export const MA_SUSTAINED_PERIOD_OPTIONS: MaSustainedPeriod[] = [0, 5, 10, 20, 60, 120]
 
 // ============================================================
 //  進場分析（多頭觸發回測研究）
