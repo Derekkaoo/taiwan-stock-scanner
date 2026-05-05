@@ -201,7 +201,8 @@ export default function App() {
     filters.nDayReturn.days !== 0 ||
     filters.nDayHigh.days !== 0 ||
     filters.volumeNewHigh.days !== 0 ||
-    filters.volumeSurge.multiplier !== 0
+    filters.volumeSurge.multiplier !== 0 ||
+    (filters.maAlignment?.periods?.length ?? 0) >= 2
   useEffect(() => {
     if (klineFiltersActive) {
       // loadFromJson 內部會跳過已 cached 的，重複呼叫等於 no-op

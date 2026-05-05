@@ -8,6 +8,7 @@ import type {
   Filters, GrowthQuarters, InstStreakDays, MarketFilter,
   NReturnDays, NHighDays,
   VolumeNewHighDays, VolumeSurgeBaseline, VolumeSurgeMultiplier,
+  MaAlignmentPeriod,
   StockRow,
 } from '../types'
 import {
@@ -16,6 +17,7 @@ import {
   INST_STREAK_OPTIONS, MARKET_OPTIONS,
   N_RETURN_OPTIONS, N_HIGH_OPTIONS,
   VOLUME_NEW_HIGH_OPTIONS, VOLUME_SURGE_BASELINE_OPTIONS, VOLUME_SURGE_MULTIPLIER_OPTIONS,
+  MA_ALIGNMENT_OPTIONS, MA_ALIGNMENT_DEFAULT,
 } from '../types'
 import { RangeSlider } from './RangeSlider'
 import { IndustryChips } from './IndustryChips'
@@ -69,6 +71,7 @@ function activeCountForSection(key: SectionKey, f: Filters): number {
       if (f.nDayHigh.days   !== 0) n++
       if (f.volumeNewHigh.days !== 0) n++
       if (f.volumeSurge.multiplier !== 0) n++
+      if ((f.maAlignment?.periods?.length ?? 0) >= 2) n++
       return n
     case 'chips':
       if (ranged(f.delta, DEFAULT_FILTERS.delta)) n++
@@ -166,6 +169,18 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     set({ volumeSurge: { ...filters.volumeSurge, baseline: b } })
   const setVolumeSurgeMultiplier = (m: VolumeSurgeMultiplier) =>
     set({ volumeSurge: { ...filters.volumeSurge, multiplier: m } })
+
+  const toggleMaPeriod = (p: MaAlignmentPeriod) => {
+    const current = filters.maAlignment?.periods ?? []
+    const next = current.includes(p)
+      ? current.filter(x => x !== p)
+      : [...current, p].sort((a, b) => a - b)
+    set({ maAlignment: { periods: next as MaAlignmentPeriod[] } })
+  }
+  const resetMaAlignment = () =>
+    set({ maAlignment: { periods: MA_ALIGNMENT_DEFAULT } })
+  const clearMaAlignment = () =>
+    set({ maAlignment: { periods: [] } })
 
   // === 個別 sliders（拆出來方便分到各 section）===
   const volumeSlider = (
@@ -505,6 +520,77 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     </div>
   )
 
+  // 均線多頭排列 block（多選 chip + 預覽顯示順序）
+  const maPeriodsSelected = (filters.maAlignment?.periods ?? [])
+    .slice()
+    .sort((a, b) => a - b)
+  const maAlignmentBlock = (
+    <div className="flex items-center flex-wrap gap-2">
+      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>均線多頭排列</span>
+      <div className="flex items-center gap-1 flex-wrap">
+        {MA_ALIGNMENT_OPTIONS.map(p => {
+          const active = maPeriodsSelected.includes(p)
+          return (
+            <button
+              key={p}
+              onClick={() => toggleMaPeriod(p)}
+              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              style={{
+                background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                color:       active ? '#fff' : 'var(--color-text-secondary)',
+                fontWeight:  active ? 600 : 400,
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {p}MA
+            </button>
+          )
+        })}
+      </div>
+      {/* 預覽：選了 2+ 才顯示順序 */}
+      {maPeriodsSelected.length >= 2 && (
+        <span className="text-[10px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
+          {maPeriodsSelected.map(p => `${p}MA`).join(' > ')}
+        </span>
+      )}
+      {maPeriodsSelected.length === 1 && (
+        <span className="text-[10px] italic" style={{ color: 'var(--color-text-muted)' }}>
+          （至少選 2 個才生效）
+        </span>
+      )}
+      <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
+      <button
+        onClick={resetMaAlignment}
+        className="text-[10px] px-2 py-0.5 rounded border transition-colors"
+        style={{
+          background: 'var(--color-bg-600)',
+          borderColor: 'var(--color-border)',
+          color: 'var(--color-text-secondary)',
+          cursor: 'pointer',
+        }}
+        title="預設 5/10/20MA"
+      >
+        預設
+      </button>
+      {maPeriodsSelected.length > 0 && (
+        <button
+          onClick={clearMaAlignment}
+          className="text-[10px] px-2 py-0.5 rounded border transition-colors"
+          style={{
+            background: 'var(--color-bg-600)',
+            borderColor: 'var(--color-border)',
+            color: 'var(--color-text-secondary)',
+            cursor: 'pointer',
+          }}
+        >
+          清除
+        </button>
+      )}
+    </div>
+  )
+
   const absEnabled = !!filters.absValue.quarter
   const absValueBlock = (
     <div className="flex flex-col gap-2">
@@ -583,6 +669,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{nHighBlock}</div>
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{volumeNewHighBlock}</div>
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{volumeSurgeBlock}</div>
+        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maAlignmentBlock}</div>
       </div>
     ),
     chips: (
