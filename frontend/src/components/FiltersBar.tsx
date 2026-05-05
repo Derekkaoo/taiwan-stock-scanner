@@ -10,6 +10,8 @@ import type {
   VolumeNewHighDays, VolumeSurgeBaseline, VolumeSurgeMultiplier,
   MaAlignmentPeriod, MaDirectionPeriod,
   MaBreakoutDays, MaBreakoutPeriod,
+  MaContinuationDirection, MaContinuationPeriod,
+  MaSustainedDays, MaSustainedPeriod,
   StockRow,
 } from '../types'
 import {
@@ -21,6 +23,8 @@ import {
   MA_ALIGNMENT_OPTIONS, MA_ALIGNMENT_DEFAULT,
   MA_DIRECTION_OPTIONS,
   MA_BREAKOUT_DAYS_OPTIONS, MA_BREAKOUT_PERIOD_OPTIONS,
+  MA_CONTINUATION_DIRECTION_OPTIONS, MA_CONTINUATION_PERIOD_OPTIONS,
+  MA_SUSTAINED_DAYS_OPTIONS, MA_SUSTAINED_PERIOD_OPTIONS,
 } from '../types'
 import { RangeSlider } from './RangeSlider'
 import { IndustryChips } from './IndustryChips'
@@ -77,6 +81,8 @@ function activeCountForSection(key: SectionKey, f: Filters): number {
       if ((f.maAlignment?.periods?.length ?? 0) >= 2) n++
       if ((f.maDirection?.periods?.length ?? 0) >= 1) n++
       if ((f.maBreakout?.days ?? 0) !== 0 && (f.maBreakout?.period ?? 0) !== 0) n++
+      if ((f.maContinuation?.direction ?? 'off') !== 'off' && (f.maContinuation?.period ?? 0) !== 0) n++
+      if ((f.maSustained?.days ?? 0) !== 0 && (f.maSustained?.period ?? 0) !== 0) n++
       return n
     case 'chips':
       if (ranged(f.delta, DEFAULT_FILTERS.delta)) n++
@@ -203,6 +209,20 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     set({ maBreakout: { ...filters.maBreakout, period: p } })
   const clearMaBreakout = () =>
     set({ maBreakout: { days: 0, period: 0 } })
+
+  const setMaContDirection = (d: MaContinuationDirection) =>
+    set({ maContinuation: { ...filters.maContinuation, direction: d } })
+  const setMaContPeriod = (p: MaContinuationPeriod) =>
+    set({ maContinuation: { ...filters.maContinuation, period: p } })
+  const clearMaContinuation = () =>
+    set({ maContinuation: { direction: 'off', period: 0 } })
+
+  const setMaSustDays = (d: MaSustainedDays) =>
+    set({ maSustained: { ...filters.maSustained, days: d } })
+  const setMaSustPeriod = (p: MaSustainedPeriod) =>
+    set({ maSustained: { ...filters.maSustained, period: p } })
+  const clearMaSustained = () =>
+    set({ maSustained: { days: 0, period: 0 } })
 
   // === 個別 sliders（拆出來方便分到各 section）===
   const volumeSlider = (
@@ -755,6 +775,202 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     </div>
   )
 
+  // 明日 MA 續揚 / 下彎 block（扣抵值預測）
+  const maContDir    = filters.maContinuation?.direction ?? 'off'
+  const maContPeriod = filters.maContinuation?.period    ?? 0
+  const maContActive = maContDir !== 'off' && maContPeriod !== 0
+  const maContinuationBlock = (
+    <div className="flex flex-col gap-1.5">
+      <div className="flex items-center flex-wrap gap-2">
+        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>明日 MA 續揚 / 下彎</span>
+        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>方向</span>
+        <div className="flex items-center gap-1 flex-wrap">
+          {MA_CONTINUATION_DIRECTION_OPTIONS.map(opt => {
+            const active = maContDir === opt.value
+            return (
+              <button
+                key={opt.value}
+                onClick={() => setMaContDirection(opt.value)}
+                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+                style={{
+                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                  color:       active ? '#fff' : 'var(--color-text-secondary)',
+                  fontWeight:  active ? 600 : 400,
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {opt.label}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+      <div className="flex items-center flex-wrap gap-2">
+        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)', visibility: 'hidden' }}>明日 MA 續揚 / 下彎</span>
+        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>MA 週期</span>
+        <div className="flex items-center gap-1 flex-wrap">
+          {MA_CONTINUATION_PERIOD_OPTIONS.map(p => {
+            const active = maContPeriod === p
+            return (
+              <button
+                key={p}
+                onClick={() => setMaContPeriod(p)}
+                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+                style={{
+                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                  color:       active ? '#fff' : 'var(--color-text-secondary)',
+                  fontWeight:  active ? 600 : 400,
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {p === 0 ? '關閉' : `${p}MA`}
+              </button>
+            )
+          })}
+        </div>
+        {maContActive && (
+          <span className="text-[10px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
+            明日 {maContPeriod}MA {maContDir === 'up' ? '續揚 ▲' : '下彎 ▼'}
+          </span>
+        )}
+        {(maContDir !== 'off' || maContPeriod !== 0) && !maContActive && (
+          <span className="text-[10px] italic" style={{ color: 'var(--color-text-muted)' }}>
+            （方向與 MA 都要選才生效）
+          </span>
+        )}
+        {(maContDir !== 'off' || maContPeriod !== 0) && (
+          <>
+            <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
+            <button
+              onClick={clearMaContinuation}
+              className="text-[10px] px-2 py-0.5 rounded border transition-colors"
+              style={{
+                background: 'var(--color-bg-600)',
+                borderColor: 'var(--color-border)',
+                color: 'var(--color-text-secondary)',
+                cursor: 'pointer',
+              }}
+            >
+              清除
+            </button>
+          </>
+        )}
+      </div>
+    </div>
+  )
+
+  // 未來 N 日 MA 易續揚 block（扣抵保護）+ tooltip
+  const maSustDays   = filters.maSustained?.days   ?? 0
+  const maSustPeriod = filters.maSustained?.period ?? 0
+  const maSustActive = maSustDays !== 0 && maSustPeriod !== 0
+  const maSustainedBlock = (
+    <div className="flex flex-col gap-1.5">
+      <div className="flex items-center flex-wrap gap-2">
+        <span className="text-[10px] flex items-center gap-1" style={{ color: 'var(--color-text-muted)' }}>
+          未來 N 日 MA 易續揚
+          <span
+            className="inline-block"
+            style={{
+              fontSize: 10,
+              color: 'var(--color-accent-cyan)',
+              opacity: 0.7,
+              cursor: 'help',
+              userSelect: 'none',
+            }}
+            title={
+              '未來 N 個交易日內，即使股價盤整不漲、甚至小跌（容忍度 ≈ 現價與扣抵值差距），\n' +
+              'MA 仍會連續上揚。\n\n' +
+              '例：選 5 日 + 20MA → 命中股票表示「未來 5 天即使每天小跌 1-3%，MA-20 仍會續揚」。\n\n' +
+              '又稱「黃金扣抵期」— 技術派常用來確認波段安全進場區。'
+            }
+          >
+            ⓘ
+          </span>
+        </span>
+        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>天數</span>
+        <div className="flex items-center gap-1 flex-wrap">
+          {MA_SUSTAINED_DAYS_OPTIONS.map(d => {
+            const active = maSustDays === d
+            return (
+              <button
+                key={d}
+                onClick={() => setMaSustDays(d)}
+                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+                style={{
+                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                  color:       active ? '#fff' : 'var(--color-text-secondary)',
+                  fontWeight:  active ? 600 : 400,
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {d === 0 ? '關閉' : `${d}日`}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+      <div className="flex items-center flex-wrap gap-2">
+        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)', visibility: 'hidden' }}>未來 N 日 MA 易續揚</span>
+        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>MA 週期</span>
+        <div className="flex items-center gap-1 flex-wrap">
+          {MA_SUSTAINED_PERIOD_OPTIONS.map(p => {
+            const active = maSustPeriod === p
+            return (
+              <button
+                key={p}
+                onClick={() => setMaSustPeriod(p)}
+                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+                style={{
+                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                  color:       active ? '#fff' : 'var(--color-text-secondary)',
+                  fontWeight:  active ? 600 : 400,
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {p === 0 ? '關閉' : `${p}MA`}
+              </button>
+            )
+          })}
+        </div>
+        {maSustActive && (
+          <span className="text-[10px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
+            未來 {maSustDays} 日 {maSustPeriod}MA 易續揚
+          </span>
+        )}
+        {(maSustDays !== 0 || maSustPeriod !== 0) && !maSustActive && (
+          <span className="text-[10px] italic" style={{ color: 'var(--color-text-muted)' }}>
+            （天數與 MA 都要選才生效）
+          </span>
+        )}
+        {(maSustDays !== 0 || maSustPeriod !== 0) && (
+          <>
+            <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
+            <button
+              onClick={clearMaSustained}
+              className="text-[10px] px-2 py-0.5 rounded border transition-colors"
+              style={{
+                background: 'var(--color-bg-600)',
+                borderColor: 'var(--color-border)',
+                color: 'var(--color-text-secondary)',
+                cursor: 'pointer',
+              }}
+            >
+              清除
+            </button>
+          </>
+        )}
+      </div>
+    </div>
+  )
+
   const absEnabled = !!filters.absValue.quarter
   const absValueBlock = (
     <div className="flex flex-col gap-2">
@@ -836,6 +1052,8 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maAlignmentBlock}</div>
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maDirectionBlock}</div>
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maBreakoutBlock}</div>
+        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maContinuationBlock}</div>
+        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maSustainedBlock}</div>
       </div>
     ),
     chips: (
