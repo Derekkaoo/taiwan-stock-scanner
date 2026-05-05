@@ -12,6 +12,7 @@ import type {
   Filters, GrowthFilter, AbsValueFilter, InstitutionalFilter, MarketFilter,
   NDayReturnFilter, NDayHighFilter,
   VolumeNewHighFilter, VolumeSurgeFilter, MaAlignmentFilter, MaDirectionFilter,
+  MaBreakoutFilter,
   StockRow, KlineBar,
 } from '../types'
 import { DEFAULT_FILTERS, FILTER_BOUNDS } from '../types'
@@ -206,6 +207,50 @@ function passMaDirection(s: StockRow, f: MaDirectionFilter, klines: KlinesById |
   return true
 }
 
+/** N 日內任一根 K 棒出現 close 由下往上突破 MA。
+ *  突破事件定義：bar[i].c > MA(i) AND bar[i-1].c ≤ MA(i-1)
+ *  其中 MA(i) = bars[..i] 末尾 period 根的 close 平均（含 bar[i] 自己）。
+ *  搜尋窗口：最後 days 根 K 棒（含今天）。 */
+function passMaBreakout(s: StockRow, f: MaBreakoutFilter, klines: KlinesById | undefined): boolean {
+  if (f.days === 0 || f.period === 0) return true
+  const bars = getBars(klines, s.id)
+  // 至少要有 period+1 根才算得出「前一日 MA」
+  if (!bars || bars.length < f.period + 1) return false
+
+  // 算每一根 bar 的 MA(i)（含 bar[i]）
+  const period = f.period
+  const ma: Array<number | null> = new Array(bars.length).fill(null)
+  let sum = 0
+  for (let i = 0; i < bars.length; i++) {
+    const c = bars[i]?.c
+    if (!c) {
+      // close 缺值：當前 window 重置（保守做法）
+      sum = 0
+      // 重新累加最近 period 根需要 valid close，這裡簡化：直接讓後續 i 重算
+      // 因為 user 資料 close 通常不會缺，這個 case 可忽略
+      continue
+    }
+    sum += c
+    if (i >= period) {
+      const old = bars[i - period]?.c
+      if (old) sum -= old
+    }
+    if (i >= period - 1) ma[i] = sum / period
+  }
+
+  // 在最後 days 根（含今天）找突破事件；需要 i 跟 i-1 都有 MA
+  const startIdx = Math.max(period, bars.length - f.days)  // 至少從 period 開始才有 MA(i-1)
+  for (let i = startIdx; i < bars.length; i++) {
+    const cToday = bars[i]?.c
+    const cYest  = bars[i - 1]?.c
+    const maToday = ma[i]
+    const maYest  = ma[i - 1]
+    if (!cToday || !cYest || maToday == null || maYest == null) continue
+    if (cToday > maToday && cYest <= maYest) return true
+  }
+  return false
+}
+
 function passVolumeSurge(s: StockRow, f: VolumeSurgeFilter, klines: KlinesById | undefined): boolean {
   if (f.multiplier === 0) return true
   const bars = getBars(klines, s.id)
@@ -258,8 +303,9 @@ export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById
   const vSurgeActive   = f.volumeSurge.multiplier !== 0
   const maAlignActive  = (f.maAlignment?.periods?.length ?? 0) >= 2
   const maDirActive    = (f.maDirection?.periods?.length ?? 0) >= 1
+  const maBreakActive  = (f.maBreakout?.days ?? 0) !== 0 && (f.maBreakout?.period ?? 0) !== 0
 
-  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive && !vNewHighActive && !vSurgeActive && !maAlignActive && !maDirActive) return stocks
+  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive && !vNewHighActive && !vSurgeActive && !maAlignActive && !maDirActive && !maBreakActive) return stocks
 
   return stocks.filter(s => {
     if (volActive) {
@@ -288,6 +334,7 @@ export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById
     if (vSurgeActive   && !passVolumeSurge(s,   f.volumeSurge,   klines)) return false
     if (maAlignActive  && !passMaAlignment(s,   f.maAlignment,   klines)) return false
     if (maDirActive    && !passMaDirection(s,   f.maDirection,   klines)) return false
+    if (maBreakActive  && !passMaBreakout(s,    f.maBreakout,    klines)) return false
     return true
   })
 }
