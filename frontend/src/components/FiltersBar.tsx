@@ -46,11 +46,36 @@ const OM_SCALE         = makeLinearScale(FILTER_BOUNDS.operatingMargin.min, FILT
 const EPS_SCALE        = makePiecewiseScale([-10, 0, 5, 20, 100])         // EPS：0~5 大公司密集，>20 少數
 const N_RETURN_SCALE   = makeLinearScale(FILTER_BOUNDS.nDayReturn.min, FILTER_BOUNDS.nDayReturn.max)
 
-/** 手機友善的 tooltip — 點擊 ⓘ 開關（HTML title= 在 mobile 不會顯示） */
+/** 手機友善的 tooltip — 點擊 ⓘ 開關（HTML title= 在 mobile 不會顯示）
+ *  用 position: fixed + viewport bounds clamp，避免被父層 overflow 切到、避免衝出螢幕 */
 function InfoPopup({ text }: { text: string }) {
   const [open, setOpen] = useState(false)
+  const [pos, setPos] = useState<{ top: number; left: number } | null>(null)
   const ref = useRef<HTMLSpanElement>(null)
 
+  const POPUP_W = 280
+  const MARGIN  = 8
+
+  // ⓘ 點開時 → 量 icon 位置 → 算 popup 該在哪
+  useEffect(() => {
+    if (!open || !ref.current) {
+      setPos(null)
+      return
+    }
+    const rect = ref.current.getBoundingClientRect()
+    const vw   = window.innerWidth
+    // 想以 icon 中心為水平中心，但 clamp 在 viewport 邊界
+    const desiredCenter = rect.left + rect.width / 2
+    let left = desiredCenter - POPUP_W / 2
+    if (left < MARGIN) left = MARGIN
+    if (left + POPUP_W > vw - MARGIN) left = vw - POPUP_W - MARGIN
+    setPos({
+      top:  rect.top - MARGIN,  // popup 底部離 icon 上緣 8px
+      left,
+    })
+  }, [open])
+
+  // 外點關閉
   useEffect(() => {
     if (!open) return
     const handler = (e: MouseEvent | TouchEvent) => {
@@ -67,7 +92,7 @@ function InfoPopup({ text }: { text: string }) {
   }, [open])
 
   return (
-    <span ref={ref} style={{ position: 'relative', display: 'inline-block' }}>
+    <span ref={ref} style={{ display: 'inline-block' }}>
       <span
         onClick={(e) => { e.stopPropagation(); setOpen(v => !v) }}
         style={{
@@ -82,12 +107,12 @@ function InfoPopup({ text }: { text: string }) {
       >
         ⓘ
       </span>
-      {open && (
+      {open && pos && (
         <div style={{
-          position: 'absolute',
-          bottom: '120%',
-          left: '50%',
-          transform: 'translateX(-50%)',
+          position: 'fixed',
+          top:  pos.top,
+          left: pos.left,
+          transform: 'translateY(-100%)',  // 整個 popup 移到 top 點之上
           background: 'var(--color-bg-800)',
           border: '1px solid var(--color-border)',
           borderRadius: 6,
@@ -95,8 +120,8 @@ function InfoPopup({ text }: { text: string }) {
           fontSize: 11,
           color: 'var(--color-text-primary)',
           whiteSpace: 'pre-line',  // 尊重 \n 換行
-          width: 280,
-          maxWidth: '85vw',
+          width: POPUP_W,
+          maxWidth: `calc(100vw - ${MARGIN * 2}px)`,
           zIndex: 9999,
           boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
           lineHeight: 1.5,
