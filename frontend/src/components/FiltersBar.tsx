@@ -3,7 +3,7 @@
 //  桌機 + 手機都用 collapsible sections（基本面 / 技術面 / 籌碼面 / 其他）
 //  默認全收起；展開狀態持久化到 localStorage
 // ============================================================
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type {
   Filters, GrowthQuarters, InstStreakDays, MarketFilter,
   NReturnDays, NHighDays,
@@ -45,6 +45,69 @@ const GM_SCALE         = makeLinearScale(FILTER_BOUNDS.grossMargin.min,     FILT
 const OM_SCALE         = makeLinearScale(FILTER_BOUNDS.operatingMargin.min, FILTER_BOUNDS.operatingMargin.max)
 const EPS_SCALE        = makePiecewiseScale([-10, 0, 5, 20, 100])         // EPS：0~5 大公司密集，>20 少數
 const N_RETURN_SCALE   = makeLinearScale(FILTER_BOUNDS.nDayReturn.min, FILTER_BOUNDS.nDayReturn.max)
+
+/** 手機友善的 tooltip — 點擊 ⓘ 開關（HTML title= 在 mobile 不會顯示） */
+function InfoPopup({ text }: { text: string }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLSpanElement>(null)
+
+  useEffect(() => {
+    if (!open) return
+    const handler = (e: MouseEvent | TouchEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    document.addEventListener('touchstart', handler)
+    return () => {
+      document.removeEventListener('mousedown', handler)
+      document.removeEventListener('touchstart', handler)
+    }
+  }, [open])
+
+  return (
+    <span ref={ref} style={{ position: 'relative', display: 'inline-block' }}>
+      <span
+        onClick={(e) => { e.stopPropagation(); setOpen(v => !v) }}
+        style={{
+          cursor: 'pointer',
+          fontSize: 11,
+          color: 'var(--color-accent-cyan)',
+          opacity: 0.7,
+          userSelect: 'none',
+          padding: '2px 4px',  // 加大 tap target（手機）
+          marginLeft: 2,
+        }}
+      >
+        ⓘ
+      </span>
+      {open && (
+        <div style={{
+          position: 'absolute',
+          bottom: '120%',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          background: 'var(--color-bg-800)',
+          border: '1px solid var(--color-border)',
+          borderRadius: 6,
+          padding: '8px 10px',
+          fontSize: 11,
+          color: 'var(--color-text-primary)',
+          whiteSpace: 'pre-line',  // 尊重 \n 換行
+          width: 280,
+          maxWidth: '85vw',
+          zIndex: 9999,
+          boxShadow: '0 4px 12px rgba(0,0,0,0.4)',
+          lineHeight: 1.5,
+          textAlign: 'left',
+        }}>
+          {text}
+        </div>
+      )}
+    </span>
+  )
+}
 
 const EPS = 1e-6
 const ranged = (a: [number, number], b: [number, number]) =>
@@ -870,26 +933,15 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
   const maSustainedBlock = (
     <div className="flex flex-col gap-1.5">
       <div className="flex items-center flex-wrap gap-2">
-        <span className="text-[10px] flex items-center gap-1" style={{ color: 'var(--color-text-muted)' }}>
+        <span className="text-[10px] flex items-center" style={{ color: 'var(--color-text-muted)' }}>
           未來 N 日 MA 易續揚
-          <span
-            className="inline-block"
-            style={{
-              fontSize: 10,
-              color: 'var(--color-accent-cyan)',
-              opacity: 0.7,
-              cursor: 'help',
-              userSelect: 'none',
-            }}
-            title={
-              '未來 N 個交易日內，即使股價盤整不漲、甚至小跌（容忍度 ≈ 現價與扣抵值差距），\n' +
-              'MA 仍會連續上揚。\n\n' +
+          <InfoPopup
+            text={
+              '未來 N 個交易日內，即使股價盤整不漲、甚至小跌（容忍度 ≈ 現價與扣抵值差距），MA 仍會連續上揚。\n\n' +
               '例：選 5 日 + 20MA → 命中股票表示「未來 5 天即使每天小跌 1-3%，MA-20 仍會續揚」。\n\n' +
               '又稱「黃金扣抵期」— 技術派常用來確認波段安全進場區。'
             }
-          >
-            ⓘ
-          </span>
+          />
         </span>
         <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>天數</span>
         <div className="flex items-center gap-1 flex-wrap">
