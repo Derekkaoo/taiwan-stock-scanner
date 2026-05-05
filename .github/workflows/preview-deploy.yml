@@ -1,9 +1,15 @@
 name: 部署 Preview 分支
 
+# 非 master 分支（如 feature/favorites-v2）push 時自動 build + deploy 到 Cloudflare Pages preview URL。
+# master 走 deploy.yml；這裡只 cover 其他 branch，避免 master 被雙跑。
+#
+# 註：本檔案在 4/25 commit 68a0a75 首次加入，後續某次 git 操作把它從 master/feature 上抹掉，
+#     導致 preview URL 從 5/5 7:27 PM 後不再自動更新。已重新加回。
+
 on:
   push:
     branches-ignore:
-      - master    # master 走 weekly-update.yml 的完整 pipeline；這裡只處理其他分支
+      - master
 
 jobs:
   preview:
@@ -30,7 +36,7 @@ jobs:
           cd frontend
           npm run build
 
-      - name: 複製資料到 dist
+      - name: 複製資料到 dist（給 SPA 直接讀）
         run: |
           mkdir -p frontend/dist/data
           cp frontend/public/data/stocks.json frontend/dist/data/stocks.json 2>/dev/null || true
