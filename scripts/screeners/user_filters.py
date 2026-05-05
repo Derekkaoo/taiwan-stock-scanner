@@ -69,6 +69,7 @@ DEFAULT_FILTERS: Dict[str, Any] = {
     "volumeNewHigh": {"days": 0},
     "volumeSurge":   {"baseline": "ma5", "multiplier": 0},
     "maAlignment":   {"periods": []},
+    "maDirection":   {"periods": []},
 }
 
 
@@ -275,6 +276,23 @@ def _pass_ma_alignment(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, L
     return True
 
 
+def _pass_ma_direction(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
+    periods = f.get("periods") or []
+    if len(periods) == 0:
+        return True
+    bars = klines.get(str(s.get("id", ""))) if klines else None
+    if not bars or len(bars) < 2:
+        return False
+    for p in periods:
+        today_ma = _calc_last_ma(bars, p)
+        yest_ma  = _calc_last_ma(bars[:-1], p)
+        if today_ma is None or yest_ma is None:
+            return False
+        if today_ma <= yest_ma:
+            return False
+    return True
+
+
 def _pass_volume_surge(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
     mult = f.get("multiplier", 0)
     if mult == 0:
@@ -359,11 +377,14 @@ def apply_filters(
     ma_align = f["maAlignment"]
     ma_align_active = len(ma_align.get("periods") or []) >= 2
 
+    ma_dir = f["maDirection"]
+    ma_dir_active = len(ma_dir.get("periods") or []) >= 1
+
     # 沒有任何 filter 啟用 → 全傳回（這跟前端一致：等同沒篩）
     if not (vol_active or mc_active or d_active or r_active or ind_active or
             grow_active or abs_active or inst_active or market_active or
             n_ret_active or n_high_active or v_new_high_active or v_surge_active or
-            ma_align_active):
+            ma_align_active or ma_dir_active):
         return list(stocks)
 
     out: List[Dict[str, Any]] = []
@@ -403,6 +424,8 @@ def apply_filters(
         if v_surge_active and not _pass_volume_surge(s, v_surge, klines):
             continue
         if ma_align_active and not _pass_ma_alignment(s, ma_align, klines):
+            continue
+        if ma_dir_active and not _pass_ma_direction(s, ma_dir, klines):
             continue
         out.append(s)
     return out
@@ -451,6 +474,10 @@ def _merge_with_defaults(f: Dict[str, Any]) -> Dict[str, Any]:
     out["maAlignment"] = {
         **DEFAULT_FILTERS["maAlignment"],
         **(f.get("maAlignment") or {}),
+    }
+    out["maDirection"] = {
+        **DEFAULT_FILTERS["maDirection"],
+        **(f.get("maDirection") or {}),
     }
     return out
 
