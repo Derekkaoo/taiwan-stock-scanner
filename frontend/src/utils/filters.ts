@@ -11,7 +11,7 @@
 import type {
   Filters, GrowthFilter, AbsValueFilter, InstitutionalFilter, MarketFilter,
   NDayReturnFilter, NDayHighFilter,
-  VolumeNewHighFilter, VolumeSurgeFilter, MaAlignmentFilter,
+  VolumeNewHighFilter, VolumeSurgeFilter, MaAlignmentFilter, MaDirectionFilter,
   StockRow, KlineBar,
 } from '../types'
 import { DEFAULT_FILTERS, FILTER_BOUNDS } from '../types'
@@ -191,6 +191,21 @@ function passMaAlignment(s: StockRow, f: MaAlignmentFilter, klines: KlinesById |
   return true
 }
 
+function passMaDirection(s: StockRow, f: MaDirectionFilter, klines: KlinesById | undefined): boolean {
+  const periods = f.periods || []
+  if (periods.length === 0) return true
+  const bars = getBars(klines, s.id)
+  if (!bars || bars.length < 2) return false
+  // 每條選中的 MA 都要求「今日 MA > 昨日 MA」（AND）
+  for (const p of periods) {
+    const today     = calcLastMA(bars, p)
+    const yesterday = calcLastMA(bars.slice(0, -1), p)  // 拿掉最新一根當「昨日」
+    if (today == null || yesterday == null) return false
+    if (today <= yesterday) return false
+  }
+  return true
+}
+
 function passVolumeSurge(s: StockRow, f: VolumeSurgeFilter, klines: KlinesById | undefined): boolean {
   if (f.multiplier === 0) return true
   const bars = getBars(klines, s.id)
@@ -242,8 +257,9 @@ export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById
   const vNewHighActive = f.volumeNewHigh.days !== 0
   const vSurgeActive   = f.volumeSurge.multiplier !== 0
   const maAlignActive  = (f.maAlignment?.periods?.length ?? 0) >= 2
+  const maDirActive    = (f.maDirection?.periods?.length ?? 0) >= 1
 
-  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive && !vNewHighActive && !vSurgeActive && !maAlignActive) return stocks
+  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive && !vNewHighActive && !vSurgeActive && !maAlignActive && !maDirActive) return stocks
 
   return stocks.filter(s => {
     if (volActive) {
@@ -271,6 +287,7 @@ export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById
     if (vNewHighActive && !passVolumeNewHigh(s, f.volumeNewHigh, klines)) return false
     if (vSurgeActive   && !passVolumeSurge(s,   f.volumeSurge,   klines)) return false
     if (maAlignActive  && !passMaAlignment(s,   f.maAlignment,   klines)) return false
+    if (maDirActive    && !passMaDirection(s,   f.maDirection,   klines)) return false
     return true
   })
 }
