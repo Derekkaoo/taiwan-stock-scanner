@@ -57,6 +57,11 @@
 
 13. **localStorage `chartMaPeriods` 殘留** — 把 `ALL_MA_PERIODS` 中的某個值（如 240）拿掉後，舊使用者 localStorage 仍存著 `[20, 240]`。`MAToggleBar` iterate `ALL_MA_PERIODS` 不顯示 240 chip，但 `CandlestickSVG` 直接 iterate `maPeriods` state → 鬼魂 MA240 永遠在圖上、user 沒地方關掉它。臨時解：教使用者 console 跑 `localStorage.removeItem('chartMaPeriods'); location.reload()`。**長期 TODO**：`App.tsx` 讀 localStorage 時 filter against `ALL_MA_PERIODS`，暫未做（user 沒推 240MA 那版，影響只限我們測試帳號）
 
+14. **🚨 災情：`git reset --hard master` 把 feature/favorites-v2 全砍掉** — 5/5 晚上踩到。當時 master 因 Cloudflare commit message bug 做了 amend force-push 換 hash，誤以為 feature 分支需要 `reset --hard master` 對齊。**結果 feature 上 95+ 個 commit（含 favorites/Telegram/strategies/migrations 全套）瞬間被覆蓋**。Cloudflare preview URL 也跟著掛。
+    - 救援：`git reflog --all` 找出 `8232137` 是最後好狀態 → reset 回去 → 把 master 後續 8 筆 commit 一筆一筆 `git cherry-pick`（46037ad 已被 feature 自帶過，skip；其他乾淨套，preview-deploy.yml 一個 conflict 取 master 版） → build 驗證 → `--force-with-lease` 推回去
+    - **長期 SOP（已寫進 CLAUDE.md quirk #14）**：分支同步**永遠用 `git merge master --no-edit`，不要用 `git reset --hard master`**。reset --hard 只能用在「要丟掉當前分支歷史」這種明確意圖。
+    - 教訓：寫指令給 user 之前要先想清楚對方分支歷史是不是 superset。當時應該說 `git merge master --no-edit`（會做 merge commit 保留兩邊），而不是 reset。
+
 ---
 
 ## 📋 接續待辦（針對今天工作）
