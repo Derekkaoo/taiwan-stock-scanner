@@ -70,6 +70,7 @@ DEFAULT_FILTERS: Dict[str, Any] = {
     "volumeSurge":   {"baseline": "ma5", "multiplier": 0},
     "maAlignment":   {"periods": []},
     "maDirection":   {"periods": []},
+    "maBreakout":    {"days": 0, "period": 0},
 }
 
 
@@ -293,6 +294,49 @@ def _pass_ma_direction(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, L
     return True
 
 
+def _pass_ma_breakout(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
+    """N 日內任一根 K 棒出現 close 由下往上突破 MA。
+    突破事件：bar[i].c > MA(i) AND bar[i-1].c <= MA(i-1)
+    搜尋窗口：最後 days 根 K 棒（含今天）。
+    """
+    days = f.get("days", 0) or 0
+    period = f.get("period", 0) or 0
+    if days == 0 or period == 0:
+        return True
+    bars = klines.get(str(s.get("id", ""))) if klines else None
+    if not bars or len(bars) < period + 1:
+        return False
+
+    # 算每一根 bar[i] 的 MA(i)（含 bar[i] 自己）
+    ma: List[Optional[float]] = [None] * len(bars)
+    total = 0.0
+    for i in range(len(bars)):
+        c = bars[i].get("c") if bars[i] else None
+        if not c:
+            total = 0.0
+            continue
+        total += c
+        if i >= period:
+            old = bars[i - period].get("c") if bars[i - period] else None
+            if old:
+                total -= old
+        if i >= period - 1:
+            ma[i] = total / period
+
+    # 在最後 days 根（含今天）找突破事件
+    start_idx = max(period, len(bars) - days)
+    for i in range(start_idx, len(bars)):
+        c_today = bars[i].get("c") if bars[i] else None
+        c_yest  = bars[i - 1].get("c") if bars[i - 1] else None
+        ma_today = ma[i]
+        ma_yest  = ma[i - 1]
+        if not c_today or not c_yest or ma_today is None or ma_yest is None:
+            continue
+        if c_today > ma_today and c_yest <= ma_yest:
+            return True
+    return False
+
+
 def _pass_volume_surge(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
     mult = f.get("multiplier", 0)
     if mult == 0:
@@ -380,11 +424,14 @@ def apply_filters(
     ma_dir = f["maDirection"]
     ma_dir_active = len(ma_dir.get("periods") or []) >= 1
 
+    ma_break = f["maBreakout"]
+    ma_break_active = (ma_break.get("days", 0) or 0) != 0 and (ma_break.get("period", 0) or 0) != 0
+
     # 沒有任何 filter 啟用 → 全傳回（這跟前端一致：等同沒篩）
     if not (vol_active or mc_active or d_active or r_active or ind_active or
             grow_active or abs_active or inst_active or market_active or
             n_ret_active or n_high_active or v_new_high_active or v_surge_active or
-            ma_align_active or ma_dir_active):
+            ma_align_active or ma_dir_active or ma_break_active):
         return list(stocks)
 
     out: List[Dict[str, Any]] = []
@@ -426,6 +473,8 @@ def apply_filters(
         if ma_align_active and not _pass_ma_alignment(s, ma_align, klines):
             continue
         if ma_dir_active and not _pass_ma_direction(s, ma_dir, klines):
+            continue
+        if ma_break_active and not _pass_ma_breakout(s, ma_break, klines):
             continue
         out.append(s)
     return out
@@ -478,6 +527,10 @@ def _merge_with_defaults(f: Dict[str, Any]) -> Dict[str, Any]:
     out["maDirection"] = {
         **DEFAULT_FILTERS["maDirection"],
         **(f.get("maDirection") or {}),
+    }
+    out["maBreakout"] = {
+        **DEFAULT_FILTERS["maBreakout"],
+        **(f.get("maBreakout") or {}),
     }
     return out
 

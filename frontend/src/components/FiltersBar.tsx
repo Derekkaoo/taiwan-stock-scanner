@@ -9,6 +9,7 @@ import type {
   NReturnDays, NHighDays,
   VolumeNewHighDays, VolumeSurgeBaseline, VolumeSurgeMultiplier,
   MaAlignmentPeriod, MaDirectionPeriod,
+  MaBreakoutDays, MaBreakoutPeriod,
   StockRow,
 } from '../types'
 import {
@@ -19,6 +20,7 @@ import {
   VOLUME_NEW_HIGH_OPTIONS, VOLUME_SURGE_BASELINE_OPTIONS, VOLUME_SURGE_MULTIPLIER_OPTIONS,
   MA_ALIGNMENT_OPTIONS, MA_ALIGNMENT_DEFAULT,
   MA_DIRECTION_OPTIONS,
+  MA_BREAKOUT_DAYS_OPTIONS, MA_BREAKOUT_PERIOD_OPTIONS,
 } from '../types'
 import { RangeSlider } from './RangeSlider'
 import { IndustryChips } from './IndustryChips'
@@ -74,6 +76,7 @@ function activeCountForSection(key: SectionKey, f: Filters): number {
       if (f.volumeSurge.multiplier !== 0) n++
       if ((f.maAlignment?.periods?.length ?? 0) >= 2) n++
       if ((f.maDirection?.periods?.length ?? 0) >= 1) n++
+      if ((f.maBreakout?.days ?? 0) !== 0 && (f.maBreakout?.period ?? 0) !== 0) n++
       return n
     case 'chips':
       if (ranged(f.delta, DEFAULT_FILTERS.delta)) n++
@@ -193,6 +196,13 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
   }
   const clearMaDirection = () =>
     set({ maDirection: { periods: [] } })
+
+  const setMaBreakoutDays = (d: MaBreakoutDays) =>
+    set({ maBreakout: { ...filters.maBreakout, days: d } })
+  const setMaBreakoutPeriod = (p: MaBreakoutPeriod) =>
+    set({ maBreakout: { ...filters.maBreakout, period: p } })
+  const clearMaBreakout = () =>
+    set({ maBreakout: { days: 0, period: 0 } })
 
   // === 個別 sliders（拆出來方便分到各 section）===
   const volumeSlider = (
@@ -657,6 +667,94 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     </div>
   )
 
+  // N 日內突破 MA block（兩個單選 chip：天數 + MA 週期）
+  const maBreakoutDaysSel   = filters.maBreakout?.days   ?? 0
+  const maBreakoutPeriodSel = filters.maBreakout?.period ?? 0
+  const maBreakoutActive    = maBreakoutDaysSel !== 0 && maBreakoutPeriodSel !== 0
+  const maBreakoutBlock = (
+    <div className="flex flex-col gap-1.5">
+      <div className="flex items-center flex-wrap gap-2">
+        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>N 日內突破 MA</span>
+        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>天數</span>
+        <div className="flex items-center gap-1 flex-wrap">
+          {MA_BREAKOUT_DAYS_OPTIONS.map(d => {
+            const active = maBreakoutDaysSel === d
+            return (
+              <button
+                key={d}
+                onClick={() => setMaBreakoutDays(d)}
+                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+                style={{
+                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                  color:       active ? '#fff' : 'var(--color-text-secondary)',
+                  fontWeight:  active ? 600 : 400,
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {d === 0 ? '關閉' : `${d}日`}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+      <div className="flex items-center flex-wrap gap-2">
+        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)', visibility: 'hidden' }}>N 日內突破 MA</span>
+        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>MA 週期</span>
+        <div className="flex items-center gap-1 flex-wrap">
+          {MA_BREAKOUT_PERIOD_OPTIONS.map(p => {
+            const active = maBreakoutPeriodSel === p
+            return (
+              <button
+                key={p}
+                onClick={() => setMaBreakoutPeriod(p)}
+                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+                style={{
+                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                  color:       active ? '#fff' : 'var(--color-text-secondary)',
+                  fontWeight:  active ? 600 : 400,
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {p === 0 ? '關閉' : `${p}MA`}
+              </button>
+            )
+          })}
+        </div>
+        {maBreakoutActive && (
+          <span className="text-[10px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
+            {maBreakoutDaysSel} 日內突破 {maBreakoutPeriodSel}MA
+          </span>
+        )}
+        {(maBreakoutDaysSel !== 0 || maBreakoutPeriodSel !== 0) && !maBreakoutActive && (
+          <span className="text-[10px] italic" style={{ color: 'var(--color-text-muted)' }}>
+            （天數與 MA 都要選才生效）
+          </span>
+        )}
+        {(maBreakoutDaysSel !== 0 || maBreakoutPeriodSel !== 0) && (
+          <>
+            <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
+            <button
+              onClick={clearMaBreakout}
+              className="text-[10px] px-2 py-0.5 rounded border transition-colors"
+              style={{
+                background: 'var(--color-bg-600)',
+                borderColor: 'var(--color-border)',
+                color: 'var(--color-text-secondary)',
+                cursor: 'pointer',
+              }}
+            >
+              清除
+            </button>
+          </>
+        )}
+      </div>
+    </div>
+  )
+
   const absEnabled = !!filters.absValue.quarter
   const absValueBlock = (
     <div className="flex flex-col gap-2">
@@ -737,6 +835,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{volumeSurgeBlock}</div>
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maAlignmentBlock}</div>
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maDirectionBlock}</div>
+        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maBreakoutBlock}</div>
       </div>
     ),
     chips: (

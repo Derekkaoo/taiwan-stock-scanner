@@ -203,7 +203,8 @@ export default function App() {
     filters.volumeNewHigh.days !== 0 ||
     filters.volumeSurge.multiplier !== 0 ||
     (filters.maAlignment?.periods?.length ?? 0) >= 2 ||
-    (filters.maDirection?.periods?.length ?? 0) >= 1
+    (filters.maDirection?.periods?.length ?? 0) >= 1 ||
+    (filters.maBreakout?.days !== 0 && filters.maBreakout?.period !== 0)
   useEffect(() => {
     if (klineFiltersActive) {
       // loadFromJson 內部會跳過已 cached 的，重複呼叫等於 no-op

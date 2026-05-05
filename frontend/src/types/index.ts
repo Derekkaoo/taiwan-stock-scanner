@@ -225,6 +225,16 @@ export interface MaDirectionFilter {
   periods: MaDirectionPeriod[]
 }
 
+/** N 日內突破 MA：過去 N 個交易日（含今天）內，任一根 K 棒出現
+ *  「該日 close > 該日 MA AND 前一日 close ≤ 前一日 MA」即視為突破。
+ *  days = 0 或 period = 0 視為不啟用。 */
+export type MaBreakoutDays = 0 | 1 | 3 | 5 | 10 | 20
+export type MaBreakoutPeriod = 0 | 5 | 10 | 20 | 60 | 120 | 240
+export interface MaBreakoutFilter {
+  days:   MaBreakoutDays
+  period: MaBreakoutPeriod
+}
+
 export interface Filters {
   volume:     FilterRange      // 5 日均成交量（千張）
   marketCap:  FilterRange      // 市值（億）
@@ -241,6 +251,7 @@ export interface Filters {
   volumeSurge:   VolumeSurgeFilter
   maAlignment:   MaAlignmentFilter
   maDirection:   MaDirectionFilter
+  maBreakout:    MaBreakoutFilter
 }
 
 export const FILTER_BOUNDS = {
@@ -283,6 +294,7 @@ export const DEFAULT_FILTERS: Filters = {
   volumeSurge:   { baseline: 'ma5', multiplier: 0 },
   maAlignment:   { periods: [] },  // 預設不啟用；user 啟用建議 [5,10,20]
   maDirection:   { periods: [] },  // 預設不啟用
+  maBreakout:    { days: 0, period: 0 },  // 預設不啟用（兩個 chip 都需要選）
 }
 
 export const INST_STREAK_OPTIONS: InstStreakDays[] = [0, 1, 3, 5, 20]
@@ -312,6 +324,9 @@ export const MA_ALIGNMENT_OPTIONS: MaAlignmentPeriod[] = [5, 10, 20, 60, 120, 24
 export const MA_ALIGNMENT_DEFAULT: MaAlignmentPeriod[] = [5, 10, 20]
 
 export const MA_DIRECTION_OPTIONS: MaDirectionPeriod[] = [5, 10, 20, 60, 120, 240]
+
+export const MA_BREAKOUT_DAYS_OPTIONS:   MaBreakoutDays[]   = [0, 1, 3, 5, 10, 20]
+export const MA_BREAKOUT_PERIOD_OPTIONS: MaBreakoutPeriod[] = [0, 5, 10, 20, 60, 120, 240]
 
 // ============================================================
 //  進場分析（多頭觸發回測研究）
