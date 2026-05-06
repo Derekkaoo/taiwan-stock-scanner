@@ -74,6 +74,7 @@ DEFAULT_FILTERS: Dict[str, Any] = {
     "maContinuation": {"direction": "off", "period": 0},
     "maSustained":    {"days": 0, "period": 0},
     "downtrendBreak": {"days": 0, "pivots": 3},
+    "pullbackMa":     {"period": 0},
 }
 
 
@@ -477,6 +478,61 @@ def _pass_downtrend_break(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str
     return True
 
 
+_PULLBACK_TREND_LOOKBACK = 5
+_PULLBACK_RALLY_LOOKBACK = 20
+_PULLBACK_RALLY_RATIO    = 1.05
+
+def _pass_pullback_ma(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
+    """回撤均線 — 今日盤中觸及/跌破 MA、收盤站回 MA 上方
+    1. MA 朝上
+    2. today low ≤ MA
+    3. today close > MA
+    4. 過去 20 天最高 close > MA × 1.05
+    """
+    period = f.get("period", 0) or 0
+    if period == 0:
+        return True
+    bars = klines.get(str(s.get("id", ""))) if klines else None
+    if not bars or len(bars) < period + _PULLBACK_TREND_LOOKBACK:
+        return False
+
+    last = len(bars) - 1
+
+    # 1. MA 朝上
+    today_ma = _calc_last_ma(bars, period)
+    past5_ma = _calc_last_ma(bars[:last - _PULLBACK_TREND_LOOKBACK + 1], period)
+    if today_ma is None or past5_ma is None:
+        return False
+    if today_ma <= past5_ma:
+        return False
+
+    # 2. today low ≤ MA
+    today_low = bars[last].get("l") if bars[last] else None
+    if today_low is None or today_low > today_ma:
+        return False
+
+    # 3. today close > MA
+    today_close = bars[last].get("c") if bars[last] else None
+    if not today_close:
+        return False
+    if today_close <= today_ma:
+        return False
+
+    # 4. 過去 20 天最高 close > MA × 1.05
+    lookback = min(_PULLBACK_RALLY_LOOKBACK, last + 1)
+    max_close = 0.0
+    for i in range(last - lookback + 1, last + 1):
+        if i < 0:
+            continue
+        c = bars[i].get("c") if bars[i] else None
+        if c is not None and c > max_close:
+            max_close = c
+    if max_close <= today_ma * _PULLBACK_RALLY_RATIO:
+        return False
+
+    return True
+
+
 def _pass_volume_surge(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
     mult = f.get("multiplier", 0)
     if mult == 0:
@@ -576,12 +632,15 @@ def apply_filters(
     down_break = f["downtrendBreak"]
     down_break_active = (down_break.get("days", 0) or 0) != 0
 
+    pullback_ma = f["pullbackMa"]
+    pullback_ma_active = (pullback_ma.get("period", 0) or 0) != 0
+
     # 沒有任何 filter 啟用 → 全傳回（這跟前端一致：等同沒篩）
     if not (vol_active or mc_active or d_active or r_active or ind_active or
             grow_active or abs_active or inst_active or market_active or
             n_ret_active or n_high_active or v_new_high_active or v_surge_active or
             ma_align_active or ma_dir_active or ma_break_active or
-            ma_cont_active or ma_sust_active or down_break_active):
+            ma_cont_active or ma_sust_active or down_break_active or pullback_ma_active):
         return list(stocks)
 
     out: List[Dict[str, Any]] = []
@@ -631,6 +690,8 @@ def apply_filters(
         if ma_sust_active and not _pass_ma_sustained(s, ma_sust, klines):
             continue
         if down_break_active and not _pass_downtrend_break(s, down_break, klines):
+            continue
+        if pullback_ma_active and not _pass_pullback_ma(s, pullback_ma, klines):
             continue
         out.append(s)
     return out
@@ -699,6 +760,10 @@ def _merge_with_defaults(f: Dict[str, Any]) -> Dict[str, Any]:
     out["downtrendBreak"] = {
         **DEFAULT_FILTERS["downtrendBreak"],
         **(f.get("downtrendBreak") or {}),
+    }
+    out["pullbackMa"] = {
+        **DEFAULT_FILTERS["pullbackMa"],
+        **(f.get("pullbackMa") or {}),
     }
     return out
 

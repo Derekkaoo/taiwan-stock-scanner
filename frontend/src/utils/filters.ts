@@ -13,6 +13,7 @@ import type {
   NDayReturnFilter, NDayHighFilter,
   VolumeNewHighFilter, VolumeSurgeFilter, MaAlignmentFilter, MaDirectionFilter,
   MaBreakoutFilter, MaContinuationFilter, MaSustainedFilter, DowntrendBreakFilter,
+  PullbackMaFilter,
   StockRow, KlineBar,
 } from '../types'
 import { DEFAULT_FILTERS, FILTER_BOUNDS } from '../types'
@@ -374,6 +375,52 @@ function passDowntrendBreak(s: StockRow, f: DowntrendBreakFilter, klines: Klines
   return true
 }
 
+/** 回撤均線 — 找多頭股拉回到均線附近的進場點
+ *  1. MA 朝上（today MA > 5 days ago MA）
+ *  2. 今日 K 棒「盤中跌破或碰到 MA」：low ≤ MA
+ *  3. 今日 close > MA（盤中跌破後收盤站回）
+ *  4. 過去 20 天最高 close > MA × 1.05（確認有過上漲，不是橫盤）
+ */
+const PULLBACK_TREND_LOOKBACK = 5     // MA 朝上判斷的天數
+const PULLBACK_RALLY_LOOKBACK = 20    // 確認有過上漲的窗口
+const PULLBACK_RALLY_RATIO    = 1.05  // 過去最高 close 必須 > MA × 1.05
+
+function passPullbackMa(s: StockRow, f: PullbackMaFilter, klines: KlinesById | undefined): boolean {
+  if (f.period === 0) return true
+  const period = f.period
+  const bars = getBars(klines, s.id)
+  if (!bars || bars.length < period + PULLBACK_TREND_LOOKBACK) return false
+
+  const last = bars.length - 1
+
+  // 1. MA 朝上：today MA > 5 days ago MA
+  const todayMA = calcLastMA(bars, period)
+  const past5MA = calcLastMA(bars.slice(0, last - PULLBACK_TREND_LOOKBACK + 1), period)
+  if (todayMA == null || past5MA == null) return false
+  if (todayMA <= past5MA) return false
+
+  // 2. 今日 low ≤ MA（盤中觸及或跌破均線）
+  const todayLow = bars[last]?.l
+  if (todayLow == null || todayLow > todayMA) return false
+
+  // 3. 今日 close > MA（收盤站在 MA 上方）
+  const todayClose = bars[last]?.c
+  if (!todayClose) return false
+  if (todayClose <= todayMA) return false
+
+  // 4. 過去 20 天最高 close > MA × 1.05
+  const lookback = Math.min(PULLBACK_RALLY_LOOKBACK, last + 1)
+  let maxClose = 0
+  for (let i = last - lookback + 1; i <= last; i++) {
+    if (i < 0) continue
+    const c = bars[i]?.c
+    if (c != null && c > maxClose) maxClose = c
+  }
+  if (maxClose <= todayMA * PULLBACK_RALLY_RATIO) return false
+
+  return true
+}
+
 function passVolumeSurge(s: StockRow, f: VolumeSurgeFilter, klines: KlinesById | undefined): boolean {
   if (f.multiplier === 0) return true
   const bars = getBars(klines, s.id)
@@ -429,9 +476,10 @@ export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById
   const maBreakActive  = (f.maBreakout?.days ?? 0) !== 0 && (f.maBreakout?.period ?? 0) !== 0
   const maContActive   = (f.maContinuation?.direction ?? 'off') !== 'off' && (f.maContinuation?.period ?? 0) !== 0
   const maSustActive   = (f.maSustained?.days ?? 0) !== 0 && (f.maSustained?.period ?? 0) !== 0
-  const downBreakActive = (f.downtrendBreak?.days ?? 0) !== 0
+  const downBreakActive  = (f.downtrendBreak?.days ?? 0) !== 0
+  const pullbackMaActive = (f.pullbackMa?.period ?? 0) !== 0
 
-  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive && !vNewHighActive && !vSurgeActive && !maAlignActive && !maDirActive && !maBreakActive && !maContActive && !maSustActive && !downBreakActive) return stocks
+  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive && !vNewHighActive && !vSurgeActive && !maAlignActive && !maDirActive && !maBreakActive && !maContActive && !maSustActive && !downBreakActive && !pullbackMaActive) return stocks
 
   return stocks.filter(s => {
     if (volActive) {
@@ -463,7 +511,8 @@ export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById
     if (maBreakActive   && !passMaBreakout(s,     f.maBreakout,     klines)) return false
     if (maContActive    && !passMaContinuation(s, f.maContinuation, klines)) return false
     if (maSustActive    && !passMaSustained(s,    f.maSustained,    klines)) return false
-    if (downBreakActive && !passDowntrendBreak(s, f.downtrendBreak, klines)) return false
+    if (downBreakActive  && !passDowntrendBreak(s, f.downtrendBreak, klines)) return false
+    if (pullbackMaActive && !passPullbackMa(s,     f.pullbackMa,     klines)) return false
     return true
   })
 }
