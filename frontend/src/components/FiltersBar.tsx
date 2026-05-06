@@ -12,6 +12,7 @@ import type {
   MaBreakoutDays, MaBreakoutPeriod,
   MaContinuationDirection, MaContinuationPeriod,
   MaSustainedDays, MaSustainedPeriod,
+  DowntrendBreakDays, DowntrendBreakPivots,
   StockRow,
 } from '../types'
 import {
@@ -25,6 +26,7 @@ import {
   MA_BREAKOUT_DAYS_OPTIONS, MA_BREAKOUT_PERIOD_OPTIONS,
   MA_CONTINUATION_DIRECTION_OPTIONS, MA_CONTINUATION_PERIOD_OPTIONS,
   MA_SUSTAINED_DAYS_OPTIONS, MA_SUSTAINED_PERIOD_OPTIONS,
+  DOWNTREND_BREAK_DAYS_OPTIONS, DOWNTREND_BREAK_PIVOTS_OPTIONS,
 } from '../types'
 import { RangeSlider } from './RangeSlider'
 import { IndustryChips } from './IndustryChips'
@@ -171,6 +173,7 @@ function activeCountForSection(key: SectionKey, f: Filters): number {
       if ((f.maBreakout?.days ?? 0) !== 0 && (f.maBreakout?.period ?? 0) !== 0) n++
       if ((f.maContinuation?.direction ?? 'off') !== 'off' && (f.maContinuation?.period ?? 0) !== 0) n++
       if ((f.maSustained?.days ?? 0) !== 0 && (f.maSustained?.period ?? 0) !== 0) n++
+      if ((f.downtrendBreak?.days ?? 0) !== 0) n++
       return n
     case 'chips':
       if (ranged(f.delta, DEFAULT_FILTERS.delta)) n++
@@ -311,6 +314,13 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     set({ maSustained: { ...filters.maSustained, period: p } })
   const clearMaSustained = () =>
     set({ maSustained: { days: 0, period: 0 } })
+
+  const setDownBreakDays = (d: DowntrendBreakDays) =>
+    set({ downtrendBreak: { ...filters.downtrendBreak, days: d } })
+  const setDownBreakPivots = (p: DowntrendBreakPivots) =>
+    set({ downtrendBreak: { ...filters.downtrendBreak, pivots: p } })
+  const clearDowntrendBreak = () =>
+    set({ downtrendBreak: { days: 0, pivots: 3 } })
 
   // === 個別 sliders（拆出來方便分到各 section）===
   const volumeSlider = (
@@ -1048,6 +1058,90 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     </div>
   )
 
+  // 抓轉折 — 突破下降趨勢 block
+  const downBreakDays   = filters.downtrendBreak?.days   ?? 0
+  const downBreakPivots = filters.downtrendBreak?.pivots ?? 3
+  const downBreakActive = downBreakDays !== 0
+  const pivotsToHighNDays = (p: number) => p <= 3 ? 5 : p === 4 ? 10 : 15
+  const downtrendBreakBlock = (
+    <div className="flex flex-col gap-1.5">
+      <div className="flex items-center flex-wrap gap-2">
+        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>抓轉折（突破下降趨勢）</span>
+        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>趨勢期間</span>
+        <div className="flex items-center gap-1 flex-wrap">
+          {DOWNTREND_BREAK_DAYS_OPTIONS.map(d => {
+            const active = downBreakDays === d
+            return (
+              <button
+                key={d}
+                onClick={() => setDownBreakDays(d)}
+                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+                style={{
+                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                  color:       active ? '#fff' : 'var(--color-text-secondary)',
+                  fontWeight:  active ? 600 : 400,
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {d === 0 ? '關閉' : `${d}日`}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+      <div className="flex items-center flex-wrap gap-2">
+        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)', visibility: 'hidden' }}>抓轉折（突破下降趨勢）</span>
+        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>壓力位</span>
+        <div className="flex items-center gap-1 flex-wrap">
+          {DOWNTREND_BREAK_PIVOTS_OPTIONS.map(p => {
+            const active = downBreakPivots === p
+            return (
+              <button
+                key={p}
+                onClick={() => setDownBreakPivots(p)}
+                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+                style={{
+                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                  color:       active ? '#fff' : 'var(--color-text-secondary)',
+                  fontWeight:  active ? 600 : 400,
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {pivotsToHighNDays(p)} 日高
+              </button>
+            )
+          })}
+        </div>
+        {downBreakActive && (
+          <span className="text-[10px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
+            {downBreakDays} 日量價反轉 + 突破 {pivotsToHighNDays(downBreakPivots)} 日高
+          </span>
+        )}
+        {downBreakActive && (
+          <>
+            <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
+            <button
+              onClick={clearDowntrendBreak}
+              className="text-[10px] px-2 py-0.5 rounded border transition-colors"
+              style={{
+                background: 'var(--color-bg-600)',
+                borderColor: 'var(--color-border)',
+                color: 'var(--color-text-secondary)',
+                cursor: 'pointer',
+              }}
+            >
+              清除
+            </button>
+          </>
+        )}
+      </div>
+    </div>
+  )
+
   const absEnabled = !!filters.absValue.quarter
   const absValueBlock = (
     <div className="flex flex-col gap-2">
@@ -1131,6 +1225,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maBreakoutBlock}</div>
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maContinuationBlock}</div>
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maSustainedBlock}</div>
+        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{downtrendBreakBlock}</div>
       </div>
     ),
     chips: (

@@ -12,7 +12,7 @@ import type {
   Filters, GrowthFilter, AbsValueFilter, InstitutionalFilter, MarketFilter,
   NDayReturnFilter, NDayHighFilter,
   VolumeNewHighFilter, VolumeSurgeFilter, MaAlignmentFilter, MaDirectionFilter,
-  MaBreakoutFilter, MaContinuationFilter, MaSustainedFilter,
+  MaBreakoutFilter, MaContinuationFilter, MaSustainedFilter, DowntrendBreakFilter,
   StockRow, KlineBar,
 } from '../types'
 import { DEFAULT_FILTERS, FILTER_BOUNDS } from '../types'
@@ -286,6 +286,94 @@ function passMaSustained(s: StockRow, f: MaSustainedFilter, klines: KlinesById |
   return true
 }
 
+/** 抓轉折 — XQ 量價合成 + N 日 high 突破法（v4，2026-05-06 換邏輯）
+ *
+ *  邏輯（仿 XQ 量價合成腳本）：
+ *  1. 累積量價：kk[i] = kk[i-1] + (close[i] - close[i-1]) / close[i-1] × volume[i]
+ *  2. 長期斜率 value1 = linregslope(kk, Length)；短期斜率 value2 = linregslope(kk, 5)
+ *  3. 條件 A: value1 < 0（長期量價下降）AND value2 > 0（短期量價反彈）
+ *  4. 條件 B: 今日 close > 過去 HighN 日 high 最大值（不含今天） — 突破壓力位
+ *  5. 條件 C: 今日漲幅 ≥ 2%（強勢紅 K）
+ *
+ *  chip 對應：
+ *  - 觀察期間 (30/60/120) → Length = min(days, 60)
+ *  - 高點數量 (3/4/5)     → HighN 5 / 10 / 15
+ */
+const SHORT_SLOPE_BARS = 5
+const MIN_DAILY_RETURN = 0.02   // 今日漲幅 ≥ 2%
+
+function pivotsToHighN(pivots: number): number {
+  if (pivots <= 3) return 5
+  if (pivots === 4) return 10
+  return 15
+}
+
+function linregSlope(values: number[]): number | null {
+  const n = values.length
+  if (n < 2) return null
+  let sumX = 0, sumY = 0, sumXY = 0, sumX2 = 0
+  for (let i = 0; i < n; i++) {
+    sumX  += i
+    sumY  += values[i]
+    sumXY += i * values[i]
+    sumX2 += i * i
+  }
+  const denom = n * sumX2 - sumX * sumX
+  if (denom === 0) return null
+  return (n * sumXY - sumX * sumY) / denom
+}
+
+function passDowntrendBreak(s: StockRow, f: DowntrendBreakFilter, klines: KlinesById | undefined): boolean {
+  if (f.days === 0) return true
+  const bars = getBars(klines, s.id)
+  const Length = Math.min(f.days, 60)
+  const HighN  = pivotsToHighN(f.pivots)
+  const required = Math.max(Length, HighN) + 2
+  if (!bars || bars.length < required) return false
+
+  // 1. 累積量價 kk
+  const kk: number[] = new Array(bars.length).fill(0)
+  for (let i = 1; i < bars.length; i++) {
+    const prevC = bars[i - 1]?.c
+    const curC  = bars[i]?.c
+    const v     = bars[i]?.v ?? 0
+    if (!prevC || !curC) {
+      kk[i] = kk[i - 1]
+      continue
+    }
+    const ret = (curC - prevC) / prevC
+    kk[i] = kk[i - 1] + ret * v
+  }
+
+  // 2. 長/短斜率
+  const value1 = linregSlope(kk.slice(-Length))
+  const value2 = linregSlope(kk.slice(-SHORT_SLOPE_BARS))
+  if (value1 == null || value2 == null) return false
+
+  // 3. 條件 A: 長期下降 + 短期反彈
+  if (!(value1 < 0 && value2 > 0)) return false
+
+  // 4. 條件 B: 今日 close > 過去 HighN 日 high 最大值（不含今天）
+  const todayIdx = bars.length - 1
+  const todayClose = bars[todayIdx]?.c
+  if (!todayClose) return false
+  let HH = -Infinity
+  for (let i = todayIdx - HighN; i < todayIdx; i++) {
+    if (i < 0) continue
+    const h = bars[i]?.h
+    if (h != null && h > HH) HH = h
+  }
+  if (HH === -Infinity) return false
+  if (todayClose <= HH) return false
+
+  // 5. 條件 C: 今日漲幅 ≥ 2%
+  const yestClose = bars[todayIdx - 1]?.c
+  if (!yestClose) return false
+  if ((todayClose - yestClose) / yestClose < MIN_DAILY_RETURN) return false
+
+  return true
+}
+
 function passVolumeSurge(s: StockRow, f: VolumeSurgeFilter, klines: KlinesById | undefined): boolean {
   if (f.multiplier === 0) return true
   const bars = getBars(klines, s.id)
@@ -341,8 +429,9 @@ export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById
   const maBreakActive  = (f.maBreakout?.days ?? 0) !== 0 && (f.maBreakout?.period ?? 0) !== 0
   const maContActive   = (f.maContinuation?.direction ?? 'off') !== 'off' && (f.maContinuation?.period ?? 0) !== 0
   const maSustActive   = (f.maSustained?.days ?? 0) !== 0 && (f.maSustained?.period ?? 0) !== 0
+  const downBreakActive = (f.downtrendBreak?.days ?? 0) !== 0
 
-  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive && !vNewHighActive && !vSurgeActive && !maAlignActive && !maDirActive && !maBreakActive && !maContActive && !maSustActive) return stocks
+  if (!volActive && !mcActive && !dActive && !rActive && !indActive && !growActive && !absActive && !instActive && !marketActive && !nRetActive && !nHighActive && !vNewHighActive && !vSurgeActive && !maAlignActive && !maDirActive && !maBreakActive && !maContActive && !maSustActive && !downBreakActive) return stocks
 
   return stocks.filter(s => {
     if (volActive) {
@@ -369,11 +458,12 @@ export function applyFilters(stocks: StockRow[], f: Filters, klines?: KlinesById
     if (nHighActive && !passNDayHigh(s,   f.nDayHigh,   klines)) return false
     if (vNewHighActive && !passVolumeNewHigh(s, f.volumeNewHigh, klines)) return false
     if (vSurgeActive   && !passVolumeSurge(s,   f.volumeSurge,   klines)) return false
-    if (maAlignActive  && !passMaAlignment(s,    f.maAlignment,    klines)) return false
-    if (maDirActive    && !passMaDirection(s,    f.maDirection,    klines)) return false
-    if (maBreakActive  && !passMaBreakout(s,     f.maBreakout,     klines)) return false
-    if (maContActive   && !passMaContinuation(s, f.maContinuation, klines)) return false
-    if (maSustActive   && !passMaSustained(s,    f.maSustained,    klines)) return false
+    if (maAlignActive   && !passMaAlignment(s,    f.maAlignment,    klines)) return false
+    if (maDirActive     && !passMaDirection(s,    f.maDirection,    klines)) return false
+    if (maBreakActive   && !passMaBreakout(s,     f.maBreakout,     klines)) return false
+    if (maContActive    && !passMaContinuation(s, f.maContinuation, klines)) return false
+    if (maSustActive    && !passMaSustained(s,    f.maSustained,    klines)) return false
+    if (downBreakActive && !passDowntrendBreak(s, f.downtrendBreak, klines)) return false
     return true
   })
 }
