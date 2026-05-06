@@ -341,10 +341,16 @@ def run():
     from datetime import datetime, timedelta
     start_date = (datetime.now() - timedelta(days=LOOKBACK_DAYS)).strftime("%Y-%m-%d")
 
-    fetched = 0
-    skipped = 0
-    quota_hit = False           # FinMind 是否已撞 402
-    yahoo_fetched = 0           # 用 Yahoo 補抓的支數（log 用）
+    # 2026-05-06 重構：Yahoo 主 + FinMind fallback
+    # 理由：
+    #   - Yahoo TW finance 法人資料 publish 比 FinMind 早（5/6 案例證實）
+    #   - Yahoo 沒額度限制，FinMind 600/hr 撞了還會軟限流
+    #   - FinMind 留作 backup（萬一 Yahoo HTML 改結構）
+    yahoo_fetched   = 0    # Yahoo 抓到資料（主來源命中）
+    finmind_fetched = 0    # Yahoo 失敗時 FinMind 補上（fallback 命中）
+    skipped         = 0    # 已有資料跳過 / 兩家都失敗
+    quota_hit       = False    # FinMind 撞 402
+
     for i, sid in enumerate(stock_ids, 1):
         # ─── PER-STOCK SKIP: 已有 expected_str（今天）資料 → 跳過 ───
         # 確保 17:00 抓到部分後，後續 18:00/19:00 cron 只補抓缺的，不重抓已有的
@@ -354,19 +360,28 @@ def run():
                 skipped += 1
                 continue
 
-        # ─── PRIMARY: FinMind ───
-        if not quota_hit:
+        got_yahoo = False
+        got_finmind = False
+
+        # ─── PRIMARY: Yahoo ───
+        yahoo_records = fetch_yahoo_institutional(sid)
+        if yahoo_records:
+            _merge_yahoo_records(by_stock, sid, yahoo_records)
+            got_yahoo = True
+        time.sleep(0.3)   # Yahoo throttle，避免 IP 被限速
+
+        # ─── FALLBACK: FinMind（Yahoo 沒到 expected 才走）───
+        h_after_yahoo = by_stock.get(sid) or []
+        yahoo_latest  = h_after_yahoo[-1].get("date", "") if h_after_yahoo else ""
+        yahoo_reached = expected_str and yahoo_latest >= expected_str
+
+        if not yahoo_reached and not quota_hit:
             records = fetch_finmind(sid, start_date)
             if records is None:
                 quota_hit = True
-                logger.warning("FinMind 402 額度用完（at %d/%d, %s）→ 切到 Yahoo fallback",
+                logger.warning("FinMind 402 額度用完（at %d/%d, %s）→ 此後只用 Yahoo",
                                i, len(stock_ids), sid)
-                # 不 break，這支也試 Yahoo
-            elif not records:
-                skipped += 1
-                time.sleep(0.5)
-                continue
-            else:
+            elif records:
                 new_data = normalize_records(records)
                 existing_history = by_stock.get(sid) or []
                 existing_dates = {h["date"] for h in existing_history}
@@ -381,25 +396,22 @@ def run():
                 existing_history.sort(key=lambda x: x.get("date", ""))
                 existing_history = existing_history[-KEEP_DAYS:]
                 by_stock[sid] = existing_history
-                fetched += 1
-                time.sleep(0.5)   # 從 0.15 調高，避免 FinMind soft throttle
-                if i % 30 == 0:
-                    logger.info("進度 %d/%d（FinMind 成功 %d / 跳過 %d）",
-                                i, len(stock_ids), fetched, skipped)
-                continue
+                got_finmind = True
+            time.sleep(0.5)   # FinMind soft throttle
 
-        # ─── FALLBACK: Yahoo ───（FinMind 402 後執行）
-        yahoo_records = fetch_yahoo_institutional(sid)
-        if yahoo_records:
-            _merge_yahoo_records(by_stock, sid, yahoo_records)
-            fetched += 1
+        # 統計：優先計 Yahoo，沒 Yahoo 才看 FinMind，兩家都沒就 skip
+        if got_yahoo:
             yahoo_fetched += 1
+        elif got_finmind:
+            finmind_fetched += 1
         else:
             skipped += 1
-        time.sleep(0.5)
+
         if i % 30 == 0:
-            logger.info("進度 %d/%d（Yahoo 補了 %d 支 / 累計成功 %d / 跳過 %d）",
-                        i, len(stock_ids), yahoo_fetched, fetched, skipped)
+            logger.info("進度 %d/%d（Yahoo %d / FinMind 補 %d / 跳過 %d）",
+                        i, len(stock_ids), yahoo_fetched, finmind_fetched, skipped)
+
+    fetched = yahoo_fetched + finmind_fetched
 
     # 統一用 TW 時區寫 timestamp（不管在 Windows local 還是 Linux runner 都一致）
     from datetime import datetime as _dt2, timedelta as _td2
@@ -412,9 +424,9 @@ def run():
         json.dump(db, f, ensure_ascii=False, separators=(",", ":"))
 
     logger.info("寫入 %s", OUT_PATH)
-    logger.info("  成功 %d 支 / 跳過 %d / %s",
-                fetched, skipped,
-                "額度用完，部分用快取" if quota_hit else "全部完成")
+    logger.info("  Yahoo %d 支 / FinMind 補 %d 支 / 跳過 %d 支 / %s",
+                yahoo_fetched, finmind_fetched, skipped,
+                "FinMind 額度用完" if quota_hit else "全部完成")
 
     # 算每支股票的「連續買超天數」並寫進 stocks.json（給前端 filter 用）
     enrich_stocks_json(by_stock)
