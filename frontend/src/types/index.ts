@@ -267,6 +267,17 @@ export interface DowntrendBreakFilter {
   pivots: DowntrendBreakPivots
 }
 
+/** 回撤均線 — 找多頭股拉回到均線附近的進場點：
+ *  1. MA 朝上（今日 MA > 5 天前 MA）— 確認上升趨勢
+ *  2. 今日 close 站在 MA 上方
+ *  3. 過去 3 天內 low ≤ 該日 MA（曾觸及或跌破均線）
+ *  4. 過去 20 天最高 close > MA × 1.05（確認有「漲過」再「拉回」）
+ *  period = 0 視為不啟用 */
+export type PullbackMaPeriod = 0 | 5 | 10 | 20 | 60
+export interface PullbackMaFilter {
+  period: PullbackMaPeriod
+}
+
 export interface Filters {
   volume:     FilterRange      // 5 日均成交量（千張）
   marketCap:  FilterRange      // 市值（億）
@@ -287,6 +298,7 @@ export interface Filters {
   maContinuation:  MaContinuationFilter
   maSustained:     MaSustainedFilter
   downtrendBreak:  DowntrendBreakFilter
+  pullbackMa:      PullbackMaFilter
 }
 
 export const FILTER_BOUNDS = {
@@ -333,6 +345,7 @@ export const DEFAULT_FILTERS: Filters = {
   maContinuation: { direction: 'off', period: 0 },  // 預設不啟用
   maSustained:    { days: 0, period: 0 },           // 預設不啟用
   downtrendBreak: { days: 0, pivots: 3 },           // 預設不啟用；高點數量預設 3
+  pullbackMa:     { period: 0 },                    // 預設不啟用
 }
 
 export const INST_STREAK_OPTIONS: InstStreakDays[] = [0, 1, 3, 5, 20]
@@ -378,6 +391,8 @@ export const MA_SUSTAINED_PERIOD_OPTIONS: MaSustainedPeriod[] = [0, 5, 10, 20, 6
 
 export const DOWNTREND_BREAK_DAYS_OPTIONS:   DowntrendBreakDays[]   = [0, 30, 60, 120]
 export const DOWNTREND_BREAK_PIVOTS_OPTIONS: DowntrendBreakPivots[] = [3, 4, 5]
+
+export const PULLBACK_MA_PERIOD_OPTIONS: PullbackMaPeriod[] = [0, 5, 10, 20, 60]
 
 // ============================================================
 //  進場分析（多頭觸發回測研究）

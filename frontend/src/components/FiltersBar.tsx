@@ -13,6 +13,7 @@ import type {
   MaContinuationDirection, MaContinuationPeriod,
   MaSustainedDays, MaSustainedPeriod,
   DowntrendBreakDays, DowntrendBreakPivots,
+  PullbackMaPeriod,
   StockRow,
 } from '../types'
 import {
@@ -27,6 +28,7 @@ import {
   MA_CONTINUATION_DIRECTION_OPTIONS, MA_CONTINUATION_PERIOD_OPTIONS,
   MA_SUSTAINED_DAYS_OPTIONS, MA_SUSTAINED_PERIOD_OPTIONS,
   DOWNTREND_BREAK_DAYS_OPTIONS, DOWNTREND_BREAK_PIVOTS_OPTIONS,
+  PULLBACK_MA_PERIOD_OPTIONS,
 } from '../types'
 import { RangeSlider } from './RangeSlider'
 import { IndustryChips } from './IndustryChips'
@@ -174,6 +176,7 @@ function activeCountForSection(key: SectionKey, f: Filters): number {
       if ((f.maContinuation?.direction ?? 'off') !== 'off' && (f.maContinuation?.period ?? 0) !== 0) n++
       if ((f.maSustained?.days ?? 0) !== 0 && (f.maSustained?.period ?? 0) !== 0) n++
       if ((f.downtrendBreak?.days ?? 0) !== 0) n++
+      if ((f.pullbackMa?.period ?? 0) !== 0) n++
       return n
     case 'chips':
       if (ranged(f.delta, DEFAULT_FILTERS.delta)) n++
@@ -321,6 +324,11 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     set({ downtrendBreak: { ...filters.downtrendBreak, pivots: p } })
   const clearDowntrendBreak = () =>
     set({ downtrendBreak: { days: 0, pivots: 3 } })
+
+  const setPullbackMaPeriod = (p: PullbackMaPeriod) =>
+    set({ pullbackMa: { period: p } })
+  const clearPullbackMa = () =>
+    set({ pullbackMa: { period: 0 } })
 
   // === 個別 sliders（拆出來方便分到各 section）===
   const volumeSlider = (
@@ -1142,6 +1150,60 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     </div>
   )
 
+  // 回撤均線 block
+  const pullbackMaPeriod = filters.pullbackMa?.period ?? 0
+  const pullbackMaActive = pullbackMaPeriod !== 0
+  const pullbackMaBlock = (
+    <div className="flex items-center flex-wrap gap-2">
+      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>(曾)回撤均線</span>
+      <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>均線</span>
+      <div className="flex items-center gap-1 flex-wrap">
+        {PULLBACK_MA_PERIOD_OPTIONS.map(p => {
+          const active = pullbackMaPeriod === p
+          return (
+            <button
+              key={p}
+              onClick={() => setPullbackMaPeriod(p)}
+              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              style={{
+                background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+                borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+                color:       active ? '#fff' : 'var(--color-text-secondary)',
+                fontWeight:  active ? 600 : 400,
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {p === 0 ? '關閉' : `${p}MA`}
+            </button>
+          )
+        })}
+      </div>
+      {pullbackMaActive && (
+        <span className="text-[10px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
+          回撤到 {pullbackMaPeriod}MA
+        </span>
+      )}
+      {pullbackMaActive && (
+        <>
+          <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
+          <button
+            onClick={clearPullbackMa}
+            className="text-[10px] px-2 py-0.5 rounded border transition-colors"
+            style={{
+              background: 'var(--color-bg-600)',
+              borderColor: 'var(--color-border)',
+              color: 'var(--color-text-secondary)',
+              cursor: 'pointer',
+            }}
+          >
+            清除
+          </button>
+        </>
+      )}
+    </div>
+  )
+
   const absEnabled = !!filters.absValue.quarter
   const absValueBlock = (
     <div className="flex flex-col gap-2">
@@ -1226,6 +1288,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maContinuationBlock}</div>
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maSustainedBlock}</div>
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{downtrendBreakBlock}</div>
+        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{pullbackMaBlock}</div>
       </div>
     ),
     chips: (

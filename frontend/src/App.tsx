@@ -145,7 +145,8 @@ export default function App() {
     (filters.maBreakout?.days !== 0 && filters.maBreakout?.period !== 0) ||
     (filters.maContinuation?.direction !== 'off' && filters.maContinuation?.period !== 0) ||
     (filters.maSustained?.days !== 0 && filters.maSustained?.period !== 0) ||
-    (filters.downtrendBreak?.days !== 0)
+    (filters.downtrendBreak?.days !== 0) ||
+    (filters.pullbackMa?.period !== 0)
   useEffect(() => {
     if (klineFiltersActive) {
       // loadFromJson 內部會跳過已 cached 的，重複呼叫等於 no-op
