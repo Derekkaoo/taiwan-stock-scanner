@@ -73,6 +73,7 @@ DEFAULT_FILTERS: Dict[str, Any] = {
     "maBreakout":     {"days": 0, "period": 0},
     "maContinuation": {"direction": "off", "period": 0},
     "maSustained":    {"days": 0, "period": 0},
+    "downtrendBreak": {"days": 0, "pivots": 3},
 }
 
 
@@ -389,6 +390,93 @@ def _pass_ma_sustained(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, L
     return True
 
 
+_SHORT_SLOPE_BARS = 5
+_MIN_DAILY_RETURN = 0.02
+
+def _pivots_to_high_n(pivots: int) -> int:
+    if pivots <= 3:
+        return 5
+    if pivots == 4:
+        return 10
+    return 15
+
+def _linreg_slope(values):
+    n = len(values)
+    if n < 2:
+        return None
+    sum_x = sum_y = sum_xy = sum_x2 = 0.0
+    for i in range(n):
+        sum_x += i
+        sum_y += values[i]
+        sum_xy += i * values[i]
+        sum_x2 += i * i
+    denom = n * sum_x2 - sum_x * sum_x
+    if denom == 0:
+        return None
+    return (n * sum_xy - sum_x * sum_y) / denom
+
+def _pass_downtrend_break(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
+    """抓轉折 — XQ 量價合成 + N 日 high 突破法（v4，2026-05-06 換邏輯）"""
+    days = f.get("days", 0) or 0
+    pivots = f.get("pivots", 3) or 3
+    if days == 0:
+        return True
+    bars = klines.get(str(s.get("id", ""))) if klines else None
+    Length = min(days, 60)
+    HighN = _pivots_to_high_n(pivots)
+    required = max(Length, HighN) + 2
+    if not bars or len(bars) < required:
+        return False
+
+    # 1. 累積量價 kk
+    kk = [0.0] * len(bars)
+    for i in range(1, len(bars)):
+        prev_c = bars[i - 1].get("c") if bars[i - 1] else None
+        cur_c  = bars[i].get("c") if bars[i] else None
+        v      = bars[i].get("v") if bars[i] else 0
+        if not prev_c or not cur_c:
+            kk[i] = kk[i - 1]
+            continue
+        ret = (cur_c - prev_c) / prev_c
+        kk[i] = kk[i - 1] + ret * (v or 0)
+
+    # 2. 長/短斜率
+    value1 = _linreg_slope(kk[-Length:])
+    value2 = _linreg_slope(kk[-_SHORT_SLOPE_BARS:])
+    if value1 is None or value2 is None:
+        return False
+
+    # 3. 條件 A
+    if not (value1 < 0 and value2 > 0):
+        return False
+
+    # 4. 條件 B: close > 過去 HighN 日 high 最大值（不含今天）
+    today_idx = len(bars) - 1
+    today_close = bars[today_idx].get("c") if bars[today_idx] else None
+    if not today_close:
+        return False
+    HH = float("-inf")
+    for i in range(today_idx - HighN, today_idx):
+        if i < 0:
+            continue
+        h = bars[i].get("h") if bars[i] else None
+        if h is not None and h > HH:
+            HH = h
+    if HH == float("-inf"):
+        return False
+    if today_close <= HH:
+        return False
+
+    # 5. 條件 C: 今日漲幅 ≥ 2%
+    yest_close = bars[today_idx - 1].get("c") if bars[today_idx - 1] else None
+    if not yest_close:
+        return False
+    if (today_close - yest_close) / yest_close < _MIN_DAILY_RETURN:
+        return False
+
+    return True
+
+
 def _pass_volume_surge(s: Dict[str, Any], f: Dict[str, Any], klines: Dict[str, List[Dict[str, Any]]]) -> bool:
     mult = f.get("multiplier", 0)
     if mult == 0:
@@ -485,12 +573,15 @@ def apply_filters(
     ma_sust = f["maSustained"]
     ma_sust_active = (ma_sust.get("days", 0) or 0) != 0 and (ma_sust.get("period", 0) or 0) != 0
 
+    down_break = f["downtrendBreak"]
+    down_break_active = (down_break.get("days", 0) or 0) != 0
+
     # 沒有任何 filter 啟用 → 全傳回（這跟前端一致：等同沒篩）
     if not (vol_active or mc_active or d_active or r_active or ind_active or
             grow_active or abs_active or inst_active or market_active or
             n_ret_active or n_high_active or v_new_high_active or v_surge_active or
             ma_align_active or ma_dir_active or ma_break_active or
-            ma_cont_active or ma_sust_active):
+            ma_cont_active or ma_sust_active or down_break_active):
         return list(stocks)
 
     out: List[Dict[str, Any]] = []
@@ -538,6 +629,8 @@ def apply_filters(
         if ma_cont_active and not _pass_ma_continuation(s, ma_cont, klines):
             continue
         if ma_sust_active and not _pass_ma_sustained(s, ma_sust, klines):
+            continue
+        if down_break_active and not _pass_downtrend_break(s, down_break, klines):
             continue
         out.append(s)
     return out
@@ -602,6 +695,10 @@ def _merge_with_defaults(f: Dict[str, Any]) -> Dict[str, Any]:
     out["maSustained"] = {
         **DEFAULT_FILTERS["maSustained"],
         **(f.get("maSustained") or {}),
+    }
+    out["downtrendBreak"] = {
+        **DEFAULT_FILTERS["downtrendBreak"],
+        **(f.get("downtrendBreak") or {}),
     }
     return out
 

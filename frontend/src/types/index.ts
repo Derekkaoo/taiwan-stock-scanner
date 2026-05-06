@@ -258,6 +258,19 @@ export interface MaSustainedFilter {
   period: MaSustainedPeriod
 }
 
+/** 抓轉折 — N 日內突破下降趨勢線：
+ *  1. 在最近 N 日 K 棒中找 pivot highs（左右各 3 根都比它低）
+ *  2. 取最新 P 個 pivots，要求嚴格遞減（lower highs）
+ *  3. 第一個 pivot 連最後一個 pivot 形成下降趨勢線
+ *  4. 今日 close > 趨勢線今日值 AND 昨日 close ≤ 趨勢線昨日值（突破當日）
+ *  days = 0 視為不啟用 */
+export type DowntrendBreakDays   = 0 | 30 | 60 | 120
+export type DowntrendBreakPivots = 3 | 4 | 5
+export interface DowntrendBreakFilter {
+  days:   DowntrendBreakDays
+  pivots: DowntrendBreakPivots
+}
+
 export interface Filters {
   volume:     FilterRange      // 5 日均成交量（千張）
   marketCap:  FilterRange      // 市值（億）
@@ -272,11 +285,12 @@ export interface Filters {
   nDayHigh:      NDayHighFilter
   volumeNewHigh: VolumeNewHighFilter
   volumeSurge:   VolumeSurgeFilter
-  maAlignment:    MaAlignmentFilter
-  maDirection:    MaDirectionFilter
-  maBreakout:     MaBreakoutFilter
-  maContinuation: MaContinuationFilter
-  maSustained:    MaSustainedFilter
+  maAlignment:     MaAlignmentFilter
+  maDirection:     MaDirectionFilter
+  maBreakout:      MaBreakoutFilter
+  maContinuation:  MaContinuationFilter
+  maSustained:     MaSustainedFilter
+  downtrendBreak:  DowntrendBreakFilter
 }
 
 export const FILTER_BOUNDS = {
@@ -322,6 +336,7 @@ export const DEFAULT_FILTERS: Filters = {
   maBreakout:     { days: 0, period: 0 },  // 預設不啟用（兩個 chip 都需要選）
   maContinuation: { direction: 'off', period: 0 },  // 預設不啟用
   maSustained:    { days: 0, period: 0 },           // 預設不啟用
+  downtrendBreak: { days: 0, pivots: 3 },           // 預設不啟用；高點數量預設 3
 }
 
 export const INST_STREAK_OPTIONS: InstStreakDays[] = [0, 1, 3, 5, 20]
@@ -364,6 +379,9 @@ export const MA_CONTINUATION_PERIOD_OPTIONS: MaContinuationPeriod[] = [0, 5, 10,
 
 export const MA_SUSTAINED_DAYS_OPTIONS:   MaSustainedDays[]   = [0, 3, 5, 10]
 export const MA_SUSTAINED_PERIOD_OPTIONS: MaSustainedPeriod[] = [0, 5, 10, 20, 60, 120]
+
+export const DOWNTREND_BREAK_DAYS_OPTIONS:   DowntrendBreakDays[]   = [0, 30, 60, 120]
+export const DOWNTREND_BREAK_PIVOTS_OPTIONS: DowntrendBreakPivots[] = [3, 4, 5]
 
 // ============================================================
 //  進場分析（多頭觸發回測研究）
