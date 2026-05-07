@@ -3,10 +3,12 @@ import type { Toast, ReturnPeriod, TurnoverPeriod, Filters } from './types'
 import { RETURN_PERIOD_LABELS, TURNOVER_PERIOD_LABELS, DEFAULT_FILTERS } from './types'
 import { useStocks } from './hooks/useStocks'
 import { useKline, calcThreeMonthReturn } from './hooks/useKline'
+import { useIsMobile } from './hooks/useIsMobile'
 import { StockTable } from './components/StockTable'
 import { GroupCard } from './components/GroupCard'
 import { Footer } from './components/Footer'
-import { FiltersBar } from './components/FiltersBar'
+import { FiltersBar, totalActiveCount } from './components/FiltersBar'
+import { MobileBottomNav, type MobileTab } from './components/MobileBottomNav'
 import { applyFilters } from './utils/filters'
 
 type View = 'group' | 'table'
@@ -105,6 +107,26 @@ export default function App() {
   const [groupSort, setGroupSort] = useState<GroupSort>('delta')
   const [toasts,    setToasts]    = useState<Toast[]>([])
   const [filters,   setFilters]   = useState<Filters>(DEFAULT_FILTERS)
+
+  // 手機 layout：3 tab 底部導航 + 受控 filter modal
+  // 桌機完全不會 render 任何 mobile 元件（isMobile = false 時 Bottom Nav 不渲染、effectiveView = view）
+  const isMobile = useIsMobile()
+  const [mobileTab, setMobileTab]                 = useState<MobileTab>('stock') // 預設個股
+  const [mobileFilterOpen, setMobileFilterOpen]   = useState(false)
+  // 手機派生 view：mobileTab='group' → group view、其他 → table view（filter 是 trigger，會切到 stock tab + 開 modal）
+  const effectiveView: View = isMobile ? (mobileTab === 'group' ? 'group' : 'table') : view
+
+  const handleMobileTab = useCallback((t: MobileTab) => {
+    if (t === 'filter') {
+      // filter tab 是 trigger：切到 stock tab（這樣 FiltersBar 已 render，modal 才能開）+ 打開 modal
+      setMobileTab('stock')
+      setMobileFilterOpen(true)
+    } else {
+      setMobileTab(t)
+    }
+  }, [])
+
+  const filterActiveCount = useMemo(() => totalActiveCount(filters), [filters])
   // K 線圖均線顯示偏好（持久化到 localStorage）
   const [maPeriods, setMaPeriods] = useState<number[]>(() => {
     try {
@@ -403,12 +425,14 @@ export default function App() {
         />
       </div>
 
-      {/* 個股列表才顯示篩選器（族群總覽不需要）*/}
-      {view === 'table' && filteredStocks.length > 0 && (
+      {/* 個股列表才顯示篩選器（族群總覽不需要）；手機上 stock + filter tab 都需要 FiltersBar 在 DOM 才能開 modal */}
+      {(effectiveView === 'table' || (isMobile && mobileTab === 'stock')) && filteredStocks.length > 0 && (
         <FiltersBar
           stocks={filteredStocks}
           filters={filters}
           onChange={setFilters}
+          mobileOpen={mobileFilterOpen}
+          setMobileOpen={setMobileFilterOpen}
         />
       )}
 
@@ -425,7 +449,7 @@ export default function App() {
         }} />
         <span style={{ color: 'var(--color-text-secondary)' }}>
           {error ? `錯誤：${error}` : loading ? '載入中…' :
-            view === 'table' && filteredByFilters.length !== stockCount
+            effectiveView === 'table' && filteredByFilters.length !== stockCount
               ? `篩出 ${filteredByFilters.length} / ${stockCount} 筆`
               : `共 ${stockCount} 筆 / ${groupCount} 族群`}
         </span>
@@ -459,7 +483,10 @@ export default function App() {
         </div>
       )}
 
-      <main className="flex-1 px-5 pb-8">
+      <main
+        className="flex-1 px-5 pb-8"
+        style={isMobile ? { paddingBottom: 'calc(64px + env(safe-area-inset-bottom, 0))' } : undefined}
+      >
         {!loading && stockCount === 0 && (
           <div className="flex flex-col items-center justify-center py-20" style={{ color: 'var(--color-text-muted)' }}>
             <div className="text-4xl mb-4">📭</div>
@@ -468,7 +495,7 @@ export default function App() {
           </div>
         )}
 
-        {view === 'group' && stockCount > 0 && (
+        {effectiveView === 'group' && stockCount > 0 && (
           <div className="flex flex-col gap-2">
             {sortedGroupEntries.map(([name, stks]) => (
               <GroupCard
@@ -494,7 +521,7 @@ export default function App() {
           </div>
         )}
 
-        {view === 'table' && stockCount > 0 && (
+        {effectiveView === 'table' && stockCount > 0 && (
           <StockTable
             stocks={filteredByFilters}
             sort={sort}
@@ -513,6 +540,15 @@ export default function App() {
       </main>
 
       <Footer />
+
+      {/* 手機底部 3 tab nav；桌機完全不渲染 */}
+      {isMobile && (
+        <MobileBottomNav
+          tab={mobileTab}
+          onTab={handleMobileTab}
+          filterActiveCount={filterActiveCount}
+        />
+      )}
 
       <div className="fixed bottom-5 right-5 z-[9999] flex flex-col gap-2">
         {toasts.map(t => (

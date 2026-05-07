@@ -39,6 +39,9 @@ interface Props {
   stocks:   StockRow[]
   filters:  Filters
   onChange: (next: Filters) => void
+  /** 手機 modal 開關（受控）。提供時 FiltersBar 會用父層 state；未提供則用內部 state（向後相容）*/
+  mobileOpen?:    boolean
+  setMobileOpen?: (open: boolean) => void
 }
 
 const VOLUME_SCALE     = makePiecewiseScale([0, 5000, 25000, 100000, 500000])  // 張（左密右疏）
@@ -151,7 +154,7 @@ const SECTION_LABELS: Record<SectionKey, string> = {
   meta:  '🏷 其他',
 }
 
-function activeCountForSection(key: SectionKey, f: Filters): number {
+export function activeCountForSection(key: SectionKey, f: Filters): number {
   let n = 0
   switch (key) {
     case 'fund':
@@ -189,7 +192,7 @@ function activeCountForSection(key: SectionKey, f: Filters): number {
   }
 }
 
-function totalActiveCount(f: Filters): number {
+export function totalActiveCount(f: Filters): number {
   return activeCountForSection('fund', f)
        + activeCountForSection('tech', f)
        + activeCountForSection('chips', f)
@@ -215,8 +218,12 @@ function saveOpenSections(s: Set<SectionKey>) {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])) } catch { /* ignore */ }
 }
 
-export function FiltersBar({ stocks, filters, onChange }: Props) {
-  const [mobileOpen, setMobileOpen] = useState(false)
+export function FiltersBar({ stocks, filters, onChange, mobileOpen: extOpen, setMobileOpen: extSetOpen }: Props) {
+  // 控制模式：父層提供 mobileOpen + setMobileOpen → 用父層 state；否則用內部 state（向後相容）
+  const [internalOpen, setInternalOpen] = useState(false)
+  const isControlled = extOpen !== undefined && extSetOpen !== undefined
+  const mobileOpen    = isControlled ? extOpen!  : internalOpen
+  const setMobileOpen = isControlled ? extSetOpen! : setInternalOpen
   const [openSections, setOpenSections] = useState<Set<SectionKey>>(() => loadOpenSections())
 
   const totalActive = useMemo(() => totalActiveCount(filters), [filters])
