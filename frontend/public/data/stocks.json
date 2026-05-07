@@ -980,7 +980,7 @@
       "_last_rev_attempt_ts": 1778135095
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -1353,7 +1353,7 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1
+    "trustBuyStreak": 0
   },
   {
     "id": "1304",
@@ -1675,7 +1675,7 @@
       "_last_rev_attempt_ts": 1778135057
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -1994,7 +1994,7 @@
       "_last_rev_attempt_ts": 1778135022
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -2315,7 +2315,7 @@
       "_last_rev_attempt_ts": 1778135168
     },
     "companyProfile": {},
-    "foreignBuyStreak": 4,
+    "foreignBuyStreak": 5,
     "trustBuyStreak": 0
   },
   {
@@ -2637,7 +2637,7 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 4
+    "trustBuyStreak": 5
   },
   {
     "id": "1325",
@@ -2953,7 +2953,7 @@
       "_last_rev_attempt_ts": 1778135200
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -3313,7 +3313,7 @@
       "_last_rev_attempt_ts": 1778135170
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -3637,7 +3637,7 @@
       "_last_rev_attempt_ts": 1778135173
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -3961,7 +3961,7 @@
       "_last_rev_attempt_ts": 1778135051
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -4329,7 +4329,7 @@
       "_last_rev_attempt_ts": 1778135059
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -4660,8 +4660,8 @@
       "_last_rev_attempt_ts": 1778135171
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 1
   },
   {
     "id": "1423",
@@ -4721,9 +4721,9 @@
         "資產股"
       ]
     },
-    "revenueYoY": -24.68,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": -33.97,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -4773,6 +4773,10 @@
         {
           "date": "2026-03",
           "yoy": -24.68
+        },
+        {
+          "date": "2026-04",
+          "yoy": -33.97
         }
       ],
       "grossMarginYoY": [
@@ -4982,7 +4986,7 @@
       "_last_rev_attempt_ts": 1778135155
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -5311,7 +5315,7 @@
       "_last_rev_attempt_ts": 1778135160
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0
   },
   {
@@ -5640,7 +5644,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "EVEREST"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -5963,7 +5967,7 @@
       "_last_rev_attempt_ts": 1778135153
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -6608,7 +6612,7 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1
+    "trustBuyStreak": 0
   },
   {
     "id": "1527",
@@ -6926,7 +6930,7 @@
       "_last_rev_attempt_ts": 1778135122
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -7576,7 +7580,7 @@
       "_last_rev_attempt_ts": 1778135123
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -7881,7 +7885,7 @@
       "_last_rev_attempt_ts": 1778135124
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -8543,7 +8547,7 @@
       "_last_rev_attempt_ts": 1778135200
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -8864,8 +8868,8 @@
       "_last_rev_attempt_ts": 1778135093
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 2
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 3
   },
   {
     "id": "1595",
@@ -9197,7 +9201,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "CBT"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -9514,7 +9518,7 @@
       "_last_rev_attempt_ts": 1778135076
     },
     "companyProfile": {},
-    "foreignBuyStreak": 4,
+    "foreignBuyStreak": 5,
     "trustBuyStreak": 0
   },
   {
@@ -9845,7 +9849,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Dyaco"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -10169,7 +10173,7 @@
       "_last_rev_attempt_ts": 1778048422
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -10490,8 +10494,8 @@
       "_last_rev_attempt_ts": 1778135111
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 6
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "1626",
@@ -10807,7 +10811,7 @@
       "_last_rev_attempt_ts": 1778135198
     },
     "companyProfile": {},
-    "foreignBuyStreak": 6,
+    "foreignBuyStreak": 7,
     "trustBuyStreak": 0
   },
   {
@@ -11465,7 +11469,7 @@
       "_last_rev_attempt_ts": 1778135080
     },
     "companyProfile": {},
-    "foreignBuyStreak": 8,
+    "foreignBuyStreak": 9,
     "trustBuyStreak": 0
   },
   {
@@ -11791,7 +11795,7 @@
       "_last_rev_attempt_ts": 1778135117
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -12135,7 +12139,7 @@
       "_last_rev_attempt_ts": 1778135072
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -12470,7 +12474,7 @@
       "auditor": "國富浩華聯合會計師事務所",
       "englishName": "SHINY  CHEMICAL"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -12799,8 +12803,8 @@
       "_last_rev_attempt_ts": 1778135171
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 3
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 4
   },
   {
     "id": "1805",
@@ -13120,7 +13124,7 @@
       "_last_rev_attempt_ts": 1778135032
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -13451,7 +13455,7 @@
       "auditor": "立本台灣聯合會計師事務所",
       "englishName": "Baolong Intl."
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0
   },
   {
@@ -13775,7 +13779,7 @@
       "_last_rev_attempt_ts": 1778135188
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -14106,7 +14110,7 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "TYCOONS"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -14425,8 +14429,8 @@
       "_last_rev_attempt_ts": 1778135071
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1
   },
   {
     "id": "2027",
@@ -14758,8 +14762,8 @@
       "_last_rev_attempt_ts": 1778135102
     },
     "companyProfile": {},
-    "foreignBuyStreak": 6,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 7,
+    "trustBuyStreak": 1
   },
   {
     "id": "2033",
@@ -15418,7 +15422,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "HIWIN"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -15736,7 +15740,7 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 8
+    "trustBuyStreak": 0
   },
   {
     "id": "2061",
@@ -16052,7 +16056,7 @@
       "_last_rev_attempt_ts": 1778135149
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -16409,7 +16413,7 @@
       "auditor": "正風聯合會計師事務所",
       "englishName": "FRG"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -16743,8 +16747,8 @@
       "_last_rev_attempt_ts": 1778135108
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 1
   },
   {
     "id": "2231",
@@ -17426,7 +17430,7 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "TURVO"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -17741,7 +17745,7 @@
       "_last_rev_attempt_ts": 1777961223
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -17795,9 +17799,9 @@
         "汽機車零組件"
       ]
     },
-    "revenueYoY": 52.46,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 15.41,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -17847,6 +17851,10 @@
         {
           "date": "2026-03",
           "yoy": 52.47
+        },
+        {
+          "date": "2026-04",
+          "yoy": 15.41
         }
       ],
       "grossMarginYoY": [
@@ -18070,7 +18078,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "HS"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0
   },
   {
@@ -18468,8 +18476,8 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "LTC"
     },
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 1
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "2313",
@@ -18787,7 +18795,7 @@
       "_last_rev_attempt_ts": 1778048306
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -19217,8 +19225,8 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "HON HAI"
     },
-    "foreignBuyStreak": 7,
-    "trustBuyStreak": 3
+    "foreignBuyStreak": 8,
+    "trustBuyStreak": 4
   },
   {
     "id": "2327",
@@ -19281,9 +19289,9 @@
         "鉭質電解電容"
       ]
     },
-    "revenueYoY": 22.78,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 22.04,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -19333,6 +19341,10 @@
         {
           "date": "2026-03",
           "yoy": 22.78
+        },
+        {
+          "date": "2026-04",
+          "yoy": 22.04
         }
       ],
       "grossMarginYoY": [
@@ -19542,8 +19554,8 @@
       "_last_rev_attempt_ts": 1778135033
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 3
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 4
   },
   {
     "id": "2328",
@@ -19607,9 +19619,9 @@
         "電子製造服務"
       ]
     },
-    "revenueYoY": -28.44,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": -16.55,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -19659,6 +19671,10 @@
         {
           "date": "2026-03",
           "yoy": -28.45
+        },
+        {
+          "date": "2026-04",
+          "yoy": -16.55
         }
       ],
       "grossMarginYoY": [
@@ -20519,8 +20535,8 @@
       "_last_rev_attempt_ts": 1778135199
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
-    "trustBuyStreak": 1
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2338",
@@ -20836,7 +20852,7 @@
       "_last_rev_attempt_ts": 1778135088
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -21165,8 +21181,8 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "WEC"
     },
-    "foreignBuyStreak": 3,
-    "trustBuyStreak": 3
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 4
   },
   {
     "id": "2355",
@@ -21482,7 +21498,7 @@
       "_last_rev_attempt_ts": 1778135079
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -21819,7 +21835,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "INVENTEC"
     },
-    "foreignBuyStreak": 6,
+    "foreignBuyStreak": 7,
     "trustBuyStreak": 0
   },
   {
@@ -22152,7 +22168,7 @@
       "_last_rev_attempt_ts": 1778135128
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0
   },
   {
@@ -22480,7 +22496,7 @@
       "_last_rev_attempt_ts": 1778072942
     },
     "companyProfile": {},
-    "foreignBuyStreak": 4,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -22797,7 +22813,7 @@
       "_last_rev_attempt_ts": 1778135133
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -23128,8 +23144,8 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "GCE"
     },
-    "foreignBuyStreak": 3,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1
   },
   {
     "id": "2405",
@@ -23462,7 +23478,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Shuttle"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -23795,7 +23811,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "GSC"
     },
-    "foreignBuyStreak": 8,
+    "foreignBuyStreak": 9,
     "trustBuyStreak": 0
   },
   {
@@ -24112,8 +24128,8 @@
       "_last_rev_attempt_ts": 1777961323
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
-    "trustBuyStreak": 3
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 4
   },
   {
     "id": "2415",
@@ -24438,7 +24454,7 @@
       "_last_rev_attempt_ts": 1778135126
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -25088,7 +25104,7 @@
       "_last_rev_attempt_ts": 1778135030
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -25746,7 +25762,7 @@
       "_last_rev_attempt_ts": 1778135175
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -26387,7 +26403,7 @@
       "_last_rev_attempt_ts": 1778135026
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -26708,8 +26724,8 @@
       "_last_rev_attempt_ts": 1778048466
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1
   },
   {
     "id": "2454",
@@ -27066,8 +27082,8 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "MediaTek"
     },
-    "foreignBuyStreak": 2,
-    "trustBuyStreak": 2
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "2457",
@@ -27383,7 +27399,7 @@
       "_last_rev_attempt_ts": 1778135060
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -28071,7 +28087,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Mirle"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -28406,7 +28422,7 @@
       "auditor": "致遠聯合會計師事務所",
       "englishName": "GS"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -29368,7 +29384,7 @@
       "_last_rev_attempt_ts": 1778135028
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -29699,7 +29715,7 @@
       "_last_rev_attempt_ts": 1778048542
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -30026,7 +30042,7 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1
+    "trustBuyStreak": 2
   },
   {
     "id": "2497",
@@ -30348,7 +30364,7 @@
       "_last_rev_attempt_ts": 1778072804
     },
     "companyProfile": {},
-    "foreignBuyStreak": 6,
+    "foreignBuyStreak": 7,
     "trustBuyStreak": 0
   },
   {
@@ -30667,7 +30683,7 @@
       "_last_rev_attempt_ts": 1778135108
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -30993,8 +31009,8 @@
       "_last_rev_attempt_ts": 1778135134
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 1
   },
   {
     "id": "2516",
@@ -31326,7 +31342,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "New Asia"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -31647,7 +31663,7 @@
       "_last_rev_attempt_ts": 1778135048
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -31966,7 +31982,7 @@
       "_last_rev_attempt_ts": 1778135180
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -32297,7 +32313,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "WE & WIN"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -32614,8 +32630,8 @@
       "_last_rev_attempt_ts": 1778135198
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 1
   },
   {
     "id": "2548",
@@ -32670,9 +32686,9 @@
         "營建"
       ]
     },
-    "revenueYoY": 81838.76,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 28465.96,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -32722,6 +32738,10 @@
         {
           "date": "2026-03",
           "yoy": 81838.77
+        },
+        {
+          "date": "2026-04",
+          "yoy": 28465.96
         }
       ],
       "grossMarginYoY": [
@@ -32945,8 +32965,8 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "HUAKU"
     },
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 7
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 8
   },
   {
     "id": "2596",
@@ -33262,7 +33282,7 @@
       "_last_rev_attempt_ts": 1778135186
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0
   },
   {
@@ -33579,7 +33599,7 @@
       "_last_rev_attempt_ts": 1778135129
     },
     "companyProfile": {},
-    "foreignBuyStreak": 7,
+    "foreignBuyStreak": 8,
     "trustBuyStreak": 0
   },
   {
@@ -33901,7 +33921,7 @@
       "_last_rev_attempt_ts": 1778135137
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -34220,7 +34240,7 @@
       "_last_rev_attempt_ts": 1778135190
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -34545,7 +34565,7 @@
       "_last_rev_attempt_ts": 1778135157
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -35188,7 +35208,7 @@
       "_last_rev_attempt_ts": 1778135131
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -35509,7 +35529,7 @@
       "_last_rev_attempt_ts": 1778135085
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -36171,7 +36191,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Mercuries Life"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -36504,7 +36524,7 @@
       "_last_rev_attempt_ts": 1778135207
     },
     "companyProfile": {},
-    "foreignBuyStreak": 7,
+    "foreignBuyStreak": 8,
     "trustBuyStreak": 0
   },
   {
@@ -36837,8 +36857,8 @@
       "_last_rev_attempt_ts": 1778135064
     },
     "companyProfile": {},
-    "foreignBuyStreak": 6,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1
   },
   {
     "id": "2883",
@@ -37158,8 +37178,8 @@
       "_last_rev_attempt_ts": 1778135121
     },
     "companyProfile": {},
-    "foreignBuyStreak": 8,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 9,
+    "trustBuyStreak": 1
   },
   {
     "id": "2886",
@@ -37503,8 +37523,8 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "MEGA FHC"
     },
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 1
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 2
   },
   {
     "id": "2908",
@@ -37824,7 +37844,7 @@
       "_last_rev_attempt_ts": 1778135050
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0
   },
   {
@@ -38143,7 +38163,7 @@
       "_last_rev_attempt_ts": 1778135038
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0
   },
   {
@@ -38478,7 +38498,7 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 2
+    "trustBuyStreak": 0
   },
   {
     "id": "3003",
@@ -38817,7 +38837,7 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "KST"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -39138,8 +39158,8 @@
       "_last_rev_attempt_ts": 1778048334
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 1
   },
   {
     "id": "3013",
@@ -39469,7 +39489,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "UNEEC"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -39814,7 +39834,7 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "ITE"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -40149,7 +40169,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "EPi"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -40468,7 +40488,7 @@
       "_last_rev_attempt_ts": 1778048391
     },
     "companyProfile": {},
-    "foreignBuyStreak": 22,
+    "foreignBuyStreak": 23,
     "trustBuyStreak": 0
   },
   {
@@ -40818,7 +40838,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "ACTION"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -40885,9 +40905,9 @@
         "雲端科技"
       ]
     },
-    "revenueYoY": 26.04,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 14.18,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -40937,6 +40957,10 @@
         {
           "date": "2026-03",
           "yoy": 26.04
+        },
+        {
+          "date": "2026-04",
+          "yoy": 14.18
         }
       ],
       "grossMarginYoY": [
@@ -41463,8 +41487,8 @@
       "_last_rev_attempt_ts": 1777961228
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
-    "trustBuyStreak": 1
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 2
   },
   {
     "id": "3033",
@@ -41794,7 +41818,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Weikeng"
     },
-    "foreignBuyStreak": 7,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -41869,9 +41893,9 @@
         "手機面板驅動IC"
       ]
     },
-    "revenueYoY": -9.64,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 1.15,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -41921,6 +41945,10 @@
         {
           "date": "2026-03",
           "yoy": -9.64
+        },
+        {
+          "date": "2026-04",
+          "yoy": 1.15
         }
       ],
       "grossMarginYoY": [
@@ -42144,8 +42172,8 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "NOVATEK"
     },
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 2
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 3
   },
   {
     "id": "3038",
@@ -42479,7 +42507,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "EDT"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0
   },
   {
@@ -42856,9 +42884,9 @@
         "UPS"
       ]
     },
-    "revenueYoY": -17.38,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 16.04,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -42908,6 +42936,10 @@
         {
           "date": "2026-03",
           "yoy": -17.39
+        },
+        {
+          "date": "2026-04",
+          "yoy": 16.04
         }
       ],
       "grossMarginYoY": [
@@ -43463,7 +43495,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Fu Hua"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -43834,7 +43866,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "Altek"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -44167,7 +44199,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "LandMark"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -44498,7 +44530,7 @@
       "_last_rev_attempt_ts": 1778135116
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -44836,7 +44868,7 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "YCD"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -45483,7 +45515,7 @@
       "_last_rev_attempt_ts": 1778135112
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -45801,7 +45833,7 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 2
+    "trustBuyStreak": 0
   },
   {
     "id": "3218",
@@ -46454,8 +46486,8 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Wistron"
     },
-    "foreignBuyStreak": 3,
-    "trustBuyStreak": 1
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 2
   },
   {
     "id": "3234",
@@ -46517,9 +46549,9 @@
         "光纖主動元件"
       ]
     },
-    "revenueYoY": -9.15,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 12.17,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -46569,6 +46601,10 @@
         {
           "date": "2026-03",
           "yoy": -9.16
+        },
+        {
+          "date": "2026-04",
+          "yoy": 12.17
         }
       ],
       "grossMarginYoY": [
@@ -47738,7 +47774,7 @@
       "_last_rev_attempt_ts": 1778135094
     },
     "companyProfile": {},
-    "foreignBuyStreak": 6,
+    "foreignBuyStreak": 7,
     "trustBuyStreak": 0
   },
   {
@@ -48410,7 +48446,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "TEKCORE"
     },
-    "foreignBuyStreak": 10,
+    "foreignBuyStreak": 11,
     "trustBuyStreak": 0
   },
   {
@@ -48741,7 +48777,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Laster Tech"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -49068,7 +49104,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "FOCI"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -49441,9 +49477,9 @@
         "工業電腦"
       ]
     },
-    "revenueYoY": 13.72,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 56.33,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -49493,6 +49529,10 @@
         {
           "date": "2026-03",
           "yoy": 13.73
+        },
+        {
+          "date": "2026-04",
+          "yoy": 56.33
         }
       ],
       "grossMarginYoY": [
@@ -49702,7 +49742,7 @@
       "_last_rev_attempt_ts": 1778135063
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -50026,327 +50066,8 @@
       "_last_rev_attempt_ts": 1778135115
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
-  },
-  {
-    "id": "3443",
-    "name": "創意",
-    "group": "IC設計",
-    "groups": [
-      "IC設計"
-    ],
-    "groupDesc": "",
-    "holdingPct": 56.59,
-    "delta": 0.29,
-    "price": 5450.0,
-    "marketCap": 315.6,
-    "turnovers": {
-      "d1": 115.11,
-      "d5": 129.58,
-      "d10": 89.57,
-      "d20": 81.27,
-      "d50": 66.81
-    },
-    "volumes": {
-      "d1": 2.18,
-      "d5": 2.69,
-      "d10": 1.97,
-      "d20": 2.18,
-      "d50": 2.27
-    },
-    "pctOf52wHigh": 100.0,
-    "pctOf200dHigh": 100.0,
-    "ma10": 4439.5,
-    "ma20": 3810.0,
-    "ma60": 2904.08,
-    "ma20Trend": "up",
-    "dailyChangePct": 9.99,
-    "date": "2026-04-30",
-    "threeMonthReturn": 400.0,
-    "returns": {
-      "w1": 32.28,
-      "m1": 130.44,
-      "m3": 107.62,
-      "m6": 264.55,
-      "y1": 400.0
-    },
-    "industry": "半導體業",
-    "subIndustries": [
-      "IC設計",
-      "設計IP",
-      "ASIC"
-    ],
-    "subsByGroup": {
-      "IC設計": [
-        "IC設計",
-        "設計IP",
-        "ASIC"
-      ]
-    },
-    "revenueYoY": 156.85,
-    "revenueMonth": "2026-04",
-    "revenueFirstSeen": "2026-05-05",
-    "fundamentals": {
-      "revenueYoY": [
-        {
-          "date": "2025-05",
-          "yoy": -14.43
-        },
-        {
-          "date": "2025-06",
-          "yoy": -9.5
-        },
-        {
-          "date": "2025-07",
-          "yoy": -23.09
-        },
-        {
-          "date": "2025-08",
-          "yoy": 42.31
-        },
-        {
-          "date": "2025-09",
-          "yoy": 104.86
-        },
-        {
-          "date": "2025-10",
-          "yoy": 150.6
-        },
-        {
-          "date": "2025-11",
-          "yoy": 114.22
-        },
-        {
-          "date": "2025-12",
-          "yoy": 75.68
-        },
-        {
-          "date": "2026-01",
-          "yoy": 107.78
-        },
-        {
-          "date": "2026-02",
-          "yoy": 60.15
-        },
-        {
-          "date": "2026-03",
-          "yoy": 33.48
-        },
-        {
-          "date": "2026-04",
-          "yoy": 156.85
-        }
-      ],
-      "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 4.85
-        },
-        {
-          "quarter": "2024Q3",
-          "yoy": 12.14
-        },
-        {
-          "quarter": "2024Q4",
-          "yoy": 16.52
-        },
-        {
-          "quarter": "2025Q1",
-          "yoy": -5.37
-        },
-        {
-          "quarter": "2025Q2",
-          "yoy": 9.06
-        },
-        {
-          "quarter": "2025Q3",
-          "yoy": -32.33
-        },
-        {
-          "quarter": "2025Q4",
-          "yoy": -42.64
-        },
-        {
-          "quarter": "2026Q1",
-          "yoy": -3.17
-        }
-      ],
-      "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 7.7
-        },
-        {
-          "quarter": "2024Q3",
-          "yoy": 11.3
-        },
-        {
-          "quarter": "2024Q4",
-          "yoy": 11.2
-        },
-        {
-          "quarter": "2025Q1",
-          "yoy": 25.71
-        },
-        {
-          "quarter": "2025Q2",
-          "yoy": 0.84
-        },
-        {
-          "quarter": "2025Q3",
-          "yoy": -32.0
-        },
-        {
-          "quarter": "2025Q4",
-          "yoy": -30.39
-        },
-        {
-          "quarter": "2026Q1",
-          "yoy": 2.24
-        }
-      ],
-      "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 8.31
-        },
-        {
-          "quarter": "2024Q3",
-          "yoy": 1.05
-        },
-        {
-          "quarter": "2024Q4",
-          "yoy": 18.8
-        },
-        {
-          "quarter": "2025Q1",
-          "yoy": 45.14
-        },
-        {
-          "quarter": "2025Q2",
-          "yoy": -13.86
-        },
-        {
-          "quarter": "2025Q3",
-          "yoy": -16.08
-        },
-        {
-          "quarter": "2025Q4",
-          "yoy": 36.87
-        },
-        {
-          "quarter": "2026Q1",
-          "yoy": 71.27
-        }
-      ],
-      "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 30.55
-        },
-        {
-          "quarter": "2024Q3",
-          "value": 35.79
-        },
-        {
-          "quarter": "2024Q4",
-          "value": 33.2
-        },
-        {
-          "quarter": "2025Q1",
-          "value": 28.09
-        },
-        {
-          "quarter": "2025Q2",
-          "value": 33.32
-        },
-        {
-          "quarter": "2025Q3",
-          "value": 24.22
-        },
-        {
-          "quarter": "2025Q4",
-          "value": 19.04
-        },
-        {
-          "quarter": "2026Q1",
-          "value": 27.2
-        }
-      ],
-      "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 15.33
-        },
-        {
-          "quarter": "2024Q3",
-          "value": 18.01
-        },
-        {
-          "quarter": "2024Q4",
-          "value": 14.56
-        },
-        {
-          "quarter": "2025Q1",
-          "value": 15.59
-        },
-        {
-          "quarter": "2025Q2",
-          "value": 15.46
-        },
-        {
-          "quarter": "2025Q3",
-          "value": 12.25
-        },
-        {
-          "quarter": "2025Q4",
-          "value": 10.13
-        },
-        {
-          "quarter": "2026Q1",
-          "value": 15.93
-        }
-      ],
-      "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 6.78
-        },
-        {
-          "quarter": "2024Q3",
-          "value": 7.71
-        },
-        {
-          "quarter": "2024Q4",
-          "value": 6.32
-        },
-        {
-          "quarter": "2025Q1",
-          "value": 7.17
-        },
-        {
-          "quarter": "2025Q2",
-          "value": 5.84
-        },
-        {
-          "quarter": "2025Q3",
-          "value": 6.47
-        },
-        {
-          "quarter": "2025Q4",
-          "value": 8.65
-        },
-        {
-          "quarter": "2026Q1",
-          "value": 12.28
-        }
-      ],
-      "_last_rev_attempt_ts": 1778048531
-    },
-    "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 4
   },
   {
     "id": "3465",
@@ -50662,7 +50383,7 @@
       "_last_rev_attempt_ts": 1778135204
     },
     "companyProfile": {},
-    "foreignBuyStreak": 4,
+    "foreignBuyStreak": 5,
     "trustBuyStreak": 0
   },
   {
@@ -50983,7 +50704,7 @@
       "_last_rev_attempt_ts": 1778135177
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0
   },
   {
@@ -51311,7 +51032,7 @@
       "_last_rev_attempt_ts": 1778135152
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -51651,7 +51372,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "USUN"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -51982,7 +51703,7 @@
       "_last_rev_attempt_ts": 1778135201
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -52626,7 +52347,7 @@
       "_last_rev_attempt_ts": 1778135073
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -53272,7 +52993,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "ICP DAS"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -53589,7 +53310,7 @@
       "_last_rev_attempt_ts": 1778135087
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -53647,9 +53368,9 @@
         "電源管理IC"
       ]
     },
-    "revenueYoY": 28.72,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 15.13,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -53699,6 +53420,10 @@
         {
           "date": "2026-03",
           "yoy": 28.73
+        },
+        {
+          "date": "2026-04",
+          "yoy": 15.13
         }
       ],
       "grossMarginYoY": [
@@ -53908,7 +53633,7 @@
       "_last_rev_attempt_ts": 1778135119
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -54227,7 +53952,7 @@
       "_last_rev_attempt_ts": 1778048495
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -54551,8 +54276,8 @@
       "_last_rev_attempt_ts": 1778135069
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 8
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 9
   },
   {
     "id": "3594",
@@ -54862,7 +54587,7 @@
       "_last_rev_attempt_ts": 1778135162
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -56182,8 +55907,8 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Alchip"
     },
-    "foreignBuyStreak": 2,
-    "trustBuyStreak": 1
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 2
   },
   {
     "id": "3707",
@@ -56833,7 +56558,7 @@
       "_last_rev_attempt_ts": 1778135154
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -57148,7 +56873,7 @@
       "_last_rev_attempt_ts": 1778135040
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -57467,8 +57192,8 @@
       "_last_rev_attempt_ts": 1778135184
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 7
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 8
   },
   {
     "id": "4111",
@@ -57872,9 +57597,9 @@
         "生理檢測器材"
       ]
     },
-    "revenueYoY": 2.15,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": -9.17,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -57924,6 +57649,10 @@
         {
           "date": "2026-03",
           "yoy": 2.16
+        },
+        {
+          "date": "2026-04",
+          "yoy": -9.17
         }
       ],
       "grossMarginYoY": [
@@ -58147,7 +57876,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "ROSSMAX"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -58803,7 +58532,7 @@
       "_last_rev_attempt_ts": 1778135091
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -59122,7 +58851,7 @@
       "_last_rev_attempt_ts": 1778048336
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -60064,7 +59793,7 @@
       "_last_rev_attempt_ts": 1778135086
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -60391,7 +60120,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "RT"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -60722,7 +60451,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "TBI MOTION"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -61041,7 +60770,7 @@
       "_last_rev_attempt_ts": 1778135164
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -61680,7 +61409,7 @@
       "_last_rev_attempt_ts": 1778135150
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -62011,7 +61740,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "BIONIME"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -62344,7 +62073,7 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "JCP"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -62677,7 +62406,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "DBC"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -63275,7 +63004,7 @@
       "_last_rev_attempt_ts": 1778135102
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -63594,7 +63323,7 @@
       "_last_rev_attempt_ts": 1778135110
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -63909,7 +63638,7 @@
       "_last_rev_attempt_ts": 1778048328
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -64580,7 +64309,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "FITIPOWER"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -65237,8 +64966,8 @@
       "_last_rev_attempt_ts": 1778135046
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 2
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "5225",
@@ -65554,7 +65283,7 @@
       "_last_rev_attempt_ts": 1778135101
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -65885,7 +65614,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "Sunfun"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -66202,7 +65931,7 @@
       "_last_rev_attempt_ts": 1778135046
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -66847,7 +66576,7 @@
       "_last_rev_attempt_ts": 1778135028
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -67164,8 +66893,8 @@
       "_last_rev_attempt_ts": 1778135195
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
-    "trustBuyStreak": 1
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 2
   },
   {
     "id": "5351",
@@ -67485,8 +67214,8 @@
       "_last_rev_attempt_ts": 1778048353
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
-    "trustBuyStreak": 2
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "5403",
@@ -68154,7 +67883,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "TSC"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -68478,7 +68207,7 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1
+    "trustBuyStreak": 0
   },
   {
     "id": "5489",
@@ -69787,7 +69516,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "ACTER"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -70104,7 +69833,7 @@
       "_last_rev_attempt_ts": 1778135036
     },
     "companyProfile": {},
-    "foreignBuyStreak": 4,
+    "foreignBuyStreak": 5,
     "trustBuyStreak": 0
   },
   {
@@ -70421,7 +70150,7 @@
       "_last_rev_attempt_ts": 1778072808
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -70732,7 +70461,7 @@
       "auditor": "正風聯合會計師事務所",
       "englishName": "CIS"
     },
-    "foreignBuyStreak": 12,
+    "foreignBuyStreak": 13,
     "trustBuyStreak": 0
   },
   {
@@ -71051,7 +70780,7 @@
       "_last_rev_attempt_ts": 1778135110
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -71107,9 +70836,9 @@
         "證券"
       ]
     },
-    "revenueYoY": 788.41,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 4229.15,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -71161,8 +70890,8 @@
           "yoy": 281.93
         },
         {
-          "date": "2026-03",
-          "yoy": 788.41
+          "date": "2026-04",
+          "yoy": 4229.15
         }
       ],
       "grossMarginYoY": [
@@ -71386,7 +71115,7 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "HORIZON Sec."
     },
-    "foreignBuyStreak": 12,
+    "foreignBuyStreak": 13,
     "trustBuyStreak": 0
   },
   {
@@ -71717,7 +71446,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "concords"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -72030,7 +71759,7 @@
       "_last_rev_attempt_ts": 1778135139
     },
     "companyProfile": {},
-    "foreignBuyStreak": 4,
+    "foreignBuyStreak": 5,
     "trustBuyStreak": 0
   },
   {
@@ -72359,7 +72088,7 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "SFG"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0
   },
   {
@@ -72995,7 +72724,7 @@
       "_last_rev_attempt_ts": 1778135045
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -73337,8 +73066,8 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "CHIPBOND"
     },
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 5
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0
   },
   {
     "id": "6152",
@@ -73661,7 +73390,7 @@
       "_last_rev_attempt_ts": 1778135081
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -73999,7 +73728,7 @@
       "_last_rev_attempt_ts": 1778135098
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -74316,7 +74045,7 @@
       "_last_rev_attempt_ts": 1778072969
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -74950,7 +74679,7 @@
       "_last_rev_attempt_ts": 1778135089
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -75281,8 +75010,8 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "ALL RING"
     },
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 4
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0
   },
   {
     "id": "6202",
@@ -75606,8 +75335,8 @@
       "_last_rev_attempt_ts": 1778135029
     },
     "companyProfile": {},
-    "foreignBuyStreak": 4,
-    "trustBuyStreak": 2
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 0
   },
   {
     "id": "6205",
@@ -75995,9 +75724,9 @@
         "探針、探針卡"
       ]
     },
-    "revenueYoY": 15.41,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 22.24,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -76047,6 +75776,10 @@
         {
           "date": "2026-03",
           "yoy": 15.42
+        },
+        {
+          "date": "2026-04",
+          "yoy": 22.24
         }
       ],
       "grossMarginYoY": [
@@ -76594,7 +76327,7 @@
       "_last_rev_attempt_ts": 1778135182
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -76929,7 +76662,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "FULL WANG"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -77260,7 +76993,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "YFC-BonEagle"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -77318,9 +77051,9 @@
         "太陽能電池模組"
       ]
     },
-    "revenueYoY": 5.09,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 19.33,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -77370,6 +77103,10 @@
         {
           "date": "2026-03",
           "yoy": 5.09
+        },
+        {
+          "date": "2026-04",
+          "yoy": 19.33
         }
       ],
       "grossMarginYoY": [
@@ -77593,7 +77330,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "MOTECH"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -77931,7 +77668,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "TMP"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -78575,7 +78312,7 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 2
+    "trustBuyStreak": 3
   },
   {
     "id": "6276",
@@ -78893,7 +78630,7 @@
       "_last_rev_attempt_ts": 1778135144
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -79232,7 +78969,7 @@
       "englishName": "TSMT"
     },
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1
+    "trustBuyStreak": 0
   },
   {
     "id": "6282",
@@ -79562,7 +79299,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "AcBel"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -79888,8 +79625,8 @@
       "_last_rev_attempt_ts": 1778135079
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 1
   },
   {
     "id": "6405",
@@ -80878,8 +80615,8 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Ezconn"
     },
-    "foreignBuyStreak": 2,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1
   },
   {
     "id": "6443",
@@ -81211,7 +80948,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "TSEC"
     },
-    "foreignBuyStreak": 5,
+    "foreignBuyStreak": 6,
     "trustBuyStreak": 0
   },
   {
@@ -81859,7 +81596,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "SH"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -82197,7 +81934,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "HOPAX"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -82513,7 +82250,7 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 4
+    "trustBuyStreak": 0
   },
   {
     "id": "6531",
@@ -82833,8 +82570,8 @@
       "_last_rev_attempt_ts": 1778048419
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 2
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 3
   },
   {
     "id": "6534",
@@ -83171,7 +82908,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "CHBIO"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -83506,7 +83243,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "Foresee"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -83823,7 +83560,7 @@
       "_last_rev_attempt_ts": 1778135145
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -84161,7 +83898,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "HOTAI FINANCE"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -84480,7 +84217,7 @@
       "_last_rev_attempt_ts": 1778135123
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0
   },
   {
@@ -84787,7 +84524,7 @@
       "_last_rev_attempt_ts": 1778135107
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -85007,7 +84744,7 @@
           "value": 1.09
         }
       ],
-      "_last_rev_attempt_ts": 1778137744,
+      "_last_rev_attempt_ts": 1778145194,
       "revenueYoY": [
         {
           "date": "2026-03",
@@ -85030,7 +84767,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Handa Pharma"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -85367,8 +85104,8 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "ZILLTEK"
     },
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 2
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 3
   },
   {
     "id": "6689",
@@ -86015,7 +85752,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "YANKEY"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -86678,7 +86415,7 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "Ever Supreme"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -86741,9 +86478,9 @@
         "電晶體"
       ]
     },
-    "revenueYoY": -10.34,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": -12.13,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -86793,6 +86530,10 @@
         {
           "date": "2026-03",
           "yoy": -10.35
+        },
+        {
+          "date": "2026-04",
+          "yoy": -12.13
         }
       ],
       "grossMarginYoY": [
@@ -87002,8 +86743,8 @@
       "_last_rev_attempt_ts": 1778135103
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
-    "trustBuyStreak": 2
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0
   },
   {
     "id": "6727",
@@ -87333,7 +87074,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "AMI"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -87974,7 +87715,7 @@
       "_last_rev_attempt_ts": 1778135082
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -88606,8 +88347,8 @@
       "_last_rev_attempt_ts": 1778048483
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 7
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 8
   },
   {
     "id": "6805",
@@ -88923,8 +88664,8 @@
       "_last_rev_attempt_ts": 1778135187
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1
   },
   {
     "id": "6859",
@@ -89247,7 +88988,7 @@
       "_last_rev_attempt_ts": 1778135052
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -89585,7 +89326,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "HDRE"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -89841,7 +89582,7 @@
       "_last_rev_attempt_ts": 1778135044
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   },
   {
@@ -90126,7 +89867,7 @@
       "_last_rev_attempt_ts": 1778072973
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -90298,7 +90039,7 @@
           "value": 0.05
         }
       ],
-      "_last_rev_attempt_ts": 1778137746,
+      "_last_rev_attempt_ts": 1778145196,
       "revenueYoY": [
         {
           "date": "2026-03",
@@ -90307,7 +90048,7 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -90494,7 +90235,7 @@
           "value": 2.66
         }
       ],
-      "_last_rev_attempt_ts": 1778137742,
+      "_last_rev_attempt_ts": 1778145195,
       "revenueYoY": [
         {
           "date": "2026-03",
@@ -90503,7 +90244,7 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -91153,7 +90894,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "PChome online"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -91476,8 +91217,8 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 3,
+    "trustBuyStreak": 1
   },
   {
     "id": "8064",
@@ -92147,7 +91888,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "CHANG WAH"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -92473,7 +92214,7 @@
       "_last_rev_attempt_ts": 1778135151
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -92806,7 +92547,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "CoAsia"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -93139,7 +92880,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "CviLux"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -93456,7 +93197,7 @@
       "_last_rev_attempt_ts": 1778135062
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0
   },
   {
@@ -93773,7 +93514,7 @@
       "_last_rev_attempt_ts": 1778048315
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -94164,9 +93905,9 @@
         "記憶體模組"
       ]
     },
-    "revenueYoY": 292.7,
-    "revenueMonth": "2026-03",
-    "revenueFirstSeen": "2026-05-04",
+    "revenueYoY": 360.82,
+    "revenueMonth": "2026-04",
+    "revenueFirstSeen": "2026-05-07",
     "fundamentals": {
       "revenueYoY": [
         {
@@ -94216,6 +93957,10 @@
         {
           "date": "2026-03",
           "yoy": 292.71
+        },
+        {
+          "date": "2026-04",
+          "yoy": 360.82
         }
       ],
       "grossMarginYoY": [
@@ -94439,7 +94184,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Apacer"
     },
-    "foreignBuyStreak": 6,
+    "foreignBuyStreak": 7,
     "trustBuyStreak": 0
   },
   {
@@ -94794,8 +94539,8 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Phison"
     },
-    "foreignBuyStreak": 3,
-    "trustBuyStreak": 7
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 8
   },
   {
     "id": "8354",
@@ -95136,7 +94881,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "KH"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -95453,8 +95198,8 @@
       "_last_rev_attempt_ts": 1778135075
     },
     "companyProfile": {},
-    "foreignBuyStreak": 10,
-    "trustBuyStreak": 1
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 2
   },
   {
     "id": "8464",
@@ -95770,7 +95515,7 @@
       "_last_rev_attempt_ts": 1778135068
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0
   },
   {
@@ -96420,7 +96165,7 @@
       "_last_rev_attempt_ts": 1778135188
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -97381,7 +97126,7 @@
       "_last_rev_attempt_ts": 1778072902
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0
   },
   {
@@ -97483,11 +97228,11 @@
           "value": 0.0
         }
       ],
-      "_last_rev_attempt_ts": 1778137745,
-      "_last_fin_attempt_ts": 1778137746
+      "_last_rev_attempt_ts": 1778145199,
+      "_last_fin_attempt_ts": 1778145200
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -97578,8 +97323,8 @@
           "value": 0.0
         }
       ],
-      "_last_rev_attempt_ts": 1778137742,
-      "_last_fin_attempt_ts": 1778137743
+      "_last_rev_attempt_ts": 1778145197,
+      "_last_fin_attempt_ts": 1778145198
     },
     "companyProfile": {
       "business": "生產製造機車\r\n生產製造機車零組件\r\n製造金屬零件自行開發模具",
@@ -97913,7 +97658,7 @@
       "_last_rev_attempt_ts": 1778048445
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -98230,7 +97975,7 @@
       "_last_rev_attempt_ts": 1778135090
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -98871,7 +98616,7 @@
       "_last_rev_attempt_ts": 1778135125
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0
   },
   {
@@ -99188,8 +98933,8 @@
       "_last_rev_attempt_ts": 1778135059
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 0
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 1
   },
   {
     "id": "9935",
@@ -99505,7 +99250,7 @@
       "_last_rev_attempt_ts": 1778135138
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -99822,7 +99567,7 @@
       "_last_rev_attempt_ts": 1778135106
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0
   },
   {
@@ -100148,7 +99893,7 @@
       "_last_rev_attempt_ts": 1778135104
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0
   }
 ]
