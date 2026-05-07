@@ -2,7 +2,7 @@
 
 > 這份文件給未來新 Cowork / Claude Code session 用。讀完這份就有完整背景，不用花時間摸索。
 > **配合 `SESSION_HANDOFF.md` 一起讀** — 那份是最近 session 的詳細交接 + 待辦事項。
-> 最後更新：2026-05-05（新增三個扣抵值 / 突破系列 filter：N 日內突破 MA、明日 MA 續揚/下彎、未來 N 日 MA 易續揚 + mobile-friendly InfoPopup tooltip + 240MA 從 MA filter 選項移除）
+> 最後更新：2026-05-07（institutional 改 Yahoo 主來源避免 publish lag + 抓轉折 filter v4 量價合成法 + (曾)回撤均線 filter 取代費波那契）
 
 ## 一句話說明
 
@@ -234,6 +234,46 @@ type daily_screener.log | findstr /N "Run started"
 12. **多檔 commit 容易漏 add** — 5 檔以上的大 commit 容易漏 add（曾踩：FiltersBar 上去了 types/utils/App/Python 沒上去 → master build 壞）。**SOP**：commit 前 `git status` 確認 staged 數對。修法：補 commit 把缺檔再 push 一次即可。
 13. **localStorage stale schema** — `ALL_MA_PERIODS` 增刪期數時，舊使用者 `chartMaPeriods` 可能存著無效值（如拿掉 240 後仍有 240 殘留），`MAToggleBar` 不顯示但 chart 還在畫鬼魂線。**SOP**：之後改 localStorage-driven 的 schema 時，加 valid set 過濾（App.tsx useState init 時 filter against `ALL_MA_PERIODS`）。臨時解：教使用者 console 跑 `localStorage.removeItem('chartMaPeriods'); location.reload()`。
 14. **🚨 `git reset --hard master` 在 feature/favorites-v2 是地雷** — 2026-05-05 踩過：當 master 被 amend 換 hash 後，誤用 `git reset --hard master` 想「同步」feature 分支，結果 feature 自己 95+ 個 commit（favorites/Telegram/strategies/migrations）**全部被覆蓋**。靠 git reflog 才救回（找到 8232137 是最後好狀態，cherry-pick 8 筆 master 新 commit 還原）。**鐵律：分支同步永遠用 merge，不用 reset --hard，除非你 100% 確定要丟掉當前分支歷史**。
+15. **FinMind 法人資料 publish 比 Yahoo TW 慢一天** — 2026-05-06 踩過：用戶看到 filter「近 1 日法人買」抓國巨但實際國巨當天外資是賣超。根因：cron 17:00 跑時 FinMind 還沒 5/6 資料、回 200 OK 但內容是 5/5 stale；原 fallback 邏輯只在 FinMind 撞 402 才走 Yahoo。**修法**：scrape_institutional.py 改 Yahoo 主來源（先抓 Yahoo），FinMind 變 fallback。**SOP**：scrape 完成後驗證 institutional.json 最後一筆日期 = expected_latest_trading_day，落差就警報。
+
+## 工程原則（給未來 Cowork session 的修 code 心法）
+
+每次 user 想加新 filter / 改現有 filter，遵循「**最少改動、最高效率**」：
+
+### A. 不重寫結構，只 swap 實作
+- 改 filter 邏輯時，**schema 不動**只改 pass function 函式體（用戶不覺得 chip 行為改變）
+- 用「內部映射函式」(如 `pivotsToHighN()`) 重新詮釋既有 chip 值，避開 schema migration 痛苦
+- 例：抓轉折 v1→v4 換了 4 種演算法，`DowntrendBreakFilter` schema 完全沒改
+
+### B. 重複利用 helpers
+- `calcLastMA(bars, period)`、`getBars(klines, id)`、`linregSlope()` 等已存在 → 新 filter 直接用，不另寫
+- 真要新 helper 也寫成 module-level function 給未來 filter 用
+
+### C. 不留垃圾
+- 砍舊 filter 時連根拔除（schema / OPTIONS / pass function / Python 同步 / UI block / DEFAULT_FILTERS / klineFiltersActive）
+- 過時 const 一起拔
+- 不留 dead code（譬如 v1 邏輯被 v4 取代後就刪掉，不註解保留）
+
+### D. 標準 pipeline（每個 filter 改 5 個檔位置）
+```
+frontend/src/types/index.ts       → schema + DEFAULT + OPTIONS const
+frontend/src/utils/filters.ts     → pass function + applyFilters wire-in
+frontend/src/App.tsx              → klineFiltersActive 加上去（如果用 K 線）
+frontend/src/components/FiltersBar.tsx → UI block + setter functions + active count
+scripts/screeners/user_filters.py → Python 同步邏輯（給 daily-push 用）
+```
+有固定 checklist，不會漏。漏一個 → 推上去 build 就壞 (踩過 2026-05-05)。
+
+### E. tsc + Python sanity test 雙保險
+- 改完 frontend → `npx tsc --noEmit` 必跑
+- 改完 Python → 寫 inline sanity test（make_bars + 5-8 個 case）必跑
+- 全綠才 commit，不依賴 user 來幫測 bug
+
+### F. push SOP 三層防呆
+- 單行短英文 commit message（避 Cloudflare UTF-8 bug — quirk #11）
+- specific `git add <file1> <file2> ...` 列每檔（避漏 add — quirk #12）
+- feature 分支用 `merge --no-edit`，**永不 reset --hard**（quirk #14）
+- `git pull --rebase --autostash` 開頭跑（race-safe，cron bot 同時 push 不會擋）
 
 ## 分支同步 SOP（master → feature/favorites-v2）
 

@@ -1,11 +1,133 @@
-# Session Handoff — 2026-05-05 晚
+# Session Handoff — 2026-05-07 晚
 
 > 給下一個 Cowork session 用。先讀 `CLAUDE.md`（專案總覽），再讀這份（最近改動 + 待辦）。
-> 這份是 2026-05-05（扣抵值系列 filter + mobile tooltip）的濃縮，下面保留 2026-05-02（M3/M4/假日）的歷史內容。
+> 這份是 2026-05-07（institutional Yahoo 主、抓轉折 v4、回撤均線 filter）的濃縮，下面保留 5/05、5/02 的歷史。
 
 ---
 
-## 🔥 2026-05-05 完成的內容
+## 🔥 2026-05-07 完成的內容
+
+### 1. institutional 改 Yahoo 主來源（修 publish lag）
+
+**事故起源**：5/6 user 發現 filter「近 1 日外資+投信買」抓到國巨 (2327)，但 5/6 國巨外資是賣超的。
+
+**根因**：FinMind 5/6 法人資料 publish 晚於 Yahoo TW finance。當天 cron 17:08 跑時 FinMind 還沒 5/6 資料，但 Yahoo 已經有了。原邏輯 FinMind 撞 402 才走 Yahoo fallback；FinMind 回 200 OK 但內容是舊的（stale），不會觸發 fallback。
+
+**修法**（`scripts/scrape_institutional.py`）：
+- Yahoo **主來源**（先抓）
+- Yahoo 沒到 expected publish date → 走 FinMind fallback
+- FinMind 還在但角色變備援
+- 結尾 log 改成「Yahoo N 支 / FinMind 補 N 支 / 跳過 N 支」
+
+**效果**：每天 17:00 後跑 cron 都能抓到當日法人，不再 lag 一天。
+
+---
+
+### 2. 抓轉折 filter（v1→v4 大改 4 次，最後 XQ 量價合成法）
+
+**v1 嘗試**：pivot-based（左右各 3 根更低）+ 嚴格遞減 lower-highs + ABC 條件 → **0 命中**（太嚴）
+
+**v2 嘗試**：max-to-last pivot 連線 + 加突破 margin / 跌幅 → 7 命中含飆漲 outlier
+
+**v3 嘗試**：線性迴歸法（XQ 文章 #1）→ 55 命中但抓到福壽這種 sideways（迴歸線被中間反彈拉低 → 偽「下降」）
+
+**v4 採用**（user 接受）：XQ 量價合成法（XQ 文章 #2）：
+- `kk[i] = kk[i-1] + (return × volume)` 累積量價合成指標
+- `value1 = linregslope(kk, Length)` 長期斜率 < 0（下降中）
+- `value2 = linregslope(kk, 5)` 短期斜率 > 0（近期反彈）
+- 今日 close > **過去 N 日最高 high**（突破壓力位，不是趨勢線）
+- 今日漲幅 ≥ 2%（強勢紅 K）
+
+**chip 對應**：
+- 「趨勢期間」(30/60/120) → Length（最大 60）
+- 「壓力位」(3/4/5) → HighN 5/10/15 日
+
+**關鍵差異 vs trendline 法**：用「過去 N 日 high」當 resistance level，不用畫趨勢線，避開 pivot 偵測 / regression line 偏低等噪音問題。
+
+---
+
+### 3. (曾)回撤均線 filter（取代費波那契）
+
+**先嘗試** Fibonacci retracement（3 levels: 38.2/50/61.8%），但 user 覺得太複雜，**改用更直觀的 MA 回撤**。
+
+**最終邏輯**（`utils/filters.ts` `passPullbackMa`）：
+1. MA 朝上：今日 MA > 5 天前 MA
+2. **今日 low ≤ MA**（盤中觸及或跌破）
+3. **今日 close > MA**（收盤站回上方）
+4. 過去 20 天最高 close > MA × 1.05（確認真的「漲過」再「拉回」）
+
+**UI**：單排 chip「(曾)回撤均線」+ 均線 [關閉/5MA/10MA/20MA/60MA]
+
+「(曾)」字暗示「今天盤中曾經觸及」。
+
+---
+
+## 💡 2026-05-07 用到的核心工程原則：「最少改動、最高效率」
+
+這次連續做 5 個 filter 修改 / 嘗試，沒讓 code 變肥的關鍵：
+
+### A. 不重寫結構，只 swap 實作
+- 抓轉折 v1→v4：schema (`DowntrendBreakFilter`) **完全沒改**，只改 `passDowntrendBreak()` 函式體
+- chip 值 `pivots: 3/4/5` 不動，**內部重新詮釋**為 HighN 5/10/15 日（差異藏在 `pivotsToHighN()`）
+- UI label 文字改、底層 schema 不變 → 不會觸發 type cascading 改動
+
+### B. 重複利用現有 helpers
+- `calcLastMA(bars, period)` 已存在 → pullbackMa 直接用，不另寫
+- `getBars(klines, id)` 已存在 → 所有新 filter 都用
+- `linregSlope()` 寫一次給 downtrend break 用，pullbackMa / 其他可再用
+
+### C. 不留垃圾
+- 砍 Fib filter 時連根拔除（schema / OPTIONS / passFib / Python `_pass_fib` / UI block），不留 dead code
+- 過時 const（如 `_FIB_MIN_UP_RANGE`）一起拔
+
+### D. 改一個檔就走完一條 pipeline
+每個 filter 改 5 個檔位置：
+```
+types/index.ts        → schema + DEFAULT + OPTIONS
+utils/filters.ts      → pass function + applyFilters wire-in
+App.tsx               → klineFiltersActive 加上去
+FiltersBar.tsx        → UI block + setter functions + active count
+user_filters.py       → Python 同步邏輯
+```
+有固定 checklist，不會漏。
+
+### E. tsc + Python sanity test 雙保險
+- 改完 frontend → `npx tsc --noEmit` 必跑
+- 改完 Python → 寫 inline sanity test（make_bars + 5-8 個 case）必跑
+- 全綠才 commit，不依賴 user 來測 bug
+
+### F. push SOP 三層防呆（避免昨天那種事故）
+- 單行短英文 commit message（避 Cloudflare UTF-8 bug）
+- specific `git add` 列每檔（避漏 add）
+- feature 分支 `merge --no-edit`（避 reset 砍歷史）
+- `git pull --rebase --autostash`（race-safe，cron bot 同時 push 不會被擋）
+
+---
+
+## 📋 2026-05-07 commit 清單
+
+```
+6ba31f1?  fix(institutional): yahoo primary with finmind fallback (publish lag)
+7156e52   feat: downtrend break filter and yahoo institutional fallback
+d710f15   feat: pullback MA filter replacing fib
+```
+
+均同步到 `feature/favorites-v2`（merge --no-edit，未 reset）。
+
+---
+
+## ⚠️ 接續待辦（針對今天工作）
+
+- [ ] **Yahoo HTML 結構穩定性**：institutional 改 Yahoo 主後，整個系統依賴 Yahoo TW 法人 inline JSON 結構。如果他們改設計就會 break。建議定期手動驗證 (`fetch_yahoo_institutional('2330')` 看回傳格式有沒有變)
+- [ ] **dist/ + node_modules/.vite/ 加進 `.gitignore`**：每次 git status 都顯示 4-13 個 modified 雜訊，影響 review 體驗。已存在很久但沒清
+- [ ] **PullbackMa 實戰驗證**：今天剛上，需要 user 連續觀察幾天命中清單品質
+- [ ] **抓轉折 v4 vs v1 兩個邏輯**：v1 (pivot trendline) code 已被 v4 (kk 量價) 取代，但 v1 概念可能也有人喜歡。考慮未來給 chip 第三個選項切換邏輯
+
+---
+
+
+
+## 📜 2026-05-05 完成的內容（歷史）
 
 ### 1. 三個新 filter — 扣抵值 / 突破系列（技術面 section）✅
 
