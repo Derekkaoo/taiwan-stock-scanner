@@ -2,7 +2,7 @@
 
 > 這份文件給未來新 Cowork / Claude Code session 用。讀完這份就有完整背景，不用花時間摸索。
 > **配合 `SESSION_HANDOFF.md` 一起讀** — 那份是最近 session 的詳細交接 + 待辦事項。
-> 最後更新：2026-05-07（institutional 改 Yahoo 主來源避免 publish lag + 抓轉折 filter v4 量價合成法 + (曾)回撤均線 filter 取代費波那契）
+> 最後更新：2026-05-08（手機 UI 大改造：3 tab bottom nav + detail page + filter 全螢幕 + pinch zoom Fundamentals + 字體/間距整體調整，已 merge 進 master）
 
 ## 一句話說明
 
@@ -39,11 +39,25 @@
 taiwan-stock-scanner/
 ├── frontend/                      # React app
 │   ├── src/
-│   │   ├── components/FiltersBar.tsx       # 主要篩選器 UI
-│   │   ├── hooks/useStocks.ts              # 解析 stocks.json
+│   │   ├── components/
+│   │   │   ├── FiltersBar.tsx              # 主要篩選器 UI（含 Desktop / Mobile fullscreen 兩模式）
+│   │   │   ├── StockTable.tsx              # 桌機個股表格（11 欄）
+│   │   │   ├── GroupCard.tsx               # 族群卡片（桌機 + 手機共用，手機有微調）
+│   │   │   ├── CandlestickSVG.tsx          # K 線（含 pinch / pan 自製手勢）
+│   │   │   ├── FundamentalsPanel.tsx       # 基本面 4 tab + chart（手機可 pinch zoom）
+│   │   │   ├── MobileBottomNav.tsx         # 手機底部 3 tab nav (族群/個股/篩選)
+│   │   │   ├── MobileStockList.tsx         # 手機個股列表（sticky sort header）
+│   │   │   ├── MobileStockRow.tsx          # 手機 dense row（複用於個股列表 + Detail 切換）
+│   │   │   ├── MobileStockDetail.tsx       # 手機 Detail page（K 線 + Fundamentals + 進場分析）
+│   │   │   └── MobileScrollTopFab.tsx      # 浮動「↑ 回頂」按鈕
+│   │   ├── hooks/
+│   │   │   ├── useStocks.ts                # 解析 stocks.json
+│   │   │   ├── useKline.ts                 # K 線 cache + lazy load
+│   │   │   ├── useEntryAnalysis.ts         # 進場分析資料
+│   │   │   └── useIsMobile.ts              # viewport ≤1024 + pointer:coarse
 │   │   ├── utils/filters.ts                # applyFilters 邏輯
 │   │   ├── types/index.ts                  # StockRow / Filters 型別
-│   │   └── App.tsx
+│   │   └── App.tsx                         # mobileTab state + 桌機/手機 layout 路由
 │   └── public/data/
 │       ├── stocks.json                     # 主清單（前端讀這個）
 │       └── klines.json                     # K 線
@@ -160,6 +174,121 @@ Register-ScheduledTask -TaskName "TaiwanStockDailyScreener" -Action $action -Tri
 - **連續買超 pill row**（外資 / 投信，1/3/5/20 天）
 
 `utils/filters.ts` 的 `applyFilters()` 串聯所有 filter pipeline。
+
+## Mobile UI 架構（2026-05-08 大改造）
+
+桌機跟手機共用同一份 codebase，靠 `useIsMobile()` hook + `isMobile` React state + Tailwind `md:` class 切換。**沒有獨立 mobile-only build**，純 client-side responsive。
+
+### 何時算 Mobile？
+
+`hooks/useIsMobile.ts`：
+
+```ts
+viewport ≤ 1024px AND pointer: coarse
+```
+
+兩條件並列：
+- 純 viewport（譬如 768px）會讓 iPhone 14 Pro 橫躺（844px）跳到桌機 → user 抱怨直橫差距大
+- 加 `pointer: coarse` 排除「縮窄瀏覽器視窗的桌機 user」 → 他們應該看桌機 layout
+- 結果：iPhone/Android 直橫都走 mobile、iPad（直橫）也走 mobile、真桌機（任何寬度）走桌機
+
+### 手機底部 3 Tab Nav
+
+`components/MobileBottomNav.tsx` — `position: fixed; bottom: 0`，3 個 tab：
+- 📊 族群（GroupCard 列表）
+- 📈 個股（MobileStockList / MobileStockDetail）
+- 🔍 篩選（FiltersBar mobileFullscreen）
+
+`mobileTab: 'group' | 'stock' | 'filter'` state 在 App.tsx，預設 `'stock'`（手機使用情境是「快速掃個股」）。
+
+Icons 用 inline SVG（lucide-style），不裝 icon 庫。
+
+### 個股 tab：列表 ↔ Detail 雙模式
+
+```
+list view (MobileStockList) → tap row → detail view (MobileStockDetail)
+                                          ↓ ← 列表
+                                          回到列表（restore scrollY）
+```
+
+關鍵檔：
+- `MobileStockList.tsx` — 純列表 + sticky sort header bar（排序 dropdown / 漲幅期間 / 成交值期間 / 筆數）
+- `MobileStockRow.tsx` — dense row（id+name+chip / 收·1Y·成交·YoY 點分隔），tap → 觸發 onRowClick
+- `MobileStockDetail.tsx` — Detail page（← 列表 sticky + prev/next 切換 sticky + summary + K 線 + Fundamentals + 進場分析折疊）
+- `MobileScrollTopFab.tsx` — 浮動「↑」按鈕（scroll > 300 才出現）
+
+App.tsx 的 `mobileDetailStockId` state + `listScrollY` ref：
+- `openMobileDetail(id)`：記住列表 scrollY → 進 detail
+- `closeMobileDetail()`：restore 原本的 scrollY，user 看到原來那筆 row
+
+### 族群 tab
+
+目前**沒做嵌套 accordion**（曾試過 [Commit 3 嵌套] user 不喜歡，已 revert）。維持原 `GroupCard.tsx` 在手機上展開 = 桌機的 K 線 grid。手機版 GroupCard 只做了：
+- header 字大
+- 摺疊時不秀細產業 chip
+- metrics 改 3 欄等寬 grid（值在上 / label 在下）
+
+### 篩選 tab：FiltersBar 三模式
+
+`FiltersBar.tsx` 同一個元件根據 props 走不同 layout：
+
+| 模式 | 觸發 | 用途 |
+|---|---|---|
+| **Desktop** | 預設（`hidden md:block` 那塊）| 桌機 toolbar 下方 inline 4 collapsible sections |
+| **Mobile modal sheet**（legacy） | `mobileOpen={true}` | 從底部彈出全螢幕 modal — **目前已不用**，留著向後相容 |
+| **Mobile fullscreen tab** | `mobileFullscreen={true}` | 取代 main 內容，sticky header + sections + fixed 底部「查看 N 筆結果」按鈕 |
+
+填寫 chip / slider 即時更新 `resultCount`，按底部按鈕 `onShowResults={() => setMobileTab('stock')}`。
+
+### Filter block 卡片化（FilterBlock helper）
+
+技術面 section 內每個複雜 filter（譬如 `N 日內突破 MA`）有兩列 chip group。原本 layout 把 sub-label「天數」「MA 週期」「方向」散落在各列中間/右邊，視覺亂。改用 helper：
+
+- `FilterBlock` — 卡片 wrapper（標題 + 清除按鈕 + confirm/warning hint）
+- `FilterSubRow` — 左 label 56px / 右 chips 對齊
+- `ChipButton` — 統一樣式
+
+每個 multi-row filter block 從 ~80 行縮成 ~30 行。
+
+### Detail view 局部 pinch zoom（FundamentalsPanel）
+
+`body { touch-action: pan-y }` 阻擋 page-level pinch。Fundamentals chart container `touch-action: none` 接管 touch event：兩指 pinch 縮放、單指 drag 平移、雙擊 reset、右上角「重置」按鈕。
+
+K 線（CandlestickSVG）有自己的 pinch + pan 邏輯（看顯示根數），不共用 Fundamentals 的。
+
+### iOS Safari 特殊處理
+
+| 問題 | 修法 |
+|---|---|
+| `position: fixed` 被 `overflow-x: hidden` 破壞 | body 用 `touch-action: pan-y` 鎖水平滑動，**不**用 overflow-x:hidden |
+| input focus 時自動 zoom 切不回來 | `@media (pointer: coarse)` 強制 input/select font-size: 16px |
+| URL bar 遮 sticky 元素 | 標準 iOS Safari 行為，user scroll 後 URL bar 會縮起來，沒額外解 |
+| Scroll anchoring 害 expand 時 page 跳 | html/body `overflow-anchor: none` |
+
+### 字體規格（手機）
+
+| 元素 | 大小 |
+|---|---|
+| Page header 標題 | text-xs (12px) |
+| Stock id（mono）| 15px |
+| Stock name | 14px |
+| Group chip（個股 row）| 10px |
+| Delta % | 15px |
+| Line 2 metrics | 12px |
+| 族群 chip（GroupCard）| text-sm (14px) |
+| Fundamentals SVG axis label | 12px (預設 viewBox)；user 兩指放大才大 |
+| K 線 D/W/M tab 字 | 14px (rect 30×18) |
+| K 線 MA legend | 13px |
+
+### 手機修改 SOP（給未來的我）
+
+當編輯 UI 檔案（`App.tsx` / `FiltersBar.tsx` / `GroupCard.tsx` / `MobileStockRow.tsx` / `MobileStockDetail.tsx` / `MobileStockList.tsx` / `CandlestickSVG.tsx` / `FundamentalsPanel.tsx`）：
+
+1. 確認改動是「桌機 only」「手機 only」還是「兩個都要」
+2. 用 `isMobile` 條件 render 兩個分支，或用 Tailwind `md:hidden`/`hidden md:block`
+3. **測試兩個 viewport**（Chrome DevTools mobile mode + 真機 / 桌機）
+4. 注意手機特有的 sticky offsets（page header 44px / sub-toolbar 88px / detail top bar 44px / detail prev-next 92px）
+5. iOS Safari 觸控相關（input/select font-size、touch-action）已在 index.css 全域設定，不要動
 
 ## Smart-skip 設計（關鍵邏輯）
 
@@ -332,14 +461,19 @@ GitHub Secrets 也要設這些（雲端 cron 用）：
 
 ## 分支策略
 
-- `master`：production，所有資料/功能改動先進這裡
-- `feature/favorites-v2`：收藏功能 + Telegram 改動的長期分支，需要定期 merge master
+- `master`：production，所有資料/功能改動先進這裡。**已含手機 UI**（2026-05-08 從 mobile-v2 合進來）
+- `feature/favorites-v2`：收藏 + Telegram + StrategyManager 的長期分支，需要定期 merge master（拿 cron 資料 + 手機 UI）
+- `feature/mobile-v2`：**已合回 master、可刪**（保留一陣子備查 reflog）
 - `add-ga4`、`seo-setup`：暫時分支（用完可以刪）
 
 每次 master 有重要改動，跑：
 ```bash
 git checkout feature/favorites-v2
 git merge master --no-edit
+# 資料檔衝突一律取 master 版（quirk #6）：
+git checkout --theirs frontend/public/data/ backend/db/
+git add frontend/public/data/ backend/db/
+git commit --no-edit
 git push
 git checkout master
 ```
@@ -372,6 +506,28 @@ git checkout master
 - 統一 timestamp 用 TW 時區
 
 完整故障容錯到位，明天起 cron 自動更新應該真的可靠。
+
+### 2026-05-08 — 手機 UI 大改造（Mobile UI Overhaul）
+
+從 master 分出 `feature/mobile-v2` 做完整手機 UX 重構，當天合回 master。
+
+主要改動：
+- **3 tab 底部導航**（族群 / 個股 / 篩選） — `MobileBottomNav.tsx`，inline SVG icons
+- **個股 tab：列表 ↔ Detail page 模式**（不用 inline expand） — `MobileStockList.tsx` / `MobileStockRow.tsx` / `MobileStockDetail.tsx`，prev/next 切換股票，scrollY 還原
+- **篩選 tab：全螢幕 view**（取代原本 modal sheet） — `FiltersBar mobileFullscreen` mode，sticky header + 底部「查看 N 筆結果」
+- **FilterBlock 卡片化** — 多列 chip filter（譬如「N 日內突破 MA」）改成左 label / 右 chips 對齊，每塊 80→30 行
+- **Fundamentals 局部 pinch zoom** — 自製 touch handler，兩指縮放 / 單指 drag / 雙擊 reset，不影響整頁
+- **整體字體調大** — 個股 row / 族群 chip / Fundamentals SVG / K 線 D-W-M tab + MA legend 全部 +1~2px
+- **iOS Safari 修法** — input/select font-size:16px 防 auto-zoom、touch-action: pan-y 鎖水平滑、overflow-anchor: none 防 scroll anchoring
+- **底部 FAB「↑ 回頂」** — `MobileScrollTopFab.tsx`，scroll > 300 才出現
+
+工程心法（這次踩到的坑）：
+- `position: fixed` / `sticky` 容易被 ancestor overflow 破壞 → 不用 `overflow-x: hidden` 在 body，改用 `touch-action: pan-y`
+- React `setState + scrollIntoView` 對 iOS Safari 時序不可靠 → 改成 `requestAnimationFrame` + 動態量 sticky bottom
+- `git add` 一個一個列檔很容易漏（已經漏 2 次） → SOP 改成 `git add frontend/` 一次掃，避免漏 add
+- 大 refactor 中途 user 反悔很正常 — Commit 3 嵌套 accordion 試了 user 不喜歡，按 reflog SOP 安全 revert（不 reset --hard）
+
+完整 commit 列表跟細節在 `SESSION_HANDOFF.md`（2026-05-08 區塊）。
 
 ## TODO / 開放項目
 
