@@ -66,6 +66,9 @@
 html {
   color-scheme: dark;
   font-size: 125%;
+  /* 全域禁用 scroll anchoring：避免手機個股 tab row 展開時，
+     瀏覽器錨定 row 下方元素而把 page 自動 scroll 下去（造成 row header 被推到看不見） */
+  overflow-anchor: none;
 }
 
 body {
@@ -76,6 +79,12 @@ body {
   line-height: 1.5;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  overflow-anchor: none;
+  /* 註：不在 body 上設 overflow-x（會被 CSS 規範強制把 overflow-y 變 auto，
+     讓 body 變 scroll container → position:fixed/sticky 改為相對 body 而非 viewport，
+     導致 bottom nav 浮在半空、sticky 不對齊）。
+     改用 touch-action 阻擋手機水平 swipe 觸發 scroll，配合具體元素內 max-width / flex-wrap */
+  touch-action: pan-y;
 }
 
 /* ── 數字一律使用 tabular-nums 對齊（財務資料關鍵需求） ── */
