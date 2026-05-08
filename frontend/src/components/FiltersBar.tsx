@@ -42,6 +42,8 @@ interface Props {
   /** 手機 modal 開關（受控）。提供時 FiltersBar 會用父層 state；未提供則用內部 state（向後相容）*/
   mobileOpen?:    boolean
   setMobileOpen?: (open: boolean) => void
+  /** 隱藏手機觸發按鈕條（如果父層用 bottom nav 已經提供了入口）*/
+  hideMobileTrigger?: boolean
 }
 
 const VOLUME_SCALE     = makePiecewiseScale([0, 5000, 25000, 100000, 500000])  // 張（左密右疏）
@@ -218,7 +220,7 @@ function saveOpenSections(s: Set<SectionKey>) {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])) } catch { /* ignore */ }
 }
 
-export function FiltersBar({ stocks, filters, onChange, mobileOpen: extOpen, setMobileOpen: extSetOpen }: Props) {
+export function FiltersBar({ stocks, filters, onChange, mobileOpen: extOpen, setMobileOpen: extSetOpen, hideMobileTrigger }: Props) {
   // 控制模式：父層提供 mobileOpen + setMobileOpen → 用父層 state；否則用內部 state（向後相容）
   const [internalOpen, setInternalOpen] = useState(false)
   const isControlled = extOpen !== undefined && extSetOpen !== undefined
@@ -1396,7 +1398,8 @@ export function FiltersBar({ stocks, filters, onChange, mobileOpen: extOpen, set
         {allSections.map(renderSection)}
       </div>
 
-      {/* 手機按鈕 */}
+      {/* 手機按鈕（如果父層用 bottom nav 接管 filter 入口，可隱藏）*/}
+      {!hideMobileTrigger && (
       <div className="flex md:hidden items-center gap-2 px-5 py-2 border-b"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
       >
@@ -1427,6 +1430,7 @@ export function FiltersBar({ stocks, filters, onChange, mobileOpen: extOpen, set
           </button>
         )}
       </div>
+      )}
 
       {/* 手機 modal */}
       {mobileOpen && (

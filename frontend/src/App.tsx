@@ -9,6 +9,23 @@ import { GroupCard } from './components/GroupCard'
 import { Footer } from './components/Footer'
 import { FiltersBar, totalActiveCount } from './components/FiltersBar'
 import { MobileBottomNav, type MobileTab } from './components/MobileBottomNav'
+import { MobileStockList } from './components/MobileStockList'
+import { MobileStockDetail } from './components/MobileStockDetail'
+import { MobileScrollTopFab } from './components/MobileScrollTopFab'
+
+/** 把 useStocks 給的中文 toLocaleString 縮短：「2026/5/8 下午 7:09:50」→「5/8 19:09」*/
+function shortenLastUpdated(ts: string | null): string | null {
+  if (!ts) return null
+  return ts
+    .replace(/^\d{4}\//, '')           // 去年份
+    .replace(/:\d+$/, '')              // 去秒數
+    .replace(/(上午|下午)\s*(\d+):(\d+)/, (_, ampm, h, m) => {
+      let hh = parseInt(h, 10)
+      if (ampm === '下午' && hh < 12) hh += 12
+      if (ampm === '上午' && hh === 12) hh = 0
+      return `${hh}:${m.padStart(2, '0')}`
+    })
+}
 import { applyFilters } from './utils/filters'
 
 type View = 'group' | 'table'
@@ -113,10 +130,16 @@ export default function App() {
   const isMobile = useIsMobile()
   const [mobileTab, setMobileTab]                 = useState<MobileTab>('stock') // 預設個股
   const [mobileFilterOpen, setMobileFilterOpen]   = useState(false)
+  // 個股 tab 進 detail view 時記錄是哪一支；null = list view
+  const [mobileDetailStockId, setMobileDetailStockId] = useState<string | null>(null)
+  // 進 detail view 之前記列表 scroll 位置，返回時 restore（避免 user 失去脈絡）
+  const listScrollY = useRef<number>(0)
   // 手機派生 view：mobileTab='group' → group view、其他 → table view（filter 是 trigger，會切到 stock tab + 開 modal）
   const effectiveView: View = isMobile ? (mobileTab === 'group' ? 'group' : 'table') : view
 
   const handleMobileTab = useCallback((t: MobileTab) => {
+    // 換 tab 時關掉 detail view（避免 detail view 殘留在後台）
+    setMobileDetailStockId(null)
     if (t === 'filter') {
       // filter tab 是 trigger：切到 stock tab（這樣 FiltersBar 已 render，modal 才能開）+ 打開 modal
       setMobileTab('stock')
@@ -124,6 +147,33 @@ export default function App() {
     } else {
       setMobileTab(t)
     }
+  }, [])
+
+  const openMobileDetail = useCallback((id: string) => {
+    listScrollY.current = window.scrollY  // 記住列表位置
+    setMobileDetailStockId(id)
+    // 進 detail view 後把 detail 頂端對齊到 sticky 下方（不是 document 頂端）
+    requestAnimationFrame(() => {
+      const detail = document.querySelector<HTMLElement>('[data-mobile-detail]')
+      if (!detail) return
+      let stickyBottom = 0
+      document.querySelectorAll<HTMLElement>('[class*="sticky"]').forEach(s => {
+        if (getComputedStyle(s).position !== 'sticky') return
+        const r = s.getBoundingClientRect()
+        if (r.top < 100 && r.bottom > stickyBottom) stickyBottom = r.bottom
+      })
+      const rect = detail.getBoundingClientRect()
+      const targetY = window.scrollY + rect.top - stickyBottom
+      window.scrollTo({ top: Math.max(0, targetY), behavior: 'auto' })
+    })
+  }, [])
+
+  const closeMobileDetail = useCallback(() => {
+    setMobileDetailStockId(null)
+    // 等列表 re-mount 後 restore 位置
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: listScrollY.current, behavior: 'auto' })
+    })
   }, [])
 
   const filterActiveCount = useMemo(() => totalActiveCount(filters), [filters])
@@ -275,15 +325,18 @@ export default function App() {
     <div className="flex flex-col min-h-screen" style={{ background: 'var(--color-bg-800)' }}>
 
       <header
-        className="sticky top-0 z-50 flex items-center gap-4 px-5 py-2.5 border-b"
+        className="sticky top-0 z-50 flex items-center gap-2 px-3 py-2 border-b md:gap-4 md:px-5 md:py-2.5"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
       >
-        <h1 className="text-sm font-bold" style={{ color: 'var(--color-accent-cyan)', letterSpacing: '0.5px' }}>
+        <h1
+          className={isMobile ? 'text-xs font-bold whitespace-nowrap' : 'text-sm font-bold whitespace-nowrap'}
+          style={{ color: 'var(--color-accent-cyan)', letterSpacing: isMobile ? 0 : '0.5px' }}
+        >
           千張大戶持股追蹤器
         </h1>
-        <div className="ml-auto flex items-center gap-3 text-xs font-mono tabular">
+        <div className="ml-auto flex items-center gap-2 text-xs font-mono tabular">
           <span
-            className="px-2 py-0.5 rounded border"
+            className="px-2 py-0.5 rounded border whitespace-nowrap"
             style={{
               color: 'var(--color-accent-cyan)',
               borderColor: 'var(--color-accent-cyan)' + '44',
@@ -291,11 +344,64 @@ export default function App() {
               fontSize: 11,
             }}
           >
-            {lastUpdated ? `最後更新 ${lastUpdated}` : '載入中…'}
+            {lastUpdated
+              ? (isMobile ? shortenLastUpdated(lastUpdated) : `最後更新 ${lastUpdated}`)
+              : '載入中…'}
           </span>
+          {isMobile && (
+            <button
+              onClick={handleRefresh}
+              disabled={loading}
+              aria-label="重新整理"
+              className="rounded transition-colors"
+              style={{
+                width: 28,
+                height: 28,
+                background: loading ? 'var(--color-bg-600)' : 'var(--color-bg-600)',
+                color: 'var(--color-accent-cyan)',
+                border: '1px solid var(--color-border)',
+                cursor: loading ? 'not-allowed' : 'pointer',
+                opacity: loading ? 0.5 : 1,
+                fontSize: 14,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              {loading ? '⏳' : '⟳'}
+            </button>
+          )}
         </div>
       </header>
 
+      {/* 手機 list view 專用搜尋列（不 sticky，跟列表一起 scroll；省 sticky 高度）*/}
+      {isMobile && effectiveView === 'table' && !mobileDetailStockId && (
+        <div
+          className="px-3 py-1.5 border-b"
+          style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
+        >
+          <div
+            className="flex items-center gap-2 rounded border px-2.5"
+            style={{ background: 'var(--color-bg-600)', borderColor: 'var(--color-border)' }}
+          >
+            <span className="text-[12px] shrink-0" style={{ color: 'var(--color-text-muted)' }}>🔍</span>
+            <input
+              type="text"
+              placeholder="搜尋代號 / 名稱 / 族群…"
+              defaultValue={searchQuery}
+              onChange={e => handleSearch(e.target.value)}
+              className="flex-1 outline-none text-[12px] py-1.5"
+              style={{
+                background: 'transparent',
+                color: 'var(--color-text-primary)',
+                border: 0,
+              }}
+            />
+          </div>
+        </div>
+      )}
+
+      {!isMobile && (
       <div
         className="sticky top-[41px] z-40 flex flex-wrap items-center gap-2 px-5 py-2 border-b"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
@@ -317,26 +423,33 @@ export default function App() {
 
         <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
 
-        {(['group', 'table'] as View[]).map(v => (
-          <button
-            key={v}
-            onClick={() => setView(v)}
-            className="text-xs px-3 py-1 rounded border transition-colors"
-            style={{
-              background:  view === v ? 'var(--color-accent-blue)' : 'var(--color-bg-600)',
-              borderColor: view === v ? 'var(--color-accent-blue)' : 'var(--color-border)',
-              color:       view === v ? '#fff' : 'var(--color-text-secondary)',
-              cursor: 'pointer',
-            }}
-          >
-            {v === 'group' ? '族群總覽' : '個股列表'}
-          </button>
-        ))}
+        {(['group', 'table'] as View[]).map(v => {
+          const active = (isMobile ? effectiveView : view) === v
+          return (
+            <button
+              key={v}
+              onClick={() => {
+                setView(v)
+                // 手機：toolbar view 按鈕也要同步底部 nav，否則點了沒反應
+                if (isMobile) setMobileTab(v === 'group' ? 'group' : 'stock')
+              }}
+              className="text-xs px-3 py-1 rounded border transition-colors"
+              style={{
+                background:  active ? 'var(--color-accent-blue)' : 'var(--color-bg-600)',
+                borderColor: active ? 'var(--color-accent-blue)' : 'var(--color-border)',
+                color:       active ? '#fff' : 'var(--color-text-secondary)',
+                cursor: 'pointer',
+              }}
+            >
+              {v === 'group' ? '族群總覽' : '個股列表'}
+            </button>
+          )
+        })}
 
         <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
 
         {/* 族群排序下拉（只在族群總覽顯示）*/}
-        {view === 'group' && (
+        {effectiveView === 'group' && (
           <>
             <span className="text-xs" style={{ color: 'var(--color-text-muted)' }}>族群排序：</span>
             <select
@@ -380,7 +493,7 @@ export default function App() {
         </div>
 
         {/* 成交期間按鈕（只在個股列表顯示，因為只有那邊有成交值欄位）*/}
-        {view === 'table' && (
+        {effectiveView === 'table' && (
           <>
             <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
             <span className="text-xs" style={{ color: 'var(--color-text-muted)' }}>成交值期間：</span>
@@ -424,6 +537,7 @@ export default function App() {
           onBlur={e =>  { e.target.style.borderColor = 'var(--color-border)' }}
         />
       </div>
+      )}
 
       {/* 個股列表才顯示篩選器（族群總覽不需要）；手機上 stock + filter tab 都需要 FiltersBar 在 DOM 才能開 modal */}
       {(effectiveView === 'table' || (isMobile && mobileTab === 'stock')) && filteredStocks.length > 0 && (
@@ -433,9 +547,11 @@ export default function App() {
           onChange={setFilters}
           mobileOpen={mobileFilterOpen}
           setMobileOpen={setMobileFilterOpen}
+          hideMobileTrigger={isMobile}
         />
       )}
 
+      {!isMobile && (
       <div
         className="flex items-center gap-4 px-5 py-1.5 border-b text-[11px]"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
@@ -464,8 +580,9 @@ export default function App() {
           </>
         )}
       </div>
+      )}
 
-      {stockCount > 0 && (
+      {!isMobile && stockCount > 0 && (
         <div className="flex gap-3 px-5 py-3 flex-wrap">
           {statCards.map(({ label, value, color, tooltip }) => (
             <div
@@ -522,20 +639,51 @@ export default function App() {
         )}
 
         {effectiveView === 'table' && stockCount > 0 && (
-          <StockTable
-            stocks={filteredByFilters}
-            sort={sort}
-            onSort={key => updateSort(key)}
-            returnPeriod={returnPeriod}
-            turnoverPeriod={turnoverPeriod}
-            fetchGroup={fetchGroup}
-            getFromCache={getFromCache}
-            cacheVersion={cacheVersion}
-            maPeriods={maPeriods}
-            setMaPeriods={setMaPeriods}
-            timeframe={timeframe}
-            setTimeframe={setTimeframe}
-          />
+          isMobile ? (
+            mobileDetailStockId ? (
+              <MobileStockDetail
+                stocks={filteredByFilters}
+                currentId={mobileDetailStockId}
+                returnPeriod={returnPeriod}
+                turnoverPeriod={turnoverPeriod}
+                fetchGroup={fetchGroup}
+                getFromCache={getFromCache}
+                cacheVersion={cacheVersion}
+                maPeriods={maPeriods}
+                setMaPeriods={setMaPeriods}
+                timeframe={timeframe}
+                setTimeframe={setTimeframe}
+                onClose={closeMobileDetail}
+                onChange={setMobileDetailStockId}
+              />
+            ) : (
+              <MobileStockList
+                stocks={filteredByFilters}
+                returnPeriod={returnPeriod}
+                setReturnPeriod={setReturnPeriod}
+                turnoverPeriod={turnoverPeriod}
+                setTurnoverPeriod={setTurnoverPeriod}
+                sort={sort}
+                onSort={updateSort}
+                onRowClick={openMobileDetail}
+              />
+            )
+          ) : (
+            <StockTable
+              stocks={filteredByFilters}
+              sort={sort}
+              onSort={key => updateSort(key)}
+              returnPeriod={returnPeriod}
+              turnoverPeriod={turnoverPeriod}
+              fetchGroup={fetchGroup}
+              getFromCache={getFromCache}
+              cacheVersion={cacheVersion}
+              maPeriods={maPeriods}
+              setMaPeriods={setMaPeriods}
+              timeframe={timeframe}
+              setTimeframe={setTimeframe}
+            />
+          )
         )}
       </main>
 
@@ -549,6 +697,9 @@ export default function App() {
           filterActiveCount={filterActiveCount}
         />
       )}
+
+      {/* 手機 list view 的「回頂」FAB；detail view / 族群 view 不需要 */}
+      {isMobile && mobileTab === 'stock' && !mobileDetailStockId && <MobileScrollTopFab />}
 
       <div className="fixed bottom-5 right-5 z-[9999] flex flex-col gap-2">
         {toasts.map(t => (

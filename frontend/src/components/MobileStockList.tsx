@@ -1,29 +1,28 @@
 // ============================================================
-//  手機個股 tab 主容器
-//  - 接 stocks（已排序+篩選後）
-//  - 管 expandedId：accordion 單開（一次只 1 筆 K 線展開，避免畫面爆長）
-//  - lazy fetch K 線：點開 row 才向 useKline 拿資料
+//  手機個股 list view
+//  - 純列表：sort header bar (sticky) + N 個 MobileStockRow
+//  - sort header bar 含：排序 / 漲幅期間 / 升降序 / 筆數
+//  - 沒 expand 邏輯：tap row → 父層 onRowClick 處理（通常是進 detail view）
 // ============================================================
-import { useState, useEffect } from 'react'
-import type { StockRow, KlineBar, ReturnPeriod, TurnoverPeriod, SortState } from '../types'
+import type { StockRow, ReturnPeriod, TurnoverPeriod, SortState } from '../types'
+import { RETURN_PERIOD_LABELS, TURNOVER_PERIOD_LABELS } from '../types'
 import { MobileStockRow } from './MobileStockRow'
 
 interface Props {
   stocks: StockRow[]
   returnPeriod: ReturnPeriod
+  /** 給 sort header bar 的漲幅期間下拉用 */
+  setReturnPeriod: (p: ReturnPeriod) => void
   turnoverPeriod: TurnoverPeriod
-  /** 來自 App 層 useKline 的 fetchGroup（進 cache + 觸發 onEach callback）*/
-  fetchGroup: (groupName: string, ids: string[], onEach?: (id: string, bars: KlineBar[]) => void) => Promise<void>
-  getFromCache: (id: string) => KlineBar[] | null
-  /** App 層 cache 版本；變動時代表「更新資料」按了 → 展開中的 row 重新拉 */
-  cacheVersion: number
-  maPeriods: number[]
-  setMaPeriods: (p: number[]) => void
-  timeframe: 'D' | 'W' | 'M'
-  setTimeframe: (t: 'D' | 'W' | 'M') => void
+  /** 給 sort header bar 的成交值期間下拉用 */
+  setTurnoverPeriod: (p: TurnoverPeriod) => void
   /** 排序狀態（從 useStocks 來）— mobile 沒有欄位 header，靠 dropdown 切 */
   sort: SortState
   onSort: (key: SortState['key']) => void
+  /** Tap row 進 detail view（id 由父層 setMobileDetailStockId）*/
+  onRowClick: (id: string) => void
+  /** sort header 在 viewport sticky 位置（避免被頁首 header 遮住）*/
+  stickyTopPx?: number
 }
 
 interface SortOption { key: SortState['key']; label: string }
@@ -33,51 +32,18 @@ const SORT_OPTIONS: SortOption[] = [
   { key: 'price',             label: '收盤' },
   { key: 'revenueYoY',        label: '月營收 YoY' },
   { key: 'holdingPct',        label: '持股%' },
-  { key: 'turnovers',         label: '成交' },
+  { key: 'turnovers',         label: '成交值' },
   { key: 'deltaAmount',       label: '週增金額' },
 ]
 
+const RETURN_PERIODS: ReturnPeriod[]    = ['w1', 'm1', 'm3', 'm6', 'y1']
+const TURNOVER_PERIODS: TurnoverPeriod[] = ['d1', 'd5', 'd10', 'd20']
+
 export function MobileStockList({
-  stocks, returnPeriod, turnoverPeriod,
-  fetchGroup, getFromCache, cacheVersion,
-  maPeriods, setMaPeriods, timeframe, setTimeframe,
-  sort, onSort,
+  stocks, returnPeriod, setReturnPeriod, turnoverPeriod, setTurnoverPeriod,
+  sort, onSort, onRowClick,
+  stickyTopPx = 44,
 }: Props) {
-  const [expandedId, setExpandedId] = useState<string | null>(null)
-
-  // cacheVersion 變動 → 展開中的 row 重新拉（繞開 cache 剛被清空的瞬間）
-  useEffect(() => {
-    if (!expandedId) return
-    const stock = stocks.find(s => s.id === expandedId)
-    const group = stock?.groups?.[0] ?? stock?.group
-    if (stock && group && !getFromCache(stock.id)) {
-      fetchGroup(group, [stock.id])
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cacheVersion])
-
-  // sort 變動 → auto-collapse 已展開的 row
-  // 原因：展開 row 體積大（K 線 + Fundamentals + 進場分析），瀏覽器 scroll anchoring
-  //      會把它當錨點。sort 後 row 換位置，瀏覽器為了「維持錨點視覺位置」會把 page 拉到 row 新位置
-  //      （常常是底部）→ 體驗很差。collapse 後就沒大型錨點 → page 留在原位
-  useEffect(() => {
-    setExpandedId(null)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sort.key, sort.dir])
-
-  const handleToggle = async (id: string) => {
-    const willExpand = expandedId !== id
-    setExpandedId(willExpand ? id : null)
-    if (!willExpand) return
-
-    // Lazy-load K 線（用該股票的第一個 group 名找對應的 klines.json 區塊）
-    const stock = stocks.find(s => s.id === id)
-    const group = stock?.groups?.[0] ?? stock?.group
-    if (stock && group && !getFromCache(id)) {
-      await fetchGroup(group, [id])
-    }
-  }
-
   if (!stocks.length) {
     return (
       <div className="flex items-center justify-center py-16" style={{ color: 'var(--color-text-muted)' }}>
@@ -100,12 +66,18 @@ export function MobileStockList({
         borderColor: 'var(--color-border)',
       }}
     >
-      {/* Sort header bar（手機沒有欄位 header，靠這條切排序）*/}
+      {/* Sort header bar — sticky 在頁首 header + search row 下方 */}
       <div
-        className="flex items-center gap-2 px-3 py-2 border-b"
-        style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
+        className="flex items-center gap-2 px-3 py-2 border-b flex-wrap"
+        style={{
+          background: 'var(--color-bg-700)',
+          borderColor: 'var(--color-border)',
+          position: 'sticky',
+          top: stickyTopPx,
+          zIndex: 30,
+        }}
       >
-        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>排序</span>
+        <span className="text-[10px] shrink-0" style={{ color: 'var(--color-text-muted)' }}>排序</span>
         <select
           value={currentInOptions ? sort.key : ''}
           onChange={e => onSort(e.target.value as SortState['key'])}
@@ -115,6 +87,7 @@ export function MobileStockList({
             borderColor: 'var(--color-border)',
             color: 'var(--color-text-primary)',
             cursor: 'pointer',
+            maxWidth: 110,
           }}
         >
           {!currentInOptions && (
@@ -126,7 +99,7 @@ export function MobileStockList({
         </select>
         <button
           onClick={() => onSort(sort.key)}
-          className="text-[11px] px-2 py-1 rounded border transition-colors"
+          className="text-[11px] px-2 py-1 rounded border transition-colors shrink-0"
           style={{
             background: 'var(--color-bg-600)',
             borderColor: 'var(--color-border)',
@@ -138,7 +111,44 @@ export function MobileStockList({
         >
           {sort.dir === 'desc' ? '↓' : '↑'}
         </button>
-        <span className="ml-auto text-[10px] font-mono tabular" style={{ color: 'var(--color-text-muted)' }}>
+
+        <span className="text-[10px] shrink-0 ml-1" style={{ color: 'var(--color-text-muted)' }}>漲幅</span>
+        <select
+          value={returnPeriod}
+          onChange={e => setReturnPeriod(e.target.value as ReturnPeriod)}
+          className="text-[11px] px-2 py-1 rounded border outline-none"
+          style={{
+            background: 'var(--color-bg-600)',
+            borderColor: 'var(--color-border)',
+            color: 'var(--color-text-primary)',
+            cursor: 'pointer',
+            maxWidth: 70,
+          }}
+        >
+          {RETURN_PERIODS.map(p => (
+            <option key={p} value={p}>{RETURN_PERIOD_LABELS[p]}</option>
+          ))}
+        </select>
+
+        <span className="text-[10px] shrink-0" style={{ color: 'var(--color-text-muted)' }}>成交值</span>
+        <select
+          value={turnoverPeriod}
+          onChange={e => setTurnoverPeriod(e.target.value as TurnoverPeriod)}
+          className="text-[11px] px-2 py-1 rounded border outline-none"
+          style={{
+            background: 'var(--color-bg-600)',
+            borderColor: 'var(--color-border)',
+            color: 'var(--color-text-primary)',
+            cursor: 'pointer',
+            maxWidth: 80,
+          }}
+        >
+          {TURNOVER_PERIODS.map(p => (
+            <option key={p} value={p}>{TURNOVER_PERIOD_LABELS[p]}</option>
+          ))}
+        </select>
+
+        <span className="ml-auto text-[10px] font-mono tabular shrink-0" style={{ color: 'var(--color-text-muted)' }}>
           {stocks.length} 筆
         </span>
       </div>
@@ -147,15 +157,9 @@ export function MobileStockList({
         <MobileStockRow
           key={stock.id}
           stock={stock}
-          expanded={expandedId === stock.id}
-          onToggle={() => handleToggle(stock.id)}
-          klineBars={getFromCache(stock.id)}
+          onClick={() => onRowClick(stock.id)}
           returnPeriod={returnPeriod}
           turnoverPeriod={turnoverPeriod}
-          maPeriods={maPeriods}
-          setMaPeriods={setMaPeriods}
-          timeframe={timeframe}
-          setTimeframe={setTimeframe}
         />
       ))}
     </div>
