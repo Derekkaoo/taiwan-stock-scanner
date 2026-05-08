@@ -44,6 +44,12 @@ interface Props {
   setMobileOpen?: (open: boolean) => void
   /** 隱藏手機觸發按鈕條（如果父層用 bottom nav 已經提供了入口）*/
   hideMobileTrigger?: boolean
+  /** 手機全螢幕模式：取代既有 trigger+modal，直接 inline 渲染 sections + 底部「查看結果」按鈕 */
+  mobileFullscreen?: boolean
+  /** 全螢幕模式：篩出來的結果筆數（顯示在底部按鈕）*/
+  resultCount?: number
+  /** 全螢幕模式：點底部按鈕觸發（通常切到 stock tab）*/
+  onShowResults?: () => void
 }
 
 const VOLUME_SCALE     = makePiecewiseScale([0, 5000, 25000, 100000, 500000])  // 張（左密右疏）
@@ -313,7 +319,11 @@ function saveOpenSections(s: Set<SectionKey>) {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])) } catch { /* ignore */ }
 }
 
-export function FiltersBar({ stocks, filters, onChange, mobileOpen: extOpen, setMobileOpen: extSetOpen, hideMobileTrigger }: Props) {
+export function FiltersBar({
+  stocks, filters, onChange,
+  mobileOpen: extOpen, setMobileOpen: extSetOpen, hideMobileTrigger,
+  mobileFullscreen, resultCount, onShowResults,
+}: Props) {
   // 控制模式：父層提供 mobileOpen + setMobileOpen → 用父層 state；否則用內部 state（向後相容）
   const [internalOpen, setInternalOpen] = useState(false)
   const isControlled = extOpen !== undefined && extSetOpen !== undefined
@@ -1272,6 +1282,75 @@ export function FiltersBar({ stocks, filters, onChange, mobileOpen: extOpen, set
   }
 
   const allSections: SectionKey[] = ['fund', 'tech', 'chips', 'meta']
+
+  // 手機全螢幕模式：直接 inline 渲染 sections + sticky header + fixed 底部按鈕
+  if (mobileFullscreen) {
+    const count = resultCount ?? 0
+    return (
+      <div className="flex flex-col" style={{ background: 'var(--color-bg-700)' }}>
+        {/* Sticky header：篩選條件 + 清除全部 */}
+        <div
+          className="flex items-center justify-between px-4 py-3 border-b"
+          style={{
+            background: 'var(--color-bg-700)',
+            borderColor: 'var(--color-border)',
+            position: 'sticky',
+            top: 44,
+            zIndex: 30,
+          }}
+        >
+          <span className="text-sm font-bold" style={{ color: 'var(--color-text-primary)' }}>
+            篩選條件{totalActive > 0 ? ` · ${totalActive} 項` : ''}
+          </span>
+          {totalActive > 0 && (
+            <button
+              onClick={reset}
+              className="text-[12px] px-2.5 py-1 rounded border"
+              style={{
+                background: 'var(--color-bg-600)',
+                borderColor: 'var(--color-border)',
+                color: 'var(--color-text-secondary)',
+              }}
+            >
+              清除全部
+            </button>
+          )}
+        </div>
+
+        {/* Sections（normal flow，paddingBottom 留空間給底部 fixed 按鈕）*/}
+        <div style={{ paddingBottom: 120 }}>
+          {allSections.map(renderSection)}
+        </div>
+
+        {/* Fixed 底部按鈕：在 bottom nav 上方 */}
+        <div
+          className="fixed left-0 right-0 px-4 py-2.5 border-t"
+          style={{
+            bottom: 'calc(64px + env(safe-area-inset-bottom, 0))',
+            background: 'var(--color-bg-700)',
+            borderColor: 'var(--color-border)',
+            zIndex: 40,
+          }}
+        >
+          <button
+            onClick={onShowResults}
+            disabled={count === 0}
+            className="w-full py-3 rounded font-medium transition-colors"
+            style={{
+              background: count === 0 ? 'var(--color-bg-600)' : 'var(--color-accent-cyan)',
+              color: count === 0 ? 'var(--color-text-muted)' : '#fff',
+              border: 0,
+              cursor: count === 0 ? 'not-allowed' : 'pointer',
+              fontSize: 14,
+              opacity: count === 0 ? 0.6 : 1,
+            }}
+          >
+            {count === 0 ? '無符合條件' : `查看 ${count} 筆結果 →`}
+          </button>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <>

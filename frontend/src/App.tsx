@@ -163,7 +163,6 @@ export default function App() {
   // 桌機完全不會 render 任何 mobile 元件（isMobile = false 時 Bottom Nav 不渲染、effectiveView = view）
   const isMobile = useIsMobile()
   const [mobileTab, setMobileTab]                 = useState<MobileTab>('stock') // 預設個股
-  const [mobileFilterOpen, setMobileFilterOpen]   = useState(false)
   // 個股 tab 進 detail view 時記錄是哪一支；null = list view
   const [mobileDetailStockId, setMobileDetailStockId] = useState<string | null>(null)
   // 進 detail view 之前記列表 scroll 位置，返回時 restore（避免 user 失去脈絡）
@@ -172,15 +171,9 @@ export default function App() {
   const effectiveView: View = isMobile ? (mobileTab === 'group' ? 'group' : 'table') : view
 
   const handleMobileTab = useCallback((t: MobileTab) => {
-    // 換 tab 時關掉 detail view（避免 detail view 殘留在後台）
+    // 換 tab 時關掉 detail view
     setMobileDetailStockId(null)
-    if (t === 'filter') {
-      // filter tab 是 trigger：切到 stock tab（這樣 FiltersBar 已 render，modal 才能開）+ 打開 modal
-      setMobileTab('stock')
-      setMobileFilterOpen(true)
-    } else {
-      setMobileTab(t)
-    }
+    setMobileTab(t)
   }, [])
 
   const openMobileDetail = useCallback((id: string) => {
@@ -418,8 +411,8 @@ export default function App() {
         </div>
       </header>
 
-      {/* 手機 list view 專用搜尋列（sticky 釘在 header 下方）*/}
-      {isMobile && !mobileDetailStockId && (
+      {/* 手機 list view 專用搜尋列（sticky 釘在 header 下方；filter tab 不需要）*/}
+      {isMobile && mobileTab !== 'filter' && !mobileDetailStockId && (
         <div
           className="px-3 py-1.5 border-b"
           style={{
@@ -659,15 +652,12 @@ export default function App() {
       </div>
       )}
 
-      {/* 個股列表才顯示篩選器（族群總覽不需要）；手機上 stock + filter tab 都需要 FiltersBar 在 DOM 才能開 modal */}
-      {(effectiveView === 'table' || (isMobile && mobileTab === 'stock')) && filteredStocks.length > 0 && (
+      {/* 桌機才在 toolbar 上方渲染既有 FiltersBar（手機 filter tab 由下方 main 內 fullscreen 渲染）*/}
+      {!isMobile && effectiveView === 'table' && filteredStocks.length > 0 && (
         <FiltersBar
           stocks={filteredStocks}
           filters={filters}
           onChange={setFilters}
-          mobileOpen={mobileFilterOpen}
-          setMobileOpen={setMobileFilterOpen}
-          hideMobileTrigger={isMobile}
         />
       )}
 
@@ -721,10 +711,22 @@ export default function App() {
       )}
 
       <main
-        className="flex-1 px-5 pb-8"
+        className={isMobile && mobileTab === 'filter' ? 'flex-1' : 'flex-1 px-5 pb-8'}
         style={isMobile ? { paddingBottom: 'calc(64px + env(safe-area-inset-bottom, 0))' } : undefined}
       >
-        {!loading && stockCount === 0 && (
+        {/* 手機 filter tab：全螢幕 FiltersBar 取代 group/stock 主內容 */}
+        {isMobile && mobileTab === 'filter' && filteredStocks.length > 0 && (
+          <FiltersBar
+            stocks={filteredStocks}
+            filters={filters}
+            onChange={setFilters}
+            mobileFullscreen
+            resultCount={filteredByFilters.length}
+            onShowResults={() => setMobileTab('stock')}
+          />
+        )}
+
+        {!loading && stockCount === 0 && !(isMobile && mobileTab === 'filter') && (
           <div className="flex flex-col items-center justify-center py-20" style={{ color: 'var(--color-text-muted)' }}>
             <div className="text-4xl mb-4">📭</div>
             <div className="text-base mb-2" style={{ color: 'var(--color-text-secondary)' }}>尚無資料</div>
@@ -732,7 +734,7 @@ export default function App() {
           </div>
         )}
 
-        {effectiveView === 'group' && stockCount > 0 && (
+        {effectiveView === 'group' && stockCount > 0 && !(isMobile && mobileTab === 'filter') && (
           <div className="flex flex-col gap-2">
             {sortedGroupEntries.map(([name, stks]) => (
               <GroupCard
@@ -758,7 +760,7 @@ export default function App() {
           </div>
         )}
 
-        {effectiveView === 'table' && stockCount > 0 && (
+        {effectiveView === 'table' && stockCount > 0 && !(isMobile && mobileTab === 'filter') && (
           isMobile ? (
             mobileDetailStockId ? (
               <MobileStockDetail
