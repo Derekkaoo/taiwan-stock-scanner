@@ -179,8 +179,25 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnP
             </span>
           )}
 
-          {/* 3 欄等寬 metric grid：值大 / label 小，整齊對齊 */}
-          <div className="grid grid-cols-3 gap-1 mt-0.5">
+          {/* 桌機：inline flex（保留原本網頁版排法）*/}
+          <div className="hidden md:flex items-center gap-3 font-mono tabular text-[12px] flex-wrap">
+            <span style={{ color: avgDelta >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
+              均增持 +{fmt(avgDelta, 3)}%
+            </span>
+            {totalDeltaAmount > 0 && (
+              <span style={{ color: 'var(--color-up)' }}>
+                週增金額 {fmtAmount(totalDeltaAmount)}
+              </span>
+            )}
+            {avgRet !== null && (
+              <span style={{ color: avgRet >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
+                {retLabel} {avgRet >= 0 ? '+' : ''}{fmt(avgRet, 1)}%
+              </span>
+            )}
+          </div>
+
+          {/* 手機：3 欄等寬 metric grid（值大 / label 小，整齊對齊）*/}
+          <div className="grid grid-cols-3 gap-1 mt-0.5 md:hidden">
             <div>
               <div
                 className="font-mono tabular text-[13px]"
