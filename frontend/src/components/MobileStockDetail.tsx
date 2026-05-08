@@ -144,7 +144,7 @@ export function MobileStockDetail({
       >
         <button
           onClick={onClose}
-          className="text-[12px] px-2.5 py-1 rounded transition-colors"
+          className="text-[13px] px-3 py-1 rounded transition-colors"
           style={{
             background: 'var(--color-bg-600)',
             color: 'var(--color-text-primary)',
@@ -154,14 +154,14 @@ export function MobileStockDetail({
         >
           ← 列表
         </button>
-        <span className="flex items-baseline gap-1.5 ml-1 min-w-0 flex-1 overflow-hidden">
-          <span className="font-mono tabular text-[14px] shrink-0" style={{ color: 'var(--color-accent-cyan)', fontWeight: 500 }}>
+        <span className="flex items-baseline gap-2 ml-1 min-w-0 flex-1 overflow-hidden">
+          <span className="font-mono tabular text-[15px] shrink-0" style={{ color: 'var(--color-accent-cyan)', fontWeight: 500 }}>
             {stock.id}
           </span>
-          <span className="text-[13px] shrink-0">{stock.name}</span>
+          <span className="text-[14px] shrink-0">{stock.name}</span>
         </span>
         <span
-          className="text-[9px] px-1.5 py-0.5 rounded-full border shrink-0"
+          className="text-[10px] px-2 py-0.5 rounded-full border shrink-0"
           style={{
             color: groupColor,
             borderColor: groupColor + '44',
@@ -187,7 +187,7 @@ export function MobileStockDetail({
         <button
           onClick={() => prevStock && onChange(prevStock.id)}
           disabled={!prevStock}
-          className="flex-1 px-3 py-2 text-[10px] text-left transition-colors min-w-0"
+          className="flex-1 px-3 py-2 text-[12px] text-left transition-colors min-w-0"
           style={{
             background: 'transparent',
             border: 0,
@@ -200,13 +200,13 @@ export function MobileStockDetail({
             ← {prevStock ? `${prevStock.id} ${prevStock.name}` : '已是第一筆'}
           </span>
         </button>
-        <span className="px-2 text-[10px] font-mono tabular shrink-0" style={{ color: 'var(--color-text-muted)' }}>
+        <span className="px-2 text-[12px] font-mono tabular shrink-0" style={{ color: 'var(--color-text-muted)' }}>
           {idx + 1} / {stocks.length}
         </span>
         <button
           onClick={() => nextStock && onChange(nextStock.id)}
           disabled={!nextStock}
-          className="flex-1 px-3 py-2 text-[10px] text-right transition-colors min-w-0"
+          className="flex-1 px-3 py-2 text-[12px] text-right transition-colors min-w-0"
           style={{
             background: 'transparent',
             border: 0,
@@ -223,19 +223,19 @@ export function MobileStockDetail({
 
       {/* Summary block */}
       <div className="px-3.5 py-3 border-b" style={{ borderColor: 'var(--color-border)' }}>
-        <div className="flex items-baseline gap-3 mb-1.5">
+        <div className="flex items-baseline gap-3 mb-2">
           <span
-            className="font-mono tabular text-[20px]"
+            className="font-mono tabular text-[22px]"
             style={{
               color: stock.delta >= 0 ? 'var(--color-up)' : 'var(--color-down)',
-              fontWeight: 500,
+              fontWeight: 600,
             }}
           >
             {stock.delta >= 0 ? '+' : ''}{stock.delta.toFixed(3)}%
           </span>
-          <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>本週大戶增持</span>
+          <span className="text-[12px]" style={{ color: 'var(--color-text-muted)' }}>本週大戶增持</span>
         </div>
-        <div className="flex flex-wrap gap-x-3 gap-y-1 font-mono tabular text-[11px]" style={{ color: 'var(--color-text-muted)' }}>
+        <div className="flex flex-wrap gap-x-3 gap-y-1 font-mono tabular text-[13px]" style={{ color: 'var(--color-text-muted)' }}>
           <span>收 <span style={{ color: 'var(--color-text-secondary)' }}>{fmtPrice(stock.price)}</span></span>
           {ret != null && (
             <span>{RETURN_LABEL[returnPeriod]} <span style={{ color: ret >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>{fmtPctShort(ret)}</span></span>
@@ -250,7 +250,7 @@ export function MobileStockDetail({
         {(stock.subIndustries ?? []).length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
             {(stock.subIndustries ?? []).map(si => (
-              <span key={si} className="text-[10px] px-1.5 py-0.5 rounded"
+              <span key={si} className="text-[11px] px-2 py-0.5 rounded"
                 style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-secondary)', border: '1px solid var(--color-border)' }}>
                 {si}
               </span>

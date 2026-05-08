@@ -55,18 +55,18 @@ export function MobileStockRow({
       }}
     >
       {/* line 1: › + id + name + group chip + 週增% */}
-      <div className="flex items-baseline justify-between gap-2 mb-1">
-        <div className="flex items-baseline gap-1.5 min-w-0 flex-1 overflow-hidden">
-          <span className="text-[11px] shrink-0" style={{ color: 'var(--color-text-muted)' }}>›</span>
+      <div className="flex items-baseline justify-between gap-2 mb-1.5">
+        <div className="flex items-baseline gap-2 min-w-0 flex-1 overflow-hidden">
+          <span className="text-[12px] shrink-0" style={{ color: 'var(--color-text-muted)' }}>›</span>
           <span
-            className="font-mono tabular text-[14px] shrink-0"
+            className="font-mono tabular text-[15px] shrink-0"
             style={{ color: 'var(--color-accent-cyan)', fontWeight: 500 }}
           >
             {stock.id}
           </span>
-          <span className="text-[13px] shrink-0">{stock.name}</span>
+          <span className="text-[14px] shrink-0">{stock.name}</span>
           <span
-            className="text-[9px] px-1.5 py-0.5 rounded-full border"
+            className="text-[10px] px-2 py-0.5 rounded-full border"
             style={{
               color: groupColor,
               borderColor: groupColor + '44',
@@ -83,7 +83,7 @@ export function MobileStockRow({
           </span>
         </div>
         <span
-          className="font-mono tabular text-[13px] shrink-0"
+          className="font-mono tabular text-[15px] shrink-0"
           style={{
             color: stock.delta >= 0 ? 'var(--color-up)' : 'var(--color-down)',
             fontWeight: 500,
@@ -93,7 +93,7 @@ export function MobileStockRow({
         </span>
       </div>
       {/* line 2: 收 / 1Y / 成交 / YoY（flex-wrap 防 4 個 metric 在窄螢幕累積寬度撐出去）*/}
-      <div className="flex flex-wrap gap-x-3 gap-y-0.5 font-mono tabular text-[10px]" style={{ color: 'var(--color-text-muted)' }}>
+      <div className="flex flex-wrap gap-x-3 gap-y-0.5 font-mono tabular text-[12px]" style={{ color: 'var(--color-text-muted)' }}>
         <span>
           收 <span style={{ color: 'var(--color-text-secondary)' }}>{fmtPrice(stock.price)}</span>
         </span>

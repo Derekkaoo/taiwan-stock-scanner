@@ -42,7 +42,7 @@ const TURNOVER_PERIODS: TurnoverPeriod[] = ['d1', 'd5', 'd10', 'd20']
 export function MobileStockList({
   stocks, returnPeriod, setReturnPeriod, turnoverPeriod, setTurnoverPeriod,
   sort, onSort, onRowClick,
-  stickyTopPx = 44,
+  stickyTopPx = 88,
 }: Props) {
   if (!stocks.length) {
     return (
