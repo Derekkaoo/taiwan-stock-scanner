@@ -13,6 +13,40 @@ import { MobileStockList } from './components/MobileStockList'
 import { MobileStockDetail } from './components/MobileStockDetail'
 import { MobileScrollTopFab } from './components/MobileScrollTopFab'
 
+/** Inline monoline SVG icons（lucide-style，跟 MobileBottomNav 同風格）*/
+function IconSearch({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" strokeWidth="2"
+         strokeLinejoin="round" strokeLinecap="round">
+      <circle cx="11" cy="11" r="8"/>
+      <path d="m21 21-4.3-4.3"/>
+    </svg>
+  )
+}
+function IconClose({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" strokeWidth="2"
+         strokeLinejoin="round" strokeLinecap="round">
+      <path d="M18 6 6 18"/>
+      <path d="m6 6 12 12"/>
+    </svg>
+  )
+}
+function IconRefresh({ size = 20 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" strokeWidth="2"
+         strokeLinejoin="round" strokeLinecap="round">
+      <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+      <path d="M3 3v5h5"/>
+      <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+      <path d="M16 16h5v5"/>
+    </svg>
+  )
+}
+
 /** 把 useStocks 給的中文 toLocaleString 縮短：「2026/5/8 下午 7:09:50」→「5/8 19:09」*/
 function shortenLastUpdated(ts: string | null): string | null {
   if (!ts) return null
@@ -205,6 +239,8 @@ export default function App() {
     try { localStorage.setItem('chartTimeframe', timeframe) } catch {}
   }, [timeframe])
   const searchTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
+  // 即時的 input 值（給 X 清除按鈕判斷顯示）；setSearchQuery 仍 debounced
+  const [searchInput, setSearchInput] = useState('')
 
   // K 線即時 filter（N 日漲幅 / 創 N 日新高）任一啟用 → 一次性 lazy-load 整包 klines.json
   const klineFiltersActive =
@@ -255,8 +291,15 @@ export default function App() {
   }, [clearCache, loadData, loadFromJson, toast])
 
   const handleSearch = (q: string) => {
+    setSearchInput(q)
     clearTimeout(searchTimer.current)
     searchTimer.current = setTimeout(() => setSearchQuery(q), 200)
+  }
+
+  const handleClearSearch = () => {
+    clearTimeout(searchTimer.current)
+    setSearchInput('')
+    setSearchQuery('')
   }
 
   const groupEntries = Object.entries(grouped)
@@ -355,20 +398,21 @@ export default function App() {
               aria-label="重新整理"
               className="rounded transition-colors"
               style={{
-                width: 28,
-                height: 28,
-                background: loading ? 'var(--color-bg-600)' : 'var(--color-bg-600)',
+                width: 36,
+                height: 36,
+                background: 'var(--color-bg-600)',
                 color: 'var(--color-accent-cyan)',
                 border: '1px solid var(--color-border)',
                 cursor: loading ? 'not-allowed' : 'pointer',
                 opacity: loading ? 0.5 : 1,
-                fontSize: 14,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
             >
-              {loading ? '⏳' : '⟳'}
+              <span className={loading ? 'animate-spin' : ''} style={{ display: 'inline-flex' }}>
+                <IconRefresh size={20} />
+              </span>
             </button>
           )}
         </div>
@@ -390,19 +434,39 @@ export default function App() {
             className="flex items-center gap-2 rounded border px-2.5"
             style={{ background: 'var(--color-bg-600)', borderColor: 'var(--color-border)' }}
           >
-            <span className="text-[14px] shrink-0" style={{ color: 'var(--color-text-muted)' }}>🔍</span>
+            <span className="shrink-0 flex items-center" style={{ color: 'var(--color-text-muted)' }}>
+              <IconSearch size={16} />
+            </span>
             <input
               type="text"
               placeholder={effectiveView === 'group' ? '搜尋族群 / 代號 / 名稱…' : '搜尋代號 / 名稱 / 族群…'}
-              defaultValue={searchQuery}
+              value={searchInput}
               onChange={e => handleSearch(e.target.value)}
               className="flex-1 outline-none py-1.5"
               style={{
                 background: 'transparent',
                 color: 'var(--color-text-primary)',
                 border: 0,
+                minWidth: 0,
               }}
             />
+            {searchInput && (
+              <button
+                onClick={handleClearSearch}
+                aria-label="清除搜尋"
+                className="shrink-0 flex items-center justify-center rounded-full transition-colors"
+                style={{
+                  width: 22,
+                  height: 22,
+                  background: 'var(--color-bg-500)',
+                  border: 0,
+                  color: 'var(--color-text-secondary)',
+                  cursor: 'pointer',
+                }}
+              >
+                <IconClose size={14} />
+              </button>
+            )}
           </div>
         </div>
       )}
