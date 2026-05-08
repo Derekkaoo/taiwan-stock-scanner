@@ -1,6 +1,7 @@
 // ============================================================
 //  手機底部導航：3 個 tab（族群 / 個股 / 篩選）
 //  fixed bottom，桌機完全不渲染（由 App 層用 useIsMobile 控制）
+//  Icons：inline monoline SVG（lucide-style），不裝額外 icon 庫
 // ============================================================
 
 export type MobileTab = 'group' | 'stock' | 'filter'
@@ -14,16 +15,56 @@ interface Props {
   filterActiveCount: number
 }
 
+interface IconProps {
+  size?: number
+}
+
+/** 族群 icon：2x2 方塊（4 個分類格子）*/
+function IconGroup({ size = 22 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round">
+      <rect x="3"    y="3"    width="7.5" height="7.5" rx="1.5"/>
+      <rect x="13.5" y="3"    width="7.5" height="7.5" rx="1.5"/>
+      <rect x="3"    y="13.5" width="7.5" height="7.5" rx="1.5"/>
+      <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/>
+    </svg>
+  )
+}
+
+/** 個股 icon：折線往上 + 右上箭頭（trending up）*/
+function IconStock({ size = 22 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" strokeWidth="2"
+         strokeLinejoin="round" strokeLinecap="round">
+      <polyline points="3,17 9,11 13,15 21,7"/>
+      <polyline points="14,7 21,7 21,14"/>
+    </svg>
+  )
+}
+
+/** 篩選 icon：漏斗（funnel）*/
+function IconFilter({ size = 22 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" strokeWidth="1.6"
+         strokeLinejoin="round" strokeLinecap="round">
+      <path d="M22 3H2l8 9.5V19l4 2v-8.5L22 3z"/>
+    </svg>
+  )
+}
+
 interface TabDef {
   key: MobileTab
   label: string
-  icon: string
+  Icon: React.FC<IconProps>
 }
 
 const TABS: TabDef[] = [
-  { key: 'group',  label: '族群', icon: '📊' },
-  { key: 'stock',  label: '個股', icon: '📈' },
-  { key: 'filter', label: '篩選', icon: '🔍' },
+  { key: 'group',  label: '族群', Icon: IconGroup },
+  { key: 'stock',  label: '個股', Icon: IconStock },
+  { key: 'filter', label: '篩選', Icon: IconFilter },
 ]
 
 export function MobileBottomNav({ tab, onTab, filterActiveCount }: Props) {
@@ -40,12 +81,13 @@ export function MobileBottomNav({ tab, onTab, filterActiveCount }: Props) {
     >
       {TABS.map(t => {
         const active = tab === t.key
+        const Icon = t.Icon
         return (
           <button
             key={t.key}
             onClick={() => onTab(t.key)}
             aria-selected={active}
-            className="relative flex-1 flex flex-col items-center justify-center gap-0.5 py-2"
+            className="relative flex-1 flex flex-col items-center justify-center gap-1 py-2"
             style={{
               background: 'transparent',
               border: 0,
@@ -55,8 +97,8 @@ export function MobileBottomNav({ tab, onTab, filterActiveCount }: Props) {
               transition: 'color 150ms',
             }}
           >
-            <span style={{ fontSize: 18, lineHeight: 1 }}>{t.icon}</span>
-            <span style={{ fontSize: 10 }}>{t.label}</span>
+            <Icon size={22} />
+            <span style={{ fontSize: 11 }}>{t.label}</span>
             {t.key === 'filter' && filterActiveCount > 0 && (
               <span
                 className="absolute font-mono tabular"
