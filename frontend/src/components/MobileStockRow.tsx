@@ -92,31 +92,40 @@ export function MobileStockRow({
           {stock.delta >= 0 ? '+' : ''}{stock.delta.toFixed(3)}%
         </span>
       </div>
-      {/* line 2: 收 / 1Y / 成交 / YoY（flex-wrap 防 4 個 metric 在窄螢幕累積寬度撐出去）*/}
-      <div className="flex flex-wrap gap-x-3 gap-y-0.5 font-mono tabular text-[12px]" style={{ color: 'var(--color-text-muted)' }}>
-        <span>
+      {/* line 2: 收 · 1Y · 成交 · YoY — inline with bullet separators */}
+      <div className="font-mono tabular text-[12px]" style={{ color: 'var(--color-text-muted)' }}>
+        <span style={{ whiteSpace: 'nowrap' }}>
           收 <span style={{ color: 'var(--color-text-secondary)' }}>{fmtPrice(stock.price)}</span>
         </span>
         {ret != null && (
-          <span>
-            {RETURN_LABEL[returnPeriod]}{' '}
-            <span style={{ color: ret >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-              {fmtPctShort(ret)}
+          <>
+            <span style={{ color: 'var(--color-bg-500)', margin: '0 6px' }}>·</span>
+            <span style={{ whiteSpace: 'nowrap' }}>
+              {RETURN_LABEL[returnPeriod]}{' '}
+              <span style={{ color: ret >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
+                {fmtPctShort(ret)}
+              </span>
             </span>
-          </span>
+          </>
         )}
         {turnover > 0 && (
-          <span>
-            成交 <span style={{ color: 'var(--color-text-secondary)' }}>{fmtTurnoverYi(turnover)}</span>
-          </span>
+          <>
+            <span style={{ color: 'var(--color-bg-500)', margin: '0 6px' }}>·</span>
+            <span style={{ whiteSpace: 'nowrap' }}>
+              成交 <span style={{ color: 'var(--color-text-secondary)' }}>{fmtTurnoverYi(turnover)}</span>
+            </span>
+          </>
         )}
         {yoy != null && (
-          <span>
-            YoY{' '}
-            <span style={{ color: yoy >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-              {fmtPctShort(yoy)}
+          <>
+            <span style={{ color: 'var(--color-bg-500)', margin: '0 6px' }}>·</span>
+            <span style={{ whiteSpace: 'nowrap' }}>
+              YoY{' '}
+              <span style={{ color: yoy >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
+                {fmtPctShort(yoy)}
+              </span>
             </span>
-          </span>
+          </>
         )}
       </div>
     </button>
