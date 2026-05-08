@@ -221,7 +221,7 @@ export function CandlestickSVG({
   if (!displayData || displayData.length === 0) return null
 
   const dateAxisH = 20
-  const maLegendH = showMA ? 20 : 0
+  const maLegendH = showMA ? 32 : 12  // 加高給日期軸跟 legend / D-W-M tab 留 padding
   const volHeight = showVolume ? Math.floor(height * 0.2) : 0
   const chartH    = height - volHeight - dateAxisH - maLegendH - 4
   const padL = 18, padR = 54, padT = 8, padB = 8
@@ -285,7 +285,7 @@ export function CandlestickSVG({
   const tickIndices = [0, Math.floor(n / 3), Math.floor(n * 2 / 3), n - 1]
   const dateAxisY = height - maLegendH - dateAxisH + 14
   const dateLineY = height - maLegendH - dateAxisH
-  const maLegendY = height - maLegendH + 14
+  const maLegendY = height - maLegendH + 22  // baseline 下移 8px → 跟日期軸有空隙
   const priceLabelX = width - padR + 4
 
   return (
@@ -413,7 +413,7 @@ export function CandlestickSVG({
       {onTimeframeChange && (
         <g data-no-pan="true">
           {(['D', 'W', 'M'] as const).map((t, i) => {
-            const x = padL + i * 28
+            const x = padL + i * 34
             const active = timeframe === t
             const label = t === 'D' ? '日' : t === 'W' ? '週' : '月'
             return (
@@ -423,13 +423,13 @@ export function CandlestickSVG({
                 style={{ cursor: 'pointer' }}
               >
                 <rect
-                  x={x} y={maLegendY - 12} width={24} height={14} rx={7}
+                  x={x} y={maLegendY - 14} width={30} height={18} rx={9}
                   fill={active ? 'var(--color-accent-cyan, #06b6d4)' : 'var(--color-bg-600, #374151)'}
                   stroke={active ? 'var(--color-accent-cyan, #06b6d4)' : 'var(--color-border, #4b5563)'}
                   strokeWidth={0.8}
                 />
                 <text
-                  x={x + 12} y={maLegendY - 1} fontSize={11}
+                  x={x + 15} y={maLegendY - 1} fontSize={14}
                   fill={active ? '#fff' : 'var(--color-text-secondary, #d1d5db)'}
                   textAnchor="middle"
                   fontWeight={active ? 700 : 400}
@@ -445,7 +445,7 @@ export function CandlestickSVG({
 
       {/* MA 圖例（日期軸下方，依條數動態排列，從右側往左）*/}
       {showMA && maData.length > 0 && (() => {
-        const itemW = 50  // 每個 MA 標籤寬度
+        const itemW = 56  // 每個 MA 標籤寬度
         const totalW = maData.length * itemW
         const startX = width - totalW - 4
         return (
@@ -454,8 +454,8 @@ export function CandlestickSVG({
               const x = startX + i * itemW
               return (
                 <g key={period}>
-                  <rect x={x} y={maLegendY - 10} width={8} height={8} fill={color} rx="1" />
-                  <text x={x + 11} y={maLegendY} fontSize={11} fill={mutedColor} fontFamily="monospace">
+                  <rect x={x} y={maLegendY - 11} width={9} height={9} fill={color} rx="1" />
+                  <text x={x + 13} y={maLegendY - 1} fontSize={13} fill={mutedColor} fontFamily="monospace">
                     MA{period}
                   </text>
                 </g>

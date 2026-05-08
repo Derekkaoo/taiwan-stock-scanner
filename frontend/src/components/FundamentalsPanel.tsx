@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { Fundamentals } from '../types'
 
 type TabKey = 'revenue' | 'gross' | 'op' | 'eps'
@@ -189,22 +189,116 @@ export function FundamentalsPanel({ fundamentals, aspectRatio = 3 }: Props) {
   const viewW = 600
   const viewH = Math.round(viewW / aspectRatio)
 
+  // ===== 局部 pinch + pan zoom（針對 chart 本身，不影響整頁）=====
+  // 用 CSS transform: scale + translate 套在 SVG 上，container overflow:hidden 框住
+  const wrapRef = useRef<HTMLDivElement>(null)
+  const [scale, setScale] = useState(1)
+  const [pan, setPan] = useState({ x: 0, y: 0 })
+  // 手勢用的暫存（避免 setState 觸發重 render 太頻繁）
+  const gestureRef = useRef<{
+    mode: 'none' | 'pinch' | 'pan'
+    startDist?: number
+    startScale?: number
+    startPan?: { x: number; y: number }
+    lastX?: number
+    lastY?: number
+  }>({ mode: 'none' })
+
+  // 切 tab 時 reset zoom（避免上一個 tab 的 zoom 卡住）
+  useEffect(() => { setScale(1); setPan({ x: 0, y: 0 }) }, [tab])
+
+  // 加 native touch listener（passive: false 才能 preventDefault）
+  useEffect(() => {
+    const el = wrapRef.current
+    if (!el) return
+
+    const dist = (t1: Touch, t2: Touch) => {
+      const dx = t1.clientX - t2.clientX
+      const dy = t1.clientY - t2.clientY
+      return Math.sqrt(dx * dx + dy * dy)
+    }
+
+    const onStart = (e: TouchEvent) => {
+      if (e.touches.length === 2) {
+        gestureRef.current = {
+          mode: 'pinch',
+          startDist: dist(e.touches[0], e.touches[1]),
+          startScale: scale,
+        }
+      } else if (e.touches.length === 1 && scale > 1) {
+        gestureRef.current = {
+          mode: 'pan',
+          startPan: { ...pan },
+          lastX: e.touches[0].clientX,
+          lastY: e.touches[0].clientY,
+        }
+      }
+    }
+
+    const onMove = (e: TouchEvent) => {
+      const g = gestureRef.current
+      if (g.mode === 'pinch' && e.touches.length === 2 && g.startDist) {
+        e.preventDefault()
+        const newDist = dist(e.touches[0], e.touches[1])
+        const ratio = newDist / g.startDist
+        const newScale = Math.max(1, Math.min(4, (g.startScale ?? 1) * ratio))
+        setScale(newScale)
+        // 縮回 1 時也順便重置 pan
+        if (newScale === 1) setPan({ x: 0, y: 0 })
+      } else if (g.mode === 'pan' && e.touches.length === 1 && g.lastX !== undefined && g.lastY !== undefined) {
+        e.preventDefault()
+        const dx = e.touches[0].clientX - g.lastX
+        const dy = e.touches[0].clientY - g.lastY
+        gestureRef.current = { ...g, lastX: e.touches[0].clientX, lastY: e.touches[0].clientY }
+        setPan(p => ({ x: p.x + dx, y: p.y + dy }))
+      }
+    }
+
+    const onEnd = () => { gestureRef.current = { mode: 'none' } }
+
+    el.addEventListener('touchstart', onStart, { passive: false })
+    el.addEventListener('touchmove',  onMove,  { passive: false })
+    el.addEventListener('touchend',   onEnd)
+    el.addEventListener('touchcancel', onEnd)
+    return () => {
+      el.removeEventListener('touchstart', onStart)
+      el.removeEventListener('touchmove',  onMove)
+      el.removeEventListener('touchend',   onEnd)
+      el.removeEventListener('touchcancel', onEnd)
+    }
+  }, [scale, pan])
+
+  // 雙擊重置（桌機 + 手機點兩下）
+  const onDoubleClick = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    setScale(1)
+    setPan({ x: 0, y: 0 })
+  }
+
   return (
     <div className="flex flex-col gap-2 w-full">
-      <div className="flex items-center gap-1 flex-wrap">
+      {/* Underline tabs（取代原本的 chip 樣式）*/}
+      <div
+        className="flex items-stretch border-b"
+        style={{ borderColor: 'var(--color-border)' }}
+      >
         {TABS.map(t => {
           const isActive = t.key === tab
           return (
             <button
               key={t.key}
               onClick={(e) => { e.stopPropagation(); setTab(t.key) }}
-              className="text-xs px-2 py-1 rounded border transition-colors"
+              className="flex-1 text-[12px] px-1 py-2 transition-colors"
               style={{
-                background: isActive ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                borderColor: isActive ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                color: isActive ? '#fff' : 'var(--color-text-secondary)',
+                background: 'transparent',
+                color: isActive ? 'var(--color-accent-cyan)' : 'var(--color-text-secondary)',
                 fontWeight: isActive ? 600 : 400,
+                borderBottom: isActive
+                  ? '2px solid var(--color-accent-cyan)'
+                  : '2px solid transparent',
+                marginBottom: -1,
                 cursor: 'pointer',
+                whiteSpace: 'nowrap',
               }}
             >
               {t.label}
@@ -213,15 +307,53 @@ export function FundamentalsPanel({ fundamentals, aspectRatio = 3 }: Props) {
         })}
       </div>
 
-      <svg
-        viewBox={`0 0 ${viewW} ${viewH}`}
-        preserveAspectRatio="xMidYMid meet"
-        style={{ width: '100%', height: 'auto', display: 'block' }}
+      {/* Chart container：兩指 pinch 放大、單指 drag 平移、雙擊 reset */}
+      <div
+        ref={wrapRef}
+        onDoubleClick={onDoubleClick}
+        style={{
+          position: 'relative',
+          overflow: 'hidden',
+          touchAction: 'none',  // 接管 touch 給自製 pinch handler
+          cursor: scale > 1 ? 'grab' : 'auto',
+        }}
       >
-        {active.kind === 'month'
-          ? <BarChart  data={series} viewW={viewW} viewH={viewH} />
-          : <LineChart data={series} viewW={viewW} viewH={viewH} />}
-      </svg>
+        <svg
+          viewBox={`0 0 ${viewW} ${viewH}`}
+          preserveAspectRatio="xMidYMid meet"
+          style={{
+            width: '100%',
+            height: 'auto',
+            display: 'block',
+            transform: `translate(${pan.x}px, ${pan.y}px) scale(${scale})`,
+            transformOrigin: 'center center',
+            transition: gestureRef.current.mode === 'none' ? 'transform 120ms' : 'none',
+          }}
+        >
+          {active.kind === 'month'
+            ? <BarChart  data={series} viewW={viewW} viewH={viewH} />
+            : <LineChart data={series} viewW={viewW} viewH={viewH} />}
+        </svg>
+        {scale > 1 && (
+          <button
+            onClick={(e) => { e.stopPropagation(); setScale(1); setPan({ x: 0, y: 0 }) }}
+            style={{
+              position: 'absolute',
+              top: 4,
+              right: 4,
+              fontSize: 11,
+              padding: '3px 8px',
+              borderRadius: 4,
+              background: 'var(--color-bg-700)',
+              border: '1px solid var(--color-border)',
+              color: 'var(--color-accent-cyan)',
+              cursor: 'pointer',
+            }}
+          >
+            重置
+          </button>
+        )}
+      </div>
     </div>
   )
 }

@@ -1,11 +1,231 @@
-# Session Handoff — 2026-05-07 晚
+# Session Handoff — 2026-05-08 晚
 
 > 給下一個 Cowork session 用。先讀 `CLAUDE.md`（專案總覽），再讀這份（最近改動 + 待辦）。
-> 這份是 2026-05-07（institutional Yahoo 主、抓轉折 v4、回撤均線 filter）的濃縮，下面保留 5/05、5/02 的歷史。
+> 這份是 2026-05-08（手機 UI 大改造，已合回 master）的濃縮，下面保留 5/07、5/05、5/02 的歷史。
 
 ---
 
-## 🔥 2026-05-07 完成的內容
+## 🔥 2026-05-08 完成的內容 — 手機 UI 大改造
+
+從 master 分出 `feature/mobile-v2` 重構整個手機 UX，當天合回 master。Long iteration session，user 一邊試一邊調，最後成果穩定。
+
+### 1. 3 Tab 底部導航（替代浮動按鈕／隱藏功能）
+
+新元件 `MobileBottomNav.tsx`：fixed bottom，3 個 tab（族群／個股／篩選），用 inline SVG icons（lucide-style，自己畫，沒裝 icon 庫）：
+- 族群：2x2 方格
+- 個股：折線+箭頭
+- 篩選：漏斗
+
+`mobileTab` state 在 App.tsx，預設 `'stock'`。每次切 tab 自動 `setMobileDetailStockId(null)` 清掉 detail view。
+
+### 2. 個股 tab：列表 ↔ Detail page 雙模式
+
+**砍掉原本的 inline expand 設計**（user 試了不喜歡 — scroll anchoring 跟 sticky 對齊問題太多），改成：
+
+```
+list view (MobileStockList)
+  ├─ sticky sort header bar（排序 dropdown / 漲幅期間 / 成交值期間 / N 筆）
+  └─ MobileStockRow × N（dense 兩行：id+name+chip / 收·1Y·成交·YoY 點分隔）
+      ↓ tap row
+detail view (MobileStockDetail)
+  ├─ sticky top bar（← 列表 / id name / group chip）
+  ├─ sticky prev/next nav（◀ prev / idx/total / next ▶）
+  ├─ summary block（大 delta% + 4 個 metric）
+  ├─ MA toggle + K 線 + D/W/M
+  ├─ Fundamentals 4 underline tab + bar/line chart（可兩指 pinch zoom）
+  └─ 進場分析（折疊式按鈕，預設收）
+      ↓ ← 列表
+回到列表（restore scrollY，user 看到原本那筆 row）
+```
+
+App.tsx 的 `mobileDetailStockId` state + `listScrollY` ref：
+- `openMobileDetail(id)`：記住列表 scrollY → setMobileDetailStockId
+- `closeMobileDetail()`：requestAnimationFrame 後 restore scrollY
+
+### 3. 篩選 tab：FiltersBar 全螢幕模式
+
+`FiltersBar` 新增 `mobileFullscreen` prop。當 `mobileTab === 'filter'`，App 在 main 內 render `<FiltersBar mobileFullscreen resultCount onShowResults>`：
+
+- Sticky header（篩選條件 N 項 + 清除全部）
+- 4 sections（基本面 / 技術面 / 籌碼面 / 其他）跟桌機共用 `renderSection`
+- Fixed 底部按鈕「查看 N 筆結果 →」（在 bottom nav 上方）
+- 點底部按鈕 → `setMobileTab('stock')` 看結果
+
+舊的 modal sheet mode 保留但**不再用**（向後相容，可未來移除）。
+
+### 4. FilterBlock 卡片化（整理多列 chip filter）
+
+技術面 section 內每個多列 filter（譬如「N 日內突破 MA」有 天數 + MA 週期 兩列 chips）原本的 layout 把 sub-label 散在中間/右邊，視覺亂。
+
+新 helpers in FiltersBar.tsx：
+- `FilterBlock` — 卡片 wrapper（標題 + 清除按鈕 + confirm/warning hint）
+- `FilterSubRow` — 左 label 56px / 右 chips（grid 等寬對齊）
+- `ChipButton` — 統一樣式
+
+Refactor 4 個 block：maBreakout / maContinuation / maSustained / downtrendBreak。每塊 ~80 行 → ~30 行（淨減 −180 行）。
+
+### 5. Fundamentals 局部 pinch zoom（不影響整頁）
+
+User 一開始要「page-level pinch」，試了發現太粗暴（整頁變大切不回來）。改成 chart-only：
+
+`FundamentalsPanel.tsx`：
+- body `touch-action: pan-y` 阻擋 page-level pinch
+- chart container `touch-action: none` 接管 touch event
+- 兩指 pinch → 計算 distance 比例 → CSS `transform: scale(N)`，clamp 1-4 倍
+- 單指 drag（scale > 1 時）→ pan offset 用 transform: translate
+- 雙擊 reset；右上角「重置」按鈕 (scale > 1 時出現)
+
+### 6. K 線 D/W/M tab + MA legend 字大 + 與日期軸間距
+
+`CandlestickSVG.tsx`：
+- D/W/M tab：rect 24×14 → 30×18，字 11→14，間距 28→34
+- MA legend：rect 8×8 → 9×9，字 11→13
+- `maLegendH` 20→32（給日期軸跟 legend 留 8-10px gap）
+- `maLegendY` offset +14→+22
+
+### 7. 整體字體調大
+
+| 元素 | 原本 → 新 |
+|---|---|
+| Stock id (mono) | 14 → 15 |
+| Stock name | 13 → 14 |
+| Group chip（個股 row）| 9 → 10 |
+| Delta % | 13 → 15 |
+| Line 2 metrics | 10 → 12 |
+| 族群 chip（GroupCard）| text-xs → text-sm |
+| Fundamentals chart 字 | 已還原成原本 12（user 兩指放大就行，不用全 hardcode 大字）|
+
+### 8. iOS Safari 修法（標準坑全踩過）
+
+| 問題 | 修法 |
+|---|---|
+| input focus 自動 zoom 切不回來 | `@media (pointer: coarse) { input,select,textarea { font-size: 16px !important } }` |
+| `position: fixed` 被 body `overflow-x: hidden` 破壞 | 不用 `overflow-x` 在 body，改用 `touch-action: pan-y` 鎖水平 swipe |
+| `overflow-x: clip` 同樣會強制 `overflow-y: auto`，body 變 scroll container | 也不用 |
+| Scroll anchoring 害展開時 page 跳 | html / body 都加 `overflow-anchor: none` |
+| URL bar 遮 sticky | iOS Safari 標準行為，user scroll 一下 URL bar 就縮起來，沒額外解 |
+
+### 9. 搜尋 / Refresh 按鈕 SVG 化
+
+App.tsx 加 3 個 inline SVG icon component（`IconSearch` / `IconClose` / `IconRefresh`），跟 nav icon 同 lucide-style：
+- 搜尋列左側放大鏡（取代 🔍 emoji）
+- 搜尋列右側 X 清除按鈕（搜尋有內容才出現，點下去清空）
+- Header 右上角 ⟳ 重新整理（28×28 → 36×36，loading 時 SVG 自旋 `animate-spin`）
+
+### 10. GroupCard metrics 3 欄 grid
+
+族群卡片的「均增持 / 週增金額 / 漲幅%」原本 flex-wrap 對齊不整齊。改 `grid grid-cols-3`，每欄上面是值（13px monospace 加粗）下面是 label（10px muted），等寬對齊。
+
+### 11. 試了又 revert：嵌套 accordion（Commit 3）
+
+族群 tab 展開後**內部用 MobileStockRow 列表取代桌機的 K 線 grid**。試了一版 user 不喜歡（覺得失去「掃 K 線視覺」的好處），revert 掉。族群 tab 在手機展開維持桌機原樣（K 線 grid）。
+
+CLAUDE.md quirk #14 SOP 派上用場：用 `Edit` 工具一個一個 revert，**沒用 reset --hard**，安全。
+
+---
+
+## 💡 2026-05-08 用到的核心工程心法
+
+### A. 大 refactor 用 phase 1（探索 + 痛點 + mockup） → phase 2（檔案計畫 + 行數預估） → phase 3（commit by commit）三階段
+
+每階段拉 user 確認再走下一步。Phase 1 我提了 3 方案 + mockup 給 user 選。Phase 2 列要動的檔案 + 預估行數（~800 行新增）。Phase 3 分 4 commit 實作，每 commit 獨立可暫停。
+
+### B. 不重寫結構只 swap 實作（同 5/07 心法）
+
+用 `useIsMobile` hook + Tailwind `md:` class + React 條件 render，桌機 / 手機共用同一份 codebase。沒有獨立 mobile build。
+
+### C. iOS Safari 量身訂做的不要碰 cross-cutting CSS
+
+`overflow-x` 在 body / html 上根本不能用。`touch-action` / `scroll-behavior` / `overflow-anchor` 都要小心思考它們的副作用。出問題第一個懷疑這些。
+
+### D. user 反饋的 scroll/sticky 怪事八成是 CSS containing block 問題
+
+`position: fixed` 會被 ancestor 的 `transform` / `filter` / `contain` / `overflow:hidden` 破壞（變相對 ancestor 而非 viewport）。每次有人說「nav 浮在半空中」第一檢查這個。
+
+### E. Specific git add 列檔名漏 add 兩次了
+
+新 SOP：以後一律 `git add frontend/`（整個目錄掃），靠 .gitignore 擋雜訊。漏 add 比誤 add 出問題的次數多很多。
+
+### F. user 反悔很正常，Edit 工具手動 revert > git reset --hard
+
+當 user 說「我不喜歡這個更新」（譬如 Commit 3 嵌套 accordion），用 Edit 把改動回退到上一版即可，不要 reset --hard。Reflog 永遠是最後保險。
+
+---
+
+## 📋 2026-05-08 commit 清單（最後合進 master）
+
+整個 mobile-v2 分支大概 20+ commits。最後 `git merge feature/mobile-v2 --no-edit` 進 master，commit hash `09581ba`（master）。重要 commit messages：
+
+```
+chore: gitignore dist and vite cache
+feat(mobile): add bottom nav and isMobile hook
+wip(mobile): scroll fix and sort auto-collapse
+fix(mobile): touch-action lock and dual sticky detail headers
+feat(mobile): wire detail page bottom nav search row scroll fab
+fix(mobile): scroll-into-view on expand and sort dropdown
+fix(mobile): proactive collapse before sort to avoid scroll anchoring
+fix(mobile): scroll before expand for smoother transition
+fix(mobile): minimal scroll only when row hidden behind sticky
+debug(mobile): remove all auto-scroll on row toggle
+fix(mobile): match GroupCard pattern - no auto-scroll on expand
+refactor(mobile): replace inline expand with detail view and prev/next nav
+fix(mobile): scroll detail view top into sticky bottom not document top
+feat(mobile): sticky sort header reduced chrome and scroll-top fab
+feat(mobile): full title search row turnover dropdown lock x-scroll
+fix(mobile): use overflow-x clip and sticky detail header
+fix(mobile): restore fixed sticky and group detail header rows
+fix(mobile): touch-action lock and dual sticky detail headers
+fix(mobile): proactive collapse before sort
+feat(mobile): bigger fonts group sort tabs ios zoom fix sticky search
+feat(mobile): tap fundamentals chart to open fullscreen zoom modal  ← 後來改 pinch
+feat(mobile): pinch zoom kline tabs group chip font filter font
+feat(mobile): groupcard metrics 3-col grid alignment
+feat(mobile): stockrow line2 bullet separators with all labels
+feat(mobile): replace bottom nav emoji with inline svg icons
+feat(mobile): svg icons for search clear and refresh button
+refactor(filters): card layout helpers and modal z-index fix
+feat(mobile): full-screen filter tab replacing modal sheet
+revert(mobile): rollback group tab nested accordion
+```
+
+迭代次數爆多 — user 邊用邊提需求的典型流程。
+
+---
+
+## ⚠️ 2026-05-08 接續待辦
+
+### 立即（給下個 session）
+
+- [ ] **`feature/favorites-v2` 同步**：當下分支還在 5/02 後沒合 master 過，要 sync：
+  ```bash
+  git checkout feature/favorites-v2
+  git pull --rebase
+  git merge master --no-edit
+  git checkout --theirs frontend/public/data/ backend/db/
+  git add frontend/public/data/ backend/db/
+  git commit --no-edit
+  git push
+  ```
+  Sync 完 favorites-v2 就有手機 UI + 5/8 之後的所有 cron 資料。
+
+### 短期
+
+- [ ] **舊 `feature/mobile-v2` 分支**：保留一週左右備查 reflog，再刪
+- [ ] **手機版 production 視覺驗證**：master 上線後在真機 iPhone / Android 走完流程
+- [ ] **`feature/favorites-v2` 把 Telegram 整套合 master**：看 favorites-v2 有沒有跟手機 UI 衝突，沒問題就合
+- [ ] **GroupCard 嵌套 accordion 第二次嘗試**：user 說不喜歡只是初版 mockup，未來可以做更輕量版本（譬如族群 header 簡化 + 內部維持 K 線縮圖但更小）
+
+### 長期
+
+- [ ] **設定 tab**：底部 nav 目前 3 tab，未來把 Telegram 綁定 / VipPanel / StrategyManager 移到第 4 tab「⚙ 設定」（要等 favorites-v2 合 master 之後）
+- [ ] **Service Worker / PWA**：手機 add to home screen 體驗
+- [ ] **手機 K 線 pinch 體驗優化**：CandlestickSVG 自製 pinch 在手機上偶爾 jittery，可以調 sensitivity
+
+---
+
+## 📜 2026-05-07 完成的內容（歷史）
+
+> 以下保留 5/07 那次 session 的完整濃縮 — institutional 改 Yahoo 主、抓轉折 filter v4、回撤均線 filter。
 
 ### 1. institutional 改 Yahoo 主來源（修 publish lag）
 

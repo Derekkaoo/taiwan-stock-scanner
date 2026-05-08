@@ -164,7 +164,7 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnP
 
         <div className="flex flex-col gap-0.5 flex-1 min-w-0">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-bold px-2 py-0.5 rounded-full border shrink-0"
+            <span className="text-sm font-bold px-2.5 py-0.5 rounded-full border shrink-0"
               style={{ color, borderColor: color + '44', background: color + '18', whiteSpace: 'nowrap' }}>
               {groupName}
             </span>
@@ -174,31 +174,59 @@ export function GroupCard({ groupName, stocks, fetchGroup, getFromCache, returnP
           </div>
 
           {groupDesc && (
-            <span className="text-[10px]" style={{ color: 'var(--color-text-muted)', lineHeight: 1.4 }}>
+            <span className="text-[11px]" style={{ color: 'var(--color-text-muted)', lineHeight: 1.4 }}>
               {groupDesc}
             </span>
           )}
 
-          <div className="flex items-center gap-3 font-mono tabular text-[11px] flex-wrap">
-            <span style={{ color: avgDelta >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-              均增持 +{fmt(avgDelta, 3)}%
-            </span>
-            {totalDeltaAmount > 0 && (
-              <span style={{ color: 'var(--color-up)' }}>
-                週增金額 {fmtAmount(totalDeltaAmount)}
-              </span>
-            )}
-            {avgRet !== null && (
-              <span style={{ color: avgRet >= 0 ? 'var(--color-up)' : 'var(--color-down)' }}>
-                {retLabel} {avgRet >= 0 ? '+' : ''}{fmt(avgRet, 1)}%
-              </span>
-            )}
+          {/* 3 欄等寬 metric grid：值大 / label 小，整齊對齊 */}
+          <div className="grid grid-cols-3 gap-1 mt-0.5">
+            <div>
+              <div
+                className="font-mono tabular text-[13px]"
+                style={{
+                  color: avgDelta >= 0 ? 'var(--color-up)' : 'var(--color-down)',
+                  fontWeight: 600,
+                }}
+              >
+                +{fmt(avgDelta, 3)}%
+              </div>
+              <div className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>均增持</div>
+            </div>
+            <div>
+              <div
+                className="font-mono tabular text-[13px]"
+                style={{
+                  color: totalDeltaAmount > 0 ? 'var(--color-up)'
+                       : totalDeltaAmount < 0 ? 'var(--color-down)'
+                       : 'var(--color-text-muted)',
+                  fontWeight: 600,
+                }}
+              >
+                {totalDeltaAmount !== 0 ? fmtAmount(totalDeltaAmount) : '—'}
+              </div>
+              <div className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>週增金額</div>
+            </div>
+            <div>
+              <div
+                className="font-mono tabular text-[13px]"
+                style={{
+                  color: avgRet === null ? 'var(--color-text-muted)'
+                       : avgRet >= 0 ? 'var(--color-up)' : 'var(--color-down)',
+                  fontWeight: 600,
+                }}
+              >
+                {avgRet === null ? '—' : `${avgRet >= 0 ? '+' : ''}${fmt(avgRet, 1)}%`}
+              </div>
+              <div className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>{retLabel}</div>
+            </div>
           </div>
 
-          {topSubIndustries.length > 0 && (
-            <div className="flex flex-wrap gap-1 mt-0.5">
+          {/* 細產業 chips：只在「展開狀態」顯示，避免摺疊時畫面太擠 */}
+          {expanded && topSubIndustries.length > 0 && (
+            <div className="flex flex-wrap gap-1 mt-1">
               {topSubIndustries.map(([name, count]) => (
-                <span key={name} className="text-[11px] px-1.5 py-0.5 rounded"
+                <span key={name} className="text-[12px] px-2 py-0.5 rounded"
                   style={{ background: 'var(--color-bg-500)', color: 'var(--color-text-secondary)', border: '1px solid var(--color-border)' }}>
                   {name} <span style={{ opacity: 0.55 }}>×{count}</span>
                 </span>

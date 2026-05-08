@@ -5,15 +5,68 @@ import { useStocks, normalizeRow } from './hooks/useStocks'
 import { useKline, calcThreeMonthReturn } from './hooks/useKline'
 import { useFavorites } from './hooks/useFavorites'
 import { useGoogleAuth } from './hooks/useGoogleAuth'
+import { useIsMobile } from './hooks/useIsMobile'
 import { StockTable } from './components/StockTable'
 import { GroupCard } from './components/GroupCard'
 import { Footer } from './components/Footer'
-import { FiltersBar } from './components/FiltersBar'
+import { FiltersBar, totalActiveCount } from './components/FiltersBar'
 import { GoogleSignInButton } from './components/GoogleSignInButton'
 import { StrategyManager } from './components/StrategyManager'
 import { SettingsPanel } from './components/SettingsPanel'
 import { AlertModal } from './components/AlertModal'
 import { VipPanel } from './components/VipPanel'
+import { MobileBottomNav, type MobileTab } from './components/MobileBottomNav'
+import { MobileStockList } from './components/MobileStockList'
+import { MobileStockDetail } from './components/MobileStockDetail'
+import { MobileScrollTopFab } from './components/MobileScrollTopFab'
+
+/** Inline monoline SVG icons（lucide-style，跟 MobileBottomNav 同風格）*/
+function IconSearch({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" strokeWidth="2"
+         strokeLinejoin="round" strokeLinecap="round">
+      <circle cx="11" cy="11" r="8"/>
+      <path d="m21 21-4.3-4.3"/>
+    </svg>
+  )
+}
+function IconClose({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" strokeWidth="2"
+         strokeLinejoin="round" strokeLinecap="round">
+      <path d="M18 6 6 18"/>
+      <path d="m6 6 12 12"/>
+    </svg>
+  )
+}
+function IconRefresh({ size = 20 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" strokeWidth="2"
+         strokeLinejoin="round" strokeLinecap="round">
+      <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+      <path d="M3 3v5h5"/>
+      <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+      <path d="M16 16h5v5"/>
+    </svg>
+  )
+}
+
+/** 把 useStocks 給的中文 toLocaleString 縮短：「2026/5/8 下午 7:09:50」→「5/8 19:09」*/
+function shortenLastUpdated(ts: string | null): string | null {
+  if (!ts) return null
+  return ts
+    .replace(/^\d{4}\//, '')           // 去年份
+    .replace(/:\d+$/, '')              // 去秒數
+    .replace(/(上午|下午)\s*(\d+):(\d+)/, (_, ampm, h, m) => {
+      let hh = parseInt(h, 10)
+      if (ampm === '下午' && hh < 12) hh += 12
+      if (ampm === '上午' && hh === 12) hh = 0
+      return `${hh}:${m.padStart(2, '0')}`
+    })
+}
 import { applyFilters } from './utils/filters'
 import { GOOGLE_CLIENT_ID } from './config'
 
@@ -114,6 +167,52 @@ export default function App() {
   const [toasts,    setToasts]    = useState<Toast[]>([])
   const [filters,   setFilters]   = useState<Filters>(DEFAULT_FILTERS)
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false)
+
+  // 手機 layout：3 tab 底部導航 + 受控 filter modal
+  // 桌機完全不會 render 任何 mobile 元件（isMobile = false 時 Bottom Nav 不渲染、effectiveView = view）
+  const isMobile = useIsMobile()
+  const [mobileTab, setMobileTab]                 = useState<MobileTab>('stock') // 預設個股
+  // 個股 tab 進 detail view 時記錄是哪一支；null = list view
+  const [mobileDetailStockId, setMobileDetailStockId] = useState<string | null>(null)
+  // 進 detail view 之前記列表 scroll 位置，返回時 restore（避免 user 失去脈絡）
+  const listScrollY = useRef<number>(0)
+  // 手機派生 view：mobileTab='group' → group view、其他 → table view（filter 是 trigger，會切到 stock tab + 開 modal）
+  const effectiveView: View = isMobile ? (mobileTab === 'group' ? 'group' : 'table') : view
+
+  const handleMobileTab = useCallback((t: MobileTab) => {
+    // 換 tab 時關掉 detail view
+    setMobileDetailStockId(null)
+    setMobileTab(t)
+  }, [])
+
+  const openMobileDetail = useCallback((id: string) => {
+    listScrollY.current = window.scrollY  // 記住列表位置
+    setMobileDetailStockId(id)
+    // 進 detail view 後把 detail 頂端對齊到 sticky 下方（不是 document 頂端）
+    requestAnimationFrame(() => {
+      const detail = document.querySelector<HTMLElement>('[data-mobile-detail]')
+      if (!detail) return
+      let stickyBottom = 0
+      document.querySelectorAll<HTMLElement>('[class*="sticky"]').forEach(s => {
+        if (getComputedStyle(s).position !== 'sticky') return
+        const r = s.getBoundingClientRect()
+        if (r.top < 100 && r.bottom > stickyBottom) stickyBottom = r.bottom
+      })
+      const rect = detail.getBoundingClientRect()
+      const targetY = window.scrollY + rect.top - stickyBottom
+      window.scrollTo({ top: Math.max(0, targetY), behavior: 'auto' })
+    })
+  }, [])
+
+  const closeMobileDetail = useCallback(() => {
+    setMobileDetailStockId(null)
+    // 等列表 re-mount 後 restore 位置
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: listScrollY.current, behavior: 'auto' })
+    })
+  }, [])
+
+  const filterActiveCount = useMemo(() => totalActiveCount(filters), [filters])
   // K 線圖均線顯示偏好（持久化到 localStorage）
   const [maPeriods, setMaPeriods] = useState<number[]>(() => {
     try {
@@ -142,6 +241,8 @@ export default function App() {
     try { localStorage.setItem('chartTimeframe', timeframe) } catch {}
   }, [timeframe])
   const searchTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
+  // 即時的 input 值（給 X 清除按鈕判斷顯示）；setSearchQuery 仍 debounced
+  const [searchInput, setSearchInput] = useState('')
 
   // Google 登入
   const auth = useGoogleAuth({ clientId: GOOGLE_CLIENT_ID })
@@ -275,8 +376,15 @@ export default function App() {
   }, [clearCache, loadData, loadFromJson, toast])
 
   const handleSearch = (q: string) => {
+    setSearchInput(q)
     clearTimeout(searchTimer.current)
     searchTimer.current = setTimeout(() => setSearchQuery(q), 200)
+  }
+
+  const handleClearSearch = () => {
+    clearTimeout(searchTimer.current)
+    setSearchInput('')
+    setSearchQuery('')
   }
 
   // 我的最愛模式 → 重新 group：本週入榜的從 stocks，掉出榜的從 archive（ghost）
@@ -379,15 +487,18 @@ export default function App() {
     <div className="flex flex-col min-h-screen" style={{ background: 'var(--color-bg-800)' }}>
 
       <header
-        className="sticky top-0 z-50 flex items-center gap-4 px-5 py-2.5 border-b"
+        className="sticky top-0 z-50 flex items-center gap-2 px-3 py-2 border-b md:gap-4 md:px-5 md:py-2.5"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
       >
-        <h1 className="text-sm font-bold" style={{ color: 'var(--color-accent-cyan)', letterSpacing: '0.5px' }}>
+        <h1
+          className={isMobile ? 'text-xs font-bold whitespace-nowrap' : 'text-sm font-bold whitespace-nowrap'}
+          style={{ color: 'var(--color-accent-cyan)', letterSpacing: isMobile ? 0 : '0.5px' }}
+        >
           千張大戶持股追蹤器
         </h1>
-        <div className="ml-auto flex items-center gap-3 text-xs font-mono tabular">
+        <div className="ml-auto flex items-center gap-2 text-xs font-mono tabular">
           <span
-            className="px-2 py-0.5 rounded border"
+            className="px-2 py-0.5 rounded border whitespace-nowrap"
             style={{
               color: 'var(--color-accent-cyan)',
               borderColor: 'var(--color-accent-cyan)' + '44',
@@ -395,8 +506,34 @@ export default function App() {
               fontSize: 11,
             }}
           >
-            {lastUpdated ? `最後更新 ${lastUpdated}` : '載入中…'}
+            {lastUpdated
+              ? (isMobile ? shortenLastUpdated(lastUpdated) : `最後更新 ${lastUpdated}`)
+              : '載入中…'}
           </span>
+          {isMobile && (
+            <button
+              onClick={handleRefresh}
+              disabled={loading}
+              aria-label="重新整理"
+              className="rounded transition-colors"
+              style={{
+                width: 36,
+                height: 36,
+                background: 'var(--color-bg-600)',
+                color: 'var(--color-accent-cyan)',
+                border: '1px solid var(--color-border)',
+                cursor: loading ? 'not-allowed' : 'pointer',
+                opacity: loading ? 0.5 : 1,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <span className={loading ? 'animate-spin' : ''} style={{ display: 'inline-flex' }}>
+                <IconRefresh size={20} />
+              </span>
+            </button>
+          )}
           {auth.isSignedIn && (
             <button
               onClick={() => setShowSettings(true)}
@@ -443,6 +580,110 @@ export default function App() {
         </div>
       </header>
 
+      {/* 手機 list view 專用搜尋列（sticky 釘在 header 下方；filter tab 不需要）*/}
+      {isMobile && mobileTab !== 'filter' && !mobileDetailStockId && (
+        <div
+          className="px-3 py-1.5 border-b"
+          style={{
+            background: 'var(--color-bg-700)',
+            borderColor: 'var(--color-border)',
+            position: 'sticky',
+            top: 44,
+            zIndex: 40,
+          }}
+        >
+          <div
+            className="flex items-center gap-2 rounded border px-2.5"
+            style={{ background: 'var(--color-bg-600)', borderColor: 'var(--color-border)' }}
+          >
+            <span className="shrink-0 flex items-center" style={{ color: 'var(--color-text-muted)' }}>
+              <IconSearch size={16} />
+            </span>
+            <input
+              type="text"
+              placeholder={effectiveView === 'group' ? '搜尋族群 / 代號 / 名稱…' : '搜尋代號 / 名稱 / 族群…'}
+              value={searchInput}
+              onChange={e => handleSearch(e.target.value)}
+              className="flex-1 outline-none py-1.5"
+              style={{
+                background: 'transparent',
+                color: 'var(--color-text-primary)',
+                border: 0,
+                minWidth: 0,
+              }}
+            />
+            {searchInput && (
+              <button
+                onClick={handleClearSearch}
+                aria-label="清除搜尋"
+                className="shrink-0 flex items-center justify-center rounded-full transition-colors"
+                style={{
+                  width: 22,
+                  height: 22,
+                  background: 'var(--color-bg-500)',
+                  border: 0,
+                  color: 'var(--color-text-secondary)',
+                  cursor: 'pointer',
+                }}
+              >
+                <IconClose size={14} />
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* 手機族群 tab 專用 sort header（sticky 釘在搜尋列下方）*/}
+      {isMobile && effectiveView === 'group' && stockCount > 0 && (
+        <div
+          className="flex items-center gap-2 px-3 py-2 border-b flex-wrap"
+          style={{
+            background: 'var(--color-bg-700)',
+            borderColor: 'var(--color-border)',
+            position: 'sticky',
+            top: 88,
+            zIndex: 30,
+          }}
+        >
+          <span className="text-[12px] shrink-0" style={{ color: 'var(--color-text-muted)' }}>排序</span>
+          <select
+            value={groupSort}
+            onChange={e => setGroupSort(e.target.value as GroupSort)}
+            className="text-[13px] px-2 py-1 rounded border outline-none"
+            style={{
+              background: 'var(--color-bg-600)',
+              borderColor: 'var(--color-border)',
+              color: 'var(--color-text-primary)',
+              cursor: 'pointer',
+            }}
+          >
+            <option value="delta">均增持 ↓</option>
+            <option value="return">漲幅 ↓</option>
+          </select>
+          <span className="text-[12px] shrink-0 ml-1" style={{ color: 'var(--color-text-muted)' }}>漲幅</span>
+          <select
+            value={returnPeriod}
+            onChange={e => setReturnPeriod(e.target.value as ReturnPeriod)}
+            className="text-[13px] px-2 py-1 rounded border outline-none"
+            style={{
+              background: 'var(--color-bg-600)',
+              borderColor: 'var(--color-border)',
+              color: 'var(--color-text-primary)',
+              cursor: 'pointer',
+              maxWidth: 80,
+            }}
+          >
+            {(['w1','m1','m3','m6','y1'] as ReturnPeriod[]).map(p => (
+              <option key={p} value={p}>{RETURN_PERIOD_LABELS[p]}</option>
+            ))}
+          </select>
+          <span className="ml-auto text-[12px] font-mono tabular shrink-0" style={{ color: 'var(--color-text-muted)' }}>
+            {groupCount} 族群
+          </span>
+        </div>
+      )}
+
+      {!isMobile && (
       <div
         className="sticky top-[41px] z-40 flex flex-wrap items-center gap-2 px-5 py-2 border-b"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
@@ -464,21 +705,28 @@ export default function App() {
 
         <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
 
-        {(['group', 'table'] as View[]).map(v => (
-          <button
-            key={v}
-            onClick={() => setView(v)}
-            className="text-xs px-3 py-1 rounded border transition-colors"
-            style={{
-              background:  view === v ? 'var(--color-accent-blue)' : 'var(--color-bg-600)',
-              borderColor: view === v ? 'var(--color-accent-blue)' : 'var(--color-border)',
-              color:       view === v ? '#fff' : 'var(--color-text-secondary)',
-              cursor: 'pointer',
-            }}
-          >
-            {v === 'group' ? '族群總覽' : '個股列表'}
-          </button>
-        ))}
+        {(['group', 'table'] as View[]).map(v => {
+          const active = (isMobile ? effectiveView : view) === v
+          return (
+            <button
+              key={v}
+              onClick={() => {
+                setView(v)
+                // 手機：toolbar view 按鈕也要同步底部 nav，否則點了沒反應
+                if (isMobile) setMobileTab(v === 'group' ? 'group' : 'stock')
+              }}
+              className="text-xs px-3 py-1 rounded border transition-colors"
+              style={{
+                background:  active ? 'var(--color-accent-blue)' : 'var(--color-bg-600)',
+                borderColor: active ? 'var(--color-accent-blue)' : 'var(--color-border)',
+                color:       active ? '#fff' : 'var(--color-text-secondary)',
+                cursor: 'pointer',
+              }}
+            >
+              {v === 'group' ? '族群總覽' : '個股列表'}
+            </button>
+          )
+        })}
 
         {/* 「只看我的最愛」toggle */}
         <button
@@ -500,7 +748,7 @@ export default function App() {
         <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
 
         {/* 族群排序下拉（只在族群總覽顯示）*/}
-        {view === 'group' && (
+        {effectiveView === 'group' && (
           <>
             <span className="text-xs" style={{ color: 'var(--color-text-muted)' }}>族群排序：</span>
             <select
@@ -544,7 +792,7 @@ export default function App() {
         </div>
 
         {/* 成交期間按鈕（只在個股列表顯示，因為只有那邊有成交值欄位）*/}
-        {view === 'table' && (
+        {effectiveView === 'table' && (
           <>
             <div className="w-px h-5" style={{ background: 'var(--color-border)' }} />
             <span className="text-xs" style={{ color: 'var(--color-text-muted)' }}>成交值期間：</span>
@@ -588,9 +836,10 @@ export default function App() {
           onBlur={e =>  { e.target.style.borderColor = 'var(--color-border)' }}
         />
       </div>
+      )}
 
-      {/* 個股列表才顯示篩選器（族群總覽不需要）*/}
-      {view === 'table' && filteredStocks.length > 0 && (
+      {/* 桌機 toolbar 上方渲染 FiltersBar + StrategyManager（手機 filter tab 由下方 main 內 fullscreen 渲染）*/}
+      {!isMobile && effectiveView === 'table' && filteredStocks.length > 0 && (
         <>
           <FiltersBar
             stocks={filteredStocks}
@@ -616,6 +865,7 @@ export default function App() {
         </>
       )}
 
+      {!isMobile && (
       <div
         className="flex items-center gap-4 px-5 py-1.5 border-b text-[11px]"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
@@ -629,7 +879,7 @@ export default function App() {
         }} />
         <span style={{ color: 'var(--color-text-secondary)' }}>
           {error ? `錯誤：${error}` : loading ? '載入中…' :
-            view === 'table' && visibleStocks.length !== stockCount
+            effectiveView === 'table' && visibleStocks.length !== stockCount
               ? `篩出 ${visibleStocks.length} / ${stockCount} 筆`
               : `共 ${stockCount} 筆 / ${groupCount} 族群`}
         </span>
@@ -644,8 +894,9 @@ export default function App() {
           </>
         )}
       </div>
+      )}
 
-      {stockCount > 0 && (
+      {!isMobile && stockCount > 0 && (
         <div className="flex gap-3 px-5 py-3 flex-wrap">
           {statCards.map(({ label, value, color, tooltip }) => (
             <div
@@ -663,8 +914,23 @@ export default function App() {
         </div>
       )}
 
-      <main className="flex-1 px-5 pb-8">
-        {!loading && stockCount === 0 && (
+      <main
+        className={isMobile && mobileTab === 'filter' ? 'flex-1' : 'flex-1 px-5 pb-8'}
+        style={isMobile ? { paddingBottom: 'calc(64px + env(safe-area-inset-bottom, 0))' } : undefined}
+      >
+        {/* 手機 filter tab：全螢幕 FiltersBar 取代 group/stock 主內容 */}
+        {isMobile && mobileTab === 'filter' && filteredStocks.length > 0 && (
+          <FiltersBar
+            stocks={filteredStocks}
+            filters={filters}
+            onChange={setFilters}
+            mobileFullscreen
+            resultCount={filteredByFilters.length}
+            onShowResults={() => setMobileTab('stock')}
+          />
+        )}
+
+        {!loading && stockCount === 0 && !(isMobile && mobileTab === 'filter') && (
           <div className="flex flex-col items-center justify-center py-20" style={{ color: 'var(--color-text-muted)' }}>
             <div className="text-4xl mb-4">📭</div>
             <div className="text-base mb-2" style={{ color: 'var(--color-text-secondary)' }}>尚無資料</div>
@@ -672,7 +938,7 @@ export default function App() {
           </div>
         )}
 
-        {view === 'group' && stockCount > 0 && (
+        {effectiveView === 'group' && stockCount > 0 && !(isMobile && mobileTab === 'filter') && (
           <div className="flex flex-col gap-2">
             {sortedGroupEntries.map(([name, stks]) => (
               <GroupCard
@@ -700,27 +966,70 @@ export default function App() {
           </div>
         )}
 
-        {view === 'table' && visibleStocks.length > 0 && (
-          <StockTable
-            stocks={visibleStocks}
-            sort={sort}
-            onSort={key => updateSort(key)}
-            returnPeriod={returnPeriod}
-            turnoverPeriod={turnoverPeriod}
-            fetchGroup={fetchGroup}
-            getFromCache={getFromCache}
-            cacheVersion={cacheVersion}
-            isFavorite={fav.isFavorite}
-            toggleFavorite={fav.toggle}
-            maPeriods={maPeriods}
-            setMaPeriods={setMaPeriods}
-            timeframe={timeframe}
-            setTimeframe={setTimeframe}
-          />
+        {effectiveView === 'table' && visibleStocks.length > 0 && !(isMobile && mobileTab === 'filter') && (
+          isMobile ? (
+            mobileDetailStockId ? (
+              <MobileStockDetail
+                stocks={visibleStocks}
+                currentId={mobileDetailStockId}
+                returnPeriod={returnPeriod}
+                turnoverPeriod={turnoverPeriod}
+                fetchGroup={fetchGroup}
+                getFromCache={getFromCache}
+                cacheVersion={cacheVersion}
+                maPeriods={maPeriods}
+                setMaPeriods={setMaPeriods}
+                timeframe={timeframe}
+                setTimeframe={setTimeframe}
+                onClose={closeMobileDetail}
+                onChange={setMobileDetailStockId}
+              />
+            ) : (
+              <MobileStockList
+                stocks={visibleStocks}
+                returnPeriod={returnPeriod}
+                setReturnPeriod={setReturnPeriod}
+                turnoverPeriod={turnoverPeriod}
+                setTurnoverPeriod={setTurnoverPeriod}
+                sort={sort}
+                onSort={updateSort}
+                onRowClick={openMobileDetail}
+              />
+            )
+          ) : (
+            <StockTable
+              stocks={visibleStocks}
+              sort={sort}
+              onSort={key => updateSort(key)}
+              returnPeriod={returnPeriod}
+              turnoverPeriod={turnoverPeriod}
+              fetchGroup={fetchGroup}
+              getFromCache={getFromCache}
+              cacheVersion={cacheVersion}
+              isFavorite={fav.isFavorite}
+              toggleFavorite={fav.toggle}
+              maPeriods={maPeriods}
+              setMaPeriods={setMaPeriods}
+              timeframe={timeframe}
+              setTimeframe={setTimeframe}
+            />
+          )
         )}
       </main>
 
       <Footer />
+
+      {/* 手機底部 3 tab nav；桌機完全不渲染 */}
+      {isMobile && (
+        <MobileBottomNav
+          tab={mobileTab}
+          onTab={handleMobileTab}
+          filterActiveCount={filterActiveCount}
+        />
+      )}
+
+      {/* 手機 list view 的「回頂」FAB；個股 + 族群 tab 都要，但 detail view 內不需要 */}
+      {isMobile && (mobileTab === 'stock' || mobileTab === 'group') && !mobileDetailStockId && <MobileScrollTopFab />}
 
       {/* 提示 modal：未登入點 ⭐ */}
       <AlertModal

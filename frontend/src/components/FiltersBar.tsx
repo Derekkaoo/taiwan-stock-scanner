@@ -39,6 +39,17 @@ interface Props {
   stocks:   StockRow[]
   filters:  Filters
   onChange: (next: Filters) => void
+  /** 手機 modal 開關（受控）。提供時 FiltersBar 會用父層 state；未提供則用內部 state（向後相容）*/
+  mobileOpen?:    boolean
+  setMobileOpen?: (open: boolean) => void
+  /** 隱藏手機觸發按鈕條（如果父層用 bottom nav 已經提供了入口）*/
+  hideMobileTrigger?: boolean
+  /** 手機全螢幕模式：取代既有 trigger+modal，直接 inline 渲染 sections + 底部「查看結果」按鈕 */
+  mobileFullscreen?: boolean
+  /** 全螢幕模式：篩出來的結果筆數（顯示在底部按鈕）*/
+  resultCount?: number
+  /** 全螢幕模式：點底部按鈕觸發（通常切到 stock tab）*/
+  onShowResults?: () => void
 }
 
 const VOLUME_SCALE     = makePiecewiseScale([0, 5000, 25000, 100000, 500000])  // 張（左密右疏）
@@ -142,6 +153,99 @@ const EPS = 1e-6
 const ranged = (a: [number, number], b: [number, number]) =>
   Math.abs(a[0] - b[0]) > EPS || Math.abs(a[1] - b[1]) > EPS
 
+// ============================================================
+//  Filter block helper components
+//  - FilterBlock: 一個 filter 的卡片 wrapper（標題 + 清除 + 內容 + confirm/warning hint）
+//  - FilterSubRow: 卡片內的「左 label / 右 chips」橫排
+//  - ChipButton: 統一樣式的 chip 按鈕
+// ============================================================
+function FilterBlock({
+  title, active = false, onClear, confirmText, warningText, children,
+}: {
+  title: React.ReactNode
+  active?: boolean
+  onClear?: () => void
+  confirmText?: string
+  warningText?: string
+  children: React.ReactNode
+}) {
+  return (
+    <div className="flex flex-col gap-2">
+      <div className="flex items-center justify-between gap-2 flex-wrap">
+        <div className="flex items-center gap-1 text-[13px]" style={{ color: 'var(--color-text-primary)', fontWeight: 500 }}>
+          {title}
+        </div>
+        {active && onClear && (
+          <button
+            onClick={onClear}
+            className="text-[11px] px-2 py-0.5 rounded border transition-colors"
+            style={{
+              background: 'var(--color-bg-600)',
+              borderColor: 'var(--color-border)',
+              color: 'var(--color-text-secondary)',
+              cursor: 'pointer',
+            }}
+          >
+            清除
+          </button>
+        )}
+      </div>
+      {children}
+      {confirmText && (
+        <span className="text-[11px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
+          ✓ {confirmText}
+        </span>
+      )}
+      {warningText && (
+        <span className="text-[11px] italic" style={{ color: 'var(--color-text-muted)' }}>
+          {warningText}
+        </span>
+      )}
+    </div>
+  )
+}
+
+function FilterSubRow({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div className="flex items-start gap-2">
+      <span
+        className="text-[11px] shrink-0 pt-1"
+        style={{ color: 'var(--color-text-muted)', minWidth: 56 }}
+      >
+        {label}
+      </span>
+      <div className="flex items-center flex-wrap gap-1 flex-1 min-w-0">
+        {children}
+      </div>
+    </div>
+  )
+}
+
+function ChipButton({
+  active, label, onClick,
+}: {
+  active: boolean
+  label: React.ReactNode
+  onClick: () => void
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
+      style={{
+        background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
+        borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
+        color:       active ? '#fff' : 'var(--color-text-secondary)',
+        fontWeight:  active ? 600 : 400,
+        cursor: 'pointer',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      {label}
+    </button>
+  )
+}
+
 type SectionKey = 'fund' | 'tech' | 'chips' | 'meta'
 
 const SECTION_LABELS: Record<SectionKey, string> = {
@@ -151,7 +255,7 @@ const SECTION_LABELS: Record<SectionKey, string> = {
   meta:  '🏷 其他',
 }
 
-function activeCountForSection(key: SectionKey, f: Filters): number {
+export function activeCountForSection(key: SectionKey, f: Filters): number {
   let n = 0
   switch (key) {
     case 'fund':
@@ -189,7 +293,7 @@ function activeCountForSection(key: SectionKey, f: Filters): number {
   }
 }
 
-function totalActiveCount(f: Filters): number {
+export function totalActiveCount(f: Filters): number {
   return activeCountForSection('fund', f)
        + activeCountForSection('tech', f)
        + activeCountForSection('chips', f)
@@ -215,8 +319,16 @@ function saveOpenSections(s: Set<SectionKey>) {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])) } catch { /* ignore */ }
 }
 
-export function FiltersBar({ stocks, filters, onChange }: Props) {
-  const [mobileOpen, setMobileOpen] = useState(false)
+export function FiltersBar({
+  stocks, filters, onChange,
+  mobileOpen: extOpen, setMobileOpen: extSetOpen, hideMobileTrigger,
+  mobileFullscreen, resultCount, onShowResults,
+}: Props) {
+  // 控制模式：父層提供 mobileOpen + setMobileOpen → 用父層 state；否則用內部 state（向後相容）
+  const [internalOpen, setInternalOpen] = useState(false)
+  const isControlled = extOpen !== undefined && extSetOpen !== undefined
+  const mobileOpen    = isControlled ? extOpen!  : internalOpen
+  const setMobileOpen = isControlled ? extSetOpen! : setInternalOpen
   const [openSections, setOpenSections] = useState<Set<SectionKey>>(() => loadOpenSections())
 
   const totalActive = useMemo(() => totalActiveCount(filters), [filters])
@@ -367,8 +479,8 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
   // === Block JSX（同一 block 內含 chips 跟 sliders）===
   const growthBlock = (
     <div className="flex items-center flex-wrap gap-2">
-      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>連續 YoY 成長</span>
-      <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>近</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>連續 YoY 成長</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>近</span>
       <div className="flex items-center gap-1">
         {GROWTH_QUARTERS_OPTIONS.map(q => {
           const active = filters.growth.quarters === q
@@ -376,7 +488,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
             <button
               key={q}
               onClick={() => setGrowthQ(q)}
-              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
               style={{
                 background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
                 borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
@@ -391,7 +503,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
           )
         })}
       </div>
-      <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>都正</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>都正</span>
       <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
       {(['eps', 'grossMargin', 'operatingMargin'] as const).map(k => {
         const checked = filters.growth.metrics[k]
@@ -399,7 +511,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
         return (
           <label
             key={k}
-            className="inline-flex items-center gap-1 text-[11px] select-none"
+            className="inline-flex items-center gap-1 text-[12px] select-none"
             style={{
               cursor: enabled ? 'pointer' : 'not-allowed',
               opacity: enabled ? 1 : 0.4,
@@ -423,8 +535,8 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
   const instEnabled = filters.institutional.days !== 0
   const institutionalBlock = (
     <div className="flex items-center flex-wrap gap-2">
-      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>連續買超</span>
-      <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>近</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>連續買超</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>近</span>
       <div className="flex items-center gap-1">
         {INST_STREAK_OPTIONS.map(d => {
           const active = filters.institutional.days === d
@@ -432,7 +544,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
             <button
               key={d}
               onClick={() => setInstDays(d)}
-              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
               style={{
                 background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
                 borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
@@ -447,14 +559,14 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
           )
         })}
       </div>
-      <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>都買超</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>都買超</span>
       <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
       {(['foreign', 'trust'] as const).map(k => {
         const checked = filters.institutional[k]
         return (
           <label
             key={k}
-            className="inline-flex items-center gap-1 text-[11px] select-none"
+            className="inline-flex items-center gap-1 text-[12px] select-none"
             style={{
               cursor: instEnabled ? 'pointer' : 'not-allowed',
               opacity: instEnabled ? 1 : 0.4,
@@ -477,7 +589,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
 
   const marketBlock = (
     <div className="flex items-center flex-wrap gap-2">
-      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>市場</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>市場</span>
       <div className="flex items-center gap-1">
         {MARKET_OPTIONS.map(opt => {
           const active = filters.market === opt.value
@@ -485,7 +597,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
             <button
               key={opt.value}
               onClick={() => setMarket(opt.value)}
-              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
               style={{
                 background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
                 borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
@@ -506,8 +618,8 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
   const nReturnEnabled = filters.nDayReturn.days !== 0
   const nReturnBlock = (
     <div className="flex items-center flex-wrap gap-2">
-      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>N 日漲跌幅</span>
-      <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>近</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>N 日漲跌幅</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>近</span>
       <div className="flex items-center gap-1">
         {N_RETURN_OPTIONS.map(d => {
           const active = filters.nDayReturn.days === d
@@ -515,7 +627,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
             <button
               key={d}
               onClick={() => setNReturnDays(d)}
-              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
               style={{
                 background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
                 borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
@@ -550,8 +662,8 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
 
   const nHighBlock = (
     <div className="flex items-center flex-wrap gap-2">
-      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>創新高</span>
-      <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>盤中創</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>創新高</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>盤中創</span>
       <div className="flex items-center gap-1 flex-wrap">
         {N_HIGH_OPTIONS.map(d => {
           const active = filters.nDayHigh.days === d
@@ -559,7 +671,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
             <button
               key={d}
               onClick={() => setNHighDays(d)}
-              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
               style={{
                 background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
                 borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
@@ -580,8 +692,8 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
   // 成交量創 N 日新高
   const volumeNewHighBlock = (
     <div className="flex items-center flex-wrap gap-2">
-      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>成交量創新高</span>
-      <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>盤中創</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>成交量創新高</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>盤中創</span>
       <div className="flex items-center gap-1 flex-wrap">
         {VOLUME_NEW_HIGH_OPTIONS.map(d => {
           const active = filters.volumeNewHigh.days === d
@@ -589,7 +701,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
             <button
               key={d}
               onClick={() => setVolumeNewHighDays(d)}
-              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
               style={{
                 background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
                 borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
@@ -612,8 +724,8 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
   const volumeSurgeBlock = (
     <div className="flex flex-col gap-1">
       <div className="flex items-center flex-wrap gap-2">
-        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>成交爆量</span>
-        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>大於</span>
+        <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>成交爆量</span>
+        <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>大於</span>
         <div className="flex items-center gap-1 flex-wrap">
           {VOLUME_SURGE_MULTIPLIER_OPTIONS.map(m => {
             const active = filters.volumeSurge.multiplier === m
@@ -621,7 +733,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
               <button
                 key={m}
                 onClick={() => setVolumeSurgeMultiplier(m)}
-                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+                className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
                 style={{
                   background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
                   borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
@@ -641,7 +753,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
         className="flex items-center flex-wrap gap-2 ml-1"
         style={{ opacity: volumeSurgeEnabled ? 1 : 0.4, pointerEvents: volumeSurgeEnabled ? 'auto' : 'none' }}
       >
-        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>基準</span>
+        <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>基準</span>
         <div className="flex items-center gap-1 flex-wrap">
           {VOLUME_SURGE_BASELINE_OPTIONS.map(opt => {
             const active = filters.volumeSurge.baseline === opt.value
@@ -649,7 +761,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
               <button
                 key={opt.value}
                 onClick={() => setVolumeSurgeBaseline(opt.value)}
-                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+                className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
                 style={{
                   background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
                   borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
@@ -674,7 +786,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     .sort((a, b) => a - b)
   const maAlignmentBlock = (
     <div className="flex items-center flex-wrap gap-2">
-      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>均線多頭排列</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>均線多頭排列</span>
       <div className="flex items-center gap-1 flex-wrap">
         {MA_ALIGNMENT_OPTIONS.map(p => {
           const active = maPeriodsSelected.includes(p)
@@ -682,7 +794,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
             <button
               key={p}
               onClick={() => toggleMaPeriod(p)}
-              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
               style={{
                 background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
                 borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
@@ -699,19 +811,19 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
       </div>
       {/* 預覽：選了 2+ 才顯示順序 */}
       {maPeriodsSelected.length >= 2 && (
-        <span className="text-[10px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
+        <span className="text-[11px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
           {maPeriodsSelected.map(p => `${p}MA`).join(' > ')}
         </span>
       )}
       {maPeriodsSelected.length === 1 && (
-        <span className="text-[10px] italic" style={{ color: 'var(--color-text-muted)' }}>
+        <span className="text-[11px] italic" style={{ color: 'var(--color-text-muted)' }}>
           （至少選 2 個才生效）
         </span>
       )}
       <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
       <button
         onClick={resetMaAlignment}
-        className="text-[10px] px-2 py-0.5 rounded border transition-colors"
+        className="text-[11px] px-2 py-0.5 rounded border transition-colors"
         style={{
           background: 'var(--color-bg-600)',
           borderColor: 'var(--color-border)',
@@ -725,7 +837,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
       {maPeriodsSelected.length > 0 && (
         <button
           onClick={clearMaAlignment}
-          className="text-[10px] px-2 py-0.5 rounded border transition-colors"
+          className="text-[11px] px-2 py-0.5 rounded border transition-colors"
           style={{
             background: 'var(--color-bg-600)',
             borderColor: 'var(--color-border)',
@@ -745,7 +857,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
     .sort((a, b) => a - b)
   const maDirectionBlock = (
     <div className="flex items-center flex-wrap gap-2">
-      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>均線方向朝上</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>均線方向朝上</span>
       <div className="flex items-center gap-1 flex-wrap">
         {MA_DIRECTION_OPTIONS.map(p => {
           const active = maDirSelected.includes(p)
@@ -753,7 +865,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
             <button
               key={p}
               onClick={() => toggleMaDirPeriod(p)}
-              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
               style={{
                 background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
                 borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
@@ -769,7 +881,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
         })}
       </div>
       {maDirSelected.length > 0 && (
-        <span className="text-[10px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
+        <span className="text-[11px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
           {maDirSelected.map(p => `${p}MA↑`).join(' & ')}
         </span>
       )}
@@ -778,7 +890,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
           <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
           <button
             onClick={clearMaDirection}
-            className="text-[10px] px-2 py-0.5 rounded border transition-colors"
+            className="text-[11px] px-2 py-0.5 rounded border transition-colors"
             style={{
               background: 'var(--color-bg-600)',
               borderColor: 'var(--color-border)',
@@ -798,87 +910,38 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
   const maBreakoutPeriodSel = filters.maBreakout?.period ?? 0
   const maBreakoutActive    = maBreakoutDaysSel !== 0 && maBreakoutPeriodSel !== 0
   const maBreakoutBlock = (
-    <div className="flex flex-col gap-1.5">
-      <div className="flex items-center flex-wrap gap-2">
-        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>N 日內突破 MA</span>
-        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>天數</span>
-        <div className="flex items-center gap-1 flex-wrap">
-          {MA_BREAKOUT_DAYS_OPTIONS.map(d => {
-            const active = maBreakoutDaysSel === d
-            return (
-              <button
-                key={d}
-                onClick={() => setMaBreakoutDays(d)}
-                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
-                style={{
-                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                  color:       active ? '#fff' : 'var(--color-text-secondary)',
-                  fontWeight:  active ? 600 : 400,
-                  cursor: 'pointer',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {d === 0 ? '關閉' : `${d}日`}
-              </button>
-            )
-          })}
-        </div>
-      </div>
-      <div className="flex items-center flex-wrap gap-2">
-        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)', visibility: 'hidden' }}>N 日內突破 MA</span>
-        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>MA 週期</span>
-        <div className="flex items-center gap-1 flex-wrap">
-          {MA_BREAKOUT_PERIOD_OPTIONS.map(p => {
-            const active = maBreakoutPeriodSel === p
-            return (
-              <button
-                key={p}
-                onClick={() => setMaBreakoutPeriod(p)}
-                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
-                style={{
-                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                  color:       active ? '#fff' : 'var(--color-text-secondary)',
-                  fontWeight:  active ? 600 : 400,
-                  cursor: 'pointer',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {p === 0 ? '關閉' : `${p}MA`}
-              </button>
-            )
-          })}
-        </div>
-        {maBreakoutActive && (
-          <span className="text-[10px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
-            {maBreakoutDaysSel} 日內突破 {maBreakoutPeriodSel}MA
-          </span>
-        )}
-        {(maBreakoutDaysSel !== 0 || maBreakoutPeriodSel !== 0) && !maBreakoutActive && (
-          <span className="text-[10px] italic" style={{ color: 'var(--color-text-muted)' }}>
-            （天數與 MA 都要選才生效）
-          </span>
-        )}
-        {(maBreakoutDaysSel !== 0 || maBreakoutPeriodSel !== 0) && (
-          <>
-            <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
-            <button
-              onClick={clearMaBreakout}
-              className="text-[10px] px-2 py-0.5 rounded border transition-colors"
-              style={{
-                background: 'var(--color-bg-600)',
-                borderColor: 'var(--color-border)',
-                color: 'var(--color-text-secondary)',
-                cursor: 'pointer',
-              }}
-            >
-              清除
-            </button>
-          </>
-        )}
-      </div>
-    </div>
+    <FilterBlock
+      title="N 日內突破 MA"
+      active={maBreakoutDaysSel !== 0 || maBreakoutPeriodSel !== 0}
+      onClear={clearMaBreakout}
+      confirmText={maBreakoutActive ? `${maBreakoutDaysSel} 日內突破 ${maBreakoutPeriodSel}MA` : undefined}
+      warningText={
+        (maBreakoutDaysSel !== 0 || maBreakoutPeriodSel !== 0) && !maBreakoutActive
+          ? '（天數與 MA 都要選才生效）'
+          : undefined
+      }
+    >
+      <FilterSubRow label="天數">
+        {MA_BREAKOUT_DAYS_OPTIONS.map(d => (
+          <ChipButton
+            key={d}
+            active={maBreakoutDaysSel === d}
+            label={d === 0 ? '關閉' : `${d}日`}
+            onClick={() => setMaBreakoutDays(d)}
+          />
+        ))}
+      </FilterSubRow>
+      <FilterSubRow label="MA 週期">
+        {MA_BREAKOUT_PERIOD_OPTIONS.map(p => (
+          <ChipButton
+            key={p}
+            active={maBreakoutPeriodSel === p}
+            label={p === 0 ? '關閉' : `${p}MA`}
+            onClick={() => setMaBreakoutPeriod(p)}
+          />
+        ))}
+      </FilterSubRow>
+    </FilterBlock>
   )
 
   // 明日 MA 續揚 / 下彎 block（扣抵值預測）
@@ -886,87 +949,38 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
   const maContPeriod = filters.maContinuation?.period    ?? 0
   const maContActive = maContDir !== 'off' && maContPeriod !== 0
   const maContinuationBlock = (
-    <div className="flex flex-col gap-1.5">
-      <div className="flex items-center flex-wrap gap-2">
-        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>明日 MA 續揚 / 下彎</span>
-        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>方向</span>
-        <div className="flex items-center gap-1 flex-wrap">
-          {MA_CONTINUATION_DIRECTION_OPTIONS.map(opt => {
-            const active = maContDir === opt.value
-            return (
-              <button
-                key={opt.value}
-                onClick={() => setMaContDirection(opt.value)}
-                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
-                style={{
-                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                  color:       active ? '#fff' : 'var(--color-text-secondary)',
-                  fontWeight:  active ? 600 : 400,
-                  cursor: 'pointer',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {opt.label}
-              </button>
-            )
-          })}
-        </div>
-      </div>
-      <div className="flex items-center flex-wrap gap-2">
-        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)', visibility: 'hidden' }}>明日 MA 續揚 / 下彎</span>
-        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>MA 週期</span>
-        <div className="flex items-center gap-1 flex-wrap">
-          {MA_CONTINUATION_PERIOD_OPTIONS.map(p => {
-            const active = maContPeriod === p
-            return (
-              <button
-                key={p}
-                onClick={() => setMaContPeriod(p)}
-                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
-                style={{
-                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                  color:       active ? '#fff' : 'var(--color-text-secondary)',
-                  fontWeight:  active ? 600 : 400,
-                  cursor: 'pointer',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {p === 0 ? '關閉' : `${p}MA`}
-              </button>
-            )
-          })}
-        </div>
-        {maContActive && (
-          <span className="text-[10px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
-            明日 {maContPeriod}MA {maContDir === 'up' ? '續揚 ▲' : '下彎 ▼'}
-          </span>
-        )}
-        {(maContDir !== 'off' || maContPeriod !== 0) && !maContActive && (
-          <span className="text-[10px] italic" style={{ color: 'var(--color-text-muted)' }}>
-            （方向與 MA 都要選才生效）
-          </span>
-        )}
-        {(maContDir !== 'off' || maContPeriod !== 0) && (
-          <>
-            <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
-            <button
-              onClick={clearMaContinuation}
-              className="text-[10px] px-2 py-0.5 rounded border transition-colors"
-              style={{
-                background: 'var(--color-bg-600)',
-                borderColor: 'var(--color-border)',
-                color: 'var(--color-text-secondary)',
-                cursor: 'pointer',
-              }}
-            >
-              清除
-            </button>
-          </>
-        )}
-      </div>
-    </div>
+    <FilterBlock
+      title="明日 MA 續揚 / 下彎"
+      active={maContDir !== 'off' || maContPeriod !== 0}
+      onClear={clearMaContinuation}
+      confirmText={maContActive ? `明日 ${maContPeriod}MA ${maContDir === 'up' ? '續揚 ▲' : '下彎 ▼'}` : undefined}
+      warningText={
+        (maContDir !== 'off' || maContPeriod !== 0) && !maContActive
+          ? '（方向與 MA 都要選才生效）'
+          : undefined
+      }
+    >
+      <FilterSubRow label="方向">
+        {MA_CONTINUATION_DIRECTION_OPTIONS.map(opt => (
+          <ChipButton
+            key={opt.value}
+            active={maContDir === opt.value}
+            label={opt.label}
+            onClick={() => setMaContDirection(opt.value)}
+          />
+        ))}
+      </FilterSubRow>
+      <FilterSubRow label="MA 週期">
+        {MA_CONTINUATION_PERIOD_OPTIONS.map(p => (
+          <ChipButton
+            key={p}
+            active={maContPeriod === p}
+            label={p === 0 ? '關閉' : `${p}MA`}
+            onClick={() => setMaContPeriod(p)}
+          />
+        ))}
+      </FilterSubRow>
+    </FilterBlock>
   )
 
   // 未來 N 日 MA 易續揚 block（扣抵保護）+ tooltip
@@ -974,9 +988,9 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
   const maSustPeriod = filters.maSustained?.period ?? 0
   const maSustActive = maSustDays !== 0 && maSustPeriod !== 0
   const maSustainedBlock = (
-    <div className="flex flex-col gap-1.5">
-      <div className="flex items-center flex-wrap gap-2">
-        <span className="text-[10px] flex items-center" style={{ color: 'var(--color-text-muted)' }}>
+    <FilterBlock
+      title={
+        <>
           未來 N 日 MA 易續揚
           <InfoPopup
             text={
@@ -985,85 +999,38 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
               '又稱「黃金扣抵期」— 技術派常用來確認波段安全進場區。'
             }
           />
-        </span>
-        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>天數</span>
-        <div className="flex items-center gap-1 flex-wrap">
-          {MA_SUSTAINED_DAYS_OPTIONS.map(d => {
-            const active = maSustDays === d
-            return (
-              <button
-                key={d}
-                onClick={() => setMaSustDays(d)}
-                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
-                style={{
-                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                  color:       active ? '#fff' : 'var(--color-text-secondary)',
-                  fontWeight:  active ? 600 : 400,
-                  cursor: 'pointer',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {d === 0 ? '關閉' : `${d}日`}
-              </button>
-            )
-          })}
-        </div>
-      </div>
-      <div className="flex items-center flex-wrap gap-2">
-        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)', visibility: 'hidden' }}>未來 N 日 MA 易續揚</span>
-        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>MA 週期</span>
-        <div className="flex items-center gap-1 flex-wrap">
-          {MA_SUSTAINED_PERIOD_OPTIONS.map(p => {
-            const active = maSustPeriod === p
-            return (
-              <button
-                key={p}
-                onClick={() => setMaSustPeriod(p)}
-                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
-                style={{
-                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                  color:       active ? '#fff' : 'var(--color-text-secondary)',
-                  fontWeight:  active ? 600 : 400,
-                  cursor: 'pointer',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {p === 0 ? '關閉' : `${p}MA`}
-              </button>
-            )
-          })}
-        </div>
-        {maSustActive && (
-          <span className="text-[10px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
-            未來 {maSustDays} 日 {maSustPeriod}MA 易續揚
-          </span>
-        )}
-        {(maSustDays !== 0 || maSustPeriod !== 0) && !maSustActive && (
-          <span className="text-[10px] italic" style={{ color: 'var(--color-text-muted)' }}>
-            （天數與 MA 都要選才生效）
-          </span>
-        )}
-        {(maSustDays !== 0 || maSustPeriod !== 0) && (
-          <>
-            <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
-            <button
-              onClick={clearMaSustained}
-              className="text-[10px] px-2 py-0.5 rounded border transition-colors"
-              style={{
-                background: 'var(--color-bg-600)',
-                borderColor: 'var(--color-border)',
-                color: 'var(--color-text-secondary)',
-                cursor: 'pointer',
-              }}
-            >
-              清除
-            </button>
-          </>
-        )}
-      </div>
-    </div>
+        </>
+      }
+      active={maSustDays !== 0 || maSustPeriod !== 0}
+      onClear={clearMaSustained}
+      confirmText={maSustActive ? `未來 ${maSustDays} 日 ${maSustPeriod}MA 易續揚` : undefined}
+      warningText={
+        (maSustDays !== 0 || maSustPeriod !== 0) && !maSustActive
+          ? '（天數與 MA 都要選才生效）'
+          : undefined
+      }
+    >
+      <FilterSubRow label="天數">
+        {MA_SUSTAINED_DAYS_OPTIONS.map(d => (
+          <ChipButton
+            key={d}
+            active={maSustDays === d}
+            label={d === 0 ? '關閉' : `${d}日`}
+            onClick={() => setMaSustDays(d)}
+          />
+        ))}
+      </FilterSubRow>
+      <FilterSubRow label="MA 週期">
+        {MA_SUSTAINED_PERIOD_OPTIONS.map(p => (
+          <ChipButton
+            key={p}
+            active={maSustPeriod === p}
+            label={p === 0 ? '關閉' : `${p}MA`}
+            onClick={() => setMaSustPeriod(p)}
+          />
+        ))}
+      </FilterSubRow>
+    </FilterBlock>
   )
 
   // 抓轉折 — 突破下降趨勢 block
@@ -1072,82 +1039,37 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
   const downBreakActive = downBreakDays !== 0
   const pivotsToHighNDays = (p: number) => p <= 3 ? 5 : p === 4 ? 10 : 15
   const downtrendBreakBlock = (
-    <div className="flex flex-col gap-1.5">
-      <div className="flex items-center flex-wrap gap-2">
-        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>抓轉折（突破下降趨勢）</span>
-        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>趨勢期間</span>
-        <div className="flex items-center gap-1 flex-wrap">
-          {DOWNTREND_BREAK_DAYS_OPTIONS.map(d => {
-            const active = downBreakDays === d
-            return (
-              <button
-                key={d}
-                onClick={() => setDownBreakDays(d)}
-                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
-                style={{
-                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                  color:       active ? '#fff' : 'var(--color-text-secondary)',
-                  fontWeight:  active ? 600 : 400,
-                  cursor: 'pointer',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {d === 0 ? '關閉' : `${d}日`}
-              </button>
-            )
-          })}
-        </div>
-      </div>
-      <div className="flex items-center flex-wrap gap-2">
-        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)', visibility: 'hidden' }}>抓轉折（突破下降趨勢）</span>
-        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>壓力位</span>
-        <div className="flex items-center gap-1 flex-wrap">
-          {DOWNTREND_BREAK_PIVOTS_OPTIONS.map(p => {
-            const active = downBreakPivots === p
-            return (
-              <button
-                key={p}
-                onClick={() => setDownBreakPivots(p)}
-                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
-                style={{
-                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                  color:       active ? '#fff' : 'var(--color-text-secondary)',
-                  fontWeight:  active ? 600 : 400,
-                  cursor: 'pointer',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {pivotsToHighNDays(p)} 日高
-              </button>
-            )
-          })}
-        </div>
-        {downBreakActive && (
-          <span className="text-[10px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
-            {downBreakDays} 日量價反轉 + 突破 {pivotsToHighNDays(downBreakPivots)} 日高
-          </span>
-        )}
-        {downBreakActive && (
-          <>
-            <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
-            <button
-              onClick={clearDowntrendBreak}
-              className="text-[10px] px-2 py-0.5 rounded border transition-colors"
-              style={{
-                background: 'var(--color-bg-600)',
-                borderColor: 'var(--color-border)',
-                color: 'var(--color-text-secondary)',
-                cursor: 'pointer',
-              }}
-            >
-              清除
-            </button>
-          </>
-        )}
-      </div>
-    </div>
+    <FilterBlock
+      title="抓轉折（突破下降趨勢）"
+      active={downBreakActive}
+      onClear={clearDowntrendBreak}
+      confirmText={
+        downBreakActive
+          ? `${downBreakDays} 日量價反轉 + 突破 ${pivotsToHighNDays(downBreakPivots)} 日高`
+          : undefined
+      }
+    >
+      <FilterSubRow label="趨勢期間">
+        {DOWNTREND_BREAK_DAYS_OPTIONS.map(d => (
+          <ChipButton
+            key={d}
+            active={downBreakDays === d}
+            label={d === 0 ? '關閉' : `${d}日`}
+            onClick={() => setDownBreakDays(d)}
+          />
+        ))}
+      </FilterSubRow>
+      <FilterSubRow label="壓力位">
+        {DOWNTREND_BREAK_PIVOTS_OPTIONS.map(p => (
+          <ChipButton
+            key={p}
+            active={downBreakPivots === p}
+            label={`${pivotsToHighNDays(p)} 日高`}
+            onClick={() => setDownBreakPivots(p)}
+          />
+        ))}
+      </FilterSubRow>
+    </FilterBlock>
   )
 
   // 回撤均線 block
@@ -1155,8 +1077,8 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
   const pullbackMaActive = pullbackMaPeriod !== 0
   const pullbackMaBlock = (
     <div className="flex items-center flex-wrap gap-2">
-      <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>(曾)回撤均線</span>
-      <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>均線</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>(曾)回撤均線</span>
+      <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>均線</span>
       <div className="flex items-center gap-1 flex-wrap">
         {PULLBACK_MA_PERIOD_OPTIONS.map(p => {
           const active = pullbackMaPeriod === p
@@ -1164,7 +1086,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
             <button
               key={p}
               onClick={() => setPullbackMaPeriod(p)}
-              className="text-[10px] px-2 py-0.5 rounded-full border transition-colors"
+              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
               style={{
                 background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
                 borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
@@ -1180,7 +1102,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
         })}
       </div>
       {pullbackMaActive && (
-        <span className="text-[10px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
+        <span className="text-[11px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
           回撤到 {pullbackMaPeriod}MA
         </span>
       )}
@@ -1189,7 +1111,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
           <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
           <button
             onClick={clearPullbackMa}
-            className="text-[10px] px-2 py-0.5 rounded border transition-colors"
+            className="text-[11px] px-2 py-0.5 rounded border transition-colors"
             style={{
               background: 'var(--color-bg-600)',
               borderColor: 'var(--color-border)',
@@ -1208,11 +1130,11 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
   const absValueBlock = (
     <div className="flex flex-col gap-2">
       <div className="flex items-center flex-wrap gap-2">
-        <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>按季篩選</span>
-        <span className="text-[10px]" style={{ color: 'var(--color-text-secondary)' }}>選一季</span>
+        <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>按季篩選</span>
+        <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>選一季</span>
         <div className="flex items-center gap-1 flex-wrap">
           {quarters.length === 0 && (
-            <span className="text-[10px] italic" style={{ color: 'var(--color-text-muted)' }}>
+            <span className="text-[11px] italic" style={{ color: 'var(--color-text-muted)' }}>
               （暫無資料，請點上方「🔄 更新資料」按鈕）
             </span>
           )}
@@ -1222,7 +1144,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
               <button
                 key={q}
                 onClick={() => setAbsQuarter(q)}
-                className="text-[10px] px-2 py-0.5 rounded-full border transition-colors font-mono tabular"
+                className="text-[11px] px-2 py-0.5 rounded-full border transition-colors font-mono tabular"
                 style={{
                   background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
                   borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
@@ -1238,7 +1160,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
           })}
         </div>
         {absEnabled && (
-          <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>
+          <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>
             （拉動下方 slider 篩該季的值）
           </span>
         )}
@@ -1301,7 +1223,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
       <div className="flex flex-col gap-2">
         {marketBlock}
         <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>
-          <div className="text-[10px] mb-2" style={{ color: 'var(--color-text-muted)' }}>產業別（多選任一）</div>
+          <div className="text-[11px] mb-2" style={{ color: 'var(--color-text-muted)' }}>產業別（多選任一）</div>
           <IndustryChips
             stocks={stocks}
             selected={filters.industries}
@@ -1337,7 +1259,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
             {SECTION_LABELS[key]}
             {count > 0 && (
               <span
-                className="rounded-full px-1.5 py-0.5 text-[10px] font-mono tabular"
+                className="rounded-full px-1.5 py-0.5 text-[11px] font-mono tabular"
                 style={{
                   background: 'var(--color-accent-cyan)',
                   color: '#fff',
@@ -1361,6 +1283,75 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
 
   const allSections: SectionKey[] = ['fund', 'tech', 'chips', 'meta']
 
+  // 手機全螢幕模式：直接 inline 渲染 sections + sticky header + fixed 底部按鈕
+  if (mobileFullscreen) {
+    const count = resultCount ?? 0
+    return (
+      <div className="flex flex-col" style={{ background: 'var(--color-bg-700)' }}>
+        {/* Sticky header：篩選條件 + 清除全部 */}
+        <div
+          className="flex items-center justify-between px-4 py-3 border-b"
+          style={{
+            background: 'var(--color-bg-700)',
+            borderColor: 'var(--color-border)',
+            position: 'sticky',
+            top: 44,
+            zIndex: 30,
+          }}
+        >
+          <span className="text-sm font-bold" style={{ color: 'var(--color-text-primary)' }}>
+            篩選條件{totalActive > 0 ? ` · ${totalActive} 項` : ''}
+          </span>
+          {totalActive > 0 && (
+            <button
+              onClick={reset}
+              className="text-[12px] px-2.5 py-1 rounded border"
+              style={{
+                background: 'var(--color-bg-600)',
+                borderColor: 'var(--color-border)',
+                color: 'var(--color-text-secondary)',
+              }}
+            >
+              清除全部
+            </button>
+          )}
+        </div>
+
+        {/* Sections（normal flow，paddingBottom 留空間給底部 fixed 按鈕）*/}
+        <div style={{ paddingBottom: 120 }}>
+          {allSections.map(renderSection)}
+        </div>
+
+        {/* Fixed 底部按鈕：在 bottom nav 上方 */}
+        <div
+          className="fixed left-0 right-0 px-4 py-2.5 border-t"
+          style={{
+            bottom: 'calc(64px + env(safe-area-inset-bottom, 0))',
+            background: 'var(--color-bg-700)',
+            borderColor: 'var(--color-border)',
+            zIndex: 40,
+          }}
+        >
+          <button
+            onClick={onShowResults}
+            disabled={count === 0}
+            className="w-full py-3 rounded font-medium transition-colors"
+            style={{
+              background: count === 0 ? 'var(--color-bg-600)' : 'var(--color-accent-cyan)',
+              color: count === 0 ? 'var(--color-text-muted)' : '#fff',
+              border: 0,
+              cursor: count === 0 ? 'not-allowed' : 'pointer',
+              fontSize: 14,
+              opacity: count === 0 ? 0.6 : 1,
+            }}
+          >
+            {count === 0 ? '無符合條件' : `查看 ${count} 筆結果 →`}
+          </button>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <>
       {/* 桌機 */}
@@ -1373,7 +1364,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
           >
             <button
               onClick={reset}
-              className="text-[10px] px-2 py-1 rounded border transition-colors"
+              className="text-[11px] px-2 py-1 rounded border transition-colors"
               style={{
                 background: 'var(--color-bg-600)',
                 borderColor: 'var(--color-border)',
@@ -1389,7 +1380,8 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
         {allSections.map(renderSection)}
       </div>
 
-      {/* 手機按鈕 */}
+      {/* 手機按鈕（如果父層用 bottom nav 接管 filter 入口，可隱藏）*/}
+      {!hideMobileTrigger && (
       <div className="flex md:hidden items-center gap-2 px-5 py-2 border-b"
         style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
       >
@@ -1408,7 +1400,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
         {totalActive > 0 && (
           <button
             onClick={reset}
-            className="text-[10px] px-2 py-1 rounded border transition-colors"
+            className="text-[11px] px-2 py-1 rounded border transition-colors"
             style={{
               background: 'var(--color-bg-600)',
               borderColor: 'var(--color-border)',
@@ -1420,6 +1412,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
           </button>
         )}
       </div>
+      )}
 
       {/* 手機 modal */}
       {mobileOpen && (
@@ -1453,8 +1446,7 @@ export function FiltersBar({ stocks, filters, onChange }: Props) {
               style={{
                 background: 'var(--color-bg-700)',
                 borderColor: 'var(--color-border)',
-                // RangeSlider thumb 用 z-index 3~4，sticky 要比它高才不會被圓圈蓋住
-                zIndex: 10,
+                zIndex: 10,  // 高於下方 RangeSlider thumb（z-index 3~4），避免 scroll 時 thumb 透出 header
               }}
             >
               <span className="text-sm font-bold" style={{ color: 'var(--color-text-primary)' }}>
