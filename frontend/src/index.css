@@ -83,8 +83,18 @@ body {
   /* 註：不在 body 上設 overflow-x（會被 CSS 規範強制把 overflow-y 變 auto，
      讓 body 變 scroll container → position:fixed/sticky 改為相對 body 而非 viewport，
      導致 bottom nav 浮在半空、sticky 不對齊）。
-     改用 touch-action 阻擋手機水平 swipe 觸發 scroll，配合具體元素內 max-width / flex-wrap */
+     改用 touch-action 阻擋手機水平 swipe 觸發 scroll，配合具體元素內 max-width / flex-wrap。
+     不允許 page-level pinch-zoom（user 反映整頁放大太粗暴）；個別 chart（CandlestickSVG /
+     FundamentalsPanel）內部自己處理 pinch，container 用 touch-action: none 接管 */
   touch-action: pan-y;
+}
+
+/* ── iOS Safari focus 自動 zoom 修法：input / select / textarea 強制 ≥ 16px
+       否則 user 點 input → iOS 自動放大網頁 → 之後切不回來（user 反映「畫面整體變大」）── */
+@media (pointer: coarse) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
 }
 
 /* ── 數字一律使用 tabular-nums 對齊（財務資料關鍵需求） ── */

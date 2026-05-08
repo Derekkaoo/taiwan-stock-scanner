@@ -374,23 +374,29 @@ export default function App() {
         </div>
       </header>
 
-      {/* 手機 list view 專用搜尋列（不 sticky，跟列表一起 scroll；省 sticky 高度）*/}
-      {isMobile && effectiveView === 'table' && !mobileDetailStockId && (
+      {/* 手機 list view 專用搜尋列（sticky 釘在 header 下方）*/}
+      {isMobile && !mobileDetailStockId && (
         <div
           className="px-3 py-1.5 border-b"
-          style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
+          style={{
+            background: 'var(--color-bg-700)',
+            borderColor: 'var(--color-border)',
+            position: 'sticky',
+            top: 44,
+            zIndex: 40,
+          }}
         >
           <div
             className="flex items-center gap-2 rounded border px-2.5"
             style={{ background: 'var(--color-bg-600)', borderColor: 'var(--color-border)' }}
           >
-            <span className="text-[12px] shrink-0" style={{ color: 'var(--color-text-muted)' }}>🔍</span>
+            <span className="text-[14px] shrink-0" style={{ color: 'var(--color-text-muted)' }}>🔍</span>
             <input
               type="text"
-              placeholder="搜尋代號 / 名稱 / 族群…"
+              placeholder={effectiveView === 'group' ? '搜尋族群 / 代號 / 名稱…' : '搜尋代號 / 名稱 / 族群…'}
               defaultValue={searchQuery}
               onChange={e => handleSearch(e.target.value)}
-              className="flex-1 outline-none text-[12px] py-1.5"
+              className="flex-1 outline-none py-1.5"
               style={{
                 background: 'transparent',
                 color: 'var(--color-text-primary)',
@@ -398,6 +404,56 @@ export default function App() {
               }}
             />
           </div>
+        </div>
+      )}
+
+      {/* 手機族群 tab 專用 sort header（sticky 釘在搜尋列下方）*/}
+      {isMobile && effectiveView === 'group' && stockCount > 0 && (
+        <div
+          className="flex items-center gap-2 px-3 py-2 border-b flex-wrap"
+          style={{
+            background: 'var(--color-bg-700)',
+            borderColor: 'var(--color-border)',
+            position: 'sticky',
+            top: 88,
+            zIndex: 30,
+          }}
+        >
+          <span className="text-[12px] shrink-0" style={{ color: 'var(--color-text-muted)' }}>排序</span>
+          <select
+            value={groupSort}
+            onChange={e => setGroupSort(e.target.value as GroupSort)}
+            className="text-[13px] px-2 py-1 rounded border outline-none"
+            style={{
+              background: 'var(--color-bg-600)',
+              borderColor: 'var(--color-border)',
+              color: 'var(--color-text-primary)',
+              cursor: 'pointer',
+            }}
+          >
+            <option value="delta">均增持 ↓</option>
+            <option value="return">漲幅 ↓</option>
+          </select>
+          <span className="text-[12px] shrink-0 ml-1" style={{ color: 'var(--color-text-muted)' }}>漲幅</span>
+          <select
+            value={returnPeriod}
+            onChange={e => setReturnPeriod(e.target.value as ReturnPeriod)}
+            className="text-[13px] px-2 py-1 rounded border outline-none"
+            style={{
+              background: 'var(--color-bg-600)',
+              borderColor: 'var(--color-border)',
+              color: 'var(--color-text-primary)',
+              cursor: 'pointer',
+              maxWidth: 80,
+            }}
+          >
+            {(['w1','m1','m3','m6','y1'] as ReturnPeriod[]).map(p => (
+              <option key={p} value={p}>{RETURN_PERIOD_LABELS[p]}</option>
+            ))}
+          </select>
+          <span className="ml-auto text-[12px] font-mono tabular shrink-0" style={{ color: 'var(--color-text-muted)' }}>
+            {groupCount} 族群
+          </span>
         </div>
       )}
 
@@ -698,8 +754,8 @@ export default function App() {
         />
       )}
 
-      {/* 手機 list view 的「回頂」FAB；detail view / 族群 view 不需要 */}
-      {isMobile && mobileTab === 'stock' && !mobileDetailStockId && <MobileScrollTopFab />}
+      {/* 手機 list view 的「回頂」FAB；個股 + 族群 tab 都要，但 detail view 內不需要 */}
+      {isMobile && (mobileTab === 'stock' || mobileTab === 'group') && !mobileDetailStockId && <MobileScrollTopFab />}
 
       <div className="fixed bottom-5 right-5 z-[9999] flex flex-col gap-2">
         {toasts.map(t => (
