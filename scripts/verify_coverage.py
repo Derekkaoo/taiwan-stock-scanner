@@ -13,6 +13,7 @@ verify_coverage.py — 資料健檢工具
 用法：
   python scripts/verify_coverage.py            # threshold 85%
   python scripts/verify_coverage.py --strict   # threshold 95%
+  python scripts/verify_coverage.py --telegram # fail 時推 Telegram alert
 """
 import json
 import sys
@@ -22,7 +23,8 @@ from datetime import datetime
 ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / "frontend" / "public" / "data"
 
-STRICT = "--strict" in sys.argv
+STRICT      = "--strict"   in sys.argv
+TELEGRAM    = "--telegram" in sys.argv
 PASS_THRESHOLD = 0.95 if STRICT else 0.85
 
 
@@ -31,7 +33,34 @@ def _bar(label, pass_count, total, threshold=PASS_THRESHOLD):
     status = "OK " if pct >= threshold else ("WARN" if pct >= 0.7 else "FAIL")
     bar = "#" * int(pct * 20) + "." * (20 - int(pct * 20))
     print(f"  [{status}] {label:<26} {bar}  {pass_count:>4}/{total:<4}  ({pct*100:5.1f}%)")
-    return pct >= threshold
+    return pct >= threshold, pct, label
+
+
+def _send_telegram_alert(failures):
+    """fail 時推 Telegram；failures = [(label, pct), ...]"""
+    try:
+        sys.path.insert(0, str(Path(__file__).parent))
+        from send_telegram import send_message
+    except ImportError:
+        print("WARN: send_telegram.py 不可用，跳過 Telegram alert")
+        return
+    lines = [
+        "🚨 <b>資料健檢失敗</b>",
+        f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+        f"Threshold: {PASS_THRESHOLD*100:.0f}%",
+        "",
+        "<b>未通過項目：</b>",
+    ]
+    for label, pct in failures:
+        lines.append(f"• {label}: {pct*100:.1f}%")
+    lines.append("")
+    lines.append("→ 跑 <code>python scripts/verify_coverage.py</code> 看詳情")
+    msg = "\n".join(lines)
+    try:
+        send_message(msg)
+        print("INFO: Telegram alert 已送")
+    except Exception as e:
+        print(f"WARN: Telegram alert 失敗：{e}")
 
 
 def main():
@@ -73,32 +102,26 @@ def main():
             except ValueError:
                 pass
 
-    p1 = _bar("K 線（任一筆 bar）",      has_bars, total)
-    p2 = _bar("K 線（最近 7 日內）",     fresh_bars, total)
+    checks = [
+        _bar("K 線（任一筆 bar）",     has_bars, total),
+        _bar("K 線（最近 7 日內）",    fresh_bars, total),
+        _bar("price > 0",              sum(1 for s in stocks if (s.get("price") or 0) > 0), total),
+        _bar("月營收 YoY",             sum(1 for s in stocks if (s.get("fundamentals", {}).get("revenueYoY") or [])), total),
+        _bar("EPS YoY (季財報)",       sum(1 for s in stocks if (s.get("fundamentals", {}).get("epsYoY") or [])), total),
+        _bar("institutionalHistory",   sum(1 for s in stocks if (s.get("institutionalHistory") or [])), total),
+        _bar("foreignBuyStreak 欄位",  sum(1 for s in stocks if s.get("foreignBuyStreak") is not None), total),
+    ]
 
-    # ─── Price ───
-    price_count = sum(1 for s in stocks if (s.get("price") or 0) > 0)
-    p3 = _bar("price > 0",               price_count, total)
-
-    # ─── Fundamentals ───
-    rev_count = sum(1 for s in stocks
-                    if (s.get("fundamentals", {}).get("revenueYoY") or []))
-    p4 = _bar("月營收 YoY",              rev_count, total)
-    eps_count = sum(1 for s in stocks
-                    if (s.get("fundamentals", {}).get("epsYoY") or []))
-    p5 = _bar("EPS YoY (季財報)",        eps_count, total)
-
-    # ─── Institutional ───
-    inst_count = sum(1 for s in stocks if (s.get("institutionalHistory") or []))
-    p6 = _bar("institutionalHistory",    inst_count, total)
-    streak_count = sum(1 for s in stocks if s.get("foreignBuyStreak") is not None)
-    p7 = _bar("foreignBuyStreak 欄位",   streak_count, total)
+    failures = [(label, pct) for (passed, pct, label) in checks if not passed]
 
     print(f"\n{'='*68}")
-    if all([p1, p2, p3, p4, p5, p6, p7]):
+    if not failures:
         print(f"  PASS: 全部通過（threshold = {PASS_THRESHOLD*100:.0f}%）")
         return 0
-    print(f"  FAIL: 有項目未達 threshold ({PASS_THRESHOLD*100:.0f}%)")
+
+    print(f"  FAIL: {len(failures)} 項未達 threshold ({PASS_THRESHOLD*100:.0f}%)")
+    if TELEGRAM:
+        _send_telegram_alert(failures)
     return 1
 
 

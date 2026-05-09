@@ -54,6 +54,14 @@ if errorlevel 1 (
     echo X screener runner failed (continuing) >> "%LOGFILE%"
 )
 
+REM Step 4.5: 資料健檢，fail 時 Telegram alert (continue on fail, only push commit)
+echo. >> "%LOGFILE%"
+echo [4.5/5] verify_coverage... >> "%LOGFILE%"
+"%PYTHON%" scripts/verify_coverage.py --telegram >> "%LOGFILE%" 2>&1
+if errorlevel 1 (
+    echo X verify_coverage detected issues (Telegram alert sent) >> "%LOGFILE%"
+)
+
 REM Step 5: commit + push if data changed (triggers cloud deploy via push trigger)
 echo. >> "%LOGFILE%"
 echo [5/5] commit + push data updates... >> "%LOGFILE%"
