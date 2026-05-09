@@ -74,6 +74,65 @@ def fetch(dataset, stock_id, start_date):
         return None
 
 
+# ============================================================
+#  Yahoo TW finance 月營收 fetcher（無 quota，主要來源）
+#  資料源：tw.stock.yahoo.com/quote/{id}.{TW|TWO}/revenue
+#  特點：Yahoo 表格通常有 24+ 個月歷史（FinMind 自由方案 600/hr 易撞 quota）
+#  輸出格式：list of {revenue_year, revenue_month, revenue} — 跟 FinMind 同 key，
+#           可直接餵給 parse_revenue_yoy
+# ============================================================
+YAHOO_REVENUE_URL = "https://tw.stock.yahoo.com/quote/{sid}.{suffix}/revenue"
+_YH_HEADERS = {
+    "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                   "AppleWebKit/537.36 (KHTML, like Gecko) "
+                   "Chrome/121.0.0.0 Safari/537.36"),
+    "Accept-Language": "zh-TW,zh;q=0.9",
+}
+
+
+def fetch_yahoo_revenue_records(stock_id: str):
+    """從 Yahoo TW finance 抓單支股票的月營收歷史。
+    回傳 FinMind 兼容格式 list of {revenue_year, revenue_month, revenue}
+    或 None（兩個 suffix 都失敗）。
+
+    注意：2026 起 Yahoo 改 Next.js 動態 render，資料不在 <table> 裡，
+    而是埋在 inline JSON（big script block）。我們用 regex 抽取。
+    格式樣本：
+      "date":"2026\\u002F04","revenue":"410,725,118","revenueMoM":-0.01,...
+    """
+    for suffix in ("TW", "TWO"):
+        url = YAHOO_REVENUE_URL.format(sid=stock_id, suffix=suffix)
+        try:
+            r = requests.get(url, headers=_YH_HEADERS, timeout=15)
+            if r.status_code != 200:
+                continue
+        except Exception:
+            continue
+
+        # / 是 / 的 JSON 編碼，先 unescape 簡化 regex
+        html = r.text.replace("\\u002F", "/")
+        # 月營收 row 樣本："date":"2026/04","revenue":"410,725,118"
+        pattern = r'"date":"(\d{4})/(\d{2})","revenue":"([\d,]+)"'
+        matches = re.findall(pattern, html)
+        if not matches:
+            continue
+        records = []
+        for yr, mo, rev_str in matches:
+            try:
+                rev = int(rev_str.replace(",", ""))
+            except ValueError:
+                continue
+            records.append({
+                "revenue_year":  int(yr),
+                "revenue_month": int(mo),
+                "revenue":       rev,
+            })
+        if records:
+            # 第一個 suffix 抽到資料就回傳
+            return records
+    return None
+
+
 def parse_revenue_yoy(records):
     """從月營收紀錄算 YoY。回傳最近 12 個月的 [{date: YYYY-MM, yoy: 28.5}, ...]"""
     if not records:
@@ -313,37 +372,51 @@ def run(stock_ids: list[str] | None = None):
             continue
 
         if need_rev:
-            rev_records = fetch("TaiwanStockMonthRevenue", sid, rev_start)
-            time.sleep(0.3)
             entry["_last_rev_attempt_ts"] = int(time.time())  # throttle 用
-            if rev_records is not None:
-                revenue_yoy = parse_revenue_yoy(rev_records)
+            # 主：Yahoo（無 quota，24+ 月歷史）
+            yahoo_rev = fetch_yahoo_revenue_records(sid)
+            time.sleep(0.3)
+            if yahoo_rev:
+                revenue_yoy = parse_revenue_yoy(yahoo_rev)
                 if revenue_yoy:
                     entry["revenueYoY"] = revenue_yoy
                     fetched_rev += 1
+            # 次：FinMind fallback（Yahoo HTML 失敗或解析不出 → 才打 FinMind）
+            if not entry.get("revenueYoY"):
+                rev_records = fetch("TaiwanStockMonthRevenue", sid, rev_start)
+                time.sleep(0.3)
+                if rev_records is not None:
+                    revenue_yoy = parse_revenue_yoy(rev_records)
+                    if revenue_yoy:
+                        entry["revenueYoY"] = revenue_yoy
+                        fetched_rev += 1
+                        logger.debug("  ↳ FinMind fallback (revenue) %s", sid)
 
         if need_fin:
-            fin_records = fetch("TaiwanStockFinancialStatements", sid, fin_start)
-            time.sleep(0.3)
             entry["_last_fin_attempt_ts"] = int(time.time())  # throttle 用
-            if fin_records is not None:
-                parsed = parse_financial_yoy(fin_records)
-                if any(parsed.values()):
-                    entry.update(parsed)  # 同時寫入 6 條序列
+            # 主：Yahoo（scrape_yahoo_financials 已存在的 income-statement scraper）
+            yahoo_fin_ok = False
+            try:
+                from scrape_yahoo_financials import fetch_yahoo_financials
+                yahoo_data = fetch_yahoo_financials(sid)
+                if yahoo_data and any(yahoo_data.values()):
+                    entry.update(yahoo_data)
                     fetched_fin += 1
-            else:
-                # FinMind 額度上限或失敗 → 嘗試 Yahoo fallback
-                try:
-                    from scrape_yahoo_financials import fetch_yahoo_financials
-                    yahoo_data = fetch_yahoo_financials(sid)
-                    if yahoo_data and any(yahoo_data.values()):
-                        entry.update(yahoo_data)
+                    yahoo_fin_ok = True
+            except ImportError:
+                pass
+            except Exception as e:
+                logger.debug("Yahoo financials %s 失敗：%s", sid, e)
+            # 次：FinMind fallback
+            if not yahoo_fin_ok:
+                fin_records = fetch("TaiwanStockFinancialStatements", sid, fin_start)
+                time.sleep(0.3)
+                if fin_records is not None:
+                    parsed = parse_financial_yoy(fin_records)
+                    if any(parsed.values()):
+                        entry.update(parsed)
                         fetched_fin += 1
-                        logger.info("  ↳ Yahoo fallback 成功 %s", sid)
-                except ImportError:
-                    pass
-                except Exception as e:
-                    logger.debug("Yahoo fallback %s 失敗：%s", sid, e)
+                        logger.debug("  ↳ FinMind fallback (financials) %s", sid)
 
         # 若 entry 仍然空的（新股票 + 兩個 API 都失敗），放棄此支
         if entry:
