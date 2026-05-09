@@ -12,6 +12,9 @@ interface Props {
   onClick: () => void
   returnPeriod: ReturnPeriod
   turnoverPeriod: TurnoverPeriod
+  /** 我的最愛 — 從 useFavorites 傳進來 */
+  isFavorite?: (stockId: string) => boolean
+  toggleFavorite?: (stockId: string) => void
 }
 
 const RETURN_LABEL: Record<ReturnPeriod, string> = {
@@ -33,6 +36,7 @@ function fmtPctShort(r: number): string {
 export function MobileStockRow({
   stock, onClick,
   returnPeriod, turnoverPeriod,
+  isFavorite, toggleFavorite,
 }: Props) {
   const cssClass   = getGroupCssClass(stock.group)
   const groupColor = TAG_COLORS[cssClass] ?? '#6b7280'
@@ -41,21 +45,30 @@ export function MobileStockRow({
   const ret = rv == null ? stock.threeMonthReturn : rv
   const turnover = stock.turnovers?.[turnoverPeriod] ?? 0
   const yoy = stock.revenueYoY
+  const fav = isFavorite?.(stock.id) ?? false
 
   return (
-    <button
-      onClick={onClick}
-      className="w-full text-left px-3.5 py-2.5 transition-colors"
+    <div
+      className="relative w-full transition-colors"
       style={{
-        background: 'transparent',
-        border: 0,
         borderBottom: '1px solid var(--color-border)',
-        cursor: 'pointer',
-        color: 'var(--color-text-primary)',
       }}
     >
-      {/* line 1: › + id + name + group chip + 週增% */}
-      <div className="flex items-baseline justify-between gap-2 mb-1.5">
+      <button
+        onClick={onClick}
+        className="w-full text-left px-3.5 py-2.5 transition-colors"
+        style={{
+          background: 'transparent',
+          border: 0,
+          cursor: 'pointer',
+          color: 'var(--color-text-primary)',
+        }}
+      >
+      {/* line 1: › + id + name + group chip + 週增% — 只有這行為星星留空間 */}
+      <div
+        className="flex items-baseline justify-between gap-2 mb-1.5"
+        style={{ paddingRight: toggleFavorite ? 32 : 0 }}
+      >
         <div className="flex items-baseline gap-2 min-w-0 flex-1 overflow-hidden">
           <span className="text-[12px] shrink-0" style={{ color: 'var(--color-text-muted)' }}>›</span>
           <span
@@ -128,6 +141,34 @@ export function MobileStockRow({
           </>
         )}
       </div>
-    </button>
+      </button>
+
+      {/* ★ 收藏按鈕 — overlay 在 row 右上角（對齊 line 1），line 2 metrics 拿回全寬 */}
+      {toggleFavorite && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation()
+            toggleFavorite(stock.id)
+          }}
+          aria-label={fav ? '從最愛移除' : '加入最愛'}
+          className="absolute flex items-center justify-center transition-colors"
+          style={{
+            top: 2,
+            right: 2,
+            width: 32,
+            height: 32,
+            background: 'transparent',
+            border: 0,
+            cursor: 'pointer',
+            color: fav ? '#fbbf24' : 'var(--color-text-muted)',
+            fontSize: 20,
+            lineHeight: 1,
+            padding: 0,
+          }}
+        >
+          {fav ? '★' : '☆'}
+        </button>
+      )}
+    </div>
   )
 }

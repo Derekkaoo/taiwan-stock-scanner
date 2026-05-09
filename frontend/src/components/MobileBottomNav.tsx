@@ -1,10 +1,10 @@
 // ============================================================
-//  手機底部導航：3 個 tab（族群 / 個股 / 篩選）
+//  手機底部導航：4 個 tab（族群 / 個股 / 最愛 / 篩選）
 //  fixed bottom，桌機完全不渲染（由 App 層用 useIsMobile 控制）
 //  Icons：inline monoline SVG（lucide-style），不裝額外 icon 庫
 // ============================================================
 
-export type MobileTab = 'group' | 'stock' | 'filter'
+export type MobileTab = 'group' | 'stock' | 'favorites' | 'filter'
 
 interface Props {
   /** 目前 active tab。filter tab 是 trigger，按下會打開 filter modal（由父層處理）*/
@@ -13,6 +13,8 @@ interface Props {
   onTab: (t: MobileTab) => void
   /** 已啟用的 filter 條件數，> 0 時 filter tab 顯示徽章 */
   filterActiveCount: number
+  /** 收藏數量，> 0 時最愛 tab 顯示徽章 */
+  favoritesCount: number
 }
 
 interface IconProps {
@@ -55,6 +57,16 @@ function IconFilter({ size = 22 }: IconProps) {
   )
 }
 
+/** 我的最愛 icon：實心五角星 */
+function IconFavorite({ size = 22 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor"
+         stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round">
+      <path d="M12 2.6 14.95 9l6.55.6-4.95 4.5 1.5 6.4L12 17.3 5.95 20.5l1.5-6.4L2.5 9.6 9.05 9z"/>
+    </svg>
+  )
+}
+
 interface TabDef {
   key: MobileTab
   label: string
@@ -62,12 +74,13 @@ interface TabDef {
 }
 
 const TABS: TabDef[] = [
-  { key: 'group',  label: '族群', Icon: IconGroup },
-  { key: 'stock',  label: '個股', Icon: IconStock },
-  { key: 'filter', label: '篩選', Icon: IconFilter },
+  { key: 'group',     label: '族群', Icon: IconGroup },
+  { key: 'stock',     label: '個股', Icon: IconStock },
+  { key: 'favorites', label: '最愛', Icon: IconFavorite },
+  { key: 'filter',    label: '篩選', Icon: IconFilter },
 ]
 
-export function MobileBottomNav({ tab, onTab, filterActiveCount }: Props) {
+export function MobileBottomNav({ tab, onTab, filterActiveCount, favoritesCount }: Props) {
   return (
     <nav
       className="fixed bottom-0 left-0 right-0 z-50 flex border-t"
@@ -118,6 +131,27 @@ export function MobileBottomNav({ tab, onTab, filterActiveCount }: Props) {
                 }}
               >
                 {filterActiveCount}
+              </span>
+            )}
+            {t.key === 'favorites' && favoritesCount > 0 && (
+              <span
+                className="absolute font-mono tabular"
+                style={{
+                  top: 4,
+                  left: '50%',
+                  marginLeft: 6,
+                  background: '#fbbf24',
+                  color: '#1a1a1a',
+                  fontSize: 9,
+                  fontWeight: 600,
+                  padding: '1px 5px',
+                  borderRadius: 8,
+                  lineHeight: 1.2,
+                  minWidth: 16,
+                  textAlign: 'center',
+                }}
+              >
+                {favoritesCount}
               </span>
             )}
           </button>

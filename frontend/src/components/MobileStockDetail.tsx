@@ -32,6 +32,9 @@ interface Props {
   onClose: () => void
   /** 切換到 prev/next 股票 */
   onChange: (newId: string) => void
+  /** 我的最愛 — 從 useFavorites 傳進來 */
+  isFavorite?: (stockId: string) => boolean
+  toggleFavorite?: (stockId: string) => void
 }
 
 const RETURN_LABEL: Record<ReturnPeriod, string> = {
@@ -78,6 +81,7 @@ export function MobileStockDetail({
   fetchGroup, getFromCache, cacheVersion,
   maPeriods, setMaPeriods, timeframe, setTimeframe,
   onClose, onChange,
+  isFavorite, toggleFavorite,
 }: Props) {
   const [entryOpen, setEntryOpen] = useState(false)
 
@@ -119,6 +123,7 @@ export function MobileStockDetail({
   const cssClass   = getGroupCssClass(stock.group)
   const groupColor = TAG_COLORS[cssClass] ?? '#6b7280'
   const klineBars  = getFromCache(stock.id)
+  const fav        = isFavorite?.(stock.id) ?? false
 
   const rv  = stock.returns && stock.returns[returnPeriod]
   const ret = rv == null ? stock.threeMonthReturn : rv
@@ -171,6 +176,27 @@ export function MobileStockDetail({
         >
           {stock.group}
         </span>
+        {/* ★ 收藏按鈕 — 跟桌機 GroupCard / StockTable 同風格 */}
+        {toggleFavorite && (
+          <button
+            onClick={() => toggleFavorite(stock.id)}
+            aria-label={fav ? '從最愛移除' : '加入最愛'}
+            className="shrink-0 flex items-center justify-center transition-colors"
+            style={{
+              width: 32,
+              height: 32,
+              background: 'transparent',
+              border: 0,
+              cursor: 'pointer',
+              color: fav ? '#fbbf24' : 'var(--color-text-muted)',
+              fontSize: 22,
+              lineHeight: 1,
+              padding: 0,
+            }}
+          >
+            {fav ? '★' : '☆'}
+          </button>
+        )}
       </div>
 
       {/* Prev/Next nav（獨立 sticky，疊在 top bar 下方）*/}

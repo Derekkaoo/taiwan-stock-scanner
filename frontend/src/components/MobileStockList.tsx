@@ -23,6 +23,9 @@ interface Props {
   onRowClick: (id: string) => void
   /** sort header 在 viewport sticky 位置（避免被頁首 header 遮住）*/
   stickyTopPx?: number
+  /** 我的最愛 — 從 useFavorites 傳進來，每個 row 顯示 ★/☆ */
+  isFavorite?: (stockId: string) => boolean
+  toggleFavorite?: (stockId: string) => void
 }
 
 interface SortOption { key: SortState['key']; label: string }
@@ -43,6 +46,7 @@ export function MobileStockList({
   stocks, returnPeriod, setReturnPeriod, turnoverPeriod, setTurnoverPeriod,
   sort, onSort, onRowClick,
   stickyTopPx = 88,
+  isFavorite, toggleFavorite,
 }: Props) {
   if (!stocks.length) {
     return (
@@ -160,6 +164,8 @@ export function MobileStockList({
           onClick={() => onRowClick(stock.id)}
           returnPeriod={returnPeriod}
           turnoverPeriod={turnoverPeriod}
+          isFavorite={isFavorite}
+          toggleFavorite={toggleFavorite}
         />
       ))}
     </div>

@@ -182,6 +182,12 @@ export default function App() {
   const handleMobileTab = useCallback((t: MobileTab) => {
     // 換 tab 時關掉 detail view
     setMobileDetailStockId(null)
+    // 最愛 tab → 自動開啟 showFavoritesOnly；個股/族群 tab → 關閉（filter 不動，filter 是 trigger）
+    if (t === 'favorites') {
+      setShowFavoritesOnly(true)
+    } else if (t === 'stock' || t === 'group') {
+      setShowFavoritesOnly(false)
+    }
     setMobileTab(t)
   }, [])
 
@@ -938,6 +944,18 @@ export default function App() {
           </div>
         )}
 
+        {/* 手機最愛 tab 但 0 收藏 → 引導加收藏 */}
+        {!loading && isMobile && mobileTab === 'favorites' && stockCount > 0 && visibleStocks.length === 0 && (
+          <div className="flex flex-col items-center justify-center py-16" style={{ color: 'var(--color-text-muted)' }}>
+            <div className="text-4xl mb-3" style={{ color: '#fbbf24' }}>★</div>
+            <div className="text-base mb-2" style={{ color: 'var(--color-text-secondary)' }}>尚未收藏任何股票</div>
+            <div className="text-xs text-center px-8" style={{ lineHeight: 1.6 }}>
+              在「個股」或「族群」列表上點 ☆ 圖示加入收藏<br />
+              {!fav.isSynced && '登入 Google 帳號可跨裝置同步'}
+            </div>
+          </div>
+        )}
+
         {effectiveView === 'group' && stockCount > 0 && !(isMobile && mobileTab === 'filter') && (
           <div className="flex flex-col gap-2">
             {sortedGroupEntries.map(([name, stks]) => (
@@ -983,6 +1001,8 @@ export default function App() {
                 setTimeframe={setTimeframe}
                 onClose={closeMobileDetail}
                 onChange={setMobileDetailStockId}
+                isFavorite={fav.isFavorite}
+                toggleFavorite={fav.toggle}
               />
             ) : (
               <MobileStockList
@@ -994,6 +1014,8 @@ export default function App() {
                 sort={sort}
                 onSort={updateSort}
                 onRowClick={openMobileDetail}
+                isFavorite={fav.isFavorite}
+                toggleFavorite={fav.toggle}
               />
             )
           ) : (
@@ -1025,11 +1047,12 @@ export default function App() {
           tab={mobileTab}
           onTab={handleMobileTab}
           filterActiveCount={filterActiveCount}
+          favoritesCount={fav.count}
         />
       )}
 
       {/* 手機 list view 的「回頂」FAB；個股 + 族群 tab 都要，但 detail view 內不需要 */}
-      {isMobile && (mobileTab === 'stock' || mobileTab === 'group') && !mobileDetailStockId && <MobileScrollTopFab />}
+      {isMobile && (mobileTab === 'stock' || mobileTab === 'group' || mobileTab === 'favorites') && !mobileDetailStockId && <MobileScrollTopFab />}
 
       {/* 提示 modal：未登入點 ⭐ */}
       <AlertModal
