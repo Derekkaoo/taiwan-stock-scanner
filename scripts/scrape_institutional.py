@@ -56,8 +56,8 @@ DATA_DIR = Path(__file__).parent.parent / "frontend" / "public" / "data"
 DB_DIR   = Path(__file__).parent.parent / "backend" / "db"
 OUT_PATH = DB_DIR / "institutional.json"
 
-KEEP_DAYS = 30          # 保留最近 N 個交易日
-LOOKBACK_DAYS = 30      # FinMind 撈幾天往前
+KEEP_DAYS = 90          # 保留最近 N 個交易日（前端外資/投信圖要 90 天）
+LOOKBACK_DAYS = 90      # FinMind 撈幾天往前（Yahoo 一次回 100 天 ≥ 此值）
 USER_AGENT = "Mozilla/5.0"
 
 
@@ -462,11 +462,22 @@ def enrich_stocks_json(by_stock: dict[str, list[dict]]):
         history = by_stock.get(s["id"]) or []
         s["foreignBuyStreak"] = _consecutive_buy_streak(history, "foreign")
         s["trustBuyStreak"]   = _consecutive_buy_streak(history, "trust")
+        # 寫前端 InstitutionalChart 用的 90 日歷史（精簡版，只留 date / foreign / trust 張數）
+        # 不含 dealer 自營商（前端目前不展示），節省 stocks.json 體積
+        s["institutionalHistory"] = [
+            {
+                "date":    h.get("date", ""),
+                "foreign": h.get("foreign", 0),
+                "trust":   h.get("trust", 0),
+            }
+            for h in history
+            if h.get("date")
+        ]
         updated += 1
 
     with open(stocks_path, "w", encoding="utf-8") as f:
         json.dump(stocks, f, ensure_ascii=False, indent=2)
-    logger.info("stocks.json 寫入 buy streak：%d 支", updated)
+    logger.info("stocks.json 寫入 buy streak + 90 日 institutionalHistory：%d 支", updated)
 
 
 if __name__ == "__main__":

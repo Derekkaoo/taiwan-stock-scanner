@@ -10,6 +10,7 @@ import { TAG_COLORS, getGroupCssClass } from '../constants/themeGroups'
 import { CandlestickSVG } from './CandlestickSVG'
 import { CompanyProfilePanel } from './CompanyProfilePanel'
 import { FundamentalsPanel } from './FundamentalsPanel'
+import { InstitutionalChart } from './InstitutionalChart'
 import { EntryAnalysisPanel } from './EntryAnalysisPanel'
 import { MAToggleBar } from './MAToggleBar'
 import { useEntryAnalysis } from '../hooks/useEntryAnalysis'
@@ -301,6 +302,27 @@ export function MobileStockDetail({
       <div className="px-3.5 py-3 border-b" style={{ borderColor: 'var(--color-border)' }}>
         <FundamentalsPanel fundamentals={stock.fundamentals} />
       </div>
+
+      {/* 外資 / 投信 90 日 bar chart（手機版上下排，不摺疊）*/}
+      {stock.institutionalHistory && stock.institutionalHistory.length > 0 && (
+        <div className="px-3.5 py-3 border-b flex flex-col gap-3"
+             style={{ borderColor: 'var(--color-border)' }}>
+          <InstitutionalChart
+            history={stock.institutionalHistory}
+            series="foreign"
+            streak={stock.foreignBuyStreak}
+            vbWidth={360}
+            vbHeight={110}
+          />
+          <InstitutionalChart
+            history={stock.institutionalHistory}
+            series="trust"
+            streak={stock.trustBuyStreak}
+            vbWidth={360}
+            vbHeight={110}
+          />
+        </div>
+      )}
 
       {/* 進場分析（折疊式，預設收）*/}
       <div className="px-3.5 py-3">
