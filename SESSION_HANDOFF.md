@@ -1,7 +1,221 @@
-# Session Handoff — 2026-05-08 晚
+# Session Handoff — 2026-05-09 晚
 
 > 給下一個 Cowork session 用。先讀 `CLAUDE.md`（專案總覽），再讀這份（最近改動 + 待辦）。
-> 這份是 2026-05-08（手機 UI 大改造，已合回 master）的濃縮，下面保留 5/07、5/05、5/02 的歷史。
+> 這份是 2026-05-09 的濃縮，下面保留 5/08、5/07、5/05、5/02 歷史。
+
+---
+
+## 🔥 2026-05-09 完成的內容
+
+兩條主線並行：（A）財報 fetch 邏輯重構 push 到 master、（B）feature/favorites-v2 手機收藏 UI 補完。
+
+### A. 財報 Step 2 push（master，commit `db173c3`）
+
+**問題背景**：5 月是 Q1 報表月，公司 5/15 前要送 Q1 財報，但舊 `expected_latest_quarter()` 邏輯設成 5 月期待 Q4 → smart-skip 一直跳過 fetch_financials → cache 卡在 2025Q4 沒更新。
+
+**驗證流程**（Step 1 + Step 2）：
+
+1. **Yahoo vs FinMind 對比**（`scripts/_compare_finmind_vs_yahoo.py` 一次性測試，跑完已刪）：6669 2026Q1 兩邊 EPS 都是 75.95 一致 → FinMind 沒落後 → **Step 4（換 Yahoo 主來源）取消**。
+2. **2024Q4 EPS 兩邊差 0.97**（FinMind 38.19 vs Yahoo 39.16）：流通股數計算口徑差（年度合併 EPS 倒推 vs 直接公告 Q4），毛利率 / 營利率完全一致證明損益表本體相同，不影響 YoY 計算或我們的篩選邏輯。
+
+**Step 2 程式碼改動** (`scripts/fetch_financials.py`)：
+
+```python
+def is_reporting_month(today):
+    """季報公告期：3（年報）/5（Q1）/8（Q2）/11（Q3）"""
+    return today.month in (3, 5, 8, 11)
+
+def expected_latest_quarter(today):
+    y, m = today.year, today.month
+    if   m == 3:  return f"{y-1}Q4"
+    elif m == 5:  return f"{y}Q1"
+    elif m == 8:  return f"{y}Q2"
+    elif m == 11: return f"{y}Q3"
+    if   m == 4:                 return f"{y-1}Q4"
+    elif m == 6 or m == 7:       return f"{y}Q1"
+    elif m == 9 or m == 10:      return f"{y}Q2"
+    elif m == 12:                return f"{y}Q3"
+    else:                        return f"{y-1}Q3"  # 1-2 月
+
+def should_refresh_financials(entry, today):
+    if not entry: return True
+    arr = entry.get("epsYoY") or []
+    if not arr: return True
+    if not entry.get("eps") or not entry.get("grossMargin") or not entry.get("operatingMargin"):
+        return True
+    last = arr[-1].get("quarter", "")
+    if last >= expected_latest_quarter(today):
+        return False
+    if is_reporting_month(today):  # 報表月：忽略 throttle、每次都嘗試
+        return True
+    last_attempt = entry.get("_last_fin_attempt_ts", 0)
+    if time.time() - last_attempt < _RETRY_THROTTLE_SEC:
+        return False
+    return True
+```
+
+**本地驗證結果**：
+- 跑 `python scripts/fetch_financials.py`（5 分鐘）→ 285 支實際打 FinMind（沒被 smart-skip）
+- cache 2026Q1 涵蓋率：14 → 96（+82 支新公告 Q1）
+- 跑 `python scripts/run_pipeline.py` enrich stocks.json → 96 支同步到前端
+- commit `db173c3` push 到 master，雲端 deploy 完成
+
+**雲端 cron 自動化驗證**：cron-job.org 平日 15:00 / 17:00 觸發 `workflow_dispatch` → `mode=full` → `run_pipeline.py` 內 import fetch_financials → 報表月強制刷新邏輯生效。**不用新增 cron-job.org 條目**。
+
+### B. feature/favorites-v2 手機收藏 UI
+
+**Audit 發現**：使用者反映「手機版我的最愛 UI 不見了」。Audit 確認：
+- 桌機 StockTable / GroupCard 都接 `fav.isFavorite` + `fav.toggle` ✅
+- 手機 GroupCard 展開後仍保留 ★/☆（共用元件）✅
+- **手機獨立元件全沒接 favorites**：`MobileStockRow` / `MobileStockList` / `MobileStockDetail` / `MobileBottomNav` 都缺
+
+**設計選定方案 A**：4 tab nav（族群 / 個股 / 最愛 / 篩選），最愛獨立 tab，跟桌機 toolbar chip 概念呼應但給 mobile dedicated 入口。
+
+**檔案改動**（5 個 component + 1 個 App.tsx）：
+
+| 檔案 | 改動 |
+|---|---|
+| `MobileBottomNav.tsx` | type 加 `'favorites'`、IconFavorite SVG（實心五角星）、`favoritesCount` prop、4 tab + 金黃 badge |
+| `MobileStockRow.tsx` | 外層 `<button>` 包成 `<div className="relative">` + 內層 button + ★ overlay；★ 釘 `top: 2 / right: 2`（top-right 對齊 line 1）；`paddingRight: 32` 只擠 line 1 的 delta % → line 2 metrics 全寬 |
+| `MobileStockList.tsx` | 加 `isFavorite` / `toggleFavorite` props 透傳到 row |
+| `MobileStockDetail.tsx` | sticky header 加 ★/☆（32×32），位置在 group chip 後 |
+| `App.tsx` | `handleMobileTab`：favorites tab → setShowFavoritesOnly(true)；個股/族群 → false（filter 不動）；MobileStockList / MobileStockDetail 都 pass fav props；MobileBottomNav 加 favoritesCount；MobileScrollTopFab 條件加 'favorites'；新增 0 收藏 empty state |
+
+**ghost 過濾**（commit 接續）：3189 / 3037 等股票本週掉出大戶週增榜，原 archive merge 邏輯會 fallback 到 placeholder（0.00 死資料）→ 移除 archive 載入邏輯（`loadArchive` / `archiveById` state），visibleStocks 只保留本週榜上的最愛。
+
+```ts
+const visibleStocks = useMemo(() => {
+  if (!showFavoritesOnly) return filteredByFilters
+  // 我的最愛模式：只顯示本週還在「大戶週增 ≥ 0.1%」榜上的最愛
+  const inWeekById = new Map(stocks.map(s => [s.id, s]))
+  const result: StockRow[] = []
+  for (const fid of fav.favoritesArray) {
+    const cur = inWeekById.get(fid)
+    if (cur) result.push(cur)
+  }
+  return result
+}, [stocks, filteredByFilters, showFavoritesOnly, fav.favoritesArray])
+```
+
+順手清掉 `normalizeRow` import（沒人用）跟 `_isGhost` 不再被產生（types/render 保留向後相容）。
+
+### C. 已知 quirk — 手機 nav 懸空
+
+無痕模式下偶現「底部 nav 不固定，浮在內容中間」。觀察規律：
+- 硬重 load 可解
+- Google 登入後立刻消失
+- 強烈嫌疑：**Google Identity Services SDK 注入的 iframe / style 影響 ancestor positioning**
+
+**未解決**。可能解法：把 `MobileBottomNav` 改用 `React.createPortal` 直接掛到 `<body>`，bypass 任何祖先的 transform / filter / will-change（modal / bottom-sheet 標準做法）。**待後續觸發再修**。
+
+### D. Commits 列表
+
+| Branch | Commit | 說明 |
+|---|---|---|
+| master | `db173c3` | data: refresh with 2026Q1 financials (14 -> 96 stocks reporting) |
+| feature/favorites-v2 | （多個）| feat(mobile): add favorites tab + star button on rows and detail |
+| feature/favorites-v2 | （最後）| feat(favorites): hide stocks not in current week's holder-increase list |
+
+---
+
+## TODO / 開放項目（5/9 結束時）
+
+- [ ] **Lemon Squeezy 申請 + VipPanel 整合**：5/9 user 詢問怎麼申請。下方 `### Lemon Squeezy 申請流程` 章節有 step-by-step。申請通過後拿 API key + product variant ID，串到 VipPanel 的訂閱按鈕。
+- [ ] **手機 nav 懸空 createPortal 解法**（quirk C）：等下次再出現重現後，把 `MobileBottomNav` portal 到 body。
+- [ ] **觀察期**：明後天（5/10、5/11）再跑 baseline 統計，看 cache 2026Q1 涵蓋率有沒有從 96 持續往上爬到 280+。指令：
+
+```powershell
+python -c "import json; from collections import Counter; d=json.load(open('backend/db/financials.json', encoding='utf-8')); latest=Counter(); [latest.update([(v.get('eps') or [{}])[-1].get('quarter','none')]) for v in d.values() if isinstance(v, dict)]; [print(f'{k:>10}: {v}') for k,v in sorted(latest.items(), reverse=True)]"
+```
+
+- [ ] **Telegram set merge from favorites-v2 to master**（從 5/8 沿用過來的）
+- [ ] **手機 favorites 4th tab 整合**已完成 → 接下來可考慮加「⚙ 設定」第 5 tab（爆 nav 寬度，可能要改成 More menu）
+
+---
+
+## Lemon Squeezy 申請流程（給未來 session 參考）
+
+Lemon Squeezy 是 Merchant of Record (MoR) 訂閱平台，會幫你處理稅務（VAT / sales tax）跟付款收單，比 Stripe 麻煩度低很多，**特別適合台灣賣家賣全球用戶**。
+
+### 1. 註冊帳號
+
+- 網址：https://www.lemonsqueezy.com
+- 點右上角 「Sign up」，用 email + password 註冊
+- 免費註冊，沒申請門檻；註冊後直接拿到 dashboard
+
+### 2. 建立 Store
+
+進 dashboard 後第一步建 Store：
+- Store name：建議用產品名（譬如 `Taiwan Stock Scanner`）
+- Country：選 Taiwan（地址後面才填詳細）
+- Currency：建議 USD（給全球用戶最直覺；TWD 也可但 conversion 麻煩）
+
+### 3. KYC（身分驗證 + 收款資訊）— **重要**
+
+要先過這關才能正式收錢：
+- **個人 / 公司資料**：填台灣身分證 / 公司統編、地址、電話
+- **稅務資料**：台灣賣家通常勾「sole proprietor / individual」就好，他們會代收 VAT / sales tax
+- **收款方式**：
+  - PayPal（最快）
+  - Wise（推薦：手續費低、台灣銀行帳戶可直接收）
+  - Bank transfer（要填 SWIFT / IBAN，台灣銀行 ok）
+- **驗證文件**（KYC review，1-3 工作天）：
+  - 身分證正反面
+  - 銀行對帳單或 utility bill 證明地址
+  - 如果是公司：營業登記文件
+
+> 💡 Tip：如果 LemonSqueezy 拒絕，常見原因是地址不對應或文件模糊。重傳清晰的 PDF 通常 2 天內過。
+
+### 4. 建立 Product + Subscription Variant
+
+- Dashboard → Products → New Product
+- Type：Subscription
+- Name：譬如 `VIP 會員`
+- Pricing：
+  - Monthly: 譬如 USD 4.99 / 月
+  - Annual: 譬如 USD 39 / 年（給折扣）
+- 建立後拿到 **Product ID** 跟 **Variant ID**（每個 pricing 是一個 variant）
+
+### 5. 拿 API Key + Webhook Secret
+
+- Dashboard → Settings → API → Create API key
+  - Scope 選 read + write
+  - 複製 key（只會顯示一次！）
+- Dashboard → Settings → Webhooks → New webhook
+  - URL: `https://taiwan-stock-scanner.pages.dev/api/lemon/webhook`（之後寫 Cloudflare Pages Function 接）
+  - Events 勾：`subscription_created`, `subscription_updated`, `subscription_cancelled`, `subscription_expired`, `order_created`
+  - 複製 signing secret
+
+### 6. 串到 VipPanel（前端）
+
+- VipPanel 內每個 plan 按鈕呼叫：
+  ```ts
+  const checkoutUrl = `https://YOUR_STORE.lemonsqueezy.com/buy/VARIANT_ID`
+                    + `?checkout[email]=${encodeURIComponent(user.email)}`
+                    + `&checkout[custom][user_sub]=${user.sub}`
+  window.location.href = checkoutUrl
+  ```
+  （把 user.sub 塞 custom field，webhook 收到時用來 mapping 到 D1 user 表）
+
+### 7. 串到 Cloudflare Pages Functions（後端 webhook）
+
+- 在 `functions/api/lemon/webhook.ts` 新增 endpoint
+- 驗證 signature（用 webhook secret）
+- 收到 `subscription_created` / `subscription_updated` → 寫 D1 表 `users.vip_until = expires_at`
+- 收到 `subscription_cancelled` / `expired` → `vip_until = NULL`
+
+### 8. 其他須知
+
+- **手續費**：5% + 0.5 USD per transaction（含信用卡 + 平台費 + tax handling）
+- **withdrawal**：每月初自動匯到你選的帳戶（Wise 1-3 工作天到帳）
+- **試用期**：可以設 7 / 14 天 free trial，user 取消前不收費
+- **退款**：30 天內 self-service，賣家可在 dashboard 手動 refund
+
+### 替代方案（如果 Lemon Squeezy 不過 KYC）
+
+- **Paddle**：類似定位的 MoR，台灣賣家能用，UI 比 Lemon 復雜一點
+- **Stripe + 手動稅務**：自由度最高但要自己處理 VAT，不推
+- **TapPay / 綠界**（台灣本地）：只能收台灣用戶，國際用戶不行
 
 ---
 
