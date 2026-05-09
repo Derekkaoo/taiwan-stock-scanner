@@ -47,11 +47,28 @@ export function normalizeRow(raw: Record<string, unknown>): StockRow {
     companyProfile: parseCompanyProfile(raw.companyProfile),
     foreignBuyStreak: raw.foreignBuyStreak != null ? Number(raw.foreignBuyStreak) : undefined,
     trustBuyStreak:   raw.trustBuyStreak   != null ? Number(raw.trustBuyStreak)   : undefined,
+    institutionalHistory: parseInstitutionalHistory(raw.institutionalHistory),
     market:           raw.market === '上市' || raw.market === '上櫃' ? raw.market : undefined,
     industry:         typeof raw.industry === 'string' ? raw.industry : undefined,
     // archive 帶來的「最後一次入榜」日期（給 ghost row UI 顯示「資料 N 週前」）
     _lastSeenDate:    typeof raw._lastSeenDate === 'string' ? raw._lastSeenDate : undefined,
   }
+}
+
+function parseInstitutionalHistory(raw: unknown): StockRow['institutionalHistory'] {
+  if (!Array.isArray(raw)) return undefined
+  const out: { date: string; foreign: number; trust: number }[] = []
+  for (const item of raw) {
+    if (!item || typeof item !== 'object') continue
+    const r = item as Record<string, unknown>
+    const date = typeof r.date === 'string' ? r.date : ''
+    if (!date) continue
+    const foreign = r.foreign != null ? Number(r.foreign) : 0
+    const trust   = r.trust   != null ? Number(r.trust)   : 0
+    if (Number.isNaN(foreign) || Number.isNaN(trust)) continue
+    out.push({ date, foreign, trust })
+  }
+  return out.length > 0 ? out : undefined
 }
 
 function parseCompanyProfile(raw: unknown): StockRow['companyProfile'] {

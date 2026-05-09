@@ -122,6 +122,15 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
+      # ⭐ 健檢：跑完所有 fetch step 後驗證資料涵蓋率，不到 85% 推 Telegram alert
+      # continue-on-error: true → 不擋 commit，只是 alert
+      - name: 資料健檢（fail 時 Telegram alert）
+        continue-on-error: true
+        run: python scripts/verify_coverage.py --telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
       # commit 任何資料變動 → bot push 會觸發 deploy.yml 走 build + deploy 流程
       - name: Commit data updates
         run: |

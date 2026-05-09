@@ -18,38 +18,56 @@ from trading_calendar import expected_latest_trading_day as _expected_trading_da
 
 
 def _klines_are_fresh():
-    """檢查 klines.json 是否已有最新交易日的資料"""
+    """檢查 stocks.json 中所有股票都有最新交易日 bar 才算 fresh。
+
+    舊版只檢查第一支有效股票就 return True，導致：
+    - 如果 norway 加新股票 → 新股票沒 bar 但舊股票有 → smart-skip 跳過 → 新股票永遠抓不到 K 線
+    新版必須全部股票都到位才跳過。
+    """
     klines_path = DATA_DIR / "klines.json"
-    if not klines_path.exists():
+    stocks_path = DATA_DIR / "stocks.json"
+    if not klines_path.exists() or not stocks_path.exists():
         return False
     try:
         with open(klines_path, encoding="utf-8") as f:
             kl = json.load(f)
-        for bars in kl.values():
-            if not bars:
-                continue
-            last = bars[-1].get("date", "")
-            if not last:
-                continue
-            latest = None
-            for fmt in ("%Y/%m/%d", "%Y-%m-%d"):
-                try:
-                    latest = datetime.strptime(last, fmt).date()
-                    break
-                except ValueError:
-                    continue
-            if latest is None:
-                continue
-            expected = _expected_trading_day()
-            if latest >= expected:
-                logger.info("K 線已是最新（%s >= 預期 %s），跳過", latest, expected)
-                return True
-            logger.info("K 線過期（%s < 預期 %s），繼續更新", latest, expected)
-            return False
-        return False
+        with open(stocks_path, encoding="utf-8") as f:
+            stocks = json.load(f)
     except Exception as e:
-        logger.warning("讀 klines.json 失敗：%s，繼續更新", e)
+        logger.warning("讀 stocks.json / klines.json 失敗：%s，繼續更新", e)
         return False
+
+    expected = _expected_trading_day()
+
+    def parse_date(s):
+        for fmt in ("%Y/%m/%d", "%Y-%m-%d"):
+            try:
+                return datetime.strptime(s, fmt).date()
+            except ValueError:
+                continue
+        return None
+
+    missing_or_stale = 0
+    for s in stocks:
+        sid = s.get("id")
+        if not sid:
+            continue
+        bars = kl.get(sid, [])
+        if not bars:
+            missing_or_stale += 1
+            continue
+        last = bars[-1].get("date", "")
+        latest = parse_date(last) if last else None
+        if latest is None or latest < expected:
+            missing_or_stale += 1
+
+    if missing_or_stale == 0:
+        logger.info("K 線已是最新（%d 支全到 %s），跳過", len(stocks), expected)
+        return True
+
+    logger.info("K 線需要更新（%d/%d 支缺資料或過期），繼續抓取",
+                missing_or_stale, len(stocks))
+    return False
 
 
 def _split_klines_by_group(klines, stocks):

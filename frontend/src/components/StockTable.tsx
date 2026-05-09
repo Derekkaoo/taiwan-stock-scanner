@@ -3,6 +3,7 @@ import { RETURN_PERIOD_LABELS, TURNOVER_PERIOD_LABELS } from '../types'
 import { THEME_CSS_MAP, TAG_COLORS, getGroupCssClass } from '../constants/themeGroups'
 import { CandlestickSVG } from './CandlestickSVG'
 import { FundamentalsPanel } from './FundamentalsPanel'
+import { InstitutionalChart } from './InstitutionalChart'
 import { CompanyProfilePanel } from './CompanyProfilePanel'
 import { EntryAnalysisPanel } from './EntryAnalysisPanel'
 import { MAToggleBar } from './MAToggleBar'
@@ -404,6 +405,50 @@ export function StockTable({ stocks, sort, onSort, returnPeriod, turnoverPeriod,
                           <FundamentalsPanel fundamentals={stock.fundamentals} />
                         </div>
                       </div>
+
+                      {/* 外資 + 投信 90 日 bar chart（並排，欄寬對齊上排 K 線 + 基本面）*/}
+                      {stock.institutionalHistory && stock.institutionalHistory.length > 0 && (
+                        <div className="flex flex-col md:flex-row gap-3 md:gap-4 items-stretch mt-3"
+                             onClick={(e) => e.stopPropagation()}>
+                          <div className="w-full md:flex-1 md:min-w-0">
+                            <InstitutionalChart
+                              history={stock.institutionalHistory}
+                              series="foreign"
+                              streak={stock.foreignBuyStreak}
+                              vbWidth={600}
+                              vbHeight={130}
+                            />
+                          </div>
+                          {/* 分隔線跟上排同樣式 */}
+                          <div
+                            aria-hidden
+                            className="hidden md:block self-stretch"
+                            style={{
+                              width: 1,
+                              background: 'linear-gradient(to bottom, transparent, var(--color-border) 15%, var(--color-border) 85%, transparent)',
+                              flexShrink: 0,
+                            }}
+                          />
+                          <div
+                            aria-hidden
+                            className="block md:hidden w-full"
+                            style={{
+                              height: 1,
+                              background: 'linear-gradient(to right, transparent, var(--color-border) 15%, var(--color-border) 85%, transparent)',
+                            }}
+                          />
+                          <div className="w-full md:flex-1 md:min-w-0">
+                            <InstitutionalChart
+                              history={stock.institutionalHistory}
+                              series="trust"
+                              streak={stock.trustBuyStreak}
+                              vbWidth={600}
+                              vbHeight={130}
+                            />
+                          </div>
+                        </div>
+                      )}
+
                       {/* 進場分析（多頭觸發 + 4×3 策略對比）*/}
                       <div
                         aria-hidden
