@@ -1,7 +1,208 @@
-# Session Handoff — 2026-05-08 晚
+# Session Handoff — 2026-05-09 晚
 
-> 給下一個 Cowork session 用。先讀 `CLAUDE.md`（專案總覽），再讀這份（最近改動 + 待辦）。
-> 這份是 2026-05-08（手機 UI 大改造，已合回 master）的濃縮，下面保留 5/07、5/05、5/02 的歷史。
+> 給下一個 Cowork session 用。先讀 `CLAUDE.md`（專案總覽），再讀這份（最近改動 + 待辦 + retro）。
+> 5/9 內容超量（外資投信圖、Yahoo 主來源切換、K 線殘缺事故 retro），下面保留 5/8 起的歷史。
+
+---
+
+## 🔥 2026-05-09 完成的內容
+
+**主線進度**：
+1. 加 master 外資/投信圖表（90 日 bar chart，desktop 2x2 grid + mobile 上下兩排）
+2. fetch_financials.py 切換 Yahoo 主來源、FinMind fallback（避免 quota 撞牆）
+3. update_klines.py smart-skip bug 修復（避免新加股票永遠抓不到 K 線）
+4. 寫 verify_coverage.py 健檢工具
+5. K 線殘缺事故 retro + SOP 強化
+
+### 1. 外資/投信 90 日 bar chart
+
+新元件 `frontend/src/components/InstitutionalChart.tsx`（純 SVG，無 Chart.js 依賴）：
+- 90 日 bar chart，紅 = 買 / 綠 = 賣
+- Y 軸自動 scale (niceCeiling)
+- X 軸 5 個等距日期 label（首、1/4、1/2、3/4、尾）
+- Header 顯示 streak + N 日累積（紅綠隨方向）
+
+桌機 (`StockTable.tsx`) — 在 K 線+基本面那排下面加第二排，2x2 grid 對齊：
+```
+┌────────────┬─────────────┐
+│ K 線         │ 月營收/毛利等 │  ← 既有
+├────────────┼─────────────┤
+│ 外資 90 日  │ 投信 90 日   │  ← 新增
+└────────────┴─────────────┘
+```
+
+手機 (`MobileStockDetail.tsx`) — 在 FundamentalsPanel 下方上下排兩個 chart（不摺疊）。
+
+### 2. 後端：institutional 30 → 90 天 + stocks.json enrich
+
+`scripts/scrape_institutional.py`：
+- `KEEP_DAYS` / `LOOKBACK_DAYS` 30 → 90
+- `enrich_stocks_json()` 加寫 `institutionalHistory: [{date, foreign, trust}, ...]` 90 筆到 stocks.json
+
+但 Yahoo 實際只回 ~54 個交易日（不是頁面說的 100 天），所以實戰約 50-60 天歷史。FinMind 補上後可達 90 天。
+
+### 3. 前端型別 + 解析
+
+`types/index.ts` 加 `institutionalHistory?: { date, foreign, trust }[]`
+`hooks/useStocks.ts` 加 `parseInstitutionalHistory()` 容錯解析
+
+### 4. 🔥 fetch_financials.py 切 Yahoo 主來源
+
+**動機**：5/9 觸發雲端 cron 時 FinMind quota 撞 402，新加股票（譬如 6672）月營收只抓到 1 月 → 用戶看到只有 4 月 YoY bar。
+
+**改動**：
+- 新增 `fetch_yahoo_revenue_records(stock_id)` — 從 Yahoo TW finance 抓月營收歷史（無 quota，60 個月）
+- Yahoo 改 Next.js 後資料埋在 inline JSON，用 regex 抽：`"date":"2026/04","revenue":"410,725,118"`（注意 `/` 要 unescape）
+- run() 內 `need_rev` block：Yahoo 主、FinMind fallback
+- run() 內 `need_fin` block：scrape_yahoo_financials.fetch_yahoo_financials 主、FinMind fallback
+
+**結果**：384 支股票全跑 Yahoo，無 quota 撞牆，377 支有完整資料。
+
+### 5. 🔥 update_klines.py smart-skip bug 修復
+
+**Bug**：原 `_klines_are_fresh()` 只檢查 klines.json 第一支股票就 return True，導致：
+- norway 加新股票 → 新股票沒 bar、舊股票有 bar
+- smart-skip 以為「已最新」→ 跳過抓取
+- 新股票永遠拿不到 K 線
+
+**修法**：改成檢查 stocks.json 內**所有**股票都有最新 bar 才算 fresh：
+
+```python
+def _klines_are_fresh():
+    stocks = json.load(open(stocks_path, encoding='utf-8'))
+    kl = json.load(open(klines_path, encoding='utf-8'))
+    expected = _expected_trading_day()
+    missing_or_stale = 0
+    for s in stocks:
+        bars = kl.get(s["id"], [])
+        if not bars: missing_or_stale += 1; continue
+        last = parse_date(bars[-1].get("date", ""))
+        if last is None or last < expected:
+            missing_or_stale += 1
+    return missing_or_stale == 0
+```
+
+雲端 weekly-update.yml 不用改，因為 update_klines.py 內部 smart-skip 邏輯修好了會自動偵測。
+
+### 6. verify_coverage.py 健檢工具
+
+`scripts/verify_coverage.py`：一鍵檢查 stocks.json 內每支股票的 K 線、price、月營收、季財報、institutional 涵蓋率。push 後跑一次驗證部署狀態。
+
+```powershell
+python scripts/verify_coverage.py            # threshold 85%
+python scripts/verify_coverage.py --strict   # threshold 95%
+```
+
+非 0 exit code 表示有資料項目未達 threshold，給 CI / cron post-step 用。
+
+---
+
+## 🚨 5/9 K 線殘缺事故 — 完整 retro
+
+### 時間軸
+
+| 時間 | 事件 | 影響 |
+|---|---|---|
+| 11:50 | push `ba84ae7`（feat institutional）| ✅ 正常 |
+| 12:03 | 手動觸發雲端 workflow_dispatch | 雲端跑 full pipeline |
+| 12:30 | cloud commit `92b7187` push 上去 | ⚠️ K 線殘缺（256/384 沒抓到，因 smart-skip bug）|
+| 13:00 | user 看到網頁壞、回報 | |
+| 13:10 | 用 `git pull --rebase --autostash` | ❌ autostash apply 撞 conflict |
+| 13:15 | 用 `git checkout --theirs` 解 conflict | ❌ 化纖原料/時尚產業兩檔報錯（UD/UA 狀態），殘留 conflict marker |
+| 13:20 | commit 壞檔 push → JSON parse 炸 | ❌ 部署失敗，網頁完全空白 |
+| 13:30 | reset 回 `ba84ae7` + force push | ✅ 緊急恢復 |
+| 13:50-14:35 | 重跑 pipeline + force klines + force institutional + push | ✅ 完整恢復 |
+| 14:50-15:10 | 切 Yahoo 主來源 + 修 smart-skip + 健檢工具 | ✅ 永久 fix |
+
+### Root cause（三層）
+
+1. **`update_klines.py` smart-skip 只看第一支股票** — 新股票永遠抓不到 K 線（已修 ✅）
+2. **`git pull --rebase --autostash` + `--theirs` 解 stash 衝突** — 對 UA/UD 檔失敗，殘留 conflict marker，commit 後 JSON 壞
+3. **Pipeline 順序遺忘** — run_pipeline.py 重建 stocks.json 會清掉 institutional 欄位，必須最後再跑 scrape_institutional.py 補回
+
+---
+
+## 🛡️ 預防 SOP（**必讀**）
+
+### A. 本地修資料的標準流程（替代 `--autostash`）
+
+```powershell
+# 1. 確認 working tree clean
+git status
+
+# 2. ⭐ 先 pull 再跑 script（避免 stash 衝突，這是 5/9 最大教訓）
+git pull --rebase -X theirs
+
+# 3. 跑 data scripts（順序固定）
+python scripts/run_pipeline.py
+python scripts/update_klines.py        # 不用 --force，新 smart-skip 會自動偵測
+python scripts/scrape_institutional.py # ⭐ 必須最後跑，enrich institutional 欄位
+
+# 4. 健檢
+python scripts/verify_coverage.py
+
+# 5. add + commit + push
+git add backend/db/ frontend/public/data/
+git commit -m "..."
+git push
+# 撞 race → git pull --rebase -X theirs && git push
+```
+
+### B. 鐵律
+
+- ❌ **不用 `git pull --rebase --autostash`**（autostash apply 對新增/刪除檔卡住）
+- ❌ **不用 `git checkout --theirs`** 解 stash conflict（對 UA/UD 失敗）
+- ✅ **永遠先 pull 再跑 scripts**（不留 uncommitted 給 stash 處理）
+- ✅ **`-X theirs` 解 rebase conflict**（資料檔以新抓的為準，CLAUDE.md quirk #5 SOP）
+- ✅ **scrape_institutional.py 永遠最後跑**
+
+### C. 如果還是撞 stash 衝突
+
+```powershell
+git status --short    # 看 UU / UA / UD 各種衝突類型
+
+# UU（兩邊都改）→ git checkout --ours/--theirs
+# UA / UD（新增 / 刪除）→ 個別 git add / git rm
+
+# 全綠才 commit；不確定就最安全的退路：
+git rebase --abort
+git stash drop
+# 重新跑 script 從乾淨狀態開始
+```
+
+### D. Push 後驗證
+
+```powershell
+# 等 1-2 分鐘 deploy 完
+python scripts/verify_coverage.py
+
+# 或 curl 驗 deploy URL
+curl https://taiwan-stock-scanner.pages.dev/data/stocks.json -o nul
+```
+
+如果 fail → 立即 reset + force push，不要等 user 看到才回報。
+
+---
+
+## TODO / 開放項目（5/9 結束時）
+
+- [ ] **Lemon Squeezy / Polar / Paddle 申請被拒** — Polar 因「stock screening for investing」被拒、appeal 也駁回；Paddle / Lemon 還沒試。考慮 Stripe 直收（自己處理 VAT，TradingView / Finviz 模式）。
+- [ ] **觀察期**（5/10、5/11）：跑 verify_coverage.py 看雲端 cron 各項涵蓋率是否穩定 ≥ 95%
+- [ ] **修 fetch_financials.py 的 should_refresh_revenue throttle** — 對「新加股票」可能誤判跳過（task #36 衍生）
+- [ ] **Yahoo 月營收 fetcher unit test** — 今天 Yahoo HTML 改一次（table → inline JSON），未來 Yahoo 又改我們會炸
+- [ ] **post-deploy 驗證自動化**（task #39）— GitHub Actions 加 step 跑 verify_coverage.py，fail 自動 alert
+
+---
+
+## Lemon Squeezy 申請流程（給未來 session 參考）
+
+**最新狀態**（5/9）：
+- ❌ Polar：被拒「stock screening for investing 不在 acceptable use」+ appeal 駁回
+- ⏸️ Lemon Squeezy：申請過程被 rate limit 卡住、未完成
+- ⏸️ Paddle：要 KYB，當天沒走完
+- 🔮 **下一步**：直接 Stripe（不是 MoR，要自己處理 VAT，但 TradingView / Finviz 都這樣做）
+
+**Lemon Squeezy 是 Stripe 在 2024 年併購的子品牌**，policy 跟 Stripe 接近 → 應該能過 stock screening。下次重試時用 `holder-tracker-tw` / `twstockscanner` 等獨特 store URL（不要 `taiwan-stock-scanner`，可能被佔用）。
 
 ---
 
