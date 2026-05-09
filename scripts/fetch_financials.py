@@ -203,17 +203,34 @@ def expected_latest_revenue_month(today):
     return f"{prev_y:04d}-{prev_m:02d}"
 
 
+def is_reporting_month(today):
+    """季報公告期當月：3 月（年報截止 3/31）、5 月（Q1 截止 5/15）、
+    8 月（Q2 截止 8/14）、11 月（Q3 截止 11/14）。
+    這幾個月部分公司會提前公告，所以邏輯上「報表月當月」就期待該季資料。
+    """
+    return today.month in (3, 5, 8, 11)
+
+
 def expected_latest_quarter(today):
-    """今天可以預期拿到的最新已公告季財報"""
-    y, m, d = today.year, today.month, today.day
-    if m > 11 or (m == 11 and d >= 15):
-        return f"{y}Q3"
-    elif m > 8 or (m == 8 and d >= 15):
-        return f"{y}Q2"
-    elif m > 5 or (m == 5 and d >= 16):
-        return f"{y}Q1"
-    else:
-        return f"{y-1}Q4"
+    """今天可以預期拿到的最新已公告季財報。
+
+    報表月當月（3/5/8/11）就期待該季 — 提前公告的公司會抓到，沒公告的下次再試。
+    其他月份取最近一個已過官方截止日的季別。
+    """
+    y, m = today.year, today.month
+
+    # 報表月當月：直接期待該季（提前公告的公司有資料）
+    if   m == 3:  return f"{y-1}Q4"   # 3 月：去年年報
+    elif m == 5:  return f"{y}Q1"     # 5 月：當年 Q1
+    elif m == 8:  return f"{y}Q2"     # 8 月：當年 Q2
+    elif m == 11: return f"{y}Q3"     # 11 月：當年 Q3
+
+    # 非報表月：取最近一個官方截止後的季別
+    if   m == 4:                          return f"{y-1}Q4"   # 4 月（年報截止 3/31 後）
+    elif m == 6 or m == 7:                return f"{y}Q1"     # 6-7 月（Q1 截止 5/15 後）
+    elif m == 9 or m == 10:               return f"{y}Q2"     # 9-10 月（Q2 截止 8/14 後）
+    elif m == 12:                         return f"{y}Q3"     # 12 月（Q3 截止 11/14 後）
+    else:                                 return f"{y-1}Q3"   # 1-2 月：去年 Q3 還是最後完整公告
 
 
 _RETRY_THROTTLE_SEC = 6 * 3600  # 6 小時內已嘗試過抓「不夠新」資料就跳過
@@ -246,8 +263,11 @@ def should_refresh_financials(entry, today):
         return True
     last = arr[-1].get("quarter", "")
     if last >= expected_latest_quarter(today):
-        return False
-    # throttle 跟 revenue 同邏輯
+        return False  # 已是預期 → 跳過
+    # 報表月（3/5/8/11）：忽略 throttle，每次 cron run 都嘗試抓（拿到新資料才會推進 last 跳出迴圈）
+    if is_reporting_month(today):
+        return True
+    # 非報表月：throttle 6 小時（FinMind 不太可能有新資料）
     last_attempt = entry.get("_last_fin_attempt_ts", 0)
     if time.time() - last_attempt < _RETRY_THROTTLE_SEC:
         return False
