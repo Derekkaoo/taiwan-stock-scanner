@@ -201,7 +201,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 11.5
+          "yoy": 12.39
         },
         {
           "quarter": "2025Q1",
@@ -217,7 +217,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 31.75
+          "yoy": 30.71
         }
       ],
       "grossMargin": [
@@ -303,7 +303,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 1.26
+          "value": 1.27
         },
         {
           "quarter": "2025Q1",
@@ -323,7 +323,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286692,
-      "_last_fin_attempt_ts": 1778287519
+      "_last_fin_attempt_ts": 1778297173
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -525,7 +525,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 12.87
+          "yoy": 12.32
         },
         {
           "quarter": "2025Q1",
@@ -647,7 +647,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245706,
-      "_last_fin_attempt_ts": 1778287480
+      "_last_fin_attempt_ts": 1778297243
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -978,7 +978,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245772,
-      "_last_fin_attempt_ts": 1778287422
+      "_last_fin_attempt_ts": 1778297283
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -1346,7 +1346,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778159327,
-      "_last_fin_attempt_ts": 1778287461
+      "_last_fin_attempt_ts": 1778297252
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -1669,7 +1669,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286846,
-      "_last_fin_attempt_ts": 1778287440
+      "_last_fin_attempt_ts": 1778297208
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -1988,7 +1988,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245778,
-      "_last_fin_attempt_ts": 1778287457
+      "_last_fin_attempt_ts": 1778297326
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -2309,7 +2309,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286907,
-      "_last_fin_attempt_ts": 1778287443
+      "_last_fin_attempt_ts": 1778297287
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -2630,7 +2630,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778072944,
-      "_last_fin_attempt_ts": 1778287468
+      "_last_fin_attempt_ts": 1778297262
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -2947,7 +2947,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286979,
-      "_last_fin_attempt_ts": 1778287536
+      "_last_fin_attempt_ts": 1778297257
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -4318,7 +4318,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286687,
-      "_last_fin_attempt_ts": 1778287397
+      "_last_fin_attempt_ts": 1778297276
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -4444,74 +4444,8 @@
           "yoy": 25.05
         }
       ],
-      "grossMarginYoY": [
-        {
-          "quarter": "2024Q1",
-          "yoy": 21.91
-        },
-        {
-          "quarter": "2024Q2",
-          "yoy": 10.16
-        },
-        {
-          "quarter": "2024Q3",
-          "yoy": 18.32
-        },
-        {
-          "quarter": "2024Q4",
-          "yoy": 50.29
-        },
-        {
-          "quarter": "2025Q1",
-          "yoy": 19.12
-        },
-        {
-          "quarter": "2025Q2",
-          "yoy": -42.11
-        },
-        {
-          "quarter": "2025Q3",
-          "yoy": 55.41
-        },
-        {
-          "quarter": "2025Q4",
-          "yoy": 36.25
-        }
-      ],
-      "operatingMarginYoY": [
-        {
-          "quarter": "2024Q1",
-          "yoy": 118.18
-        },
-        {
-          "quarter": "2024Q2",
-          "yoy": 29.57
-        },
-        {
-          "quarter": "2024Q3",
-          "yoy": 30.23
-        },
-        {
-          "quarter": "2024Q4",
-          "yoy": 438.23
-        },
-        {
-          "quarter": "2025Q1",
-          "yoy": 23.82
-        },
-        {
-          "quarter": "2025Q2",
-          "yoy": -135.44
-        },
-        {
-          "quarter": "2025Q3",
-          "yoy": 119.82
-        },
-        {
-          "quarter": "2025Q4",
-          "yoy": 31.02
-        }
-      ],
+      "grossMarginYoY": [],
+      "operatingMarginYoY": [],
       "epsYoY": [
         {
           "quarter": "2024Q1",
@@ -4546,74 +4480,8 @@
           "yoy": -4.35
         }
       ],
-      "grossMargin": [
-        {
-          "quarter": "2024Q1",
-          "value": 16.38
-        },
-        {
-          "quarter": "2024Q2",
-          "value": 17.4
-        },
-        {
-          "quarter": "2024Q3",
-          "value": 17.45
-        },
-        {
-          "quarter": "2024Q4",
-          "value": 16.73
-        },
-        {
-          "quarter": "2025Q1",
-          "value": 19.51
-        },
-        {
-          "quarter": "2025Q2",
-          "value": 10.07
-        },
-        {
-          "quarter": "2025Q3",
-          "value": 27.12
-        },
-        {
-          "quarter": "2025Q4",
-          "value": 22.79
-        }
-      ],
-      "operatingMargin": [
-        {
-          "quarter": "2024Q1",
-          "value": 6.35
-        },
-        {
-          "quarter": "2024Q2",
-          "value": 7.24
-        },
-        {
-          "quarter": "2024Q3",
-          "value": 6.84
-        },
-        {
-          "quarter": "2024Q4",
-          "value": 6.61
-        },
-        {
-          "quarter": "2025Q1",
-          "value": 7.86
-        },
-        {
-          "quarter": "2025Q2",
-          "value": -2.57
-        },
-        {
-          "quarter": "2025Q3",
-          "value": 15.04
-        },
-        {
-          "quarter": "2025Q4",
-          "value": 8.66
-        }
-      ],
+      "grossMargin": [],
+      "operatingMargin": [],
       "eps": [
         {
           "quarter": "2024Q1",
@@ -4649,7 +4517,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245787,
-      "_last_fin_attempt_ts": 1778287538
+      "_last_fin_attempt_ts": 1778297202
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -5178,7 +5046,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -101.26
+          "yoy": -100.84
         },
         {
           "quarter": "2025Q1",
@@ -5194,7 +5062,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 2566.67
+          "yoy": 3800.0
         }
       ],
       "grossMargin": [
@@ -5280,7 +5148,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": -0.03
+          "value": -0.02
         },
         {
           "quarter": "2025Q1",
@@ -5300,7 +5168,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245810,
-      "_last_fin_attempt_ts": 1778287527
+      "_last_fin_attempt_ts": 1778297220
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -5615,7 +5483,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286683,
-      "_last_fin_attempt_ts": 1778287469
+      "_last_fin_attempt_ts": 1778297324
     },
     "companyProfile": {
       "business": "加工絲、追撚絲、胚布、成品布、染整等其他業務",
@@ -5821,10 +5689,6 @@
       ],
       "epsYoY": [
         {
-          "quarter": "2023Q4",
-          "yoy": 96.55
-        },
-        {
           "quarter": "2024Q1",
           "yoy": 124.49
         },
@@ -5838,7 +5702,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 800.0
+          "yoy": 700.0
         },
         {
           "quarter": "2025Q1",
@@ -5850,7 +5714,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 385.71
+          "yoy": 466.67
         }
       ],
       "grossMargin": [
@@ -5936,7 +5800,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.07
+          "value": 0.06
         },
         {
           "quarter": "2025Q1",
@@ -5956,7 +5820,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286916,
-      "_last_fin_attempt_ts": 1778287471
+      "_last_fin_attempt_ts": 1778297224
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -6281,7 +6145,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245734,
-      "_last_fin_attempt_ts": 1778287449
+      "_last_fin_attempt_ts": 1778297328
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -6600,7 +6464,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286686,
-      "_last_fin_attempt_ts": 1778287411
+      "_last_fin_attempt_ts": 1778297329
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -7250,7 +7114,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286807,
-      "_last_fin_attempt_ts": 1778287406
+      "_last_fin_attempt_ts": 1778297227
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -7569,7 +7433,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286898,
-      "_last_fin_attempt_ts": 1778287488
+      "_last_fin_attempt_ts": 1778297171
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -8205,7 +8069,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286702,
-      "_last_fin_attempt_ts": 1778287446
+      "_last_fin_attempt_ts": 1778297197
     },
     "companyProfile": {
       "business": "1.資訊週邊產品,包括:NB金屬機殼及鍵盤,印表機及LCD之機構件等。\r\n2.消費性電子產品,包括家庭劇院,環繞式音響及DVD之機構件等。\r\n3.上述產品之模具開發。",
@@ -8548,7 +8412,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245783,
-      "_last_fin_attempt_ts": 1778287451
+      "_last_fin_attempt_ts": 1778297248
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -8865,7 +8729,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778159189,
-      "_last_fin_attempt_ts": 1778287357
+      "_last_fin_attempt_ts": 1778297270
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -9184,7 +9048,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286947,
-      "_last_fin_attempt_ts": 1778287376
+      "_last_fin_attempt_ts": 1778297317
     },
     "companyProfile": {
       "business": "電子零組件製造業\r\n設計、研發、生產CCD自動對位曝光機",
@@ -9710,7 +9574,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 17400.0
+          "yoy": 4275.0
         },
         {
           "quarter": "2025Q1",
@@ -9726,7 +9590,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -220.57
+          "yoy": -221.14
         }
       ],
       "grossMargin": [
@@ -9828,11 +9692,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": -2.11
+          "value": -2.12
         }
       ],
       "_last_rev_attempt_ts": 1778286869,
-      "_last_fin_attempt_ts": 1778287492
+      "_last_fin_attempt_ts": 1778297184
     },
     "companyProfile": {
       "business": "健身器材",
@@ -10170,7 +10034,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778048422,
-      "_last_fin_attempt_ts": 1778287428
+      "_last_fin_attempt_ts": 1778297330
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -10487,7 +10351,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778159258,
-      "_last_fin_attempt_ts": 1778287368
+      "_last_fin_attempt_ts": 1778297288
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -11010,7 +10874,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 102.63
+          "yoy": 97.44
         },
         {
           "quarter": "2025Q1",
@@ -11132,7 +10996,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286678,
-      "_last_fin_attempt_ts": 1778287541
+      "_last_fin_attempt_ts": 1778297188
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -11458,7 +11322,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778159413,
-      "_last_fin_attempt_ts": 1778287369
+      "_last_fin_attempt_ts": 1778297254
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -11662,7 +11526,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 187.5
+          "yoy": 166.67
         },
         {
           "quarter": "2025Q1",
@@ -11678,7 +11542,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -85.71
+          "yoy": -83.33
         }
       ],
       "grossMargin": [
@@ -11764,7 +11628,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.07
+          "value": 0.06
         },
         {
           "quarter": "2025Q1",
@@ -11784,7 +11648,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218825,
-      "_last_fin_attempt_ts": 1778287485
+      "_last_fin_attempt_ts": 1778297315
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -12006,7 +11870,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 8.57
+          "yoy": 11.76
         },
         {
           "quarter": "2025Q1",
@@ -12128,7 +11992,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286920,
-      "_last_fin_attempt_ts": 1778287496
+      "_last_fin_attempt_ts": 1778297183
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -12791,7 +12655,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286872,
-      "_last_fin_attempt_ts": 1778287413
+      "_last_fin_attempt_ts": 1778297269
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -13108,7 +12972,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778159442,
-      "_last_fin_attempt_ts": 1778287437
+      "_last_fin_attempt_ts": 1778297226
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -14080,7 +13944,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245707,
-      "_last_fin_attempt_ts": 1778287424
+      "_last_fin_attempt_ts": 1778297229
     },
     "companyProfile": {
       "business": "螺絲\r\n球化線材\r\n機械零件",
@@ -14291,7 +14155,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 15.22
+          "yoy": 13.04
         },
         {
           "quarter": "2025Q1",
@@ -14307,7 +14171,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -10.26
+          "yoy": -12.5
         }
       ],
       "grossMargin": [
@@ -14393,7 +14257,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": -0.39
+          "value": -0.4
         },
         {
           "quarter": "2025Q1",
@@ -14409,11 +14273,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": -0.43
+          "value": -0.45
         }
       ],
       "_last_rev_attempt_ts": 1778245625,
-      "_last_fin_attempt_ts": 1778287533
+      "_last_fin_attempt_ts": 1778297213
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -14746,7 +14610,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245610,
-      "_last_fin_attempt_ts": 1778287466
+      "_last_fin_attempt_ts": 1778297197
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -15917,7 +15781,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -1.92
+          "yoy": -3.85
         },
         {
           "quarter": "2025Q1",
@@ -15933,7 +15797,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 120.75
+          "yoy": 120.37
         }
       ],
       "grossMargin": [
@@ -16019,7 +15883,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": -0.53
+          "value": -0.54
         },
         {
           "quarter": "2025Q1",
@@ -16039,7 +15903,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286746,
-      "_last_fin_attempt_ts": 1778287537
+      "_last_fin_attempt_ts": 1778297261
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -16260,7 +16124,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 400.0
+          "yoy": 66.67
         },
         {
           "quarter": "2025Q1",
@@ -16276,7 +16140,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 60.0
+          "yoy": 50.0
         }
       ],
       "grossMargin": [
@@ -16378,11 +16242,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.16
+          "value": 0.15
         }
       ],
       "_last_rev_attempt_ts": 1778245756,
-      "_last_fin_attempt_ts": 1778287511
+      "_last_fin_attempt_ts": 1778297265
     },
     "companyProfile": {
       "business": "生產銷售橡膠皮\r\n生產銷售塑膠皮\r\n生產銷售乳膠皮",
@@ -16608,7 +16472,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -49.56
+          "yoy": -46.3
         },
         {
           "quarter": "2025Q1",
@@ -16624,7 +16488,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -71.93
+          "yoy": -72.41
         }
       ],
       "grossMargin": [
@@ -16710,7 +16574,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.57
+          "value": 0.58
         },
         {
           "quarter": "2025Q1",
@@ -16730,7 +16594,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286800,
-      "_last_fin_attempt_ts": 1778287513
+      "_last_fin_attempt_ts": 1778297241
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -17049,7 +16913,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778072970,
-      "_last_fin_attempt_ts": 1778287432
+      "_last_fin_attempt_ts": 1778297275
     },
     "companyProfile": {
       "business": "汽車及其零件製造\r\n汽、機車零件配備批發\r\n汽、機車零件配備零售",
@@ -17399,7 +17263,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286754,
-      "_last_fin_attempt_ts": 1778287435
+      "_last_fin_attempt_ts": 1778297283
     },
     "companyProfile": {
       "business": "精密金屬零件之機械加工、製造及買賣",
@@ -18043,7 +17907,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218954,
-      "_last_fin_attempt_ts": 1778287466
+      "_last_fin_attempt_ts": 1778297268
     },
     "companyProfile": {
       "business": "汽車鈑金模具",
@@ -19190,7 +19054,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778048376,
-      "_last_fin_attempt_ts": 1778287392
+      "_last_fin_attempt_ts": 1778297179
     },
     "companyProfile": {
       "business": "電腦系統設備及其週邊之連接器等\r\n線纜組件及殼體,基座之開發、設計、製造及銷售等\r\n精密模具之製造及銷售等",
@@ -19529,7 +19393,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218857,
-      "_last_fin_attempt_ts": 1778287415
+      "_last_fin_attempt_ts": 1778297313
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -19855,7 +19719,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218980,
-      "_last_fin_attempt_ts": 1778287364
+      "_last_fin_attempt_ts": 1778297211
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -20185,7 +20049,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286826,
-      "_last_fin_attempt_ts": 1778287450
+      "_last_fin_attempt_ts": 1778297298
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -20819,7 +20683,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286684,
-      "_last_fin_attempt_ts": 1778287424
+      "_last_fin_attempt_ts": 1778297189
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -21469,7 +21333,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245713,
-      "_last_fin_attempt_ts": 1778287450
+      "_last_fin_attempt_ts": 1778297218
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -21792,7 +21656,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778135037,
-      "_last_fin_attempt_ts": 1778287439
+      "_last_fin_attempt_ts": 1778297302
     },
     "companyProfile": {
       "business": "筆記型電腦\r\n伺服器",
@@ -22135,7 +21999,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778159330,
-      "_last_fin_attempt_ts": 1778287409
+      "_last_fin_attempt_ts": 1778297316
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -22463,7 +22327,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778072942,
-      "_last_fin_attempt_ts": 1778287416
+      "_last_fin_attempt_ts": 1778297312
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -23097,7 +22961,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245674,
-      "_last_fin_attempt_ts": 1778287452
+      "_last_fin_attempt_ts": 1778297200
     },
     "companyProfile": {
       "business": "雙層、多層印刷電路板之製造加工及買賣業務。\r\n各種電腦、電子、通訊、資訊產品及其週邊設備與電子零件、加工。",
@@ -23431,7 +23295,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245616,
-      "_last_fin_attempt_ts": 1778287398
+      "_last_fin_attempt_ts": 1778297264
     },
     "companyProfile": {
       "business": "準系統、工業電腦及其週邊設備開發製造及買賣業務等.",
@@ -23764,7 +23628,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286707,
-      "_last_fin_attempt_ts": 1778287419
+      "_last_fin_attempt_ts": 1778297223
     },
     "companyProfile": {
       "business": "導電銲帶之研發、製造及銷售\r\n太陽能電廠工程服務、太陽能電廠發電及售電",
@@ -24421,7 +24285,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778135126,
-      "_last_fin_attempt_ts": 1778287456
+      "_last_fin_attempt_ts": 1778297196
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -24618,7 +24482,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -50.0
+          "yoy": -550.0
         },
         {
           "quarter": "2025Q1",
@@ -24634,7 +24498,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 1133.33
+          "yoy": 334.62
         }
       ],
       "grossMargin": [
@@ -24720,7 +24584,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": -0.06
+          "value": -0.26
         },
         {
           "quarter": "2025Q1",
@@ -24736,11 +24600,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.62
+          "value": 0.61
         }
       ],
       "_last_rev_attempt_ts": 1778048350,
-      "_last_fin_attempt_ts": 1778287517
+      "_last_fin_attempt_ts": 1778297210
     },
     "companyProfile": {
       "business": "電腦系統設備及多媒體相關產品之研發與銷售",
@@ -25288,7 +25152,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -19.48
+          "yoy": -18.18
         }
       ],
       "grossMargin": [
@@ -25390,11 +25254,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.62
+          "value": 0.63
         }
       ],
       "_last_rev_attempt_ts": 1778245722,
-      "_last_fin_attempt_ts": 1778287505
+      "_last_fin_attempt_ts": 1778297193
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -26053,7 +25917,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286681,
-      "_last_fin_attempt_ts": 1778287361
+      "_last_fin_attempt_ts": 1778297281
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -26370,7 +26234,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245751,
-      "_last_fin_attempt_ts": 1778287461
+      "_last_fin_attempt_ts": 1778297310
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -26913,7 +26777,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -7.48
+          "yoy": -7.55
         },
         {
           "quarter": "2025Q1",
@@ -26929,7 +26793,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -3.74
+          "yoy": -3.61
         }
       ],
       "grossMargin": [
@@ -27015,7 +26879,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 14.96
+          "value": 14.94
         },
         {
           "quarter": "2025Q1",
@@ -27035,7 +26899,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286934,
-      "_last_fin_attempt_ts": 1778287484
+      "_last_fin_attempt_ts": 1778297295
     },
     "companyProfile": {
       "business": "多媒體IC 、電腦週邊IC、高階消費性IC、其他特殊應用IC",
@@ -27688,7 +27552,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286980,
-      "_last_fin_attempt_ts": 1778287448
+      "_last_fin_attempt_ts": 1778297321
     },
     "companyProfile": {
       "business": "全像術及光電相關產品",
@@ -28580,7 +28444,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -13.33
+          "yoy": -18.75
         },
         {
           "quarter": "2025Q1",
@@ -28702,7 +28566,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245613,
-      "_last_fin_attempt_ts": 1778287543
+      "_last_fin_attempt_ts": 1778297298
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -29347,7 +29211,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286950,
-      "_last_fin_attempt_ts": 1778287387
+      "_last_fin_attempt_ts": 1778297255
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -29678,7 +29542,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778048542,
-      "_last_fin_attempt_ts": 1778287441
+      "_last_fin_attempt_ts": 1778297266
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -30004,7 +29868,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245723,
-      "_last_fin_attempt_ts": 1778287421
+      "_last_fin_attempt_ts": 1778297174
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -30327,7 +30191,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778072804,
-      "_last_fin_attempt_ts": 1778287364
+      "_last_fin_attempt_ts": 1778297306
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -30646,7 +30510,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286933,
-      "_last_fin_attempt_ts": 1778287365
+      "_last_fin_attempt_ts": 1778297175
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -30972,7 +30836,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286830,
-      "_last_fin_attempt_ts": 1778287405
+      "_last_fin_attempt_ts": 1778297234
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -31291,7 +31155,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286913,
-      "_last_fin_attempt_ts": 1778287391
+      "_last_fin_attempt_ts": 1778297231
     },
     "companyProfile": {
       "business": "土木工程：承辦各種道路.橋樑.隧道.運河等土木工程\r\n建築工程：承辦各種辦公大樓.住宅.學校.廠房.醫院.運動館等工程\r\n工廠工程：核能電廠及各種工廠之建廠工程",
@@ -31622,7 +31486,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778159377,
-      "_last_fin_attempt_ts": 1778287468
+      "_last_fin_attempt_ts": 1778297253
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -32588,7 +32452,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286740,
-      "_last_fin_attempt_ts": 1778287401
+      "_last_fin_attempt_ts": 1778297249
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -33236,7 +33100,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286925,
-      "_last_fin_attempt_ts": 1778287523
+      "_last_fin_attempt_ts": 1778297177
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -33553,7 +33417,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286964,
-      "_last_fin_attempt_ts": 1778287362
+      "_last_fin_attempt_ts": 1778297293
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -33875,7 +33739,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286772,
-      "_last_fin_attempt_ts": 1778287445
+      "_last_fin_attempt_ts": 1778297258
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -34388,10 +34252,6 @@
       ],
       "epsYoY": [
         {
-          "quarter": "2023Q4",
-          "yoy": 73.68
-        },
-        {
           "quarter": "2024Q1",
           "yoy": 100.0
         },
@@ -34523,7 +34383,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286930,
-      "_last_fin_attempt_ts": 1778287507
+      "_last_fin_attempt_ts": 1778297170
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -34849,7 +34709,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286836,
-      "_last_fin_attempt_ts": 1778287460
+      "_last_fin_attempt_ts": 1778297304
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -34961,40 +34821,7 @@
           "yoy": 35.86
         }
       ],
-      "grossMarginYoY": [
-        {
-          "quarter": "2024Q1",
-          "yoy": 19.93
-        },
-        {
-          "quarter": "2024Q2",
-          "yoy": -4.2
-        },
-        {
-          "quarter": "2024Q3",
-          "yoy": -15.17
-        },
-        {
-          "quarter": "2024Q4",
-          "yoy": 3.83
-        },
-        {
-          "quarter": "2025Q1",
-          "yoy": -4.03
-        },
-        {
-          "quarter": "2025Q2",
-          "yoy": 6.74
-        },
-        {
-          "quarter": "2025Q3",
-          "yoy": 21.28
-        },
-        {
-          "quarter": "2025Q4",
-          "yoy": 26.62
-        }
-      ],
+      "grossMarginYoY": [],
       "operatingMarginYoY": [
         {
           "quarter": "2024Q1",
@@ -35056,47 +34883,14 @@
         },
         {
           "quarter": "2025Q3",
-          "yoy": 34.57
+          "yoy": 46.91
         },
         {
           "quarter": "2025Q4",
-          "yoy": 102.08
+          "yoy": 141.67
         }
       ],
-      "grossMargin": [
-        {
-          "quarter": "2024Q1",
-          "value": 46.76
-        },
-        {
-          "quarter": "2024Q2",
-          "value": 39.1
-        },
-        {
-          "quarter": "2024Q3",
-          "value": 36.97
-        },
-        {
-          "quarter": "2024Q4",
-          "value": 34.26
-        },
-        {
-          "quarter": "2025Q1",
-          "value": 44.87
-        },
-        {
-          "quarter": "2025Q2",
-          "value": 41.73
-        },
-        {
-          "quarter": "2025Q3",
-          "value": 44.84
-        },
-        {
-          "quarter": "2025Q4",
-          "value": 43.38
-        }
-      ],
+      "grossMargin": [],
       "operatingMargin": [
         {
           "quarter": "2024Q1",
@@ -35158,15 +34952,15 @@
         },
         {
           "quarter": "2025Q3",
-          "value": 1.09
+          "value": 1.19
         },
         {
           "quarter": "2025Q4",
-          "value": 0.97
+          "value": 1.16
         }
       ],
       "_last_rev_attempt_ts": 1778286768,
-      "_last_fin_attempt_ts": 1778287476
+      "_last_fin_attempt_ts": 1778297301
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -35421,7 +35215,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286798,
-      "_last_fin_attempt_ts": 1778287432
+      "_last_fin_attempt_ts": 1778297239
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -35606,7 +35400,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286887,
-      "_last_fin_attempt_ts": 1778287382
+      "_last_fin_attempt_ts": 1778297251
     },
     "companyProfile": {
       "business": "承銷有價證券 自行買賣有價證券 受託買賣有價證券\r\n股務代理 有價證券融資融券業務 期貨業務輔助 期貨自營\r\n其它經證期會核准之有關證券業務",
@@ -35867,7 +35661,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286765,
-      "_last_fin_attempt_ts": 1778287437
+      "_last_fin_attempt_ts": 1778297261
     },
     "companyProfile": {
       "business": "經營人身保險業務",
@@ -36009,74 +35803,8 @@
           "yoy": -57.44
         }
       ],
-      "grossMarginYoY": [
-        {
-          "quarter": "2024Q1",
-          "yoy": -37.9
-        },
-        {
-          "quarter": "2024Q2",
-          "yoy": 16.99
-        },
-        {
-          "quarter": "2024Q3",
-          "yoy": 3.84
-        },
-        {
-          "quarter": "2024Q4",
-          "yoy": -56.0
-        },
-        {
-          "quarter": "2025Q1",
-          "yoy": 8.06
-        },
-        {
-          "quarter": "2025Q2",
-          "yoy": 803.88
-        },
-        {
-          "quarter": "2025Q3",
-          "yoy": -44.99
-        },
-        {
-          "quarter": "2025Q4",
-          "yoy": -30.61
-        }
-      ],
-      "operatingMarginYoY": [
-        {
-          "quarter": "2024Q1",
-          "yoy": -10.37
-        },
-        {
-          "quarter": "2024Q2",
-          "yoy": 31.43
-        },
-        {
-          "quarter": "2024Q3",
-          "yoy": 15.36
-        },
-        {
-          "quarter": "2024Q4",
-          "yoy": 213.8
-        },
-        {
-          "quarter": "2025Q1",
-          "yoy": 20.66
-        },
-        {
-          "quarter": "2025Q2",
-          "yoy": 239.81
-        },
-        {
-          "quarter": "2025Q3",
-          "yoy": -46.54
-        },
-        {
-          "quarter": "2025Q4",
-          "yoy": -34.78
-        }
-      ],
+      "grossMarginYoY": [],
+      "operatingMarginYoY": [],
       "epsYoY": [
         {
           "quarter": "2024Q1",
@@ -36088,7 +35816,7 @@
         },
         {
           "quarter": "2024Q3",
-          "yoy": 53.4
+          "yoy": 50.0
         },
         {
           "quarter": "2024Q4",
@@ -36104,81 +35832,15 @@
         },
         {
           "quarter": "2025Q3",
-          "yoy": -3.75
+          "yoy": 3.79
         },
         {
           "quarter": "2025Q4",
           "yoy": -0.93
         }
       ],
-      "grossMargin": [
-        {
-          "quarter": "2024Q1",
-          "value": 62.74
-        },
-        {
-          "quarter": "2024Q2",
-          "value": 90.89
-        },
-        {
-          "quarter": "2024Q3",
-          "value": 100.26
-        },
-        {
-          "quarter": "2024Q4",
-          "value": 60.82
-        },
-        {
-          "quarter": "2025Q1",
-          "value": 67.8
-        },
-        {
-          "quarter": "2025Q2",
-          "value": 821.56
-        },
-        {
-          "quarter": "2025Q3",
-          "value": 55.15
-        },
-        {
-          "quarter": "2025Q4",
-          "value": 42.21
-        }
-      ],
-      "operatingMargin": [
-        {
-          "quarter": "2024Q1",
-          "value": 39.23
-        },
-        {
-          "quarter": "2024Q2",
-          "value": 64.34
-        },
-        {
-          "quarter": "2024Q3",
-          "value": 67.32
-        },
-        {
-          "quarter": "2024Q4",
-          "value": 34.44
-        },
-        {
-          "quarter": "2025Q1",
-          "value": 47.34
-        },
-        {
-          "quarter": "2025Q2",
-          "value": 218.62
-        },
-        {
-          "quarter": "2025Q3",
-          "value": 35.99
-        },
-        {
-          "quarter": "2025Q4",
-          "value": 22.46
-        }
-      ],
+      "grossMargin": [],
+      "operatingMargin": [],
       "eps": [
         {
           "quarter": "2024Q1",
@@ -36190,7 +35852,7 @@
         },
         {
           "quarter": "2024Q3",
-          "value": 2.93
+          "value": 2.64
         },
         {
           "quarter": "2024Q4",
@@ -36206,7 +35868,7 @@
         },
         {
           "quarter": "2025Q3",
-          "value": 2.82
+          "value": 2.74
         },
         {
           "quarter": "2025Q4",
@@ -36214,7 +35876,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286910,
-      "_last_fin_attempt_ts": 1778287472
+      "_last_fin_attempt_ts": 1778297318
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -36342,74 +36004,8 @@
           "yoy": -37.94
         }
       ],
-      "grossMarginYoY": [
-        {
-          "quarter": "2024Q1",
-          "yoy": 30.79
-        },
-        {
-          "quarter": "2024Q2",
-          "yoy": 44.69
-        },
-        {
-          "quarter": "2024Q3",
-          "yoy": -3.77
-        },
-        {
-          "quarter": "2024Q4",
-          "yoy": 97.74
-        },
-        {
-          "quarter": "2025Q1",
-          "yoy": 4.09
-        },
-        {
-          "quarter": "2025Q2",
-          "yoy": 99.66
-        },
-        {
-          "quarter": "2025Q3",
-          "yoy": -31.5
-        },
-        {
-          "quarter": "2025Q4",
-          "yoy": 26.11
-        }
-      ],
-      "operatingMarginYoY": [
-        {
-          "quarter": "2024Q1",
-          "yoy": 250.54
-        },
-        {
-          "quarter": "2024Q2",
-          "yoy": 56.77
-        },
-        {
-          "quarter": "2024Q3",
-          "yoy": 4.22
-        },
-        {
-          "quarter": "2024Q4",
-          "yoy": 138.62
-        },
-        {
-          "quarter": "2025Q1",
-          "yoy": -5.41
-        },
-        {
-          "quarter": "2025Q2",
-          "yoy": 23.06
-        },
-        {
-          "quarter": "2025Q3",
-          "yoy": -41.99
-        },
-        {
-          "quarter": "2025Q4",
-          "yoy": 290.17
-        }
-      ],
+      "grossMarginYoY": [],
+      "operatingMarginYoY": [],
       "epsYoY": [
         {
           "quarter": "2024Q1",
@@ -36444,74 +36040,8 @@
           "yoy": 335.29
         }
       ],
-      "grossMargin": [
-        {
-          "quarter": "2024Q1",
-          "value": 58.38
-        },
-        {
-          "quarter": "2024Q2",
-          "value": 87.67
-        },
-        {
-          "quarter": "2024Q3",
-          "value": 69.81
-        },
-        {
-          "quarter": "2024Q4",
-          "value": 49.39
-        },
-        {
-          "quarter": "2025Q1",
-          "value": 60.77
-        },
-        {
-          "quarter": "2025Q2",
-          "value": 175.03
-        },
-        {
-          "quarter": "2025Q3",
-          "value": 47.82
-        },
-        {
-          "quarter": "2025Q4",
-          "value": 62.29
-        }
-      ],
-      "operatingMargin": [
-        {
-          "quarter": "2024Q1",
-          "value": 37.08
-        },
-        {
-          "quarter": "2024Q2",
-          "value": 52.41
-        },
-        {
-          "quarter": "2024Q3",
-          "value": 42.11
-        },
-        {
-          "quarter": "2024Q4",
-          "value": 7.84
-        },
-        {
-          "quarter": "2025Q1",
-          "value": 35.08
-        },
-        {
-          "quarter": "2025Q2",
-          "value": 64.5
-        },
-        {
-          "quarter": "2025Q3",
-          "value": 24.43
-        },
-        {
-          "quarter": "2025Q4",
-          "value": 30.59
-        }
-      ],
+      "grossMargin": [],
+      "operatingMargin": [],
       "eps": [
         {
           "quarter": "2024Q1",
@@ -36547,7 +36077,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286737,
-      "_last_fin_attempt_ts": 1778287515
+      "_last_fin_attempt_ts": 1778297172
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -36736,7 +36266,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286770,
-      "_last_fin_attempt_ts": 1778287380
+      "_last_fin_attempt_ts": 1778297233
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -36935,7 +36465,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286977,
-      "_last_fin_attempt_ts": 1778287447
+      "_last_fin_attempt_ts": 1778297219
     },
     "companyProfile": {
       "business": "金融控股公司業",
@@ -37270,7 +36800,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286867,
-      "_last_fin_attempt_ts": 1778287359
+      "_last_fin_attempt_ts": 1778297303
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -37589,7 +37119,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286803,
-      "_last_fin_attempt_ts": 1778287456
+      "_last_fin_attempt_ts": 1778297185
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -37923,7 +37453,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286760,
-      "_last_fin_attempt_ts": 1778287518
+      "_last_fin_attempt_ts": 1778297234
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -38127,7 +37657,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 62.71
+          "yoy": 61.02
         },
         {
           "quarter": "2025Q1",
@@ -38143,7 +37673,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -48.96
+          "yoy": -48.42
         }
       ],
       "grossMargin": [
@@ -38229,7 +37759,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.96
+          "value": 0.95
         },
         {
           "quarter": "2025Q1",
@@ -38249,7 +37779,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286820,
-      "_last_fin_attempt_ts": 1778287532
+      "_last_fin_attempt_ts": 1778297286
     },
     "companyProfile": {
       "business": "端子",
@@ -41909,7 +41439,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286891,
-      "_last_fin_attempt_ts": 1778287402
+      "_last_fin_attempt_ts": 1778297178
     },
     "companyProfile": {
       "business": "LCD液晶顯示器及電容式觸控面板及模組\r\nLCM液晶顯示器模組\r\n電子零組件製造、電腦與其週邊設備製造及電子材料批發",
@@ -42122,7 +41652,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 90.26
+          "yoy": 90.24
         },
         {
           "quarter": "2025Q1",
@@ -42138,7 +41668,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -165.38
+          "yoy": -155.77
         }
       ],
       "grossMargin": [
@@ -42240,11 +41770,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": -1.38
+          "value": -1.33
         }
       ],
       "_last_rev_attempt_ts": 1778286949,
-      "_last_fin_attempt_ts": 1778287499
+      "_last_fin_attempt_ts": 1778297222
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -42557,7 +42087,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218928,
-      "_last_fin_attempt_ts": 1778287436
+      "_last_fin_attempt_ts": 1778297285
     },
     "companyProfile": {
       "business": "不斷電電源供應器",
@@ -42893,7 +42423,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218866,
-      "_last_fin_attempt_ts": 1778287470
+      "_last_fin_attempt_ts": 1778297314
     },
     "companyProfile": {
       "business": "營建收入",
@@ -43264,7 +42794,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245728,
-      "_last_fin_attempt_ts": 1778287373
+      "_last_fin_attempt_ts": 1778297206
     },
     "companyProfile": {
       "business": "電子零組件製造業。\r\n國際貿易業。\r\n研究、開發、設計、生產、製造與銷售數位影像相關產品",
@@ -43941,7 +43471,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245786,
-      "_last_fin_attempt_ts": 1778287459
+      "_last_fin_attempt_ts": 1778297252
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -44143,7 +43673,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 16.67
+          "yoy": 68.18
         },
         {
           "quarter": "2025Q1",
@@ -44159,7 +43689,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 114.29
+          "yoy": 60.81
         }
       ],
       "grossMargin": [
@@ -44245,7 +43775,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.56
+          "value": 0.74
         },
         {
           "quarter": "2025Q1",
@@ -44261,11 +43791,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 1.2
+          "value": 1.19
         }
       ],
       "_last_rev_attempt_ts": 1778286889,
-      "_last_fin_attempt_ts": 1778287477
+      "_last_fin_attempt_ts": 1778297218
     },
     "companyProfile": {
       "business": "各類包裝材料，包含電子包材、綠色環保包材及包裝機台之買賣\r\n禮贈品之設計銷售服務",
@@ -44592,7 +44122,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778159323,
-      "_last_fin_attempt_ts": 1778287375
+      "_last_fin_attempt_ts": 1778297230
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -44922,7 +44452,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286829,
-      "_last_fin_attempt_ts": 1778287422
+      "_last_fin_attempt_ts": 1778297205
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -45450,7 +44980,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 23.05
+          "yoy": 23.4
         }
       ],
       "grossMargin": [
@@ -45552,11 +45082,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 3.47
+          "value": 3.48
         }
       ],
       "_last_rev_attempt_ts": 1778245867,
-      "_last_fin_attempt_ts": 1778287509
+      "_last_fin_attempt_ts": 1778297195
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -46217,7 +45747,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218894,
-      "_last_fin_attempt_ts": 1778287465
+      "_last_fin_attempt_ts": 1778297232
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -46536,7 +46066,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286743,
-      "_last_fin_attempt_ts": 1778287382
+      "_last_fin_attempt_ts": 1778297237
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -46738,7 +46268,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -52.88
+          "yoy": -52.94
         },
         {
           "quarter": "2025Q1",
@@ -46754,7 +46284,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 4.08
+          "yoy": -4.17
         }
       ],
       "grossMargin": [
@@ -46840,7 +46370,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.49
+          "value": 0.48
         },
         {
           "quarter": "2025Q1",
@@ -46856,11 +46386,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.51
+          "value": 0.46
         }
       ],
       "_last_rev_attempt_ts": 1778245692,
-      "_last_fin_attempt_ts": 1778287479
+      "_last_fin_attempt_ts": 1778297267
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -47055,7 +46585,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 47.06
+          "yoy": 49.02
         },
         {
           "quarter": "2025Q1",
@@ -47071,7 +46601,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 57.33
+          "yoy": 53.95
         }
       ],
       "grossMargin": [
@@ -47157,7 +46687,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.75
+          "value": 0.76
         },
         {
           "quarter": "2025Q1",
@@ -47173,11 +46703,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 1.18
+          "value": 1.17
         }
       ],
       "_last_rev_attempt_ts": 1778245714,
-      "_last_fin_attempt_ts": 1778287489
+      "_last_fin_attempt_ts": 1778297259
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -47502,7 +47032,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286734,
-      "_last_fin_attempt_ts": 1778287462
+      "_last_fin_attempt_ts": 1778297215
     },
     "companyProfile": {
       "business": "住宅及大樓開發租售業務\r\n建材批發\r\n綜合營造",
@@ -47835,7 +47365,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286690,
-      "_last_fin_attempt_ts": 1778287390
+      "_last_fin_attempt_ts": 1778297192
     },
     "companyProfile": {
       "business": "氮化鎵發光二極體磊晶片與晶粒",
@@ -48166,7 +47696,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245858,
-      "_last_fin_attempt_ts": 1778287386
+      "_last_fin_attempt_ts": 1778297282
     },
     "companyProfile": {
       "business": "電子材料批發業\r\n國際貿易業(限工廠產品)\r\n電子零組件製造業",
@@ -48493,7 +48023,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778135081,
-      "_last_fin_attempt_ts": 1778287410
+      "_last_fin_attempt_ts": 1778297291
     },
     "companyProfile": {
       "business": "光纖被動元件之設計、生產與銷售服務\r\n光纖模組及整合系統之設計、生產與銷售服務\r\n光纖相關之生產測試儀器設備之設計、生產與銷售服務",
@@ -49465,7 +48995,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286923,
-      "_last_fin_attempt_ts": 1778287431
+      "_last_fin_attempt_ts": 1778297171
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -50745,7 +50275,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245688,
-      "_last_fin_attempt_ts": 1778287414
+      "_last_fin_attempt_ts": 1778297237
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -51071,7 +50601,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286709,
-      "_last_fin_attempt_ts": 1778287374
+      "_last_fin_attempt_ts": 1778297184
     },
     "companyProfile": {
       "business": "CCL & PCB 自動化設備。\r\nFlat Panel Display (簡稱FPD) 自動化設備。\r\n物流、其他自動化設備製造及所營相關設備維修與售服。",
@@ -51728,7 +51258,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286832,
-      "_last_fin_attempt_ts": 1778287378
+      "_last_fin_attempt_ts": 1778297227
     },
     "companyProfile": {
       "business": "PVD外觀鍍膜表面處理",
@@ -52059,7 +51589,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245628,
-      "_last_fin_attempt_ts": 1778287358
+      "_last_fin_attempt_ts": 1778297245
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -52376,7 +51906,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218901,
-      "_last_fin_attempt_ts": 1778287363
+      "_last_fin_attempt_ts": 1778297322
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -53022,7 +52552,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245602,
-      "_last_fin_attempt_ts": 1778287444
+      "_last_fin_attempt_ts": 1778297209
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -53341,7 +52871,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218985,
-      "_last_fin_attempt_ts": 1778287383
+      "_last_fin_attempt_ts": 1778297240
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -54295,7 +53825,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286758,
-      "_last_fin_attempt_ts": 1778287373
+      "_last_fin_attempt_ts": 1778297295
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -54818,7 +54348,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -1700.0
+          "yoy": -1750.0
         },
         {
           "quarter": "2025Q1",
@@ -54834,7 +54364,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 187.5
+          "yoy": 184.85
         }
       ],
       "grossMargin": [
@@ -54920,7 +54450,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": -0.32
+          "value": -0.33
         },
         {
           "quarter": "2025Q1",
@@ -54940,7 +54470,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286896,
-      "_last_fin_attempt_ts": 1778287500
+      "_last_fin_attempt_ts": 1778297258
     },
     "companyProfile": {
       "business": "導電玻璃生產與銷售",
@@ -55278,7 +54808,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778159289,
-      "_last_fin_attempt_ts": 1778287494
+      "_last_fin_attempt_ts": 1778297274
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -55932,7 +55462,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286689,
-      "_last_fin_attempt_ts": 1778287419
+      "_last_fin_attempt_ts": 1778297195
     },
     "companyProfile": {
       "business": "功率半導體及類比積體電路的晶圓代工",
@@ -56585,7 +56115,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286811,
-      "_last_fin_attempt_ts": 1778287371
+      "_last_fin_attempt_ts": 1778297320
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -57223,7 +56753,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245826,
-      "_last_fin_attempt_ts": 1778287377
+      "_last_fin_attempt_ts": 1778297278
     },
     "companyProfile": {
       "business": "西藥醫療藥品之製造及加工.銷售與進出口貿易\r\n醫療器材及動物用藥之製造及加工.銷售與進出口貿易\r\n化粧品及保健食品之製造及加工.銷售與進出口貿易",
@@ -57905,7 +57435,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286733,
-      "_last_fin_attempt_ts": 1778287399
+      "_last_fin_attempt_ts": 1778297328
     },
     "companyProfile": {
       "business": "研究,開發,生產,製造及銷售各種西藥製劑\r\n各種西藥品,西藥原料之銷售及進出口業務\r\n各種藥物之臨床試驗服務",
@@ -58236,7 +57766,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778159337,
-      "_last_fin_attempt_ts": 1778287467
+      "_last_fin_attempt_ts": 1778297189
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -58555,7 +58085,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778048336,
-      "_last_fin_attempt_ts": 1778287396
+      "_last_fin_attempt_ts": 1778297213
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -58752,7 +58282,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 7.14
+          "yoy": 7.69
         },
         {
           "quarter": "2025Q1",
@@ -58768,7 +58298,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 86.67
+          "yoy": 107.14
         }
       ],
       "grossMargin": [
@@ -58854,7 +58384,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.15
+          "value": 0.14
         },
         {
           "quarter": "2025Q1",
@@ -58870,11 +58400,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.28
+          "value": 0.29
         }
       ],
       "_last_rev_attempt_ts": 1778286694,
-      "_last_fin_attempt_ts": 1778287473
+      "_last_fin_attempt_ts": 1778297290
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -58993,14 +58523,6 @@
       ],
       "grossMarginYoY": [
         {
-          "quarter": "2023Q3",
-          "yoy": -413.93
-        },
-        {
-          "quarter": "2023Q4",
-          "yoy": -18.08
-        },
-        {
           "quarter": "2024Q1",
           "yoy": 26.51
         },
@@ -59026,14 +58548,6 @@
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2023Q3",
-          "yoy": -442.95
-        },
-        {
-          "quarter": "2023Q4",
-          "yoy": -544.25
-        },
         {
           "quarter": "2024Q1",
           "yoy": -197.22
@@ -59196,7 +58710,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286752,
-      "_last_fin_attempt_ts": 1778287483
+      "_last_fin_attempt_ts": 1778297307
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -59513,7 +59027,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245804,
-      "_last_fin_attempt_ts": 1778287381
+      "_last_fin_attempt_ts": 1778297300
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -59826,7 +59340,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286953,
-      "_last_fin_attempt_ts": 1778287380
+      "_last_fin_attempt_ts": 1778297222
     },
     "companyProfile": {
       "business": "各種鋼圈、鋁合金輪圈製造、加工、出口\r\n鋼板加工、出口及銷售\r\n汽車轉向系統之製造、出口及銷售",
@@ -60157,7 +59671,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218838,
-      "_last_fin_attempt_ts": 1778287387
+      "_last_fin_attempt_ts": 1778297327
     },
     "companyProfile": {
       "business": "滾珠螺桿、線性滑軌及滾珠花鍵等產品之製造及銷售",
@@ -60490,7 +60004,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218935,
-      "_last_fin_attempt_ts": 1778287385
+      "_last_fin_attempt_ts": 1778297284
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -60812,7 +60326,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286762,
-      "_last_fin_attempt_ts": 1778287449
+      "_last_fin_attempt_ts": 1778297322
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -61446,7 +60960,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286701,
-      "_last_fin_attempt_ts": 1778287360
+      "_last_fin_attempt_ts": 1778297236
     },
     "companyProfile": {
       "business": "血糖檢測儀,血糖檢測試片",
@@ -61779,7 +61293,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286698,
-      "_last_fin_attempt_ts": 1778287402
+      "_last_fin_attempt_ts": 1778297299
     },
     "companyProfile": {
       "business": "西藥之製造，加工，買賣，批發零售，進出口。\r\n營養保健食品之加工買賣。",
@@ -62321,7 +61835,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 73.33
+          "yoy": 92.59
         },
         {
           "quarter": "2025Q1",
@@ -62443,7 +61957,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245765,
-      "_last_fin_attempt_ts": 1778287475
+      "_last_fin_attempt_ts": 1778297220
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -63374,7 +62888,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778048328,
-      "_last_fin_attempt_ts": 1778287371
+      "_last_fin_attempt_ts": 1778297192
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -63691,7 +63205,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286865,
-      "_last_fin_attempt_ts": 1778287415
+      "_last_fin_attempt_ts": 1778297194
     },
     "companyProfile": {
       "business": "偏光板\r\n其他\r\n無",
@@ -64256,7 +63770,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -95.71
+          "yoy": -95.0
         }
       ],
       "grossMargin": [
@@ -64358,11 +63872,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.06
+          "value": 0.07
         }
       ],
       "_last_rev_attempt_ts": 1778245747,
-      "_last_fin_attempt_ts": 1778287510
+      "_last_fin_attempt_ts": 1778297279
     },
     "companyProfile": {
       "business": "軟硬體系統整合收入\r\n勞務及維修收入\r\n授權收入",
@@ -65213,7 +64727,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -94.51
+          "yoy": -189.98
         },
         {
           "quarter": "2025Q1",
@@ -65229,7 +64743,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 39.13
+          "yoy": 108.75
         }
       ],
       "grossMargin": [
@@ -65315,7 +64829,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.23
+          "value": -3.77
         },
         {
           "quarter": "2025Q1",
@@ -65331,11 +64845,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.32
+          "value": 0.33
         }
       ],
       "_last_rev_attempt_ts": 1778286756,
-      "_last_fin_attempt_ts": 1778287524
+      "_last_fin_attempt_ts": 1778297260
     },
     "companyProfile": {
       "business": "社群交友網路平台服務",
@@ -65666,7 +65180,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778135046,
-      "_last_fin_attempt_ts": 1778287430
+      "_last_fin_attempt_ts": 1778297277
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -65990,7 +65504,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778159424,
-      "_last_fin_attempt_ts": 1778287429
+      "_last_fin_attempt_ts": 1778297309
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -66185,7 +65699,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 2600.0
+          "yoy": 2500.0
         },
         {
           "quarter": "2025Q1",
@@ -66201,7 +65715,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -33.33
+          "yoy": -30.77
         }
       ],
       "grossMargin": [
@@ -66287,7 +65801,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.27
+          "value": 0.26
         },
         {
           "quarter": "2025Q1",
@@ -66307,7 +65821,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286837,
-      "_last_fin_attempt_ts": 1778287544
+      "_last_fin_attempt_ts": 1778297168
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -66624,7 +66138,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245647,
-      "_last_fin_attempt_ts": 1778287403
+      "_last_fin_attempt_ts": 1778297239
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -66945,7 +66459,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778048353,
-      "_last_fin_attempt_ts": 1778287395
+      "_last_fin_attempt_ts": 1778297325
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -67600,7 +67114,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286761,
-      "_last_fin_attempt_ts": 1778287412
+      "_last_fin_attempt_ts": 1778297199
     },
     "companyProfile": {
       "business": "整流器之生產製造．銷售及進出口業務",
@@ -68254,7 +67768,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286813,
-      "_last_fin_attempt_ts": 1778287446
+      "_last_fin_attempt_ts": 1778297256
     },
     "companyProfile": {
       "business": "電腦及週邊設備軟硬體,電腦自動化測試系統之設計買賣修護進出口\r\n電腦顯示器,高解析度電視,電子測試儀器之設計裝配買賣修護進出口\r\n電子零組件,照明設備,光學儀器,電信管制射頻製造業;電子材料零售",
@@ -68592,7 +68106,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286845,
-      "_last_fin_attempt_ts": 1778287360
+      "_last_fin_attempt_ts": 1778297231
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -68909,7 +68423,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286731,
-      "_last_fin_attempt_ts": 1778287358
+      "_last_fin_attempt_ts": 1778297300
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -69233,7 +68747,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286744,
-      "_last_fin_attempt_ts": 1778287427
+      "_last_fin_attempt_ts": 1778297312
     },
     "companyProfile": {
       "business": "電子及生技醫藥等高科技產業無塵室機電.製程設施之設計與建造\r\n節能技術服務\r\n機電空調系統整合",
@@ -69564,7 +69078,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245865,
-      "_last_fin_attempt_ts": 1778287356
+      "_last_fin_attempt_ts": 1778297207
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -69759,7 +69273,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 17.86
+          "yoy": 19.57
         },
         {
           "quarter": "2025Q1",
@@ -69881,7 +69395,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778072808,
-      "_last_fin_attempt_ts": 1778287539
+      "_last_fin_attempt_ts": 1778297317
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -70046,7 +69560,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286767,
-      "_last_fin_attempt_ts": 1778287366
+      "_last_fin_attempt_ts": 1778297246
     },
     "companyProfile": {
       "business": "經紀\r\n自營\r\n承銷",
@@ -70490,74 +70004,8 @@
           "yoy": 4229.15
         }
       ],
-      "grossMarginYoY": [
-        {
-          "quarter": "2024Q1",
-          "yoy": -0.59
-        },
-        {
-          "quarter": "2024Q2",
-          "yoy": -3.52
-        },
-        {
-          "quarter": "2024Q3",
-          "yoy": -3.32
-        },
-        {
-          "quarter": "2024Q4",
-          "yoy": -3.15
-        },
-        {
-          "quarter": "2025Q1",
-          "yoy": -10.65
-        },
-        {
-          "quarter": "2025Q2",
-          "yoy": -2.21
-        },
-        {
-          "quarter": "2025Q3",
-          "yoy": 6.6
-        },
-        {
-          "quarter": "2025Q4",
-          "yoy": 7.43
-        }
-      ],
-      "operatingMarginYoY": [
-        {
-          "quarter": "2024Q1",
-          "yoy": 1007.4
-        },
-        {
-          "quarter": "2024Q2",
-          "yoy": 46.76
-        },
-        {
-          "quarter": "2024Q3",
-          "yoy": -809.87
-        },
-        {
-          "quarter": "2024Q4",
-          "yoy": -926.47
-        },
-        {
-          "quarter": "2025Q1",
-          "yoy": -322.38
-        },
-        {
-          "quarter": "2025Q2",
-          "yoy": -255.68
-        },
-        {
-          "quarter": "2025Q3",
-          "yoy": 362.5
-        },
-        {
-          "quarter": "2025Q4",
-          "yoy": 189.27
-        }
-      ],
+      "grossMarginYoY": [],
+      "operatingMarginYoY": [],
       "epsYoY": [
         {
           "quarter": "2024Q1",
@@ -70573,7 +70021,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -133.33
+          "yoy": -141.67
         },
         {
           "quarter": "2025Q1",
@@ -70589,77 +70037,11 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 1350.0
+          "yoy": 1100.0
         }
       ],
-      "grossMargin": [
-        {
-          "quarter": "2024Q1",
-          "value": 93.01
-        },
-        {
-          "quarter": "2024Q2",
-          "value": 89.65
-        },
-        {
-          "quarter": "2024Q3",
-          "value": 86.78
-        },
-        {
-          "quarter": "2024Q4",
-          "value": 86.28
-        },
-        {
-          "quarter": "2025Q1",
-          "value": 83.1
-        },
-        {
-          "quarter": "2025Q2",
-          "value": 87.66
-        },
-        {
-          "quarter": "2025Q3",
-          "value": 92.51
-        },
-        {
-          "quarter": "2025Q4",
-          "value": 92.69
-        }
-      ],
-      "operatingMargin": [
-        {
-          "quarter": "2024Q1",
-          "value": 33.87
-        },
-        {
-          "quarter": "2024Q2",
-          "value": 15.64
-        },
-        {
-          "quarter": "2024Q3",
-          "value": -11.92
-        },
-        {
-          "quarter": "2024Q4",
-          "value": -31.03
-        },
-        {
-          "quarter": "2025Q1",
-          "value": -75.32
-        },
-        {
-          "quarter": "2025Q2",
-          "value": -24.35
-        },
-        {
-          "quarter": "2025Q3",
-          "value": 31.3
-        },
-        {
-          "quarter": "2025Q4",
-          "value": 27.7
-        }
-      ],
+      "grossMargin": [],
+      "operatingMargin": [],
       "eps": [
         {
           "quarter": "2024Q1",
@@ -70675,7 +70057,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": -0.04
+          "value": -0.05
         },
         {
           "quarter": "2025Q1",
@@ -70695,7 +70077,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286874,
-      "_last_fin_attempt_ts": 1778287526
+      "_last_fin_attempt_ts": 1778297181
     },
     "companyProfile": {
       "business": "證券經紀、自營、承銷業務\r\n期貨經紀、期貨顧問、期貨自營業務",
@@ -70890,7 +70272,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286875,
-      "_last_fin_attempt_ts": 1778287434
+      "_last_fin_attempt_ts": 1778297264
     },
     "companyProfile": {
       "business": "證券經紀承銷自營股務代理\r\n期貨交易輔助人",
@@ -71077,7 +70459,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286796,
-      "_last_fin_attempt_ts": 1778287384
+      "_last_fin_attempt_ts": 1778297215
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -71270,7 +70652,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 250.0
+          "yoy": 251.11
         },
         {
           "quarter": "2025Q1",
@@ -71286,7 +70668,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -595.65
+          "yoy": -605.88
         }
       ],
       "grossMargin": [
@@ -71372,7 +70754,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.69
+          "value": 0.68
         },
         {
           "quarter": "2025Q1",
@@ -71388,11 +70770,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": -3.42
+          "value": -3.44
         }
       ],
       "_last_rev_attempt_ts": 1778286824,
-      "_last_fin_attempt_ts": 1778287490
+      "_last_fin_attempt_ts": 1778297175
     },
     "companyProfile": {
       "business": "遊戲軟體研發、代理及銷售\r\n線上遊戲經營服務及授權",
@@ -72041,7 +71423,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245657,
-      "_last_fin_attempt_ts": 1778287520
+      "_last_fin_attempt_ts": 1778297247
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -72923,7 +72305,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 1116.67
+          "yoy": 2333.33
         },
         {
           "quarter": "2025Q1",
@@ -73045,7 +72427,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286871,
-      "_last_fin_attempt_ts": 1778287501
+      "_last_fin_attempt_ts": 1778297235
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -73362,7 +72744,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778072969,
-      "_last_fin_attempt_ts": 1778287423
+      "_last_fin_attempt_ts": 1778297225
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -73557,7 +72939,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 102.7
+          "yoy": 97.3
         },
         {
           "quarter": "2025Q1",
@@ -73573,7 +72955,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -4.0
+          "yoy": -1.37
         }
       ],
       "grossMargin": [
@@ -73659,7 +73041,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.75
+          "value": 0.73
         },
         {
           "quarter": "2025Q1",
@@ -73679,7 +73061,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245620,
-      "_last_fin_attempt_ts": 1778287547
+      "_last_fin_attempt_ts": 1778297186
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -73996,7 +73378,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286927,
-      "_last_fin_attempt_ts": 1778287409
+      "_last_fin_attempt_ts": 1778297271
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -75301,7 +74683,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218892,
-      "_last_fin_attempt_ts": 1778287546
+      "_last_fin_attempt_ts": 1778297198
     },
     "companyProfile": {
       "business": "各種精密探針製造及加工買賣、各種探針用測試治具之研發製造銷售\r\n電子零組件、有線及無線電通信機械器材製造業、電子材料買賣\r\n有關進出口貿易業務之經營",
@@ -75639,7 +75021,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245649,
-      "_last_fin_attempt_ts": 1778287458
+      "_last_fin_attempt_ts": 1778297267
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -75956,7 +75338,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286917,
-      "_last_fin_attempt_ts": 1778287441
+      "_last_fin_attempt_ts": 1778297208
     },
     "companyProfile": {
       "business": "不動產開發、租賃及買賣等\r\n不動產仲介、代銷經紀業\r\n特定專業區、新市鎮及新社區開發業",
@@ -76287,7 +75669,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286840,
-      "_last_fin_attempt_ts": 1778287506
+      "_last_fin_attempt_ts": 1778297210
     },
     "companyProfile": {
       "business": "區域通訊網路線\r\n光纖接續材料、零件及其配件之組裝製造及買賣\r\n3C電源線組、無線及電纜製造業",
@@ -76620,7 +76002,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218908,
-      "_last_fin_attempt_ts": 1778287407
+      "_last_fin_attempt_ts": 1778297191
     },
     "companyProfile": {
       "business": "太陽能電池、太陽能模組、太陽能電力轉換器之製造及銷售。\r\n太陽能發電系統之設計架設及銷售、太陽能電力之銷售。",
@@ -77298,7 +76680,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286876,
-      "_last_fin_attempt_ts": 1778287442
+      "_last_fin_attempt_ts": 1778297289
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -77934,7 +77316,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286965,
-      "_last_fin_attempt_ts": 1778287463
+      "_last_fin_attempt_ts": 1778297178
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -78589,7 +77971,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286884,
-      "_last_fin_attempt_ts": 1778287385
+      "_last_fin_attempt_ts": 1778297263
     },
     "companyProfile": {
       "business": "交換式電源供應器之研發設計、製造及銷售",
@@ -79250,7 +78632,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286909,
-      "_last_fin_attempt_ts": 1778287400
+      "_last_fin_attempt_ts": 1778297216
     },
     "companyProfile": {
       "business": "光電薄化玻璃",
@@ -79583,7 +78965,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1777961207,
-      "_last_fin_attempt_ts": 1778287408
+      "_last_fin_attempt_ts": 1778297290
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -79909,7 +79291,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286818,
-      "_last_fin_attempt_ts": 1778287379
+      "_last_fin_attempt_ts": 1778297169
     },
     "companyProfile": {
       "business": "各種光纖及光纖連合器等之製造組立加工及買賣業務\r\n通訊光電介面產品及通信網路設備之加工裝配業務\r\n電子組件用精密金屬零件及電子產品之加工製造組立業務",
@@ -80242,7 +79624,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286705,
-      "_last_fin_attempt_ts": 1778287367
+      "_last_fin_attempt_ts": 1778297247
     },
     "companyProfile": {
       "business": "太陽能電池及模組之製造及銷售",
@@ -80890,7 +80272,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778048369,
-      "_last_fin_attempt_ts": 1778287376
+      "_last_fin_attempt_ts": 1778297315
     },
     "companyProfile": {
       "business": "抗癌新藥及特殊原料藥研發",
@@ -81228,7 +80610,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286775,
-      "_last_fin_attempt_ts": 1778287454
+      "_last_fin_attempt_ts": 1778297214
     },
     "companyProfile": {
       "business": "特用化學品\r\n辦公文具用品\r\n精密化學品",
@@ -82202,7 +81584,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778048333,
-      "_last_fin_attempt_ts": 1778287413
+      "_last_fin_attempt_ts": 1778297309
     },
     "companyProfile": {
       "business": "植物生長調節劑研發及銷售\r\n植物生長促進劑研發及銷售\r\n肥料研發及銷售",
@@ -82537,7 +81919,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286862,
-      "_last_fin_attempt_ts": 1778287407
+      "_last_fin_attempt_ts": 1778297325
     },
     "companyProfile": {
       "business": "新藥研發",
@@ -82868,7 +82250,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286715,
-      "_last_fin_attempt_ts": 1778287370
+      "_last_fin_attempt_ts": 1778297303
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -83525,7 +82907,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778135123,
-      "_last_fin_attempt_ts": 1778287389
+      "_last_fin_attempt_ts": 1778297296
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -83832,7 +83214,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778135107,
-      "_last_fin_attempt_ts": 1778287372
+      "_last_fin_attempt_ts": 1778297311
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -84054,8 +83436,8 @@
           "value": 1.09
         }
       ],
-      "_last_rev_attempt_ts": 1778287388,
-      "_last_fin_attempt_ts": 1778287389,
+      "_last_rev_attempt_ts": 1778297244,
+      "_last_fin_attempt_ts": 1778297245,
       "revenueYoY": [
         {
           "date": "2026-03",
@@ -84729,7 +84111,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286799,
-      "_last_fin_attempt_ts": 1778287367
+      "_last_fin_attempt_ts": 1778297182
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -84924,7 +84306,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 47.33
+          "yoy": 47.67
         },
         {
           "quarter": "2025Q1",
@@ -85046,7 +84428,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286969,
-      "_last_fin_attempt_ts": 1778287529
+      "_last_fin_attempt_ts": 1778297200
     },
     "companyProfile": {
       "business": "高科技廠房無塵室及機電空調統包工程與建議服務\r\n節能技術服務",
@@ -85386,7 +84768,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286960,
-      "_last_fin_attempt_ts": 1778287391
+      "_last_fin_attempt_ts": 1778297308
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -85709,7 +85091,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1777961336,
-      "_last_fin_attempt_ts": 1778287378
+      "_last_fin_attempt_ts": 1778297176
     },
     "companyProfile": {
       "business": "幹細胞產品\r\n免疫細胞產品",
@@ -86364,7 +85746,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286957,
-      "_last_fin_attempt_ts": 1778287438
+      "_last_fin_attempt_ts": 1778297225
     },
     "companyProfile": {
       "business": "自動化機械設備之研發、設計、組裝、銷售及售後服務。",
@@ -86702,7 +86084,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286854,
-      "_last_fin_attempt_ts": 1778287454
+      "_last_fin_attempt_ts": 1778297187
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -86897,7 +86279,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -41.59
+          "yoy": -41.82
         },
         {
           "quarter": "2025Q1",
@@ -86913,7 +86295,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 63.64
+          "yoy": 70.31
         }
       ],
       "grossMargin": [
@@ -86999,7 +86381,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.66
+          "value": 0.64
         },
         {
           "quarter": "2025Q1",
@@ -87015,11 +86397,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 1.08
+          "value": 1.09
         }
       ],
       "_last_rev_attempt_ts": 1778286922,
-      "_last_fin_attempt_ts": 1778287497
+      "_last_fin_attempt_ts": 1778297254
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -87650,7 +87032,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778048483,
-      "_last_fin_attempt_ts": 1778287439
+      "_last_fin_attempt_ts": 1778297242
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -88291,7 +87673,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286790,
-      "_last_fin_attempt_ts": 1778287528
+      "_last_fin_attempt_ts": 1778297203
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -88615,7 +87997,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286885,
-      "_last_fin_attempt_ts": 1778287399
+      "_last_fin_attempt_ts": 1778297203
     },
     "companyProfile": {
       "business": "全方位綠電解決方案包含工程、管理、智慧電力服務與儲能充電產品\r\n案場維運服務、養殖管理服務",
@@ -89239,10 +88621,69 @@
     "revenueMonth": "2026-04",
     "revenueFirstSeen": "2026-05-08",
     "fundamentals": {
-      "grossMarginYoY": [],
-      "operatingMarginYoY": [],
-      "epsYoY": [],
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q4",
+          "yoy": -16.44
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -11.82
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 2.11
+        }
+      ],
+      "operatingMarginYoY": [
+        {
+          "quarter": "2024Q4",
+          "yoy": -64.12
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -51.28
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -29.62
+        }
+      ],
+      "epsYoY": [
+        {
+          "quarter": "2024Q4",
+          "yoy": -31.74
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -66.03
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -97.5
+        }
+      ],
       "grossMargin": [
+        {
+          "quarter": "2023Q4",
+          "value": 41.67
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 42.69
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 34.82
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 37.64
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 32.94
+        },
         {
           "quarter": "2025Q4",
           "value": 35.55
@@ -89250,18 +88691,58 @@
       ],
       "operatingMargin": [
         {
+          "quarter": "2023Q4",
+          "value": 12.83
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 14.21
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 4.6
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 6.92
+        },
+        {
+          "quarter": "2025Q3",
+          "value": -1.62
+        },
+        {
           "quarter": "2025Q4",
           "value": 3.24
         }
       ],
       "eps": [
         {
+          "quarter": "2023Q4",
+          "value": 2.93
+        },
+        {
+          "quarter": "2024Q2",
+          "value": 1.56
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 2.0
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 0.53
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 0.11
+        },
+        {
           "quarter": "2025Q4",
-          "value": 0.08
+          "value": 0.05
         }
       ],
-      "_last_rev_attempt_ts": 1778287503,
-      "_last_fin_attempt_ts": 1778287503,
+      "_last_rev_attempt_ts": 1778297272,
+      "_last_fin_attempt_ts": 1778297273,
       "revenueYoY": [
         {
           "date": "2026-04",
@@ -89664,8 +89145,8 @@
           "value": 2.66
         }
       ],
-      "_last_rev_attempt_ts": 1778287463,
-      "_last_fin_attempt_ts": 1778287464,
+      "_last_rev_attempt_ts": 1778297204,
+      "_last_fin_attempt_ts": 1778297205,
       "revenueYoY": [
         {
           "date": "2026-04",
@@ -89990,7 +89471,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286940,
-      "_last_fin_attempt_ts": 1778287542
+      "_last_fin_attempt_ts": 1778297270
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -90185,7 +89666,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 29.65
+          "yoy": 27.4
         },
         {
           "quarter": "2025Q1",
@@ -90201,7 +89682,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -31.45
+          "yoy": -30.19
         }
       ],
       "grossMargin": [
@@ -90303,11 +89784,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": -2.09
+          "value": -2.07
         }
       ],
       "_last_rev_attempt_ts": 1778286785,
-      "_last_fin_attempt_ts": 1778287531
+      "_last_fin_attempt_ts": 1778297242
     },
     "companyProfile": {
       "business": "電子商務\r\n物流服務\r\n金融科技",
@@ -90963,7 +90444,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286843,
-      "_last_fin_attempt_ts": 1778287425
+      "_last_fin_attempt_ts": 1778297186
     },
     "companyProfile": {
       "business": "LCD檢測整修設備、自動化設備及製程設備\r\n濺鍍及蒸鍍設備\r\n設備零組件及電子配件",
@@ -91641,7 +91122,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286919,
-      "_last_fin_attempt_ts": 1778287514
+      "_last_fin_attempt_ts": 1778297323
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -91960,7 +91441,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286892,
-      "_last_fin_attempt_ts": 1778287453
+      "_last_fin_attempt_ts": 1778297181
     },
     "companyProfile": {
       "business": "國際貿易業\r\n電子材料批發業\r\n智慧財產權業",
@@ -92293,7 +91774,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778245635,
-      "_last_fin_attempt_ts": 1778287405
+      "_last_fin_attempt_ts": 1778297238
     },
     "companyProfile": {
       "business": "各種電子零件(連接器、電子線)等製造加工及買賣業務\r\n一般進出口貿易業務(許可業務除外)\r\n代理國內外廠商有關商品投標報價業務",
@@ -92502,7 +91983,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 700.0
+          "yoy": 500.0
         },
         {
           "quarter": "2025Q1",
@@ -92518,7 +91999,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 125.0
+          "yoy": 116.67
         }
       ],
       "grossMargin": [
@@ -92620,11 +92101,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.27
+          "value": 0.26
         }
       ],
       "_last_rev_attempt_ts": 1778245741,
-      "_last_fin_attempt_ts": 1778287481
+      "_last_fin_attempt_ts": 1778297190
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -93258,7 +92739,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778048414,
-      "_last_fin_attempt_ts": 1778287396
+      "_last_fin_attempt_ts": 1778297280
     },
     "companyProfile": {
       "business": "高速高頻連接器之設計、製造及行銷\r\n連接器生產模治具之設計、製造及行銷\r\n背板、機箱及其零組件之設計、製造及行銷",
@@ -94285,7 +93766,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778159198,
-      "_last_fin_attempt_ts": 1778287455
+      "_last_fin_attempt_ts": 1778297217
     },
     "companyProfile": {
       "business": "自黏標籤\r\n自黏膠帶\r\n離型紙和紙",
@@ -95583,7 +95064,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218840,
-      "_last_fin_attempt_ts": 1778287369
+      "_last_fin_attempt_ts": 1778297212
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -95903,7 +95384,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286858,
-      "_last_fin_attempt_ts": 1778287434
+      "_last_fin_attempt_ts": 1778297201
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -96098,7 +95579,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 169.7
+          "yoy": 172.73
         },
         {
           "quarter": "2025Q1",
@@ -96114,7 +95595,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -53.93
+          "yoy": -216.67
         }
       ],
       "grossMargin": [
@@ -96200,7 +95681,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 0.89
+          "value": 0.9
         },
         {
           "quarter": "2025Q1",
@@ -96216,11 +95697,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.41
+          "value": -1.05
         }
       ],
       "_last_rev_attempt_ts": 1778245719,
-      "_last_fin_attempt_ts": 1778287487
+      "_last_fin_attempt_ts": 1778297297
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -96648,8 +96129,8 @@
           "value": 0.0
         }
       ],
-      "_last_rev_attempt_ts": 1778287417,
-      "_last_fin_attempt_ts": 1778287417
+      "_last_rev_attempt_ts": 1778297319,
+      "_last_fin_attempt_ts": 1778297320
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -96742,8 +96223,8 @@
           "value": 0.0
         }
       ],
-      "_last_rev_attempt_ts": 1778287393,
-      "_last_fin_attempt_ts": 1778287394
+      "_last_rev_attempt_ts": 1778297292,
+      "_last_fin_attempt_ts": 1778297292
     },
     "companyProfile": {
       "business": "生產製造機車\r\n生產製造機車零組件\r\n製造金屬零件自行開發模具",
@@ -97074,7 +96555,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778048445,
-      "_last_fin_attempt_ts": 1778287433
+      "_last_fin_attempt_ts": 1778297180
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -97391,7 +96872,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286741,
-      "_last_fin_attempt_ts": 1778287522
+      "_last_fin_attempt_ts": 1778297274
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -97715,7 +97196,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286696,
-      "_last_fin_attempt_ts": 1778287420
+      "_last_fin_attempt_ts": 1778297250
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -97926,7 +97407,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 14.71
+          "yoy": 11.76
         }
       ],
       "grossMargin": [
@@ -98028,11 +97509,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.39
+          "value": 0.38
         }
       ],
       "_last_rev_attempt_ts": 1778245767,
-      "_last_fin_attempt_ts": 1778287495
+      "_last_fin_attempt_ts": 1778297306
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -98349,7 +97830,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778218961,
-      "_last_fin_attempt_ts": 1778287418
+      "_last_fin_attempt_ts": 1778297294
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -98560,7 +98041,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -8.82
+          "yoy": -7.35
         }
       ],
       "grossMargin": [
@@ -98662,11 +98143,11 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.62
+          "value": 0.63
         }
       ],
       "_last_rev_attempt_ts": 1778286779,
-      "_last_fin_attempt_ts": 1778287534
+      "_last_fin_attempt_ts": 1778297228
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -98983,7 +98464,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778135106,
-      "_last_fin_attempt_ts": 1778287426
+      "_last_fin_attempt_ts": 1778297305
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
@@ -99309,7 +98790,7 @@
         }
       ],
       "_last_rev_attempt_ts": 1778286855,
-      "_last_fin_attempt_ts": 1778287458
+      "_last_fin_attempt_ts": 1778297279
     },
     "companyProfile": {},
     "_lastSeenDate": "2026-05-09"
