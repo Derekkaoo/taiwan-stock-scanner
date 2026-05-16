@@ -6,13 +6,10 @@ name: 台股資料自動更新
 
 on:
   schedule:
-    # === 每週六（神秘金字塔大戶 publish 日）===
-    # 週六 03:30 UTC = 台灣時間 11:30（神秘金字塔 publish 後 1 小時）
-    - cron: '30 3 * * 6'
-    # 週六 04:00 UTC = 台灣時間 12:00（11:30 失敗時的備援）
-    - cron: '0 4 * * 6'
-    # 週六 10:00 UTC = 台灣時間 18:00（補跑，Telegram 去重）
-    - cron: '0 10 * * 6'
+    # === 週六 cron 移除 ===
+    # 2026-05-17：Yahoo 換成主要來源後，週六 11:30 / 12:00 / 18:00 由 cron-job.org
+    # 「Saturday 12:15 TW」外部觸發取代（cron-job.org >99.9% 命中 vs GitHub ~70%）
+    # cron-job.org 觸發 workflow_dispatch → 走同一份 weekly-update.yml flow
 
     # === 平日 11:30（給「假日 Friday」偵測用）===
     # 正常平日 update_klines smart-skip 秒過；假日 Fri 時 IS_PUBLISH_DAY=1 → 抓大戶

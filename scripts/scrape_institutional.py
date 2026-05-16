@@ -312,12 +312,16 @@ def run():
                 enrich_stocks_json(by_stock)
                 return 0
 
-        # 看 cache 中「達到 expected_str」的股票占比
-        total = len(by_stock)
-        at_expected = sum(
-            1 for h in by_stock.values()
-            if h and h[-1].get("date", "") >= expected_str
-        )
+        # 看「stocks.json 該抓的股票」中已達到 expected_str 的比例
+        # ⚠️ 重要：必須用 stock_ids（norway 最新清單）算 coverage，不是用 by_stock cache
+        # 否則新加進來的股票（不在 cache 但在 stocks.json）會被忽略 → 誤判 100% coverage → skip
+        # 這個 bug 在 K 線 5/9 + 5/16 各炸過一次，2026-05-17 統一修掉
+        total = len(stock_ids)
+        at_expected = 0
+        for sid in stock_ids:
+            h = by_stock.get(sid) or []
+            if h and h[-1].get("date", "") >= expected_str:
+                at_expected += 1
         coverage = at_expected / total if total else 0
         latest_in_cache = max(
             (h[-1].get("date", "") for h in by_stock.values() if h),

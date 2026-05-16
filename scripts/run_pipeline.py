@@ -829,19 +829,44 @@ def run():
         except Exception as e:
             logger.warning("讀既有 stocks.json 失敗（不影響流程）：%s", e)
 
+    # ⭐ 主要來源：Yahoo（取代 norway，2026-05-17 換主來源）
+    #   理由：Yahoo 更穩、publish 時間更早、不會被擋廣告判定
+    #   norway 留作 fallback（萬一 Yahoo HTML 改版掉）
+    #   --norway 旗標可強制走 norway（debug 用）
     holdings = []
     holdings_err: HoldingsFetchError | None = None
-    try:
-        holdings = fetch_holdings()
-    except HoldingsFetchError as e:
-        holdings_err = e
-        logger.error("持股名單抓取失敗 [%s]：%s", e.kind, e.detail)
-    except Exception as e:
-        # 不預期的錯誤包成 HoldingsFetchError 統一處理
-        holdings_err = HoldingsFetchError("unexpected", str(e)[:200])
-        logger.exception("持股名單抓取失敗（unexpected）")
+    use_yahoo = "--norway" not in sys.argv
 
-    if holdings_err is not None:
+    if use_yahoo:
+        try:
+            logger.info("Step 1: Yahoo 主來源（10 分鐘抓 ~1964 支）…")
+            sys.path.insert(0, str(Path(__file__).parent))
+            import scrape_yahoo_holders
+            yahoo_date, yahoo_rows = scrape_yahoo_holders.fetch_all_yahoo_holdings()
+            if yahoo_rows and len(yahoo_rows) >= 100:
+                # 補上 norway 沒有但 Yahoo 也沒有的欄位 stock_id（用 id 兼容）
+                holdings = [{**r, "stock_id": r["id"]} for r in yahoo_rows]
+                logger.info("Yahoo 主來源：%d 支入榜，最新週末日 %s",
+                            len(holdings), yahoo_date)
+            else:
+                logger.warning("Yahoo 抓到 %d 支（< 100 門檻），fallback Norway",
+                               len(yahoo_rows) if yahoo_rows else 0)
+        except Exception as e:
+            logger.warning("Yahoo 主來源失敗：%s，fallback Norway", str(e)[:200])
+
+    # Norway fallback（Yahoo 失敗 或 --norway flag）
+    if not holdings:
+        try:
+            holdings = fetch_holdings()
+        except HoldingsFetchError as e:
+            holdings_err = e
+            logger.error("持股名單抓取失敗 [%s]：%s", e.kind, e.detail)
+        except Exception as e:
+            # 不預期的錯誤包成 HoldingsFetchError 統一處理
+            holdings_err = HoldingsFetchError("unexpected", str(e)[:200])
+            logger.exception("持股名單抓取失敗（unexpected）")
+
+    if not holdings and holdings_err is not None:
         # 通知 Telegram，訊息帶具體類別 → 你看了就知道是 IP 被擋還是結構變了
         kind_label = {
             "network": "網路 / 403 / IP 封鎖",
