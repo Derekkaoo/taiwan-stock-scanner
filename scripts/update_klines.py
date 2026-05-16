@@ -17,24 +17,39 @@ sys.path.insert(0, str(Path(__file__).parent))
 from trading_calendar import expected_latest_trading_day as _expected_trading_day  # noqa: E402
 
 
-def _klines_are_fresh():
-    """檢查 stocks.json 中所有股票都有最新交易日 bar 才算 fresh。
+def _klines_are_fresh(stock_ids=None):
+    """檢查指定股票清單全部都有最新交易日 bar 才算 fresh。
 
-    舊版只檢查第一支有效股票就 return True，導致：
-    - 如果 norway 加新股票 → 新股票沒 bar 但舊股票有 → smart-skip 跳過 → 新股票永遠抓不到 K 線
-    新版必須全部股票都到位才跳過。
+    Args:
+        stock_ids: 要檢查的股票清單；若 None 則從 stocks.json 讀（舊行為）
+
+    歷史：
+    - v1 只檢查第一支有效股票就 return True → 漏抓新股票
+    - v2 改檢查 stocks.json 全部 → 但讀檔時 stocks.json 還是舊的（norway 還沒寫入）
+    - v3 (now) 接 stock_ids 參數，由 caller 傳新清單 → 真正反映目前需要的 coverage
     """
     klines_path = DATA_DIR / "klines.json"
-    stocks_path = DATA_DIR / "stocks.json"
-    if not klines_path.exists() or not stocks_path.exists():
+    if not klines_path.exists():
         return False
+
+    # stock_ids 沒給 → fallback 讀 stocks.json（CLI 模式）
+    if stock_ids is None:
+        stocks_path = DATA_DIR / "stocks.json"
+        if not stocks_path.exists():
+            return False
+        try:
+            with open(stocks_path, encoding="utf-8") as f:
+                stocks = json.load(f)
+            stock_ids = [s.get("id") for s in stocks if s.get("id")]
+        except Exception as e:
+            logger.warning("讀 stocks.json 失敗：%s，繼續更新", e)
+            return False
+
     try:
         with open(klines_path, encoding="utf-8") as f:
             kl = json.load(f)
-        with open(stocks_path, encoding="utf-8") as f:
-            stocks = json.load(f)
     except Exception as e:
-        logger.warning("讀 stocks.json / klines.json 失敗：%s，繼續更新", e)
+        logger.warning("讀 klines.json 失敗：%s，繼續更新", e)
         return False
 
     expected = _expected_trading_day()
@@ -48,8 +63,7 @@ def _klines_are_fresh():
         return None
 
     missing_or_stale = 0
-    for s in stocks:
-        sid = s.get("id")
+    for sid in stock_ids:
         if not sid:
             continue
         bars = kl.get(sid, [])
@@ -61,12 +75,13 @@ def _klines_are_fresh():
         if latest is None or latest < expected:
             missing_or_stale += 1
 
+    total = len(stock_ids)
     if missing_or_stale == 0:
-        logger.info("K 線已是最新（%d 支全到 %s），跳過", len(stocks), expected)
+        logger.info("K 線已是最新（%d 支全到 %s），跳過", total, expected)
         return True
 
     logger.info("K 線需要更新（%d/%d 支缺資料或過期），繼續抓取",
-                missing_or_stale, len(stocks))
+                missing_or_stale, total)
     return False
 
 
