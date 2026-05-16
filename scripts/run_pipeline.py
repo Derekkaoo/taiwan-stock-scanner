@@ -451,13 +451,14 @@ def fetch_klines(stock_ids):
             return result
         logger.warning("klines.json 不存在，--skip-klines 失效，正常抓取")
 
-    # Smart-skip：klines.json 已是預期交易日 → 直接用 cache，不重抓 Yahoo 310 支
-    # （考慮國定假日；委派給 update_klines._klines_are_fresh）
+    # Smart-skip：klines.json 已 cover 當前 stock_ids 全部 + 都是最新交易日 → 跳過
+    # 重要：必須把 norway 抓到的最新 stock_ids 傳進去，不能讓函式讀舊 stocks.json
+    # （新加進來的股票還沒寫進 stocks.json，會誤判 fresh）
     if "--force" not in sys.argv:
         try:
             sys.path.insert(0, str(Path(__file__).parent))
             import update_klines
-            if update_klines._klines_are_fresh():
+            if update_klines._klines_are_fresh(stock_ids):
                 cached = load_existing_klines()
                 if cached is not None:
                     result = {sid: cached[sid] for sid in stock_ids if sid in cached}
