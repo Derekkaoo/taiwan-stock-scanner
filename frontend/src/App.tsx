@@ -16,6 +16,7 @@ import { SettingsPanel } from './components/SettingsPanel'
 import { AlertModal } from './components/AlertModal'
 import { VipPanel } from './components/VipPanel'
 import { MobileBottomNav, type MobileTab } from './components/MobileBottomNav'
+import { StaleDataWarning } from './components/StaleDataWarning'
 import { MobileStockList } from './components/MobileStockList'
 import { MobileStockDetail } from './components/MobileStockDetail'
 import { MobileScrollTopFab } from './components/MobileScrollTopFab'
@@ -440,6 +441,11 @@ export default function App() {
 
   return (
     <div className="flex flex-col min-h-screen" style={{ background: 'var(--color-bg-800)' }}>
+
+      {/* 資料未更新警示：桌機顯示頂部 banner / 手機跳 modal（當日去重）*/}
+      {dataDate && (
+        <StaleDataWarning stocksDate={dataDate} isMobile={isMobile} />
+      )}
 
       <header
         className="sticky top-0 z-50 flex items-center gap-2 px-3 py-2 border-b md:gap-4 md:px-5 md:py-2.5"
