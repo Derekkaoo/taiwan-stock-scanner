@@ -15,6 +15,7 @@ import { StrategyManager } from './components/StrategyManager'
 import { SettingsPanel } from './components/SettingsPanel'
 import { AlertModal } from './components/AlertModal'
 import { VipPanel } from './components/VipPanel'
+import { SHOW_VIP_UI } from './constants/featureFlags'
 import { MobileBottomNav, type MobileTab } from './components/MobileBottomNav'
 import { StaleDataWarning } from './components/StaleDataWarning'
 import { MobileStockList } from './components/MobileStockList'
@@ -421,7 +422,8 @@ export default function App() {
   ]
 
   // VIP 訂閱頁面（conditional render，整個畫面替換主畫面）
-  if (showVip) {
+  // 試用期：VipPanel 入口完全封死（即使 showVip 被誤觸發也不會 render）
+  if (SHOW_VIP_UI && showVip) {
     return <VipPanel onBack={() => setShowVip(false)} />
   }
 
@@ -1036,56 +1038,88 @@ export default function App() {
         }}
       />
 
-      {/* 提示 modal：收藏超過 10 筆 */}
+      {/* 提示 modal：收藏達上限（試用期：30 支；Lemon launch 後改 VIP 升級提示）*/}
       <AlertModal
         open={favLimitPrompt}
         onClose={() => setFavLimitPrompt(false)}
-        icon="crown"
-        title="已達到收藏上限"
+        icon={SHOW_VIP_UI ? 'crown' : 'info'}
+        title={SHOW_VIP_UI ? '已達到收藏上限' : '✨ 試用期收藏已達上限'}
         message={
-          <>
-            目前免費版可收藏 10 支股票，
-            <br />
-            如需收藏更多，請升級至 VIP 方案。
-          </>
+          SHOW_VIP_UI ? (
+            <>
+              目前免費版可收藏 10 支股票，
+              <br />
+              如需收藏更多，請升級至 VIP 方案。
+            </>
+          ) : (
+            <>
+              試用期最多可收藏 30 支股票，
+              <br />
+              如需新增請先取消其他收藏。
+            </>
+          )
         }
-        primary={{
-          label: '了解 VIP 方案',
-          onClick: () => {
-            setFavLimitPrompt(false)
-            setShowVip(true)
-          },
-        }}
-        secondary={{
-          label: '稍後再說',
-          onClick: () => setFavLimitPrompt(false),
-        }}
+        primary={
+          SHOW_VIP_UI
+            ? {
+                label: '了解 VIP 方案',
+                onClick: () => {
+                  setFavLimitPrompt(false)
+                  setShowVip(true)
+                },
+              }
+            : {
+                label: '我知道了',
+                onClick: () => setFavLimitPrompt(false),
+              }
+        }
+        secondary={
+          SHOW_VIP_UI
+            ? { label: '稍後再說', onClick: () => setFavLimitPrompt(false) }
+            : undefined
+        }
       />
 
-      {/* 提示 modal：策略超過 5 筆 */}
+      {/* 提示 modal：策略達上限（試用期：15 組；Lemon launch 後改 VIP 升級提示）*/}
       <AlertModal
         open={strategyLimitPrompt}
         onClose={() => setStrategyLimitPrompt(false)}
-        icon="crown"
-        title="已達到策略上限"
+        icon={SHOW_VIP_UI ? 'crown' : 'info'}
+        title={SHOW_VIP_UI ? '已達到策略上限' : '✨ 試用期策略已達上限'}
         message={
-          <>
-            目前免費版可儲存 5 組篩選策略，
-            <br />
-            如需儲存更多，請升級至 VIP 方案。
-          </>
+          SHOW_VIP_UI ? (
+            <>
+              目前免費版可儲存 5 組篩選策略，
+              <br />
+              如需儲存更多，請升級至 VIP 方案。
+            </>
+          ) : (
+            <>
+              試用期最多可儲存 15 組篩選策略，
+              <br />
+              如需新增請先刪除其他策略。
+            </>
+          )
         }
-        primary={{
-          label: '了解 VIP 方案',
-          onClick: () => {
-            setStrategyLimitPrompt(false)
-            setShowVip(true)
-          },
-        }}
-        secondary={{
-          label: '稍後再說',
-          onClick: () => setStrategyLimitPrompt(false),
-        }}
+        primary={
+          SHOW_VIP_UI
+            ? {
+                label: '了解 VIP 方案',
+                onClick: () => {
+                  setStrategyLimitPrompt(false)
+                  setShowVip(true)
+                },
+              }
+            : {
+                label: '我知道了',
+                onClick: () => setStrategyLimitPrompt(false),
+              }
+        }
+        secondary={
+          SHOW_VIP_UI
+            ? { label: '稍後再說', onClick: () => setStrategyLimitPrompt(false) }
+            : undefined
+        }
       />
 
       <div className="fixed bottom-5 right-5 z-[9999] flex flex-col gap-2">

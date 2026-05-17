@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useTelegramBinding } from '../hooks/useTelegramBinding'
 import type { BindCodeResponse } from '../api/telegram'
+import { SHOW_VIP_UI } from '../constants/featureFlags'
 
 /**
  * SettingsPanel — 推播設定全頁
@@ -163,35 +164,61 @@ export function SettingsPanel({ onBack, onShowVip, idToken }: Props) {
       </header>
 
       <main className="px-4 sm:px-5 py-6" style={{ maxWidth: 720, margin: '0 auto' }}>
-        {/* === VIP 狀態 === */}
-        <div style={cardStyle}>
-          <div style={cardTitleStyle}>VIP 狀態</div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-            <div
-              style={{
-                padding: '4px 12px',
-                borderRadius: 6,
-                background: 'var(--color-text-muted)' + '22',
-                border: '1px solid var(--color-border)',
-                color: 'var(--color-text-secondary)',
-                fontSize: 12,
-                fontWeight: 600,
-              }}
-            >
-              FREE
+        {/* === 帳號狀態 ===
+          試用期版本：顯示「✨ 試用中」+ 額度資訊，不出現 VIP 升級按鈕。
+          Lemon Squeezy 過件後 SHOW_VIP_UI=true → 切回 VIP 升級流程 */}
+        {SHOW_VIP_UI ? (
+          <div style={cardStyle}>
+            <div style={cardTitleStyle}>VIP 狀態</div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+              <div
+                style={{
+                  padding: '4px 12px',
+                  borderRadius: 6,
+                  background: 'var(--color-text-muted)' + '22',
+                  border: '1px solid var(--color-border)',
+                  color: 'var(--color-text-secondary)',
+                  fontSize: 12,
+                  fontWeight: 600,
+                }}
+              >
+                FREE
+              </div>
+              <span style={{ color: 'var(--color-text-secondary)', fontSize: 13, flex: 1 }}>
+                免費版（基本功能 + 5 組策略）
+              </span>
+              <button
+                onClick={onShowVip}
+                className="rounded border transition-colors"
+                style={primaryBtnStyle}
+              >
+                升級 VIP
+              </button>
             </div>
-            <span style={{ color: 'var(--color-text-secondary)', fontSize: 13, flex: 1 }}>
-              免費版（基本功能 + 5 組策略）
-            </span>
-            <button
-              onClick={onShowVip}
-              className="rounded border transition-colors"
-              style={primaryBtnStyle}
-            >
-              升級 VIP
-            </button>
           </div>
-        </div>
+        ) : (
+          <div style={cardStyle}>
+            <div style={cardTitleStyle}>帳號狀態</div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+              <div
+                style={{
+                  padding: '4px 12px',
+                  borderRadius: 6,
+                  background: 'rgba(6, 182, 212, 0.18)',
+                  border: '1px solid var(--color-accent-cyan)',
+                  color: 'var(--color-accent-cyan)',
+                  fontSize: 12,
+                  fontWeight: 600,
+                }}
+              >
+                ✨ 試用中
+              </div>
+              <span style={{ color: 'var(--color-text-secondary)', fontSize: 13, flex: 1 }}>
+                可使用所有進階功能：收藏（最多 30 支）、自訂策略（最多 15 組）、Telegram 即時通知
+              </span>
+            </div>
+          </div>
+        )}
 
         {/* === 通知頻道 === */}
         <div style={cardStyle}>

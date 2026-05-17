@@ -41,7 +41,9 @@ export const ERROR_LIMIT_EXCEEDED = 'limit_exceeded'
  */
 const TIER_CAPABILITIES: Record<Tier, Omit<UserAccess, 'tier' | 'trialUntil' | 'vipUntil'>> = {
   FREE: {
-    limits: { favorites: 10, strategies: 5 },
+    // 2026-05-17 試用期上限：30 收藏 / 15 策略（之前 10/5）
+    // Lemon Squeezy 過件 + 正式 launch 後改回 10/5（並用 trial_quota grandfather 處理現有 user）
+    limits: { favorites: 30, strategies: 15 },
     canPush: false,
   },
   FRIEND: {
