@@ -214,7 +214,7 @@ export function SettingsPanel({ onBack, onShowVip, idToken }: Props) {
                 ✨ 試用中
               </div>
               <span style={{ color: 'var(--color-text-secondary)', fontSize: 13, flex: 1 }}>
-                可使用所有進階功能：收藏（最多 30 支）、自訂策略（最多 15 組）、Telegram 即時通知
+                可使用進階功能：Telegram 每日策略通知
               </span>
             </div>
           </div>
