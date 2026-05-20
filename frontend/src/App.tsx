@@ -881,16 +881,34 @@ export default function App() {
         className={isMobile && mobileTab === 'filter' ? 'flex-1' : 'flex-1 px-5 pb-8'}
         style={isMobile ? { paddingBottom: 'calc(64px + env(safe-area-inset-bottom, 0))' } : undefined}
       >
-        {/* 手機 filter tab：全螢幕 FiltersBar 取代 group/stock 主內容 */}
+        {/* 手機 filter tab：StrategyManager（已登入時）+ 全螢幕 FiltersBar */}
         {isMobile && mobileTab === 'filter' && filteredStocks.length > 0 && (
-          <FiltersBar
-            stocks={filteredStocks}
-            filters={filters}
-            onChange={setFilters}
-            mobileFullscreen
-            resultCount={filteredByFilters.length}
-            onShowResults={() => setMobileTab('stock')}
-          />
+          <>
+            {auth.isSignedIn && (
+              <div
+                className="px-3 py-2 border-b"
+                style={{
+                  background: 'var(--color-bg-700)',
+                  borderColor: 'var(--color-border)',
+                }}
+              >
+                <StrategyManager
+                  idToken={auth.idToken}
+                  filters={filters}
+                  setFilters={setFilters}
+                  onLimitExceeded={() => setStrategyLimitPrompt(true)}
+                />
+              </div>
+            )}
+            <FiltersBar
+              stocks={filteredStocks}
+              filters={filters}
+              onChange={setFilters}
+              mobileFullscreen
+              resultCount={filteredByFilters.length}
+              onShowResults={() => setMobileTab('stock')}
+            />
+          </>
         )}
 
         {!loading && stockCount === 0 && !(isMobile && mobileTab === 'filter') && (
