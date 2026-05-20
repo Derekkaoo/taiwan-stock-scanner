@@ -3,27 +3,27 @@ import { useEffect, useState } from 'react'
 /**
  * 偵測「手機/平板觸控裝置」用 layout 切換。
  *
- * 判斷條件（兩條都要符合才算 mobile）：
- *   1. viewport ≤ 1024px（含 iPad 直立 810、iPad 橫躺 1024）
- *   2. pointer: coarse（觸控；桌機鼠標是 fine）
+ * 判斷條件（只看一條）：
+ *   pointer: coarse（觸控裝置）→ 走 mobile / iPad layout
  *
- * 為什麼這樣判：
- *   - 純 viewport 邊界（譬如 768px）會讓 iPhone 14 Pro 橫躺（844px）跳到桌機 layout，
- *     直橫切換落差很大。
- *   - 加 pointer: coarse 排除「縮窄瀏覽器視窗的桌機 user」 → 他們應該還是看桌機 layout。
- *   - 結果：iPhone/Android 直橫都走 mobile、iPad（直橫）也走 mobile、真桌機（任何寬度）走桌機。
+ * 為什麼放棄 viewport 條件：
+ *   - 原本「viewport ≤ 1024」會讓 iPad 橫躺（≥ 1024）跳桌機 layout
+ *     → K 線擠在窄欄、4 stat card 都很迷你，user 反映體驗差
+ *   - 改成「只看 pointer」後：
+ *     ✅ iPhone（任何方向）→ mobile UI
+ *     ✅ iPad（直立 / 橫躺）→ mobile UI（會有點空但功能完整）
+ *     ✅ 真桌機（鼠標 = pointer: fine）→ 桌機 UI（無關視窗寬度）
+ *   - 缺點：iPad Pro 13" 橫躺（1366px）走 mobile 會有點空。
+ *     之後想做 iPad 專屬 2-column layout 再用 Tailwind `lg:` breakpoint 漸進加。
  */
 export function useIsMobile(): boolean {
   const [isMobile, setIsMobile] = useState<boolean>(() => check())
 
   useEffect(() => {
-    const mqWidth   = window.matchMedia('(max-width: 1024px)')
     const mqPointer = window.matchMedia('(pointer: coarse)')
-    const update = () => setIsMobile(mqWidth.matches && mqPointer.matches)
-    mqWidth.addEventListener('change', update)
+    const update = () => setIsMobile(mqPointer.matches)
     mqPointer.addEventListener('change', update)
     return () => {
-      mqWidth.removeEventListener('change', update)
       mqPointer.removeEventListener('change', update)
     }
   }, [])
@@ -33,6 +33,5 @@ export function useIsMobile(): boolean {
 
 function check(): boolean {
   if (typeof window === 'undefined' || !window.matchMedia) return false
-  return window.matchMedia('(max-width: 1024px)').matches &&
-         window.matchMedia('(pointer: coarse)').matches
+  return window.matchMedia('(pointer: coarse)').matches
 }
