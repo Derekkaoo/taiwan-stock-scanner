@@ -8,10 +8,18 @@
  */
 
 import { authenticateRequest, GoogleIdTokenPayload } from '../../_lib/google-auth'
+import { logEvent } from '../../_lib/events'
+import { notifyAdmin, anonId } from '../../_lib/notifyAdmin'
 
 interface Env {
   DB: D1Database
   GOOGLE_CLIENT_ID: string
+  TELEGRAM_BOT_TOKEN?: string
+  TELEGRAM_CHAT_ID?: string
+}
+
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 
 const CORS_HEADERS = {
@@ -70,23 +78,27 @@ export const onRequestPut: PagesFunction<Env> = async ({ request, env, params })
     return jsonResponse({ error: 'Invalid JSON' }, 400)
   }
 
-  // 確認該策略存在且屬於該 user
+  // 確認該策略存在且屬於該 user（順便撈舊 name 給 rename detection 用）
   const existing = await env.DB
-    .prepare('SELECT id FROM strategies WHERE id = ? AND user_uid = ?')
+    .prepare('SELECT id, name FROM strategies WHERE id = ? AND user_uid = ?')
     .bind(id, user.sub)
-    .first<{ id: number }>()
+    .first<{ id: number; name: string }>()
   if (!existing) return jsonResponse({ error: 'Not found' }, 404)
 
   // 組 update 子句
   const sets: string[] = []
   const binds: unknown[] = []
 
+  let newName: string | undefined
+  let newFiltersJson: string | undefined
+
   if (body.name !== undefined) {
     if (typeof body.name !== 'string' || !body.name.trim()) {
       return jsonResponse({ error: 'Invalid name' }, 400)
     }
+    newName = body.name.trim().slice(0, 100)
     sets.push('name = ?')
-    binds.push(body.name.trim().slice(0, 100))
+    binds.push(newName)
   }
 
   if (body.filters !== undefined) {
@@ -99,6 +111,7 @@ export const onRequestPut: PagesFunction<Env> = async ({ request, env, params })
     if (filtersJson.length > 32 * 1024) {
       return jsonResponse({ error: 'filters too large' }, 400)
     }
+    newFiltersJson = filtersJson
     sets.push('filters_json = ?')
     binds.push(filtersJson)
   }
@@ -115,6 +128,29 @@ export const onRequestPut: PagesFunction<Env> = async ({ request, env, params })
     .bind(...binds)
     .run()
 
+  // 事件追蹤 + admin Telegram 即時推
+  const userToken = `google:${user.sub}`
+  const isRename = newName && newName !== existing.name && !newFiltersJson
+  const eventType = isRename ? 'strategy_renamed' : 'strategy_updated'
+  await logEvent(env.DB, {
+    type: eventType,
+    userToken,
+    strategyName: newName ?? existing.name,
+    filtersJson: newFiltersJson,
+  })
+  await notifyAdmin(
+    env,
+    `${isRename ? '✏️ <b>策略改名</b>' : '🔄 <b>策略更新</b>'}\n` +
+      `👤 <code>${anonId(userToken)}</code>\n` +
+      (isRename
+        ? `📝 <s>${escapeHtml(existing.name)}</s> → ${escapeHtml(newName ?? '')}\n`
+        : `📝 ${escapeHtml(newName ?? existing.name)}\n`) +
+      (newFiltersJson
+        ? `🔧 <pre>${escapeHtml(newFiltersJson.slice(0, 600))}</pre>\n`
+        : '') +
+      `⏱ ${new Date().toISOString().replace('T', ' ').slice(0, 19)}`,
+  )
+
   return jsonResponse({ ok: true, id })
 }
 
@@ -127,6 +163,12 @@ export const onRequestDelete: PagesFunction<Env> = async ({ request, env, params
   const id = parseId(params.id as string | undefined)
   if (id === null) return jsonResponse({ error: 'Invalid id' }, 400)
 
+  // 先撈名稱給通知用
+  const existing = await env.DB
+    .prepare('SELECT name FROM strategies WHERE id = ? AND user_uid = ?')
+    .bind(id, user.sub)
+    .first<{ name: string }>()
+
   const res = await env.DB
     .prepare('DELETE FROM strategies WHERE id = ? AND user_uid = ?')
     .bind(id, user.sub)
@@ -135,5 +177,21 @@ export const onRequestDelete: PagesFunction<Env> = async ({ request, env, params
   if (res.meta.changes === 0) {
     return jsonResponse({ error: 'Not found' }, 404)
   }
+
+  // 事件追蹤 + admin Telegram 即時推
+  const userToken = `google:${user.sub}`
+  await logEvent(env.DB, {
+    type: 'strategy_deleted',
+    userToken,
+    strategyName: existing?.name,
+  })
+  await notifyAdmin(
+    env,
+    `🗑 <b>策略刪除</b>\n` +
+      `👤 <code>${anonId(userToken)}</code>\n` +
+      `📝 ${escapeHtml(existing?.name ?? `id=${id}`)}\n` +
+      `⏱ ${new Date().toISOString().replace('T', ' ').slice(0, 19)}`,
+  )
+
   return jsonResponse({ ok: true, id })
 }

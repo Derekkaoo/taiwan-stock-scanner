@@ -16,6 +16,7 @@ import {
   exceedsFavoritesLimit,
   getUserAccess,
 } from '../_lib/access'
+import { logEvent } from '../_lib/events'
 
 interface Env {
   DB: D1Database
@@ -136,10 +137,20 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     }
   }
 
-  await env.DB
+  const result = await env.DB
     .prepare('INSERT OR IGNORE INTO favorites (user_token, stock_id) VALUES (?, ?)')
     .bind(ctx.token, body.stock_id)
     .run()
+
+  // 事件追蹤：只有真正新增（沒重複）才記錄
+  // result.meta.changes === 1 表示新插入（INSERT OR IGNORE 重複會是 0）
+  if ((result.meta as { changes?: number } | undefined)?.changes === 1) {
+    await logEvent(env.DB, {
+      type: 'favorite_added',
+      userToken: ctx.token,
+      stockId: body.stock_id,
+    })
+  }
 
   return jsonResponse({ ok: true, stock_id: body.stock_id })
 }
@@ -159,10 +170,19 @@ export const onRequestDelete: PagesFunction<Env> = async ({ request, env }) => {
     return jsonResponse({ error: 'Invalid stock_id' }, 400)
   }
 
-  await env.DB
+  const result = await env.DB
     .prepare('DELETE FROM favorites WHERE user_token = ? AND stock_id = ?')
     .bind(ctx.token, body.stock_id)
     .run()
+
+  // 事件追蹤：只有真的有刪到才記錄
+  if ((result.meta as { changes?: number } | undefined)?.changes === 1) {
+    await logEvent(env.DB, {
+      type: 'favorite_removed',
+      userToken: ctx.token,
+      stockId: body.stock_id,
+    })
+  }
 
   return jsonResponse({ ok: true, stock_id: body.stock_id })
 }

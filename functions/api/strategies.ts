@@ -17,10 +17,14 @@ import {
   exceedsStrategiesLimit,
   getUserAccess,
 } from '../_lib/access'
+import { logEvent } from '../_lib/events'
+import { notifyAdmin, anonId } from '../_lib/notifyAdmin'
 
 interface Env {
   DB: D1Database
   GOOGLE_CLIENT_ID: string
+  TELEGRAM_BOT_TOKEN?: string
+  TELEGRAM_CHAT_ID?: string
 }
 
 interface StrategyRow {
@@ -164,5 +168,27 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     .first<StrategyRow>()
 
   if (!row) return jsonResponse({ error: 'Insert succeeded but row not found' }, 500)
+
+  // 事件追蹤 + admin Telegram 即時推
+  const userToken = `google:${user.sub}`
+  await logEvent(env.DB, {
+    type: 'strategy_saved',
+    userToken,
+    strategyName: name,
+    filtersJson,
+  })
+  await notifyAdmin(
+    env,
+    `🎯 <b>新策略儲存</b>\n` +
+      `👤 <code>${anonId(userToken)}</code>\n` +
+      `📝 ${escapeHtml(name)}\n` +
+      `🔧 <pre>${escapeHtml(filtersJson.slice(0, 600))}</pre>\n` +
+      `⏱ ${new Date().toISOString().replace('T', ' ').slice(0, 19)}`,
+  )
+
   return jsonResponse({ strategy: rowToStrategy(row) }, 201)
+}
+
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
