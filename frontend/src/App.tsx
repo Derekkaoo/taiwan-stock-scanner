@@ -931,10 +931,13 @@ export default function App() {
           </div>
         )}
 
-        {/* 手機最愛 tab：部分收藏未進入本週榜 → 顯示提示 banner（不影響後端 D1，下週上榜會自動回來）*/}
-        {isMobile && mobileTab === 'favorites' && fav.count > 0 && visibleStocks.length < fav.count && (
+        {/* 最愛模式：部分收藏未進入本週榜 → 提示 banner（桌機 + 手機都顯示）
+            桌機：showFavoritesOnly toggle on
+            手機：mobileTab === 'favorites'
+            兩種情境共用 showFavoritesOnly state（mobileTab=favorites 會自動設為 true）*/}
+        {showFavoritesOnly && fav.count > 0 && visibleStocks.length < fav.count && (
           <div
-            className="mx-3 mb-3 px-3 py-2 rounded text-[12px]"
+            className={isMobile ? 'mx-3 mb-3 px-3 py-2 rounded text-[12px]' : 'mx-5 my-2 px-4 py-2 rounded text-[13px]'}
             style={{
               background: 'rgba(6, 182, 212, 0.10)',
               border: '1px solid rgba(6, 182, 212, 0.35)',
