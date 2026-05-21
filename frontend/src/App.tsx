@@ -931,6 +931,23 @@ export default function App() {
           </div>
         )}
 
+        {/* 手機最愛 tab：部分收藏未進入本週榜 → 顯示提示 banner（不影響後端 D1，下週上榜會自動回來）*/}
+        {isMobile && mobileTab === 'favorites' && fav.count > 0 && visibleStocks.length < fav.count && (
+          <div
+            className="mx-3 mb-3 px-3 py-2 rounded text-[12px]"
+            style={{
+              background: 'rgba(6, 182, 212, 0.10)',
+              border: '1px solid rgba(6, 182, 212, 0.35)',
+              color: 'var(--color-text-secondary)',
+              lineHeight: 1.6,
+            }}
+          >
+            <span style={{ color: 'var(--color-accent-cyan)' }}>ℹ️ </span>
+            你有 {fav.count} 筆收藏，本週榜上 {visibleStocks.length} 筆顯示中。
+            未顯示的 {fav.count - visibleStocks.length} 筆未刪除，下週如上榜會自動回來。
+          </div>
+        )}
+
         {effectiveView === 'group' && stockCount > 0 && !(isMobile && mobileTab === 'filter') && (
           <div className="flex flex-col gap-2">
             {sortedGroupEntries.map(([name, stks]) => (
