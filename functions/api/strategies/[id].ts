@@ -10,6 +10,7 @@
 import { authenticateRequest, GoogleIdTokenPayload } from '../../_lib/google-auth'
 import { logEvent } from '../../_lib/events'
 import { notifyAdmin, anonId } from '../../_lib/notifyAdmin'
+import { formatFilters } from '../../_lib/formatFilters'
 
 interface Env {
   DB: D1Database
@@ -146,7 +147,7 @@ export const onRequestPut: PagesFunction<Env> = async ({ request, env, params })
         ? `📝 <s>${escapeHtml(existing.name)}</s> → ${escapeHtml(newName ?? '')}\n`
         : `📝 ${escapeHtml(newName ?? existing.name)}\n`) +
       (newFiltersJson
-        ? `🔧 <pre>${escapeHtml(newFiltersJson.slice(0, 600))}</pre>\n`
+        ? `🔧 條件：\n${escapeHtml(formatFilters(newFiltersJson))}\n`
         : '') +
       `⏱ ${new Date().toISOString().replace('T', ' ').slice(0, 19)}`,
   )

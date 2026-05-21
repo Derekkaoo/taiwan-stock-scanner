@@ -19,6 +19,7 @@ import {
 } from '../_lib/access'
 import { logEvent } from '../_lib/events'
 import { notifyAdmin, anonId } from '../_lib/notifyAdmin'
+import { formatFilters } from '../_lib/formatFilters'
 
 interface Env {
   DB: D1Database
@@ -182,7 +183,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     `🎯 <b>新策略儲存</b>\n` +
       `👤 <code>${anonId(userToken)}</code>\n` +
       `📝 ${escapeHtml(name)}\n` +
-      `🔧 <pre>${escapeHtml(filtersJson.slice(0, 600))}</pre>\n` +
+      `🔧 條件：\n${escapeHtml(formatFilters(filtersJson))}\n` +
       `⏱ ${new Date().toISOString().replace('T', ' ').slice(0, 19)}`,
   )
 
