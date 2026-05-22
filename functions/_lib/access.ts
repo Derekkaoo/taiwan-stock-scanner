@@ -41,10 +41,20 @@ export const ERROR_LIMIT_EXCEEDED = 'limit_exceeded'
  */
 const TIER_CAPABILITIES: Record<Tier, Omit<UserAccess, 'tier' | 'trialUntil' | 'vipUntil'>> = {
   FREE: {
-    // 2026-05-17 試用期上限：30 收藏 / 15 策略（之前 10/5）
-    // Lemon Squeezy 過件 + 正式 launch 後改回 10/5（並用 trial_quota grandfather 處理現有 user）
-    limits: { favorites: 30, strategies: 15 },
-    canPush: false,
+    // 2026-05-23 不限期試用：跟 TRIAL 一樣（無限收藏 + 無限策略 + 推播）
+    //
+    // ─── 金流上線 SOP（祖父條款方案 Y）───
+    // 等綠界 ECPay 過件 + VIP 訂閱功能上線後，這裡改回：
+    //   limits: { favorites: 10, strategies: 5 },
+    //   canPush: false,
+    // 改完後：
+    //   - 既有 user 的策略/最愛資料**全部保留**（D1 不動）
+    //   - 但 API 會擋新增超過 10/5（exceedsFavoritesLimit / exceedsStrategiesLimit 自動生效）
+    //   - 推播 cron 會跳過 FREE user（push_user_strategies.py 要加 tier 判斷）
+    //   - 推 Telegram 通知所有已綁定的 user：「金流已上線，可升級 VIP 解鎖無限新增 + 推播」
+    //   - SHOW_VIP_UI 維持 true
+    limits: { favorites: null, strategies: null },
+    canPush: true,
   },
   FRIEND: {
     limits: { favorites: null, strategies: null },

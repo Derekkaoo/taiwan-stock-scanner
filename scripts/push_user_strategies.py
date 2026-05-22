@@ -390,6 +390,17 @@ def run() -> int:
         chat_id = u["chat_id"]
         strategies = u["strategies"]
 
+        # ─── 金流上線後解開（祖父條款方案 Y）───
+        # 目前不限期試用：所有綁定 user 都推。
+        # 等綠界 ECPay 過件 + VIP 訂閱上線後：
+        #   1. fetch_d1_data / fetch_endpoint_data 要 SELECT 出 user_status.tier
+        #   2. 把下面三行解註解，跳過 FREE user
+        # tier = (u.get("tier") or "FREE").upper()
+        # if tier == "FREE":
+        #     logger.info("user=%s tier=FREE 沒訂閱，跳過推播", email)
+        #     skipped += 1
+        #     continue
+
         if not strategies:
             logger.info("user=%s chat=%s 沒有任何策略，跳過", email, chat_id)
             skipped += 1

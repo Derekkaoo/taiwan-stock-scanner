@@ -16,3 +16,35 @@
  * 綠界審核期間若要回復隱藏，改回 false 即可
  */
 export const SHOW_VIP_UI = true
+
+/**
+ * ─────────────────────────────────────────────────────────────
+ * 金流上線 SOP（祖父條款方案 Y — 既有資料保留、推播降級）
+ * ─────────────────────────────────────────────────────────────
+ *
+ * 現況（不限期試用）：
+ *   - functions/_lib/access.ts 的 FREE tier limits = null/null + canPush = true
+ *   - 所有人都享無限策略 + 無限收藏 + Telegram 推播
+ *
+ * 等綠界 ECPay 過件 + VIP 訂閱功能上線後，照以下步驟切回收費模式：
+ *
+ *   ① functions/_lib/access.ts FREE tier 改回：
+ *        limits: { favorites: 10, strategies: 5 },
+ *        canPush: false,
+ *      → 既有資料**全部保留**，但 API 會擋新增超過 10/5
+ *
+ *   ② scripts/push_user_strategies.py 加 tier 過濾（骨架已預埋，解註解即可）：
+ *      → if access.tier == 'FREE': continue  # 不推 FREE user
+ *
+ *   ③ SHOW_VIP_UI 維持 true（讓人看到升級按鈕）
+ *
+ *   ④ 推 Telegram 通知所有已綁定的 user：
+ *      「金流已上線，VIP 訂閱解鎖無限新增 + 個人化推播」
+ *
+ *   ⑤ 觀察 7 天 churn 和訂閱率，再決定是否加碼優惠
+ *
+ * 為什麼這樣設計：
+ *   - 既有 user 的最愛/策略不會消失 → 不會引發強烈反彈
+ *   - 「不能新增」+「沒推播」是真正的痛點 → 觸發訂閱動機
+ *   - VIP 訂閱 (NT$88/月 或 NT$888/年) 解鎖：無限新增 + 個人化推播
+ */
