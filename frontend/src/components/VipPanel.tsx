@@ -47,55 +47,38 @@ const PLANS: Plan[] = [
   {
     key: 'monthly',
     name: '月付方案',
-    price: 'NT$128',
+    price: 'NT$88',
     unit: '/月',
     features: [
       '⭐ 無限收藏 + 策略',
       '🔔 個人化推播',
-      '📊 大戶異動即時通知',
       '🎯 個人策略命中提醒',
     ],
     cta: '立即訂閱',
-  },
-  {
-    key: 'quarterly',
-    name: '季付方案',
-    price: 'NT$288',
-    unit: '/季',
-    highlight: '⭐ 最划算',
-    badge: '省 25%',
-    features: [
-      '⭐ 無限收藏 + 策略',
-      '🔔 個人化推播',
-      '📊 大戶異動即時通知',
-      '🎯 個人策略命中提醒',
-      '💰 平均 NT$96/月',
-    ],
-    cta: '立即訂閱',
-    recommended: true,
   },
   {
     key: 'yearly',
     name: '年付方案',
     price: 'NT$888',
     unit: '/年',
-    badge: '省 42%',
+    highlight: '⭐ 最划算',
+    badge: '省 16%',
     features: [
       '⭐ 無限收藏 + 策略',
       '🔔 個人化推播',
-      '📊 大戶異動即時通知',
       '🎯 個人策略命中提醒',
       '💰 平均 NT$74/月',
     ],
     cta: '立即訂閱',
+    recommended: true,
   },
 ]
 
 const VIP_FEATURES = [
-  { icon: '🔔', title: '個人化每日推播', desc: '每天 13:30 收盤後推送你的最愛股表現' },
-  { icon: '⭐', title: '突破 / 跌破警示', desc: '最愛股創新高或跌破 MA20 即時通知' },
-  { icon: '💰', title: '大戶異動通知', desc: '本週大戶持股增加 ≥ 0.5% 主動推播' },
-  { icon: '📊', title: '個人策略命中', desc: '你儲存的篩選策略每天自動跑，命中即通知' },
+  { icon: '🔔', title: '個人化每日推播', desc: '推送你的最愛股 + 策略命中結果' },
+  { icon: '⭐', title: '無限收藏 + 策略', desc: '不受免費版 10 支收藏 / 5 組策略限制' },
+  { icon: '🎯', title: '個人策略命中', desc: '你儲存的篩選策略每日自動跑，命中時 Telegram 通知' },
+  { icon: '🌐', title: '跨裝置即時同步', desc: '多裝置同步收藏與策略，登入 Google 帳號即可' },
 ]
 
 const FAQ = [
