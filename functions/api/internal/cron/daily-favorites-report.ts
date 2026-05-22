@@ -135,11 +135,13 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
     })
   }
 
-  // 沒任何活動就推一句精簡
+  // 沒任何活動就靜默（user 偏好：避免每天空白訊息）
   if (addedTotal.n === 0 && removedTotal.n === 0) {
-    lines.length = 0
-    lines.push(`📊 <b>今日收藏統計 ${today}</b>`)
-    lines.push('過去 24 小時無收藏 / 移除活動。')
+    return jsonResponse({
+      ok: true,
+      skipped: true,
+      reason: 'no activity in past 24h',
+    })
   }
 
   const msg = lines.join('\n')
