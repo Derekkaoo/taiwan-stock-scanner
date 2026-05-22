@@ -169,30 +169,31 @@ export function SettingsPanel({ onBack, onShowVip, idToken }: Props) {
           Lemon Squeezy 過件後 SHOW_VIP_UI=true → 切回 VIP 升級流程 */}
         {SHOW_VIP_UI ? (
           <div style={cardStyle}>
-            <div style={cardTitleStyle}>VIP 狀態</div>
+            <div style={cardTitleStyle}>帳號狀態</div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
               <div
                 style={{
                   padding: '4px 12px',
                   borderRadius: 6,
-                  background: 'var(--color-text-muted)' + '22',
-                  border: '1px solid var(--color-border)',
-                  color: 'var(--color-text-secondary)',
+                  background: 'rgba(6, 182, 212, 0.18)',
+                  border: '1px solid var(--color-accent-cyan)',
+                  color: 'var(--color-accent-cyan)',
                   fontSize: 12,
                   fontWeight: 600,
+                  whiteSpace: 'nowrap',
                 }}
               >
-                FREE
+                ✨ 試用中
               </div>
               <span style={{ color: 'var(--color-text-secondary)', fontSize: 13, flex: 1 }}>
-                免費版（基本功能 + 5 組策略）
+                試用階段免費開放：無限收藏 + 無限策略 + 個人化推播
               </span>
               <button
                 onClick={onShowVip}
                 className="rounded border transition-colors"
                 style={primaryBtnStyle}
               >
-                升級 VIP
+                了解 VIP
               </button>
             </div>
           </div>

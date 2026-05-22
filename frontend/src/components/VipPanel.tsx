@@ -424,9 +424,9 @@ export function VipPanel({ onBack }: Props) {
         title="VIP 訂閱即將開放"
         message={
           <>
-            VIP 訂閱即將開放，敬請期待 ✨
+            目前為試用階段，所有功能免費開放使用 ✨
             <br />
-            開放時將以 Email 通知你。
+            VIP 訂閱即將開放，敬請期待。
           </>
         }
         primary={{
