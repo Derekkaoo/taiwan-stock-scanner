@@ -140,7 +140,7 @@ export function VipPanel({ onBack }: Props) {
             升級 VIP，掌握每日進出時機
           </h2>
           <p style={{ color: 'var(--color-text-secondary)', fontSize: 14 }}>
-            個人化推播、無限收藏、大戶異動即時通知
+            個人化推播、無限收藏、個人策略命中提醒
           </p>
         </div>
 
