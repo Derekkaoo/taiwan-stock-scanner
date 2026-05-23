@@ -267,27 +267,67 @@ function ChipButton({
 }
 
 // ============================================================
-//  FilterGroup: 把同 section 內相關 filters 包成有 label 的子卡片
+//  FilterTabBar: 同 section 內以水平 tab 切換 sub-group
+//  - 桌機：normal flex row（不滾動）
+//  - 手機：overflow-x: auto + 較小 padding
 // ============================================================
-function FilterGroup({ title, children }: { title: string; children: React.ReactNode }) {
+function FilterTabBar({
+  tabs, activeTab, onChange, compact = false,
+}: {
+  tabs: { key: SectionTabKey; label: string; activeCount: number }[]
+  activeTab: SectionTabKey
+  onChange: (k: SectionTabKey) => void
+  compact?: boolean
+}) {
   return (
-    <div style={{
-      background: 'var(--color-bg-600)',
-      border: '1px solid var(--color-border)',
-      borderRadius: 8,
-      padding: '12px 14px',
-      marginBottom: 8,
-    }}>
-      <div style={{
-        fontSize: 11,
-        color: 'var(--color-text-muted)',
-        textTransform: 'uppercase',
-        letterSpacing: '0.5px',
-        marginBottom: 8,
-      }}>
-        {title}
-      </div>
-      {children}
+    <div
+      style={{
+        display: 'flex',
+        gap: 0,
+        borderBottom: '1px solid var(--color-border)',
+        marginBottom: 12,
+        overflowX: compact ? 'auto' : 'visible',
+      }}
+    >
+      {tabs.map(tab => {
+        const isActive    = tab.key === activeTab
+        const hasFilters  = tab.activeCount > 0
+        return (
+          <button
+            key={tab.key}
+            onClick={() => onChange(tab.key)}
+            style={{
+              background: 'transparent',
+              border: 'none',
+              padding: compact ? '8px 12px' : '8px 14px',
+              fontSize: 12,
+              fontWeight: isActive ? 500 : 400,
+              color: isActive ? 'var(--color-accent-cyan)' : 'var(--color-text-muted)',
+              borderBottom: isActive
+                ? '2px solid var(--color-accent-cyan)'
+                : '2px solid transparent',
+              marginBottom: -1,
+              whiteSpace: 'nowrap',
+              flexShrink: 0,
+              cursor: 'pointer',
+            }}
+          >
+            {tab.label}
+            {hasFilters && (
+              <span style={{
+                marginLeft: 4,
+                padding: '1px 6px',
+                borderRadius: 9999,
+                fontSize: 10,
+                background: isActive ? 'rgba(6,182,212,0.25)' : 'rgba(255,255,255,0.06)',
+                color: isActive ? 'var(--color-accent-cyan)' : 'var(--color-text-secondary)',
+              }}>
+                {tab.activeCount}
+              </span>
+            )}
+          </button>
+        )
+      })}
     </div>
   )
 }
@@ -384,11 +424,98 @@ function FilterStatusBar({
 
 type SectionKey = 'fund' | 'tech' | 'chips' | 'meta'
 
+type SectionTabKey =
+  | 'valuation' | 'growth' | 'quarterly'    // fund
+  | 'volume' | 'highs' | 'ma'                // tech
+  | 'majors' | 'institutional'               // chips
+  | 'market' | 'industries'                  // meta
+
 const SECTION_LABELS: Record<SectionKey, string> = {
   fund:  '📊 基本面',
   tech:  '📈 技術面',
   chips: '💰 籌碼面',
   meta:  '🏷 其他',
+}
+
+const SECTION_TABS: Record<SectionKey, { key: SectionTabKey; label: string }[]> = {
+  fund: [
+    { key: 'valuation', label: '估值' },
+    { key: 'growth',    label: '成長動能' },
+    { key: 'quarterly', label: '季度獲利能力' },
+  ],
+  tech: [
+    { key: 'volume', label: '量價' },
+    { key: 'highs',  label: '創新高' },
+    { key: 'ma',     label: '均線' },
+  ],
+  chips: [
+    { key: 'majors',        label: '大戶' },
+    { key: 'institutional', label: '法人' },
+  ],
+  meta: [
+    { key: 'market',     label: '上市櫃' },
+    { key: 'industries', label: '產業' },
+  ],
+}
+
+const DEFAULT_ACTIVE_TABS: Record<SectionKey, SectionTabKey> = {
+  fund:  'valuation',
+  tech:  'volume',
+  chips: 'majors',
+  meta:  'market',
+}
+
+// Tab → 該 tab 內的 active filter 數
+export function activeCountForTab(tab: SectionTabKey, f: Filters): number {
+  switch (tab) {
+    case 'valuation':
+      return ranged(f.marketCap, DEFAULT_FILTERS.marketCap) ? 1 : 0
+    case 'growth': {
+      let n = 0
+      if (ranged(f.revenueYoY, DEFAULT_FILTERS.revenueYoY)) n++
+      if (f.growth.quarters !== 0 &&
+          (f.growth.metrics.eps || f.growth.metrics.grossMargin || f.growth.metrics.operatingMargin)) n++
+      return n
+    }
+    case 'quarterly':
+      return f.absValue.quarter && (
+        ranged(f.absValue.grossMargin,     DEFAULT_FILTERS.absValue.grossMargin) ||
+        ranged(f.absValue.operatingMargin, DEFAULT_FILTERS.absValue.operatingMargin) ||
+        ranged(f.absValue.eps,             DEFAULT_FILTERS.absValue.eps)
+      ) ? 1 : 0
+    case 'volume': {
+      let n = 0
+      if (ranged(f.volume, DEFAULT_FILTERS.volume)) n++
+      if (f.nDayReturn.days !== 0) n++
+      return n
+    }
+    case 'highs': {
+      let n = 0
+      if (f.nDayHigh.days !== 0) n++
+      if (f.volumeNewHigh.days !== 0) n++
+      if (f.volumeSurge.multiplier !== 0) n++
+      return n
+    }
+    case 'ma': {
+      let n = 0
+      if ((f.maAlignment?.periods?.length ?? 0) >= 2) n++
+      if ((f.maDirection?.periods?.length ?? 0) >= 1) n++
+      if ((f.maBreakout?.days ?? 0) !== 0 && (f.maBreakout?.period ?? 0) !== 0) n++
+      if ((f.maContinuation?.direction ?? 'off') !== 'off' && (f.maContinuation?.period ?? 0) !== 0) n++
+      if ((f.maSustained?.days ?? 0) !== 0 && (f.maSustained?.period ?? 0) !== 0) n++
+      if ((f.downtrendBreak?.days ?? 0) !== 0) n++
+      if ((f.pullbackMa?.period ?? 0) !== 0) n++
+      return n
+    }
+    case 'majors':
+      return ranged(f.delta, DEFAULT_FILTERS.delta) ? 1 : 0
+    case 'institutional':
+      return (f.institutional.days !== 0 && (f.institutional.foreign || f.institutional.trust)) ? 1 : 0
+    case 'market':
+      return f.market !== 'all' ? 1 : 0
+    case 'industries':
+      return f.industries.length > 0 ? 1 : 0
+  }
 }
 
 export function activeCountForSection(key: SectionKey, f: Filters): number {
@@ -455,6 +582,29 @@ function saveOpenSections(s: Set<SectionKey>) {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...s])) } catch { /* ignore */ }
 }
 
+const ACTIVE_TABS_STORAGE_KEY = 'filtersbar_active_tabs_v1'
+function loadActiveTabs(): Record<SectionKey, SectionTabKey> {
+  try {
+    const raw = localStorage.getItem(ACTIVE_TABS_STORAGE_KEY)
+    if (raw) {
+      const parsed = JSON.parse(raw) as Partial<Record<SectionKey, SectionTabKey>>
+      // 用 default 補齊 + 驗證 value 仍在該 section 的 tabs 內
+      const result: Record<SectionKey, SectionTabKey> = { ...DEFAULT_ACTIVE_TABS }
+      ;(['fund', 'tech', 'chips', 'meta'] as SectionKey[]).forEach(sec => {
+        const v = parsed[sec]
+        if (v && SECTION_TABS[sec].some(t => t.key === v)) {
+          result[sec] = v
+        }
+      })
+      return result
+    }
+  } catch { /* ignore */ }
+  return { ...DEFAULT_ACTIVE_TABS }
+}
+function saveActiveTabs(tabs: Record<SectionKey, SectionTabKey>) {
+  try { localStorage.setItem(ACTIVE_TABS_STORAGE_KEY, JSON.stringify(tabs)) } catch { /* ignore */ }
+}
+
 export function FiltersBar({
   stocks, filters, onChange,
   mobileOpen: extOpen, setMobileOpen: extSetOpen, hideMobileTrigger,
@@ -466,11 +616,17 @@ export function FiltersBar({
   const mobileOpen    = isControlled ? extOpen!  : internalOpen
   const setMobileOpen = isControlled ? extSetOpen! : setInternalOpen
   const [openSections, setOpenSections] = useState<Set<SectionKey>>(() => loadOpenSections())
+  const [activeTab, setActiveTab] = useState<Record<SectionKey, SectionTabKey>>(() => loadActiveTabs())
 
   const totalActive = useMemo(() => totalActiveCount(filters), [filters])
   const quarters = useMemo(() => recentQuarters(stocks, 4), [stocks])
 
   useEffect(() => { saveOpenSections(openSections) }, [openSections])
+  useEffect(() => { saveActiveTabs(activeTab) }, [activeTab])
+
+  const setActiveTabFor = (section: SectionKey, key: SectionTabKey) => {
+    setActiveTab(prev => ({ ...prev, [section]: key }))
+  }
 
   useEffect(() => {
     if (!mobileOpen) return
@@ -479,12 +635,12 @@ export function FiltersBar({
     return () => { document.body.style.overflow = prev }
   }, [mobileOpen])
 
+  // Accordion 模式：同時間最多只開一個 section。
+  // 點已開的 → 收起；點未開的 → 只開這個，其他全收。
   const toggleSection = (k: SectionKey) => {
     setOpenSections(prev => {
-      const next = new Set(prev)
-      if (next.has(k)) next.delete(k)
-      else next.add(k)
-      return next
+      if (prev.has(k)) return new Set()
+      return new Set([k])
     })
   }
 
@@ -1231,81 +1387,103 @@ export function FiltersBar({
     </div>
   )
 
-  // === 各 section 內容（用 FilterGroup 把相關 filter 包成子卡片）===
-  const sectionContent: Record<SectionKey, React.ReactNode> = {
-    fund: (
+  // === 各 section 內容（tab 切換 sub-group，無外框卡片）===
+  const renderSectionContent = (key: SectionKey, compact: boolean): React.ReactNode => {
+    const tabs = SECTION_TABS[key].map(t => ({
+      key: t.key,
+      label: t.label,
+      activeCount: activeCountForTab(t.key, filters),
+    }))
+    const current = activeTab[key]
+    const tabBar = (
+      <FilterTabBar
+        tabs={tabs}
+        activeTab={current}
+        onChange={k => setActiveTabFor(key, k)}
+        compact={compact}
+      />
+    )
+
+    if (key === 'fund') {
+      return (
+        <div className="flex flex-col">
+          {tabBar}
+          {current === 'valuation' && (
+            <div className="flex items-center gap-4 flex-wrap">{marketCapSlider}</div>
+          )}
+          {current === 'growth' && (
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-4 flex-wrap">{revenueYoYSlider}</div>
+              <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{growthBlock}</div>
+            </div>
+          )}
+          {current === 'quarterly' && absValueBlock}
+        </div>
+      )
+    }
+    if (key === 'tech') {
+      return (
+        <div className="flex flex-col">
+          {tabBar}
+          {current === 'volume' && (
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-4 flex-wrap">{volumeSlider}</div>
+              <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{nReturnBlock}</div>
+            </div>
+          )}
+          {current === 'highs' && (
+            <div className="flex flex-col gap-2">
+              {nHighBlock}
+              <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{volumeNewHighBlock}</div>
+              <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{volumeSurgeBlock}</div>
+            </div>
+          )}
+          {current === 'ma' && (
+            <div className="flex flex-col gap-2">
+              {maAlignmentBlock}
+              <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maDirectionBlock}</div>
+              <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maBreakoutBlock}</div>
+              <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maContinuationBlock}</div>
+              <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maSustainedBlock}</div>
+              <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{downtrendBreakBlock}</div>
+              <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{pullbackMaBlock}</div>
+            </div>
+          )}
+        </div>
+      )
+    }
+    if (key === 'chips') {
+      return (
+        <div className="flex flex-col">
+          {tabBar}
+          {current === 'majors' && (
+            <div className="flex items-center gap-4 flex-wrap">{deltaSlider}</div>
+          )}
+          {current === 'institutional' && institutionalBlock}
+        </div>
+      )
+    }
+    // meta
+    return (
       <div className="flex flex-col">
-        <FilterGroup title="估值">
-          <div className="flex items-center gap-4 flex-wrap">{marketCapSlider}</div>
-        </FilterGroup>
-        <FilterGroup title="成長動能">
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-4 flex-wrap">{revenueYoYSlider}</div>
-            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{growthBlock}</div>
-          </div>
-        </FilterGroup>
-        <FilterGroup title="季度獲利能力">
-          {absValueBlock}
-        </FilterGroup>
+        {tabBar}
+        {current === 'market' && marketBlock}
+        {current === 'industries' && (
+          <>
+            <div className="text-[11px] mb-2" style={{ color: 'var(--color-text-muted)' }}>產業別（多選任一）</div>
+            <IndustryChips
+              stocks={stocks}
+              selected={filters.industries}
+              onChange={v => set({ industries: v })}
+            />
+          </>
+        )}
       </div>
-    ),
-    tech: (
-      <div className="flex flex-col">
-        <FilterGroup title="量價">
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-4 flex-wrap">{volumeSlider}</div>
-            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{nReturnBlock}</div>
-          </div>
-        </FilterGroup>
-        <FilterGroup title="創新高">
-          <div className="flex flex-col gap-2">
-            {nHighBlock}
-            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{volumeNewHighBlock}</div>
-            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{volumeSurgeBlock}</div>
-          </div>
-        </FilterGroup>
-        <FilterGroup title="均線">
-          <div className="flex flex-col gap-2">
-            {maAlignmentBlock}
-            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maDirectionBlock}</div>
-            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maBreakoutBlock}</div>
-            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maContinuationBlock}</div>
-            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maSustainedBlock}</div>
-            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{downtrendBreakBlock}</div>
-            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{pullbackMaBlock}</div>
-          </div>
-        </FilterGroup>
-      </div>
-    ),
-    chips: (
-      <div className="flex flex-col">
-        <FilterGroup title="大戶">
-          <div className="flex items-center gap-4 flex-wrap">{deltaSlider}</div>
-        </FilterGroup>
-        <FilterGroup title="法人">
-          {institutionalBlock}
-        </FilterGroup>
-      </div>
-    ),
-    meta: (
-      <div className="flex flex-col">
-        <FilterGroup title="上市櫃">
-          {marketBlock}
-        </FilterGroup>
-        <FilterGroup title="產業">
-          <div className="text-[11px] mb-2" style={{ color: 'var(--color-text-muted)' }}>產業別（多選任一）</div>
-          <IndustryChips
-            stocks={stocks}
-            selected={filters.industries}
-            onChange={v => set({ industries: v })}
-          />
-        </FilterGroup>
-      </div>
-    ),
+    )
   }
 
   // === Collapsible Section header + body 渲染 ===
-  const renderSection = (key: SectionKey) => {
+  const renderSection = (key: SectionKey, compact: boolean = false) => {
     const open = openSections.has(key)
     const count = activeCountForSection(key, filters)
     return (
@@ -1344,7 +1522,7 @@ export function FiltersBar({
         </button>
         {open && (
           <div className="px-5 pb-3 pt-1">
-            {sectionContent[key]}
+            {renderSectionContent(key, compact)}
           </div>
         )}
       </div>
@@ -1379,7 +1557,7 @@ export function FiltersBar({
 
         {/* Sections（normal flow，paddingBottom 留空間給底部 fixed 按鈕）*/}
         <div style={{ paddingBottom: 120 }}>
-          {allSections.map(renderSection)}
+          {allSections.map(key => renderSection(key, true))}
         </div>
 
         {/* Fixed 底部按鈕：在 bottom nav 上方 */}
@@ -1425,7 +1603,7 @@ export function FiltersBar({
             onSaveStrategy={onSaveStrategy}
           />
         </div>
-        {allSections.map(renderSection)}
+        {allSections.map(key => renderSection(key, false))}
       </div>
 
       {/* 手機按鈕（如果父層用 bottom nav 接管 filter 入口，可隱藏）*/}
@@ -1507,7 +1685,7 @@ export function FiltersBar({
               />
             </div>
             <div>
-              {allSections.map(renderSection)}
+              {allSections.map(key => renderSection(key, true))}
             </div>
           </div>
         </div>
