@@ -50,6 +50,8 @@ interface Props {
   resultCount?: number
   /** 全螢幕模式：點底部按鈕觸發（通常切到 stock tab）*/
   onShowResults?: () => void
+  /** 提供後，FilterStatusBar 會顯示「儲存策略」按鈕 */
+  onSaveStrategy?: () => void
 }
 
 const VOLUME_SCALE     = makePiecewiseScale([0, 5000, 25000, 100000, 500000])  // 張（左密右疏）
@@ -222,27 +224,161 @@ function FilterSubRow({ label, children }: { label: string; children: React.Reac
 }
 
 function ChipButton({
-  active, label, onClick,
+  active, label, onClick, isDefault = false,
 }: {
   active: boolean
   label: React.ReactNode
   onClick: () => void
+  /** true 表示這個 chip 代表「該 filter 的預設值」(不限/關閉/off)。
+   *  active && isDefault → 不上 cyan 高亮（只比 inactive 多一點選取質感） */
+  isDefault?: boolean
 }) {
+  // 三態
+  const highlighted = active && !isDefault
+  const quietSelected = active && isDefault
+  const bg     = highlighted ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)'
+  const border = highlighted
+    ? 'var(--color-accent-cyan)'
+    : quietSelected
+      ? 'var(--color-text-muted)'
+      : 'var(--color-border)'
+  const color = highlighted
+    ? '#fff'
+    : quietSelected
+      ? 'var(--color-text-primary)'
+      : 'var(--color-text-secondary)'
+  const fontWeight = highlighted ? 600 : 400
   return (
     <button
       onClick={onClick}
       className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
       style={{
-        background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-        borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-        color:       active ? '#fff' : 'var(--color-text-secondary)',
-        fontWeight:  active ? 600 : 400,
+        background:  bg,
+        borderColor: border,
+        color,
+        fontWeight,
         cursor: 'pointer',
         whiteSpace: 'nowrap',
       }}
     >
       {label}
     </button>
+  )
+}
+
+// ============================================================
+//  FilterGroup: 把同 section 內相關 filters 包成有 label 的子卡片
+// ============================================================
+function FilterGroup({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div style={{
+      background: 'var(--color-bg-600)',
+      border: '1px solid var(--color-border)',
+      borderRadius: 8,
+      padding: '12px 14px',
+      marginBottom: 8,
+    }}>
+      <div style={{
+        fontSize: 11,
+        color: 'var(--color-text-muted)',
+        textTransform: 'uppercase',
+        letterSpacing: '0.5px',
+        marginBottom: 8,
+      }}>
+        {title}
+      </div>
+      {children}
+    </div>
+  )
+}
+
+// ============================================================
+//  FilterStatusBar: 頂部 sticky 狀態列 + 清空/儲存策略 按鈕
+// ============================================================
+function FilterStatusBar({
+  activeCount, resultCount, onReset, onSaveStrategy, compact = false,
+}: {
+  activeCount: number
+  resultCount?: number
+  onReset: () => void
+  onSaveStrategy?: () => void
+  compact?: boolean
+}) {
+  const pad = compact ? '8px 12px' : '10px 14px'
+  const fontSize = compact ? 12 : 13
+  return (
+    <div style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: 8,
+      background: 'color-mix(in srgb, var(--color-accent-cyan) 8%, var(--color-bg-700))',
+      borderLeft: '3px solid var(--color-accent-cyan)',
+      borderRadius: 8,
+      padding: pad,
+      marginBottom: 8,
+      flexWrap: 'wrap',
+    }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: 'var(--color-text-primary)', fontSize, flexWrap: 'wrap' }}>
+        <span style={{
+          width: 8, height: 8, borderRadius: '50%',
+          background: activeCount > 0 ? 'var(--color-accent-cyan)' : 'var(--color-text-muted)',
+          display: 'inline-block',
+        }} />
+        {activeCount > 0 ? (
+          <>
+            <span>已啟用 <strong style={{ color: 'var(--color-accent-cyan)' }}>{activeCount}</strong> 個篩選</span>
+            {resultCount !== undefined && (
+              <span style={{ color: 'var(--color-text-secondary)' }}>
+                → <strong style={{ color: 'var(--color-text-primary)' }}>{resultCount}</strong> 筆結果
+              </span>
+            )}
+          </>
+        ) : (
+          <span style={{ color: 'var(--color-text-secondary)' }}>
+            尚未啟用篩選
+            {resultCount !== undefined && (
+              <> <span style={{ color: 'var(--color-text-muted)' }}>(全部 {resultCount} 筆)</span></>
+            )}
+          </span>
+        )}
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+        {activeCount > 0 && (
+          <button
+            onClick={onReset}
+            style={{
+              fontSize: 11,
+              padding: '4px 8px',
+              borderRadius: 4,
+              border: '1px solid var(--color-border)',
+              background: 'var(--color-bg-600)',
+              color: 'var(--color-text-secondary)',
+              cursor: 'pointer',
+            }}
+          >
+            清空全部
+          </button>
+        )}
+        {onSaveStrategy && (
+          <button
+            onClick={onSaveStrategy}
+            style={{
+              fontSize: 11,
+              padding: '4px 8px',
+              borderRadius: 4,
+              border: '1px solid var(--color-accent-cyan)',
+              background: 'var(--color-accent-cyan)',
+              color: '#fff',
+              cursor: 'pointer',
+              fontWeight: 600,
+            }}
+          >
+            儲存策略
+          </button>
+        )}
+      </div>
+    </div>
   )
 }
 
@@ -322,7 +458,7 @@ function saveOpenSections(s: Set<SectionKey>) {
 export function FiltersBar({
   stocks, filters, onChange,
   mobileOpen: extOpen, setMobileOpen: extSetOpen, hideMobileTrigger,
-  mobileFullscreen, resultCount, onShowResults,
+  mobileFullscreen, resultCount, onShowResults, onSaveStrategy,
 }: Props) {
   // 控制模式：父層提供 mobileOpen + setMobileOpen → 用父層 state；否則用內部 state（向後相容）
   const [internalOpen, setInternalOpen] = useState(false)
@@ -482,26 +618,15 @@ export function FiltersBar({
       <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>連續 YoY 成長</span>
       <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>近</span>
       <div className="flex items-center gap-1">
-        {GROWTH_QUARTERS_OPTIONS.map(q => {
-          const active = filters.growth.quarters === q
-          return (
-            <button
-              key={q}
-              onClick={() => setGrowthQ(q)}
-              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
-              style={{
-                background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                color:       active ? '#fff' : 'var(--color-text-secondary)',
-                fontWeight:  active ? 600 : 400,
-                cursor: 'pointer',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              {q === 0 ? '不限' : `${q}季`}
-            </button>
-          )
-        })}
+        {GROWTH_QUARTERS_OPTIONS.map(q => (
+          <ChipButton
+            key={q}
+            active={filters.growth.quarters === q}
+            isDefault={q === 0}
+            label={q === 0 ? '不限' : `${q}季`}
+            onClick={() => setGrowthQ(q)}
+          />
+        ))}
       </div>
       <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>都正</span>
       <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
@@ -538,26 +663,15 @@ export function FiltersBar({
       <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>連續買超</span>
       <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>近</span>
       <div className="flex items-center gap-1">
-        {INST_STREAK_OPTIONS.map(d => {
-          const active = filters.institutional.days === d
-          return (
-            <button
-              key={d}
-              onClick={() => setInstDays(d)}
-              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
-              style={{
-                background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                color:       active ? '#fff' : 'var(--color-text-secondary)',
-                fontWeight:  active ? 600 : 400,
-                cursor: 'pointer',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              {d === 0 ? '不限' : `${d}日`}
-            </button>
-          )
-        })}
+        {INST_STREAK_OPTIONS.map(d => (
+          <ChipButton
+            key={d}
+            active={filters.institutional.days === d}
+            isDefault={d === 0}
+            label={d === 0 ? '不限' : `${d}日`}
+            onClick={() => setInstDays(d)}
+          />
+        ))}
       </div>
       <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>都買超</span>
       <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
@@ -591,26 +705,15 @@ export function FiltersBar({
     <div className="flex items-center flex-wrap gap-2">
       <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>市場</span>
       <div className="flex items-center gap-1">
-        {MARKET_OPTIONS.map(opt => {
-          const active = filters.market === opt.value
-          return (
-            <button
-              key={opt.value}
-              onClick={() => setMarket(opt.value)}
-              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
-              style={{
-                background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                color:       active ? '#fff' : 'var(--color-text-secondary)',
-                fontWeight:  active ? 600 : 400,
-                cursor: 'pointer',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              {opt.label}
-            </button>
-          )
-        })}
+        {MARKET_OPTIONS.map(opt => (
+          <ChipButton
+            key={opt.value}
+            active={filters.market === opt.value}
+            isDefault={opt.value === 'all'}
+            label={opt.label}
+            onClick={() => setMarket(opt.value)}
+          />
+        ))}
       </div>
     </div>
   )
@@ -621,26 +724,15 @@ export function FiltersBar({
       <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>N 日漲跌幅</span>
       <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>近</span>
       <div className="flex items-center gap-1">
-        {N_RETURN_OPTIONS.map(d => {
-          const active = filters.nDayReturn.days === d
-          return (
-            <button
-              key={d}
-              onClick={() => setNReturnDays(d)}
-              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
-              style={{
-                background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                color:       active ? '#fff' : 'var(--color-text-secondary)',
-                fontWeight:  active ? 600 : 400,
-                cursor: 'pointer',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              {d === 0 ? '不限' : `${d}日`}
-            </button>
-          )
-        })}
+        {N_RETURN_OPTIONS.map(d => (
+          <ChipButton
+            key={d}
+            active={filters.nDayReturn.days === d}
+            isDefault={d === 0}
+            label={d === 0 ? '不限' : `${d}日`}
+            onClick={() => setNReturnDays(d)}
+          />
+        ))}
       </div>
       <span className="w-px h-4 mx-1" style={{ background: 'var(--color-border)' }} />
       <div
@@ -665,26 +757,15 @@ export function FiltersBar({
       <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>創新高</span>
       <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>盤中創</span>
       <div className="flex items-center gap-1 flex-wrap">
-        {N_HIGH_OPTIONS.map(d => {
-          const active = filters.nDayHigh.days === d
-          return (
-            <button
-              key={d}
-              onClick={() => setNHighDays(d)}
-              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
-              style={{
-                background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                color:       active ? '#fff' : 'var(--color-text-secondary)',
-                fontWeight:  active ? 600 : 400,
-                cursor: 'pointer',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              {d === 0 ? '不限' : `${d}日新高`}
-            </button>
-          )
-        })}
+        {N_HIGH_OPTIONS.map(d => (
+          <ChipButton
+            key={d}
+            active={filters.nDayHigh.days === d}
+            isDefault={d === 0}
+            label={d === 0 ? '不限' : `${d}日新高`}
+            onClick={() => setNHighDays(d)}
+          />
+        ))}
       </div>
     </div>
   )
@@ -695,26 +776,15 @@ export function FiltersBar({
       <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>成交量創新高</span>
       <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>盤中創</span>
       <div className="flex items-center gap-1 flex-wrap">
-        {VOLUME_NEW_HIGH_OPTIONS.map(d => {
-          const active = filters.volumeNewHigh.days === d
-          return (
-            <button
-              key={d}
-              onClick={() => setVolumeNewHighDays(d)}
-              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
-              style={{
-                background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                color:       active ? '#fff' : 'var(--color-text-secondary)',
-                fontWeight:  active ? 600 : 400,
-                cursor: 'pointer',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              {d === 0 ? '不限' : `${d}日新高`}
-            </button>
-          )
-        })}
+        {VOLUME_NEW_HIGH_OPTIONS.map(d => (
+          <ChipButton
+            key={d}
+            active={filters.volumeNewHigh.days === d}
+            isDefault={d === 0}
+            label={d === 0 ? '不限' : `${d}日新高`}
+            onClick={() => setVolumeNewHighDays(d)}
+          />
+        ))}
       </div>
     </div>
   )
@@ -727,26 +797,15 @@ export function FiltersBar({
         <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>成交爆量</span>
         <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>大於</span>
         <div className="flex items-center gap-1 flex-wrap">
-          {VOLUME_SURGE_MULTIPLIER_OPTIONS.map(m => {
-            const active = filters.volumeSurge.multiplier === m
-            return (
-              <button
-                key={m}
-                onClick={() => setVolumeSurgeMultiplier(m)}
-                className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
-                style={{
-                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                  color:       active ? '#fff' : 'var(--color-text-secondary)',
-                  fontWeight:  active ? 600 : 400,
-                  cursor: 'pointer',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {m === 0 ? '不限' : `${m}倍`}
-              </button>
-            )
-          })}
+          {VOLUME_SURGE_MULTIPLIER_OPTIONS.map(m => (
+            <ChipButton
+              key={m}
+              active={filters.volumeSurge.multiplier === m}
+              isDefault={m === 0}
+              label={m === 0 ? '不限' : `${m}倍`}
+              onClick={() => setVolumeSurgeMultiplier(m)}
+            />
+          ))}
         </div>
       </div>
       <div
@@ -755,26 +814,14 @@ export function FiltersBar({
       >
         <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>基準</span>
         <div className="flex items-center gap-1 flex-wrap">
-          {VOLUME_SURGE_BASELINE_OPTIONS.map(opt => {
-            const active = filters.volumeSurge.baseline === opt.value
-            return (
-              <button
-                key={opt.value}
-                onClick={() => setVolumeSurgeBaseline(opt.value)}
-                className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
-                style={{
-                  background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                  borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                  color:       active ? '#fff' : 'var(--color-text-secondary)',
-                  fontWeight:  active ? 600 : 400,
-                  cursor: 'pointer',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {opt.label}
-              </button>
-            )
-          })}
+          {VOLUME_SURGE_BASELINE_OPTIONS.map(opt => (
+            <ChipButton
+              key={opt.value}
+              active={filters.volumeSurge.baseline === opt.value}
+              label={opt.label}
+              onClick={() => setVolumeSurgeBaseline(opt.value)}
+            />
+          ))}
         </div>
       </div>
     </div>
@@ -926,6 +973,7 @@ export function FiltersBar({
           <ChipButton
             key={d}
             active={maBreakoutDaysSel === d}
+            isDefault={d === 0}
             label={d === 0 ? '關閉' : `${d}日`}
             onClick={() => setMaBreakoutDays(d)}
           />
@@ -936,6 +984,7 @@ export function FiltersBar({
           <ChipButton
             key={p}
             active={maBreakoutPeriodSel === p}
+            isDefault={p === 0}
             label={p === 0 ? '關閉' : `${p}MA`}
             onClick={() => setMaBreakoutPeriod(p)}
           />
@@ -965,6 +1014,7 @@ export function FiltersBar({
           <ChipButton
             key={opt.value}
             active={maContDir === opt.value}
+            isDefault={opt.value === 'off'}
             label={opt.label}
             onClick={() => setMaContDirection(opt.value)}
           />
@@ -975,6 +1025,7 @@ export function FiltersBar({
           <ChipButton
             key={p}
             active={maContPeriod === p}
+            isDefault={p === 0}
             label={p === 0 ? '關閉' : `${p}MA`}
             onClick={() => setMaContPeriod(p)}
           />
@@ -1015,6 +1066,7 @@ export function FiltersBar({
           <ChipButton
             key={d}
             active={maSustDays === d}
+            isDefault={d === 0}
             label={d === 0 ? '關閉' : `${d}日`}
             onClick={() => setMaSustDays(d)}
           />
@@ -1025,6 +1077,7 @@ export function FiltersBar({
           <ChipButton
             key={p}
             active={maSustPeriod === p}
+            isDefault={p === 0}
             label={p === 0 ? '關閉' : `${p}MA`}
             onClick={() => setMaSustPeriod(p)}
           />
@@ -1054,6 +1107,7 @@ export function FiltersBar({
           <ChipButton
             key={d}
             active={downBreakDays === d}
+            isDefault={d === 0}
             label={d === 0 ? '關閉' : `${d}日`}
             onClick={() => setDownBreakDays(d)}
           />
@@ -1080,26 +1134,15 @@ export function FiltersBar({
       <span className="text-[11px]" style={{ color: 'var(--color-text-muted)' }}>(曾)回撤均線</span>
       <span className="text-[11px]" style={{ color: 'var(--color-text-secondary)' }}>均線</span>
       <div className="flex items-center gap-1 flex-wrap">
-        {PULLBACK_MA_PERIOD_OPTIONS.map(p => {
-          const active = pullbackMaPeriod === p
-          return (
-            <button
-              key={p}
-              onClick={() => setPullbackMaPeriod(p)}
-              className="text-[11px] px-2 py-0.5 rounded-full border transition-colors"
-              style={{
-                background:  active ? 'var(--color-accent-cyan)' : 'var(--color-bg-600)',
-                borderColor: active ? 'var(--color-accent-cyan)' : 'var(--color-border)',
-                color:       active ? '#fff' : 'var(--color-text-secondary)',
-                fontWeight:  active ? 600 : 400,
-                cursor: 'pointer',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              {p === 0 ? '關閉' : `${p}MA`}
-            </button>
-          )
-        })}
+        {PULLBACK_MA_PERIOD_OPTIONS.map(p => (
+          <ChipButton
+            key={p}
+            active={pullbackMaPeriod === p}
+            isDefault={p === 0}
+            label={p === 0 ? '關閉' : `${p}MA`}
+            onClick={() => setPullbackMaPeriod(p)}
+          />
+        ))}
       </div>
       {pullbackMaActive && (
         <span className="text-[11px] tabular font-mono" style={{ color: 'var(--color-accent-cyan)' }}>
@@ -1188,48 +1231,75 @@ export function FiltersBar({
     </div>
   )
 
-  // === 各 section 內容 ===
+  // === 各 section 內容（用 FilterGroup 把相關 filter 包成子卡片）===
   const sectionContent: Record<SectionKey, React.ReactNode> = {
     fund: (
-      <div className="flex flex-col gap-2">
-        <div className="flex items-center gap-4 flex-wrap">{marketCapSlider}{revenueYoYSlider}</div>
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{growthBlock}</div>
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{absValueBlock}</div>
+      <div className="flex flex-col">
+        <FilterGroup title="估值">
+          <div className="flex items-center gap-4 flex-wrap">{marketCapSlider}</div>
+        </FilterGroup>
+        <FilterGroup title="成長動能">
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-4 flex-wrap">{revenueYoYSlider}</div>
+            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{growthBlock}</div>
+          </div>
+        </FilterGroup>
+        <FilterGroup title="季度獲利能力">
+          {absValueBlock}
+        </FilterGroup>
       </div>
     ),
     tech: (
-      <div className="flex flex-col gap-2">
-        <div className="flex items-center gap-4 flex-wrap">{volumeSlider}</div>
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{nReturnBlock}</div>
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{nHighBlock}</div>
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{volumeNewHighBlock}</div>
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{volumeSurgeBlock}</div>
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maAlignmentBlock}</div>
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maDirectionBlock}</div>
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maBreakoutBlock}</div>
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maContinuationBlock}</div>
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maSustainedBlock}</div>
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{downtrendBreakBlock}</div>
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{pullbackMaBlock}</div>
+      <div className="flex flex-col">
+        <FilterGroup title="量價">
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-4 flex-wrap">{volumeSlider}</div>
+            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{nReturnBlock}</div>
+          </div>
+        </FilterGroup>
+        <FilterGroup title="創新高">
+          <div className="flex flex-col gap-2">
+            {nHighBlock}
+            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{volumeNewHighBlock}</div>
+            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{volumeSurgeBlock}</div>
+          </div>
+        </FilterGroup>
+        <FilterGroup title="均線">
+          <div className="flex flex-col gap-2">
+            {maAlignmentBlock}
+            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maDirectionBlock}</div>
+            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maBreakoutBlock}</div>
+            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maContinuationBlock}</div>
+            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{maSustainedBlock}</div>
+            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{downtrendBreakBlock}</div>
+            <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{pullbackMaBlock}</div>
+          </div>
+        </FilterGroup>
       </div>
     ),
     chips: (
-      <div className="flex flex-col gap-2">
-        <div className="flex items-center gap-4 flex-wrap">{deltaSlider}</div>
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>{institutionalBlock}</div>
+      <div className="flex flex-col">
+        <FilterGroup title="大戶">
+          <div className="flex items-center gap-4 flex-wrap">{deltaSlider}</div>
+        </FilterGroup>
+        <FilterGroup title="法人">
+          {institutionalBlock}
+        </FilterGroup>
       </div>
     ),
     meta: (
-      <div className="flex flex-col gap-2">
-        {marketBlock}
-        <div className="border-t pt-2" style={{ borderColor: 'var(--color-border)' }}>
+      <div className="flex flex-col">
+        <FilterGroup title="上市櫃">
+          {marketBlock}
+        </FilterGroup>
+        <FilterGroup title="產業">
           <div className="text-[11px] mb-2" style={{ color: 'var(--color-text-muted)' }}>產業別（多選任一）</div>
           <IndustryChips
             stocks={stocks}
             selected={filters.industries}
             onChange={v => set({ industries: v })}
           />
-        </div>
+        </FilterGroup>
       </div>
     ),
   }
@@ -1288,33 +1358,23 @@ export function FiltersBar({
     const count = resultCount ?? 0
     return (
       <div className="flex flex-col" style={{ background: 'var(--color-bg-700)' }}>
-        {/* Sticky header：篩選條件 + 清除全部 */}
+        {/* Sticky header：FilterStatusBar */}
         <div
-          className="flex items-center justify-between px-4 py-3 border-b"
+          className="px-4 pt-3 pb-1"
           style={{
             background: 'var(--color-bg-700)',
-            borderColor: 'var(--color-border)',
             position: 'sticky',
             top: 44,
             zIndex: 30,
           }}
         >
-          <span className="text-sm font-bold" style={{ color: 'var(--color-text-primary)' }}>
-            篩選條件{totalActive > 0 ? ` · ${totalActive} 項` : ''}
-          </span>
-          {totalActive > 0 && (
-            <button
-              onClick={reset}
-              className="text-[12px] px-2.5 py-1 rounded border"
-              style={{
-                background: 'var(--color-bg-600)',
-                borderColor: 'var(--color-border)',
-                color: 'var(--color-text-secondary)',
-              }}
-            >
-              清除全部
-            </button>
-          )}
+          <FilterStatusBar
+            activeCount={totalActive}
+            resultCount={resultCount}
+            onReset={reset}
+            onSaveStrategy={onSaveStrategy}
+            compact
+          />
         </div>
 
         {/* Sections（normal flow，paddingBottom 留空間給底部 fixed 按鈕）*/}
@@ -1356,27 +1416,15 @@ export function FiltersBar({
     <>
       {/* 桌機 */}
       <div className="hidden md:block">
-        {/* 全域工具列：清除按鈕（有任何 filter 啟用時顯示） */}
-        {totalActive > 0 && (
-          <div
-            className="flex items-center justify-end px-5 py-1.5 border-b"
-            style={{ background: 'var(--color-bg-700)', borderColor: 'var(--color-border)' }}
-          >
-            <button
-              onClick={reset}
-              className="text-[11px] px-2 py-1 rounded border transition-colors"
-              style={{
-                background: 'var(--color-bg-600)',
-                borderColor: 'var(--color-border)',
-                color: 'var(--color-text-secondary)',
-                cursor: 'pointer',
-              }}
-              title="清除所有篩選條件"
-            >
-              清除全部 ({totalActive})
-            </button>
-          </div>
-        )}
+        {/* 頂部狀態列：活躍篩選數 + 結果筆數 + 清空/儲存策略 按鈕 */}
+        <div className="px-5 pt-3" style={{ background: 'var(--color-bg-700)' }}>
+          <FilterStatusBar
+            activeCount={totalActive}
+            resultCount={resultCount}
+            onReset={reset}
+            onSaveStrategy={onSaveStrategy}
+          />
+        </div>
         {allSections.map(renderSection)}
       </div>
 
@@ -1427,30 +1475,17 @@ export function FiltersBar({
             onClick={e => e.stopPropagation()}
           >
             <div
-              className="sticky top-0 flex items-center justify-between px-4 py-3 border-b"
+              className="sticky top-0 px-4 pt-3 pb-2 border-b"
               style={{
                 background: 'var(--color-bg-700)',
                 borderColor: 'var(--color-border)',
                 zIndex: 10,  // 高於下方 RangeSlider thumbs，避免 scroll 時 thumb 透出 header
               }}
             >
-              <span className="text-sm font-bold" style={{ color: 'var(--color-text-primary)' }}>
-                篩選條件{totalActive > 0 ? ` · ${totalActive} 項` : ''}
-              </span>
-              <div className="flex items-center gap-2">
-                {totalActive > 0 && (
-                  <button
-                    onClick={reset}
-                    className="text-xs px-2 py-1 rounded border"
-                    style={{
-                      background: 'var(--color-bg-600)',
-                      borderColor: 'var(--color-border)',
-                      color: 'var(--color-text-secondary)',
-                    }}
-                  >
-                    清除
-                  </button>
-                )}
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm font-bold" style={{ color: 'var(--color-text-primary)' }}>
+                  篩選條件
+                </span>
                 <button
                   onClick={() => setMobileOpen(false)}
                   className="text-xs px-3 py-1 rounded border font-medium"
@@ -1463,6 +1498,13 @@ export function FiltersBar({
                   完成
                 </button>
               </div>
+              <FilterStatusBar
+                activeCount={totalActive}
+                resultCount={resultCount}
+                onReset={reset}
+                onSaveStrategy={onSaveStrategy}
+                compact
+              />
             </div>
             <div>
               {allSections.map(renderSection)}
