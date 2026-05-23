@@ -71,14 +71,18 @@ def expected_latest_trading_day(now: Optional[datetime] = None) -> date:
 
 
 def last_completed_trading_week_end(now: Optional[datetime] = None,
-                                     publish_hour: int = 14) -> date:
-    """norway 大戶持股資料『現在應該已 publish 的最新一筆對應日期』。
+                                     publish_hour: int = 9) -> date:
+    """大戶持股資料『現在應該已 publish 的最新一筆對應日期』。
 
     背景：
-      norway.twsthr.info 約在「該週最後交易日 + 1 天」publish 該週資料。
+      大戶持股資料約在「該週最後交易日 + 1 天」publish 該週資料。
         - 正常週：Fri = 最後交易日 → Sat publish
         - 假日 Fri 週：Thu = 最後交易日 → Fri publish
-      這個函式回傳「依現在時間推算，norway 應該已經有的最新資料日期」。
+      這個函式回傳「依現在時間推算，資料源應該已經有的最新資料日期」。
+
+      publish_hour 預設 = 9：Yahoo 千張大戶實測週六約 08:30~09:00 TW 完成 publish。
+      （早期用 norway 時設 14，後來改 Yahoo 為主要來源後，要往前調，不然週六 9 點
+       smart-skip 會誤判「上週 Friday 還沒 publish」而跳過更新。）
 
     規則：
       回退尋找最近的「week-end 候選日」，定義為：
