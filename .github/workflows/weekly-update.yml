@@ -84,6 +84,7 @@ jobs:
           fi
 
       # 注意：不加 --force；script 內部會 smart check 自行判斷要不要做
+      # 缺特定欄位 / 一次性補資料 → 寫獨立 script（譬如 enrich_market_field.py），別動這裡
       - name: 完整 pipeline（週六 / 每月 1-10 號 / 手動觸發）
         if: steps.mode.outputs.mode == 'full'
         run: python scripts/run_pipeline.py

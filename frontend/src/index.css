@@ -115,6 +115,7 @@ body {
 ::-webkit-scrollbar-track { background: var(--color-bg-800); }
 ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--color-border-light); }
+::-webkit-scrollbar-button { display: none; }
 
 /* ── 動畫 ── */
 @keyframes spin { to { transform: rotate(360deg); } }

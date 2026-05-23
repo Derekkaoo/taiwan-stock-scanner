@@ -414,7 +414,9 @@ def fetch_holdings():
 def fetch_industry_map():
     logger.info("Step 2: 抓取官方產業別…")
     result = {}
+    # mode=2 → 上市；mode=4 → 上櫃。記下每支股票來自哪個 mode 當 market 欄位。
     for mode in ["2", "4"]:
+        market = "上市" if mode == "2" else "上櫃"
         try:
             r = requests.get(
                 f"https://isin.twse.com.tw/isin/C_public.jsp?strMode={mode}",
@@ -433,6 +435,7 @@ def fetch_industry_map():
                     result[sid] = {
                         "name": sanitize_name(m.group(2).strip()),
                         "industry": tds[4].text.strip(),
+                        "market": market,
                     }
         except Exception as e:
             logger.warning("產業別抓取失敗（mode=%s）：%s", mode, e)
@@ -1066,6 +1069,7 @@ def run():
             "threeMonthReturn": returns.get("y1"),  # 主欄位：預設顯示 1 年漲幅
             "returns":          returns,
             "industry":         industry,
+            "market":           info.get("market", ""),   # "上市" / "上櫃" / ""（找不到對應）
             "subIndustries":    all_subs,            # 完整列表
             "subsByGroup":      subs_by_group,       # {產業別: [該股票在此產業別下的細產業]}
             "revenueYoY":       curr_yoy,                    # 月營收年增率 %

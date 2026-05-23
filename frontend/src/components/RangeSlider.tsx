@@ -18,9 +18,11 @@ interface Props {
   scale:    PiecewiseScale
   display?: { digits?: number; snapTo?: number }
   onChange: (v: [number, number]) => void
+  /** 兩個 handle 都在 bounds 時，readout 顯示 muted italic 「(未篩選)」而不是「不限 ~ 不限」。預設 true */
+  quietWhenDefault?: boolean
 }
 
-export function RangeSlider({ label, unit, value, bounds, scale, display, onChange }: Props) {
+export function RangeSlider({ label, unit, value, bounds, scale, display, onChange, quietWhenDefault = true }: Props) {
   const [lo, hi] = value
   const loPos = scale.toSlider(lo)
   const hiPos = scale.toSlider(hi)
@@ -33,6 +35,7 @@ export function RangeSlider({ label, unit, value, bounds, scale, display, onChan
   }
 
   const eps = 1e-6
+  const atDefault = lo <= bounds.min + eps && hi >= bounds.max - eps
   const loDisplay = lo <= bounds.min + eps ? '不限' : `${fmt(lo)}${unit ?? ''}`
   const hiDisplay = hi >= bounds.max - eps ? '不限' : `${fmt(hi)}${unit ?? ''}`
 
@@ -63,9 +66,15 @@ export function RangeSlider({ label, unit, value, bounds, scale, display, onChan
     <div className="range-slider-row flex flex-col gap-1 min-w-[180px]">
       <div className="flex items-center justify-between text-[10px] gap-2 px-0.5">
         <span style={{ color: 'var(--color-text-muted)' }}>{label}</span>
-        <span className="font-mono tabular" style={{ color: 'var(--color-text-secondary)' }}>
-          {loDisplay} ~ {hiDisplay}
-        </span>
+        {quietWhenDefault && atDefault ? (
+          <span className="italic" style={{ color: 'var(--color-text-muted)' }}>
+            (未篩選)
+          </span>
+        ) : (
+          <span className="font-mono tabular" style={{ color: 'var(--color-text-secondary)' }}>
+            {loDisplay} ~ {hiDisplay}
+          </span>
+        )}
       </div>
       <div className="range-slider relative h-5">
         {/* 灰底軌道 */}
