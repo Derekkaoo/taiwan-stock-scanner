@@ -14,9 +14,9 @@ name: 每日選股 Telegram 推播（個人化）
 
 on:
   workflow_dispatch:
-  schedule:
-    # 平日 11:00 UTC = 台灣時間 19:00（GitHub schedule 不穩，cron-job.org 才是主觸發）
-    - cron: '0 11 * * 1-5'
+  # === GitHub schedule 移除 ===
+  # 2026-05-25：cron-job.org 已是穩定主來源（>99.9% 命中），保留 schedule 反而會雙觸發 →
+  # user 收到重複推播。如果 cron-job.org 整個壞掉，改用手動 workflow_dispatch 補。
 
 # 同分支同時間只跑一個，避免重複推送
 concurrency:
