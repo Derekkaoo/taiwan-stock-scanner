@@ -39,6 +39,7 @@ interface JoinRow {
   user_uid: string
   user_email: string | null
   chat_id: string
+  last_push_at: number | null
   strategy_id: number | null
   strategy_name: string | null
   filters_json: string | null
@@ -48,6 +49,7 @@ interface UserPayload {
   user_uid: string
   user_email: string | null
   chat_id: string
+  last_push_at: number | null   // unix sec；給 push script 做今日去重用
   strategies: Array<{
     id: number
     name: string
@@ -89,7 +91,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
   // 2. JOIN 撈
   const rows = await env.DB
     .prepare(
-      `SELECT b.user_uid, b.user_email, b.chat_id,
+      `SELECT b.user_uid, b.user_email, b.chat_id, b.last_push_at,
               s.id AS strategy_id, s.name AS strategy_name, s.filters_json
        FROM telegram_bindings b
        LEFT JOIN strategies s ON s.user_uid = b.user_uid
@@ -106,6 +108,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
         user_uid: r.user_uid,
         user_email: r.user_email,
         chat_id: String(r.chat_id),
+        last_push_at: r.last_push_at,
         strategies: [],
       }
       byUser.set(r.user_uid, user)
