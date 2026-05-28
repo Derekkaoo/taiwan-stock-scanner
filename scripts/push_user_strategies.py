@@ -46,7 +46,7 @@ import logging
 import os
 import subprocess
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -125,10 +125,30 @@ def fetch_endpoint_data(api_base: str, token: str) -> List[Dict[str, Any]]:
             "user_uid": u["user_uid"],
             "user_email": u.get("user_email"),
             "chat_id": str(u["chat_id"]),
+            "last_push_at": u.get("last_push_at"),   # unix sec or None；給 dedup 用
             "strategies": u.get("strategies") or [],
         }
         for u in users
     ]
+
+
+def mark_pushed(api_base: str, token: str, user_uid: str, status: str = "ok") -> None:
+    """POST /api/internal/cron/mark-pushed → 更新 last_push_at 防止同日重複推。"""
+    url = api_base.rstrip("/") + "/api/internal/cron/mark-pushed"
+    try:
+        r = requests.post(
+            url,
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Content-Type": "application/json",
+            },
+            json={"user_uid": user_uid, "status": status},
+            timeout=10,
+        )
+        if not r.ok:
+            logger.warning("mark-pushed %s 失敗：%d %s", user_uid, r.status_code, r.text[:200])
+    except Exception as e:
+        logger.warning("mark-pushed %s 例外：%s", user_uid, e)
 
 
 # ============================================================
@@ -333,6 +353,8 @@ def run() -> int:
     parser.add_argument("--skip-empty", action="store_true", help="0 命中策略不顯示（預設顯示）")
     parser.add_argument("--source", choices=["d1", "endpoint"], default="d1",
                         help="資料來源：d1=wrangler（預設，本地用），endpoint=HTTPS（雲端用）")
+    parser.add_argument("--force-push", action="store_true",
+                        help="endpoint mode：跳過『今天已推過』檢查強制重推（debug 用）")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
@@ -361,6 +383,9 @@ def run() -> int:
     else:
         logger.warning("klines.json 不存在（K 線相關 filter 會無效）")
 
+    # api_base / token 提到外層；endpoint mode 才需要，d1 mode 是 None
+    api_base = ""
+    token = ""
     if args.source == "endpoint":
         api_base = env.get("PUSH_API_BASE", "").strip()
         token = env.get("INTERNAL_CRON_TOKEN", "").strip()
@@ -385,10 +410,27 @@ def run() -> int:
     failed = 0
     skipped = 0
 
+    # 今天 TW 日期（給 dedup 比對用）
+    tw_today = (datetime.utcnow() + timedelta(hours=8)).date()
+
     for u in users:
         email = u.get("user_email") or "(no email)"
         chat_id = u["chat_id"]
         strategies = u["strategies"]
+
+        # ─── 同日去重（endpoint mode + --force-push 才會繞過）───
+        # last_push_at 是 unix sec，轉 TW 日期跟今天比；同日 → 跳過
+        last_push_at = u.get("last_push_at")
+        if (
+            last_push_at
+            and not args.force_push
+            and args.source == "endpoint"
+        ):
+            last_tw_date = (datetime.utcfromtimestamp(last_push_at) + timedelta(hours=8)).date()
+            if last_tw_date == tw_today:
+                logger.info("user=%s 今天已推過（%s），跳過", email, last_tw_date)
+                skipped += 1
+                continue
 
         # ─── 金流上線後解開（祖父條款方案 Y）───
         # 目前不限期試用：所有綁定 user 都推。
@@ -438,6 +480,9 @@ def run() -> int:
         if ok:
             sent += 1
             logger.info("→ 推送成功給 %s", email)
+            # 標記為今日已推（endpoint mode 才寫 D1；d1 mode 沒這個概念）
+            if args.source == "endpoint" and api_base and token:
+                mark_pushed(api_base, token, u["user_uid"], status="ok")
         else:
             failed += 1
             logger.error("→ 推送失敗給 %s：%s", email, info)

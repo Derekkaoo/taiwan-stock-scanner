@@ -300,9 +300,10 @@ export default function App() {
   )
   const visibleStocks = useMemo(() => {
     if (!showFavoritesOnly) return filteredByFilters
-    // 我的最愛模式：只顯示本週還在「大戶週增 ≥ 0.1%」榜上的最愛
-    // 掉出榜的（archive 跟跨裝置舊收藏）一律隱藏，避免 row 顯示 0.00 死資料
-    const inWeekById = new Map(stocks.map(s => [s.id, s]))
+    // 我的最愛模式：只顯示「本週還在榜 + 通過 user filter」的最愛
+    // - filteredByFilters 已含「本週在榜（大戶週增 ≥ 0.1%）」+ user filter（市值/YoY/MA/...）
+    // - 掉出榜的（archive 跟跨裝置舊收藏）一律隱藏，避免 row 顯示 0.00 死資料
+    const inWeekById = new Map(filteredByFilters.map(s => [s.id, s]))
     const favIds = fav.favoritesArray
     const result: StockRow[] = []
     for (const fid of favIds) {
@@ -310,7 +311,7 @@ export default function App() {
       if (cur) result.push(cur)
     }
     return result
-  }, [stocks, filteredByFilters, showFavoritesOnly, fav.favoritesArray])
+  }, [filteredByFilters, showFavoritesOnly, fav.favoritesArray])
 
   const toast = useCallback((message: string, type: Toast['type'] = 'info') => {
     const id = Math.random().toString(36).slice(2)
