@@ -1,12 +1,18 @@
 """
 auto_classify.py
 使用 Claude API 自動為台股股票分配實務族群 + 業務說明
-執行方式：venv\Scripts\python.exe auto_classify.py
+
+執行方式：
+  1. 先設環境變數：set ANTHROPIC_API_KEY=sk-ant-...
+     （或加到 .env；本 script 預設讀 os.environ）
+  2. venv\Scripts\python.exe auto_classify.py
 
 費用估算：422 支股票，每批 30 支，約 15 次 API 呼叫
-使用 claude-haiku-3-5（最省錢），預估花費 < $0.10 美元
+使用 claude-haiku-4-5（最省錢），預估花費 < $0.10 美元
 """
 import json
+import os
+import sys
 import time
 import logging
 import requests
@@ -16,7 +22,12 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 logger = logging.getLogger(__name__)
 
 # ── 設定 ──────────────────────────────────────────────────────
-API_KEY    = "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"
+# API key 從環境變數讀，不寫死在 code 裡（公開 repo 後避免 leak）
+API_KEY = os.environ.get("ANTHROPIC_API_KEY")
+if not API_KEY:
+    logger.error("ANTHROPIC_API_KEY 環境變數未設定。")
+    logger.error("請執行：set ANTHROPIC_API_KEY=sk-ant-...  （或加到 .env）")
+    sys.exit(1)
 API_URL    = "https://api.anthropic.com/v1/messages"
 MODEL      = "claude-haiku-4-5"   # 最省成本
 BATCH_SIZE = 30                    # 每批幾支股票
