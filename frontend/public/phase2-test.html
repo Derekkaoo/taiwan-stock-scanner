@@ -135,7 +135,14 @@
   </div>
 
   <div class="card">
-    <h1>③ 測試卡資訊（綠界 stage）</h1>
+    <h1>③ 我的訂單 / 取消訂閱</h1>
+    <p class="sub">列出我所有訂單 → 對 status='paid' 那筆按取消會打綠界廢止授權 API。取消後 vip_until 不變，當期到期前仍 VIP。</p>
+    <button class="plan-btn" id="btn-list-orders" disabled style="background:#30363d;width:100%;">列出我的訂單</button>
+    <div id="orders-area" style="margin-top:12px;"></div>
+  </div>
+
+  <div class="card">
+    <h1>④ 測試卡資訊（綠界 stage）</h1>
     <p class="sub">
       <strong>卡號</strong>：4311-9522-2222-2222<br>
       <strong>有效期</strong>：任何未來日期（例如 12/30）<br>
@@ -156,6 +163,8 @@
 const GOOGLE_CLIENT_ID =
   '225818828453-n5g26iet76lg8jngc4u6kujjlsp7fdih.apps.googleusercontent.com'
 const CREATE_ORDER_URL = '/api/payment/create-order'
+const ORDERS_URL = '/api/payment/orders'
+const CANCEL_URL = '/api/payment/cancel'
 
 // ───────────────────────────────────────────────────────────
 // 狀態
@@ -169,7 +178,9 @@ let userEmail = null
 const statusEl = document.getElementById('signin-status')
 const btnMonthly = document.getElementById('btn-monthly')
 const btnYearly = document.getElementById('btn-yearly')
+const btnListOrders = document.getElementById('btn-list-orders')
 const resultEl = document.getElementById('result-area')
+const ordersAreaEl = document.getElementById('orders-area')
 
 function setSigned(payload) {
   idToken = payload.credential
@@ -185,6 +196,8 @@ function setSigned(payload) {
   statusEl.textContent = `已登入：${userEmail}`
   btnMonthly.disabled = false
   btnYearly.disabled = false
+  btnListOrders.disabled = false
+  btnListOrders.style.background = '#1f6feb'
 }
 
 function clearResult() {
@@ -283,6 +296,111 @@ async function createOrderAndRedirect(plan) {
 
 btnMonthly.addEventListener('click', () => createOrderAndRedirect('monthly'))
 btnYearly.addEventListener('click', () => createOrderAndRedirect('yearly'))
+
+// ───────────────────────────────────────────────────────────
+// 列訂單 + 取消
+// ───────────────────────────────────────────────────────────
+function statusBadge(s) {
+  const colors = {
+    paid: '#3fb950',
+    pending: '#d29922',
+    cancelled: '#8b949e',
+    refunded: '#f85149',
+    failed: '#f85149',
+    expired: '#6e7681',
+  }
+  const c = colors[s] || '#8b949e'
+  return `<span style="display:inline-block;padding:2px 8px;background:${c}33;color:${c};border-radius:4px;font-size:11px;font-weight:600;">${s}</span>`
+}
+
+function fmtTime(unix) {
+  if (!unix) return '—'
+  return new Date(unix * 1000).toISOString().replace('T', ' ').slice(0, 16)
+}
+
+async function listOrders() {
+  if (!idToken) return
+  ordersAreaEl.innerHTML = '<div style="color:#8b949e;font-size:13px;">載入中…</div>'
+
+  let resp
+  try {
+    resp = await fetch(ORDERS_URL, {
+      headers: { Authorization: `Bearer ${idToken}` },
+    })
+  } catch (e) {
+    ordersAreaEl.innerHTML = `<div class="err">${e.message}</div>`
+    return
+  }
+  const data = await resp.json().catch(() => ({}))
+  if (!resp.ok) {
+    ordersAreaEl.innerHTML = `<div class="err">HTTP ${resp.status}: ${JSON.stringify(data)}</div>`
+    return
+  }
+  const orders = data.orders || []
+  if (orders.length === 0) {
+    ordersAreaEl.innerHTML = '<div style="color:#8b949e;font-size:13px;">沒有訂單</div>'
+    return
+  }
+
+  ordersAreaEl.innerHTML = orders.map((o, i) => {
+    const canCancel = o.status === 'paid'
+    const cancelBtn = canCancel
+      ? `<button onclick="cancelOrder('${o.merchant_trade_no}', this)" style="padding:6px 12px;background:#da3633;color:#fff;border:0;border-radius:4px;cursor:pointer;font-size:12px;">取消訂閱</button>`
+      : ''
+    return `
+      <div style="background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:12px;margin-bottom:8px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <code style="font-size:12px;color:#e6edf3;">${o.merchant_trade_no}</code>
+          ${statusBadge(o.status)}
+        </div>
+        <div style="font-size:12px;color:#8b949e;line-height:1.6;">
+          ${o.plan} · NT$${o.amount} · 卡 ****${o.card4no || '?'} ·
+          扣款 ${o.total_success_times} 次<br>
+          建單 ${fmtTime(o.created_at)} · 付款 ${fmtTime(o.paid_at)}
+          ${o.cancelled_at ? ` · 取消 ${fmtTime(o.cancelled_at)}` : ''}
+          ${o.refunded_at ? ` · 退款 ${fmtTime(o.refunded_at)}` : ''}
+        </div>
+        ${cancelBtn ? `<div style="margin-top:10px;">${cancelBtn}</div>` : ''}
+      </div>`
+  }).join('')
+}
+
+async function cancelOrder(mtNo, btn) {
+  if (!confirm(`確定要取消訂閱 ${mtNo} 嗎？\n\n取消後當期到期前仍可使用 VIP，下期不會再扣款。`)) {
+    return
+  }
+  btn.disabled = true
+  btn.textContent = '取消中…'
+  let resp
+  try {
+    resp = await fetch(CANCEL_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${idToken}`,
+      },
+      body: JSON.stringify({ merchant_trade_no: mtNo }),
+    })
+  } catch (e) {
+    alert(`網路錯誤：${e.message}`)
+    btn.disabled = false
+    btn.textContent = '取消訂閱'
+    return
+  }
+  const data = await resp.json().catch(() => ({}))
+  if (!resp.ok) {
+    alert(`取消失敗 (HTTP ${resp.status})\n${JSON.stringify(data, null, 2)}`)
+    btn.disabled = false
+    btn.textContent = '取消訂閱'
+    return
+  }
+  alert(`✓ 取消成功\n${data.note || ''}`)
+  // 重撈一次 list
+  listOrders()
+}
+
+btnListOrders.addEventListener('click', listOrders)
+window.cancelOrder = cancelOrder  // 給 inline onclick 用
 </script>
 
 </body>
