@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { AlertModal } from './AlertModal'
+import { ENABLE_REAL_SUBSCRIBE } from '../constants/featureFlags'
 
 /**
  * VipPanel — VIP 訂閱方案頁面（已接綠界 ECPay 信用卡定期定額）
@@ -93,11 +94,17 @@ const FAQ = [
 
 export function VipPanel({ onBack, idToken, onSignIn }: Props) {
   const [showSignInModal, setShowSignInModal] = useState(false)
+  const [showComingSoon, setShowComingSoon] = useState(false)
   const [submitting, setSubmitting] = useState<null | 'monthly' | 'yearly'>(null)
   const [errorMsg, setErrorMsg] = useState<string | null>(null)
 
   const onSubscribe = async (planKey: 'monthly' | 'yearly') => {
     setErrorMsg(null)
+    // Feature flag: 沒開真實訂閱 → 跳「即將開放」alert（UI demo 模式）
+    if (!ENABLE_REAL_SUBSCRIBE) {
+      setShowComingSoon(true)
+      return
+    }
     if (!idToken) {
       setShowSignInModal(true)
       return
@@ -486,6 +493,25 @@ export function VipPanel({ onBack, idToken, onSignIn }: Props) {
           訂閱即代表同意服務條款。可隨時取消。
         </div>
       </main>
+
+      {/* 「即將開放」modal（feature flag 關閉時用）*/}
+      <AlertModal
+        open={showComingSoon}
+        onClose={() => setShowComingSoon(false)}
+        icon="crown"
+        title="VIP 訂閱即將開放"
+        message={
+          <>
+            目前為試用階段，所有功能免費開放使用 ✨
+            <br />
+            VIP 訂閱即將開放，敬請期待。
+          </>
+        }
+        primary={{
+          label: '知道了',
+          onClick: () => setShowComingSoon(false),
+        }}
+      />
 
       {/* 未登入提示 modal */}
       <AlertModal

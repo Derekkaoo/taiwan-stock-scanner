@@ -18,6 +18,18 @@
 export const SHOW_VIP_UI = true
 
 /**
+ * 是否啟用「真實訂閱」流程。
+ *
+ * - false (預設)：用戶按「立即訂閱」會跳「即將開放」AlertModal（VipPanel 看起來像展示頁）
+ *                 後端 ECPay create-order / callbacks 全部仍可用，但不曝光給一般用戶
+ * - true：用戶按「立即訂閱」會真實打 /api/payment/create-order → 跳綠界刷卡頁
+ *
+ * 你要正式上線收費那天才改 true → push（搭配下面金流上線 SOP）。
+ * 改之前用 phase2-test.html 仍可內部測試（不受這個 flag 影響）。
+ */
+export const ENABLE_REAL_SUBSCRIBE = false
+
+/**
  * ─────────────────────────────────────────────────────────────
  * 金流上線 SOP（祖父條款方案 Y — 既有資料保留、推播降級）
  * ─────────────────────────────────────────────────────────────
