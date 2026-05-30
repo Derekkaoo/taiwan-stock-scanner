@@ -425,7 +425,13 @@ export default function App() {
   // VIP 訂閱頁面（conditional render，整個畫面替換主畫面）
   // 試用期：VipPanel 入口完全封死（即使 showVip 被誤觸發也不會 render）
   if (SHOW_VIP_UI && showVip) {
-    return <VipPanel onBack={() => setShowVip(false)} />
+    return (
+      <VipPanel
+        onBack={() => setShowVip(false)}
+        idToken={auth.idToken}
+        onSignIn={auth.signIn}
+      />
+    )
   }
 
   // 推播設定頁面

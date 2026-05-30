@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { AlertModal } from './AlertModal'
 
 /**
- * VipPanel — VIP 訂閱方案頁面（mockup，不接金流）
+ * VipPanel — VIP 訂閱方案頁面（已接綠界 ECPay 信用卡定期定額）
  *
  * 用法：在 App.tsx 用 conditional render 切換主畫面 / VIP 畫面
  *   {showVip ? <VipPanel onBack={() => setShowVip(false)} /> : <主畫面 ... />}
@@ -14,6 +14,8 @@ import { AlertModal } from './AlertModal'
  */
 interface Props {
   onBack: () => void
+  idToken: string | null
+  onSignIn: () => void
 }
 
 interface Plan {
@@ -89,10 +91,51 @@ const FAQ = [
   { q: '推播會佔用通知空間嗎？', a: '會走 Telegram bot，可隨時關閉個別推播類型。' },
 ]
 
-export function VipPanel({ onBack }: Props) {
-  const [showComingSoon, setShowComingSoon] = useState(false)
+export function VipPanel({ onBack, idToken, onSignIn }: Props) {
+  const [showSignInModal, setShowSignInModal] = useState(false)
+  const [submitting, setSubmitting] = useState<null | 'monthly' | 'yearly'>(null)
+  const [errorMsg, setErrorMsg] = useState<string | null>(null)
 
-  const onSubscribe = () => setShowComingSoon(true)
+  const onSubscribe = async (planKey: 'monthly' | 'yearly') => {
+    setErrorMsg(null)
+    if (!idToken) {
+      setShowSignInModal(true)
+      return
+    }
+    setSubmitting(planKey)
+    try {
+      const resp = await fetch('/api/payment/create-order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${idToken}`,
+        },
+        body: JSON.stringify({ plan: planKey }),
+      })
+      const data = await resp.json().catch(() => ({}))
+      if (!resp.ok) {
+        setSubmitting(null)
+        setErrorMsg(`建單失敗 (HTTP ${resp.status})：${data.error || JSON.stringify(data).slice(0, 200)}`)
+        return
+      }
+      const form = document.createElement('form')
+      form.method = 'POST'
+      form.action = data.ecpayUrl
+      form.acceptCharset = 'UTF-8'
+      Object.entries(data.formFields as Record<string, unknown>).forEach(([k, v]) => {
+        const input = document.createElement('input')
+        input.type = 'hidden'
+        input.name = k
+        input.value = String(v)
+        form.appendChild(input)
+      })
+      document.body.appendChild(form)
+      form.submit()
+    } catch (e) {
+      setSubmitting(null)
+      setErrorMsg(`網路錯誤：${e instanceof Error ? e.message : String(e)}`)
+    }
+  }
 
   return (
     <div
@@ -273,8 +316,16 @@ export function VipPanel({ onBack }: Props) {
 
               {/* CTA 按鈕 */}
               <button
-                onClick={plan.ctaDisabled ? undefined : onSubscribe}
-                disabled={plan.ctaDisabled}
+                onClick={
+                  plan.ctaDisabled || submitting
+                    ? undefined
+                    : () => {
+                        if (plan.key === 'monthly' || plan.key === 'yearly') {
+                          onSubscribe(plan.key)
+                        }
+                      }
+                }
+                disabled={plan.ctaDisabled || !!submitting}
                 style={{
                   width: '100%',
                   padding: '10px 16px',
@@ -291,14 +342,33 @@ export function VipPanel({ onBack }: Props) {
                     : '#fff',
                   fontSize: 13,
                   fontWeight: 600,
-                  cursor: plan.ctaDisabled ? 'default' : 'pointer',
+                  cursor: plan.ctaDisabled || submitting ? 'default' : 'pointer',
+                  opacity: submitting && submitting !== plan.key ? 0.5 : 1,
                 }}
               >
-                {plan.cta}
+                {submitting === plan.key ? '建單中…' : plan.cta}
               </button>
             </div>
           ))}
         </div>
+
+        {errorMsg && (
+          <div
+            style={{
+              maxWidth: 720,
+              margin: '0 auto 24px',
+              padding: '12px 16px',
+              background: 'rgba(248, 81, 73, 0.1)',
+              border: '1px solid rgba(248, 81, 73, 0.4)',
+              borderRadius: 8,
+              color: '#ffdcd7',
+              fontSize: 13,
+              whiteSpace: 'pre-wrap',
+            }}
+          >
+            ⚠️ {errorMsg}
+          </div>
+        )}
 
         {/* VIP 專屬功能 */}
         <section style={{ marginBottom: 48 }}>
@@ -417,22 +487,29 @@ export function VipPanel({ onBack }: Props) {
         </div>
       </main>
 
-      {/* 「即將開放」modal */}
+      {/* 未登入提示 modal */}
       <AlertModal
-        open={showComingSoon}
-        onClose={() => setShowComingSoon(false)}
+        open={showSignInModal}
+        onClose={() => setShowSignInModal(false)}
         icon="crown"
-        title="VIP 訂閱即將開放"
+        title="請先登入 Google"
         message={
           <>
-            目前為試用階段，所有功能免費開放使用 ✨
+            訂閱 VIP 需要 Google 帳號登入，
             <br />
-            VIP 訂閱即將開放，敬請期待。
+            這樣你的 VIP 狀態才會跟著帳號跨裝置同步。
           </>
         }
         primary={{
-          label: '知道了',
-          onClick: () => setShowComingSoon(false),
+          label: '登入 Google',
+          onClick: () => {
+            setShowSignInModal(false)
+            onSignIn()
+          },
+        }}
+        secondary={{
+          label: '取消',
+          onClick: () => setShowSignInModal(false),
         }}
       />
     </div>

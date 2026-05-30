@@ -1,7 +1,26 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useTelegramBinding } from '../hooks/useTelegramBinding'
 import type { BindCodeResponse } from '../api/telegram'
 import { SHOW_VIP_UI } from '../constants/featureFlags'
+
+// /api/me 回傳結構
+interface MeResponse {
+  uid: string
+  email: string | null
+  name: string | null
+  tier: 'FREE' | 'FRIEND' | 'TRIAL' | 'VIP'
+  vipUntil: number | null
+  trialUntil: number | null
+  canPush: boolean
+  activeOrder: {
+    merchant_trade_no: string
+    plan: string
+    amount: number
+    status: string
+    paid_at: number | null
+    card4no: string | null
+  } | null
+}
 
 /**
  * SettingsPanel — 推播設定全頁
@@ -108,6 +127,41 @@ export function SettingsPanel({ onBack, onShowVip, idToken }: Props) {
 
   const [busy, setBusy] = useState(false)
 
+  const [me, setMe] = useState<MeResponse | null>(null)
+  const [meLoading, setMeLoading] = useState(false)
+  const [cancelBusy, setCancelBusy] = useState(false)
+
+  const fetchMe = useCallback(async () => {
+    if (!idToken) { setMe(null); return }
+    setMeLoading(true)
+    try {
+      const resp = await fetch('/api/me', { headers: { Authorization: `Bearer ${idToken}` } })
+      if (resp.ok) { setMe((await resp.json()) as MeResponse) } else { setMe(null) }
+    } catch { setMe(null) } finally { setMeLoading(false) }
+  }, [idToken])
+
+  useEffect(() => { fetchMe() }, [fetchMe])
+
+  const onCancelSubscription = async () => {
+    if (!idToken || !me?.activeOrder) return
+    const mtNo = me.activeOrder.merchant_trade_no
+    if (!confirm(`確定要取消訂閱嗎？\n\n取消後 VIP 會在 ${fmtUnixDate(me.vipUntil)} 自然到期，當期內仍可使用所有 VIP 功能，下期不再自動扣款。`)) return
+    setCancelBusy(true)
+    try {
+      const resp = await fetch('/api/payment/cancel', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${idToken}` },
+        body: JSON.stringify({ merchant_trade_no: mtNo }),
+      })
+      const data = await resp.json().catch(() => ({}))
+      if (!resp.ok) { alert(`取消失敗 (HTTP ${resp.status})\n${data.error || JSON.stringify(data).slice(0,200)}`); return }
+      alert(`✓ 取消成功\n${data.note || ''}`)
+      await fetchMe()
+    } catch (e) {
+      alert(`網路錯誤：${e instanceof Error ? e.message : String(e)}`)
+    } finally { setCancelBusy(false) }
+  }
+
   const onBindClick = async () => {
     setBusy(true)
     try {
@@ -164,39 +218,15 @@ export function SettingsPanel({ onBack, onShowVip, idToken }: Props) {
       </header>
 
       <main className="px-4 sm:px-5 py-6" style={{ maxWidth: 720, margin: '0 auto' }}>
-        {/* === 帳號狀態 ===
-          試用期版本：顯示「✨ 試用中」+ 額度資訊，不出現 VIP 升級按鈕。
-          Lemon Squeezy 過件後 SHOW_VIP_UI=true → 切回 VIP 升級流程 */}
+        {/* === 帳號狀態 === 動態根據 /api/me */}
         {SHOW_VIP_UI ? (
-          <div style={cardStyle}>
-            <div style={cardTitleStyle}>帳號狀態</div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-              <div
-                style={{
-                  padding: '4px 12px',
-                  borderRadius: 6,
-                  background: 'rgba(6, 182, 212, 0.18)',
-                  border: '1px solid var(--color-accent-cyan)',
-                  color: 'var(--color-accent-cyan)',
-                  fontSize: 12,
-                  fontWeight: 600,
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                ✨ 試用中
-              </div>
-              <span style={{ color: 'var(--color-text-secondary)', fontSize: 13, flex: 1 }}>
-                試用階段免費開放：無限收藏 + 無限策略 + 個人化推播
-              </span>
-              <button
-                onClick={onShowVip}
-                className="rounded border transition-colors"
-                style={primaryBtnStyle}
-              >
-                了解 VIP
-              </button>
-            </div>
-          </div>
+          <AccountStatusCard
+            me={me}
+            meLoading={meLoading}
+            onShowVip={onShowVip}
+            onCancelSubscription={onCancelSubscription}
+            cancelBusy={cancelBusy}
+          />
         ) : (
           <div style={cardStyle}>
             <div style={cardTitleStyle}>帳號狀態</div>
@@ -311,6 +341,89 @@ export function SettingsPanel({ onBack, onShowVip, idToken }: Props) {
           onCancel={cancelPolling}
         />
       )}
+    </div>
+  )
+}
+
+interface AccountStatusCardProps {
+  me: MeResponse | null
+  meLoading: boolean
+  onShowVip: () => void
+  onCancelSubscription: () => void
+  cancelBusy: boolean
+}
+
+function AccountStatusCard({ me, meLoading, onShowVip, onCancelSubscription, cancelBusy }: AccountStatusCardProps) {
+  if (!me) {
+    return (
+      <div style={cardStyle}>
+        <div style={cardTitleStyle}>帳號狀態</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <div style={{ padding: '4px 12px', borderRadius: 6, background: 'rgba(6, 182, 212, 0.18)', border: '1px solid var(--color-accent-cyan)', color: 'var(--color-accent-cyan)', fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap' }}>
+            {meLoading ? '...' : '✨ 試用中'}
+          </div>
+          <span style={{ color: 'var(--color-text-secondary)', fontSize: 13, flex: 1 }}>{meLoading ? '讀取狀態中…' : '登入後查看完整訂閱資訊'}</span>
+          <button onClick={onShowVip} className="rounded border transition-colors" style={primaryBtnStyle}>了解 VIP</button>
+        </div>
+      </div>
+    )
+  }
+
+  if (me.tier === 'VIP') {
+    const hasActiveOrder = !!me.activeOrder
+    const vipUntilStr = me.vipUntil ? fmtUnixDate(me.vipUntil) : '永久'
+    const planLabel = me.activeOrder?.plan === 'yearly' ? '年付方案' : me.activeOrder?.plan === 'monthly' ? '月付方案' : null
+    return (
+      <div style={cardStyle}>
+        <div style={cardTitleStyle}>帳號狀態</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap' }}>
+          <div style={{ padding: '4px 12px', borderRadius: 6, background: 'rgba(63, 185, 80, 0.18)', border: '1px solid var(--color-accent-green)', color: 'var(--color-accent-green)', fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap' }}>✨ VIP 會員</div>
+          <div style={{ flex: 1, minWidth: 200 }}>
+            <div style={{ fontSize: 13, color: 'var(--color-text-primary)' }}>{planLabel ? `${planLabel} · ` : ''}至 {vipUntilStr} 到期</div>
+            {me.activeOrder?.card4no && <div style={{ fontSize: 11, color: 'var(--color-text-muted)', marginTop: 2 }}>付款卡 ****{me.activeOrder.card4no}</div>}
+          </div>
+          {hasActiveOrder && (
+            <button onClick={onCancelSubscription} disabled={cancelBusy} className="rounded border transition-colors disabled:opacity-50" style={dangerBtnStyle}>{cancelBusy ? '取消中…' : '取消訂閱'}</button>
+          )}
+        </div>
+      </div>
+    )
+  }
+
+  if (me.tier === 'TRIAL') {
+    const trialUntilStr = me.trialUntil ? fmtUnixDate(me.trialUntil) : '—'
+    return (
+      <div style={cardStyle}>
+        <div style={cardTitleStyle}>帳號狀態</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <div style={{ padding: '4px 12px', borderRadius: 6, background: 'rgba(6, 182, 212, 0.18)', border: '1px solid var(--color-accent-cyan)', color: 'var(--color-accent-cyan)', fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap' }}>✨ 試用中</div>
+          <span style={{ color: 'var(--color-text-secondary)', fontSize: 13, flex: 1 }}>試用至 {trialUntilStr}</span>
+          <button onClick={onShowVip} className="rounded border transition-colors" style={primaryBtnStyle}>升級 VIP</button>
+        </div>
+      </div>
+    )
+  }
+
+  if (me.tier === 'FRIEND') {
+    return (
+      <div style={cardStyle}>
+        <div style={cardTitleStyle}>帳號狀態</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <div style={{ padding: '4px 12px', borderRadius: 6, background: 'rgba(125, 117, 233, 0.18)', border: '1px solid #7d75e9', color: '#7d75e9', fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap' }}>🤝 朋友方案</div>
+          <span style={{ color: 'var(--color-text-secondary)', fontSize: 13, flex: 1 }}>無限制使用所有功能</span>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div style={cardStyle}>
+      <div style={cardTitleStyle}>帳號狀態</div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+        <div style={{ padding: '4px 12px', borderRadius: 6, background: 'rgba(139, 148, 158, 0.18)', border: '1px solid var(--color-border)', color: 'var(--color-text-secondary)', fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap' }}>免費版</div>
+        <span style={{ color: 'var(--color-text-secondary)', fontSize: 13, flex: 1 }}>升級 VIP 解鎖無限收藏 / 策略 + 個人化推播</span>
+        <button onClick={onShowVip} className="rounded border transition-colors" style={primaryBtnStyle}>升級 VIP</button>
+      </div>
     </div>
   )
 }
