@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECPay Phase 2 測試</title>
+<style>
+  body {
+    font-family: -apple-system, "Segoe UI", sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    margin: 0;
+    padding: 24px;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  .container { max-width: 640px; margin: 0 auto; }
+  .card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  h1 { margin: 0 0 8px; font-size: 22px; }
+  .sub { color: #8b949e; font-size: 13px; line-height: 1.6; margin: 0; }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #1f6feb44;
+    color: #58a6ff;
+    border-radius: 4px;
+    font-size: 11px;
+    margin-left: 8px;
+  }
+  .signin-status {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #0d1117;
+    border-left: 3px solid #3fb950;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  .signin-status.unsigned {
+    border-left-color: #d29922;
+  }
+  #google-button { margin-top: 8px; }
+  .plan-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .plan-btn {
+    padding: 18px;
+    background: #1f6feb;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: transform 0.1s, background 0.1s;
+  }
+  .plan-btn:hover { background: #2779f0; transform: translateY(-1px); }
+  .plan-btn:disabled { background: #30363d; color: #6e7681; cursor: not-allowed; transform: none; }
+  .plan-amount { display: block; font-size: 22px; margin-top: 4px; }
+  .err {
+    margin-top: 12px;
+    padding: 12px;
+    background: #f8514922;
+    border-left: 3px solid #f85149;
+    color: #ffdcd7;
+    border-radius: 4px;
+    font-size: 13px;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .ok {
+    margin-top: 12px;
+    padding: 12px;
+    background: #3fb95022;
+    border-left: 3px solid #3fb950;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  details { margin-top: 12px; }
+  details summary { cursor: pointer; color: #58a6ff; font-size: 13px; }
+  pre {
+    margin: 8px 0 0;
+    padding: 12px;
+    background: #0d1117;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  code { font-family: "SF Mono", Menlo, monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="card">
+    <h1>ECPay Phase 2 串接測試 <span class="badge">stage</span></h1>
+    <p class="sub">
+      測試流程：登入 Google → 選方案 → 跳綠界刷卡頁 → 用測試卡 <code>4311-9522-2222-2222</code>
+      / CVV <code>222</code> / 任意未來日刷一次 → 看 ECPay 後台是否收到首期授權成功。
+      <br><br>
+      <strong>此頁不會真扣款</strong>（stage 環境），但會打 D1 建一筆 pending order。Phase 3 之前
+      ReturnURL 不會升 VIP，只是空殼回 1|OK。
+    </p>
+  </div>
+
+  <div class="card">
+    <h1>① Google 登入</h1>
+    <div id="google-button"></div>
+    <div id="signin-status" class="signin-status unsigned">尚未登入</div>
+  </div>
+
+  <div class="card">
+    <h1>② 選方案 → 建單 → 跳綠界</h1>
+    <p class="sub">按下後會 POST /api/payment/create-order 拿回 ECPay form fields，再 auto-submit。</p>
+    <div class="plan-row">
+      <button class="plan-btn" id="btn-monthly" disabled>
+        月付方案
+        <span class="plan-amount">NT$88</span>
+      </button>
+      <button class="plan-btn" id="btn-yearly" disabled>
+        年付方案
+        <span class="plan-amount">NT$888</span>
+      </button>
+    </div>
+    <div id="result-area"></div>
+  </div>
+
+  <div class="card">
+    <h1>③ 測試卡資訊（綠界 stage）</h1>
+    <p class="sub">
+      <strong>卡號</strong>：4311-9522-2222-2222<br>
+      <strong>有效期</strong>：任何未來日期（例如 12/30）<br>
+      <strong>CVV</strong>：222<br>
+      OTP 簡訊驗證碼：1234（stage 固定值）
+    </p>
+  </div>
+
+</div>
+
+<!-- Google Identity Services SDK -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+<script>
+// ───────────────────────────────────────────────────────────
+// 設定
+// ───────────────────────────────────────────────────────────
+const GOOGLE_CLIENT_ID =
+  '225818828453-n5g26iet76lg8jngc4u6kujjlsp7fdih.apps.googleusercontent.com'
+const CREATE_ORDER_URL = '/api/payment/create-order'
+
+// ───────────────────────────────────────────────────────────
+// 狀態
+// ───────────────────────────────────────────────────────────
+let idToken = null
+let userEmail = null
+
+// ───────────────────────────────────────────────────────────
+// DOM
+// ───────────────────────────────────────────────────────────
+const statusEl = document.getElementById('signin-status')
+const btnMonthly = document.getElementById('btn-monthly')
+const btnYearly = document.getElementById('btn-yearly')
+const resultEl = document.getElementById('result-area')
+
+function setSigned(payload) {
+  idToken = payload.credential
+  // decode payload 來看 email
+  try {
+    const parts = idToken.split('.')
+    const claims = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')))
+    userEmail = claims.email
+  } catch {
+    userEmail = '(無法解碼)'
+  }
+  statusEl.classList.remove('unsigned')
+  statusEl.textContent = `已登入：${userEmail}`
+  btnMonthly.disabled = false
+  btnYearly.disabled = false
+}
+
+function clearResult() {
+  resultEl.innerHTML = ''
+}
+
+function showError(msg) {
+  resultEl.innerHTML = `<div class="err">${msg}</div>`
+}
+
+function showOk(msg, details) {
+  const html = `<div class="ok">${msg}</div>` +
+    (details ? `<details open><summary>詳細參數</summary><pre>${details}</pre></details>` : '')
+  resultEl.innerHTML = html
+}
+
+// ───────────────────────────────────────────────────────────
+// Google Sign-In init
+// ───────────────────────────────────────────────────────────
+window.onload = function () {
+  // 等 GIS script 載完
+  const tryInit = () => {
+    if (!window.google || !window.google.accounts) {
+      setTimeout(tryInit, 100)
+      return
+    }
+    window.google.accounts.id.initialize({
+      client_id: GOOGLE_CLIENT_ID,
+      callback: setSigned,
+    })
+    window.google.accounts.id.renderButton(
+      document.getElementById('google-button'),
+      { theme: 'filled_black', size: 'large', text: 'signin_with' },
+    )
+  }
+  tryInit()
+}
+
+// ───────────────────────────────────────────────────────────
+// 建單 + auto-submit
+// ───────────────────────────────────────────────────────────
+async function createOrderAndRedirect(plan) {
+  if (!idToken) {
+    showError('請先登入 Google')
+    return
+  }
+  clearResult()
+  showOk(`打 ${CREATE_ORDER_URL} 中... plan=${plan}`)
+
+  let resp
+  try {
+    resp = await fetch(CREATE_ORDER_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${idToken}`,
+      },
+      body: JSON.stringify({ plan }),
+    })
+  } catch (e) {
+    showError(`網路錯誤：${e.message}`)
+    return
+  }
+
+  const data = await resp.json().catch(() => ({}))
+  if (!resp.ok) {
+    showError(
+      `HTTP ${resp.status}\n` + JSON.stringify(data, null, 2),
+    )
+    return
+  }
+
+  showOk(
+    `✓ 建單成功 — MerchantTradeNo: ${data.merchantTradeNo}<br>` +
+    `即將 redirect 到 ${data.ecpayUrl}...`,
+    JSON.stringify(data, null, 2),
+  )
+
+  // 建 hidden form auto-submit 到 ECPay
+  const form = document.createElement('form')
+  form.method = 'POST'
+  form.action = data.ecpayUrl
+  form.acceptCharset = 'UTF-8'
+  Object.entries(data.formFields).forEach(([k, v]) => {
+    const input = document.createElement('input')
+    input.type = 'hidden'
+    input.name = k
+    input.value = String(v)
+    form.appendChild(input)
+  })
+  document.body.appendChild(form)
+
+  // 給 user 0.8 秒看到「建單成功」訊息再跳
+  setTimeout(() => form.submit(), 800)
+}
+
+btnMonthly.addEventListener('click', () => createOrderAndRedirect('monthly'))
+btnYearly.addEventListener('click', () => createOrderAndRedirect('yearly'))
+</script>
+
+</body>
+</html>
