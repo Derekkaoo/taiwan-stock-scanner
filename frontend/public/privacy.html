@@ -76,8 +76,6 @@
     <p class="lead">最後更新：2026 年 5 月 30 日</p>
 
     <p>本隱私權政策說明「千張大戶持股追蹤器」（以下簡稱「本站」）如何收集、使用、儲存與保護使用者的資料。使用本站即表示您同意本政策。</p>
-    <p>本站開源於 <a href="https://github.com/Derekkaoo/taiwan-stock-scanner" target="_blank" rel="noopener">GitHub</a>，所有程式碼公開可審視。</p>
-
     <h2>一、本站收集哪些資料？</h2>
 
     <h3 style="font-size:16px;margin-top:20px;color:var(--text-primary);">A. 不需登入即可使用</h3>
@@ -86,30 +84,30 @@
     <h3 style="font-size:16px;margin-top:20px;color:var(--text-primary);">B. 您主動提供（透過 Google 登入）</h3>
     <p>選擇登入以使用「我的最愛」、「篩選策略」、「Telegram 推播」或「VIP 訂閱」時，本站透過 Google OAuth 取得：</p>
     <ul>
-      <li>Google 帳號唯一識別碼（sub）</li>
+      <li>Google 帳號識別碼（用於辨識您的帳號）</li>
       <li>Email 地址（用於顯示與訂閱通知）</li>
-      <li>姓名與頭像 URL（用於介面顯示）</li>
+      <li>姓名與頭像（用於介面顯示）</li>
     </ul>
 
     <h3 style="font-size:16px;margin-top:20px;color:var(--text-primary);">C. 您在本站操作過程產生</h3>
     <ul>
       <li><strong>收藏與策略</strong>：您加入「我的最愛」的股票清單、自訂的篩選策略條件</li>
-      <li><strong>Telegram 綁定資訊</strong>：您的 Telegram chat_id 與 username（用於每日選股推播）</li>
+      <li><strong>Telegram 綁定資訊</strong>：您的 Telegram 帳號識別碼與使用者名稱（用於每日選股推播）</li>
       <li><strong>訂閱與付款資訊</strong>：訂閱方案、訂單編號、扣款時間、信用卡末 4 碼與前 6 碼（顯示與對帳用）</li>
-      <li><strong>操作事件紀錄</strong>：例如儲存策略、加入收藏的時間戳，用於分析與防止濫用</li>
+      <li><strong>操作紀錄</strong>：例如儲存策略、加入收藏的時間，用於改善服務與防止異常使用</li>
     </ul>
     <p><strong>本站不接觸完整信用卡號、CVV、有效期</strong>。所有信用卡資料由綠界科技 ECPay 直接處理。</p>
 
-    <h3 style="font-size:16px;margin-top:20px;color:var(--text-primary);">D. 自動收集（透過第三方服務）</h3>
+    <h3 style="font-size:16px;margin-top:20px;color:var(--text-primary);">D. 自動收集</h3>
     <ul>
-      <li>IP 位址、瀏覽器類型、作業系統、訪問時間（透過 Cloudflare）</li>
-      <li>頁面瀏覽行為、流量來源（透過 Google Analytics 4，匿名化）</li>
+      <li>IP 位址、瀏覽器類型、作業系統、訪問時間（由網站託管服務商記錄，用於防止濫用）</li>
+      <li>頁面瀏覽行為、流量來源（匿名化的訪問統計）</li>
     </ul>
 
-    <h3 style="font-size:16px;margin-top:20px;color:var(--text-primary);">E. 您的瀏覽器 LocalStorage</h3>
+    <h3 style="font-size:16px;margin-top:20px;color:var(--text-primary);">E. 您的瀏覽器本機儲存</h3>
     <ul>
-      <li>Google ID Token（用於免重複登入，token 過期會自動清除）</li>
-      <li>UI 偏好設定（例如展開/收合狀態、預設排序）</li>
+      <li>登入憑證（用於免重複登入，過期會自動清除）</li>
+      <li>介面偏好（例如展開/收合狀態、預設排序）</li>
     </ul>
 
     <h2>二、資料如何被使用？</h2>
@@ -129,43 +127,43 @@
       </thead>
       <tbody>
         <tr>
-          <td>Google OAuth</td>
-          <td>登入驗證（OpenID Connect）</td>
-          <td>您的 Google sub、email、name、picture URL</td>
+          <td>Google 登入</td>
+          <td>登入驗證</td>
+          <td>您的 Google 帳號識別碼、Email、姓名、頭像</td>
         </tr>
         <tr>
           <td>綠界 ECPay</td>
-          <td>VIP 訂閱信用卡定期定額處理</td>
-          <td>完整信用卡資料由綠界處理，本站僅取得卡末 4 碼、前 6 碼與授權結果</td>
+          <td>VIP 訂閱信用卡定期扣款處理</td>
+          <td>完整信用卡資料由綠界處理，本站僅取得卡末 4 碼與授權結果</td>
         </tr>
         <tr>
-          <td>Telegram Bot API</td>
+          <td>Telegram</td>
           <td>每日選股推播</td>
-          <td>您的 Telegram chat_id、username、推播訊息內容</td>
+          <td>您的 Telegram 帳號識別碼、使用者名稱、推播訊息內容</td>
         </tr>
         <tr>
-          <td>Cloudflare（Pages、D1、KV）</td>
-          <td>網站託管、後端資料庫、CDN、DDoS 防護</td>
-          <td>IP 位址、請求紀錄、D1 中儲存的應用資料</td>
+          <td>Cloudflare</td>
+          <td>網站託管、資料庫、防止濫用</td>
+          <td>IP 位址、請求紀錄、登入後儲存的個人資料</td>
         </tr>
         <tr>
-          <td>Firebase Hosting</td>
-          <td>備援靜態檔案託管</td>
+          <td>Firebase</td>
+          <td>備援網站託管</td>
           <td>IP、請求紀錄</td>
         </tr>
         <tr>
-          <td>Google Analytics 4</td>
-          <td>匿名流量與行為分析</td>
+          <td>Google Analytics</td>
+          <td>匿名流量分析</td>
           <td>匿名訪問記錄、Cookies</td>
         </tr>
         <tr>
           <td>Google Fonts</td>
-          <td>載入 Noto Sans TC 字型</td>
+          <td>載入網頁字型</td>
           <td>IP 位址（由 Google 處理）</td>
         </tr>
         <tr>
-          <td>Yahoo Finance / TWSE OpenAPI / FinMind / norway.twsthr.info</td>
-          <td>股票資料來源（server-to-server，由本站後端拉取）</td>
+          <td>公開台股資料來源</td>
+          <td>K 線、財報、籌碼等公開資料</td>
           <td>不傳遞使用者識別資料</td>
         </tr>
       </tbody>
@@ -186,18 +184,18 @@
       <li><strong>Telegram 綁定</strong>：保留至您解除綁定或刪除帳號</li>
       <li><strong>訂閱與付款明細</strong>：依商業會計法，付款相關紀錄至少保留 5 年</li>
       <li><strong>操作事件紀錄</strong>：90 天後自動清除</li>
-      <li><strong>Cloudflare / GA4 自動收集</strong>：依各服務政策，通常 14 個月後匿名化或刪除</li>
+      <li><strong>系統自動收集的訪問紀錄</strong>：依託管服務商政策，通常 14 個月後匿名化或刪除</li>
     </ul>
 
-    <h2>五、Cookies 與 LocalStorage</h2>
-    <p>本站本身使用 LocalStorage 儲存登入狀態與 UI 偏好，不主動設置 Cookies。</p>
+    <h2>五、Cookies 與本機儲存</h2>
+    <p>本站使用瀏覽器本機儲存記錄您的登入狀態與介面偏好，本站本身不主動設置 Cookies。</p>
     <p>但下列第三方服務會在您的瀏覽器放置 Cookies：</p>
     <ul>
-      <li>Google Analytics 4：流量追蹤</li>
-      <li>Google OAuth：登入狀態維持</li>
-      <li>Cloudflare：DDoS 防護與快取</li>
+      <li>Google Analytics：流量分析</li>
+      <li>Google 登入：維持登入狀態</li>
+      <li>Cloudflare：防止濫用與快取</li>
     </ul>
-    <p>您可以透過瀏覽器設定停用 Cookies 或清除 LocalStorage，但這會導致需要重新登入，部分功能也可能無法使用。</p>
+    <p>您可以透過瀏覽器設定停用 Cookies 或清除本機儲存，但這會導致需要重新登入，部分功能也可能無法使用。</p>
 
     <h2>六、使用者權利</h2>
     <p>依《個人資料保護法》，您享有下列權利：</p>
@@ -206,7 +204,7 @@
       <li><strong>請求製作複本</strong></li>
       <li><strong>請求補充或更正</strong></li>
       <li><strong>請求停止蒐集、處理或利用</strong></li>
-      <li><strong>請求刪除</strong>（包含 D1 中的所有 row）</li>
+      <li><strong>請求刪除</strong>（包含所有儲存在本站資料庫中的記錄）</li>
       <li><strong>取消 VIP 訂閱</strong>（會員頁可自助操作，立即生效；下期不再扣款，但當期到期前仍可使用 VIP 功能）</li>
       <li><strong>解除 Telegram 推播</strong>（會員頁可自助解除綁定）</li>
     </ul>
@@ -214,11 +212,11 @@
 
     <h2>七、資料保護措施</h2>
     <ul>
-      <li>全站強制 HTTPS 加密傳輸</li>
+      <li>全站強制使用加密傳輸（HTTPS）</li>
       <li>密碼由 Google 託管，本站<strong>不接觸您的 Google 密碼</strong></li>
-      <li>信用卡完整資料由綠界 ECPay 處理，本站<strong>不接觸全卡號或 CVV</strong></li>
-      <li>API 通訊金鑰加密儲存於 Cloudflare Pages 環境變數</li>
-      <li>D1 資料庫由 Cloudflare 自動加密存取</li>
+      <li>信用卡完整資料由綠界 ECPay 處理，本站<strong>不接觸完整卡號或安全碼</strong></li>
+      <li>所有對外通訊金鑰均加密儲存</li>
+      <li>使用者資料儲存於受信任的雲端服務商，傳輸與存取皆加密</li>
     </ul>
     <p>但<strong>網路傳輸無法保證絕對安全</strong>。若發生重大資料外洩事件，本站會依個人資料保護法於知悉後 72 小時內通報主管機關，並於網站明顯處公告影響範圍與處理方式。</p>
 
