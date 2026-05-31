@@ -41,7 +41,12 @@ export const ERROR_LIMIT_EXCEEDED = 'limit_exceeded'
  */
 const TIER_CAPABILITIES: Record<Tier, Omit<UserAccess, 'tier' | 'trialUntil' | 'vipUntil'>> = {
   FREE: {
-    // 2026-05-23 不限期試用：跟 TRIAL 一樣（無限收藏 + 無限策略 + 推播）
+    // 2026-05-23 不限期試用：UI 顯示「無限」，但 server 端設有**隱形天花板**
+    // 防止有心人士寫腳本大量灌資料占 D1 配額（試用期暴露窗口的防禦）。
+    //
+    //   favorites: 1000  ← 真實 user 永遠不會撞到（98% < 10 個），攻擊者塞不爆
+    //   strategies: 100  ← 同上
+    //   canPush: true    ← 試用期完整體驗
     //
     // ─── 金流上線 SOP（祖父條款方案 Y）───
     // 等綠界 ECPay 過件 + VIP 訂閱功能上線後，這裡改回：
@@ -53,7 +58,7 @@ const TIER_CAPABILITIES: Record<Tier, Omit<UserAccess, 'tier' | 'trialUntil' | '
     //   - 推播 cron 會跳過 FREE user（push_user_strategies.py 要加 tier 判斷）
     //   - 推 Telegram 通知所有已綁定的 user：「金流已上線，可升級 VIP 解鎖無限新增 + 推播」
     //   - SHOW_VIP_UI 維持 true
-    limits: { favorites: null, strategies: null },
+    limits: { favorites: 1000, strategies: 100 },
     canPush: true,
   },
   FRIEND: {
