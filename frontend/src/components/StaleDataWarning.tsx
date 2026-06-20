@@ -16,26 +16,83 @@ interface Props {
   isMobile: boolean
 }
 
-/** 回傳「最近一個週五（含今日）」的 YYYY-MM-DD */
-function getMostRecentFriday(today: Date): string {
-  const dow = today.getDay()  // 0=Sun, 6=Sat
-  // 週五=5→0, 週六=6→1, 週日=0→2, 週一=1→3, 週二=2→4, 週三=3→5, 週四=4→6
-  const daysBack = (dow + 2) % 7
-  const friday = new Date(today)
-  friday.setDate(today.getDate() - daysBack)
-  const y = friday.getFullYear()
-  const m = String(friday.getMonth() + 1).padStart(2, '0')
-  const d = String(friday.getDate()).padStart(2, '0')
-  return `${y}-${m}-${d}`
+/**
+ * 台灣證交所休市日（國定假日 + 補假 + 春節）
+ *
+ * 來源：台灣證券交易所每年公告的「重要市場時間表」
+ * 維護：每年 12 月證交所公告新年度行事曆時，補進下一年的日期。
+ *
+ * 漏列的後果：那天被當作交易日 → expectedDay 可能算錯 → 偶爾誤報警告（無傷大雅）
+ * 多列的後果：那天被當作休市 → expectedDay 往前推 → 警告觸發更少（更寬容）
+ *
+ * → 寧可多列也別漏列
+ */
+const TW_STOCK_HOLIDAYS = new Set<string>([
+  // === 2025 ===
+  '2025-01-01',
+  '2025-01-27', '2025-01-28', '2025-01-29', '2025-01-30', '2025-01-31',
+  '2025-02-27', '2025-02-28',
+  '2025-04-03', '2025-04-04',
+  '2025-05-01',
+  '2025-05-30',
+  '2025-09-29', '2025-10-06',
+  '2025-10-10', '2025-10-24',
+  // === 2026 ===
+  '2026-01-01',
+  '2026-02-13',
+  '2026-02-16', '2026-02-17', '2026-02-18', '2026-02-19', '2026-02-20',
+  '2026-02-27',
+  '2026-04-02', '2026-04-03',
+  '2026-05-01',
+  '2026-06-19',
+  '2026-09-25',
+  '2026-10-09',
+  // === 2027（粗估，待證交所公告）===
+  '2027-01-01',
+  '2027-02-05', '2027-02-08', '2027-02-09', '2027-02-10', '2027-02-11', '2027-02-12',
+  '2027-02-26',
+  '2027-04-02', '2027-04-05',
+  '2027-04-30', '2027-05-03',
+  '2027-06-08', '2027-06-09',
+  '2027-09-13', '2027-09-14',
+  '2027-10-08', '2027-10-11',
+])
+
+function fmtDate(d: Date): string {
+  const y = d.getFullYear()
+  const m = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  return `${y}-${m}-${day}`
+}
+
+function isTradingDay(d: Date): boolean {
+  const dow = d.getDay()
+  if (dow === 0 || dow === 6) return false
+  if (TW_STOCK_HOLIDAYS.has(fmtDate(d))) return false
+  return true
+}
+
+/**
+ * 回傳「最近一個交易日（含今日）」的 YYYY-MM-DD
+ * 從 today 往前找，跳過週末跟證交所休市日。
+ * 譬如 2026-06-20 (六) → 6/19 (五，端午休市) → 6/18 (四) ✓
+ */
+function getMostRecentTradingDay(today: Date): string {
+  const d = new Date(today)
+  for (let i = 0; i < 30; i++) {
+    if (isTradingDay(d)) return fmtDate(d)
+    d.setDate(d.getDate() - 1)
+  }
+  return fmtDate(d)
 }
 
 const DISMISS_KEY_PREFIX = 'stale-data-dismissed:'
 
 export function StaleDataWarning({ stocksDate, isMobile }: Props) {
-  const expectedFriday = useMemo(() => getMostRecentFriday(new Date()), [])
-  const isStale = !!stocksDate && stocksDate < expectedFriday
+  const expectedDay = useMemo(() => getMostRecentTradingDay(new Date()), [])
+  const isStale = !!stocksDate && stocksDate < expectedDay
 
-  const dismissKey = `${DISMISS_KEY_PREFIX}${expectedFriday}`
+  const dismissKey = `${DISMISS_KEY_PREFIX}${expectedDay}`
   const [dismissed, setDismissed] = useState<boolean>(() => {
     try {
       return localStorage.getItem(dismissKey) === '1'
@@ -73,7 +130,7 @@ export function StaleDataWarning({ stocksDate, isMobile }: Props) {
     setDismissed(true)
   }
 
-  const message = `千張大戶最新資料來源尚未更新（預期 ${expectedFriday}），請稍後重新整理。`
+  const message = `千張大戶最新資料尚未更新（最近交易日 ${expectedDay}），請稍後重新整理。`
 
   // ─── 手機：自製 modal（不依賴外部元件，避免 master / favorites-v2 分歧）───
   if (isMobile) {
