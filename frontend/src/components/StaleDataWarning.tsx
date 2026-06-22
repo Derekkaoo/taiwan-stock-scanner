@@ -73,23 +73,47 @@ function isTradingDay(d: Date): boolean {
 }
 
 /**
- * 回傳「最近一個交易日（含今日）」的 YYYY-MM-DD
- * 從 today 往前找，跳過週末跟證交所休市日。
- * 譬如 2026-06-20 (六) → 6/19 (五，端午休市) → 6/18 (四) ✓
+ * 回傳「norway 預期應該已抓到的大戶資料日」
+ *
+ * 重點：norway.twsthr.info 的大戶資料是「**週更新**」，每週六傍晚抓上週五的資料。
+ * 所以平日 stocks.date 跟「上週五」持平就是**正常**，不該跳警告。
+ *
+ * 邏輯：
+ *   expectedDay = 「最近一個已過的 Friday」（不含今天，給 1 天 publish lag）
+ *   如果那個 Friday 剛好是假日 → 往前推到該週的最後交易日
+ *
+ * 範例：
+ *   2026-06-22 (週一) → 從 6/21 往前找 Friday → 6/19 (端午) → 非交易日 → 6/18 ✓
+ *   2026-06-23 (週二) → 同上 → 6/18 ✓
+ *   2026-06-26 (週五) → 從 6/25 找 Friday → 6/19 (端午) → 6/18 ✓
+ *   2026-06-27 (週六) → 從 6/26 (本週五，交易日) → 6/26 ✓ ⭐ 這天才會比較
+ *   2026-06-28 (週日) → 同上 → 6/26 ✓
+ *   2026-06-29 (週一) → 從 6/28 找 Friday → 6/26 ✓
+ *
+ * 結果：警告只在「週六起 → norway 應該已 publish 本週五資料」才會觸發，
+ *       平日完全不會跳。
  */
-function getMostRecentTradingDay(today: Date): string {
+function getExpectedDataDate(today: Date): string {
   const d = new Date(today)
-  for (let i = 0; i < 30; i++) {
-    if (isTradingDay(d)) return fmtDate(d)
+  d.setDate(d.getDate() - 1)   // 從昨天開始（避免今天是 Friday 但 norway 還沒 publish）
+
+  // 找最近一個 Friday
+  while (d.getDay() !== 5) {
     d.setDate(d.getDate() - 1)
   }
+
+  // 如果 Friday 不是交易日（譬如端午剛好週五），往前推到該週最後交易日
+  while (!isTradingDay(d)) {
+    d.setDate(d.getDate() - 1)
+  }
+
   return fmtDate(d)
 }
 
 const DISMISS_KEY_PREFIX = 'stale-data-dismissed:'
 
 export function StaleDataWarning({ stocksDate, isMobile }: Props) {
-  const expectedDay = useMemo(() => getMostRecentTradingDay(new Date()), [])
+  const expectedDay = useMemo(() => getExpectedDataDate(new Date()), [])
   const isStale = !!stocksDate && stocksDate < expectedDay
 
   const dismissKey = `${DISMISS_KEY_PREFIX}${expectedDay}`
