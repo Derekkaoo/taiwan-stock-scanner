@@ -1,10 +1,15 @@
-name: 部署到 Firebase + Cloudflare
+name: 部署到 Cloudflare
 
 # 只負責「build + deploy」，不抓資料。觸發條件：master 任何 push（不論是 user code 還是 bot data）
 # 拆分理由：把資料抓取（weekly-update.yml）跟部署分離，避免 user 改 code push 也跑全套資料抓取
 #
 # Cloudflare Pages preview 分支（feature/favorites-v2）由 Cloudflare 自己偵測 push 自動部署，
 # 這裡只處理 master / production deploy。
+#
+# 2026-06-25 改動：拿掉 Firebase Hosting step
+#   - FirebaseExtended/action-hosting-deploy@v0 是 Node 20 寫的，沒出 v1 升級版
+#   - 今天起 GitHub Actions runner 強推 Node 24，這個 action 內部 npx firebase-tools 撞 exit 1
+#   - 主 domain 指向 Cloudflare Pages，Firebase 只是備援 → 直接砍掉 step 恢復服務
 
 on:
   push:
@@ -12,7 +17,6 @@ on:
       - master
   workflow_dispatch:
 
-# 同時間只跑一個（多次 push 連著進來時排隊執行）
 concurrency:
   group: deploy-${{ github.ref }}
   cancel-in-progress: false
@@ -53,13 +57,14 @@ jobs:
           cp frontend/public/data/stocks.json frontend/dist/data/stocks.json
           cp frontend/public/data/klines.json frontend/dist/data/klines.json
 
-      - name: 部署到 Firebase Hosting
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TAIWAN_STOCK_SCANNER }}
-          channelId: live
-          projectId: taiwan-stock-scanner
+      # 2026-06-25 disabled: FirebaseExtended action 跟 Node 24 不相容（見檔頭註解）
+      # - name: 部署到 Firebase Hosting
+      #   uses: FirebaseExtended/action-hosting-deploy@v0
+      #   with:
+      #     repoToken: ${{ secrets.GITHUB_TOKEN }}
+      #     firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TAIWAN_STOCK_SCANNER }}
+      #     channelId: live
+      #     projectId: taiwan-stock-scanner
 
       - name: 部署到 Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
