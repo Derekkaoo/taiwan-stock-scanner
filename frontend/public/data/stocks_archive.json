@@ -1363,8 +1363,8 @@
       "塑化原料"
     ],
     "groupDesc": "",
-    "holdingPct": 58.18,
-    "delta": 0.26,
+    "holdingPct": 58.69,
+    "delta": 0.51,
     "price": 15.5,
     "marketCap": 184.26,
     "turnovers": {
@@ -1388,7 +1388,7 @@
     "ma60": 13.51,
     "ma20Trend": "up",
     "dailyChangePct": 9.93,
-    "date": "2026-06-26",
+    "date": "2026-07-03",
     "threeMonthReturn": 59.47,
     "returns": {
       "w1": 17.42,
@@ -8585,8 +8585,8 @@
       "機械零組件"
     ],
     "groupDesc": "",
-    "holdingPct": 52.57,
-    "delta": 0.16,
+    "holdingPct": 53.75,
+    "delta": 1.18,
     "price": 1440.0,
     "marketCap": 2880.0,
     "turnovers": {
@@ -8610,7 +8610,7 @@
     "ma60": 1361.33,
     "ma20Trend": "up",
     "dailyChangePct": 3.6,
-    "date": "2026-06-26",
+    "date": "2026-07-03",
     "threeMonthReturn": 61.25,
     "returns": {
       "w1": 5.88,
@@ -11175,39 +11175,39 @@
       "半導體化學品"
     ],
     "groupDesc": "",
-    "holdingPct": 38.98,
-    "delta": 0.22,
-    "price": 42.55,
-    "marketCap": 233.07,
+    "holdingPct": 39.3,
+    "delta": 0.29,
+    "price": 45.7,
+    "marketCap": 250.32,
     "turnovers": {
       "d1": 3.67,
-      "d5": 5.86,
-      "d10": 4.25,
-      "d20": 4.94,
-      "d50": 10.38
+      "d5": 2.37,
+      "d10": 4.12,
+      "d20": 3.92,
+      "d50": 7.54
     },
     "volumes": {
-      "d1": 8.38,
-      "d5": 12.4,
-      "d10": 9.18,
-      "d20": 10.6,
-      "d50": 20.04
+      "d1": 8.04,
+      "d5": 5.31,
+      "d10": 8.85,
+      "d20": 8.63,
+      "d50": 14.58
     },
-    "pctOf52wHigh": 66.17,
-    "pctOf200dHigh": 66.17,
-    "ma10": 45.39,
-    "ma20": 45.84,
-    "ma60": 48.23,
+    "pctOf52wHigh": 71.07,
+    "pctOf200dHigh": 71.07,
+    "ma10": 45.65,
+    "ma20": 44.92,
+    "ma60": 48.96,
     "ma20Trend": "down",
-    "dailyChangePct": -8.1,
-    "date": "2026-06-18",
-    "threeMonthReturn": 161.04,
+    "dailyChangePct": 1.11,
+    "date": "2026-07-03",
+    "threeMonthReturn": 180.37,
     "returns": {
-      "w1": -6.07,
-      "m1": -16.57,
-      "m3": 10.66,
-      "m6": 133.79,
-      "y1": 161.04
+      "w1": 7.4,
+      "m1": -3.59,
+      "m3": 19.95,
+      "m6": 149.73,
+      "y1": 180.37
     },
     "industry": "化學工業",
     "market": "上市",
@@ -11231,9 +11231,9 @@
     },
     "revenueYoY": 9.41,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-19",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1781840070,
+      "_last_rev_attempt_ts": 1783141290,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -11284,7 +11284,7 @@
           "yoy": 9.42
         }
       ],
-      "_last_fin_attempt_ts": 1781840071,
+      "_last_fin_attempt_ts": 1783141291,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -11491,7 +11491,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-27"
+    "_lastSeenDate": "2026-07-04"
   },
   "1727": {
     "id": "1727",
@@ -51463,41 +51463,42 @@
       "設備儀器商"
     ],
     "groupDesc": "",
-    "holdingPct": 49.07,
-    "delta": 3.03,
-    "price": 160.0,
-    "marketCap": 98.04,
+    "holdingPct": 46.89,
+    "delta": 1.88,
+    "price": 124.0,
+    "marketCap": 75.98,
     "turnovers": {
-      "d1": 2.03,
-      "d5": 4.27,
-      "d10": 4.49,
-      "d20": 4.24,
-      "d50": 4.32
+      "d1": 1.19,
+      "d5": 1.11,
+      "d10": 1.17,
+      "d20": 1.75,
+      "d50": 2.91
     },
     "volumes": {
-      "d1": 1.3,
-      "d5": 2.93,
-      "d10": 3.31,
-      "d20": 3.8,
-      "d50": 4.91
+      "d1": 0.97,
+      "d5": 0.92,
+      "d10": 0.97,
+      "d20": 1.42,
+      "d50": 2.48
     },
-    "pctOf52wHigh": 100.0,
-    "pctOf200dHigh": 100.0,
-    "ma10": 135.4,
-    "ma20": 112.22,
-    "ma60": 85.53,
-    "ma20Trend": "up",
-    "dailyChangePct": 9.22,
-    "date": "2026-05-22",
-    "threeMonthReturn": 274.71,
+    "pctOf52wHigh": 75.38,
+    "pctOf200dHigh": 75.38,
+    "ma10": 119.45,
+    "ma20": 121.6,
+    "ma60": 115.36,
+    "ma20Trend": "down",
+    "dailyChangePct": 0.81,
+    "date": "2026-07-03",
+    "threeMonthReturn": 211.17,
     "returns": {
-      "w1": 7.38,
-      "m1": 84.76,
-      "m3": 224.87,
-      "m6": 253.2,
-      "y1": 274.71
+      "w1": 9.73,
+      "m1": -10.14,
+      "m3": 66.67,
+      "m6": 148.75,
+      "y1": 211.17
     },
     "industry": "其他電子業",
+    "market": "上櫃",
     "subIndustries": [
       "產業機械",
       "自動化設備",
@@ -51516,16 +51517,12 @@
         "面板設備"
       ]
     },
-    "revenueYoY": 137.82,
-    "revenueMonth": "2026-04",
-    "revenueFirstSeen": "2026-05-16",
+    "revenueYoY": 67.09,
+    "revenueMonth": "2026-05",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1778948218,
+      "_last_rev_attempt_ts": 1783141231,
       "revenueYoY": [
-        {
-          "date": "2025-05",
-          "yoy": 70.04
-        },
         {
           "date": "2025-06",
           "yoy": 311.67
@@ -51569,9 +51566,13 @@
         {
           "date": "2026-04",
           "yoy": 137.82
+        },
+        {
+          "date": "2026-05",
+          "yoy": 67.09
         }
       ],
-      "_last_fin_attempt_ts": 1778948219,
+      "_last_fin_attempt_ts": 1783141232,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -51792,7 +51793,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "USUN"
     },
-    "_lastSeenDate": "2026-05-23"
+    "_lastSeenDate": "2026-07-04"
   },
   "3504": {
     "id": "3504",
@@ -59619,39 +59620,39 @@
       "太陽能"
     ],
     "groupDesc": "",
-    "holdingPct": 60.34,
-    "delta": 0.1,
-    "price": 16.05,
-    "marketCap": 10.91,
+    "holdingPct": 60.62,
+    "delta": 0.16,
+    "price": 17.35,
+    "marketCap": 11.8,
     "turnovers": {
-      "d1": 0.01,
-      "d5": 0.03,
-      "d10": 0.02,
+      "d1": 0.0,
+      "d5": 0.01,
+      "d10": 0.01,
       "d20": 0.02,
       "d50": 0.01
     },
     "volumes": {
-      "d1": 0.07,
-      "d5": 0.2,
-      "d10": 0.16,
-      "d20": 0.12,
+      "d1": 0.02,
+      "d5": 0.05,
+      "d10": 0.04,
+      "d20": 0.1,
       "d50": 0.09
     },
-    "pctOf52wHigh": 70.55,
-    "pctOf200dHigh": 70.55,
-    "ma10": 14.74,
-    "ma20": 13.27,
-    "ma60": 14.74,
+    "pctOf52wHigh": 76.26,
+    "pctOf200dHigh": 76.26,
+    "ma10": 17.13,
+    "ma20": 16.59,
+    "ma60": 14.69,
     "ma20Trend": "up",
-    "dailyChangePct": -2.13,
-    "date": "2026-06-12",
-    "threeMonthReturn": -13.24,
+    "dailyChangePct": -0.86,
+    "date": "2026-07-03",
+    "threeMonthReturn": -11.48,
     "returns": {
-      "w1": 9.56,
-      "m1": 31.02,
-      "m3": -13.01,
-      "m6": -4.46,
-      "y1": -13.24
+      "w1": 7.1,
+      "m1": 43.39,
+      "m3": 2.66,
+      "m6": -12.59,
+      "y1": -11.48
     },
     "industry": "紡織纖維",
     "market": "上櫃",
@@ -59671,9 +59672,9 @@
     },
     "revenueYoY": -32.94,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-09",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1781023022,
+      "_last_rev_attempt_ts": 1783141250,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -59724,7 +59725,7 @@
           "yoy": -32.95
         }
       ],
-      "_last_fin_attempt_ts": 1780107489,
+      "_last_fin_attempt_ts": 1783141251,
       "grossMarginYoY": [
         {
           "quarter": "2023Q4",
@@ -59931,7 +59932,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-15"
+    "_lastSeenDate": "2026-07-04"
   },
   "4417": {
     "id": "4417",
@@ -60589,41 +60590,42 @@
       "機械零組件"
     ],
     "groupDesc": "",
-    "holdingPct": 37.73,
-    "delta": 1.51,
-    "price": 68.6,
-    "marketCap": 62.0,
+    "holdingPct": 27.94,
+    "delta": 1.48,
+    "price": 64.0,
+    "marketCap": 73.72,
     "turnovers": {
-      "d1": 14.62,
-      "d5": 13.92,
-      "d10": 11.12,
-      "d20": 8.12,
-      "d50": 3.84
+      "d1": 9.02,
+      "d5": 2.77,
+      "d10": 1.91,
+      "d20": 2.03,
+      "d50": 6.46
     },
     "volumes": {
-      "d1": 20.66,
-      "d5": 19.74,
-      "d10": 16.42,
-      "d20": 12.83,
-      "d50": 6.36
+      "d1": 13.98,
+      "d5": 4.46,
+      "d10": 3.11,
+      "d20": 3.21,
+      "d50": 9.38
     },
-    "pctOf52wHigh": 90.62,
-    "pctOf200dHigh": 90.62,
-    "ma10": 65.28,
-    "ma20": 59.59,
-    "ma60": 50.74,
-    "ma20Trend": "up",
-    "dailyChangePct": -9.38,
-    "date": "2026-04-30",
-    "threeMonthReturn": 82.2,
+    "pctOf52wHigh": 78.14,
+    "pctOf200dHigh": 78.14,
+    "ma10": 59.01,
+    "ma20": 60.85,
+    "ma60": 63.1,
+    "ma20Trend": "down",
+    "dailyChangePct": 2.73,
+    "date": "2026-07-03",
+    "threeMonthReturn": 67.54,
     "returns": {
-      "w1": 0.15,
-      "m1": 58.25,
-      "m3": 41.44,
-      "m6": 70.43,
-      "y1": 82.2
+      "w1": 15.52,
+      "m1": -11.11,
+      "m3": 51.66,
+      "m6": 81.05,
+      "y1": 67.54
     },
     "industry": "電機機械",
+    "market": "上市",
     "subIndustries": [
       "機械零組件",
       "滑軌"
@@ -60634,15 +60636,12 @@
         "滑軌"
       ]
     },
-    "revenueYoY": 33.34,
-    "revenueMonth": "2026-04",
-    "revenueFirstSeen": "2026-05-07",
+    "revenueYoY": 22.96,
+    "revenueMonth": "2026-05",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
+      "_last_rev_attempt_ts": 1783141240,
       "revenueYoY": [
-        {
-          "date": "2025-05",
-          "yoy": 0.61
-        },
         {
           "date": "2025-06",
           "yoy": 20.78
@@ -60686,13 +60685,14 @@
         {
           "date": "2026-04",
           "yoy": 33.35
+        },
+        {
+          "date": "2026-05",
+          "yoy": 22.97
         }
       ],
+      "_last_fin_attempt_ts": 1783141241,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q1",
-          "yoy": -189.99
-        },
         {
           "quarter": "2024Q2",
           "yoy": -95.68
@@ -60720,13 +60720,13 @@
         {
           "quarter": "2025Q4",
           "yoy": 2229.46
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": 52.68
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q1",
-          "yoy": -862.17
-        },
         {
           "quarter": "2024Q2",
           "yoy": -286.43
@@ -60754,13 +60754,13 @@
         {
           "quarter": "2025Q4",
           "yoy": 93.4
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": 77.41
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q1",
-          "yoy": -497.67
-        },
         {
           "quarter": "2024Q2",
           "yoy": -190.63
@@ -60771,7 +60771,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 4.03
+          "yoy": -0.67
         },
         {
           "quarter": "2025Q1",
@@ -60787,14 +60787,14 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 129.37
+          "yoy": 127.33
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": 72.46
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q1",
-          "value": -21.18
-        },
         {
           "quarter": "2024Q2",
           "value": 0.87
@@ -60822,13 +60822,13 @@
         {
           "quarter": "2025Q4",
           "value": 16.55
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 13.94
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q1",
-          "value": -55.02
-        },
         {
           "quarter": "2024Q2",
           "value": -11.03
@@ -60856,13 +60856,13 @@
         {
           "quarter": "2025Q4",
           "value": -1.35
+        },
+        {
+          "quarter": "2026Q1",
+          "value": -5.37
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q1",
-          "value": -1.71
-        },
         {
           "quarter": "2024Q2",
           "value": -0.93
@@ -60873,7 +60873,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": -1.43
+          "value": -1.5
         },
         {
           "quarter": "2025Q1",
@@ -60889,11 +60889,13 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.42
+          "value": 0.41
+        },
+        {
+          "quarter": "2026Q1",
+          "value": -0.19
         }
-      ],
-      "_last_rev_attempt_ts": 1778218838,
-      "_last_fin_attempt_ts": 1778297327
+      ]
     },
     "companyProfile": {
       "business": "滾珠螺桿、線性滑軌及滾珠花鍵等產品之製造及銷售",
@@ -60910,7 +60912,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "TBI MOTION"
     },
-    "_lastSeenDate": "2026-05-09"
+    "_lastSeenDate": "2026-07-04"
   },
   "4542": {
     "id": "4542",
@@ -71945,39 +71947,39 @@
       "金融業"
     ],
     "groupDesc": "",
-    "holdingPct": 43.85,
-    "delta": 2.21,
-    "price": 17.25,
-    "marketCap": 68.34,
+    "holdingPct": 40.24,
+    "delta": 0.67,
+    "price": 16.05,
+    "marketCap": 63.58,
     "turnovers": {
-      "d1": 0.75,
-      "d5": 1.0,
-      "d10": 1.5,
-      "d20": 1.03,
-      "d50": 0.65
+      "d1": 0.33,
+      "d5": 0.87,
+      "d10": 0.79,
+      "d20": 0.83,
+      "d50": 0.81
     },
     "volumes": {
-      "d1": 4.36,
-      "d5": 5.83,
-      "d10": 8.35,
-      "d20": 5.93,
-      "d50": 3.88
+      "d1": 2.1,
+      "d5": 5.44,
+      "d10": 4.82,
+      "d20": 4.93,
+      "d50": 4.81
     },
-    "pctOf52wHigh": 88.24,
-    "pctOf200dHigh": 88.24,
-    "ma10": 17.82,
-    "ma20": 16.74,
-    "ma60": 15.66,
-    "ma20Trend": "up",
-    "dailyChangePct": 4.23,
-    "date": "2026-06-05",
-    "threeMonthReturn": 35.83,
+    "pctOf52wHigh": 82.1,
+    "pctOf200dHigh": 82.1,
+    "ma10": 16.43,
+    "ma20": 16.88,
+    "ma60": 16.1,
+    "ma20Trend": "down",
+    "dailyChangePct": 1.9,
+    "date": "2026-07-03",
+    "threeMonthReturn": 45.25,
     "returns": {
-      "w1": -9.92,
-      "m1": 10.93,
-      "m3": 26.37,
-      "m6": 44.35,
-      "y1": 35.83
+      "w1": -3.02,
+      "m1": -16.84,
+      "m3": 10.69,
+      "m6": 31.02,
+      "y1": 45.25
     },
     "industry": "金融保險業",
     "market": "上櫃",
@@ -71993,9 +71995,9 @@
     },
     "revenueYoY": 6.01,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-09",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1781023184,
+      "_last_rev_attempt_ts": 1783141243,
       "revenueYoY": [
         {
           "date": "2025-05",
@@ -72038,7 +72040,7 @@
           "yoy": 6.02
         }
       ],
-      "_last_fin_attempt_ts": 1780300518,
+      "_last_fin_attempt_ts": 1783141245,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -72245,7 +72247,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-13"
+    "_lastSeenDate": "2026-07-04"
   },
   "6111": {
     "id": "6111",
@@ -72255,39 +72257,39 @@
       "控股公司"
     ],
     "groupDesc": "",
-    "holdingPct": 40.3,
-    "delta": 0.18,
-    "price": 41.85,
-    "marketCap": 45.65,
+    "holdingPct": 40.2,
+    "delta": 0.24,
+    "price": 43.7,
+    "marketCap": 47.67,
     "turnovers": {
-      "d1": 0.16,
-      "d5": 0.11,
-      "d10": 0.12,
-      "d20": 0.13,
-      "d50": 0.21
+      "d1": 0.09,
+      "d5": 0.09,
+      "d10": 0.1,
+      "d20": 0.11,
+      "d50": 0.18
     },
     "volumes": {
-      "d1": 0.38,
-      "d5": 0.25,
-      "d10": 0.27,
-      "d20": 0.29,
-      "d50": 0.45
+      "d1": 0.22,
+      "d5": 0.21,
+      "d10": 0.23,
+      "d20": 0.25,
+      "d50": 0.38
     },
-    "pctOf52wHigh": 77.36,
-    "pctOf200dHigh": 77.36,
-    "ma10": 44.14,
-    "ma20": 44.11,
-    "ma60": 45.51,
+    "pctOf52wHigh": 80.78,
+    "pctOf200dHigh": 80.78,
+    "ma10": 43.53,
+    "ma20": 43.97,
+    "ma60": 45.57,
     "ma20Trend": "down",
-    "dailyChangePct": -4.12,
-    "date": "2026-06-18",
-    "threeMonthReturn": -17.78,
+    "dailyChangePct": 1.63,
+    "date": "2026-07-03",
+    "threeMonthReturn": -16.44,
     "returns": {
-      "w1": -6.48,
-      "m1": -7.82,
-      "m3": -2.79,
-      "m6": -8.22,
-      "y1": -17.78
+      "w1": 4.42,
+      "m1": -0.23,
+      "m3": 5.3,
+      "m6": -1.13,
+      "y1": -16.44
     },
     "industry": "文化創意業",
     "market": "上櫃",
@@ -72301,9 +72303,9 @@
     },
     "revenueYoY": 253.96,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-10",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1781111479,
+      "_last_rev_attempt_ts": 1783141270,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -72354,7 +72356,7 @@
           "yoy": 253.96
         }
       ],
-      "_last_fin_attempt_ts": 1778947759,
+      "_last_fin_attempt_ts": 1783141272,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -72575,7 +72577,7 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "SFG"
     },
-    "_lastSeenDate": "2026-06-27"
+    "_lastSeenDate": "2026-07-04"
   },
   "6126": {
     "id": "6126",
@@ -87195,8 +87197,8 @@
       "設備儀器商"
     ],
     "groupDesc": "",
-    "holdingPct": 6.39,
-    "delta": 0.48,
+    "holdingPct": 6.53,
+    "delta": 0.14,
     "price": 445.0,
     "marketCap": 119.63,
     "turnovers": {
@@ -87220,7 +87222,7 @@
     "ma60": 460.48,
     "ma20Trend": "down",
     "dailyChangePct": 7.88,
-    "date": "2026-06-26",
+    "date": "2026-07-03",
     "threeMonthReturn": 552.49,
     "returns": {
       "w1": 11.95,
@@ -96648,8 +96650,8 @@
       "其他公用事業"
     ],
     "groupDesc": "",
-    "holdingPct": 73.86,
-    "delta": 0.55,
+    "holdingPct": 74.06,
+    "delta": 0.2,
     "price": 21.75,
     "marketCap": 92.12,
     "turnovers": {
@@ -96673,7 +96675,7 @@
     "ma60": 20.9,
     "ma20Trend": "up",
     "dailyChangePct": 1.4,
-    "date": "2026-06-26",
+    "date": "2026-07-03",
     "threeMonthReturn": -49.21,
     "returns": {
       "w1": 6.36,
@@ -97827,39 +97829,39 @@
       "地產"
     ],
     "groupDesc": "",
-    "holdingPct": 73.75,
-    "delta": 1.29,
-    "price": 44.35,
-    "marketCap": 0.0,
+    "holdingPct": 74.77,
+    "delta": 0.84,
+    "price": 42.5,
+    "marketCap": 38.41,
     "turnovers": {
-      "d1": 0.21,
-      "d5": 0.33,
-      "d10": 0.23,
-      "d20": 0.16,
-      "d50": 0.09
+      "d1": 0.05,
+      "d5": 0.05,
+      "d10": 0.07,
+      "d20": 0.18,
+      "d50": 0.12
     },
     "volumes": {
-      "d1": 0.47,
-      "d5": 0.74,
-      "d10": 0.53,
-      "d20": 0.39,
-      "d50": 0.24
+      "d1": 0.12,
+      "d5": 0.12,
+      "d10": 0.16,
+      "d20": 0.4,
+      "d50": 0.29
     },
-    "pctOf52wHigh": 54.09,
-    "pctOf200dHigh": 57.3,
-    "ma10": 41.44,
-    "ma20": 37.49,
-    "ma60": 38.85,
+    "pctOf52wHigh": 53.93,
+    "pctOf200dHigh": 54.91,
+    "ma10": 42.05,
+    "ma20": 43.08,
+    "ma60": 39.14,
     "ma20Trend": "up",
-    "dailyChangePct": 1.49,
-    "date": "2026-06-05",
-    "threeMonthReturn": -43.86,
+    "dailyChangePct": 1.43,
+    "date": "2026-07-03",
+    "threeMonthReturn": -45.58,
     "returns": {
-      "w1": 4.11,
-      "m1": 34.6,
-      "m3": 11.01,
-      "m6": -3.17,
-      "y1": -43.86
+      "w1": 2.53,
+      "m1": 8.14,
+      "m3": 4.04,
+      "m6": -17.95,
+      "y1": -45.58
     },
     "industry": "建材營造業",
     "market": "上市",
@@ -97875,9 +97877,9 @@
     },
     "revenueYoY": 75.87,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-08",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1780905471,
+      "_last_rev_attempt_ts": 1783141285,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -97928,7 +97930,7 @@
           "yoy": 75.88
         }
       ],
-      "_last_fin_attempt_ts": 1780107578,
+      "_last_fin_attempt_ts": 1783141286,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -98135,7 +98137,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-12"
+    "_lastSeenDate": "2026-07-04"
   },
   "9912": {
     "id": "9912",
@@ -100060,40 +100062,41 @@
     ],
     "groupDesc": "",
     "holdingPct": 60.1,
-    "delta": 6.5,
-    "price": 0.0,
-    "marketCap": 0.0,
+    "delta": 3.32,
+    "price": 33.65,
+    "marketCap": 11.3,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.0,
+      "d5": 0.03,
+      "d10": 0.02,
+      "d20": 0.02,
+      "d50": 0.06
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.0,
+      "d5": 0.1,
+      "d10": 0.07,
+      "d20": 0.05,
+      "d50": 0.19
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
-    "date": "2026-05-15",
-    "threeMonthReturn": null,
+    "pctOf52wHigh": 93.47,
+    "pctOf200dHigh": 93.47,
+    "ma10": 32.77,
+    "ma20": 32.3,
+    "ma60": 31.25,
+    "ma20Trend": "up",
+    "dailyChangePct": 0.0,
+    "date": "2026-07-03",
+    "threeMonthReturn": 36.51,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": 5.16,
+      "m1": 4.18,
+      "m3": 40.21,
+      "m6": 60.62,
+      "y1": 36.51
     },
     "industry": "運動休閒",
+    "market": "上櫃",
     "subIndustries": [
       "INTERNET應用與服務",
       "電商平台",
@@ -100112,16 +100115,12 @@
         "球具"
       ]
     },
-    "revenueYoY": 49.32,
-    "revenueMonth": "2026-04",
-    "revenueFirstSeen": "2026-05-16",
+    "revenueYoY": 41.26,
+    "revenueMonth": "2026-05",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1778947820,
+      "_last_rev_attempt_ts": 1783141238,
       "revenueYoY": [
-        {
-          "date": "2025-05",
-          "yoy": -31.81
-        },
         {
           "date": "2025-06",
           "yoy": -10.58
@@ -100165,9 +100164,13 @@
         {
           "date": "2026-04",
           "yoy": 49.32
+        },
+        {
+          "date": "2026-05",
+          "yoy": 41.26
         }
       ],
-      "_last_fin_attempt_ts": 1778947821,
+      "_last_fin_attempt_ts": 1783141239,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -100374,7 +100377,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-05-16"
+    "_lastSeenDate": "2026-07-04"
   },
   "1101": {
     "id": "1101",
@@ -103879,39 +103882,39 @@
       "織布業"
     ],
     "groupDesc": "",
-    "holdingPct": 54.11,
-    "delta": 0.27,
-    "price": 10.4,
-    "marketCap": 44.26,
+    "holdingPct": 54.32,
+    "delta": 0.12,
+    "price": 11.0,
+    "marketCap": 46.81,
     "turnovers": {
-      "d1": 0.05,
-      "d5": 0.06,
-      "d10": 0.07,
-      "d20": 0.06,
-      "d50": 0.05
+      "d1": 0.25,
+      "d5": 0.13,
+      "d10": 0.11,
+      "d20": 0.08,
+      "d50": 0.07
     },
     "volumes": {
-      "d1": 0.53,
-      "d5": 0.57,
-      "d10": 0.67,
-      "d20": 0.6,
-      "d50": 0.53
+      "d1": 2.29,
+      "d5": 1.23,
+      "d10": 1.01,
+      "d20": 0.77,
+      "d50": 0.65
     },
-    "pctOf52wHigh": 79.82,
-    "pctOf200dHigh": 85.95,
-    "ma10": 10.44,
-    "ma20": 10.27,
-    "ma60": 10.28,
+    "pctOf52wHigh": 84.42,
+    "pctOf200dHigh": 90.91,
+    "ma10": 10.39,
+    "ma20": 10.38,
+    "ma60": 10.26,
     "ma20Trend": "up",
-    "dailyChangePct": 0.97,
-    "date": "2026-06-05",
-    "threeMonthReturn": -17.46,
+    "dailyChangePct": 1.38,
+    "date": "2026-07-03",
+    "threeMonthReturn": -12.97,
     "returns": {
-      "w1": -1.89,
-      "m1": 2.46,
-      "m3": -4.15,
-      "m6": -5.02,
-      "y1": -17.46
+      "w1": 8.91,
+      "m1": 2.33,
+      "m3": 4.76,
+      "m6": -2.22,
+      "y1": -12.97
     },
     "industry": "紡織纖維",
     "market": "上市",
@@ -103925,10 +103928,60 @@
     },
     "revenueYoY": 4.57,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-05",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1780646525,
-      "_last_fin_attempt_ts": 1778827547,
+      "_last_rev_attempt_ts": 1783141277,
+      "revenueYoY": [
+        {
+          "date": "2025-06",
+          "yoy": 1.33
+        },
+        {
+          "date": "2025-07",
+          "yoy": 0.72
+        },
+        {
+          "date": "2025-08",
+          "yoy": -12.37
+        },
+        {
+          "date": "2025-09",
+          "yoy": -2.73
+        },
+        {
+          "date": "2025-10",
+          "yoy": -6.72
+        },
+        {
+          "date": "2025-11",
+          "yoy": -11.86
+        },
+        {
+          "date": "2025-12",
+          "yoy": -3.19
+        },
+        {
+          "date": "2026-01",
+          "yoy": 2.47
+        },
+        {
+          "date": "2026-02",
+          "yoy": -34.05
+        },
+        {
+          "date": "2026-03",
+          "yoy": -7.53
+        },
+        {
+          "date": "2026-04",
+          "yoy": 6.49
+        },
+        {
+          "date": "2026-05",
+          "yoy": 4.57
+        }
+      ],
+      "_last_fin_attempt_ts": 1783141279,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -104132,60 +104185,10 @@
           "quarter": "2026Q1",
           "value": 0.3
         }
-      ],
-      "revenueYoY": [
-        {
-          "date": "2025-06",
-          "yoy": 1.33
-        },
-        {
-          "date": "2025-07",
-          "yoy": 0.72
-        },
-        {
-          "date": "2025-08",
-          "yoy": -12.37
-        },
-        {
-          "date": "2025-09",
-          "yoy": -2.73
-        },
-        {
-          "date": "2025-10",
-          "yoy": -6.72
-        },
-        {
-          "date": "2025-11",
-          "yoy": -11.86
-        },
-        {
-          "date": "2025-12",
-          "yoy": -3.19
-        },
-        {
-          "date": "2026-01",
-          "yoy": 2.47
-        },
-        {
-          "date": "2026-02",
-          "yoy": -34.05
-        },
-        {
-          "date": "2026-03",
-          "yoy": -7.53
-        },
-        {
-          "date": "2026-04",
-          "yoy": 6.49
-        },
-        {
-          "date": "2026-05",
-          "yoy": 4.57
-        }
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-13"
+    "_lastSeenDate": "2026-07-04"
   },
   "1468": {
     "id": "1468",
@@ -111682,39 +111685,39 @@
       "資產股"
     ],
     "groupDesc": "",
-    "holdingPct": 76.12,
-    "delta": 0.29,
-    "price": 17.9,
-    "marketCap": 84.73,
+    "holdingPct": 76.08,
+    "delta": 0.12,
+    "price": 18.8,
+    "marketCap": 88.99,
     "turnovers": {
-      "d1": 0.04,
-      "d5": 0.04,
-      "d10": 0.04,
-      "d20": 0.06,
+      "d1": 0.11,
+      "d5": 0.06,
+      "d10": 0.05,
+      "d20": 0.05,
       "d50": 0.07
     },
     "volumes": {
-      "d1": 0.22,
-      "d5": 0.25,
-      "d10": 0.24,
-      "d20": 0.32,
+      "d1": 0.6,
+      "d5": 0.34,
+      "d10": 0.3,
+      "d20": 0.28,
       "d50": 0.4
     },
-    "pctOf52wHigh": 80.63,
-    "pctOf200dHigh": 83.26,
+    "pctOf52wHigh": 85.07,
+    "pctOf200dHigh": 87.44,
     "ma10": 18.18,
-    "ma20": 18.14,
-    "ma60": 18.67,
-    "ma20Trend": "down",
-    "dailyChangePct": -1.1,
-    "date": "2026-06-18",
-    "threeMonthReturn": -18.26,
+    "ma20": 18.18,
+    "ma60": 18.53,
+    "ma20Trend": "up",
+    "dailyChangePct": 2.45,
+    "date": "2026-07-03",
+    "threeMonthReturn": -9.18,
     "returns": {
-      "w1": -2.45,
-      "m1": -1.65,
-      "m3": -5.54,
-      "m6": -10.05,
-      "y1": -18.26
+      "w1": 5.03,
+      "m1": 1.35,
+      "m3": -2.59,
+      "m6": -6.23,
+      "y1": -9.18
     },
     "industry": "橡膠工業",
     "market": "上市",
@@ -111734,9 +111737,9 @@
     },
     "revenueYoY": -20.42,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-19",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1781839824,
+      "_last_rev_attempt_ts": 1783141265,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -111787,7 +111790,7 @@
           "yoy": -20.43
         }
       ],
-      "_last_fin_attempt_ts": 1781839827,
+      "_last_fin_attempt_ts": 1783141266,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -112008,7 +112011,7 @@
       "auditor": "正風聯合會計師事務所",
       "englishName": "FEDERAL CORP"
     },
-    "_lastSeenDate": "2026-06-27"
+    "_lastSeenDate": "2026-07-04"
   },
   "2103": {
     "id": "2103",
@@ -156665,39 +156668,39 @@
       "電子零件元件"
     ],
     "groupDesc": "",
-    "holdingPct": 40.09,
-    "delta": 1.72,
-    "price": 12.4,
-    "marketCap": 8.91,
+    "holdingPct": 37.46,
+    "delta": 0.72,
+    "price": 14.0,
+    "marketCap": 10.06,
     "turnovers": {
-      "d1": 0.1,
-      "d5": 0.25,
-      "d10": 0.14,
-      "d20": 0.08,
+      "d1": 0.19,
+      "d5": 0.1,
+      "d10": 0.18,
+      "d20": 0.1,
       "d50": 0.07
     },
     "volumes": {
-      "d1": 0.82,
-      "d5": 1.92,
-      "d10": 1.08,
-      "d20": 0.68,
-      "d50": 0.59
+      "d1": 1.36,
+      "d5": 0.77,
+      "d10": 1.35,
+      "d20": 0.77,
+      "d50": 0.61
     },
-    "pctOf52wHigh": 85.22,
-    "pctOf200dHigh": 85.22,
-    "ma10": 12.09,
-    "ma20": 11.73,
-    "ma60": 11.69,
+    "pctOf52wHigh": 96.22,
+    "pctOf200dHigh": 96.22,
+    "ma10": 13.04,
+    "ma20": 12.15,
+    "ma60": 11.81,
     "ma20Trend": "up",
-    "dailyChangePct": -3.5,
-    "date": "2026-06-18",
-    "threeMonthReturn": 24.0,
+    "dailyChangePct": 6.06,
+    "date": "2026-07-03",
+    "threeMonthReturn": 40.28,
     "returns": {
-      "w1": 6.9,
-      "m1": 16.43,
-      "m3": 1.64,
-      "m6": 2.48,
-      "y1": 24.0
+      "w1": 12.9,
+      "m1": 19.15,
+      "m3": 20.69,
+      "m6": 13.82,
+      "y1": 40.28
     },
     "industry": "通信網路業",
     "market": "上櫃",
@@ -156715,9 +156718,9 @@
     },
     "revenueYoY": 13.23,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-19",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1781840005,
+      "_last_rev_attempt_ts": 1783141263,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -156768,7 +156771,7 @@
           "yoy": 13.23
         }
       ],
-      "_last_fin_attempt_ts": 1781840006,
+      "_last_fin_attempt_ts": 1783141264,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -156975,7 +156978,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-27"
+    "_lastSeenDate": "2026-07-04"
   },
   "6116": {
     "id": "6116",
@@ -170986,39 +170989,39 @@
       "印刷電路板相關"
     ],
     "groupDesc": "",
-    "holdingPct": 66.78,
-    "delta": 0.65,
-    "price": 36.8,
-    "marketCap": 24.35,
+    "holdingPct": 68.39,
+    "delta": 1.56,
+    "price": 34.85,
+    "marketCap": 23.06,
     "turnovers": {
       "d1": 0.02,
-      "d5": 0.04,
-      "d10": 0.07,
-      "d20": 0.16,
-      "d50": 0.17
+      "d5": 0.02,
+      "d10": 0.02,
+      "d20": 0.04,
+      "d50": 0.13
     },
     "volumes": {
-      "d1": 0.05,
-      "d5": 0.1,
-      "d10": 0.19,
-      "d20": 0.41,
-      "d50": 0.43
+      "d1": 0.07,
+      "d5": 0.06,
+      "d10": 0.05,
+      "d20": 0.1,
+      "d50": 0.34
     },
-    "pctOf52wHigh": 73.82,
-    "pctOf200dHigh": 80.0,
-    "ma10": 37.32,
-    "ma20": 37.95,
-    "ma60": 38.21,
+    "pctOf52wHigh": 75.76,
+    "pctOf200dHigh": 78.14,
+    "ma10": 35.54,
+    "ma20": 36.2,
+    "ma60": 37.77,
     "ma20Trend": "down",
-    "dailyChangePct": 0.96,
-    "date": "2026-06-12",
-    "threeMonthReturn": -13.21,
+    "dailyChangePct": 0.14,
+    "date": "2026-07-03",
+    "threeMonthReturn": -21.24,
     "returns": {
-      "w1": -1.74,
-      "m1": -2.52,
-      "m3": -5.64,
-      "m6": -6.84,
-      "y1": -13.21
+      "w1": -1.69,
+      "m1": -9.24,
+      "m3": -8.53,
+      "m6": -11.32,
+      "y1": -21.24
     },
     "industry": "電子零組件業",
     "market": "上市",
@@ -171040,9 +171043,9 @@
     },
     "revenueYoY": -19.28,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-10",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1781111478,
+      "_last_rev_attempt_ts": 1783141246,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -171093,7 +171096,7 @@
           "yoy": -19.29
         }
       ],
-      "_last_fin_attempt_ts": 1780711958,
+      "_last_fin_attempt_ts": 1783141247,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -171300,7 +171303,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-15"
+    "_lastSeenDate": "2026-07-04"
   },
   "6838": {
     "id": "6838",
@@ -172121,8 +172124,8 @@
       "設備儀器商"
     ],
     "groupDesc": "",
-    "holdingPct": 54.56,
-    "delta": 0.22,
+    "holdingPct": 54.72,
+    "delta": 0.16,
     "price": 287.0,
     "marketCap": 194.17,
     "turnovers": {
@@ -172146,7 +172149,7 @@
     "ma60": 296.56,
     "ma20Trend": "down",
     "dailyChangePct": -1.54,
-    "date": "2026-06-26",
+    "date": "2026-07-03",
     "threeMonthReturn": 23.18,
     "returns": {
       "w1": 14.8,
@@ -181489,39 +181492,39 @@
       "車輛整車"
     ],
     "groupDesc": "",
-    "holdingPct": 56.13,
-    "delta": 1.1,
-    "price": 76.5,
-    "marketCap": 299.93,
+    "holdingPct": 56.28,
+    "delta": 0.25,
+    "price": 76.2,
+    "marketCap": 298.75,
     "turnovers": {
-      "d1": 1.5,
-      "d5": 1.19,
-      "d10": 1.43,
-      "d20": 1.46,
-      "d50": 1.5
+      "d1": 0.67,
+      "d5": 1.34,
+      "d10": 1.27,
+      "d20": 1.44,
+      "d50": 1.53
     },
     "volumes": {
-      "d1": 1.98,
-      "d5": 1.59,
-      "d10": 1.89,
-      "d20": 2.0,
-      "d50": 2.09
+      "d1": 0.88,
+      "d5": 1.73,
+      "d10": 1.66,
+      "d20": 1.92,
+      "d50": 2.12
     },
-    "pctOf52wHigh": 63.75,
-    "pctOf200dHigh": 69.23,
-    "ma10": 75.14,
-    "ma20": 73.09,
-    "ma60": 70.73,
+    "pctOf52wHigh": 63.5,
+    "pctOf200dHigh": 68.96,
+    "ma10": 75.87,
+    "ma20": 74.84,
+    "ma60": 71.24,
     "ma20Trend": "up",
-    "dailyChangePct": 2.68,
-    "date": "2026-06-18",
-    "threeMonthReturn": -29.17,
+    "dailyChangePct": 0.93,
+    "date": "2026-07-03",
+    "threeMonthReturn": -33.16,
     "returns": {
-      "w1": 3.24,
-      "m1": 15.56,
-      "m3": 4.51,
-      "m6": -25.37,
-      "y1": -29.17
+      "w1": -0.39,
+      "m1": 8.24,
+      "m3": 6.13,
+      "m6": -19.96,
+      "y1": -33.16
     },
     "industry": "運動休閒",
     "market": "上市",
@@ -181543,9 +181546,9 @@
     },
     "revenueYoY": 5.81,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-13",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1781326587,
+      "_last_rev_attempt_ts": 1783141275,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -181596,7 +181599,7 @@
           "yoy": 5.81
         }
       ],
-      "_last_fin_attempt_ts": 1781326588,
+      "_last_fin_attempt_ts": 1783141276,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -181803,7 +181806,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-27"
+    "_lastSeenDate": "2026-07-04"
   },
   "9925": {
     "id": "9925",
@@ -184251,41 +184254,42 @@
       "飲料相關"
     ],
     "groupDesc": "",
-    "holdingPct": 53.3,
-    "delta": 0.17,
-    "price": 9.42,
-    "marketCap": 46.58,
+    "holdingPct": 53.13,
+    "delta": 0.21,
+    "price": 10.15,
+    "marketCap": 50.19,
     "turnovers": {
-      "d1": 0.05,
-      "d5": 0.06,
-      "d10": 0.06,
-      "d20": 0.07,
-      "d50": 0.06
+      "d1": 0.13,
+      "d5": 0.08,
+      "d10": 0.07,
+      "d20": 0.06,
+      "d50": 0.08
     },
     "volumes": {
-      "d1": 0.51,
-      "d5": 0.59,
-      "d10": 0.65,
-      "d20": 0.76,
-      "d50": 0.6
+      "d1": 1.32,
+      "d5": 0.76,
+      "d10": 0.67,
+      "d20": 0.64,
+      "d50": 0.77
     },
-    "pctOf52wHigh": 83.36,
-    "pctOf200dHigh": 83.73,
-    "ma10": 9.5,
-    "ma20": 9.67,
-    "ma60": 10.1,
-    "ma20Trend": "down",
-    "dailyChangePct": 0.11,
-    "date": "2026-05-15",
-    "threeMonthReturn": -16.27,
+    "pctOf52wHigh": 90.22,
+    "pctOf200dHigh": 91.44,
+    "ma10": 9.88,
+    "ma20": 9.87,
+    "ma60": 9.87,
+    "ma20Trend": "up",
+    "dailyChangePct": 1.6,
+    "date": "2026-07-03",
+    "threeMonthReturn": -4.69,
     "returns": {
-      "w1": -0.84,
-      "m1": -8.99,
-      "m3": -10.29,
-      "m6": -7.65,
-      "y1": -16.27
+      "w1": 4.0,
+      "m1": 1.5,
+      "m3": -2.4,
+      "m6": -2.87,
+      "y1": -4.69
     },
     "industry": "食品工業",
+    "market": "上市",
     "subIndustries": [
       "食品加工",
       "乳製品",
@@ -184304,16 +184308,12 @@
         "非酒精飲料"
       ]
     },
-    "revenueYoY": 5.27,
-    "revenueMonth": "2026-04",
-    "revenueFirstSeen": "2026-05-16",
+    "revenueYoY": -14.6,
+    "revenueMonth": "2026-05",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1778948125,
+      "_last_rev_attempt_ts": 1783141233,
       "revenueYoY": [
-        {
-          "date": "2025-05",
-          "yoy": -0.95
-        },
         {
           "date": "2025-06",
           "yoy": 5.05
@@ -184357,9 +184357,13 @@
         {
           "date": "2026-04",
           "yoy": 5.27
+        },
+        {
+          "date": "2026-05",
+          "yoy": -14.61
         }
       ],
-      "_last_fin_attempt_ts": 1778948126,
+      "_last_fin_attempt_ts": 1783141234,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -184566,7 +184570,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-05-23"
+    "_lastSeenDate": "2026-07-04"
   },
   "1438": {
     "id": "1438",
@@ -187425,39 +187429,39 @@
       "資產股"
     ],
     "groupDesc": "",
-    "holdingPct": 58.11,
-    "delta": 0.23,
-    "price": 24.0,
-    "marketCap": 101.43,
+    "holdingPct": 58.46,
+    "delta": 0.32,
+    "price": 23.4,
+    "marketCap": 98.89,
     "turnovers": {
-      "d1": 0.29,
-      "d5": 0.3,
-      "d10": 0.26,
-      "d20": 0.23,
+      "d1": 0.16,
+      "d5": 0.12,
+      "d10": 0.13,
+      "d20": 0.2,
       "d50": 0.19
     },
     "volumes": {
-      "d1": 1.21,
-      "d5": 1.25,
-      "d10": 1.13,
-      "d20": 1.03,
+      "d1": 0.68,
+      "d5": 0.52,
+      "d10": 0.57,
+      "d20": 0.85,
       "d50": 0.89
     },
-    "pctOf52wHigh": 84.21,
-    "pctOf200dHigh": 84.21,
-    "ma10": 23.19,
-    "ma20": 22.2,
-    "ma60": 21.59,
+    "pctOf52wHigh": 82.11,
+    "pctOf200dHigh": 82.11,
+    "ma10": 22.93,
+    "ma20": 23.06,
+    "ma60": 21.76,
     "ma20Trend": "up",
-    "dailyChangePct": -0.21,
-    "date": "2026-06-18",
-    "threeMonthReturn": -12.25,
+    "dailyChangePct": 1.96,
+    "date": "2026-07-03",
+    "threeMonthReturn": -13.33,
     "returns": {
-      "w1": 4.12,
-      "m1": 16.79,
-      "m3": 3.9,
-      "m6": -14.13,
-      "y1": -12.25
+      "w1": 3.77,
+      "m1": 5.41,
+      "m3": 7.34,
+      "m6": -13.65,
+      "y1": -13.33
     },
     "industry": "電機機械",
     "market": "上市",
@@ -187497,9 +187501,9 @@
     },
     "revenueYoY": 26.03,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-10",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1781078418,
+      "_last_rev_attempt_ts": 1783141280,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -187550,7 +187554,7 @@
           "yoy": 26.04
         }
       ],
-      "_last_fin_attempt_ts": 1780722332,
+      "_last_fin_attempt_ts": 1783141281,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -187757,7 +187761,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-19"
+    "_lastSeenDate": "2026-07-04"
   },
   "1540": {
     "id": "1540",
@@ -232317,41 +232321,42 @@
       "INTERNET技術與基礎設施"
     ],
     "groupDesc": "",
-    "holdingPct": 72.06,
-    "delta": 0.12,
-    "price": 0.0,
-    "marketCap": 21.2,
+    "holdingPct": 71.85,
+    "delta": 0.57,
+    "price": 22.7,
+    "marketCap": 38.27,
     "turnovers": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.05,
+      "d5": 0.03,
+      "d10": 0.03,
+      "d20": 0.04,
+      "d50": 0.06
     },
     "volumes": {
-      "d1": 0,
-      "d5": 0,
-      "d10": 0,
-      "d20": 0,
-      "d50": 0
+      "d1": 0.21,
+      "d5": 0.13,
+      "d10": 0.15,
+      "d20": 0.15,
+      "d50": 0.24
     },
-    "pctOf52wHigh": null,
-    "pctOf200dHigh": null,
-    "ma10": null,
-    "ma20": null,
-    "ma60": null,
-    "ma20Trend": null,
-    "dailyChangePct": null,
-    "date": "2026-05-15",
-    "threeMonthReturn": null,
+    "pctOf52wHigh": 54.92,
+    "pctOf200dHigh": 55.42,
+    "ma10": 22.74,
+    "ma20": 23.38,
+    "ma60": 24.5,
+    "ma20Trend": "down",
+    "dailyChangePct": 1.57,
+    "date": "2026-07-03",
+    "threeMonthReturn": -39.56,
     "returns": {
-      "w1": null,
-      "m1": null,
-      "m3": null,
-      "m6": null,
-      "y1": null
+      "w1": 1.79,
+      "m1": -7.35,
+      "m3": -11.5,
+      "m6": -28.84,
+      "y1": -39.56
     },
     "industry": "資訊服務業",
+    "market": "上櫃",
     "subIndustries": [
       "軟體業",
       "系統整合",
@@ -232370,16 +232375,12 @@
         "雲端科技"
       ]
     },
-    "revenueYoY": -42.11,
-    "revenueMonth": "2026-04",
-    "revenueFirstSeen": "2026-05-16",
+    "revenueYoY": -21.08,
+    "revenueMonth": "2026-05",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1778948074,
+      "_last_rev_attempt_ts": 1783141258,
       "revenueYoY": [
-        {
-          "date": "2025-05",
-          "yoy": 8.47
-        },
         {
           "date": "2025-06",
           "yoy": 5.08
@@ -232423,9 +232424,13 @@
         {
           "date": "2026-04",
           "yoy": -42.12
+        },
+        {
+          "date": "2026-05",
+          "yoy": -21.08
         }
       ],
-      "_last_fin_attempt_ts": 1778948075,
+      "_last_fin_attempt_ts": 1783141261,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -232646,7 +232651,7 @@
       "auditor": "群智聯合會計師事務所",
       "englishName": "Genesis"
     },
-    "_lastSeenDate": "2026-05-16"
+    "_lastSeenDate": "2026-07-04"
   },
   "6224": {
     "id": "6224",
@@ -247159,41 +247164,42 @@
       "傳產其他"
     ],
     "groupDesc": "",
-    "holdingPct": 47.73,
-    "delta": 2.64,
-    "price": 44.3,
-    "marketCap": 15.49,
+    "holdingPct": 46.45,
+    "delta": 1.44,
+    "price": 43.35,
+    "marketCap": 15.16,
     "turnovers": {
       "d1": 0.0,
       "d5": 0.0,
       "d10": 0.0,
-      "d20": 0.01,
+      "d20": 0.0,
       "d50": 0.01
     },
     "volumes": {
-      "d1": 0.0,
-      "d5": 0.0,
-      "d10": 0.0,
-      "d20": 0.02,
+      "d1": 0.01,
+      "d5": 0.01,
+      "d10": 0.01,
+      "d20": 0.01,
       "d50": 0.01
     },
-    "pctOf52wHigh": 76.12,
-    "pctOf200dHigh": 83.58,
-    "ma10": 44.39,
-    "ma20": 44.36,
-    "ma60": 45.32,
+    "pctOf52wHigh": 76.73,
+    "pctOf200dHigh": 91.07,
+    "ma10": 43.16,
+    "ma20": 43.24,
+    "ma60": 44.11,
     "ma20Trend": "down",
-    "dailyChangePct": -0.11,
-    "date": "2026-05-15",
-    "threeMonthReturn": -23.09,
+    "dailyChangePct": 0.46,
+    "date": "2026-07-03",
+    "threeMonthReturn": -22.59,
     "returns": {
-      "w1": -1.01,
-      "m1": -2.42,
-      "m3": -4.11,
-      "m6": 0.57,
-      "y1": -23.09
+      "w1": 0.81,
+      "m1": -0.23,
+      "m3": -5.97,
+      "m6": 0.46,
+      "y1": -22.59
     },
     "industry": "居家生活",
+    "market": "上櫃",
     "subIndustries": [
       "傳產其他",
       "烤肉架"
@@ -247204,16 +247210,12 @@
         "烤肉架"
       ]
     },
-    "revenueYoY": -8.0,
-    "revenueMonth": "2026-04",
-    "revenueFirstSeen": "2026-05-16",
+    "revenueYoY": -13.94,
+    "revenueMonth": "2026-05",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1778947938,
+      "_last_rev_attempt_ts": 1783141235,
       "revenueYoY": [
-        {
-          "date": "2025-05",
-          "yoy": 5.63
-        },
         {
           "date": "2025-06",
           "yoy": -32.81
@@ -247257,9 +247259,13 @@
         {
           "date": "2026-04",
           "yoy": -8.01
+        },
+        {
+          "date": "2026-05",
+          "yoy": -13.94
         }
       ],
-      "_last_fin_attempt_ts": 1778947939,
+      "_last_fin_attempt_ts": 1783141236,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -247466,7 +247472,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-05-23"
+    "_lastSeenDate": "2026-07-04"
   },
   "9902": {
     "id": "9902",
@@ -248460,8 +248466,8 @@
       "地產"
     ],
     "groupDesc": "",
-    "holdingPct": 78.06,
-    "delta": 0.74,
+    "holdingPct": 78.26,
+    "delta": 0.2,
     "price": 19.9,
     "marketCap": 64.98,
     "turnovers": {
@@ -248485,7 +248491,7 @@
     "ma60": 17.37,
     "ma20Trend": "up",
     "dailyChangePct": 0.76,
-    "date": "2026-06-26",
+    "date": "2026-07-03",
     "threeMonthReturn": -2.21,
     "returns": {
       "w1": 1.79,
@@ -248778,39 +248784,39 @@
       "塑化原料"
     ],
     "groupDesc": "",
-    "holdingPct": 23.51,
-    "delta": 0.18,
-    "price": 8.45,
-    "marketCap": 44.6,
+    "holdingPct": 24.06,
+    "delta": 0.85,
+    "price": 11.4,
+    "marketCap": 60.18,
     "turnovers": {
-      "d1": 0.21,
-      "d5": 0.22,
-      "d10": 0.5,
-      "d20": 0.39,
-      "d50": 0.57
+      "d1": 2.79,
+      "d5": 1.43,
+      "d10": 1.34,
+      "d20": 0.87,
+      "d50": 0.6
     },
     "volumes": {
-      "d1": 2.51,
-      "d5": 2.57,
-      "d10": 5.63,
-      "d20": 4.56,
-      "d50": 5.92
+      "d1": 24.99,
+      "d5": 13.42,
+      "d10": 12.98,
+      "d20": 8.74,
+      "d50": 6.32
     },
-    "pctOf52wHigh": 63.77,
-    "pctOf200dHigh": 63.77,
-    "ma10": 8.77,
-    "ma20": 8.39,
-    "ma60": 9.47,
+    "pctOf52wHigh": 86.04,
+    "pctOf200dHigh": 86.04,
+    "ma10": 10.23,
+    "ma20": 9.46,
+    "ma60": 9.17,
     "ma20Trend": "up",
-    "dailyChangePct": -1.05,
-    "date": "2026-06-12",
-    "threeMonthReturn": 4.45,
+    "dailyChangePct": 9.62,
+    "date": "2026-07-03",
+    "threeMonthReturn": 42.86,
     "returns": {
-      "w1": -3.32,
-      "m1": 6.96,
-      "m3": -25.22,
-      "m6": -1.86,
-      "y1": 4.45
+      "w1": 15.04,
+      "m1": 19.87,
+      "m3": -4.6,
+      "m6": 28.96,
+      "y1": 42.86
     },
     "industry": "塑膠工業",
     "market": "上市",
@@ -248826,9 +248832,9 @@
     },
     "revenueYoY": -38.61,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-13",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1781316894,
+      "_last_rev_attempt_ts": 1783141268,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -248879,7 +248885,7 @@
           "yoy": -38.61
         }
       ],
-      "_last_fin_attempt_ts": 1781316895,
+      "_last_fin_attempt_ts": 1783141269,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -249086,7 +249092,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-15"
+    "_lastSeenDate": "2026-07-04"
   },
   "4306": {
     "id": "4306",
@@ -269323,8 +269329,8 @@
       "設備儀器商"
     ],
     "groupDesc": "",
-    "holdingPct": 71.25,
-    "delta": 0.19,
+    "holdingPct": 73.89,
+    "delta": 2.64,
     "price": 47.05,
     "marketCap": 19.6,
     "turnovers": {
@@ -269348,7 +269354,7 @@
     "ma60": 50.78,
     "ma20Trend": "up",
     "dailyChangePct": -1.57,
-    "date": "2026-06-26",
+    "date": "2026-07-03",
     "threeMonthReturn": 243.43,
     "returns": {
       "w1": -4.08,
@@ -282932,39 +282938,39 @@
       "INTERNET應用與服務"
     ],
     "groupDesc": "",
-    "holdingPct": 46.04,
-    "delta": 0.24,
-    "price": 50.5,
-    "marketCap": 26.86,
+    "holdingPct": 43.96,
+    "delta": 0.51,
+    "price": 62.2,
+    "marketCap": 33.08,
     "turnovers": {
-      "d1": 0.22,
-      "d5": 0.34,
-      "d10": 0.4,
-      "d20": 0.28,
-      "d50": 0.14
+      "d1": 0.13,
+      "d5": 0.44,
+      "d10": 0.41,
+      "d20": 0.27,
+      "d50": 0.23
     },
     "volumes": {
-      "d1": 0.44,
-      "d5": 0.62,
-      "d10": 0.84,
-      "d20": 0.69,
-      "d50": 0.38
+      "d1": 0.21,
+      "d5": 0.69,
+      "d10": 0.69,
+      "d20": 0.5,
+      "d50": 0.54
     },
-    "pctOf52wHigh": 76.52,
-    "pctOf200dHigh": 76.52,
-    "ma10": 50.62,
-    "ma20": 38.38,
-    "ma60": 28.75,
+    "pctOf52wHigh": 81.2,
+    "pctOf200dHigh": 81.2,
+    "ma10": 57.79,
+    "ma20": 48.38,
+    "ma60": 36.74,
     "ma20Trend": "up",
-    "dailyChangePct": -9.98,
-    "date": "2026-05-29",
-    "threeMonthReturn": 25.31,
+    "dailyChangePct": 2.13,
+    "date": "2026-07-03",
+    "threeMonthReturn": 57.27,
     "returns": {
-      "w1": 3.06,
-      "m1": 132.18,
-      "m3": 86.69,
-      "m6": 32.37,
-      "y1": 25.31
+      "w1": -2.05,
+      "m1": 10.87,
+      "m3": 152.85,
+      "m6": 70.64,
+      "y1": 57.27
     },
     "industry": "數位雲端",
     "market": "上櫃",
@@ -282984,16 +282990,12 @@
         "電商平台"
       ]
     },
-    "revenueYoY": -22.08,
-    "revenueMonth": "2026-04",
-    "revenueFirstSeen": "2026-05-30",
+    "revenueYoY": -18.35,
+    "revenueMonth": "2026-05",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1780677193,
+      "_last_rev_attempt_ts": 1783141282,
       "revenueYoY": [
-        {
-          "date": "2025-05",
-          "yoy": -22.36
-        },
         {
           "date": "2025-06",
           "yoy": -16.93
@@ -283037,9 +283039,13 @@
         {
           "date": "2026-04",
           "yoy": -22.08
+        },
+        {
+          "date": "2026-05",
+          "yoy": -18.35
         }
       ],
-      "_last_fin_attempt_ts": 1780107640,
+      "_last_fin_attempt_ts": 1783141284,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -283246,7 +283252,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-05"
+    "_lastSeenDate": "2026-07-04"
   },
   "1531": {
     "id": "1531",
@@ -285080,8 +285086,8 @@
       "化學工業"
     ],
     "groupDesc": "",
-    "holdingPct": 53.66,
-    "delta": 0.2,
+    "holdingPct": 54.3,
+    "delta": 0.64,
     "price": 23.7,
     "marketCap": 113.05,
     "turnovers": {
@@ -285105,7 +285111,7 @@
     "ma60": 19.71,
     "ma20Trend": "up",
     "dailyChangePct": 1.28,
-    "date": "2026-06-26",
+    "date": "2026-07-03",
     "threeMonthReturn": 30.94,
     "returns": {
       "w1": 12.59,
@@ -293983,8 +293989,8 @@
     "revenueMonth": "2026-05",
     "revenueFirstSeen": "2026-06-13",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1783131778,
-      "_last_fin_attempt_ts": 1783131780,
+      "_last_rev_attempt_ts": 1783141252,
+      "_last_fin_attempt_ts": 1783141254,
       "grossMarginYoY": [],
       "operatingMarginYoY": [],
       "epsYoY": [],
@@ -308207,8 +308213,8 @@
       "化學工業"
     ],
     "groupDesc": "",
-    "holdingPct": 56.36,
-    "delta": 0.41,
+    "holdingPct": 57.32,
+    "delta": 0.96,
     "price": 18.85,
     "marketCap": 166.96,
     "turnovers": {
@@ -308232,7 +308238,7 @@
     "ma60": 13.77,
     "ma20Trend": "up",
     "dailyChangePct": 2.45,
-    "date": "2026-06-26",
+    "date": "2026-07-03",
     "threeMonthReturn": 60.43,
     "returns": {
       "w1": 33.69,
@@ -308870,39 +308876,39 @@
       "條鋼"
     ],
     "groupDesc": "",
-    "holdingPct": 72.1,
-    "delta": 0.72,
-    "price": 199.0,
-    "marketCap": 338.3,
+    "holdingPct": 72.2,
+    "delta": 0.12,
+    "price": 147.0,
+    "marketCap": 282.24,
     "turnovers": {
-      "d1": 3.77,
-      "d5": 1.69,
-      "d10": 1.24,
-      "d20": 1.18,
-      "d50": 1.15
+      "d1": 1.11,
+      "d5": 1.05,
+      "d10": 0.87,
+      "d20": 1.02,
+      "d50": 1.06
     },
     "volumes": {
-      "d1": 1.96,
-      "d5": 0.93,
-      "d10": 0.7,
-      "d20": 0.67,
-      "d50": 0.63
+      "d1": 0.75,
+      "d5": 0.69,
+      "d10": 0.55,
+      "d20": 0.59,
+      "d50": 0.6
     },
-    "pctOf52wHigh": 53.64,
-    "pctOf200dHigh": 61.99,
-    "ma10": 173.45,
-    "ma20": 174.5,
-    "ma60": 192.94,
-    "ma20Trend": "flat",
-    "dailyChangePct": 9.94,
-    "date": "2026-05-29",
-    "threeMonthReturn": -37.91,
+    "pctOf52wHigh": 39.95,
+    "pctOf200dHigh": 45.79,
+    "ma10": 160.7,
+    "ma20": 171.0,
+    "ma60": 175.16,
+    "ma20Trend": "down",
+    "dailyChangePct": 0.0,
+    "date": "2026-07-03",
+    "threeMonthReturn": -59.22,
     "returns": {
-      "w1": 19.52,
-      "m1": 13.07,
-      "m3": -33.78,
-      "m6": 4.19,
-      "y1": -37.91
+      "w1": -10.64,
+      "m1": -18.78,
+      "m3": -20.33,
+      "m6": -33.48,
+      "y1": -59.22
     },
     "industry": "綠能環保",
     "market": "上市",
@@ -308918,10 +308924,10 @@
     },
     "revenueYoY": 81.08,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-05",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1780677436,
-      "_last_fin_attempt_ts": 1780677438,
+      "_last_rev_attempt_ts": 1783141272,
+      "_last_fin_attempt_ts": 1783141274,
       "grossMarginYoY": [],
       "operatingMarginYoY": [],
       "epsYoY": [],
@@ -308975,7 +308981,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-05"
+    "_lastSeenDate": "2026-07-04"
   },
   "1524": {
     "id": "1524",
@@ -313209,8 +313215,8 @@
       "生物科技"
     ],
     "groupDesc": "",
-    "holdingPct": 29.67,
-    "delta": 0.23,
+    "holdingPct": 29.78,
+    "delta": 0.11,
     "price": 115.0,
     "marketCap": 135.39,
     "turnovers": {
@@ -313234,7 +313240,7 @@
     "ma60": 119.53,
     "ma20Trend": "down",
     "dailyChangePct": 1.77,
-    "date": "2026-06-26",
+    "date": "2026-07-03",
     "threeMonthReturn": -9.45,
     "returns": {
       "w1": 0.44,
@@ -319859,39 +319865,39 @@
       "電子零件元件"
     ],
     "groupDesc": "",
-    "holdingPct": 64.67,
-    "delta": 0.21,
-    "price": 585.0,
-    "marketCap": 407.54,
+    "holdingPct": 64.32,
+    "delta": 1.53,
+    "price": 707.0,
+    "marketCap": 499.45,
     "turnovers": {
-      "d1": 3.27,
-      "d5": 5.04,
-      "d10": 10.37,
-      "d20": 7.91,
-      "d50": 8.02
+      "d1": 5.11,
+      "d5": 7.53,
+      "d10": 8.73,
+      "d20": 6.39,
+      "d50": 8.26
     },
     "volumes": {
-      "d1": 0.56,
-      "d5": 0.83,
-      "d10": 1.52,
-      "d20": 1.16,
-      "d50": 1.16
+      "d1": 0.71,
+      "d5": 1.05,
+      "d10": 1.25,
+      "d20": 0.95,
+      "d50": 1.2
     },
-    "pctOf52wHigh": 68.42,
-    "pctOf200dHigh": 68.42,
-    "ma10": 640.4,
-    "ma20": 659.25,
-    "ma60": 648.58,
-    "ma20Trend": "down",
-    "dailyChangePct": 4.84,
-    "date": "2026-06-05",
-    "threeMonthReturn": 225.0,
+    "pctOf52wHigh": 82.69,
+    "pctOf200dHigh": 82.69,
+    "ma10": 697.4,
+    "ma20": 656.4,
+    "ma60": 676.8,
+    "ma20Trend": "up",
+    "dailyChangePct": -4.85,
+    "date": "2026-07-03",
+    "threeMonthReturn": 274.07,
     "returns": {
-      "w1": -10.0,
-      "m1": -12.29,
-      "m3": 62.95,
-      "m6": 62.73,
-      "y1": 225.0
+      "w1": -0.14,
+      "m1": 7.12,
+      "m3": 17.44,
+      "m6": 112.95,
+      "y1": 274.07
     },
     "industry": "電子零組件業",
     "market": "上櫃",
@@ -319907,9 +319913,9 @@
     },
     "revenueYoY": 46.97,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-06",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1780711844,
+      "_last_rev_attempt_ts": 1783141287,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -319960,7 +319966,7 @@
           "yoy": 46.98
         }
       ],
-      "_last_fin_attempt_ts": 1780711845,
+      "_last_fin_attempt_ts": 1783141288,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -320181,7 +320187,7 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "NAN JUEN"
     },
-    "_lastSeenDate": "2026-06-12"
+    "_lastSeenDate": "2026-07-04"
   },
   "3324": {
     "id": "3324",
@@ -340706,39 +340712,39 @@
       "光通訊"
     ],
     "groupDesc": "",
-    "holdingPct": 26.05,
-    "delta": 0.75,
-    "price": 17.0,
-    "marketCap": 28.21,
+    "holdingPct": 25.22,
+    "delta": 0.66,
+    "price": 18.0,
+    "marketCap": 29.87,
     "turnovers": {
-      "d1": 0.13,
-      "d5": 0.11,
-      "d10": 0.15,
-      "d20": 0.21,
-      "d50": 0.32
+      "d1": 0.12,
+      "d5": 0.14,
+      "d10": 0.13,
+      "d20": 0.16,
+      "d50": 0.27
     },
     "volumes": {
-      "d1": 0.75,
-      "d5": 0.62,
-      "d10": 0.85,
-      "d20": 1.15,
-      "d50": 1.67
+      "d1": 0.67,
+      "d5": 0.82,
+      "d10": 0.72,
+      "d20": 0.89,
+      "d50": 1.43
     },
-    "pctOf52wHigh": 66.93,
-    "pctOf200dHigh": 66.93,
-    "ma10": 17.93,
-    "ma20": 18.24,
-    "ma60": 19.1,
+    "pctOf52wHigh": 70.87,
+    "pctOf200dHigh": 70.87,
+    "ma10": 17.56,
+    "ma20": 17.9,
+    "ma60": 18.86,
     "ma20Trend": "down",
-    "dailyChangePct": -3.13,
-    "date": "2026-06-18",
-    "threeMonthReturn": -15.84,
+    "dailyChangePct": 1.69,
+    "date": "2026-07-03",
+    "threeMonthReturn": -12.83,
     "returns": {
-      "w1": -5.56,
-      "m1": -3.13,
-      "m3": -15.21,
-      "m6": -22.55,
-      "y1": -15.84
+      "w1": 5.88,
+      "m1": -8.16,
+      "m3": -12.41,
+      "m6": -21.91,
+      "y1": -12.83
     },
     "industry": "通信網路業",
     "market": "上市",
@@ -340760,9 +340766,9 @@
     },
     "revenueYoY": -28.67,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-19",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1781840093,
+      "_last_rev_attempt_ts": 1783141248,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -340813,7 +340819,7 @@
           "yoy": -28.67
         }
       ],
-      "_last_fin_attempt_ts": 1781840094,
+      "_last_fin_attempt_ts": 1783141249,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -341020,7 +341026,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-27"
+    "_lastSeenDate": "2026-07-04"
   },
   "3147": {
     "id": "3147",
@@ -360059,39 +360065,39 @@
       "化學工業"
     ],
     "groupDesc": "",
-    "holdingPct": 29.83,
-    "delta": 0.14,
-    "price": 87.9,
-    "marketCap": 65.91,
+    "holdingPct": 30.78,
+    "delta": 1.17,
+    "price": 91.2,
+    "marketCap": 68.39,
     "turnovers": {
-      "d1": 1.18,
-      "d5": 1.65,
-      "d10": 3.05,
-      "d20": 2.51,
-      "d50": 2.64
+      "d1": 0.61,
+      "d5": 0.59,
+      "d10": 1.12,
+      "d20": 2.27,
+      "d50": 2.31
     },
     "volumes": {
-      "d1": 1.32,
-      "d5": 1.71,
-      "d10": 3.08,
-      "d20": 2.6,
-      "d50": 2.84
+      "d1": 0.68,
+      "d5": 0.65,
+      "d10": 1.18,
+      "d20": 2.35,
+      "d50": 2.47
     },
-    "pctOf52wHigh": 79.19,
-    "pctOf200dHigh": 79.19,
-    "ma10": 96.55,
-    "ma20": 93.59,
-    "ma60": 88.64,
-    "ma20Trend": "up",
-    "dailyChangePct": -5.48,
-    "date": "2026-06-18",
-    "threeMonthReturn": 35.23,
+    "pctOf52wHigh": 82.16,
+    "pctOf200dHigh": 82.16,
+    "ma10": 92.6,
+    "ma20": 93.58,
+    "ma60": 90.15,
+    "ma20Trend": "down",
+    "dailyChangePct": 1.33,
+    "date": "2026-07-03",
+    "threeMonthReturn": 33.53,
     "returns": {
-      "w1": -12.54,
-      "m1": -2.77,
-      "m3": 19.92,
-      "m6": 31.39,
-      "y1": 35.23
+      "w1": 3.75,
+      "m1": 3.52,
+      "m3": 25.97,
+      "m6": 34.91,
+      "y1": 33.53
     },
     "industry": "化學工業",
     "market": "上櫃",
@@ -360115,9 +360121,9 @@
     },
     "revenueYoY": 2.08,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-13",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1781326595,
+      "_last_rev_attempt_ts": 1783141261,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -360168,7 +360174,7 @@
           "yoy": 2.08
         }
       ],
-      "_last_fin_attempt_ts": 1781326596,
+      "_last_fin_attempt_ts": 1783141263,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -360375,7 +360381,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-27"
+    "_lastSeenDate": "2026-07-04"
   },
   "2114": {
     "id": "2114",
@@ -374412,39 +374418,39 @@
       "地產"
     ],
     "groupDesc": "",
-    "holdingPct": 77.75,
-    "delta": 0.15,
-    "price": 19.85,
-    "marketCap": 146.26,
+    "holdingPct": 77.94,
+    "delta": 0.16,
+    "price": 19.5,
+    "marketCap": 143.69,
     "turnovers": {
-      "d1": 0.3,
-      "d5": 0.19,
-      "d10": 0.2,
+      "d1": 0.09,
+      "d5": 0.07,
+      "d10": 0.09,
       "d20": 0.15,
       "d50": 0.12
     },
     "volumes": {
-      "d1": 1.51,
-      "d5": 0.97,
-      "d10": 1.04,
-      "d20": 0.79,
-      "d50": 0.63
+      "d1": 0.46,
+      "d5": 0.35,
+      "d10": 0.49,
+      "d20": 0.76,
+      "d50": 0.64
     },
-    "pctOf52wHigh": 73.25,
-    "pctOf200dHigh": 75.76,
-    "ma10": 19.6,
-    "ma20": 19.26,
-    "ma60": 19.54,
+    "pctOf52wHigh": 71.96,
+    "pctOf200dHigh": 74.43,
+    "ma10": 19.25,
+    "ma20": 19.43,
+    "ma60": 19.41,
     "ma20Trend": "up",
-    "dailyChangePct": -0.75,
-    "date": "2026-06-18",
-    "threeMonthReturn": -24.67,
+    "dailyChangePct": 1.04,
+    "date": "2026-07-03",
+    "threeMonthReturn": -23.83,
     "returns": {
-      "w1": 2.58,
-      "m1": 5.59,
-      "m3": -1.73,
-      "m6": -11.38,
-      "y1": -24.67
+      "w1": 2.9,
+      "m1": -0.26,
+      "m3": -1.76,
+      "m6": -15.03,
+      "y1": -23.83
     },
     "industry": "其他業",
     "market": "上市",
@@ -374460,9 +374466,9 @@
     },
     "revenueYoY": 36.9,
     "revenueMonth": "2026-05",
-    "revenueFirstSeen": "2026-06-19",
+    "revenueFirstSeen": "2026-07-04",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1781839971,
+      "_last_rev_attempt_ts": 1783141256,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -374513,7 +374519,7 @@
           "yoy": 36.9
         }
       ],
-      "_last_fin_attempt_ts": 1781839972,
+      "_last_fin_attempt_ts": 1783141257,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -374720,7 +374726,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-06-19"
+    "_lastSeenDate": "2026-07-04"
   },
   "2612": {
     "id": "2612",
@@ -377328,8 +377334,8 @@
       "運動產業"
     ],
     "groupDesc": "",
-    "holdingPct": 41.44,
-    "delta": 0.56,
+    "holdingPct": 42.1,
+    "delta": 0.66,
     "price": 42.0,
     "marketCap": 76.22,
     "turnovers": {
@@ -377353,7 +377359,7 @@
     "ma60": 24.46,
     "ma20Trend": "up",
     "dailyChangePct": 7.83,
-    "date": "2026-06-26",
+    "date": "2026-07-03",
     "threeMonthReturn": 50.0,
     "returns": {
       "w1": 37.7,
@@ -386355,8 +386361,8 @@
       "IC設計"
     ],
     "groupDesc": "",
-    "holdingPct": 14.03,
-    "delta": 0.6,
+    "holdingPct": 14.96,
+    "delta": 0.93,
     "price": 19.15,
     "marketCap": 34.65,
     "turnovers": {
@@ -386380,7 +386386,7 @@
     "ma60": 16.57,
     "ma20Trend": "up",
     "dailyChangePct": -4.25,
-    "date": "2026-06-26",
+    "date": "2026-07-03",
     "threeMonthReturn": 85.02,
     "returns": {
       "w1": 2.96,
@@ -399537,6 +399543,970 @@
         {
           "quarter": "2026Q1",
           "value": 0.35
+        }
+      ]
+    },
+    "companyProfile": {},
+    "_lastSeenDate": "2026-07-04"
+  },
+  "1445": {
+    "id": "1445",
+    "name": "大宇",
+    "group": "化學纖維",
+    "groups": [
+      "化學纖維",
+      "織布業"
+    ],
+    "groupDesc": "",
+    "holdingPct": 59.83,
+    "delta": 0.15,
+    "price": 12.6,
+    "marketCap": 16.46,
+    "turnovers": {
+      "d1": 0.1,
+      "d5": 0.06,
+      "d10": 0.04,
+      "d20": 0.02,
+      "d50": 0.02
+    },
+    "volumes": {
+      "d1": 0.8,
+      "d5": 0.5,
+      "d10": 0.31,
+      "d20": 0.19,
+      "d50": 0.13
+    },
+    "pctOf52wHigh": 75.68,
+    "pctOf200dHigh": 75.68,
+    "ma10": 11.31,
+    "ma20": 11.26,
+    "ma60": 11.95,
+    "ma20Trend": "up",
+    "dailyChangePct": 2.02,
+    "date": "2026-07-03",
+    "threeMonthReturn": -14.29,
+    "returns": {
+      "w1": 16.67,
+      "m1": 8.15,
+      "m3": -0.79,
+      "m6": -6.67,
+      "y1": -14.29
+    },
+    "industry": "紡織纖維",
+    "market": "上市",
+    "subIndustries": [
+      "化學纖維",
+      "聚酯加工絲",
+      "織布業"
+    ],
+    "subsByGroup": {
+      "化學纖維": [
+        "化學纖維",
+        "聚酯加工絲"
+      ],
+      "織布業": [
+        "織布業"
+      ]
+    },
+    "revenueYoY": -12.2,
+    "revenueMonth": "2026-05",
+    "revenueFirstSeen": "2026-07-04",
+    "fundamentals": {
+      "_last_rev_attempt_ts": 1783141229,
+      "revenueYoY": [
+        {
+          "date": "2025-06",
+          "yoy": -3.29
+        },
+        {
+          "date": "2025-07",
+          "yoy": -38.24
+        },
+        {
+          "date": "2025-08",
+          "yoy": -33.86
+        },
+        {
+          "date": "2025-09",
+          "yoy": -32.57
+        },
+        {
+          "date": "2025-10",
+          "yoy": 12.08
+        },
+        {
+          "date": "2025-11",
+          "yoy": -44.44
+        },
+        {
+          "date": "2025-12",
+          "yoy": 19.5
+        },
+        {
+          "date": "2026-01",
+          "yoy": -7.73
+        },
+        {
+          "date": "2026-02",
+          "yoy": -10.8
+        },
+        {
+          "date": "2026-03",
+          "yoy": -25.33
+        },
+        {
+          "date": "2026-04",
+          "yoy": -64.14
+        },
+        {
+          "date": "2026-05",
+          "yoy": -12.21
+        }
+      ],
+      "_last_fin_attempt_ts": 1783141230,
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q2",
+          "yoy": -5.87
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -64.25
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -878.55
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 119.63
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -25.89
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 77.2
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 115.61
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": 43.08
+        }
+      ],
+      "operatingMarginYoY": [
+        {
+          "quarter": "2024Q2",
+          "yoy": -228.65
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -1867.92
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -114.78
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 82.15
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -218.97
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -52.91
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 63.52
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": 257.91
+        }
+      ],
+      "epsYoY": [
+        {
+          "quarter": "2024Q1",
+          "yoy": -100.0
+        },
+        {
+          "quarter": "2024Q2",
+          "yoy": -81.82
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -275.0
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -118.89
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -3000.0
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -14.29
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 78.57
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": -83.33
+        }
+      ],
+      "grossMargin": [
+        {
+          "quarter": "2024Q2",
+          "value": 15.17
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 5.51
+        },
+        {
+          "quarter": "2024Q4",
+          "value": -41.95
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 17.23
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 11.25
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 9.76
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 6.55
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 24.65
+        }
+      ],
+      "operatingMargin": [
+        {
+          "quarter": "2024Q2",
+          "value": -2.97
+        },
+        {
+          "quarter": "2024Q3",
+          "value": -9.07
+        },
+        {
+          "quarter": "2024Q4",
+          "value": -68.08
+        },
+        {
+          "quarter": "2025Q1",
+          "value": -1.48
+        },
+        {
+          "quarter": "2025Q2",
+          "value": -9.48
+        },
+        {
+          "quarter": "2025Q3",
+          "value": -13.87
+        },
+        {
+          "quarter": "2025Q4",
+          "value": -24.84
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 2.34
+        }
+      ],
+      "eps": [
+        {
+          "quarter": "2024Q2",
+          "value": 0.02
+        },
+        {
+          "quarter": "2024Q3",
+          "value": -0.14
+        },
+        {
+          "quarter": "2024Q4",
+          "value": -1.4
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 0.18
+        },
+        {
+          "quarter": "2025Q2",
+          "value": -0.58
+        },
+        {
+          "quarter": "2025Q3",
+          "value": -0.16
+        },
+        {
+          "quarter": "2025Q4",
+          "value": -0.3
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 0.03
+        }
+      ]
+    },
+    "companyProfile": {},
+    "_lastSeenDate": "2026-07-04"
+  },
+  "1806": {
+    "id": "1806",
+    "name": "冠軍",
+    "group": "建材",
+    "groups": [
+      "建材"
+    ],
+    "groupDesc": "",
+    "holdingPct": 70.59,
+    "delta": 0.27,
+    "price": 8.51,
+    "marketCap": 33.22,
+    "turnovers": {
+      "d1": 0.16,
+      "d5": 0.06,
+      "d10": 0.04,
+      "d20": 0.03,
+      "d50": 0.06
+    },
+    "volumes": {
+      "d1": 1.94,
+      "d5": 0.69,
+      "d10": 0.48,
+      "d20": 0.41,
+      "d50": 0.71
+    },
+    "pctOf52wHigh": 77.01,
+    "pctOf200dHigh": 84.26,
+    "ma10": 8.19,
+    "ma20": 8.17,
+    "ma60": 8.21,
+    "ma20Trend": "flat",
+    "dailyChangePct": 3.4,
+    "date": "2026-07-03",
+    "threeMonthReturn": -22.64,
+    "returns": {
+      "w1": 5.58,
+      "m1": 2.53,
+      "m3": 0.0,
+      "m6": -5.97,
+      "y1": -22.64
+    },
+    "industry": "玻璃陶瓷",
+    "market": "上市",
+    "subIndustries": [
+      "建材",
+      "瓷磚"
+    ],
+    "subsByGroup": {
+      "建材": [
+        "建材",
+        "瓷磚"
+      ]
+    },
+    "revenueYoY": -16.89,
+    "revenueMonth": "2026-05",
+    "revenueFirstSeen": "2026-07-04",
+    "fundamentals": {
+      "_last_rev_attempt_ts": 1783141241,
+      "revenueYoY": [
+        {
+          "date": "2025-06",
+          "yoy": 20.7
+        },
+        {
+          "date": "2025-07",
+          "yoy": -6.27
+        },
+        {
+          "date": "2025-08",
+          "yoy": -23.39
+        },
+        {
+          "date": "2025-09",
+          "yoy": -4.3
+        },
+        {
+          "date": "2025-10",
+          "yoy": -5.16
+        },
+        {
+          "date": "2025-11",
+          "yoy": -21.14
+        },
+        {
+          "date": "2025-12",
+          "yoy": -36.49
+        },
+        {
+          "date": "2026-01",
+          "yoy": 8.21
+        },
+        {
+          "date": "2026-02",
+          "yoy": -57.7
+        },
+        {
+          "date": "2026-03",
+          "yoy": -16.64
+        },
+        {
+          "date": "2026-04",
+          "yoy": -10.18
+        },
+        {
+          "date": "2026-05",
+          "yoy": -16.89
+        }
+      ],
+      "_last_fin_attempt_ts": 1783141243,
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q2",
+          "yoy": -0.24
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -7.03
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -31.03
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -21.63
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -3.4
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -3.63
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -21.94
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": -24.99
+        }
+      ],
+      "operatingMarginYoY": [
+        {
+          "quarter": "2024Q2",
+          "yoy": -83.15
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -15.73
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -24.18
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -54.17
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": 500.36
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -25.52
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -135.62
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": -304.5
+        }
+      ],
+      "epsYoY": [
+        {
+          "quarter": "2024Q1",
+          "yoy": 137.5
+        },
+        {
+          "quarter": "2024Q2",
+          "yoy": 114.29
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": 20.0
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 33.33
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": 200.0
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -11.11
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -33.33
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": -350.0
+        }
+      ],
+      "grossMargin": [
+        {
+          "quarter": "2024Q2",
+          "value": 25.82
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 26.24
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 24.19
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 21.51
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 24.94
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 25.29
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 18.88
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 16.13
+        }
+      ],
+      "operatingMargin": [
+        {
+          "quarter": "2024Q2",
+          "value": 1.04
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 6.79
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 9.98
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 3.15
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 6.26
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 5.06
+        },
+        {
+          "quarter": "2025Q4",
+          "value": -3.55
+        },
+        {
+          "quarter": "2026Q1",
+          "value": -6.44
+        }
+      ],
+      "eps": [
+        {
+          "quarter": "2024Q2",
+          "value": 0.01
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 0.18
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 0.09
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 0.04
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 0.03
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 0.16
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 0.06
+        },
+        {
+          "quarter": "2026Q1",
+          "value": -0.1
+        }
+      ]
+    },
+    "companyProfile": {},
+    "_lastSeenDate": "2026-07-04"
+  },
+  "8050": {
+    "id": "8050",
+    "name": "廣積",
+    "group": "工業電腦",
+    "groups": [
+      "工業電腦",
+      "電腦系統業"
+    ],
+    "groupDesc": "",
+    "holdingPct": 36.04,
+    "delta": 0.59,
+    "price": 55.9,
+    "marketCap": 114.71,
+    "turnovers": {
+      "d1": 0.39,
+      "d5": 0.3,
+      "d10": 0.35,
+      "d20": 0.56,
+      "d50": 0.85
+    },
+    "volumes": {
+      "d1": 0.71,
+      "d5": 0.56,
+      "d10": 0.65,
+      "d20": 1.0,
+      "d50": 1.56
+    },
+    "pctOf52wHigh": 84.57,
+    "pctOf200dHigh": 84.57,
+    "ma10": 53.89,
+    "ma20": 55.21,
+    "ma60": 50.15,
+    "ma20Trend": "down",
+    "dailyChangePct": 3.14,
+    "date": "2026-07-03",
+    "threeMonthReturn": -7.3,
+    "returns": {
+      "w1": 7.5,
+      "m1": -5.73,
+      "m3": 39.4,
+      "m6": 30.61,
+      "y1": -7.3
+    },
+    "industry": "電腦及週邊設備業",
+    "market": "上櫃",
+    "subIndustries": [
+      "工業電腦",
+      "電腦系統業",
+      "主機板"
+    ],
+    "subsByGroup": {
+      "工業電腦": [
+        "工業電腦"
+      ],
+      "電腦系統業": [
+        "電腦系統業",
+        "主機板"
+      ]
+    },
+    "revenueYoY": 4.04,
+    "revenueMonth": "2026-05",
+    "revenueFirstSeen": "2026-07-04",
+    "fundamentals": {
+      "_last_rev_attempt_ts": 1783141255,
+      "revenueYoY": [
+        {
+          "date": "2025-06",
+          "yoy": -5.19
+        },
+        {
+          "date": "2025-07",
+          "yoy": 14.57
+        },
+        {
+          "date": "2025-08",
+          "yoy": -40.75
+        },
+        {
+          "date": "2025-09",
+          "yoy": 2.23
+        },
+        {
+          "date": "2025-10",
+          "yoy": -1.85
+        },
+        {
+          "date": "2025-11",
+          "yoy": -58.7
+        },
+        {
+          "date": "2025-12",
+          "yoy": -8.51
+        },
+        {
+          "date": "2026-01",
+          "yoy": -5.33
+        },
+        {
+          "date": "2026-02",
+          "yoy": -41.16
+        },
+        {
+          "date": "2026-03",
+          "yoy": -13.62
+        },
+        {
+          "date": "2026-04",
+          "yoy": 3.73
+        },
+        {
+          "date": "2026-05",
+          "yoy": 4.05
+        }
+      ],
+      "_last_fin_attempt_ts": 1783141256,
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q2",
+          "yoy": 10.47
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": 10.34
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -15.5
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -8.72
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -12.9
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -15.98
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -9.26
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": 4.02
+        }
+      ],
+      "operatingMarginYoY": [
+        {
+          "quarter": "2024Q2",
+          "yoy": 39.02
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -28.9
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -156.41
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 828.66
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -53.16
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -109.07
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -200.83
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": -66.63
+        }
+      ],
+      "epsYoY": [
+        {
+          "quarter": "2024Q2",
+          "yoy": -30.77
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -67.54
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 700.0
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -18.25
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -154.7
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 38.71
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -86.67
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": -4.46
+        }
+      ],
+      "grossMargin": [
+        {
+          "quarter": "2024Q2",
+          "value": 26.06
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 24.62
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 20.55
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 22.4
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 22.7
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 20.69
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 18.65
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 23.3
+        }
+      ],
+      "operatingMargin": [
+        {
+          "quarter": "2024Q2",
+          "value": 6.22
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 5.38
+        },
+        {
+          "quarter": "2024Q4",
+          "value": -3.09
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 3.09
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 2.91
+        },
+        {
+          "quarter": "2025Q3",
+          "value": -0.49
+        },
+        {
+          "quarter": "2025Q4",
+          "value": -9.29
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 1.03
+        }
+      ],
+      "eps": [
+        {
+          "quarter": "2024Q2",
+          "value": 1.17
+        },
+        {
+          "quarter": "2024Q3",
+          "value": 0.62
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 0.9
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 1.12
+        },
+        {
+          "quarter": "2025Q2",
+          "value": -0.64
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 0.86
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 0.12
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 1.07
         }
       ]
     },
