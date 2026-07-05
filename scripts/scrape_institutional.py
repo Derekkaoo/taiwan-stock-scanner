@@ -304,6 +304,8 @@ def run():
             from pathlib import Path as _Path
             sys.path.insert(0, str(_Path(__file__).parent))
             from trading_calendar import expected_latest_trading_day as _expected_fn, is_trading_day
+            from datetime import datetime as _dt_tw, timedelta as _td_tw
+            _now_tw = _dt_tw.utcnow() + _td_tw(hours=8)   # TW 時區（UTC+8）
             _expected = _expected_fn()
             expected_str = _expected.strftime("%Y-%m-%d")
             logger.warning("Yahoo sentinel 抓不到，fallback 日曆推算 expected=%s", expected_str)
