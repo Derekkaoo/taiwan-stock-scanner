@@ -45,6 +45,7 @@ const TW_STOCK_HOLIDAYS = new Set<string>([
   '2026-04-02', '2026-04-03',
   '2026-05-01',
   '2026-06-19',
+  '2026-07-10',  // 颱風假（臨時停班停課，非年初公告）
   '2026-09-25',
   '2026-10-09',
   // === 2027（粗估，待證交所公告）===
@@ -124,7 +125,6 @@ export function StaleDataWarning({ stocksDate, isMobile }: Props) {
       return false
     }
   })
-  const [bannerClosed, setBannerClosed] = useState(false)
 
   // 手機 modal 開啟時 lock body scroll
   useEffect(() => {
@@ -232,7 +232,7 @@ export function StaleDataWarning({ stocksDate, isMobile }: Props) {
   }
 
   // ─── 桌機：頂部 banner ───
-  if (bannerClosed) return null
+  if (dismissed) return null
   return (
     <div
       className="w-full px-4 py-2 flex items-center justify-center gap-3 text-sm"
@@ -246,7 +246,7 @@ export function StaleDataWarning({ stocksDate, isMobile }: Props) {
       <span>⚠️</span>
       <span>{message}</span>
       <button
-        onClick={() => setBannerClosed(true)}
+        onClick={handleDismissModal}
         className="ml-3 px-2 py-0.5 rounded transition-colors"
         aria-label="關閉提醒"
         style={{
