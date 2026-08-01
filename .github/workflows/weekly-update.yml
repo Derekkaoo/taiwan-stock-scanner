@@ -85,14 +85,9 @@ jobs:
 
       # 注意：不加 --force；script 內部會 smart check 自行判斷要不要做
       # 缺特定欄位 / 一次性補資料 → 寫獨立 script（譬如 enrich_market_field.py），別動這裡
-      #
-      # ⚠️ 2026-07-14 臨時措施：強制 --norway --force
-      #   背景：Yahoo 大戶頁面持續 stale（顯示 7/03、實際本週應是 7/09）
-      #   臨時解：--norway 走神秘金字塔（norway.twsthr.info）主流程 + --force 忽略 smart-skip
-      #   移除時機：Yahoo 補上最新資料後（下週一 7/20 觀察）→ 拿掉兩個 flag
       - name: 完整 pipeline（週六 / 每月 1-10 號 / 手動觸發）
         if: steps.mode.outputs.mode == 'full'
-        run: python scripts/run_pipeline.py --norway --force
+        run: python scripts/run_pipeline.py
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
