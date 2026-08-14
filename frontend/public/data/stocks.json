@@ -117,7 +117,7 @@
           "yoy": 1.54
         }
       ],
-      "_last_fin_attempt_ts": 1786701079,
+      "_last_fin_attempt_ts": 1786738953,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -4593,7 +4593,7 @@
     "holdingPct": 32.96,
     "delta": 0.2,
     "price": 10.0,
-    "marketCap": 37.59,
+    "marketCap": 40.16,
     "turnovers": {
       "d1": 0.19,
       "d5": 0.16,
@@ -4703,12 +4703,8 @@
           "yoy": 102.04
         }
       ],
-      "_last_fin_attempt_ts": 1786701044,
+      "_last_fin_attempt_ts": 1786738978,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 71.54
-        },
         {
           "quarter": "2024Q3",
           "yoy": 8.31
@@ -4736,13 +4732,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -41.11
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 14.12
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 140.83
-        },
         {
           "quarter": "2024Q3",
           "yoy": 77.51
@@ -4770,13 +4766,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 228.07
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -71.26
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 138.46
-        },
         {
           "quarter": "2024Q3",
           "yoy": 26.67
@@ -4804,13 +4800,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 38.71
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 37.04
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 37.13
-        },
         {
           "quarter": "2024Q3",
           "value": 24.84
@@ -4838,13 +4834,13 @@
         {
           "quarter": "2026Q1",
           "value": 32.15
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 34.6
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 11.16
-        },
         {
           "quarter": "2024Q3",
           "value": -5.27
@@ -4872,13 +4868,13 @@
         {
           "quarter": "2026Q1",
           "value": 2.94
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 5.63
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 0.05
-        },
         {
           "quarter": "2024Q3",
           "value": -0.11
@@ -4906,6 +4902,10 @@
         {
           "quarter": "2026Q1",
           "value": -0.19
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -0.17
         }
       ]
     },
@@ -6272,12 +6272,8 @@
           "yoy": -4.95
         }
       ],
-      "_last_fin_attempt_ts": 1786701040,
+      "_last_fin_attempt_ts": 1786738978,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -30.24
-        },
         {
           "quarter": "2024Q3",
           "yoy": -77.01
@@ -6305,13 +6301,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -20.39
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 666.31
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -91.52
-        },
         {
           "quarter": "2024Q3",
           "yoy": -350.99
@@ -6339,13 +6335,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -17.84
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 153.8
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -866.67
-        },
         {
           "quarter": "2024Q3",
           "yoy": -395.24
@@ -6373,13 +6369,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 30.51
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 79.01
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 8.24
-        },
         {
           "quarter": "2024Q3",
           "value": 2.39
@@ -6407,13 +6403,13 @@
         {
           "quarter": "2026Q1",
           "value": 2.86
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 13.76
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 0.37
-        },
         {
           "quarter": "2024Q3",
           "value": -6.74
@@ -6441,13 +6437,13 @@
         {
           "quarter": "2026Q1",
           "value": -5.85
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 3.6
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": -0.23
-        },
         {
           "quarter": "2024Q3",
           "value": -0.62
@@ -6475,6 +6471,10 @@
         {
           "quarter": "2026Q1",
           "value": -0.41
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -0.17
         }
       ]
     },
@@ -7718,7 +7718,7 @@
     "holdingPct": 55.0,
     "delta": 0.2,
     "price": 11.9,
-    "marketCap": 134.07,
+    "marketCap": 134.53,
     "turnovers": {
       "d1": 0.53,
       "d5": 0.54,
@@ -9176,7 +9176,7 @@
     "holdingPct": 13.85,
     "delta": 1.4,
     "price": 47.15,
-    "marketCap": 44.61,
+    "marketCap": 62.45,
     "turnovers": {
       "d1": 0.3,
       "d5": 0.33,
@@ -13076,7 +13076,7 @@
           "yoy": 32.05
         }
       ],
-      "_last_fin_attempt_ts": 1786701013,
+      "_last_fin_attempt_ts": 1786738980,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -17734,7 +17734,7 @@
           "yoy": 77.02
         }
       ],
-      "_last_fin_attempt_ts": 1786701086,
+      "_last_fin_attempt_ts": 1786738925,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -24651,7 +24651,7 @@
     "holdingPct": 31.49,
     "delta": 2.25,
     "price": 45.2,
-    "marketCap": 79.81,
+    "marketCap": 81.4,
     "turnovers": {
       "d1": 0.59,
       "d5": 0.9,
@@ -26205,7 +26205,7 @@
     "holdingPct": 67.04,
     "delta": 0.82,
     "price": 259.5,
-    "marketCap": 36404.34,
+    "marketCap": 36520.54,
     "turnovers": {
       "d1": 132.44,
       "d5": 137.38,
@@ -26389,12 +26389,8 @@
           "yoy": 54.19
         }
       ],
-      "_last_fin_attempt_ts": 1786701058,
+      "_last_fin_attempt_ts": 1786738969,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 0.17
-        },
         {
           "quarter": "2024Q3",
           "yoy": -7.09
@@ -26422,13 +26418,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 1.06
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -3.35
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 21.35
-        },
         {
           "quarter": "2024Q3",
           "yoy": -1.25
@@ -26456,13 +26452,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 26.21
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 18.94
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 6.3
-        },
         {
           "quarter": "2024Q3",
           "yoy": 14.15
@@ -26490,13 +26486,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 17.49
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 33.86
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 6.42
-        },
         {
           "quarter": "2024Q3",
           "value": 6.19
@@ -26524,13 +26520,13 @@
         {
           "quarter": "2026Q1",
           "value": 6.18
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 6.12
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 2.88
-        },
         {
           "quarter": "2024Q3",
           "value": 2.95
@@ -26558,13 +26554,13 @@
         {
           "quarter": "2026Q1",
           "value": 3.57
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 3.75
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 2.53
-        },
         {
           "quarter": "2024Q3",
           "value": 3.55
@@ -26592,6 +26588,10 @@
         {
           "quarter": "2026Q1",
           "value": 3.56
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 4.27
         }
       ]
     },
@@ -33398,12 +33398,8 @@
           "yoy": 712.58
         }
       ],
-      "_last_fin_attempt_ts": 1786701035,
+      "_last_fin_attempt_ts": 1786738927,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 120.33
-        },
         {
           "quarter": "2024Q3",
           "yoy": -22.21
@@ -33431,13 +33427,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 128.03
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 18.46
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -44.4
-        },
         {
           "quarter": "2024Q3",
           "yoy": -113.94
@@ -33465,13 +33461,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 90.78
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 48.08
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 42.86
-        },
         {
           "quarter": "2024Q3",
           "yoy": -83.5
@@ -33499,13 +33495,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 80.95
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 917.65
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 18.91
-        },
         {
           "quarter": "2024Q3",
           "value": 30.44
@@ -33533,13 +33529,13 @@
         {
           "quarter": "2026Q1",
           "value": 26.04
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 46.45
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": -40.75
-        },
         {
           "quarter": "2024Q3",
           "value": -1.06
@@ -33567,13 +33563,13 @@
         {
           "quarter": "2026Q1",
           "value": -3.57
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 29.37
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": -0.84
-        },
         {
           "quarter": "2024Q3",
           "value": 0.17
@@ -33601,6 +33597,10 @@
         {
           "quarter": "2026Q1",
           "value": -0.2
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 3.46
         }
       ]
     },
@@ -37856,7 +37856,7 @@
     "holdingPct": 43.57,
     "delta": 0.63,
     "price": 33.75,
-    "marketCap": 508.2,
+    "marketCap": 508.26,
     "turnovers": {
       "d1": 6.85,
       "d5": 6.1,
@@ -38000,12 +38000,8 @@
           "yoy": 49.23
         }
       ],
-      "_last_fin_attempt_ts": 1786701039,
+      "_last_fin_attempt_ts": 1786738982,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 2.5
-        },
         {
           "quarter": "2024Q3",
           "yoy": 2.17
@@ -38033,13 +38029,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 7.31
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 5.98
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 59.91
-        },
         {
           "quarter": "2024Q3",
           "yoy": 26.81
@@ -38067,13 +38063,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 0.37
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 8.26
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 233.33
-        },
         {
           "quarter": "2024Q3",
           "yoy": 45.83
@@ -38101,13 +38097,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 0.0
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 75.0
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 6.59
-        },
         {
           "quarter": "2024Q3",
           "value": 6.64
@@ -38135,13 +38131,13 @@
         {
           "quarter": "2026Q1",
           "value": 6.87
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 6.89
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 2.87
-        },
         {
           "quarter": "2024Q3",
           "value": 3.14
@@ -38169,13 +38165,13 @@
         {
           "quarter": "2026Q1",
           "value": 2.47
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 3.13
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 0.3
-        },
         {
           "quarter": "2024Q3",
           "value": 0.35
@@ -38202,6 +38198,10 @@
         },
         {
           "quarter": "2026Q1",
+          "value": 0.35
+        },
+        {
+          "quarter": "2026Q2",
           "value": 0.35
         }
       ]
@@ -38820,12 +38820,8 @@
           "yoy": 38.26
         }
       ],
-      "_last_fin_attempt_ts": 1786701061,
+      "_last_fin_attempt_ts": 1786738960,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 14.32
-        },
         {
           "quarter": "2024Q3",
           "yoy": 12.27
@@ -38853,13 +38849,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 0.36
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -21.16
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 51.25
-        },
         {
           "quarter": "2024Q3",
           "yoy": 32.08
@@ -38887,13 +38883,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -3.37
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -17.6
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 37.5
-        },
         {
           "quarter": "2024Q3",
           "yoy": 40.0
@@ -38921,13 +38917,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -10.0
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 563.64
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 4.97
-        },
         {
           "quarter": "2024Q3",
           "value": 5.01
@@ -38955,13 +38951,13 @@
         {
           "quarter": "2026Q1",
           "value": 5.26
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 4.62
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 1.71
-        },
         {
           "quarter": "2024Q3",
           "value": 1.91
@@ -38989,13 +38985,13 @@
         {
           "quarter": "2026Q1",
           "value": 1.31
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 1.2
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 0.66
-        },
         {
           "quarter": "2024Q3",
           "value": 0.77
@@ -39023,6 +39019,10 @@
         {
           "quarter": "2026Q1",
           "value": 0.45
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 0.73
         }
       ]
     },
@@ -43530,7 +43530,7 @@
           "yoy": 59.59
         }
       ],
-      "_last_fin_attempt_ts": 1786701009,
+      "_last_fin_attempt_ts": 1786738952,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -53676,12 +53676,8 @@
           "yoy": 2.52
         }
       ],
-      "_last_fin_attempt_ts": 1786701090,
+      "_last_fin_attempt_ts": 1786738947,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 113.36
-        },
         {
           "quarter": "2024Q3",
           "yoy": 106.0
@@ -53709,13 +53705,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -26.93
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 128.01
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 57.75
-        },
         {
           "quarter": "2024Q3",
           "yoy": 84.57
@@ -53743,13 +53739,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -116.8
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -17.26
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 75.41
-        },
         {
           "quarter": "2024Q3",
           "yoy": 47.06
@@ -53777,13 +53773,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 105.56
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 95.43
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 10.74
-        },
         {
           "quarter": "2024Q3",
           "value": 8.98
@@ -53811,13 +53807,13 @@
         {
           "quarter": "2026Q1",
           "value": 15.08
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 22.04
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": -104.6
-        },
         {
           "quarter": "2024Q3",
           "value": -62.13
@@ -53845,13 +53841,13 @@
         {
           "quarter": "2026Q1",
           "value": -113.76
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -87.74
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": -0.15
-        },
         {
           "quarter": "2024Q3",
           "value": -0.27
@@ -53879,6 +53875,10 @@
         {
           "quarter": "2026Q1",
           "value": 0.01
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -0.1
         }
       ]
     },
@@ -65183,7 +65183,7 @@
     "holdingPct": 81.64,
     "delta": 0.42,
     "price": 60.9,
-    "marketCap": 477.26,
+    "marketCap": 471.17,
     "turnovers": {
       "d1": 0.51,
       "d5": 0.48,
@@ -69970,7 +69970,7 @@
           "yoy": 64.74
         }
       ],
-      "_last_fin_attempt_ts": 1786701018,
+      "_last_fin_attempt_ts": 1786738938,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -70660,7 +70660,7 @@
     "holdingPct": 67.91,
     "delta": 0.12,
     "price": 116.5,
-    "marketCap": 727.32,
+    "marketCap": 727.62,
     "turnovers": {
       "d1": 4.82,
       "d5": 3.51,
@@ -70772,12 +70772,8 @@
           "yoy": 16.14
         }
       ],
-      "_last_fin_attempt_ts": 1786701077,
+      "_last_fin_attempt_ts": 1786738974,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 18.61
-        },
         {
           "quarter": "2024Q3",
           "yoy": 8.97
@@ -70805,13 +70801,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -0.14
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -5.63
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 41.43
-        },
         {
           "quarter": "2024Q3",
           "yoy": 9.75
@@ -70839,13 +70835,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -9.22
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -6.65
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 12.5
-        },
         {
           "quarter": "2024Q3",
           "yoy": 2.21
@@ -70873,13 +70869,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -12.12
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 11.5
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 32.69
-        },
         {
           "quarter": "2024Q3",
           "value": 32.04
@@ -70907,13 +70903,13 @@
         {
           "quarter": "2026Q1",
           "value": 31.06
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 31.69
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 15.14
-        },
         {
           "quarter": "2024Q3",
           "value": 14.9
@@ -70941,13 +70937,13 @@
         {
           "quarter": "2026Q1",
           "value": 13.51
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 16.82
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 1.89
-        },
         {
           "quarter": "2024Q3",
           "value": 1.85
@@ -70975,6 +70971,10 @@
         {
           "quarter": "2026Q1",
           "value": 1.74
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 2.52
         }
       ]
     },
@@ -72236,7 +72236,7 @@
           "yoy": -16.7
         }
       ],
-      "_last_fin_attempt_ts": 1786701052,
+      "_last_fin_attempt_ts": 1786738940,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -73014,7 +73014,7 @@
           "yoy": 48.1
         }
       ],
-      "_last_fin_attempt_ts": 1786701090,
+      "_last_fin_attempt_ts": 1786738949,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -80216,7 +80216,7 @@
           "yoy": 16.67
         }
       ],
-      "_last_fin_attempt_ts": 1786701021,
+      "_last_fin_attempt_ts": 1786738936,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -83316,7 +83316,7 @@
           "yoy": 11.87
         }
       ],
-      "_last_fin_attempt_ts": 1786701072,
+      "_last_fin_attempt_ts": 1786738975,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -84092,12 +84092,8 @@
           "yoy": 0.34
         }
       ],
-      "_last_fin_attempt_ts": 1786701075,
+      "_last_fin_attempt_ts": 1786738980,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 8.33
-        },
         {
           "quarter": "2024Q3",
           "yoy": 8.4
@@ -84125,13 +84121,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 11.52
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 39.18
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 621.37
-        },
         {
           "quarter": "2024Q3",
           "yoy": 139.82
@@ -84159,13 +84155,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 153.34
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 333.62
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 539.13
-        },
         {
           "quarter": "2024Q3",
           "yoy": -15.38
@@ -84193,13 +84189,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 130.77
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 161.82
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 23.42
-        },
         {
           "quarter": "2024Q3",
           "value": 24.11
@@ -84227,13 +84223,13 @@
         {
           "quarter": "2026Q1",
           "value": 26.61
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 27.51
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 2.84
-        },
         {
           "quarter": "2024Q3",
           "value": 3.02
@@ -84261,13 +84257,13 @@
         {
           "quarter": "2026Q1",
           "value": 7.18
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 7.53
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 1.47
-        },
         {
           "quarter": "2024Q3",
           "value": 0.22
@@ -84295,6 +84291,10 @@
         {
           "quarter": "2026Q1",
           "value": 0.3
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 0.34
         }
       ]
     },
@@ -85667,7 +85667,7 @@
           "yoy": -21.6
         }
       ],
-      "_last_fin_attempt_ts": 1786701033,
+      "_last_fin_attempt_ts": 1786738952,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -91808,12 +91808,8 @@
           "yoy": -46.74
         }
       ],
-      "_last_fin_attempt_ts": 1786701092,
+      "_last_fin_attempt_ts": 1786738925,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 330.94
-        },
         {
           "quarter": "2024Q3",
           "yoy": 123.95
@@ -91841,13 +91837,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -168.36
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -308.74
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 80.01
-        },
         {
           "quarter": "2024Q3",
           "yoy": 128.47
@@ -91875,13 +91871,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -820.11
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -158.9
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 78.52
-        },
         {
           "quarter": "2024Q3",
           "yoy": 167.07
@@ -91909,13 +91905,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -345.83
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 36.83
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 32.61
-        },
         {
           "quarter": "2024Q3",
           "value": 36.17
@@ -91943,13 +91939,13 @@
         {
           "quarter": "2026Q1",
           "value": -27.03
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -33.34
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": -13.22
-        },
         {
           "quarter": "2024Q3",
           "value": 8.95
@@ -91977,13 +91973,13 @@
         {
           "quarter": "2026Q1",
           "value": -188.75
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -195.73
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": -0.29
-        },
         {
           "quarter": "2024Q3",
           "value": 0.55
@@ -92011,6 +92007,10 @@
         {
           "quarter": "2026Q1",
           "value": -2.14
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -1.99
         }
       ]
     },
@@ -92503,12 +92503,8 @@
           "yoy": 37.92
         }
       ],
-      "_last_fin_attempt_ts": 1786701040,
+      "_last_fin_attempt_ts": 1786738961,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 28.62
-        },
         {
           "quarter": "2024Q3",
           "yoy": 11.9
@@ -92536,13 +92532,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -14.43
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -7.76
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 78.73
-        },
         {
           "quarter": "2024Q3",
           "yoy": 32.57
@@ -92570,13 +92566,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -28.13
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -15.72
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 7.83
-        },
         {
           "quarter": "2024Q3",
           "yoy": -25.78
@@ -92604,13 +92600,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -36.07
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 457.89
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 21.52
-        },
         {
           "quarter": "2024Q3",
           "value": 19.81
@@ -92638,13 +92634,13 @@
         {
           "quarter": "2026Q1",
           "value": 16.96
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 19.09
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 11.42
-        },
         {
           "quarter": "2024Q3",
           "value": 8.87
@@ -92672,13 +92668,13 @@
         {
           "quarter": "2026Q1",
           "value": 6.01
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 8.76
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 1.79
-        },
         {
           "quarter": "2024Q3",
           "value": 0.95
@@ -92706,6 +92702,10 @@
         {
           "quarter": "2026Q1",
           "value": 0.78
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 1.06
         }
       ]
     },
@@ -102565,7 +102565,7 @@
     "holdingPct": 12.58,
     "delta": 2.1,
     "price": 184.0,
-    "marketCap": 70.05,
+    "marketCap": 70.03,
     "turnovers": {
       "d1": 10.53,
       "d5": 5.02,
@@ -102661,12 +102661,8 @@
           "yoy": 63.37
         }
       ],
-      "_last_fin_attempt_ts": 1786701015,
+      "_last_fin_attempt_ts": 1786738968,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 16.19
-        },
         {
           "quarter": "2024Q3",
           "yoy": -11.41
@@ -102694,13 +102690,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 11.21
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 28.31
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 42.97
-        },
         {
           "quarter": "2024Q3",
           "yoy": -29.91
@@ -102728,13 +102724,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 2.9
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 31.55
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 103.85
-        },
         {
           "quarter": "2024Q3",
           "yoy": -58.17
@@ -102762,13 +102758,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -12.62
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 185.71
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 46.97
-        },
         {
           "quarter": "2024Q3",
           "value": 40.81
@@ -102796,13 +102792,13 @@
         {
           "quarter": "2026Q1",
           "value": 38.53
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 41.12
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 26.29
-        },
         {
           "quarter": "2024Q3",
           "value": 17.85
@@ -102830,13 +102826,13 @@
         {
           "quarter": "2026Q1",
           "value": 13.19
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 14.38
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 3.71
-        },
         {
           "quarter": "2024Q3",
           "value": 1.46
@@ -102864,6 +102860,10 @@
         {
           "quarter": "2026Q1",
           "value": 0.9
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 1.2
         }
       ]
     },
@@ -107351,12 +107351,8 @@
           "yoy": 32.79
         }
       ],
-      "_last_fin_attempt_ts": 1786701048,
+      "_last_fin_attempt_ts": 1786738951,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 0.46
-        },
         {
           "quarter": "2024Q3",
           "yoy": 5.11
@@ -107384,13 +107380,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 28.16
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 123.93
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 275.81
-        },
         {
           "quarter": "2024Q3",
           "yoy": 35.1
@@ -107418,13 +107414,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 113.26
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 72.87
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -63.75
-        },
         {
           "quarter": "2024Q3",
           "yoy": -26.96
@@ -107452,13 +107448,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -270.37
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 720.0
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 12.76
-        },
         {
           "quarter": "2024Q3",
           "value": 15.69
@@ -107486,13 +107482,13 @@
         {
           "quarter": "2026Q1",
           "value": 19.32
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 4.23
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 2.87
-        },
         {
           "quarter": "2024Q3",
           "value": 7.05
@@ -107520,13 +107516,13 @@
         {
           "quarter": "2026Q1",
           "value": 9.98
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -7.66
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 0.58
-        },
         {
           "quarter": "2024Q3",
           "value": 1.49
@@ -107554,6 +107550,10 @@
         {
           "quarter": "2026Q1",
           "value": -0.46
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 13.02
         }
       ]
     },
@@ -117244,7 +117244,7 @@
     "holdingPct": 33.54,
     "delta": 1.71,
     "price": 189.5,
-    "marketCap": 370.97,
+    "marketCap": 371.0,
     "turnovers": {
       "d1": 2.45,
       "d5": 4.76,
@@ -117344,12 +117344,8 @@
           "yoy": -10.26
         }
       ],
-      "_last_fin_attempt_ts": 1786701012,
+      "_last_fin_attempt_ts": 1786738941,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 10.24
-        },
         {
           "quarter": "2024Q3",
           "yoy": 8.62
@@ -117377,13 +117373,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -11.07
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -31.02
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 43.33
-        },
         {
           "quarter": "2024Q3",
           "yoy": 17.42
@@ -117411,13 +117407,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -107.7
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -198.96
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 107.62
-        },
         {
           "quarter": "2024Q3",
           "yoy": 10.62
@@ -117445,13 +117441,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -86.73
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 169.57
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 18.64
-        },
         {
           "quarter": "2024Q3",
           "value": 20.65
@@ -117479,13 +117475,13 @@
         {
           "quarter": "2026Q1",
           "value": 14.28
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 9.79
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 10.13
-        },
         {
           "quarter": "2024Q3",
           "value": 11.82
@@ -117513,13 +117509,13 @@
         {
           "quarter": "2026Q1",
           "value": -0.44
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -3.1
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 2.18
-        },
         {
           "quarter": "2024Q3",
           "value": 1.77
@@ -117547,6 +117543,10 @@
         {
           "quarter": "2026Q1",
           "value": 0.15
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 0.32
         }
       ]
     },
@@ -129853,12 +129853,8 @@
           "yoy": -18.48
         }
       ],
-      "_last_fin_attempt_ts": 1786701054,
+      "_last_fin_attempt_ts": 1786738936,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 9.36
-        },
         {
           "quarter": "2024Q3",
           "yoy": 9.83
@@ -129886,13 +129882,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -40.16
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -43.4
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 51.04
-        },
         {
           "quarter": "2024Q3",
           "yoy": 21.56
@@ -129920,13 +129916,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -222.11
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -520.52
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 20.0
-        },
         {
           "quarter": "2024Q3",
           "yoy": -19.05
@@ -129954,13 +129950,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -160.0
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -333.33
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 24.99
-        },
         {
           "quarter": "2024Q3",
           "value": 27.82
@@ -129988,13 +129984,13 @@
         {
           "quarter": "2026Q1",
           "value": 9.27
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 9.29
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 7.24
-        },
         {
           "quarter": "2024Q3",
           "value": 8.18
@@ -130022,13 +130018,13 @@
         {
           "quarter": "2026Q1",
           "value": -18.64
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -28.34
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 0.36
-        },
         {
           "quarter": "2024Q3",
           "value": 0.34
@@ -130056,6 +130052,10 @@
         {
           "quarter": "2026Q1",
           "value": -1.04
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -1.3
         }
       ]
     },
@@ -132792,7 +132792,7 @@
     "revenueMonth": "2026-07",
     "revenueFirstSeen": "2026-08-07",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1786694111,
+      "_last_rev_attempt_ts": 1786738976,
       "revenueYoY": [
         {
           "date": "2025-07",
@@ -139817,7 +139817,7 @@
     "holdingPct": 38.24,
     "delta": 0.22,
     "price": 52.8,
-    "marketCap": 124.29,
+    "marketCap": 130.5,
     "turnovers": {
       "d1": 3.11,
       "d5": 1.79,
@@ -143836,7 +143836,7 @@
           "yoy": 181.78
         }
       ],
-      "_last_fin_attempt_ts": 1786701025,
+      "_last_fin_attempt_ts": 1786738977,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -164666,7 +164666,7 @@
           "yoy": 17.91
         }
       ],
-      "_last_fin_attempt_ts": 1786701035,
+      "_last_fin_attempt_ts": 1786738935,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -172365,7 +172365,7 @@
     "holdingPct": 35.82,
     "delta": 1.97,
     "price": 434.0,
-    "marketCap": 629.48,
+    "marketCap": 638.36,
     "turnovers": {
       "d1": 4.75,
       "d5": 8.82,
@@ -177111,7 +177111,7 @@
     "holdingPct": 24.42,
     "delta": 0.36,
     "price": 48.9,
-    "marketCap": 128.99,
+    "marketCap": 129.01,
     "turnovers": {
       "d1": 0.15,
       "d5": 0.22,
@@ -177215,12 +177215,8 @@
           "yoy": 5.87
         }
       ],
-      "_last_fin_attempt_ts": 1786701067,
+      "_last_fin_attempt_ts": 1786738948,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -1.26
-        },
         {
           "quarter": "2024Q3",
           "yoy": -3.72
@@ -177248,13 +177244,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 4.64
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 0.01
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 41.56
-        },
         {
           "quarter": "2024Q3",
           "yoy": 40.13
@@ -177282,13 +177278,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -3.15
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -23.76
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 55.26
-        },
         {
           "quarter": "2024Q3",
           "yoy": -31.05
@@ -177316,13 +177312,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -24.24
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 306.12
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 8.69
-        },
         {
           "quarter": "2024Q3",
           "value": 9.26
@@ -177350,13 +177346,13 @@
         {
           "quarter": "2026Q1",
           "value": 9.16
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 9.31
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 5.08
-        },
         {
           "quarter": "2024Q3",
           "value": 6.26
@@ -177384,13 +177380,13 @@
         {
           "quarter": "2026Q1",
           "value": 4.6
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 4.97
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 1.77
-        },
         {
           "quarter": "2024Q3",
           "value": 1.31
@@ -177418,6 +177414,10 @@
         {
           "quarter": "2026Q1",
           "value": 1.0
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 1.01
         }
       ]
     },
@@ -178790,12 +178790,8 @@
           "yoy": -10.45
         }
       ],
-      "_last_fin_attempt_ts": 1786701023,
+      "_last_fin_attempt_ts": 1786738949,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 9.15
-        },
         {
           "quarter": "2024Q3",
           "yoy": -1.36
@@ -178823,13 +178819,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 58.12
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -2.67
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 66.46
-        },
         {
           "quarter": "2024Q3",
           "yoy": -13.26
@@ -178857,13 +178853,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 947.29
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -1000.25
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 200.0
-        },
         {
           "quarter": "2024Q3",
           "yoy": 94.12
@@ -178891,13 +178887,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 100.0
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 108.7
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 18.3
-        },
         {
           "quarter": "2024Q3",
           "value": 15.78
@@ -178925,13 +178921,13 @@
         {
           "quarter": "2026Q1",
           "value": 21.21
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 14.18
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": -2.11
-        },
         {
           "quarter": "2024Q3",
           "value": -5.52
@@ -178959,13 +178955,13 @@
         {
           "quarter": "2026Q1",
           "value": 3.49
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -1.45
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 0.01
-        },
         {
           "quarter": "2024Q3",
           "value": -0.01
@@ -178992,6 +178988,10 @@
         },
         {
           "quarter": "2026Q1",
+          "value": 0.02
+        },
+        {
+          "quarter": "2026Q2",
           "value": 0.02
         }
       ]
@@ -186536,12 +186536,8 @@
           "yoy": 404.44
         }
       ],
-      "_last_fin_attempt_ts": 1786701058,
+      "_last_fin_attempt_ts": 1786738958,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 166.43
-        },
         {
           "quarter": "2024Q3",
           "yoy": 160.38
@@ -186569,13 +186565,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -89.88
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -66.63
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 80.02
-        },
         {
           "quarter": "2024Q3",
           "yoy": 100.04
@@ -186603,13 +186599,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -1073.8
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -205.19
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 200.0
-        },
         {
           "quarter": "2024Q3",
           "yoy": 300.0
@@ -186637,13 +186633,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -1300.0
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 54.35
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 33.67
-        },
         {
           "quarter": "2024Q3",
           "value": 37.23
@@ -186671,13 +186667,13 @@
         {
           "quarter": "2026Q1",
           "value": 2.93
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 8.09
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": -3.33
-        },
         {
           "quarter": "2024Q3",
           "value": 0.24
@@ -186705,13 +186701,13 @@
         {
           "quarter": "2026Q1",
           "value": -31.76
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -21.31
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 0.21
-        },
         {
           "quarter": "2024Q3",
           "value": 0.16
@@ -186739,6 +186735,10 @@
         {
           "quarter": "2026Q1",
           "value": -0.72
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -0.42
         }
       ]
     },
@@ -194282,12 +194282,8 @@
           "yoy": 40.7
         }
       ],
-      "_last_fin_attempt_ts": 1786701029,
+      "_last_fin_attempt_ts": 1786738932,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 73.12
-        },
         {
           "quarter": "2024Q3",
           "yoy": -19.98
@@ -194315,13 +194311,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -13.93
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 15.16
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 670.91
-        },
         {
           "quarter": "2024Q3",
           "yoy": -24.98
@@ -194349,13 +194345,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -21.53
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 128.87
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 311.11
-        },
         {
           "quarter": "2024Q3",
           "yoy": -65.93
@@ -194383,13 +194379,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -1.9
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 153.95
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 5.57
-        },
         {
           "quarter": "2024Q3",
           "value": 5.33
@@ -194417,13 +194413,13 @@
         {
           "quarter": "2026Q1",
           "value": 5.33
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 5.16
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 2.69
-        },
         {
           "quarter": "2024Q3",
           "value": 2.41
@@ -194451,13 +194447,13 @@
         {
           "quarter": "2026Q1",
           "value": 2.84
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 2.79
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 0.74
-        },
         {
           "quarter": "2024Q3",
           "value": 0.31
@@ -194485,6 +194481,10 @@
         {
           "quarter": "2026Q1",
           "value": 1.03
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 0.82
         }
       ]
     },
@@ -202300,7 +202300,7 @@
     "holdingPct": 33.75,
     "delta": 1.85,
     "price": 65.1,
-    "marketCap": 35.28,
+    "marketCap": 36.17,
     "turnovers": {
       "d1": 0.15,
       "d5": 0.26,
@@ -206978,7 +206978,7 @@
     "holdingPct": 38.36,
     "delta": 0.17,
     "price": 463.5,
-    "marketCap": 445.15,
+    "marketCap": 445.68,
     "turnovers": {
       "d1": 5.56,
       "d5": 4.26,
@@ -209312,7 +209312,7 @@
     "holdingPct": 17.57,
     "delta": 2.0,
     "price": 407.0,
-    "marketCap": 217.53,
+    "marketCap": 221.46,
     "turnovers": {
       "d1": 4.64,
       "d5": 6.81,
@@ -210130,8 +210130,8 @@
     "revenueMonth": "2026-07",
     "revenueFirstSeen": "2026-08-08",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1786701062,
-      "_last_fin_attempt_ts": 1786701065,
+      "_last_rev_attempt_ts": 1786738961,
+      "_last_fin_attempt_ts": 1786738963,
       "grossMarginYoY": [],
       "operatingMarginYoY": [],
       "epsYoY": [],
@@ -212958,7 +212958,7 @@
     "holdingPct": 34.81,
     "delta": 0.25,
     "price": 40.7,
-    "marketCap": 64.11,
+    "marketCap": 64.09,
     "turnovers": {
       "d1": 1.3,
       "d5": 1.03,
@@ -213056,12 +213056,8 @@
           "yoy": 11.2
         }
       ],
-      "_last_fin_attempt_ts": 1786701060,
+      "_last_fin_attempt_ts": 1786738973,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 97.77
-        },
         {
           "quarter": "2024Q3",
           "yoy": 256.53
@@ -213089,13 +213085,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -23.14
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -18.0
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 173.99
-        },
         {
           "quarter": "2024Q3",
           "yoy": 188.6
@@ -213123,13 +213119,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -258.64
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -2018.92
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 800.0
-        },
         {
           "quarter": "2024Q3",
           "yoy": 500.0
@@ -213157,13 +213153,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -161.11
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 67.57
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 21.89
-        },
         {
           "quarter": "2024Q3",
           "value": 24.01
@@ -213191,13 +213187,13 @@
         {
           "quarter": "2026Q1",
           "value": 15.86
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 14.7
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 3.59
-        },
         {
           "quarter": "2024Q3",
           "value": 6.67
@@ -213225,13 +213221,13 @@
         {
           "quarter": "2026Q1",
           "value": -5.04
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -4.3
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 0.18
-        },
         {
           "quarter": "2024Q3",
           "value": 0.2
@@ -213259,6 +213255,10 @@
         {
           "quarter": "2026Q1",
           "value": -0.11
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -0.12
         }
       ]
     },
@@ -216851,7 +216851,7 @@
     "holdingPct": 39.45,
     "delta": 0.31,
     "price": 78.4,
-    "marketCap": 3327.14,
+    "marketCap": 3694.7,
     "turnovers": {
       "d1": 415.58,
       "d5": 260.6,
@@ -219953,7 +219953,7 @@
     "holdingPct": 55.99,
     "delta": 0.7,
     "price": 26.45,
-    "marketCap": 54.39,
+    "marketCap": 54.16,
     "turnovers": {
       "d1": 0.05,
       "d5": 0.07,
@@ -220051,12 +220051,8 @@
           "yoy": 3.03
         }
       ],
-      "_last_fin_attempt_ts": 1786701056,
+      "_last_fin_attempt_ts": 1786738937,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 4.29
-        },
         {
           "quarter": "2024Q3",
           "yoy": 10.95
@@ -220084,13 +220080,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 16.35
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 16.5
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 56.27
-        },
         {
           "quarter": "2024Q3",
           "yoy": -0.82
@@ -220118,13 +220114,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 177.35
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 136.66
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -8.7
-        },
         {
           "quarter": "2024Q3",
           "yoy": -4.31
@@ -220152,13 +220148,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 50.63
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 39.09
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 14.0
-        },
         {
           "quarter": "2024Q3",
           "value": 14.07
@@ -220186,13 +220182,13 @@
         {
           "quarter": "2026Q1",
           "value": 15.41
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 15.73
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": -0.42
-        },
         {
           "quarter": "2024Q3",
           "value": -1.13
@@ -220220,13 +220216,13 @@
         {
           "quarter": "2026Q1",
           "value": 0.82
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 0.43
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": -0.75
-        },
         {
           "quarter": "2024Q3",
           "value": -1.21
@@ -220254,6 +220250,10 @@
         {
           "quarter": "2026Q1",
           "value": -0.39
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -0.67
         }
       ]
     },
@@ -223197,7 +223197,7 @@
           "yoy": 28.24
         }
       ],
-      "_last_fin_attempt_ts": 1786701043,
+      "_last_fin_attempt_ts": 1786738931,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -226091,7 +226091,7 @@
     "holdingPct": 33.83,
     "delta": 0.88,
     "price": 69.7,
-    "marketCap": 125.78,
+    "marketCap": 126.78,
     "turnovers": {
       "d1": 2.44,
       "d5": 3.41,
@@ -243145,12 +243145,8 @@
           "yoy": 66.54
         }
       ],
-      "_last_fin_attempt_ts": 1786701028,
+      "_last_fin_attempt_ts": 1786738934,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 165.78
-        },
         {
           "quarter": "2024Q3",
           "yoy": 661.46
@@ -243178,13 +243174,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 241.17
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 143.32
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 92.03
-        },
         {
           "quarter": "2024Q3",
           "yoy": 66.24
@@ -243212,13 +243208,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 149.17
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 100.23
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 91.01
-        },
         {
           "quarter": "2024Q3",
           "yoy": -560.71
@@ -243246,13 +243242,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 397.0
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 106.32
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 6.0
-        },
         {
           "quarter": "2024Q3",
           "value": 4.94
@@ -243280,13 +243276,13 @@
         {
           "quarter": "2026Q1",
           "value": 18.28
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 10.61
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": -3.66
-        },
         {
           "quarter": "2024Q3",
           "value": -10.29
@@ -243314,13 +243310,13 @@
         {
           "quarter": "2026Q1",
           "value": 10.34
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 0.03
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": -0.17
-        },
         {
           "quarter": "2024Q3",
           "value": -1.85
@@ -243348,6 +243344,10 @@
         {
           "quarter": "2026Q1",
           "value": 2.97
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 0.38
         }
       ]
     },
@@ -256474,12 +256474,8 @@
           "yoy": 143.6
         }
       ],
-      "_last_fin_attempt_ts": 1786701016,
+      "_last_fin_attempt_ts": 1786738934,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -55.84
-        },
         {
           "quarter": "2024Q3",
           "yoy": -21.72
@@ -256507,13 +256503,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 13.32
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 23.8
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 386.79
-        },
         {
           "quarter": "2024Q3",
           "yoy": -92.67
@@ -256541,13 +256537,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 101.39
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 160.56
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -84.13
-        },
         {
           "quarter": "2024Q3",
           "yoy": -118.6
@@ -256575,13 +256571,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 87.88
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 103.43
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 4.65
-        },
         {
           "quarter": "2024Q3",
           "value": 6.59
@@ -256609,13 +256605,13 @@
         {
           "quarter": "2026Q1",
           "value": 7.7
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 6.73
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 17.92
-        },
         {
           "quarter": "2024Q3",
           "value": 0.3
@@ -256643,13 +256639,13 @@
         {
           "quarter": "2026Q1",
           "value": 0.01
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 1.1
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 0.1
-        },
         {
           "quarter": "2024Q3",
           "value": -0.16
@@ -256677,6 +256673,10 @@
         {
           "quarter": "2026Q1",
           "value": 0.62
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 0.06
         }
       ]
     },
@@ -265718,7 +265718,7 @@
     "holdingPct": 74.44,
     "delta": 0.22,
     "price": 19.95,
-    "marketCap": 84.5,
+    "marketCap": 83.6,
     "turnovers": {
       "d1": 0.01,
       "d5": 0.03,
@@ -265822,12 +265822,8 @@
           "yoy": 6.55
         }
       ],
-      "_last_fin_attempt_ts": 1786701051,
+      "_last_fin_attempt_ts": 1786738964,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 71.34
-        },
         {
           "quarter": "2024Q3",
           "yoy": 45.46
@@ -265855,13 +265851,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 4.34
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -9.23
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 650.26
-        },
         {
           "quarter": "2024Q3",
           "yoy": 136.88
@@ -265889,13 +265885,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 38.02
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 32.37
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 1009.09
-        },
         {
           "quarter": "2024Q3",
           "yoy": 57.89
@@ -265923,13 +265919,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 350.0
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 1366.67
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 26.52
-        },
         {
           "quarter": "2024Q3",
           "value": 24.39
@@ -265957,13 +265953,13 @@
         {
           "quarter": "2026Q1",
           "value": 16.24
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 15.68
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 18.95
-        },
         {
           "quarter": "2024Q3",
           "value": 13.56
@@ -265991,13 +265987,13 @@
         {
           "quarter": "2026Q1",
           "value": 5.94
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 7.35
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 1.22
-        },
         {
           "quarter": "2024Q3",
           "value": 0.3
@@ -266025,6 +266021,10 @@
         {
           "quarter": "2026Q1",
           "value": 0.18
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 0.44
         }
       ]
     },
@@ -268153,12 +268153,8 @@
           "yoy": 30.84
         }
       ],
-      "_last_fin_attempt_ts": 1786701023,
+      "_last_fin_attempt_ts": 1786738928,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 38.53
-        },
         {
           "quarter": "2024Q3",
           "yoy": 25.93
@@ -268186,13 +268182,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 27.1
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 60.33
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 309.04
-        },
         {
           "quarter": "2024Q3",
           "yoy": 1711.96
@@ -268220,13 +268216,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 49.18
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 74.71
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 15.79
-        },
         {
           "quarter": "2024Q3",
           "yoy": 119.35
@@ -268254,13 +268250,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 326.09
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 1616.67
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 14.11
-        },
         {
           "quarter": "2024Q3",
           "value": 11.82
@@ -268288,13 +268284,13 @@
         {
           "quarter": "2026Q1",
           "value": 19.41
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 19.32
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 7.67
-        },
         {
           "quarter": "2024Q3",
           "value": 4.85
@@ -268322,13 +268318,13 @@
         {
           "quarter": "2026Q1",
           "value": 13.33
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 11.79
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 0.44
-        },
         {
           "quarter": "2024Q3",
           "value": 0.68
@@ -268356,6 +268352,10 @@
         {
           "quarter": "2026Q1",
           "value": 1.96
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 4.12
         }
       ]
     },
@@ -270480,12 +270480,8 @@
           "yoy": -96.04
         }
       ],
-      "_last_fin_attempt_ts": 1786701081,
+      "_last_fin_attempt_ts": 1786738965,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -22.17
-        },
         {
           "quarter": "2024Q3",
           "yoy": -40.59
@@ -270513,13 +270509,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -46.59
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -15.63
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -26.6
-        },
         {
           "quarter": "2024Q3",
           "yoy": -50.04
@@ -270547,13 +270543,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -77.36
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -31.37
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -35.49
-        },
         {
           "quarter": "2024Q3",
           "yoy": -29.59
@@ -270581,13 +270577,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -100.0
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -52.0
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 43.87
-        },
         {
           "quarter": "2024Q3",
           "value": 17.49
@@ -270615,13 +270611,13 @@
         {
           "quarter": "2026Q1",
           "value": 12.3
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 18.08
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 37.55
-        },
         {
           "quarter": "2024Q3",
           "value": 9.88
@@ -270649,13 +270645,13 @@
         {
           "quarter": "2026Q1",
           "value": 2.34
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 9.27
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 2.09
-        },
         {
           "quarter": "2024Q3",
           "value": 0.69
@@ -270683,6 +270679,10 @@
         {
           "quarter": "2026Q1",
           "value": 0.0
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 0.12
         }
       ]
     },
@@ -276693,7 +276693,7 @@
           "yoy": 56.22
         }
       ],
-      "_last_fin_attempt_ts": 1786701015,
+      "_last_fin_attempt_ts": 1786738970,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -279812,12 +279812,8 @@
           "yoy": -0.91
         }
       ],
-      "_last_fin_attempt_ts": 1786701061,
+      "_last_fin_attempt_ts": 1786738964,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -6.08
-        },
         {
           "quarter": "2024Q3",
           "yoy": 0.12
@@ -279845,13 +279841,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -2.36
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -0.61
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -34.2
-        },
         {
           "quarter": "2024Q3",
           "yoy": -11.69
@@ -279879,13 +279875,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -13.41
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 2.17
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -41.52
-        },
         {
           "quarter": "2024Q3",
           "yoy": -12.95
@@ -279913,13 +279909,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -35.94
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -4.19
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 51.28
-        },
         {
           "quarter": "2024Q3",
           "value": 52.28
@@ -279947,13 +279943,13 @@
         {
           "quarter": "2026Q1",
           "value": 49.44
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 51.08
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 7.92
-        },
         {
           "quarter": "2024Q3",
           "value": 8.78
@@ -279981,13 +279977,13 @@
         {
           "quarter": "2026Q1",
           "value": 6.21
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 7.24
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 2.38
-        },
         {
           "quarter": "2024Q3",
           "value": 2.89
@@ -280015,6 +280011,10 @@
         {
           "quarter": "2026Q1",
           "value": 1.64
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 1.83
         }
       ]
     },
@@ -281271,7 +281271,7 @@
           "yoy": 45.36
         }
       ],
-      "_last_fin_attempt_ts": 1786701020,
+      "_last_fin_attempt_ts": 1786738979,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -281991,7 +281991,7 @@
     "revenueMonth": "2026-07",
     "revenueFirstSeen": "2026-08-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1786694049,
+      "_last_rev_attempt_ts": 1786738929,
       "revenueYoY": [
         {
           "date": "2025-03",
@@ -282042,7 +282042,7 @@
           "yoy": -116.95
         }
       ],
-      "_last_fin_attempt_ts": 1786701072,
+      "_last_fin_attempt_ts": 1786738931,
       "grossMarginYoY": [
         {
           "quarter": "2024Q1",
@@ -282113,10 +282113,6 @@
       ],
       "epsYoY": [
         {
-          "quarter": "2024Q2",
-          "yoy": 272.97
-        },
-        {
           "quarter": "2024Q3",
           "yoy": -225.0
         },
@@ -282143,13 +282139,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -200.0
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 700.0
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q1",
-          "value": 9.52
-        },
         {
           "quarter": "2024Q2",
           "value": 10.83
@@ -282177,13 +282173,13 @@
         {
           "quarter": "2026Q1",
           "value": 1.64
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 19.42
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q1",
-          "value": 6.8
-        },
         {
           "quarter": "2024Q2",
           "value": 7.5
@@ -282211,13 +282207,13 @@
         {
           "quarter": "2026Q1",
           "value": -2.13
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 17.87
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 0.64
-        },
         {
           "quarter": "2024Q3",
           "value": -0.7
@@ -282245,6 +282241,10 @@
         {
           "quarter": "2026Q1",
           "value": -0.03
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 0.9
         }
       ]
     },
@@ -282792,12 +282792,8 @@
     "revenueMonth": "2026-07",
     "revenueFirstSeen": "2026-08-13",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1786694036,
+      "_last_rev_attempt_ts": 1786738946,
       "revenueYoY": [
-        {
-          "date": "2025-05",
-          "yoy": -11.31
-        },
         {
           "date": "2025-07",
           "yoy": -31.63
@@ -282844,10 +282840,10 @@
         },
         {
           "date": "2026-07",
-          "yoy": -69.7
+          "yoy": -31.87
         }
       ],
-      "_last_fin_attempt_ts": 1786701059,
+      "_last_fin_attempt_ts": 1786738947,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -283571,7 +283567,7 @@
     "revenueMonth": "2026-06",
     "revenueFirstSeen": "2026-08-08",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1786694016,
+      "_last_rev_attempt_ts": 1786738943,
       "revenueYoY": [
         {
           "date": "2025-04",
@@ -283618,7 +283614,7 @@
           "yoy": -6.2
         }
       ],
-      "_last_fin_attempt_ts": 1786701037,
+      "_last_fin_attempt_ts": 1786738944,
       "grossMarginYoY": [
         {
           "quarter": "2024Q1",
@@ -284397,7 +284393,7 @@
           "yoy": 4.75
         }
       ],
-      "_last_fin_attempt_ts": 1786701069,
+      "_last_fin_attempt_ts": 1786738928,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -285131,12 +285127,8 @@
     "revenueMonth": "2026-07",
     "revenueFirstSeen": "2026-08-14",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1786694089,
+      "_last_rev_attempt_ts": 1786738938,
       "revenueYoY": [
-        {
-          "date": "2025-07",
-          "yoy": -18.12
-        },
         {
           "date": "2025-08",
           "yoy": 40.91
@@ -285183,10 +285175,10 @@
         },
         {
           "date": "2026-07",
-          "yoy": 78.98
+          "yoy": 62.33
         }
       ],
-      "_last_fin_attempt_ts": 1786701009,
+      "_last_fin_attempt_ts": 1786738940,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -285951,7 +285943,7 @@
           "yoy": 79.23
         }
       ],
-      "_last_fin_attempt_ts": 1786701030,
+      "_last_fin_attempt_ts": 1786738974,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -286683,12 +286675,8 @@
     "revenueMonth": "2026-07",
     "revenueFirstSeen": "2026-08-14",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1786694077,
+      "_last_rev_attempt_ts": 1786738923,
       "revenueYoY": [
-        {
-          "date": "2025-07",
-          "yoy": 10.36
-        },
         {
           "date": "2025-08",
           "yoy": 3.19
@@ -286735,10 +286723,10 @@
         },
         {
           "date": "2026-07",
-          "yoy": 2.36
+          "yoy": 3.04
         }
       ],
-      "_last_fin_attempt_ts": 1786701033,
+      "_last_fin_attempt_ts": 1786738924,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -287458,7 +287446,7 @@
     "revenueMonth": "2026-07",
     "revenueFirstSeen": "2026-08-08",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1786694042,
+      "_last_rev_attempt_ts": 1786738942,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -288227,7 +288215,7 @@
     "revenueMonth": "2026-07",
     "revenueFirstSeen": "2026-08-07",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1786694029,
+      "_last_rev_attempt_ts": 1786738956,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -288278,7 +288266,7 @@
           "yoy": -249.27
         }
       ],
-      "_last_fin_attempt_ts": 1786701094,
+      "_last_fin_attempt_ts": 1786738957,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -289063,7 +289051,7 @@
           "yoy": 81.0
         }
       ],
-      "_last_fin_attempt_ts": 1786701045,
+      "_last_fin_attempt_ts": 1786738926,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -290546,8 +290534,8 @@
     "revenueMonth": "2026-07",
     "revenueFirstSeen": "2026-08-10",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1786701010,
-      "_last_fin_attempt_ts": 1786701011,
+      "_last_rev_attempt_ts": 1786738966,
+      "_last_fin_attempt_ts": 1786738967,
       "grossMarginYoY": [],
       "operatingMarginYoY": [],
       "epsYoY": [],
@@ -291171,12 +291159,8 @@
           "yoy": 79.85
         }
       ],
-      "_last_fin_attempt_ts": 1786701080,
+      "_last_fin_attempt_ts": 1786738981,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 14.36
-        },
         {
           "quarter": "2024Q3",
           "yoy": 35.21
@@ -291204,13 +291188,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 104.45
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 74.92
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 125.34
-        },
         {
           "quarter": "2024Q3",
           "yoy": 79.35
@@ -291238,13 +291222,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 200.89
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 61.65
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 1600.0
-        },
         {
           "quarter": "2024Q3",
           "yoy": 38.94
@@ -291272,13 +291256,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -308.6
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 148.8
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 14.29
-        },
         {
           "quarter": "2024Q3",
           "value": 19.46
@@ -291306,13 +291290,13 @@
         {
           "quarter": "2026Q1",
           "value": 37.74
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -17.98
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 6.6
-        },
         {
           "quarter": "2024Q3",
           "value": 11.32
@@ -291340,13 +291324,13 @@
         {
           "quarter": "2026Q1",
           "value": 31.6
+        },
+        {
+          "quarter": "2026Q2",
+          "value": -29.28
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 1.02
-        },
         {
           "quarter": "2024Q3",
           "value": 1.57
@@ -291374,6 +291358,10 @@
         {
           "quarter": "2026Q1",
           "value": -1.94
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 4.05
         }
       ]
     },
@@ -296561,8 +296549,8 @@
     "revenueMonth": "2026-07",
     "revenueFirstSeen": "2026-08-08",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1786701065,
-      "_last_fin_attempt_ts": 1786701066,
+      "_last_rev_attempt_ts": 1786738954,
+      "_last_fin_attempt_ts": 1786738956,
       "grossMarginYoY": [],
       "operatingMarginYoY": [],
       "epsYoY": [],
@@ -299458,7 +299446,7 @@
     "revenueMonth": "2026-07",
     "revenueFirstSeen": "2026-08-10",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1786694013,
+      "_last_rev_attempt_ts": 1786738921,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -299513,7 +299501,7 @@
           "yoy": -211.66
         }
       ],
-      "_last_fin_attempt_ts": 1786701082,
+      "_last_fin_attempt_ts": 1786738922,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -300186,7 +300174,7 @@
     "holdingPct": 36.39,
     "delta": 0.18,
     "price": 16.2,
-    "marketCap": 2.37,
+    "marketCap": 9.77,
     "turnovers": {
       "d1": 0.06,
       "d5": 1.56,
@@ -306242,7 +306230,7 @@
           "yoy": -47.55
         }
       ],
-      "_last_fin_attempt_ts": 1786701083,
+      "_last_fin_attempt_ts": 1786738924,
       "grossMarginYoY": [
         {
           "quarter": "2024Q1",
@@ -307667,12 +307655,8 @@
           "yoy": 20.98
         }
       ],
-      "_last_fin_attempt_ts": 1786701073,
+      "_last_fin_attempt_ts": 1786738970,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 20.69
-        },
         {
           "quarter": "2024Q3",
           "yoy": 11.38
@@ -307700,13 +307684,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 9.88
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 22.19
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 682.98
-        },
         {
           "quarter": "2024Q3",
           "yoy": 2369.84
@@ -307734,13 +307718,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 212.3
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 841.48
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -85.71
-        },
         {
           "quarter": "2024Q3",
           "yoy": 50.0
@@ -307768,13 +307752,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -60.0
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 143.33
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 20.76
-        },
         {
           "quarter": "2024Q3",
           "value": 19.2
@@ -307802,13 +307786,13 @@
         {
           "quarter": "2026Q1",
           "value": 19.87
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 21.84
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 5.1
-        },
         {
           "quarter": "2024Q3",
           "value": 2.76
@@ -307836,13 +307820,13 @@
         {
           "quarter": "2026Q1",
           "value": 1.64
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 7.37
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 0.02
-        },
         {
           "quarter": "2024Q3",
           "value": 0.03
@@ -307870,6 +307854,10 @@
         {
           "quarter": "2026Q1",
           "value": 0.02
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 0.26
         }
       ]
     },
@@ -308340,7 +308328,7 @@
     "holdingPct": 33.77,
     "delta": 0.41,
     "price": 26.4,
-    "marketCap": 35.84,
+    "marketCap": 35.87,
     "turnovers": {
       "d1": 0.76,
       "d5": 1.11,
@@ -309209,7 +309197,7 @@
           "yoy": 21.47
         }
       ],
-      "_last_fin_attempt_ts": 1786701017,
+      "_last_fin_attempt_ts": 1786738929,
       "grossMarginYoY": [
         {
           "quarter": "2024Q2",
@@ -310653,7 +310641,7 @@
     "holdingPct": 75.42,
     "delta": 0.64,
     "price": 108.0,
-    "marketCap": 96.65,
+    "marketCap": 115.02,
     "turnovers": {
       "d1": 3.03,
       "d5": 2.55,
@@ -310751,12 +310739,8 @@
           "yoy": 10.67
         }
       ],
-      "_last_fin_attempt_ts": 1786701038,
+      "_last_fin_attempt_ts": 1786738971,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 23.49
-        },
         {
           "quarter": "2024Q3",
           "yoy": 6.42
@@ -310784,13 +310768,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 8.93
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -6.1
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 65.06
-        },
         {
           "quarter": "2024Q3",
           "yoy": 18.76
@@ -310818,13 +310802,13 @@
         {
           "quarter": "2026Q1",
           "yoy": 11.24
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -12.29
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 77.59
-        },
         {
           "quarter": "2024Q3",
           "yoy": -40.0
@@ -310852,13 +310836,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -41.11
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -37.5
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 49.13
-        },
         {
           "quarter": "2024Q3",
           "value": 49.88
@@ -310886,13 +310870,13 @@
         {
           "quarter": "2026Q1",
           "value": 61.19
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 60.75
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q2",
-          "value": 32.46
-        },
         {
           "quarter": "2024Q3",
           "value": 28.98
@@ -310920,13 +310904,13 @@
         {
           "quarter": "2026Q1",
           "value": 45.05
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 44.08
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q2",
-          "value": 1.03
-        },
         {
           "quarter": "2024Q3",
           "value": 0.21
@@ -310954,6 +310938,10 @@
         {
           "quarter": "2026Q1",
           "value": 0.53
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 0.6
         }
       ]
     },
