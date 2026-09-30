@@ -338,14 +338,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "TCC"
     },
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 2,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -8004,
-        "trust": 137
-      },
       {
         "date": "2026-05-22",
         "foreign": -9599,
@@ -790,6 +785,11 @@
         "date": "2026-09-29",
         "foreign": -301,
         "trust": 1
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 52829,
+        "trust": 4828
       }
     ]
   },
@@ -1116,14 +1116,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 361,
-        "trust": -3
-      },
       {
         "date": "2026-05-22",
         "foreign": 272,
@@ -1568,6 +1563,11 @@
         "date": "2026-09-29",
         "foreign": -106,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 532,
+        "trust": -3
       }
     ]
   },
@@ -1892,14 +1892,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 0,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -1541,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -4196,
@@ -2344,6 +2339,11 @@
         "date": "2026-09-29",
         "foreign": -1484,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1873,
+        "trust": 8
       }
     ]
   },
@@ -2676,13 +2676,8 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -53,
-        "trust": -51
-      },
       {
         "date": "2026-05-22",
         "foreign": -1443,
@@ -3127,6 +3122,11 @@
         "date": "2026-09-29",
         "foreign": -505,
         "trust": 1
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -181,
+        "trust": -1
       }
     ]
   },
@@ -3460,14 +3460,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -56,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -661,
@@ -3912,6 +3907,11 @@
         "date": "2026-09-29",
         "foreign": -163,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 712,
+        "trust": 0
       }
     ]
   },
@@ -4255,11 +4255,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -26,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -119,
@@ -4704,6 +4699,11 @@
         "date": "2026-09-29",
         "foreign": -32,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -2,
+        "trust": 0
       }
     ]
   },
@@ -5044,14 +5044,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -2,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -122,
@@ -5495,6 +5490,11 @@
       {
         "date": "2026-09-29",
         "foreign": 29,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -55,
         "trust": 0
       }
     ]
@@ -6513,14 +6513,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "Tait"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 0,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -1,
@@ -6965,6 +6960,11 @@
         "date": "2026-09-29",
         "foreign": 1,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -2,
+        "trust": 0
       }
     ]
   },
@@ -7290,14 +7290,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1058,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 716,
@@ -7742,6 +7737,11 @@
         "date": "2026-09-29",
         "foreign": -618,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 2044,
+        "trust": 0
       }
     ]
   },
@@ -8063,14 +8063,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 376,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -662,
@@ -8515,6 +8510,11 @@
         "date": "2026-09-29",
         "foreign": -2629,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 8891,
+        "trust": 0
       }
     ]
   },
@@ -8838,14 +8838,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 191,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 702,
@@ -9290,6 +9285,11 @@
         "date": "2026-09-29",
         "foreign": -575,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1159,
+        "trust": 0
       }
     ]
   },
@@ -9623,14 +9623,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 3764,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -6088,
@@ -10075,6 +10070,11 @@
         "date": "2026-09-29",
         "foreign": -10771,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 41405,
+        "trust": 0
       }
     ]
   },
@@ -10394,14 +10394,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-22",
-        "foreign": -2,
-        "trust": 0
-      },
       {
         "date": "2026-05-25",
         "foreign": 12,
@@ -10846,6 +10841,11 @@
         "date": "2026-09-29",
         "foreign": -18,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 104,
+        "trust": 0
       }
     ]
   },
@@ -11168,11 +11168,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 0,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 0,
@@ -11617,6 +11612,11 @@
         "date": "2026-09-29",
         "foreign": -5,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -1,
+        "trust": 0
       }
     ]
   },
@@ -11943,14 +11943,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 0,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 14,
@@ -12395,6 +12390,11 @@
         "date": "2026-09-29",
         "foreign": -7,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1,
+        "trust": 0
       }
     ]
   },
@@ -12714,14 +12714,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 3,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 4,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 3520,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 2603,
@@ -13166,6 +13161,11 @@
         "date": "2026-09-29",
         "foreign": -928,
         "trust": 8
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 4393,
+        "trust": 10
       }
     ]
   },
@@ -13506,14 +13506,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "OUCC"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-22",
-        "foreign": -388,
-        "trust": 0
-      },
       {
         "date": "2026-05-25",
         "foreign": 1267,
@@ -13958,6 +13953,11 @@
         "date": "2026-09-29",
         "foreign": 333,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1479,
+        "trust": 0
       }
     ]
   },
@@ -14284,14 +14284,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 415,
-        "trust": -2
-      },
       {
         "date": "2026-05-22",
         "foreign": -135,
@@ -14736,6 +14731,11 @@
         "date": "2026-09-29",
         "foreign": -44,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 180,
+        "trust": -1
       }
     ]
   },
@@ -15058,11 +15058,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -8,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 20,
@@ -15507,6 +15502,11 @@
         "date": "2026-09-29",
         "foreign": -24,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -49,
+        "trust": 0
       }
     ]
   },
@@ -15854,14 +15854,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "KLF"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -23,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -30,
@@ -16306,6 +16301,11 @@
         "date": "2026-09-29",
         "foreign": -1,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 4,
+        "trust": 0
       }
     ]
   },
@@ -16649,11 +16649,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-22",
-        "foreign": -9,
-        "trust": 0
-      },
       {
         "date": "2026-05-25",
         "foreign": -3,
@@ -17098,6 +17093,11 @@
         "date": "2026-09-29",
         "foreign": -11,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 0,
+        "trust": 0
       }
     ]
   },
@@ -17420,11 +17420,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 61,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -135,
@@ -17869,6 +17864,11 @@
         "date": "2026-09-29",
         "foreign": -13,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -2,
+        "trust": 0
       }
     ]
   },
@@ -18197,14 +18197,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 3645,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 3090,
@@ -18649,6 +18644,11 @@
         "date": "2026-09-29",
         "foreign": 404,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 739,
+        "trust": 0
       }
     ]
   },
@@ -18996,14 +18996,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -92,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -375,
@@ -19448,6 +19443,11 @@
         "date": "2026-09-29",
         "foreign": -85,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 72,
+        "trust": 0
       }
     ]
   },
@@ -19767,14 +19767,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 40,
-        "trust": -8
-      },
       {
         "date": "2026-05-22",
         "foreign": -34,
@@ -20219,6 +20214,11 @@
         "date": "2026-09-29",
         "foreign": 49,
         "trust": -19
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -17,
+        "trust": -28
       }
     ]
   },
@@ -20538,14 +20538,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -770,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 314,
@@ -20990,6 +20985,11 @@
         "date": "2026-09-29",
         "foreign": 730,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -511,
+        "trust": 0
       }
     ]
   },
@@ -21316,14 +21316,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 286,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 112,
@@ -21768,6 +21763,11 @@
         "date": "2026-09-29",
         "foreign": 63,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -47,
+        "trust": 0
       }
     ]
   },
@@ -22092,14 +22092,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 2043,
-        "trust": -582
-      },
       {
         "date": "2026-05-22",
         "foreign": 1747,
@@ -22544,6 +22539,11 @@
         "date": "2026-09-29",
         "foreign": -55,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 287,
+        "trust": 0
       }
     ]
   },
@@ -22887,14 +22887,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 5,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 6,
+    "trustBuyStreak": 2,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1268,
-        "trust": 409
-      },
       {
         "date": "2026-05-22",
         "foreign": 2101,
@@ -23339,6 +23334,11 @@
         "date": "2026-09-29",
         "foreign": 741,
         "trust": 101
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1123,
+        "trust": 6
       }
     ]
   },
@@ -23665,14 +23665,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 4,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -2,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 6,
@@ -24117,6 +24112,11 @@
         "date": "2026-09-29",
         "foreign": 75,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -15,
+        "trust": 0
       }
     ]
   },
@@ -24439,11 +24439,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 15,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -83,
@@ -24888,6 +24883,11 @@
         "date": "2026-09-29",
         "foreign": -6,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -18,
+        "trust": 0
       }
     ]
   },
@@ -25043,14 +25043,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 7,
+    "foreignBuyStreak": 8,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 90,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 9,
@@ -25495,6 +25490,11 @@
         "date": "2026-09-29",
         "foreign": 20,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 22,
+        "trust": 0
       }
     ]
   },
@@ -25821,14 +25821,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 4,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-22",
-        "foreign": -168,
-        "trust": 0
-      },
       {
         "date": "2026-05-25",
         "foreign": -482,
@@ -26273,6 +26268,11 @@
         "date": "2026-09-29",
         "foreign": 660,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -222,
+        "trust": 0
       }
     ]
   },
@@ -26600,14 +26600,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 865,
-        "trust": 20
-      },
       {
         "date": "2026-05-22",
         "foreign": 1358,
@@ -27052,6 +27047,11 @@
         "date": "2026-09-29",
         "foreign": 683,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 197,
+        "trust": 0
       }
     ]
   },
@@ -27374,13 +27374,8 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 178,
-        "trust": -1
-      },
       {
         "date": "2026-05-22",
         "foreign": -29,
@@ -27825,6 +27820,11 @@
         "date": "2026-09-29",
         "foreign": -509,
         "trust": 34
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -63,
+        "trust": 0
       }
     ]
   },
@@ -28197,14 +28197,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 2614,
-        "trust": 9
-      },
       {
         "date": "2026-05-22",
         "foreign": 3442,
@@ -28649,6 +28644,11 @@
         "date": "2026-09-29",
         "foreign": -586,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 6699,
+        "trust": -24
       }
     ]
   },
@@ -28988,14 +28988,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 229,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 127,
@@ -29440,6 +29435,11 @@
         "date": "2026-09-29",
         "foreign": 32,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 217,
+        "trust": 0
       }
     ]
   },
@@ -29768,14 +29768,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -401,
-        "trust": -2
-      },
       {
         "date": "2026-05-22",
         "foreign": -7769,
@@ -30220,6 +30215,11 @@
         "date": "2026-09-29",
         "foreign": -1976,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 906,
+        "trust": 0
       }
     ]
   },
@@ -30550,14 +30550,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 13,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 14,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -16,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -37,
@@ -31002,6 +30997,11 @@
         "date": "2026-09-29",
         "foreign": 211,
         "trust": 3
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 804,
+        "trust": 0
       }
     ]
   },
@@ -31344,14 +31344,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 31,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -23,
@@ -31796,6 +31791,11 @@
         "date": "2026-09-29",
         "foreign": -46,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 2,
+        "trust": 0
       }
     ]
   },
@@ -32122,14 +32122,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 2,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 25149,
-        "trust": 115
-      },
       {
         "date": "2026-05-22",
         "foreign": 1180,
@@ -32574,6 +32569,11 @@
         "date": "2026-09-29",
         "foreign": 780,
         "trust": 14
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -2845,
+        "trust": 39
       }
     ]
   },
@@ -32926,14 +32926,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "ACTION"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -911,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 896,
@@ -33378,6 +33373,11 @@
         "date": "2026-09-29",
         "foreign": -241,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 55,
+        "trust": 0
       }
     ]
   },
@@ -33715,14 +33715,9 @@
       "auditor": "群智聯合會計師事務所",
       "englishName": "TA YA"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 3197,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 1406,
@@ -34167,6 +34162,11 @@
         "date": "2026-09-29",
         "foreign": -937,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 809,
+        "trust": 0
       }
     ]
   },
@@ -34495,14 +34495,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 3,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 4,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 528,
-        "trust": -133
-      },
       {
         "date": "2026-05-22",
         "foreign": 479,
@@ -34947,6 +34942,11 @@
         "date": "2026-09-29",
         "foreign": 720,
         "trust": 307
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -648,
+        "trust": 1118
       }
     ]
   },
@@ -35289,14 +35289,9 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "COREMAX"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 750,
-        "trust": -85
-      },
       {
         "date": "2026-05-22",
         "foreign": 1783,
@@ -35741,6 +35736,11 @@
         "date": "2026-09-29",
         "foreign": 404,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -206,
+        "trust": 0
       }
     ]
   },
@@ -36071,14 +36071,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 342,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -1199,
@@ -36523,6 +36518,11 @@
         "date": "2026-09-29",
         "foreign": -1473,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 688,
+        "trust": -3
       }
     ]
   },
@@ -36844,7 +36844,7 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
       {
@@ -37266,6 +37266,11 @@
         "date": "2026-09-29",
         "foreign": -36,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 34,
+        "trust": 0
       }
     ]
   },
@@ -37601,14 +37606,9 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "SUNKO"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-04-13",
-        "foreign": 576,
-        "trust": 0
-      },
       {
         "date": "2026-04-14",
         "foreign": 840,
@@ -38053,6 +38053,11 @@
         "date": "2026-09-29",
         "foreign": 896,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 96,
+        "trust": 0
       }
     ]
   },
@@ -38384,11 +38389,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 3742,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 3003,
@@ -38833,6 +38833,11 @@
         "date": "2026-09-29",
         "foreign": -254,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -8651,
+        "trust": 0
       }
     ]
   },
@@ -39166,14 +39171,9 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "UB"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 95,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 250,
@@ -39618,6 +39618,11 @@
         "date": "2026-09-29",
         "foreign": -57,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 287,
+        "trust": 0
       }
     ]
   },
@@ -39937,14 +39942,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 589,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 543,
@@ -40389,6 +40389,11 @@
         "date": "2026-09-29",
         "foreign": 241,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -3,
+        "trust": 0
       }
     ]
   },
@@ -40724,14 +40729,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "DBC"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -851,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -657,
@@ -41176,6 +41176,11 @@
         "date": "2026-09-29",
         "foreign": 166,
         "trust": -206
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -278,
+        "trust": -79
       }
     ]
   },
@@ -41497,14 +41502,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -115,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -2029,
@@ -41949,6 +41949,11 @@
         "date": "2026-09-29",
         "foreign": -498,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1673,
+        "trust": 0
       }
     ]
   },
@@ -42268,14 +42273,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 180,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -647,
@@ -42720,6 +42720,11 @@
         "date": "2026-09-29",
         "foreign": -1303,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 2681,
+        "trust": 0
       }
     ]
   },
@@ -43056,11 +43061,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -119,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -66,
@@ -43505,6 +43505,11 @@
         "date": "2026-09-29",
         "foreign": -2856,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -281,
+        "trust": 0
       }
     ]
   },
@@ -43838,14 +43843,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 488,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 7445,
@@ -44290,6 +44290,11 @@
         "date": "2026-09-29",
         "foreign": 1153,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -4098,
+        "trust": 0
       }
     ]
   },
@@ -44626,11 +44631,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 5,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -159,
@@ -45075,6 +45075,11 @@
         "date": "2026-09-29",
         "foreign": -56,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -44,
+        "trust": 0
       }
     ]
   },
@@ -45399,14 +45404,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 6,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -166,
@@ -45851,6 +45851,11 @@
         "date": "2026-09-29",
         "foreign": -62,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 595,
+        "trust": 0
       }
     ]
   },
@@ -46182,14 +46187,9 @@
       "auditor": "南台聯合會計師事務所",
       "englishName": "CHIA TA"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-22",
-        "foreign": 23,
-        "trust": 0
-      },
       {
         "date": "2026-05-25",
         "foreign": 27,
@@ -46634,6 +46634,11 @@
         "date": "2026-09-29",
         "foreign": -37,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 197,
+        "trust": 0
       }
     ]
   },
@@ -46953,14 +46958,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 4,
+    "foreignBuyStreak": 5,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 14,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 54,
@@ -47405,6 +47405,11 @@
         "date": "2026-09-29",
         "foreign": 2,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 24,
+        "trust": 0
       }
     ]
   },
@@ -47738,14 +47743,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "QST"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-04-23",
-        "foreign": -100,
-        "trust": 0
-      },
       {
         "date": "2026-04-24",
         "foreign": 279,
@@ -48190,6 +48190,11 @@
         "date": "2026-09-29",
         "foreign": -45,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 55,
+        "trust": 0
       }
     ]
   },
@@ -48526,11 +48531,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 21,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -66,
@@ -48975,6 +48975,11 @@
         "date": "2026-09-29",
         "foreign": -79,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -179,
+        "trust": 0
       }
     ]
   },
@@ -49294,14 +49299,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 261,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -254,
@@ -49746,6 +49746,11 @@
         "date": "2026-09-29",
         "foreign": 199,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 197,
+        "trust": 0
       }
     ]
   },
@@ -50084,11 +50089,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 272,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 227,
@@ -50533,6 +50533,11 @@
         "date": "2026-09-29",
         "foreign": -336,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -670,
+        "trust": 0
       }
     ]
   },
@@ -50852,14 +50857,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 71,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -52,
@@ -51304,6 +51304,11 @@
         "date": "2026-09-29",
         "foreign": -2,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 103,
+        "trust": 0
       }
     ]
   },
@@ -51642,11 +51647,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-22",
-        "foreign": -412,
-        "trust": 0
-      },
       {
         "date": "2026-05-25",
         "foreign": 1016,
@@ -52091,6 +52091,11 @@
         "date": "2026-09-29",
         "foreign": -2188,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -53,
+        "trust": 0
       }
     ]
   },
@@ -52413,11 +52418,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 42,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -72,
@@ -52862,6 +52862,11 @@
         "date": "2026-09-29",
         "foreign": -276,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -87,
+        "trust": 0
       }
     ]
   },
@@ -53193,14 +53198,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -885,
-        "trust": 64
-      },
       {
         "date": "2026-05-22",
         "foreign": -2233,
@@ -53645,6 +53645,11 @@
         "date": "2026-09-29",
         "foreign": 946,
         "trust": 13
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -1202,
+        "trust": 0
       }
     ]
   },
@@ -53964,14 +53969,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 4,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 323,
-        "trust": -4
-      },
       {
         "date": "2026-05-22",
         "foreign": -197,
@@ -54416,6 +54416,11 @@
         "date": "2026-09-29",
         "foreign": 735,
         "trust": 5
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 483,
+        "trust": -4
       }
     ]
   },
@@ -54745,11 +54750,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -91,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 37,
@@ -55194,6 +55194,11 @@
         "date": "2026-09-29",
         "foreign": -14,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -14,
+        "trust": 0
       }
     ]
   },
@@ -55537,11 +55542,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -79,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -19,
@@ -55986,6 +55986,11 @@
         "date": "2026-09-29",
         "foreign": -389,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -254,
+        "trust": 0
       }
     ]
   },
@@ -56322,14 +56327,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-04-30",
-        "foreign": -59,
-        "trust": 0
-      },
       {
         "date": "2026-05-04",
         "foreign": -12,
@@ -56774,6 +56774,11 @@
         "date": "2026-09-29",
         "foreign": -8,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 9,
+        "trust": 0
       }
     ]
   },
@@ -57107,14 +57112,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "T.Y."
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 10,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 30,
@@ -57559,6 +57559,11 @@
         "date": "2026-09-29",
         "foreign": 28,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -85,
+        "trust": 0
       }
     ]
   },
@@ -57890,14 +57895,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -14,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -17,
@@ -58342,6 +58342,11 @@
         "date": "2026-09-29",
         "foreign": 67,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 230,
+        "trust": 0
       }
     ]
   },
@@ -58685,11 +58690,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 104,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -7,
@@ -59134,6 +59134,11 @@
         "date": "2026-09-29",
         "foreign": -24,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -10,
+        "trust": 0
       }
     ]
   },
@@ -59465,14 +59470,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Patec"
     },
-    "foreignBuyStreak": 8,
+    "foreignBuyStreak": 9,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 208,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 313,
@@ -59917,6 +59917,11 @@
         "date": "2026-09-29",
         "foreign": 434,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 35,
+        "trust": 0
       }
     ]
   },
@@ -60259,14 +60264,9 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "KST"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 425,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 638,
@@ -60711,6 +60711,11 @@
         "date": "2026-09-29",
         "foreign": -5,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 106,
+        "trust": 0
       }
     ]
   },
@@ -61044,14 +61049,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "LFA"
     },
-    "foreignBuyStreak": 7,
+    "foreignBuyStreak": 8,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 0,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -1,
@@ -61496,6 +61496,11 @@
         "date": "2026-09-29",
         "foreign": 7,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 2,
+        "trust": 0
       }
     ]
   },
@@ -61755,7 +61760,7 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
       {
@@ -62201,6 +62206,11 @@
       {
         "date": "2026-09-29",
         "foreign": -2,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1,
         "trust": 0
       }
     ]
@@ -62866,6 +62876,11 @@
         "date": "2026-09-29",
         "foreign": -6,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -1,
+        "trust": 0
       }
     ]
   },
@@ -63206,14 +63221,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "MOSA"
     },
-    "foreignBuyStreak": 7,
+    "foreignBuyStreak": 8,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -255,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 106,
@@ -63658,6 +63668,11 @@
         "date": "2026-09-29",
         "foreign": 167,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 263,
+        "trust": 0
       }
     ]
   },
@@ -63984,7 +63999,7 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
       {
@@ -64401,6 +64416,11 @@
         "date": "2026-09-29",
         "foreign": 14,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 474,
+        "trust": 0
       }
     ]
   },
@@ -64727,14 +64747,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 3798,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 618,
@@ -65179,6 +65194,11 @@
         "date": "2026-09-29",
         "foreign": 0,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 103,
+        "trust": 0
       }
     ]
   },
@@ -65505,14 +65525,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 5,
+    "foreignBuyStreak": 6,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1537,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -1163,
@@ -65957,6 +65972,11 @@
         "date": "2026-09-29",
         "foreign": 180,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 66,
+        "trust": 0
       }
     ]
   },
@@ -66287,14 +66307,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 2189,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 4251,
@@ -66739,6 +66754,11 @@
         "date": "2026-09-29",
         "foreign": 191,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 240,
+        "trust": 0
       }
     ]
   },
@@ -67112,14 +67132,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "Altek"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -454,
-        "trust": -6
-      },
       {
         "date": "2026-05-22",
         "foreign": 441,
@@ -67564,6 +67579,11 @@
         "date": "2026-09-29",
         "foreign": 97,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 295,
+        "trust": 0
       }
     ]
   },
@@ -67908,13 +67928,8 @@
       "englishName": "Primax"
     },
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 3,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -1025,
-        "trust": 159
-      },
       {
         "date": "2026-05-22",
         "foreign": -479,
@@ -68359,6 +68374,11 @@
         "date": "2026-09-29",
         "foreign": -458,
         "trust": 3
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -292,
+        "trust": -2
       }
     ]
   },
@@ -68743,11 +68763,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1583,
-        "trust": 891
-      },
       {
         "date": "2026-05-22",
         "foreign": -347,
@@ -69192,6 +69207,11 @@
         "date": "2026-09-29",
         "foreign": -635,
         "trust": -96
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -3739,
+        "trust": -52
       }
     ]
   },
@@ -69543,14 +69563,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "SG"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -632,
-        "trust": -1
-      },
       {
         "date": "2026-05-22",
         "foreign": 2997,
@@ -69995,6 +70010,11 @@
         "date": "2026-09-29",
         "foreign": 2545,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -838,
+        "trust": -5
       }
     ]
   },
@@ -70327,14 +70347,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 0,
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 156970,
-        "trust": 46
-      },
       {
         "date": "2026-05-22",
         "foreign": 28253,
@@ -70779,6 +70794,11 @@
         "date": "2026-09-29",
         "foreign": 15537,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 67780,
+        "trust": 150
       }
     ]
   },
@@ -71108,11 +71128,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 6,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 40,
@@ -71557,6 +71572,11 @@
         "date": "2026-09-29",
         "foreign": -1,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -17,
+        "trust": 0
       }
     ]
   },
@@ -71883,14 +71903,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 2887,
-        "trust": 83
-      },
       {
         "date": "2026-05-22",
         "foreign": 6593,
@@ -72335,6 +72350,11 @@
         "date": "2026-09-29",
         "foreign": 1232,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1976,
+        "trust": 0
       }
     ]
   },
@@ -72656,14 +72676,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 89,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 76,
@@ -73108,6 +73123,11 @@
         "date": "2026-09-29",
         "foreign": -26,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 33,
+        "trust": 0
       }
     ]
   },
@@ -73427,14 +73447,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 3911,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 4877,
@@ -73879,6 +73894,11 @@
         "date": "2026-09-29",
         "foreign": 721,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 5754,
+        "trust": 0
       }
     ]
   },
@@ -74212,14 +74232,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "CMMT"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 2572,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -5397,
@@ -74664,6 +74679,11 @@
         "date": "2026-09-29",
         "foreign": 1335,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 120,
+        "trust": 0
       }
     ]
   },
@@ -74983,14 +75003,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 297,
-        "trust": 72
-      },
       {
         "date": "2026-05-22",
         "foreign": 1152,
@@ -75435,6 +75450,11 @@
         "date": "2026-09-29",
         "foreign": -695,
         "trust": -30
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 312,
+        "trust": 0
       }
     ]
   },
@@ -75765,14 +75785,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -70,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 3509,
@@ -76217,6 +76232,11 @@
         "date": "2026-09-29",
         "foreign": 3025,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1557,
+        "trust": 0
       }
     ]
   },
@@ -76536,7 +76556,7 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
       {
@@ -76933,6 +76953,11 @@
         "date": "2026-09-29",
         "foreign": 576,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -279,
+        "trust": 0
       }
     ]
   },
@@ -77254,14 +77279,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 385,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 1484,
@@ -77706,6 +77726,11 @@
         "date": "2026-09-29",
         "foreign": 968,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -3303,
+        "trust": 0
       }
     ]
   },
@@ -78039,14 +78064,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "HARVATEK CORPOR"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-22",
-        "foreign": 3891,
-        "trust": 0
-      },
       {
         "date": "2026-05-25",
         "foreign": -3142,
@@ -78491,6 +78511,11 @@
         "date": "2026-09-29",
         "foreign": 464,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 424,
+        "trust": 0
       }
     ]
   },
@@ -78817,14 +78842,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -1048,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -89,
@@ -79269,6 +79289,11 @@
         "date": "2026-09-29",
         "foreign": 112,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -174,
+        "trust": 0
       }
     ]
   },
@@ -79588,14 +79613,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 137,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 758,
@@ -80040,6 +80060,11 @@
         "date": "2026-09-29",
         "foreign": 144,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -638,
+        "trust": -2
       }
     ]
   },
@@ -80374,11 +80399,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 2972,
-        "trust": 1077
-      },
       {
         "date": "2026-05-22",
         "foreign": 924,
@@ -80823,6 +80843,11 @@
         "date": "2026-09-29",
         "foreign": -155,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -55,
+        "trust": 0
       }
     ]
   },
@@ -81153,11 +81178,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -2745,
-        "trust": 305
-      },
       {
         "date": "2026-05-22",
         "foreign": -68,
@@ -81602,6 +81622,11 @@
         "date": "2026-09-29",
         "foreign": -15517,
         "trust": -1519
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -104,
+        "trust": -554
       }
     ]
   },
@@ -81925,14 +81950,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -3477,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 64,
@@ -82377,6 +82397,11 @@
         "date": "2026-09-29",
         "foreign": 4941,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -1223,
+        "trust": -3
       }
     ]
   },
@@ -82708,13 +82733,8 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 16,
+    "trustBuyStreak": 17,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 75,
-        "trust": 101
-      },
       {
         "date": "2026-05-22",
         "foreign": 88,
@@ -83159,6 +83179,11 @@
         "date": "2026-09-29",
         "foreign": -877,
         "trust": 185
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -1188,
+        "trust": 35
       }
     ]
   },
@@ -83494,14 +83519,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "TXC"
     },
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 2,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 3,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1281,
-        "trust": 17
-      },
       {
         "date": "2026-05-22",
         "foreign": -406,
@@ -83946,6 +83966,11 @@
         "date": "2026-09-29",
         "foreign": -2639,
         "trust": 1050
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 83,
+        "trust": 477
       }
     ]
   },
@@ -84293,11 +84318,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 557,
-        "trust": 2305
-      },
       {
         "date": "2026-05-22",
         "foreign": 1007,
@@ -84742,6 +84762,11 @@
         "date": "2026-09-29",
         "foreign": -595,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -29,
+        "trust": -3
       }
     ]
   },
@@ -85065,14 +85090,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -919,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 2407,
@@ -85517,6 +85537,11 @@
         "date": "2026-09-29",
         "foreign": 986,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -205,
+        "trust": 0
       }
     ]
   },
@@ -85857,14 +85882,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "TAI-TECH"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -561,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 1362,
@@ -86309,6 +86329,11 @@
         "date": "2026-09-29",
         "foreign": -16,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 101,
+        "trust": -1
       }
     ]
   },
@@ -86628,14 +86653,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -2191,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 1986,
@@ -87080,6 +87100,11 @@
         "date": "2026-09-29",
         "foreign": -12,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 256,
+        "trust": 0
       }
     ]
   },
@@ -87402,11 +87427,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -139,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 496,
@@ -87851,6 +87871,11 @@
         "date": "2026-09-29",
         "foreign": -329,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -422,
+        "trust": -1
       }
     ]
   },
@@ -88185,13 +88210,8 @@
       "englishName": "UIS"
     },
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 6,
+    "trustBuyStreak": 7,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 2866,
-        "trust": -114
-      },
       {
         "date": "2026-05-22",
         "foreign": 1473,
@@ -88635,7 +88655,12 @@
       {
         "date": "2026-09-29",
         "foreign": -849,
-        "trust": 257
+        "trust": 403
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -95,
+        "trust": 164
       }
     ]
   },
@@ -88953,14 +88978,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 26,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 11,
@@ -89405,6 +89425,11 @@
         "date": "2026-09-29",
         "foreign": 64,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -142,
+        "trust": 0
       }
     ]
   },
@@ -89729,14 +89754,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -1,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -117,
@@ -90181,6 +90201,11 @@
         "date": "2026-09-29",
         "foreign": 82,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 6,
+        "trust": 0
       }
     ]
   },
@@ -90519,11 +90544,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -40,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -88,
@@ -90968,6 +90988,11 @@
         "date": "2026-09-29",
         "foreign": -309,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -78,
+        "trust": 0
       }
     ]
   },
@@ -91287,14 +91312,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
-    "trustBuyStreak": 0,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 68,
-        "trust": 1
-      },
       {
         "date": "2026-05-22",
         "foreign": -18,
@@ -91739,6 +91759,11 @@
         "date": "2026-09-29",
         "foreign": 69,
         "trust": -19
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -23,
+        "trust": 6
       }
     ]
   },
@@ -92065,14 +92090,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -110,
-        "trust": -169
-      },
       {
         "date": "2026-05-22",
         "foreign": 1079,
@@ -92517,6 +92537,11 @@
         "date": "2026-09-29",
         "foreign": 431,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 472,
+        "trust": 0
       }
     ]
   },
@@ -92840,14 +92865,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 2,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -1235,
-        "trust": 134
-      },
       {
         "date": "2026-05-22",
         "foreign": 336,
@@ -93292,6 +93312,11 @@
         "date": "2026-09-29",
         "foreign": 667,
         "trust": 17
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1182,
+        "trust": 6
       }
     ]
   },
@@ -93611,14 +93636,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1571,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 2172,
@@ -94063,6 +94083,11 @@
         "date": "2026-09-29",
         "foreign": -155,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 641,
+        "trust": 0
       }
     ]
   },
@@ -94399,11 +94424,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 561,
-        "trust": -1464
-      },
       {
         "date": "2026-05-22",
         "foreign": 410,
@@ -94848,6 +94868,11 @@
         "date": "2026-09-29",
         "foreign": -622,
         "trust": -6
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -149,
+        "trust": -14
       }
     ]
   },
@@ -95181,14 +95206,9 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "FSP"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -78,
-        "trust": 97
-      },
       {
         "date": "2026-05-22",
         "foreign": 133,
@@ -95633,6 +95653,11 @@
         "date": "2026-09-29",
         "foreign": -34,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 253,
+        "trust": -9
       }
     ]
   },
@@ -95967,14 +95992,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 0,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -260,
-        "trust": 275
-      },
       {
         "date": "2026-05-22",
         "foreign": -84,
@@ -96343,7 +96363,7 @@
       {
         "date": "2026-09-04",
         "foreign": 449,
-        "trust": 463
+        "trust": 462
       },
       {
         "date": "2026-09-07",
@@ -96418,7 +96438,12 @@
       {
         "date": "2026-09-29",
         "foreign": -453,
-        "trust": -461
+        "trust": -513
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 84,
+        "trust": 184
       }
     ]
   },
@@ -96606,14 +96631,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 23,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 26,
@@ -97058,6 +97078,11 @@
         "date": "2026-09-29",
         "foreign": -19,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 47,
+        "trust": 0
       }
     ]
   },
@@ -97377,14 +97402,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1619,
-        "trust": -2
-      },
       {
         "date": "2026-05-22",
         "foreign": -102,
@@ -97829,6 +97849,11 @@
         "date": "2026-09-29",
         "foreign": 41,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 102,
+        "trust": 0
       }
     ]
   },
@@ -98148,14 +98173,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-18",
-        "foreign": -27,
-        "trust": 0
-      },
       {
         "date": "2026-05-19",
         "foreign": 1,
@@ -98600,6 +98620,11 @@
         "date": "2026-09-29",
         "foreign": -13,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 23,
+        "trust": 0
       }
     ]
   },
@@ -98938,11 +98963,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 2278,
-        "trust": 10
-      },
       {
         "date": "2026-05-22",
         "foreign": 637,
@@ -99387,6 +99407,11 @@
         "date": "2026-09-29",
         "foreign": -64,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -642,
+        "trust": 0
       }
     ]
   },
@@ -99706,14 +99731,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 35,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -16,
@@ -100158,6 +100178,11 @@
         "date": "2026-09-29",
         "foreign": 15,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -31,
+        "trust": 0
       }
     ]
   },
@@ -100477,14 +100502,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 2,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -778,
-        "trust": 279
-      },
       {
         "date": "2026-05-22",
         "foreign": -162,
@@ -100929,6 +100949,11 @@
         "date": "2026-09-29",
         "foreign": 69,
         "trust": 10
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -241,
+        "trust": 229
       }
     ]
   },
@@ -101252,14 +101277,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -1860,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -315,
@@ -101704,6 +101724,11 @@
         "date": "2026-09-29",
         "foreign": -428,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1206,
+        "trust": 0
       }
     ]
   },
@@ -102041,14 +102066,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "TEAM"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -440,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -432,
@@ -102493,6 +102513,11 @@
         "date": "2026-09-29",
         "foreign": 82,
         "trust": -2
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 456,
+        "trust": -3
       }
     ]
   },
@@ -102826,14 +102851,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "WONDERFUL"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1357,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 286,
@@ -103278,6 +103298,11 @@
         "date": "2026-09-29",
         "foreign": 259,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 800,
+        "trust": 0
       }
     ]
   },
@@ -103604,14 +103629,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1782,
-        "trust": -6
-      },
       {
         "date": "2026-05-22",
         "foreign": 1010,
@@ -104056,6 +104076,11 @@
         "date": "2026-09-29",
         "foreign": 196,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -660,
+        "trust": 0
       }
     ]
   },
@@ -104392,11 +104417,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 93,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -517,
@@ -104841,6 +104861,11 @@
         "date": "2026-09-29",
         "foreign": -14,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -173,
+        "trust": 0
       }
     ]
   },
@@ -105167,14 +105192,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -100,
-        "trust": -2
-      },
       {
         "date": "2026-05-22",
         "foreign": 66,
@@ -105619,6 +105639,11 @@
         "date": "2026-09-29",
         "foreign": -12,
         "trust": -4
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 81,
+        "trust": -4
       }
     ]
   },
@@ -105961,14 +105986,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Ezconn"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -757,
-        "trust": 132
-      },
       {
         "date": "2026-05-22",
         "foreign": -157,
@@ -106413,6 +106433,11 @@
         "date": "2026-09-29",
         "foreign": -242,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 18,
+        "trust": -372
       }
     ]
   },
@@ -106734,14 +106759,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 206,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -248,
@@ -107186,6 +107206,11 @@
         "date": "2026-09-29",
         "foreign": 7,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 84,
+        "trust": 0
       }
     ]
   },
@@ -107341,14 +107366,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 16,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 21,
@@ -107793,6 +107813,11 @@
         "date": "2026-09-29",
         "foreign": -10,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 7,
+        "trust": 0
       }
     ]
   },
@@ -108128,14 +108153,9 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "CviLux"
     },
-    "foreignBuyStreak": 4,
+    "foreignBuyStreak": 5,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -104,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -252,
@@ -108580,6 +108600,11 @@
         "date": "2026-09-29",
         "foreign": 119,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 81,
+        "trust": 0
       }
     ]
   },
@@ -108916,11 +108941,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -579,
-        "trust": 216
-      },
       {
         "date": "2026-05-22",
         "foreign": -476,
@@ -109365,6 +109385,11 @@
         "date": "2026-09-29",
         "foreign": -633,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -2453,
+        "trust": -13
       }
     ]
   },
@@ -109696,11 +109721,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 4,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 1,
@@ -110145,6 +110165,11 @@
         "date": "2026-09-29",
         "foreign": -18,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -4,
+        "trust": 0
       }
     ]
   },
@@ -110482,14 +110507,9 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "SiS"
     },
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 2,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 3,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 5436,
-        "trust": 5
-      },
       {
         "date": "2026-05-22",
         "foreign": 4140,
@@ -110934,6 +110954,11 @@
         "date": "2026-09-29",
         "foreign": -358,
         "trust": 10
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 633,
+        "trust": 30
       }
     ]
   },
@@ -111295,13 +111320,8 @@
       "englishName": "MediaTek"
     },
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 0,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-04-16",
-        "foreign": 1180,
-        "trust": 1386
-      },
       {
         "date": "2026-04-17",
         "foreign": 5340,
@@ -111745,7 +111765,12 @@
       {
         "date": "2026-09-29",
         "foreign": -4669,
-        "trust": -56
+        "trust": -59
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -986,
+        "trust": 53
       }
     ]
   },
@@ -112093,14 +112118,9 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "ITE"
     },
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 2,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 3,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 3044,
-        "trust": 7
-      },
       {
         "date": "2026-05-22",
         "foreign": 1542,
@@ -112545,6 +112565,11 @@
         "date": "2026-09-29",
         "foreign": 596,
         "trust": 16
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -317,
+        "trust": 35
       }
     ]
   },
@@ -112880,14 +112905,9 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "Faraday"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 7840,
-        "trust": 5
-      },
       {
         "date": "2026-05-22",
         "foreign": -1014,
@@ -113332,6 +113352,11 @@
         "date": "2026-09-29",
         "foreign": 1570,
         "trust": -18
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 60,
+        "trust": -10
       }
     ]
   },
@@ -113655,14 +113680,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 8,
+    "foreignBuyStreak": 9,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1490,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 1477,
@@ -114107,6 +114127,11 @@
         "date": "2026-09-29",
         "foreign": 107,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 382,
+        "trust": 0
       }
     ]
   },
@@ -114426,14 +114451,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -709,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -22,
@@ -114878,6 +114898,11 @@
         "date": "2026-09-29",
         "foreign": 155,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -951,
+        "trust": 0
       }
     ]
   },
@@ -115222,14 +115247,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "FocalTech"
     },
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 2,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 3,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1511,
-        "trust": -19
-      },
       {
         "date": "2026-05-22",
         "foreign": 233,
@@ -115674,6 +115694,11 @@
         "date": "2026-09-29",
         "foreign": 74,
         "trust": 10
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -128,
+        "trust": 30
       }
     ]
   },
@@ -116016,14 +116041,9 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "FITIPOWER"
     },
-    "foreignBuyStreak": 4,
-    "trustBuyStreak": 0,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 959,
-        "trust": 4
-      },
       {
         "date": "2026-05-22",
         "foreign": -382,
@@ -116468,6 +116488,11 @@
         "date": "2026-09-29",
         "foreign": 187,
         "trust": -2
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -401,
+        "trust": 29
       }
     ]
   },
@@ -116802,14 +116827,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -199,
-        "trust": -1
-      },
       {
         "date": "2026-05-22",
         "foreign": -1,
@@ -117254,6 +117274,11 @@
         "date": "2026-09-29",
         "foreign": 30,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -34,
+        "trust": 0
       }
     ]
   },
@@ -117577,14 +117602,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 7,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 1,
@@ -118029,6 +118049,11 @@
         "date": "2026-09-29",
         "foreign": -4,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 3,
+        "trust": 0
       }
     ]
   },
@@ -118350,14 +118375,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 0,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -210,
-        "trust": 32
-      },
       {
         "date": "2026-05-22",
         "foreign": 858,
@@ -118802,6 +118822,11 @@
         "date": "2026-09-29",
         "foreign": 58,
         "trust": -133
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -353,
+        "trust": 23
       }
     ]
   },
@@ -119125,14 +119150,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 199,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 1580,
@@ -119577,6 +119597,11 @@
         "date": "2026-09-29",
         "foreign": 141,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 167,
+        "trust": 0
       }
     ]
   },
@@ -119828,14 +119853,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 2,
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 3,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -334,
-        "trust": 12
-      },
       {
         "date": "2026-05-22",
         "foreign": -155,
@@ -120280,6 +120300,11 @@
         "date": "2026-09-29",
         "foreign": 618,
         "trust": 10
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 923,
+        "trust": 30
       }
     ]
   },
@@ -120622,14 +120647,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "OSE"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -219,
-        "trust": 37
-      },
       {
         "date": "2026-05-22",
         "foreign": 1112,
@@ -121074,6 +121094,11 @@
         "date": "2026-09-29",
         "foreign": -216,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1722,
+        "trust": 0
       }
     ]
   },
@@ -121395,14 +121420,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 781,
-        "trust": -39
-      },
       {
         "date": "2026-05-22",
         "foreign": 2927,
@@ -121847,6 +121867,11 @@
         "date": "2026-09-29",
         "foreign": -275,
         "trust": 54
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 171,
+        "trust": -1
       }
     ]
   },
@@ -122169,13 +122194,8 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "trustBuyStreak": 2,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 852,
-        "trust": -2191
-      },
       {
         "date": "2026-05-22",
         "foreign": 1265,
@@ -122620,6 +122640,11 @@
         "date": "2026-09-29",
         "foreign": -12634,
         "trust": 1
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -2575,
+        "trust": 6
       }
     ]
   },
@@ -122941,14 +122966,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 597,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 781,
@@ -123393,6 +123413,11 @@
         "date": "2026-09-29",
         "foreign": -88,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 171,
+        "trust": 0
       }
     ]
   },
@@ -123721,14 +123746,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 2528,
-        "trust": -23
-      },
       {
         "date": "2026-05-22",
         "foreign": 2980,
@@ -124173,6 +124193,11 @@
         "date": "2026-09-29",
         "foreign": -724,
         "trust": -927
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 2965,
+        "trust": -401
       }
     ]
   },
@@ -124494,14 +124519,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 2,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 8030,
-        "trust": -2782
-      },
       {
         "date": "2026-05-22",
         "foreign": 1154,
@@ -124946,6 +124966,11 @@
         "date": "2026-09-29",
         "foreign": -2126,
         "trust": 22
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 3351,
+        "trust": 70
       }
     ]
   },
@@ -125263,14 +125288,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -97,
-        "trust": -2
-      },
       {
         "date": "2026-05-22",
         "foreign": 303,
@@ -125715,6 +125735,11 @@
         "date": "2026-09-29",
         "foreign": 152,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 106,
+        "trust": -3
       }
     ]
   },
@@ -126037,11 +126062,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1443,
-        "trust": -195
-      },
       {
         "date": "2026-05-22",
         "foreign": 4926,
@@ -126486,6 +126506,11 @@
         "date": "2026-09-29",
         "foreign": -3002,
         "trust": -5
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -3171,
+        "trust": -46
       }
     ]
   },
@@ -126805,14 +126830,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 6,
+    "foreignBuyStreak": 7,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 623,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 22863,
@@ -127257,6 +127277,11 @@
         "date": "2026-09-29",
         "foreign": 224,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1579,
+        "trust": 0
       }
     ]
   },
@@ -127591,13 +127616,8 @@
       "englishName": "GCE"
     },
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 4,
+    "trustBuyStreak": 5,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -265,
-        "trust": -42
-      },
       {
         "date": "2026-05-22",
         "foreign": -3,
@@ -128041,7 +128061,12 @@
       {
         "date": "2026-09-29",
         "foreign": -1430,
-        "trust": 817
+        "trust": 804
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -3601,
+        "trust": 960
       }
     ]
   },
@@ -128376,13 +128401,8 @@
       "englishName": "EMC"
     },
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 0,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-22",
-        "foreign": 271,
-        "trust": 231
-      },
       {
         "date": "2026-05-25",
         "foreign": 316,
@@ -128827,6 +128847,11 @@
         "date": "2026-09-29",
         "foreign": -282,
         "trust": -188
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -162,
+        "trust": 163
       }
     ]
   },
@@ -129171,14 +129196,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "UNIMICRON"
     },
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 3,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 4,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 6820,
-        "trust": 410
-      },
       {
         "date": "2026-05-22",
         "foreign": 4660,
@@ -129623,6 +129643,11 @@
         "date": "2026-09-29",
         "foreign": -766,
         "trust": 484
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 596,
+        "trust": 312
       }
     ]
   },
@@ -129956,14 +129981,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Tripod"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 957,
-        "trust": 36
-      },
       {
         "date": "2026-05-22",
         "foreign": -304,
@@ -130408,6 +130428,11 @@
         "date": "2026-09-29",
         "foreign": -371,
         "trust": -118
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 323,
+        "trust": -193
       }
     ]
   },
@@ -130732,14 +130757,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 20,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 1907,
@@ -131184,6 +131204,11 @@
         "date": "2026-09-29",
         "foreign": 50,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 82,
+        "trust": 0
       }
     ]
   },
@@ -131517,14 +131542,9 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Apex"
     },
-    "foreignBuyStreak": 4,
+    "foreignBuyStreak": 5,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 2137,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 10628,
@@ -131969,6 +131989,11 @@
         "date": "2026-09-29",
         "foreign": 55,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1146,
+        "trust": 0
       }
     ]
   },
@@ -132288,14 +132313,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 353,
-        "trust": -20
-      },
       {
         "date": "2026-05-22",
         "foreign": 198,
@@ -132740,6 +132760,11 @@
         "date": "2026-09-29",
         "foreign": 45,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -490,
+        "trust": 0
       }
     ]
   },
@@ -133059,14 +133084,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 73,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -571,
@@ -133511,6 +133531,11 @@
         "date": "2026-09-29",
         "foreign": -84,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 50,
+        "trust": 0
       }
     ]
   },
@@ -133844,14 +133869,9 @@
       "auditor": "正風聯合會計師事務所",
       "englishName": "PLOTECH"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -818,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -38,
@@ -134296,6 +134316,11 @@
         "date": "2026-09-29",
         "foreign": 64,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -102,
+        "trust": 0
       }
     ]
   },
@@ -134636,14 +134661,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "GBM"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -43,
-        "trust": 84
-      },
       {
         "date": "2026-05-22",
         "foreign": 1460,
@@ -135088,6 +135108,11 @@
         "date": "2026-09-29",
         "foreign": 595,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 363,
+        "trust": -27
       }
     ]
   },
@@ -135407,14 +135432,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 265,
-        "trust": -47
-      },
       {
         "date": "2026-05-22",
         "foreign": 449,
@@ -135859,6 +135879,11 @@
         "date": "2026-09-29",
         "foreign": -156,
         "trust": -312
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 659,
+        "trust": -59
       }
     ]
   },
@@ -136185,14 +136210,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -715,
-        "trust": -47
-      },
       {
         "date": "2026-05-22",
         "foreign": 834,
@@ -136637,6 +136657,11 @@
         "date": "2026-09-29",
         "foreign": 102,
         "trust": -30
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 148,
+        "trust": -3
       }
     ]
   },
@@ -136963,14 +136988,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 4,
-    "trustBuyStreak": 0,
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -813,
-        "trust": 1060
-      },
       {
         "date": "2026-05-22",
         "foreign": 1856,
@@ -137415,6 +137435,11 @@
         "date": "2026-09-29",
         "foreign": 1588,
         "trust": -91
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 924,
+        "trust": 34
       }
     ]
   },
@@ -137744,14 +137769,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 2400,
-        "trust": 818
-      },
       {
         "date": "2026-05-22",
         "foreign": 348,
@@ -138196,6 +138216,11 @@
         "date": "2026-09-29",
         "foreign": -2050,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 8058,
+        "trust": 0
       }
     ]
   },
@@ -138538,14 +138563,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "CHT"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -5392,
-        "trust": -566
-      },
       {
         "date": "2026-05-22",
         "foreign": -5979,
@@ -138990,6 +139010,11 @@
         "date": "2026-09-29",
         "foreign": -153,
         "trust": -67
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 2852,
+        "trust": -15
       }
     ]
   },
@@ -139320,14 +139345,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 662,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 1270,
@@ -139772,6 +139792,11 @@
         "date": "2026-09-29",
         "foreign": -101,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 411,
+        "trust": 0
       }
     ]
   },
@@ -140098,14 +140123,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -1330,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 6169,
@@ -140550,6 +140570,11 @@
         "date": "2026-09-29",
         "foreign": 474,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1367,
+        "trust": 0
       }
     ]
   },
@@ -140906,14 +140931,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "TWM"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -6998,
-        "trust": 6197
-      },
       {
         "date": "2026-05-22",
         "foreign": -8444,
@@ -141358,6 +141378,11 @@
         "date": "2026-09-29",
         "foreign": -211,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1445,
+        "trust": -323
       }
     ]
   },
@@ -141686,14 +141711,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1717,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 4933,
@@ -142138,6 +142158,11 @@
         "date": "2026-09-29",
         "foreign": 15,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 423,
+        "trust": 0
       }
     ]
   },
@@ -142460,13 +142485,8 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 0,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 248,
-        "trust": -44
-      },
       {
         "date": "2026-05-22",
         "foreign": 379,
@@ -142911,6 +142931,11 @@
         "date": "2026-09-29",
         "foreign": -166,
         "trust": -10
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -131,
+        "trust": 18
       }
     ]
   },
@@ -143253,14 +143278,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Far EasTone"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -3555,
-        "trust": 1117
-      },
       {
         "date": "2026-05-22",
         "foreign": -1789,
@@ -143705,6 +143725,11 @@
         "date": "2026-09-29",
         "foreign": -792,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 808,
+        "trust": -4
       }
     ]
   },
@@ -144045,11 +144070,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 615,
-        "trust": -27
-      },
       {
         "date": "2026-05-22",
         "foreign": 3228,
@@ -144494,6 +144514,11 @@
         "date": "2026-09-29",
         "foreign": -1545,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -858,
+        "trust": 0
       }
     ]
   },
@@ -144829,14 +144854,9 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Lanner"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 748,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 443,
@@ -145281,6 +145301,11 @@
         "date": "2026-09-29",
         "foreign": 510,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -178,
+        "trust": 0
       }
     ]
   },
@@ -145619,11 +145644,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 217,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 159,
@@ -146068,6 +146088,11 @@
         "date": "2026-09-29",
         "foreign": -5,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 0,
+        "trust": 0
       }
     ]
   },
@@ -146403,14 +146428,9 @@
       "auditor": "日正聯合會計師事務所",
       "englishName": "ATW"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -1,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 0,
@@ -146855,6 +146875,11 @@
         "date": "2026-09-29",
         "foreign": -14,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 16,
+        "trust": 0
       }
     ]
   },
@@ -147180,14 +147205,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 4,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 5,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 618,
-        "trust": -308
-      },
       {
         "date": "2026-05-22",
         "foreign": 925,
@@ -147632,6 +147652,11 @@
         "date": "2026-09-29",
         "foreign": 347,
         "trust": 15
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -77,
+        "trust": 129
       }
     ]
   },
@@ -147965,14 +147990,9 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Weikeng"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 3053,
-        "trust": -6
-      },
       {
         "date": "2026-05-22",
         "foreign": 2873,
@@ -148417,6 +148437,11 @@
         "date": "2026-09-29",
         "foreign": 263,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 572,
+        "trust": -5
       }
     ]
   },
@@ -148750,14 +148775,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "EDOM"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 748,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 3357,
@@ -149202,6 +149222,11 @@
         "date": "2026-09-29",
         "foreign": -297,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 113,
+        "trust": 0
       }
     ]
   },
@@ -149541,13 +149566,8 @@
       "englishName": "WPG"
     },
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 0,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -3048,
-        "trust": 3678
-      },
       {
         "date": "2026-05-22",
         "foreign": -3981,
@@ -149992,6 +150012,11 @@
         "date": "2026-09-29",
         "foreign": -449,
         "trust": -21
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -938,
+        "trust": 540
       }
     ]
   },
@@ -150332,14 +150357,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "CHANG WAH"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 398,
-        "trust": -61
-      },
       {
         "date": "2026-05-22",
         "foreign": 631,
@@ -150784,6 +150804,11 @@
         "date": "2026-09-29",
         "foreign": 1,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 338,
+        "trust": -3
       }
     ]
   },
@@ -151113,11 +151138,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -27,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 186,
@@ -151561,6 +151581,11 @@
       {
         "date": "2026-09-29",
         "foreign": -65,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -341,
         "trust": 0
       }
     ]
@@ -152421,7 +152446,7 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0,
     "institutionalHistory": [
       {
@@ -152768,6 +152793,11 @@
         "date": "2026-09-29",
         "foreign": 3,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 2,
+        "trust": 0
       }
     ]
   },
@@ -153101,14 +153131,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 3288,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 2356,
@@ -153553,6 +153578,11 @@
         "date": "2026-09-29",
         "foreign": 801,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -1131,
+        "trust": -2
       }
     ]
   },
@@ -153872,14 +153902,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -483,
-        "trust": -23
-      },
       {
         "date": "2026-05-22",
         "foreign": -232,
@@ -154323,7 +154348,12 @@
       {
         "date": "2026-09-29",
         "foreign": -26,
-        "trust": -269
+        "trust": -446
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 69,
+        "trust": -370
       }
     ]
   },
@@ -154661,14 +154691,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "C SUN"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 224,
-        "trust": 47
-      },
       {
         "date": "2026-05-22",
         "foreign": -210,
@@ -155113,6 +155138,11 @@
         "date": "2026-09-29",
         "foreign": 171,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -357,
+        "trust": 0
       }
     ]
   },
@@ -155432,14 +155462,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 5,
+    "foreignBuyStreak": 6,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -1,
-        "trust": -461
-      },
       {
         "date": "2026-05-22",
         "foreign": 392,
@@ -155884,6 +155909,11 @@
         "date": "2026-09-29",
         "foreign": 242,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 76,
+        "trust": 0
       }
     ]
   },
@@ -156217,14 +156247,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "Fiti"
     },
-    "foreignBuyStreak": 4,
+    "foreignBuyStreak": 5,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 489,
-        "trust": 3
-      },
       {
         "date": "2026-05-22",
         "foreign": 190,
@@ -156669,6 +156694,11 @@
         "date": "2026-09-29",
         "foreign": 107,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 33,
+        "trust": 0
       }
     ]
   },
@@ -156992,14 +157022,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 6,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -128,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -8,
@@ -157444,6 +157469,11 @@
         "date": "2026-09-29",
         "foreign": 29,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -9,
+        "trust": 0
       }
     ]
   },
@@ -157572,14 +157602,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 296,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 918,
@@ -158024,6 +158049,11 @@
         "date": "2026-09-29",
         "foreign": 123,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -71,
+        "trust": 0
       }
     ]
   },
@@ -158345,14 +158375,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -908,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -844,
@@ -158797,6 +158822,11 @@
         "date": "2026-09-29",
         "foreign": 757,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -94,
+        "trust": 0
       }
     ]
   },
@@ -159132,14 +159162,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "CONTREL"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -4474,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 586,
@@ -159584,6 +159609,11 @@
         "date": "2026-09-29",
         "foreign": -869,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 28,
+        "trust": 0
       }
     ]
   },
@@ -159918,13 +159948,8 @@
       "englishName": "UMC"
     },
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "trustBuyStreak": 2,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 43788,
-        "trust": -25960
-      },
       {
         "date": "2026-05-22",
         "foreign": -30346,
@@ -160369,6 +160394,11 @@
         "date": "2026-09-29",
         "foreign": -12783,
         "trust": 9537
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -592,
+        "trust": 3653
       }
     ]
   },
@@ -160688,14 +160718,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 5566,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 3757,
@@ -161140,6 +161165,11 @@
         "date": "2026-09-29",
         "foreign": 204,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 470,
+        "trust": 0
       }
     ]
   },
@@ -161475,14 +161505,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "WEC"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -31196,
-        "trust": -3076
-      },
       {
         "date": "2026-05-22",
         "foreign": 51442,
@@ -161926,7 +161951,12 @@
       {
         "date": "2026-09-29",
         "foreign": 7391,
-        "trust": -1987
+        "trust": -2002
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 37711,
+        "trust": -37
       }
     ]
   },
@@ -162246,14 +162276,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 0,
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -1219,
-        "trust": -216
-      },
       {
         "date": "2026-05-22",
         "foreign": -310,
@@ -162697,7 +162722,12 @@
       {
         "date": "2026-09-29",
         "foreign": 2282,
-        "trust": -878
+        "trust": -898
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 11753,
+        "trust": 182
       }
     ]
   },
@@ -163035,14 +163065,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "EPi"
     },
-    "foreignBuyStreak": 5,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -122,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -33,
@@ -163487,6 +163512,11 @@
         "date": "2026-09-29",
         "foreign": 2407,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -2789,
+        "trust": 0
       }
     ]
   },
@@ -163810,14 +163840,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 0,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 16,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 2051,
-        "trust": 779
-      },
       {
         "date": "2026-05-22",
         "foreign": 3924,
@@ -164261,7 +164286,12 @@
       {
         "date": "2026-09-29",
         "foreign": -1507,
-        "trust": -21
+        "trust": 437
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 12766,
+        "trust": 142
       }
     ]
   },
@@ -164590,14 +164620,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-14",
-        "foreign": -154,
-        "trust": 0
-      },
       {
         "date": "2026-05-15",
         "foreign": 86,
@@ -165042,6 +165067,11 @@
         "date": "2026-09-29",
         "foreign": -35,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 67,
+        "trust": 0
       }
     ]
   },
@@ -165361,14 +165391,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 2,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 3,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -886,
-        "trust": 38
-      },
       {
         "date": "2026-05-22",
         "foreign": -6265,
@@ -165813,6 +165838,11 @@
         "date": "2026-09-29",
         "foreign": 3574,
         "trust": 76
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -3154,
+        "trust": 1815
       }
     ]
   },
@@ -166146,14 +166176,9 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "WAFER WORKS"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 641,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 1486,
@@ -166598,6 +166623,11 @@
         "date": "2026-09-29",
         "foreign": -13819,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 770,
+        "trust": -2
       }
     ]
   },
@@ -166932,13 +166962,8 @@
       "englishName": "PSI"
     },
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 2,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -137,
-        "trust": -38
-      },
       {
         "date": "2026-05-22",
         "foreign": 1175,
@@ -167383,6 +167408,11 @@
         "date": "2026-09-29",
         "foreign": -2008,
         "trust": 2202
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -3241,
+        "trust": 0
       }
     ]
   },
@@ -167704,14 +167734,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 862,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 465,
@@ -168156,6 +168181,11 @@
         "date": "2026-09-29",
         "foreign": 544,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 200,
+        "trust": -2
       }
     ]
   },
@@ -168478,13 +168508,8 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -9061,
-        "trust": 1090
-      },
       {
         "date": "2026-05-22",
         "foreign": -1322,
@@ -168929,6 +168954,11 @@
         "date": "2026-09-29",
         "foreign": -3193,
         "trust": 180
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -3563,
+        "trust": 0
       }
     ]
   },
@@ -169269,14 +169299,9 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "TSC"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -2511,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -4242,
@@ -169721,6 +169746,11 @@
         "date": "2026-09-29",
         "foreign": 2293,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 564,
+        "trust": 0
       }
     ]
   },
@@ -170054,14 +170084,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "APEC"
     },
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 2,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 3,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -432,
-        "trust": 30
-      },
       {
         "date": "2026-05-22",
         "foreign": -787,
@@ -170506,6 +170531,11 @@
         "date": "2026-09-29",
         "foreign": 31,
         "trust": 5
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -26,
+        "trust": 19
       }
     ]
   },
@@ -170825,14 +170855,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 41,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 58,
@@ -171277,6 +171302,11 @@
         "date": "2026-09-29",
         "foreign": -3,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 217,
+        "trust": 0
       }
     ]
   },
@@ -171612,14 +171642,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "STL"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -183,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 2064,
@@ -172064,6 +172089,11 @@
         "date": "2026-09-29",
         "foreign": 173,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 183,
+        "trust": 0
       }
     ]
   },
@@ -172284,14 +172314,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 17,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -40,
@@ -172736,6 +172761,11 @@
         "date": "2026-09-29",
         "foreign": 31,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 42,
+        "trust": 0
       }
     ]
   },
@@ -173059,14 +173089,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 24,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 34,
@@ -173511,6 +173536,11 @@
         "date": "2026-09-29",
         "foreign": -1,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 80,
+        "trust": 0
       }
     ]
   },
@@ -173843,14 +173873,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 708,
-        "trust": -8
-      },
       {
         "date": "2026-05-22",
         "foreign": -2159,
@@ -174295,6 +174320,11 @@
         "date": "2026-09-29",
         "foreign": -223,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 489,
+        "trust": 0
       }
     ]
   },
@@ -174619,14 +174649,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 3,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -3,
@@ -175071,6 +175096,11 @@
         "date": "2026-09-29",
         "foreign": -59,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 11,
+        "trust": 0
       }
     ]
   },
@@ -175391,13 +175421,8 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 143,
-        "trust": 24
-      },
       {
         "date": "2026-05-22",
         "foreign": -1,
@@ -175842,6 +175867,11 @@
         "date": "2026-09-29",
         "foreign": -278,
         "trust": 1
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -80,
+        "trust": -188
       }
     ]
   },
@@ -176192,14 +176222,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "GIGABYTE"
     },
-    "foreignBuyStreak": 6,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -928,
-        "trust": -478
-      },
       {
         "date": "2026-05-22",
         "foreign": 2173,
@@ -176644,6 +176669,11 @@
         "date": "2026-09-29",
         "foreign": 1778,
         "trust": 2
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -337,
+        "trust": -209
       }
     ]
   },
@@ -176977,14 +177007,9 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "Infortrend"
     },
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 3252,
-        "trust": 197
-      },
       {
         "date": "2026-05-22",
         "foreign": 1640,
@@ -177429,6 +177454,11 @@
         "date": "2026-09-29",
         "foreign": 297,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 82,
+        "trust": 0
       }
     ]
   },
@@ -177751,11 +177781,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 106,
-        "trust": 46
-      },
       {
         "date": "2026-05-22",
         "foreign": 75,
@@ -178200,6 +178225,11 @@
         "date": "2026-09-29",
         "foreign": -56,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -69,
+        "trust": 0
       }
     ]
   },
@@ -178522,11 +178552,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 32,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 121,
@@ -178971,6 +178996,11 @@
         "date": "2026-09-29",
         "foreign": -9,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -8,
+        "trust": 0
       }
     ]
   },
@@ -179303,13 +179333,8 @@
       "englishName": "Advantech"
     },
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "trustBuyStreak": 2,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 248,
-        "trust": 10
-      },
       {
         "date": "2026-05-22",
         "foreign": 813,
@@ -179754,6 +179779,11 @@
         "date": "2026-09-29",
         "foreign": -546,
         "trust": 528
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -270,
+        "trust": 147
       }
     ]
   },
@@ -180094,14 +180124,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "BIOSTAR"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 502,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 4636,
@@ -180546,6 +180571,11 @@
         "date": "2026-09-29",
         "foreign": 1669,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -379,
+        "trust": 0
       }
     ]
   },
@@ -180863,14 +180893,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 393,
-        "trust": -2
-      },
       {
         "date": "2026-05-22",
         "foreign": 403,
@@ -181315,6 +181340,11 @@
         "date": "2026-09-29",
         "foreign": 64,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -421,
+        "trust": 0
       }
     ]
   },
@@ -181646,14 +181676,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "ICP DAS"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -218,
-        "trust": 95
-      },
       {
         "date": "2026-05-22",
         "foreign": 300,
@@ -182098,6 +182123,11 @@
         "date": "2026-09-29",
         "foreign": 42,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -172,
+        "trust": 0
       }
     ]
   },
@@ -182429,14 +182459,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "ADLINK"
     },
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 655,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -158,
@@ -182881,6 +182906,11 @@
         "date": "2026-09-29",
         "foreign": 683,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -425,
+        "trust": 0
       }
     ]
   },
@@ -183198,14 +183228,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 222,
-        "trust": -84
-      },
       {
         "date": "2026-05-22",
         "foreign": 300,
@@ -183650,6 +183675,11 @@
         "date": "2026-09-29",
         "foreign": 41,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 68,
+        "trust": 0
       }
     ]
   },
@@ -183976,14 +184006,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -42,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -61,
@@ -184428,6 +184453,11 @@
         "date": "2026-09-29",
         "foreign": -140,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 94,
+        "trust": 0
       }
     ]
   },
@@ -184751,14 +184781,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 7,
+    "foreignBuyStreak": 8,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -3688,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 7085,
@@ -185203,6 +185228,11 @@
         "date": "2026-09-29",
         "foreign": 859,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 12758,
+        "trust": 0
       }
     ]
   },
@@ -185539,11 +185569,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -6,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -25,
@@ -185988,6 +186013,11 @@
         "date": "2026-09-29",
         "foreign": -49,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -71,
+        "trust": 0
       }
     ]
   },
@@ -186323,14 +186353,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "IGS"
     },
-    "foreignBuyStreak": 4,
-    "trustBuyStreak": 0,
+    "foreignBuyStreak": 5,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -39,
-        "trust": 392
-      },
       {
         "date": "2026-05-22",
         "foreign": 162,
@@ -186775,6 +186800,11 @@
         "date": "2026-09-29",
         "foreign": 1166,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1064,
+        "trust": 48
       }
     ]
   },
@@ -187094,7 +187124,7 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
       {
@@ -187491,6 +187521,11 @@
         "date": "2026-09-29",
         "foreign": -30,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 69,
+        "trust": 0
       }
     ]
   },
@@ -187831,14 +187866,9 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "KINSUS"
     },
-    "foreignBuyStreak": 4,
-    "trustBuyStreak": 2,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 3,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 11919,
-        "trust": 1777
-      },
       {
         "date": "2026-05-22",
         "foreign": 1395,
@@ -188281,8 +188311,13 @@
       },
       {
         "date": "2026-09-29",
-        "foreign": 449,
+        "foreign": 1104,
         "trust": 287
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -432,
+        "trust": 610
       }
     ]
   },
@@ -188604,8 +188639,8 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 6,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 7,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
       {
         "date": "2026-06-05",
@@ -189001,6 +189036,11 @@
         "date": "2026-09-29",
         "foreign": 155,
         "trust": 4
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 239,
+        "trust": 0
       }
     ]
   },
@@ -189341,11 +189381,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -207,
-        "trust": 72
-      },
       {
         "date": "2026-05-22",
         "foreign": 137,
@@ -189790,6 +189825,11 @@
         "date": "2026-09-29",
         "foreign": -170,
         "trust": -91
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -589,
+        "trust": -9
       }
     ]
   },
@@ -190109,7 +190149,7 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
       {
@@ -190441,6 +190481,11 @@
         "date": "2026-09-29",
         "foreign": -2,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1,
+        "trust": 0
       }
     ]
   },
@@ -190762,14 +190807,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 81,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 40,
@@ -191214,6 +191254,11 @@
         "date": "2026-09-29",
         "foreign": -236,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 11,
+        "trust": 0
       }
     ]
   },
@@ -191557,11 +191602,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -409,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -486,
@@ -192006,6 +192046,11 @@
         "date": "2026-09-29",
         "foreign": -255,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -388,
+        "trust": 0
       }
     ]
   },
@@ -192339,14 +192384,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "Hung Ching"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 93,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -10,
@@ -192791,6 +192831,11 @@
         "date": "2026-09-29",
         "foreign": 252,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 824,
+        "trust": 0
       }
     ]
   },
@@ -193124,14 +193169,9 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "DELPHA"
     },
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -527,
-        "trust": -8
-      },
       {
         "date": "2026-05-22",
         "foreign": -702,
@@ -193576,6 +193616,11 @@
         "date": "2026-09-29",
         "foreign": 15,
         "trust": 25
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 111,
+        "trust": -3
       }
     ]
   },
@@ -193895,14 +193940,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 31,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -9,
@@ -194347,6 +194387,11 @@
         "date": "2026-09-29",
         "foreign": -69,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 13,
+        "trust": 0
       }
     ]
   },
@@ -194687,14 +194732,9 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "JSL"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -103,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -181,
@@ -195139,6 +195179,11 @@
         "date": "2026-09-29",
         "foreign": -54,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 110,
+        "trust": 0
       }
     ]
   },
@@ -195467,14 +195512,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 2,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -415,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -510,
@@ -195919,6 +195959,11 @@
         "date": "2026-09-29",
         "foreign": 77,
         "trust": 44
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 131,
+        "trust": 0
       }
     ]
   },
@@ -196253,13 +196298,8 @@
       "englishName": "HUAKU"
     },
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "trustBuyStreak": 2,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -502,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -1163,
@@ -196704,6 +196744,11 @@
         "date": "2026-09-29",
         "foreign": -356,
         "trust": 3
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -750,
+        "trust": 9
       }
     ]
   },
@@ -197030,14 +197075,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-08",
-        "foreign": 24,
-        "trust": 0
-      },
       {
         "date": "2026-05-11",
         "foreign": -7,
@@ -197482,6 +197522,11 @@
         "date": "2026-09-29",
         "foreign": -19,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 29,
+        "trust": 0
       }
     ]
   },
@@ -197823,11 +197868,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 646,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -703,
@@ -198272,6 +198312,11 @@
         "date": "2026-09-29",
         "foreign": -97,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -33,
+        "trust": 0
       }
     ]
   },
@@ -198616,14 +198661,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 221,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -358,
@@ -199068,6 +199108,11 @@
         "date": "2026-09-29",
         "foreign": 177,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -103,
+        "trust": 0
       }
     ]
   },
@@ -199391,14 +199436,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 449,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -261,
@@ -199843,6 +199883,11 @@
         "date": "2026-09-29",
         "foreign": 30,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 128,
+        "trust": 0
       }
     ]
   },
@@ -200172,11 +200217,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 37,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -19,
@@ -200621,6 +200661,11 @@
         "date": "2026-09-29",
         "foreign": -205,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -11,
+        "trust": 0
       }
     ]
   },
@@ -200942,14 +200987,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 2,
+    "foreignBuyStreak": 3,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 11,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -65,
@@ -201394,6 +201434,11 @@
         "date": "2026-09-29",
         "foreign": 34,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 41,
+        "trust": 0
       }
     ]
   },
@@ -201713,14 +201758,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 504,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -2080,
@@ -202165,6 +202205,11 @@
         "date": "2026-09-29",
         "foreign": -90,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 314,
+        "trust": 0
       }
     ]
   },
@@ -202498,14 +202543,9 @@
       "auditor": "安侯建業聯合會計師事務所",
       "englishName": "ATE ENERGY.INC"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1030,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -236,
@@ -202950,6 +202990,11 @@
         "date": "2026-09-29",
         "foreign": 1040,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -2129,
+        "trust": 0
       }
     ]
   },
@@ -203275,11 +203320,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-22",
-        "foreign": -47,
-        "trust": 0
-      },
       {
         "date": "2026-05-25",
         "foreign": -21,
@@ -203724,6 +203764,11 @@
         "date": "2026-09-29",
         "foreign": -37,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -5,
+        "trust": 0
       }
     ]
   },
@@ -203988,14 +204033,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 121,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 18,
@@ -204440,6 +204480,11 @@
         "date": "2026-09-29",
         "foreign": 62,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -27,
+        "trust": 0
       }
     ]
   },
@@ -204759,14 +204804,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 2623,
-        "trust": 161
-      },
       {
         "date": "2026-05-22",
         "foreign": 656,
@@ -205211,6 +205251,11 @@
         "date": "2026-09-29",
         "foreign": -997,
         "trust": 1
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 23,
+        "trust": -16
       }
     ]
   },
@@ -205530,14 +205575,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 0,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1819,
-        "trust": 986
-      },
       {
         "date": "2026-05-22",
         "foreign": 6895,
@@ -205982,6 +206022,11 @@
         "date": "2026-09-29",
         "foreign": -3222,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 313,
+        "trust": 361
       }
     ]
   },
@@ -206306,11 +206351,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -133,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 14,
@@ -206755,6 +206795,11 @@
         "date": "2026-09-29",
         "foreign": -4704,
         "trust": -200
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -1385,
+        "trust": 0
       }
     ]
   },
@@ -207080,14 +207125,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -19,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -52,
@@ -207532,6 +207572,11 @@
         "date": "2026-09-29",
         "foreign": -46,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 155,
+        "trust": 0
       }
     ]
   },
@@ -207856,11 +207901,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 200,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -215,
@@ -208305,6 +208345,11 @@
         "date": "2026-09-29",
         "foreign": -440,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -24,
+        "trust": 0
       }
     ]
   },
@@ -208624,14 +208669,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 9,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 10,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1537,
-        "trust": 11860
-      },
       {
         "date": "2026-05-22",
         "foreign": -9328,
@@ -209076,6 +209116,11 @@
         "date": "2026-09-29",
         "foreign": -3068,
         "trust": 924
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 12173,
+        "trust": 1099
       }
     ]
   },
@@ -209409,14 +209454,9 @@
       "auditor": "安永聯合會計師事務所",
       "englishName": "WISDOM"
     },
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -569,
-        "trust": 52
-      },
       {
         "date": "2026-05-22",
         "foreign": -1765,
@@ -209861,6 +209901,11 @@
         "date": "2026-09-29",
         "foreign": -1498,
         "trust": 1
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 679,
+        "trust": 0
       }
     ]
   },
@@ -210180,14 +210225,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 9,
+    "foreignBuyStreak": 10,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 168,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -558,
@@ -210632,6 +210672,11 @@
         "date": "2026-09-29",
         "foreign": 40,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 596,
+        "trust": 0
       }
     ]
   },
@@ -210963,14 +211008,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -44,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -137,
@@ -211415,6 +211455,11 @@
         "date": "2026-09-29",
         "foreign": -14,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 28,
+        "trust": 0
       }
     ]
   },
@@ -211734,7 +211779,7 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
       {
@@ -212066,6 +212111,11 @@
         "date": "2026-09-29",
         "foreign": -8,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 11,
+        "trust": 0
       }
     ]
   },
@@ -212388,11 +212438,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-08",
-        "foreign": 27,
-        "trust": 0
-      },
       {
         "date": "2026-05-11",
         "foreign": -5,
@@ -212837,6 +212882,11 @@
         "date": "2026-09-29",
         "foreign": -60,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -9,
+        "trust": 0
       }
     ]
   },
@@ -213159,11 +213209,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -614,
-        "trust": -22
-      },
       {
         "date": "2026-05-22",
         "foreign": -102,
@@ -213608,6 +213653,11 @@
         "date": "2026-09-29",
         "foreign": -2588,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -2087,
+        "trust": 0
       }
     ]
   },
@@ -213934,11 +213984,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 515,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -955,
@@ -214383,6 +214428,11 @@
         "date": "2026-09-29",
         "foreign": -62,
         "trust": -4
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 0,
+        "trust": -2
       }
     ]
   },
@@ -214716,14 +214766,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "PSC"
     },
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 0,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 1753,
-        "trust": -2
-      },
       {
         "date": "2026-05-22",
         "foreign": -962,
@@ -215168,6 +215213,11 @@
         "date": "2026-09-29",
         "foreign": -2642,
         "trust": -1
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 292,
+        "trust": 12
       }
     ]
   },
@@ -215513,14 +215563,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "HNFHC"
     },
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 0,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -6652,
-        "trust": 5782
-      },
       {
         "date": "2026-05-22",
         "foreign": -12353,
@@ -215965,6 +216010,11 @@
         "date": "2026-09-29",
         "foreign": -2827,
         "trust": -53
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 764,
+        "trust": 84
       }
     ]
   },
@@ -216299,13 +216349,8 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 777,
-        "trust": -9028
-      },
       {
         "date": "2026-05-22",
         "foreign": 10559,
@@ -216750,6 +216795,11 @@
         "date": "2026-09-29",
         "foreign": -2951,
         "trust": 1331
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -669,
+        "trust": -126
       }
     ]
   },
@@ -217083,14 +217133,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 2,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -34821,
-        "trust": 30508
-      },
       {
         "date": "2026-05-22",
         "foreign": -28739,
@@ -217535,6 +217580,11 @@
         "date": "2026-09-29",
         "foreign": -11665,
         "trust": 662
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1851,
+        "trust": 2204
       }
     ]
   },
@@ -217867,13 +217917,8 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 0,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -5808,
-        "trust": 234
-      },
       {
         "date": "2026-05-22",
         "foreign": -21853,
@@ -218318,6 +218363,11 @@
         "date": "2026-09-29",
         "foreign": -3317,
         "trust": -197
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -118,
+        "trust": 1601
       }
     ]
   },
@@ -218637,14 +218687,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 9,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 10,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -2530,
-        "trust": 3075
-      },
       {
         "date": "2026-05-22",
         "foreign": -908,
@@ -219089,6 +219134,11 @@
         "date": "2026-09-29",
         "foreign": 300,
         "trust": 40
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -25,
+        "trust": 1099
       }
     ]
   },
@@ -219421,13 +219471,8 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 0,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -6733,
-        "trust": -119
-      },
       {
         "date": "2026-05-22",
         "foreign": -4899,
@@ -219872,6 +219917,11 @@
         "date": "2026-09-29",
         "foreign": -2251,
         "trust": -1
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -815,
+        "trust": 100
       }
     ]
   },
@@ -220191,14 +220241,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-08",
-        "foreign": -4673,
-        "trust": 31
-      },
       {
         "date": "2026-05-11",
         "foreign": 8574,
@@ -220643,6 +220688,11 @@
         "date": "2026-09-29",
         "foreign": -2030,
         "trust": 4
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1452,
+        "trust": 0
       }
     ]
   },
@@ -220972,14 +221022,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "concords"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -39,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -312,
@@ -221424,6 +221469,11 @@
         "date": "2026-09-29",
         "foreign": 118,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 2590,
+        "trust": 0
       }
     ]
   },
@@ -221746,11 +221796,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 30,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -75,
@@ -222195,6 +222240,11 @@
         "date": "2026-09-29",
         "foreign": -109,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -8,
+        "trust": 0
       }
     ]
   },
@@ -222514,14 +222564,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 5,
+    "foreignBuyStreak": 6,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -47,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -56,
@@ -222966,6 +223011,11 @@
         "date": "2026-09-29",
         "foreign": 159,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 43,
+        "trust": 0
       }
     ]
   },
@@ -223281,14 +223331,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 1,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -231,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -981,
@@ -223733,6 +223778,11 @@
         "date": "2026-09-29",
         "foreign": -86,
         "trust": 13
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 405,
+        "trust": -6
       }
     ]
   },
@@ -224381,6 +224431,11 @@
         "date": "2026-09-24",
         "foreign": 0,
         "trust": 0
+      },
+      {
+        "date": "2026-09-29",
+        "foreign": 0,
+        "trust": 0
       }
     ]
   },
@@ -224616,14 +224671,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "Mega Union"
     },
-    "foreignBuyStreak": 6,
+    "foreignBuyStreak": 7,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 221,
-        "trust": -1
-      },
       {
         "date": "2026-05-22",
         "foreign": 80,
@@ -225068,6 +225118,11 @@
         "date": "2026-09-29",
         "foreign": 45,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 52,
+        "trust": 0
       }
     ]
   },
@@ -225403,14 +225458,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 114,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -109,
@@ -225855,6 +225905,11 @@
         "date": "2026-09-29",
         "foreign": 2,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 14,
+        "trust": 0
       }
     ]
   },
@@ -226172,14 +226227,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 568,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 235,
@@ -226624,6 +226674,11 @@
         "date": "2026-09-29",
         "foreign": 26,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -51,
+        "trust": 0
       }
     ]
   },
@@ -226957,8 +227012,8 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 0,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 1,
     "institutionalHistory": [
       {
         "date": "2026-05-22",
@@ -227404,6 +227459,11 @@
         "date": "2026-09-29",
         "foreign": 424,
         "trust": -51
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -1869,
+        "trust": 129
       }
     ]
   },
@@ -227735,11 +227795,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -93,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -116,
@@ -228184,6 +228239,11 @@
         "date": "2026-09-29",
         "foreign": -46,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -15,
+        "trust": 0
       }
     ]
   },
@@ -228458,14 +228518,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "Cenra Inc."
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 158,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 43,
@@ -228910,6 +228965,11 @@
         "date": "2026-09-29",
         "foreign": 8,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 31,
+        "trust": 0
       }
     ]
   },
@@ -229231,14 +229291,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 64,
-        "trust": -26
-      },
       {
         "date": "2026-05-22",
         "foreign": 38,
@@ -229683,6 +229738,11 @@
         "date": "2026-09-29",
         "foreign": 108,
         "trust": 8
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -19,
+        "trust": 0
       }
     ]
   },
@@ -230018,14 +230078,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 208,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 119,
@@ -230470,6 +230525,11 @@
         "date": "2026-09-29",
         "foreign": 94,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 221,
+        "trust": 0
       }
     ]
   },
@@ -230798,14 +230858,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 537,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -350,
@@ -231250,6 +231305,11 @@
         "date": "2026-09-29",
         "foreign": 430,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 567,
+        "trust": 0
       }
     ]
   },
@@ -231578,14 +231638,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 4,
+    "foreignBuyStreak": 5,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 0,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 97,
@@ -232030,6 +232085,11 @@
         "date": "2026-09-29",
         "foreign": 52,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 47,
+        "trust": 0
       }
     ]
   },
@@ -232360,14 +232420,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 103,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -855,
@@ -232812,6 +232867,11 @@
         "date": "2026-09-29",
         "foreign": 248,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 957,
+        "trust": 0
       }
     ]
   },
@@ -233131,14 +233191,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 7,
+    "foreignBuyStreak": 8,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 402,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -244,
@@ -233583,6 +233638,11 @@
         "date": "2026-09-29",
         "foreign": 450,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 903,
+        "trust": 0
       }
     ]
   },
@@ -233918,14 +233978,9 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "TMB"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -104,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 285,
@@ -234370,6 +234425,11 @@
         "date": "2026-09-29",
         "foreign": 268,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 238,
+        "trust": 0
       }
     ]
   },
@@ -234691,14 +234751,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 171,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 18,
@@ -235143,6 +235198,11 @@
         "date": "2026-09-29",
         "foreign": -33,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 56,
+        "trust": 0
       }
     ]
   },
@@ -235464,14 +235524,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 247,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -171,
@@ -235916,6 +235971,11 @@
         "date": "2026-09-29",
         "foreign": 312,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 305,
+        "trust": 0
       }
     ]
   },
@@ -236237,14 +236297,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 17,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -147,
@@ -236689,6 +236744,11 @@
         "date": "2026-09-29",
         "foreign": 258,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 264,
+        "trust": 0
       }
     ]
   },
@@ -237010,14 +237070,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -177,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 217,
@@ -237462,6 +237517,11 @@
         "date": "2026-09-29",
         "foreign": 277,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1065,
+        "trust": 0
       }
     ]
   },
@@ -237781,14 +237841,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 348,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -280,
@@ -238233,6 +238288,11 @@
         "date": "2026-09-29",
         "foreign": 390,
         "trust": -115
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 486,
+        "trust": 0
       }
     ]
   },
@@ -238566,14 +238626,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "SH"
     },
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 28,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 26,
@@ -239018,6 +239073,11 @@
         "date": "2026-09-29",
         "foreign": -2,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 135,
+        "trust": 0
       }
     ]
   },
@@ -239337,14 +239397,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -8,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -815,
@@ -239789,6 +239844,11 @@
         "date": "2026-09-29",
         "foreign": 740,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1692,
+        "trust": 0
       }
     ]
   },
@@ -240129,11 +240189,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 53,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -92,
@@ -240578,6 +240633,11 @@
         "date": "2026-09-29",
         "foreign": -64,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -6,
+        "trust": 0
       }
     ]
   },
@@ -240731,11 +240791,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -45,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 35,
@@ -241180,6 +241235,11 @@
         "date": "2026-09-29",
         "foreign": -126,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -899,
+        "trust": 0
       }
     ]
   },
@@ -241520,14 +241580,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "CHC"
     },
-    "foreignBuyStreak": 1,
+    "foreignBuyStreak": 2,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-18",
-        "foreign": 208,
-        "trust": 0
-      },
       {
         "date": "2026-05-19",
         "foreign": 0,
@@ -241972,6 +242027,11 @@
         "date": "2026-09-29",
         "foreign": 100,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 59,
+        "trust": 0
       }
     ]
   },
@@ -242294,11 +242354,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-20",
-        "foreign": 0,
-        "trust": 0
-      },
       {
         "date": "2026-05-21",
         "foreign": 0,
@@ -242743,6 +242798,11 @@
         "date": "2026-09-24",
         "foreign": 0,
         "trust": 0
+      },
+      {
+        "date": "2026-09-29",
+        "foreign": 0,
+        "trust": 0
       }
     ]
   },
@@ -243065,11 +243125,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-20",
-        "foreign": 0,
-        "trust": 0
-      },
       {
         "date": "2026-05-21",
         "foreign": 0,
@@ -243514,6 +243569,11 @@
         "date": "2026-09-24",
         "foreign": 0,
         "trust": 0
+      },
+      {
+        "date": "2026-09-29",
+        "foreign": 0,
+        "trust": 0
       }
     ]
   },
@@ -243838,14 +243898,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 4,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -189,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -223,
@@ -244290,6 +244345,11 @@
         "date": "2026-09-29",
         "foreign": 72,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 182,
+        "trust": 0
       }
     ]
   },
@@ -244626,11 +244686,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-20",
-        "foreign": 0,
-        "trust": 0
-      },
       {
         "date": "2026-05-21",
         "foreign": 1,
@@ -245075,6 +245130,11 @@
         "date": "2026-09-29",
         "foreign": -1,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -1,
+        "trust": 0
       }
     ]
   },
@@ -245394,14 +245454,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 5,
+    "foreignBuyStreak": 6,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 59,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -113,
@@ -245846,6 +245901,11 @@
         "date": "2026-09-29",
         "foreign": 116,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 235,
+        "trust": 0
       }
     ]
   },
@@ -246165,7 +246225,7 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 3,
+    "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
       {
@@ -246496,6 +246556,11 @@
       {
         "date": "2026-09-29",
         "foreign": 6,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -8,
         "trust": 0
       }
     ]
@@ -246828,14 +246893,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 121,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 46,
@@ -247279,6 +247339,11 @@
       {
         "date": "2026-09-29",
         "foreign": -37,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 15,
         "trust": 0
       }
     ]
@@ -247941,6 +248006,11 @@
         "date": "2026-09-29",
         "foreign": -1,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -1,
+        "trust": 0
       }
     ]
   },
@@ -248260,14 +248330,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -12,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 17,
@@ -248712,6 +248777,11 @@
         "date": "2026-09-29",
         "foreign": -9,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 50,
+        "trust": 0
       }
     ]
   },
@@ -249031,14 +249101,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -1,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 1,
@@ -249483,6 +249548,11 @@
         "date": "2026-09-29",
         "foreign": -5,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 7,
+        "trust": 0
       }
     ]
   },
@@ -249802,14 +249872,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 0,
+    "foreignBuyStreak": 1,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -5,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": 0,
@@ -250254,6 +250319,11 @@
         "date": "2026-09-29",
         "foreign": -1,
         "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 3,
+        "trust": 0
       }
     ]
   },
@@ -250596,14 +250666,9 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "ADVANCED  GROUP"
     },
-    "foreignBuyStreak": 5,
-    "trustBuyStreak": 1,
+    "foreignBuyStreak": 6,
+    "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": 64,
-        "trust": 0
-      },
       {
         "date": "2026-05-22",
         "foreign": -13,
@@ -251048,6 +251113,11 @@
         "date": "2026-09-29",
         "foreign": 3,
         "trust": 4
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 13,
+        "trust": 0
       }
     ]
   },
@@ -251368,13 +251438,8 @@
     },
     "companyProfile": {},
     "foreignBuyStreak": 0,
-    "trustBuyStreak": 1,
+    "trustBuyStreak": 2,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -113,
-        "trust": 281
-      },
       {
         "date": "2026-05-22",
         "foreign": 696,
@@ -251818,7 +251883,12 @@
       {
         "date": "2026-09-29",
         "foreign": -728,
-        "trust": 175
+        "trust": 189
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -786,
+        "trust": 136
       }
     ]
   },
@@ -252147,14 +252217,9 @@
       ]
     },
     "companyProfile": {},
-    "foreignBuyStreak": 1,
-    "trustBuyStreak": 20,
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 21,
     "institutionalHistory": [
-      {
-        "date": "2026-05-21",
-        "foreign": -620,
-        "trust": -15
-      },
       {
         "date": "2026-05-22",
         "foreign": -1713,
@@ -252599,6 +252664,11 @@
         "date": "2026-09-29",
         "foreign": 25,
         "trust": 9
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -87,
+        "trust": 48
       }
     ]
   },
@@ -252921,16 +252991,6 @@
     "foreignBuyStreak": 0,
     "trustBuyStreak": 0,
     "institutionalHistory": [
-      {
-        "date": "2026-05-19",
-        "foreign": 6,
-        "trust": 0
-      },
-      {
-        "date": "2026-05-20",
-        "foreign": -1,
-        "trust": 0
-      },
       {
         "date": "2026-05-21",
         "foreign": 17,
@@ -253369,6 +253429,16 @@
       {
         "date": "2026-09-24",
         "foreign": 0,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-29",
+        "foreign": 0,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": -2,
         "trust": 0
       }
     ]
