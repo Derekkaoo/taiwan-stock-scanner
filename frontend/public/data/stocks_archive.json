@@ -53097,37 +53097,37 @@
     "groupDesc": "",
     "holdingPct": 52.36,
     "delta": 2.14,
-    "price": 114.0,
-    "marketCap": 72.92,
+    "price": 115.5,
+    "marketCap": 73.88,
     "turnovers": {
-      "d1": 0.13,
-      "d5": 0.24,
-      "d10": 0.25,
-      "d20": 0.33,
-      "d50": 1.47
+      "d1": 0.22,
+      "d5": 0.48,
+      "d10": 0.41,
+      "d20": 0.36,
+      "d50": 1.26
     },
     "volumes": {
-      "d1": 0.12,
-      "d5": 0.2,
-      "d10": 0.22,
-      "d20": 0.29,
-      "d50": 1.06
+      "d1": 0.19,
+      "d5": 0.41,
+      "d10": 0.35,
+      "d20": 0.31,
+      "d50": 0.92
     },
-    "pctOf52wHigh": 64.77,
-    "pctOf200dHigh": 64.77,
-    "ma10": 114.35,
-    "ma20": 113.3,
-    "ma60": 123.92,
+    "pctOf52wHigh": 65.62,
+    "pctOf200dHigh": 65.62,
+    "ma10": 116.6,
+    "ma20": 113.75,
+    "ma60": 123.31,
     "ma20Trend": "up",
-    "dailyChangePct": 0.0,
+    "dailyChangePct": -1.7,
     "date": "2026-09-24",
-    "threeMonthReturn": 54.89,
+    "threeMonthReturn": 62.45,
     "returns": {
-      "w1": -3.8,
-      "m1": 0.44,
-      "m3": -6.17,
-      "m6": 78.68,
-      "y1": 54.89
+      "w1": 0.0,
+      "m1": -1.28,
+      "m3": -2.53,
+      "m6": 73.68,
+      "y1": 62.45
     },
     "industry": "電腦及週邊設備業",
     "market": "上櫃",
@@ -53141,9 +53141,9 @@
     },
     "revenueYoY": 34.05,
     "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-09-25",
+    "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790301464,
+      "_last_rev_attempt_ts": 1790848097,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -53194,7 +53194,7 @@
           "yoy": 34.05
         }
       ],
-      "_last_fin_attempt_ts": 1790301465,
+      "_last_fin_attempt_ts": 1790848098,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -53415,7 +53415,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "ICP DAS"
     },
-    "_lastSeenDate": "2026-09-25"
+    "_lastSeenDate": "2026-10-01"
   },
   "3580": {
     "id": "3580",
@@ -85166,8 +85166,8 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790841406,
-      "_last_fin_attempt_ts": 1790841408,
+      "_last_rev_attempt_ts": 1790848099,
+      "_last_fin_attempt_ts": 1790848101,
       "grossMarginYoY": [],
       "operatingMarginYoY": [],
       "epsYoY": [],
@@ -90562,7 +90562,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790841310,
+      "_last_rev_attempt_ts": 1790848102,
       "_last_fin_attempt_ts": 1790841312,
       "grossMarginYoY": [
         {
@@ -119100,37 +119100,37 @@
     "groupDesc": "",
     "holdingPct": 77.26,
     "delta": 0.15,
-    "price": 722.0,
-    "marketCap": 6274.51,
+    "price": 723.0,
+    "marketCap": 6283.2,
     "turnovers": {
-      "d1": 19.01,
-      "d5": 16.23,
-      "d10": 18.64,
-      "d20": 19.81,
-      "d50": 24.3
+      "d1": 12.0,
+      "d5": 17.17,
+      "d10": 16.91,
+      "d20": 19.36,
+      "d50": 24.26
     },
     "volumes": {
-      "d1": 2.65,
-      "d5": 2.31,
-      "d10": 2.7,
-      "d20": 2.88,
-      "d50": 3.8
+      "d1": 1.65,
+      "d5": 2.37,
+      "d10": 2.39,
+      "d20": 2.79,
+      "d50": 3.73
     },
-    "pctOf52wHigh": 99.18,
-    "pctOf200dHigh": 99.18,
-    "ma10": 693.2,
-    "ma20": 685.75,
-    "ma60": 627.73,
+    "pctOf52wHigh": 95.89,
+    "pctOf200dHigh": 95.89,
+    "ma10": 708.2,
+    "ma20": 691.85,
+    "ma60": 638.5,
     "ma20Trend": "up",
-    "dailyChangePct": 3.0,
+    "dailyChangePct": -0.41,
     "date": "2026-09-24",
-    "threeMonthReturn": 120.8,
+    "threeMonthReturn": 127.36,
     "returns": {
-      "w1": 5.25,
-      "m1": 4.94,
-      "m3": 50.42,
-      "m6": 109.88,
-      "y1": 120.8
+      "w1": 2.84,
+      "m1": 6.79,
+      "m3": 46.95,
+      "m6": 116.79,
+      "y1": 127.36
     },
     "industry": "電腦及週邊設備業",
     "market": "上市",
@@ -119144,9 +119144,9 @@
     },
     "revenueYoY": 87.51,
     "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-09-25",
+    "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790301417,
+      "_last_rev_attempt_ts": 1790848093,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -119197,7 +119197,7 @@
           "yoy": 87.52
         }
       ],
-      "_last_fin_attempt_ts": 1790301418,
+      "_last_fin_attempt_ts": 1790848094,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -119418,7 +119418,7 @@
       "auditor": "資誠聯合會計師事務所",
       "englishName": "Advantech"
     },
-    "_lastSeenDate": "2026-09-25"
+    "_lastSeenDate": "2026-10-01"
   },
   "2436": {
     "id": "2436",
@@ -130512,39 +130512,39 @@
       "工業電腦"
     ],
     "groupDesc": "",
-    "holdingPct": 59.69,
-    "delta": 0.95,
-    "price": 93.1,
-    "marketCap": 164.41,
+    "holdingPct": 60.35,
+    "delta": 0.66,
+    "price": 92.6,
+    "marketCap": 163.53,
     "turnovers": {
-      "d1": 1.41,
-      "d5": 1.18,
-      "d10": 1.11,
+      "d1": 0.8,
+      "d5": 1.1,
+      "d10": 1.15,
       "d20": 1.54,
       "d50": 2.6
     },
     "volumes": {
-      "d1": 1.53,
-      "d5": 1.28,
-      "d10": 1.24,
-      "d20": 1.71,
-      "d50": 2.74
+      "d1": 0.86,
+      "d5": 1.18,
+      "d10": 1.25,
+      "d20": 1.7,
+      "d50": 2.73
     },
-    "pctOf52wHigh": 79.91,
-    "pctOf200dHigh": 79.91,
-    "ma10": 88.86,
-    "ma20": 89.16,
-    "ma60": 90.99,
-    "ma20Trend": "down",
-    "dailyChangePct": 2.65,
-    "date": "2026-09-18",
-    "threeMonthReturn": 38.13,
+    "pctOf52wHigh": 79.48,
+    "pctOf200dHigh": 79.48,
+    "ma10": 91.19,
+    "ma20": 89.4,
+    "ma60": 91.27,
+    "ma20Trend": "up",
+    "dailyChangePct": 0.33,
+    "date": "2026-09-24",
+    "threeMonthReturn": 36.38,
     "returns": {
-      "w1": 4.72,
-      "m1": 0.65,
-      "m3": 12.71,
-      "m6": 35.91,
-      "y1": 38.13
+      "w1": 1.2,
+      "m1": 2.55,
+      "m3": 10.5,
+      "m6": 45.83,
+      "y1": 36.38
     },
     "industry": "電腦及週邊設備業",
     "market": "上市",
@@ -130558,9 +130558,9 @@
     },
     "revenueYoY": 84.97,
     "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-09-19",
+    "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1789793914,
+      "_last_rev_attempt_ts": 1790848103,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -130611,7 +130611,7 @@
           "yoy": 84.98
         }
       ],
-      "_last_fin_attempt_ts": 1789793915,
+      "_last_fin_attempt_ts": 1790848104,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -130818,7 +130818,7 @@
       ]
     },
     "companyProfile": {},
-    "_lastSeenDate": "2026-09-25"
+    "_lastSeenDate": "2026-10-01"
   },
   "3027": {
     "id": "3027",
@@ -132488,39 +132488,39 @@
       "電子通路"
     ],
     "groupDesc": "",
-    "holdingPct": 41.8,
-    "delta": 0.34,
-    "price": 51.9,
-    "marketCap": 140.04,
+    "holdingPct": 41.9,
+    "delta": 0.1,
+    "price": 52.8,
+    "marketCap": 142.47,
     "turnovers": {
-      "d1": 0.79,
-      "d5": 0.46,
-      "d10": 0.41,
-      "d20": 0.59,
-      "d50": 1.55
+      "d1": 0.92,
+      "d5": 0.61,
+      "d10": 0.48,
+      "d20": 0.51,
+      "d50": 1.51
     },
     "volumes": {
-      "d1": 1.54,
-      "d5": 0.9,
-      "d10": 0.82,
-      "d20": 1.12,
-      "d50": 2.8
+      "d1": 1.76,
+      "d5": 1.18,
+      "d10": 0.93,
+      "d20": 0.99,
+      "d50": 2.72
     },
-    "pctOf52wHigh": 63.37,
-    "pctOf200dHigh": 63.37,
-    "ma10": 50.55,
-    "ma20": 51.96,
-    "ma60": 54.13,
+    "pctOf52wHigh": 64.47,
+    "pctOf200dHigh": 64.47,
+    "ma10": 51.13,
+    "ma20": 51.47,
+    "ma60": 53.57,
     "ma20Trend": "down",
-    "dailyChangePct": 2.98,
-    "date": "2026-09-18",
-    "threeMonthReturn": 30.4,
+    "dailyChangePct": 2.13,
+    "date": "2026-09-24",
+    "threeMonthReturn": 30.21,
     "returns": {
-      "w1": 2.98,
-      "m1": -7.65,
-      "m3": -22.54,
-      "m6": 29.1,
-      "y1": 30.4
+      "w1": 4.55,
+      "m1": -3.83,
+      "m3": -16.06,
+      "m6": 37.86,
+      "y1": 30.21
     },
     "industry": "電子通路業",
     "market": "上市",
@@ -132536,9 +132536,9 @@
     },
     "revenueYoY": 50.31,
     "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-09-19",
+    "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1789794019,
+      "_last_rev_attempt_ts": 1790848095,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -132589,7 +132589,7 @@
           "yoy": 50.31
         }
       ],
-      "_last_fin_attempt_ts": 1789794021,
+      "_last_fin_attempt_ts": 1790848096,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -132810,7 +132810,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "EDOM"
     },
-    "_lastSeenDate": "2026-09-25"
+    "_lastSeenDate": "2026-10-01"
   },
   "3049": {
     "id": "3049",
@@ -197968,37 +197968,37 @@
     "groupDesc": "",
     "holdingPct": 24.37,
     "delta": 0.59,
-    "price": 47.3,
-    "marketCap": 84.24,
+    "price": 51.3,
+    "marketCap": 91.37,
     "turnovers": {
-      "d1": 0.8,
-      "d5": 2.99,
-      "d10": 3.03,
-      "d20": 2.52,
-      "d50": 2.5
+      "d1": 9.52,
+      "d5": 3.62,
+      "d10": 4.27,
+      "d20": 3.1,
+      "d50": 2.75
     },
     "volumes": {
-      "d1": 1.71,
-      "d5": 6.14,
-      "d10": 6.29,
-      "d20": 5.3,
-      "d50": 5.59
+      "d1": 18.89,
+      "d5": 7.3,
+      "d10": 8.7,
+      "d20": 6.44,
+      "d50": 6.04
     },
-    "pctOf52wHigh": 82.26,
-    "pctOf200dHigh": 82.26,
-    "ma10": 47.25,
-    "ma20": 46.63,
-    "ma60": 43.95,
+    "pctOf52wHigh": 89.22,
+    "pctOf200dHigh": 89.22,
+    "ma10": 48.55,
+    "ma20": 47.17,
+    "ma60": 43.86,
     "ma20Trend": "up",
-    "dailyChangePct": 0.42,
+    "dailyChangePct": 4.8,
     "date": "2026-09-24",
-    "threeMonthReturn": 148.29,
+    "threeMonthReturn": 170.71,
     "returns": {
-      "w1": -3.47,
-      "m1": -1.25,
-      "m3": -9.56,
-      "m6": 27.15,
-      "y1": 148.29
+      "w1": 8.0,
+      "m1": 12.5,
+      "m3": 5.56,
+      "m6": 62.6,
+      "y1": 170.71
     },
     "industry": "電腦及週邊設備業",
     "market": "上市",
@@ -198020,9 +198020,9 @@
     },
     "revenueYoY": 40.0,
     "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-09-25",
+    "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790301498,
+      "_last_rev_attempt_ts": 1790848091,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -198073,7 +198073,7 @@
           "yoy": 40.0
         }
       ],
-      "_last_fin_attempt_ts": 1790301499,
+      "_last_fin_attempt_ts": 1790848093,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -198294,7 +198294,7 @@
       "auditor": "勤業眾信聯合會計師事務所",
       "englishName": "BIOSTAR"
     },
-    "_lastSeenDate": "2026-09-25"
+    "_lastSeenDate": "2026-10-01"
   },
   "2401": {
     "id": "2401",
@@ -240823,8 +240823,8 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790841633,
-      "_last_fin_attempt_ts": 1790841635,
+      "_last_rev_attempt_ts": 1790848105,
+      "_last_fin_attempt_ts": 1790848107,
       "grossMarginYoY": [],
       "operatingMarginYoY": [],
       "epsYoY": [],
