@@ -14,14 +14,14 @@
     "price": 51.5,
     "marketCap": 460.81,
     "turnovers": {
-      "d1": 0.48,
-      "d5": 0.47,
-      "d10": 0.49,
+      "d1": 0.47,
+      "d5": 0.46,
+      "d10": 0.48,
       "d20": 0.51,
       "d50": 0.97
     },
     "volumes": {
-      "d1": 0.94,
+      "d1": 0.92,
       "d5": 0.9,
       "d10": 0.93,
       "d20": 0.98,
@@ -69,7 +69,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927822,
+      "_last_rev_attempt_ts": 1790967482,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -1368,14 +1368,14 @@
     "price": 12.7,
     "marketCap": 150.97,
     "turnovers": {
-      "d1": 0.41,
+      "d1": 0.4,
       "d5": 0.32,
       "d10": 0.29,
       "d20": 0.3,
       "d50": 0.39
     },
     "volumes": {
-      "d1": 3.2,
+      "d1": 3.19,
       "d5": 2.59,
       "d10": 2.3,
       "d20": 2.4,
@@ -1419,7 +1419,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927804,
+      "_last_rev_attempt_ts": 1790967456,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -5991,16 +5991,16 @@
     "price": 102.5,
     "marketCap": 285.53,
     "turnovers": {
-      "d1": 0.79,
+      "d1": 0.77,
       "d5": 1.01,
       "d10": 0.95,
       "d20": 0.93,
       "d50": 1.34
     },
     "volumes": {
-      "d1": 0.77,
+      "d1": 0.75,
       "d5": 0.99,
-      "d10": 0.93,
+      "d10": 0.92,
       "d20": 0.92,
       "d50": 1.32
     },
@@ -6044,7 +6044,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927896,
+      "_last_rev_attempt_ts": 1790967497,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -6317,17 +6317,17 @@
     "price": 692.0,
     "marketCap": 2404.48,
     "turnovers": {
-      "d1": 8.16,
-      "d5": 6.56,
-      "d10": 5.62,
-      "d20": 8.13,
-      "d50": 10.1
+      "d1": 7.51,
+      "d5": 6.43,
+      "d10": 5.55,
+      "d20": 8.1,
+      "d50": 10.09
     },
     "volumes": {
-      "d1": 1.18,
-      "d5": 0.94,
-      "d10": 0.8,
-      "d20": 1.13,
+      "d1": 1.08,
+      "d5": 0.92,
+      "d10": 0.79,
+      "d20": 1.12,
       "d50": 1.43
     },
     "pctOf52wHigh": 68.27,
@@ -6364,7 +6364,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-10",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927922,
+      "_last_rev_attempt_ts": 1790967139,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -7016,7 +7016,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927788,
+      "_last_rev_attempt_ts": 1790967474,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -7927,16 +7927,16 @@
     "price": 66.5,
     "marketCap": 95.92,
     "turnovers": {
-      "d1": 4.67,
-      "d5": 3.47,
+      "d1": 4.65,
+      "d5": 3.46,
       "d10": 3.81,
       "d20": 2.17,
       "d50": 0.98
     },
     "volumes": {
-      "d1": 7.06,
-      "d5": 5.35,
-      "d10": 6.09,
+      "d1": 7.03,
+      "d5": 5.34,
+      "d10": 6.08,
       "d20": 3.57,
       "d50": 1.69
     },
@@ -7974,7 +7974,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928016,
+      "_last_rev_attempt_ts": 1790967192,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -8318,7 +8318,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927916,
+      "_last_rev_attempt_ts": 1790967443,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -10854,17 +10854,17 @@
     "price": 56.2,
     "marketCap": 139.94,
     "turnovers": {
-      "d1": 6.19,
-      "d5": 3.69,
-      "d10": 2.38,
-      "d20": 1.67,
+      "d1": 6.14,
+      "d5": 3.68,
+      "d10": 2.37,
+      "d20": 1.66,
       "d50": 1.63
     },
     "volumes": {
-      "d1": 11.12,
-      "d5": 6.87,
-      "d10": 4.49,
-      "d20": 3.2,
+      "d1": 11.03,
+      "d5": 6.85,
+      "d10": 4.48,
+      "d20": 3.19,
       "d50": 3.19
     },
     "pctOf52wHigh": 87.54,
@@ -10909,7 +10909,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927846,
+      "_last_rev_attempt_ts": 1790967287,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -11510,17 +11510,17 @@
     "price": 123.0,
     "marketCap": 157.46,
     "turnovers": {
-      "d1": 42.71,
-      "d5": 37.14,
-      "d10": 25.57,
-      "d20": 14.25,
-      "d50": 8.06
+      "d1": 42.34,
+      "d5": 37.06,
+      "d10": 25.54,
+      "d20": 14.23,
+      "d50": 8.05
     },
     "volumes": {
-      "d1": 35.89,
-      "d5": 32.24,
-      "d10": 22.68,
-      "d20": 12.93,
+      "d1": 35.58,
+      "d5": 32.18,
+      "d10": 22.65,
+      "d20": 12.91,
       "d50": 7.84
     },
     "pctOf52wHigh": 98.4,
@@ -11563,7 +11563,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927929,
+      "_last_rev_attempt_ts": 1790967292,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -12518,18 +12518,18 @@
     "price": 102.5,
     "marketCap": 610.88,
     "turnovers": {
-      "d1": 7.64,
-      "d5": 5.95,
-      "d10": 5.19,
+      "d1": 7.54,
+      "d5": 5.93,
+      "d10": 5.18,
       "d20": 4.23,
       "d50": 5.66
     },
     "volumes": {
-      "d1": 7.49,
-      "d5": 5.93,
-      "d10": 5.26,
+      "d1": 7.39,
+      "d5": 5.91,
+      "d10": 5.25,
       "d20": 4.28,
-      "d50": 5.5
+      "d50": 5.49
     },
     "pctOf52wHigh": 55.41,
     "pctOf200dHigh": 55.41,
@@ -12573,7 +12573,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927687,
+      "_last_rev_attempt_ts": 1790967404,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -14808,7 +14808,7 @@
     "marketCap": 41.32,
     "turnovers": {
       "d1": 0.53,
-      "d5": 0.97,
+      "d5": 0.96,
       "d10": 1.16,
       "d20": 0.75,
       "d50": 0.45
@@ -14850,7 +14850,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-08",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927955,
+      "_last_rev_attempt_ts": 1790967228,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -15469,14 +15469,14 @@
     "price": 12145.0,
     "marketCap": 11573.83,
     "turnovers": {
-      "d1": 60.25,
-      "d5": 46.81,
-      "d10": 49.55,
-      "d20": 52.46,
-      "d50": 58.23
+      "d1": 56.9,
+      "d5": 46.14,
+      "d10": 49.22,
+      "d20": 52.29,
+      "d50": 58.16
     },
     "volumes": {
-      "d1": 0.5,
+      "d1": 0.47,
       "d5": 0.38,
       "d10": 0.4,
       "d20": 0.41,
@@ -15514,7 +15514,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927918,
+      "_last_rev_attempt_ts": 1790967339,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -15787,15 +15787,15 @@
     "price": 67.8,
     "marketCap": 38.9,
     "turnovers": {
-      "d1": 3.42,
-      "d5": 2.08,
+      "d1": 3.41,
+      "d5": 2.07,
       "d10": 1.6,
       "d20": 1.25,
       "d50": 1.25
     },
     "volumes": {
-      "d1": 5.25,
-      "d5": 3.38,
+      "d1": 5.23,
+      "d5": 3.37,
       "d10": 2.73,
       "d20": 2.26,
       "d50": 2.28
@@ -15832,7 +15832,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927727,
+      "_last_rev_attempt_ts": 1790967186,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -19279,18 +19279,18 @@
     "price": 626.0,
     "marketCap": 3221.91,
     "turnovers": {
-      "d1": 661.95,
-      "d5": 323.05,
-      "d10": 248.84,
-      "d20": 224.88,
-      "d50": 254.67
+      "d1": 643.08,
+      "d5": 319.27,
+      "d10": 246.96,
+      "d20": 223.94,
+      "d50": 254.29
     },
     "volumes": {
-      "d1": 106.14,
-      "d5": 54.49,
-      "d10": 42.71,
-      "d20": 39.34,
-      "d50": 44.23
+      "d1": 103.11,
+      "d5": 53.88,
+      "d10": 42.41,
+      "d20": 39.19,
+      "d50": 44.17
     },
     "pctOf52wHigh": 51.31,
     "pctOf200dHigh": 51.31,
@@ -19332,7 +19332,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927770,
+      "_last_rev_attempt_ts": 1790967190,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -19606,17 +19606,17 @@
     "price": 47.95,
     "marketCap": 248.55,
     "turnovers": {
-      "d1": 0.62,
+      "d1": 0.61,
       "d5": 0.53,
       "d10": 0.68,
       "d20": 0.67,
       "d50": 0.95
     },
     "volumes": {
-      "d1": 1.29,
+      "d1": 1.28,
       "d5": 1.12,
-      "d10": 1.45,
-      "d20": 1.44,
+      "d10": 1.44,
+      "d20": 1.43,
       "d50": 2.1
     },
     "pctOf52wHigh": 74.34,
@@ -19659,7 +19659,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927728,
+      "_last_rev_attempt_ts": 1790967289,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -19940,7 +19940,7 @@
       "d50": 0.32
     },
     "volumes": {
-      "d1": 0.49,
+      "d1": 0.48,
       "d5": 0.67,
       "d10": 0.84,
       "d20": 0.96,
@@ -19990,7 +19990,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927748,
+      "_last_rev_attempt_ts": 1790967440,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -20581,17 +20581,17 @@
     "price": 49.65,
     "marketCap": 182.14,
     "turnovers": {
-      "d1": 7.68,
+      "d1": 7.63,
       "d5": 2.8,
       "d10": 6.72,
       "d20": 8.06,
       "d50": 3.54
     },
     "volumes": {
-      "d1": 15.63,
-      "d5": 5.81,
-      "d10": 13.59,
-      "d20": 16.72,
+      "d1": 15.53,
+      "d5": 5.79,
+      "d10": 13.58,
+      "d20": 16.71,
       "d50": 7.51
     },
     "pctOf52wHigh": 80.86,
@@ -20626,7 +20626,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927914,
+      "_last_rev_attempt_ts": 1790967127,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -20899,18 +20899,18 @@
     "price": 179.0,
     "marketCap": 8055.0,
     "turnovers": {
-      "d1": 133.67,
-      "d5": 111.51,
-      "d10": 142.49,
-      "d20": 171.52,
-      "d50": 217.67
+      "d1": 132.78,
+      "d5": 111.33,
+      "d10": 142.4,
+      "d20": 171.48,
+      "d50": 217.66
     },
     "volumes": {
-      "d1": 74.19,
-      "d5": 63.21,
-      "d10": 81.15,
-      "d20": 97.49,
-      "d50": 126.31
+      "d1": 73.7,
+      "d5": 63.11,
+      "d10": 81.1,
+      "d20": 97.47,
+      "d50": 126.3
     },
     "pctOf52wHigh": 76.66,
     "pctOf200dHigh": 76.66,
@@ -20946,7 +20946,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927799,
+      "_last_rev_attempt_ts": 1790967458,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -22275,7 +22275,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927867,
+      "_last_rev_attempt_ts": 1790967231,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -22548,17 +22548,17 @@
     "price": 45.15,
     "marketCap": 318.87,
     "turnovers": {
-      "d1": 3.27,
-      "d5": 1.73,
+      "d1": 3.24,
+      "d5": 1.72,
       "d10": 1.59,
       "d20": 1.39,
       "d50": 2.27
     },
     "volumes": {
-      "d1": 7.34,
-      "d5": 3.98,
-      "d10": 3.75,
-      "d20": 3.3,
+      "d1": 7.27,
+      "d5": 3.97,
+      "d10": 3.74,
+      "d20": 3.29,
       "d50": 5.4
     },
     "pctOf52wHigh": 54.73,
@@ -22593,7 +22593,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928021,
+      "_last_rev_attempt_ts": 1790967325,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -22866,17 +22866,17 @@
     "price": 1105.0,
     "marketCap": 5778.41,
     "turnovers": {
-      "d1": 78.95,
-      "d5": 129.71,
-      "d10": 119.08,
-      "d20": 91.68,
-      "d50": 92.46
+      "d1": 75.94,
+      "d5": 129.11,
+      "d10": 118.78,
+      "d20": 91.53,
+      "d50": 92.4
     },
     "volumes": {
-      "d1": 7.16,
-      "d5": 11.69,
-      "d10": 11.07,
-      "d20": 8.55,
+      "d1": 6.88,
+      "d5": 11.64,
+      "d10": 11.05,
+      "d20": 8.54,
       "d50": 9.03
     },
     "pctOf52wHigh": 69.94,
@@ -22911,7 +22911,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927814,
+      "_last_rev_attempt_ts": 1790967125,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -23871,18 +23871,18 @@
     "price": 526.0,
     "marketCap": 18148.08,
     "turnovers": {
-      "d1": 192.84,
-      "d5": 168.45,
-      "d10": 225.16,
-      "d20": 249.17,
-      "d50": 338.79
+      "d1": 186.24,
+      "d5": 167.13,
+      "d10": 224.5,
+      "d20": 248.84,
+      "d50": 338.66
     },
     "volumes": {
-      "d1": 36.59,
-      "d5": 32.84,
-      "d10": 43.92,
-      "d20": 49.19,
-      "d50": 69.85
+      "d1": 35.34,
+      "d5": 32.59,
+      "d10": 43.79,
+      "d20": 49.13,
+      "d50": 69.82
     },
     "pctOf52wHigh": 92.44,
     "pctOf200dHigh": 92.44,
@@ -23916,7 +23916,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927783,
+      "_last_rev_attempt_ts": 1790967177,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -24524,7 +24524,7 @@
     },
     "volumes": {
       "d1": 0.31,
-      "d5": 0.28,
+      "d5": 0.27,
       "d10": 0.3,
       "d20": 0.43,
       "d50": 0.91
@@ -24563,7 +24563,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928018,
+      "_last_rev_attempt_ts": 1790967307,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -26471,15 +26471,15 @@
     "price": 290.0,
     "marketCap": 1250.9,
     "turnovers": {
-      "d1": 3.16,
-      "d5": 4.54,
-      "d10": 4.72,
+      "d1": 3.08,
+      "d5": 4.52,
+      "d10": 4.71,
       "d20": 6.01,
-      "d50": 16.38
+      "d50": 16.37
     },
     "volumes": {
-      "d1": 1.09,
-      "d5": 1.58,
+      "d1": 1.06,
+      "d5": 1.57,
       "d10": 1.65,
       "d20": 2.11,
       "d50": 5.73
@@ -26520,7 +26520,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928014,
+      "_last_rev_attempt_ts": 1790967419,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -26794,18 +26794,18 @@
     "price": 4950.0,
     "marketCap": 79392.82,
     "turnovers": {
-      "d1": 220.12,
-      "d5": 343.48,
-      "d10": 374.48,
-      "d20": 351.81,
-      "d50": 332.04
+      "d1": 189.7,
+      "d5": 337.4,
+      "d10": 371.44,
+      "d20": 350.29,
+      "d50": 331.43
     },
     "volumes": {
-      "d1": 4.46,
-      "d5": 6.83,
-      "d10": 7.51,
-      "d20": 7.36,
-      "d50": 7.9
+      "d1": 3.85,
+      "d5": 6.7,
+      "d10": 7.45,
+      "d20": 7.32,
+      "d50": 7.88
     },
     "pctOf52wHigh": 90.33,
     "pctOf200dHigh": 90.33,
@@ -26865,7 +26865,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927849,
+      "_last_rev_attempt_ts": 1790967153,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -27159,7 +27159,7 @@
       "d50": 0.3
     },
     "volumes": {
-      "d1": 1.07,
+      "d1": 1.06,
       "d5": 1.01,
       "d10": 0.94,
       "d20": 0.89,
@@ -27197,7 +27197,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928067,
+      "_last_rev_attempt_ts": 1790967384,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -28160,14 +28160,14 @@
     "price": 126.0,
     "marketCap": 276.03,
     "turnovers": {
-      "d1": 1.42,
+      "d1": 1.41,
       "d5": 1.01,
       "d10": 1.15,
       "d20": 1.2,
       "d50": 1.8
     },
     "volumes": {
-      "d1": 1.14,
+      "d1": 1.13,
       "d5": 0.82,
       "d10": 0.94,
       "d20": 0.99,
@@ -28205,7 +28205,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927800,
+      "_last_rev_attempt_ts": 1790967471,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -29139,11 +29139,11 @@
       "d50": 1.45
     },
     "volumes": {
-      "d1": 2.22,
+      "d1": 2.2,
       "d5": 2.2,
       "d10": 2.28,
       "d20": 2.05,
-      "d50": 3.57
+      "d50": 3.56
     },
     "pctOf52wHigh": 47.53,
     "pctOf200dHigh": 47.53,
@@ -29183,7 +29183,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928059,
+      "_last_rev_attempt_ts": 1790967220,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -31133,7 +31133,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927879,
+      "_last_rev_attempt_ts": 1790967485,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -32708,16 +32708,16 @@
     "price": 92.5,
     "marketCap": 310.53,
     "turnovers": {
-      "d1": 1.31,
+      "d1": 1.28,
       "d5": 0.92,
       "d10": 1.29,
       "d20": 1.0,
       "d50": 1.16
     },
     "volumes": {
-      "d1": 1.42,
+      "d1": 1.39,
       "d5": 1.0,
-      "d10": 1.37,
+      "d10": 1.36,
       "d20": 1.06,
       "d50": 1.22
     },
@@ -32753,7 +32753,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928054,
+      "_last_rev_attempt_ts": 1790967397,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -33358,16 +33358,16 @@
     "price": 240.0,
     "marketCap": 5196.1,
     "turnovers": {
-      "d1": 13.41,
-      "d5": 12.98,
-      "d10": 15.37,
-      "d20": 18.62,
-      "d50": 26.75
+      "d1": 13.17,
+      "d5": 12.93,
+      "d10": 15.35,
+      "d20": 18.61,
+      "d50": 26.74
     },
     "volumes": {
-      "d1": 5.61,
-      "d5": 5.42,
-      "d10": 6.39,
+      "d1": 5.51,
+      "d5": 5.4,
+      "d10": 6.38,
       "d20": 7.87,
       "d50": 11.57
     },
@@ -33403,7 +33403,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927820,
+      "_last_rev_attempt_ts": 1790967335,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -35615,14 +35615,14 @@
     "price": 57.6,
     "marketCap": 922.41,
     "turnovers": {
-      "d1": 2.76,
-      "d5": 2.93,
-      "d10": 3.44,
-      "d20": 3.02,
+      "d1": 2.74,
+      "d5": 2.92,
+      "d10": 3.43,
+      "d20": 3.01,
       "d50": 2.24
     },
     "volumes": {
-      "d1": 4.83,
+      "d1": 4.79,
       "d5": 5.16,
       "d10": 6.1,
       "d20": 5.57,
@@ -35660,7 +35660,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-10",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927771,
+      "_last_rev_attempt_ts": 1790967318,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -38634,7 +38634,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928056,
+      "_last_rev_attempt_ts": 1790967494,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -39243,16 +39243,16 @@
     "price": 92.7,
     "marketCap": 197.77,
     "turnovers": {
-      "d1": 4.23,
-      "d5": 2.47,
+      "d1": 4.16,
+      "d5": 2.45,
       "d10": 1.55,
       "d20": 1.18,
       "d50": 1.16
     },
     "volumes": {
-      "d1": 4.56,
-      "d5": 2.73,
-      "d10": 1.75,
+      "d1": 4.48,
+      "d5": 2.71,
+      "d10": 1.74,
       "d20": 1.34,
       "d50": 1.38
     },
@@ -39288,7 +39288,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927988,
+      "_last_rev_attempt_ts": 1790967457,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -39575,14 +39575,14 @@
     "price": 142.5,
     "marketCap": 236.52,
     "turnovers": {
-      "d1": 1.61,
+      "d1": 1.58,
       "d5": 2.74,
       "d10": 3.53,
-      "d20": 2.19,
+      "d20": 2.18,
       "d50": 1.75
     },
     "volumes": {
-      "d1": 1.13,
+      "d1": 1.11,
       "d5": 1.93,
       "d10": 2.52,
       "d20": 1.58,
@@ -39634,7 +39634,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927739,
+      "_last_rev_attempt_ts": 1790967155,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -39921,17 +39921,17 @@
     "price": 180.5,
     "marketCap": 524.09,
     "turnovers": {
-      "d1": 15.36,
-      "d5": 60.04,
-      "d10": 43.86,
-      "d20": 28.93,
+      "d1": 15.06,
+      "d5": 59.98,
+      "d10": 43.83,
+      "d20": 28.92,
       "d50": 14.94
     },
     "volumes": {
-      "d1": 8.66,
-      "d5": 36.15,
-      "d10": 28.84,
-      "d20": 20.87,
+      "d1": 8.49,
+      "d5": 36.11,
+      "d10": 28.82,
+      "d20": 20.86,
       "d50": 11.75
     },
     "pctOf52wHigh": 99.18,
@@ -39970,7 +39970,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927980,
+      "_last_rev_attempt_ts": 1790967226,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -40257,14 +40257,14 @@
     "price": 312.0,
     "marketCap": 749.02,
     "turnovers": {
-      "d1": 2.29,
+      "d1": 2.24,
       "d5": 2.31,
       "d10": 2.02,
       "d20": 2.64,
       "d50": 3.43
     },
     "volumes": {
-      "d1": 0.73,
+      "d1": 0.72,
       "d5": 0.75,
       "d10": 0.64,
       "d20": 0.82,
@@ -41257,16 +41257,16 @@
     "price": 300.0,
     "marketCap": 708.65,
     "turnovers": {
-      "d1": 11.51,
-      "d5": 4.74,
-      "d10": 3.02,
-      "d20": 3.03,
+      "d1": 11.24,
+      "d5": 4.68,
+      "d10": 2.99,
+      "d20": 3.02,
       "d50": 3.26
     },
     "volumes": {
-      "d1": 3.93,
-      "d5": 1.66,
-      "d10": 1.07,
+      "d1": 3.84,
+      "d5": 1.64,
+      "d10": 1.06,
       "d20": 1.08,
       "d50": 1.15
     },
@@ -42601,7 +42601,7 @@
       "d50": 0.17
     },
     "volumes": {
-      "d1": 0.61,
+      "d1": 0.6,
       "d5": 0.73,
       "d10": 0.77,
       "d20": 0.61,
@@ -42643,7 +42643,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-10",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927899,
+      "_last_rev_attempt_ts": 1790967368,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -43256,7 +43256,7 @@
       "d50": 0.1
     },
     "volumes": {
-      "d1": 0.42,
+      "d1": 0.41,
       "d5": 0.4,
       "d10": 0.73,
       "d20": 0.59,
@@ -43298,7 +43298,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927970,
+      "_last_rev_attempt_ts": 1790967173,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -43591,17 +43591,17 @@
     "price": 38.7,
     "marketCap": 119.08,
     "turnovers": {
-      "d1": 0.32,
-      "d5": 0.38,
+      "d1": 0.31,
+      "d5": 0.37,
       "d10": 0.38,
       "d20": 0.41,
       "d50": 0.59
     },
     "volumes": {
-      "d1": 0.82,
+      "d1": 0.81,
       "d5": 0.98,
       "d10": 0.99,
-      "d20": 1.07,
+      "d20": 1.06,
       "d50": 1.51
     },
     "pctOf52wHigh": 71.01,
@@ -43670,7 +43670,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928046,
+      "_last_rev_attempt_ts": 1790967444,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -43957,17 +43957,17 @@
     "price": 2925.0,
     "marketCap": 2976.74,
     "turnovers": {
-      "d1": 132.94,
-      "d5": 58.83,
-      "d10": 74.81,
-      "d20": 92.02,
-      "d50": 91.27
+      "d1": 122.71,
+      "d5": 56.79,
+      "d10": 73.78,
+      "d20": 91.51,
+      "d50": 91.07
     },
     "volumes": {
-      "d1": 4.65,
-      "d5": 2.13,
-      "d10": 2.69,
-      "d20": 3.19,
+      "d1": 4.29,
+      "d5": 2.06,
+      "d10": 2.65,
+      "d20": 3.18,
       "d50": 3.42
     },
     "pctOf52wHigh": 81.25,
@@ -44004,7 +44004,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927767,
+      "_last_rev_attempt_ts": 1790967267,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -44293,16 +44293,16 @@
     "price": 77.3,
     "marketCap": 174.88,
     "turnovers": {
-      "d1": 19.09,
-      "d5": 13.55,
-      "d10": 8.77,
-      "d20": 5.84,
+      "d1": 18.98,
+      "d5": 13.52,
+      "d10": 8.76,
+      "d20": 5.83,
       "d50": 5.69
     },
     "volumes": {
-      "d1": 24.79,
-      "d5": 18.44,
-      "d10": 12.34,
+      "d1": 24.64,
+      "d5": 18.41,
+      "d10": 12.33,
       "d20": 8.55,
       "d50": 8.44
     },
@@ -44350,7 +44350,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927677,
+      "_last_rev_attempt_ts": 1790967435,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -45337,7 +45337,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927994,
+      "_last_rev_attempt_ts": 1790967479,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -51131,16 +51131,16 @@
     "price": 50.7,
     "marketCap": 27.89,
     "turnovers": {
-      "d1": 9.24,
+      "d1": 9.23,
       "d5": 3.95,
       "d10": 2.78,
       "d20": 2.18,
       "d50": 1.96
     },
     "volumes": {
-      "d1": 18.62,
+      "d1": 18.59,
       "d5": 8.23,
-      "d10": 5.91,
+      "d10": 5.9,
       "d20": 4.76,
       "d50": 4.49
     },
@@ -51186,7 +51186,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927685,
+      "_last_rev_attempt_ts": 1790967138,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -53100,14 +53100,14 @@
     "price": 114.5,
     "marketCap": 73.24,
     "turnovers": {
-      "d1": 0.22,
+      "d1": 0.21,
       "d5": 0.5,
       "d10": 0.41,
       "d20": 0.35,
       "d50": 1.1
     },
     "volumes": {
-      "d1": 0.19,
+      "d1": 0.18,
       "d5": 0.42,
       "d10": 0.35,
       "d20": 0.31,
@@ -53143,7 +53143,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927959,
+      "_last_rev_attempt_ts": 1790967159,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -55029,18 +55029,18 @@
     "price": 170.5,
     "marketCap": 298.84,
     "turnovers": {
-      "d1": 26.51,
-      "d5": 25.54,
-      "d10": 45.15,
-      "d20": 30.76,
-      "d50": 20.56
+      "d1": 26.26,
+      "d5": 25.49,
+      "d10": 45.13,
+      "d20": 30.75,
+      "d50": 20.55
     },
     "volumes": {
-      "d1": 15.25,
-      "d5": 14.37,
-      "d10": 27.31,
+      "d1": 15.1,
+      "d5": 14.34,
+      "d10": 27.29,
       "d20": 20.13,
-      "d50": 15.34
+      "d50": 15.33
     },
     "pctOf52wHigh": 89.5,
     "pctOf200dHigh": 89.5,
@@ -55078,7 +55078,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928074,
+      "_last_rev_attempt_ts": 1790967299,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -55352,14 +55352,14 @@
     "price": 45.0,
     "marketCap": 30.81,
     "turnovers": {
-      "d1": 2.18,
+      "d1": 2.17,
       "d5": 1.66,
       "d10": 1.09,
       "d20": 0.61,
       "d50": 0.39
     },
     "volumes": {
-      "d1": 4.85,
+      "d1": 4.83,
       "d5": 3.83,
       "d10": 2.6,
       "d20": 1.48,
@@ -55403,7 +55403,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927843,
+      "_last_rev_attempt_ts": 1790967406,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -56737,7 +56737,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927758,
+      "_last_rev_attempt_ts": 1790967468,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -57053,7 +57053,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927765,
+      "_last_rev_attempt_ts": 1790967445,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -58708,7 +58708,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927784,
+      "_last_rev_attempt_ts": 1790967347,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -59348,7 +59348,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927836,
+      "_last_rev_attempt_ts": 1790967254,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -62550,16 +62550,16 @@
     "price": 203.5,
     "marketCap": 174.08,
     "turnovers": {
-      "d1": 2.95,
-      "d5": 2.32,
-      "d10": 2.07,
-      "d20": 1.8,
+      "d1": 2.89,
+      "d5": 2.31,
+      "d10": 2.06,
+      "d20": 1.79,
       "d50": 3.73
     },
     "volumes": {
-      "d1": 1.49,
+      "d1": 1.46,
       "d5": 1.23,
-      "d10": 1.07,
+      "d10": 1.06,
       "d20": 0.88,
       "d50": 1.55
     },
@@ -62597,7 +62597,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927847,
+      "_last_rev_attempt_ts": 1790967261,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -62648,7 +62648,7 @@
           "yoy": 22.75
         }
       ],
-      "_last_fin_attempt_ts": 1790927849,
+      "_last_fin_attempt_ts": 1790967262,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -63515,17 +63515,17 @@
     "price": 41.85,
     "marketCap": 189.1,
     "turnovers": {
-      "d1": 5.66,
+      "d1": 5.63,
       "d5": 4.76,
       "d10": 3.96,
       "d20": 2.56,
       "d50": 2.21
     },
     "volumes": {
-      "d1": 13.51,
-      "d5": 11.66,
-      "d10": 9.95,
-      "d20": 6.59,
+      "d1": 13.44,
+      "d5": 11.65,
+      "d10": 9.94,
+      "d20": 6.58,
       "d50": 5.97
     },
     "pctOf52wHigh": 75.0,
@@ -63562,7 +63562,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927678,
+      "_last_rev_attempt_ts": 1790967469,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -63835,17 +63835,17 @@
     "price": 46.4,
     "marketCap": 46.59,
     "turnovers": {
-      "d1": 4.63,
+      "d1": 4.62,
       "d5": 9.28,
       "d10": 9.46,
       "d20": 5.21,
       "d50": 2.55
     },
     "volumes": {
-      "d1": 9.86,
+      "d1": 9.84,
       "d5": 19.94,
-      "d10": 21.1,
-      "d20": 11.94,
+      "d10": 21.09,
+      "d20": 11.93,
       "d50": 6.18
     },
     "pctOf52wHigh": 77.2,
@@ -63882,7 +63882,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927962,
+      "_last_rev_attempt_ts": 1790967471,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -64488,16 +64488,16 @@
     "price": 183.5,
     "marketCap": 222.5,
     "turnovers": {
-      "d1": 2.17,
-      "d5": 2.51,
+      "d1": 2.11,
+      "d5": 2.5,
       "d10": 2.13,
-      "d20": 2.07,
+      "d20": 2.06,
       "d50": 1.35
     },
     "volumes": {
-      "d1": 1.17,
-      "d5": 1.37,
-      "d10": 1.17,
+      "d1": 1.14,
+      "d5": 1.36,
+      "d10": 1.16,
       "d20": 1.15,
       "d50": 0.79
     },
@@ -64541,7 +64541,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928072,
+      "_last_rev_attempt_ts": 1790967498,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -64873,7 +64873,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927717,
+      "_last_rev_attempt_ts": 1790967501,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -65161,14 +65161,14 @@
     "price": 107.5,
     "marketCap": 107.83,
     "turnovers": {
-      "d1": 0.21,
+      "d1": 0.2,
       "d5": 0.15,
       "d10": 0.15,
       "d20": 0.15,
       "d50": 0.24
     },
     "volumes": {
-      "d1": 0.2,
+      "d1": 0.19,
       "d5": 0.14,
       "d10": 0.15,
       "d20": 0.14,
@@ -65214,7 +65214,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927856,
+      "_last_rev_attempt_ts": 1790967141,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -67096,17 +67096,17 @@
     "price": 187.0,
     "marketCap": 3512.5,
     "turnovers": {
-      "d1": 25.86,
-      "d5": 37.91,
-      "d10": 40.0,
-      "d20": 28.26,
-      "d50": 29.08
+      "d1": 25.43,
+      "d5": 37.82,
+      "d10": 39.95,
+      "d20": 28.24,
+      "d50": 29.07
     },
     "volumes": {
-      "d1": 13.97,
-      "d5": 21.05,
-      "d10": 22.83,
-      "d20": 16.73,
+      "d1": 13.74,
+      "d5": 21.01,
+      "d10": 22.81,
+      "d20": 16.72,
       "d50": 18.32
     },
     "pctOf52wHigh": 83.86,
@@ -67141,7 +67141,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927939,
+      "_last_rev_attempt_ts": 1790967510,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -68069,17 +68069,17 @@
     "price": 102.0,
     "marketCap": 268.76,
     "turnovers": {
-      "d1": 22.1,
-      "d5": 11.24,
-      "d10": 10.81,
-      "d20": 10.68,
-      "d50": 12.08
+      "d1": 21.88,
+      "d5": 11.2,
+      "d10": 10.79,
+      "d20": 10.67,
+      "d50": 12.07
     },
     "volumes": {
-      "d1": 21.92,
-      "d5": 11.49,
-      "d10": 11.25,
-      "d20": 11.4,
+      "d1": 21.7,
+      "d5": 11.44,
+      "d10": 11.23,
+      "d20": 11.38,
       "d50": 13.21
     },
     "pctOf52wHigh": 70.83,
@@ -68120,7 +68120,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927926,
+      "_last_rev_attempt_ts": 1790967185,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -70089,7 +70089,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928073,
+      "_last_rev_attempt_ts": 1790967415,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -71361,7 +71361,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927827,
+      "_last_rev_attempt_ts": 1790967500,
       "revenueYoY": [
         {
           "date": "2025-07",
@@ -71651,7 +71651,7 @@
       "d50": 1.08
     },
     "volumes": {
-      "d1": 2.87,
+      "d1": 2.84,
       "d5": 3.93,
       "d10": 4.79,
       "d20": 5.28,
@@ -71689,7 +71689,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928040,
+      "_last_rev_attempt_ts": 1790967437,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -72017,7 +72017,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927881,
+      "_last_rev_attempt_ts": 1790967362,
       "revenueYoY": [
         {
           "date": "2025-08",
@@ -73932,7 +73932,7 @@
       "d50": 0.07
     },
     "volumes": {
-      "d1": 0.12,
+      "d1": 0.11,
       "d5": 0.14,
       "d10": 0.13,
       "d20": 0.14,
@@ -73988,7 +73988,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-08",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927703,
+      "_last_rev_attempt_ts": 1790967493,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -74579,18 +74579,18 @@
     "price": 76.7,
     "marketCap": 115.14,
     "turnovers": {
-      "d1": 3.58,
-      "d5": 1.69,
+      "d1": 3.56,
+      "d5": 1.68,
       "d10": 1.04,
       "d20": 0.74,
       "d50": 0.93
     },
     "volumes": {
-      "d1": 4.71,
-      "d5": 2.25,
+      "d1": 4.68,
+      "d5": 2.24,
       "d10": 1.41,
       "d20": 1.01,
-      "d50": 1.24
+      "d50": 1.23
     },
     "pctOf52wHigh": 62.36,
     "pctOf200dHigh": 62.36,
@@ -74624,7 +74624,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927750,
+      "_last_rev_attempt_ts": 1790967238,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -74904,7 +74904,7 @@
       "d50": 0.79
     },
     "volumes": {
-      "d1": 1.11,
+      "d1": 1.1,
       "d5": 1.0,
       "d10": 1.27,
       "d20": 1.47,
@@ -74942,7 +74942,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927823,
+      "_last_rev_attempt_ts": 1790967489,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -75215,17 +75215,17 @@
     "price": 1355.0,
     "marketCap": 1331.46,
     "turnovers": {
-      "d1": 32.71,
-      "d5": 34.79,
-      "d10": 25.16,
-      "d20": 26.38,
-      "d50": 34.9
+      "d1": 30.55,
+      "d5": 34.36,
+      "d10": 24.94,
+      "d20": 26.27,
+      "d50": 34.86
     },
     "volumes": {
-      "d1": 2.44,
-      "d5": 2.66,
-      "d10": 1.96,
-      "d20": 2.03,
+      "d1": 2.27,
+      "d5": 2.63,
+      "d10": 1.95,
+      "d20": 2.02,
       "d50": 2.85
     },
     "pctOf52wHigh": 90.94,
@@ -75260,7 +75260,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927845,
+      "_last_rev_attempt_ts": 1790967237,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -75547,16 +75547,16 @@
     "price": 63.2,
     "marketCap": 145.61,
     "turnovers": {
-      "d1": 2.86,
+      "d1": 2.84,
       "d5": 1.31,
-      "d10": 1.08,
+      "d10": 1.07,
       "d20": 0.78,
       "d50": 1.19
     },
     "volumes": {
-      "d1": 4.61,
-      "d5": 2.17,
-      "d10": 1.82,
+      "d1": 4.58,
+      "d5": 2.16,
+      "d10": 1.81,
       "d20": 1.33,
       "d50": 2.07
     },
@@ -75600,7 +75600,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928063,
+      "_last_rev_attempt_ts": 1790967398,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -79190,17 +79190,17 @@
     "price": 217.0,
     "marketCap": 634.5,
     "turnovers": {
-      "d1": 13.47,
-      "d5": 15.73,
-      "d10": 16.34,
-      "d20": 10.72,
+      "d1": 13.19,
+      "d5": 15.68,
+      "d10": 16.31,
+      "d20": 10.7,
       "d50": 10.69
     },
     "volumes": {
-      "d1": 6.23,
-      "d5": 7.3,
-      "d10": 7.76,
-      "d20": 5.21,
+      "d1": 6.1,
+      "d5": 7.27,
+      "d10": 7.75,
+      "d20": 5.2,
       "d50": 5.72
     },
     "pctOf52wHigh": 85.27,
@@ -79241,7 +79241,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927787,
+      "_last_rev_attempt_ts": 1790967202,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -81518,17 +81518,17 @@
     "price": 92.9,
     "marketCap": 313.95,
     "turnovers": {
-      "d1": 18.64,
-      "d5": 24.46,
-      "d10": 17.17,
-      "d20": 9.36,
+      "d1": 18.52,
+      "d5": 24.43,
+      "d10": 17.15,
+      "d20": 9.35,
       "d50": 5.37
     },
     "volumes": {
-      "d1": 20.41,
-      "d5": 27.27,
-      "d10": 20.21,
-      "d20": 11.27,
+      "d1": 20.29,
+      "d5": 27.24,
+      "d10": 20.19,
+      "d20": 11.26,
       "d50": 6.94
     },
     "pctOf52wHigh": 97.07,
@@ -81563,7 +81563,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927714,
+      "_last_rev_attempt_ts": 1790967387,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -82169,14 +82169,14 @@
     "price": 49.9,
     "marketCap": 98.34,
     "turnovers": {
-      "d1": 0.97,
+      "d1": 0.96,
       "d5": 0.56,
       "d10": 0.43,
       "d20": 0.35,
       "d50": 0.42
     },
     "volumes": {
-      "d1": 1.96,
+      "d1": 1.94,
       "d5": 1.14,
       "d10": 0.89,
       "d20": 0.75,
@@ -82220,7 +82220,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927936,
+      "_last_rev_attempt_ts": 1790967174,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -82823,17 +82823,17 @@
     "price": 1000.0,
     "marketCap": 815.99,
     "turnovers": {
-      "d1": 58.02,
-      "d5": 33.31,
-      "d10": 29.01,
-      "d20": 34.04,
-      "d50": 29.21
+      "d1": 55.8,
+      "d5": 32.87,
+      "d10": 28.79,
+      "d20": 33.93,
+      "d50": 29.16
     },
     "volumes": {
-      "d1": 5.91,
-      "d5": 3.47,
-      "d10": 3.03,
-      "d20": 3.55,
+      "d1": 5.68,
+      "d5": 3.42,
+      "d10": 3.01,
+      "d20": 3.53,
       "d50": 3.29
     },
     "pctOf52wHigh": 76.63,
@@ -82872,7 +82872,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927749,
+      "_last_rev_attempt_ts": 1790967391,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -83820,14 +83820,14 @@
     "price": 50.8,
     "marketCap": 155.99,
     "turnovers": {
-      "d1": 0.41,
+      "d1": 0.4,
       "d5": 0.36,
       "d10": 0.45,
       "d20": 0.35,
       "d50": 0.33
     },
     "volumes": {
-      "d1": 0.8,
+      "d1": 0.79,
       "d5": 0.69,
       "d10": 0.87,
       "d20": 0.69,
@@ -83865,7 +83865,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927891,
+      "_last_rev_attempt_ts": 1790967131,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -85117,16 +85117,16 @@
     "price": 143.5,
     "marketCap": 243.92,
     "turnovers": {
-      "d1": 5.77,
-      "d5": 7.28,
+      "d1": 5.74,
+      "d5": 7.27,
       "d10": 7.3,
-      "d20": 5.88,
+      "d20": 5.87,
       "d50": 2.85
     },
     "volumes": {
-      "d1": 3.98,
+      "d1": 3.96,
       "d5": 5.18,
-      "d10": 5.2,
+      "d10": 5.19,
       "d20": 4.51,
       "d50": 2.37
     },
@@ -85166,8 +85166,8 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790948645,
-      "_last_fin_attempt_ts": 1790948647,
+      "_last_rev_attempt_ts": 1790967487,
+      "_last_fin_attempt_ts": 1790967488,
       "grossMarginYoY": [],
       "operatingMarginYoY": [],
       "epsYoY": [],
@@ -85922,15 +85922,15 @@
     "price": 741.0,
     "marketCap": 989.58,
     "turnovers": {
-      "d1": 9.8,
-      "d5": 9.66,
-      "d10": 6.81,
-      "d20": 4.65,
-      "d50": 4.52
+      "d1": 9.36,
+      "d5": 9.57,
+      "d10": 6.76,
+      "d20": 4.63,
+      "d50": 4.51
     },
     "volumes": {
-      "d1": 1.32,
-      "d5": 1.37,
+      "d1": 1.26,
+      "d5": 1.36,
       "d10": 0.99,
       "d20": 0.7,
       "d50": 0.7
@@ -85967,7 +85967,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927738,
+      "_last_rev_attempt_ts": 1790967156,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -88853,16 +88853,16 @@
     "price": 2310.0,
     "marketCap": 1583.6,
     "turnovers": {
-      "d1": 43.03,
-      "d5": 40.25,
-      "d10": 42.36,
-      "d20": 31.14,
-      "d50": 33.59
+      "d1": 40.97,
+      "d5": 39.83,
+      "d10": 42.15,
+      "d20": 31.03,
+      "d50": 33.55
     },
     "volumes": {
-      "d1": 1.85,
-      "d5": 1.64,
-      "d10": 1.74,
+      "d1": 1.76,
+      "d5": 1.62,
+      "d10": 1.73,
       "d20": 1.33,
       "d50": 1.68
     },
@@ -88898,7 +88898,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927857,
+      "_last_rev_attempt_ts": 1790967176,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -90517,16 +90517,16 @@
     "price": 5580.0,
     "marketCap": 10040.09,
     "turnovers": {
-      "d1": 25.3,
-      "d5": 39.45,
-      "d10": 65.77,
-      "d20": 55.92,
-      "d50": 45.73
+      "d1": 21.91,
+      "d5": 38.77,
+      "d10": 65.43,
+      "d20": 55.75,
+      "d50": 45.66
     },
     "volumes": {
-      "d1": 0.46,
-      "d5": 0.7,
-      "d10": 1.09,
+      "d1": 0.4,
+      "d5": 0.69,
+      "d10": 1.08,
       "d20": 0.9,
       "d50": 0.74
     },
@@ -90562,7 +90562,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790948643,
+      "_last_rev_attempt_ts": 1790967285,
       "_last_fin_attempt_ts": 1790841312,
       "grossMarginYoY": [
         {
@@ -91459,18 +91459,18 @@
     "price": 1460.0,
     "marketCap": 9434.02,
     "turnovers": {
-      "d1": 241.17,
-      "d5": 191.87,
-      "d10": 168.38,
-      "d20": 137.33,
-      "d50": 136.82
+      "d1": 233.93,
+      "d5": 190.42,
+      "d10": 167.66,
+      "d20": 136.97,
+      "d50": 136.68
     },
     "volumes": {
-      "d1": 16.69,
-      "d5": 14.24,
-      "d10": 13.52,
-      "d20": 11.67,
-      "d50": 11.81
+      "d1": 16.19,
+      "d5": 14.14,
+      "d10": 13.47,
+      "d20": 11.64,
+      "d50": 11.8
     },
     "pctOf52wHigh": 98.65,
     "pctOf200dHigh": 98.65,
@@ -91510,7 +91510,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928015,
+      "_last_rev_attempt_ts": 1790967345,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -91783,16 +91783,16 @@
     "price": 141.5,
     "marketCap": 261.52,
     "turnovers": {
-      "d1": 7.58,
-      "d5": 20.73,
+      "d1": 7.51,
+      "d5": 20.72,
       "d10": 19.04,
-      "d20": 16.75,
+      "d20": 16.74,
       "d50": 8.23
     },
     "volumes": {
-      "d1": 5.31,
-      "d5": 14.44,
-      "d10": 13.69,
+      "d1": 5.26,
+      "d5": 14.43,
+      "d10": 13.68,
       "d20": 12.82,
       "d50": 6.66
     },
@@ -91830,7 +91830,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927870,
+      "_last_rev_attempt_ts": 1790967475,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -93496,7 +93496,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927829,
+      "_last_rev_attempt_ts": 1790967460,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -94756,17 +94756,17 @@
     "price": 2095.0,
     "marketCap": 4633.41,
     "turnovers": {
-      "d1": 45.74,
-      "d5": 54.51,
-      "d10": 81.11,
-      "d20": 67.38,
-      "d50": 88.77
+      "d1": 40.36,
+      "d5": 53.44,
+      "d10": 80.58,
+      "d20": 67.11,
+      "d50": 88.67
     },
     "volumes": {
-      "d1": 2.17,
-      "d5": 2.56,
-      "d10": 3.77,
-      "d20": 3.21,
+      "d1": 1.92,
+      "d5": 2.5,
+      "d10": 3.75,
+      "d20": 3.2,
       "d50": 4.39
     },
     "pctOf52wHigh": 72.74,
@@ -94823,7 +94823,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927985,
+      "_last_rev_attempt_ts": 1790967161,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -95162,7 +95162,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928029,
+      "_last_rev_attempt_ts": 1790967369,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -95449,18 +95449,18 @@
     "price": 519.0,
     "marketCap": 1310.93,
     "turnovers": {
-      "d1": 104.74,
-      "d5": 63.23,
-      "d10": 51.28,
-      "d20": 55.27,
-      "d50": 79.15
+      "d1": 101.56,
+      "d5": 62.6,
+      "d10": 50.96,
+      "d20": 55.11,
+      "d50": 79.08
     },
     "volumes": {
-      "d1": 20.07,
-      "d5": 12.38,
-      "d10": 10.21,
-      "d20": 11.02,
-      "d50": 17.93
+      "d1": 19.46,
+      "d5": 12.25,
+      "d10": 10.15,
+      "d20": 10.99,
+      "d50": 17.92
     },
     "pctOf52wHigh": 68.47,
     "pctOf200dHigh": 68.47,
@@ -95494,7 +95494,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927789,
+      "_last_rev_attempt_ts": 1790967353,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -97061,14 +97061,14 @@
     "price": 91.1,
     "marketCap": 97.02,
     "turnovers": {
-      "d1": 0.96,
+      "d1": 0.95,
       "d5": 0.73,
       "d10": 1.08,
       "d20": 1.49,
       "d50": 2.88
     },
     "volumes": {
-      "d1": 1.05,
+      "d1": 1.04,
       "d5": 0.79,
       "d10": 1.17,
       "d20": 1.63,
@@ -97106,7 +97106,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927776,
+      "_last_rev_attempt_ts": 1790967265,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -98605,7 +98605,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927830,
+      "_last_rev_attempt_ts": 1790967281,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -99831,14 +99831,14 @@
     "price": 91.4,
     "marketCap": 225.66,
     "turnovers": {
-      "d1": 0.58,
+      "d1": 0.56,
       "d5": 0.68,
       "d10": 1.02,
       "d20": 1.4,
       "d50": 1.77
     },
     "volumes": {
-      "d1": 0.63,
+      "d1": 0.61,
       "d5": 0.74,
       "d10": 1.1,
       "d20": 1.54,
@@ -99876,7 +99876,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927796,
+      "_last_rev_attempt_ts": 1790967496,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -100477,18 +100477,18 @@
     "price": 25.35,
     "marketCap": 1957.83,
     "turnovers": {
-      "d1": 6.42,
-      "d5": 13.12,
+      "d1": 6.39,
+      "d5": 13.11,
       "d10": 11.97,
       "d20": 8.67,
       "d50": 10.28
     },
     "volumes": {
-      "d1": 25.23,
-      "d5": 50.96,
-      "d10": 47.1,
+      "d1": 25.09,
+      "d5": 50.93,
+      "d10": 47.09,
       "d20": 34.56,
-      "d50": 41.69
+      "d50": 41.68
     },
     "pctOf52wHigh": 94.06,
     "pctOf200dHigh": 94.06,
@@ -100530,7 +100530,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927875,
+      "_last_rev_attempt_ts": 1790967400,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -100581,7 +100581,7 @@
           "yoy": 10.65
         }
       ],
-      "_last_fin_attempt_ts": 1790927877,
+      "_last_fin_attempt_ts": 1790967401,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -102363,7 +102363,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927668,
+      "_last_rev_attempt_ts": 1790967491,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -106575,16 +106575,16 @@
     "price": 38.55,
     "marketCap": 302.72,
     "turnovers": {
-      "d1": 1.12,
+      "d1": 1.11,
       "d5": 1.48,
       "d10": 1.29,
       "d20": 1.11,
       "d50": 1.25
     },
     "volumes": {
-      "d1": 2.9,
-      "d5": 3.85,
-      "d10": 3.37,
+      "d1": 2.87,
+      "d5": 3.84,
+      "d10": 3.36,
       "d20": 2.92,
       "d50": 3.38
     },
@@ -106624,7 +106624,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927840,
+      "_last_rev_attempt_ts": 1790967182,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -107554,15 +107554,15 @@
     "price": 27.35,
     "marketCap": 50.57,
     "turnovers": {
-      "d1": 1.26,
+      "d1": 1.25,
       "d5": 0.88,
       "d10": 0.63,
       "d20": 0.46,
       "d50": 0.26
     },
     "volumes": {
-      "d1": 4.63,
-      "d5": 3.36,
+      "d1": 4.59,
+      "d5": 3.35,
       "d10": 2.47,
       "d20": 1.85,
       "d50": 1.11
@@ -107601,7 +107601,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927976,
+      "_last_rev_attempt_ts": 1790967447,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -107942,7 +107942,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927686,
+      "_last_rev_attempt_ts": 1790967502,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -109504,16 +109504,16 @@
     "price": 47.55,
     "marketCap": 79.43,
     "turnovers": {
-      "d1": 5.37,
-      "d5": 6.72,
+      "d1": 5.34,
+      "d5": 6.71,
       "d10": 3.98,
-      "d20": 2.19,
+      "d20": 2.18,
       "d50": 1.3
     },
     "volumes": {
-      "d1": 11.35,
-      "d5": 14.6,
-      "d10": 8.85,
+      "d1": 11.29,
+      "d5": 14.59,
+      "d10": 8.84,
       "d20": 4.94,
       "d50": 3.1
     },
@@ -109549,7 +109549,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927741,
+      "_last_rev_attempt_ts": 1790967240,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -110201,7 +110201,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927931,
+      "_last_rev_attempt_ts": 1790967354,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -110474,17 +110474,17 @@
     "price": 38.4,
     "marketCap": 107.72,
     "turnovers": {
-      "d1": 3.93,
+      "d1": 3.92,
       "d5": 8.94,
       "d10": 5.79,
       "d20": 3.18,
       "d50": 1.62
     },
     "volumes": {
-      "d1": 10.2,
+      "d1": 10.18,
       "d5": 24.61,
       "d10": 17.24,
-      "d20": 9.84,
+      "d20": 9.83,
       "d50": 5.58
     },
     "pctOf52wHigh": 96.0,
@@ -110521,7 +110521,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927973,
+      "_last_rev_attempt_ts": 1790967236,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -110853,7 +110853,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927905,
+      "_last_rev_attempt_ts": 1790967402,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -112116,18 +112116,18 @@
     "price": 28.15,
     "marketCap": 232.44,
     "turnovers": {
-      "d1": 1.38,
+      "d1": 1.37,
       "d5": 0.73,
       "d10": 0.93,
       "d20": 1.12,
       "d50": 1.65
     },
     "volumes": {
-      "d1": 4.87,
+      "d1": 4.85,
       "d5": 2.6,
       "d10": 3.33,
       "d20": 4.14,
-      "d50": 6.21
+      "d50": 6.2
     },
     "pctOf52wHigh": 95.59,
     "pctOf200dHigh": 95.59,
@@ -112163,7 +112163,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927978,
+      "_last_rev_attempt_ts": 1790967257,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -112444,7 +112444,7 @@
     },
     "volumes": {
       "d1": 1.84,
-      "d5": 5.22,
+      "d5": 5.23,
       "d10": 5.91,
       "d20": 4.63,
       "d50": 3.96
@@ -112481,7 +112481,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927948,
+      "_last_rev_attempt_ts": 1790967375,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -112761,8 +112761,8 @@
       "d50": 0.55
     },
     "volumes": {
-      "d1": 1.94,
-      "d5": 2.28,
+      "d1": 1.96,
+      "d5": 2.29,
       "d10": 2.21,
       "d20": 2.0,
       "d50": 2.87
@@ -112797,7 +112797,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927851,
+      "_last_rev_attempt_ts": 1790967132,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -113092,7 +113092,7 @@
       "d50": 0.03
     },
     "volumes": {
-      "d1": 0.19,
+      "d1": 0.18,
       "d5": 0.13,
       "d10": 0.18,
       "d20": 0.11,
@@ -113136,7 +113136,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928071,
+      "_last_rev_attempt_ts": 1790967130,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -113423,18 +113423,18 @@
     "price": 161.5,
     "marketCap": 20311.83,
     "turnovers": {
-      "d1": 160.44,
-      "d5": 180.97,
-      "d10": 264.96,
-      "d20": 254.52,
-      "d50": 223.04
+      "d1": 158.88,
+      "d5": 180.66,
+      "d10": 264.8,
+      "d20": 254.44,
+      "d50": 223.0
     },
     "volumes": {
-      "d1": 99.96,
-      "d5": 115.63,
-      "d10": 169.46,
-      "d20": 172.97,
-      "d50": 169.18
+      "d1": 98.99,
+      "d5": 115.43,
+      "d10": 169.36,
+      "d20": 172.92,
+      "d50": 169.16
     },
     "pctOf52wHigh": 87.06,
     "pctOf200dHigh": 87.06,
@@ -113468,7 +113468,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-05",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927859,
+      "_last_rev_attempt_ts": 1790967476,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -114083,32 +114083,32 @@
     "marketCap": 133.12,
     "turnovers": {
       "d1": 0.0,
-      "d5": 0.55,
-      "d10": 0.52,
-      "d20": 0.49,
-      "d50": 0.63
+      "d5": 0.46,
+      "d10": 0.49,
+      "d20": 0.47,
+      "d50": 0.62
     },
     "volumes": {
       "d1": 0.0,
-      "d5": 4.58,
-      "d10": 4.31,
-      "d20": 4.07,
-      "d50": 5.32
+      "d5": 3.83,
+      "d10": 4.07,
+      "d20": 3.95,
+      "d50": 5.24
     },
     "pctOf52wHigh": 83.93,
     "pctOf200dHigh": 83.93,
-    "ma10": 11.99,
+    "ma10": 12.04,
     "ma20": 11.94,
-    "ma60": 11.83,
+    "ma60": 11.82,
     "ma20Trend": "down",
     "dailyChangePct": 0.0,
     "date": "2026-09-24",
     "threeMonthReturn": 20.63,
     "returns": {
-      "w1": 1.33,
+      "w1": 1.83,
       "m1": 0.41,
-      "m3": -4.75,
-      "m6": -7.21,
+      "m3": -0.89,
+      "m6": -6.79,
       "y1": 20.63
     },
     "industry": "光電業",
@@ -114135,7 +114135,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927953,
+      "_last_rev_attempt_ts": 1790967442,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -114409,14 +114409,14 @@
     "price": 45.0,
     "marketCap": 296.53,
     "turnovers": {
-      "d1": 1.38,
+      "d1": 1.37,
       "d5": 1.04,
       "d10": 1.32,
       "d20": 1.0,
       "d50": 1.13
     },
     "volumes": {
-      "d1": 3.07,
+      "d1": 3.05,
       "d5": 2.34,
       "d10": 2.98,
       "d20": 2.3,
@@ -114462,7 +114462,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928002,
+      "_last_rev_attempt_ts": 1790967458,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -115080,15 +115080,15 @@
     "price": 51.3,
     "marketCap": 80.78,
     "turnovers": {
-      "d1": 7.87,
+      "d1": 7.83,
       "d5": 10.66,
       "d10": 6.41,
       "d20": 3.67,
       "d50": 2.08
     },
     "volumes": {
-      "d1": 15.5,
-      "d5": 21.53,
+      "d1": 15.43,
+      "d5": 21.52,
       "d10": 13.28,
       "d20": 7.81,
       "d50": 4.71
@@ -115125,7 +115125,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927708,
+      "_last_rev_attempt_ts": 1790967438,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -115732,15 +115732,15 @@
     "price": 97.1,
     "marketCap": 1619.58,
     "turnovers": {
-      "d1": 3.32,
-      "d5": 3.74,
+      "d1": 3.29,
+      "d5": 3.73,
       "d10": 3.13,
-      "d20": 2.85,
+      "d20": 2.84,
       "d50": 3.14
     },
     "volumes": {
-      "d1": 3.42,
-      "d5": 3.91,
+      "d1": 3.39,
+      "d5": 3.9,
       "d10": 3.34,
       "d20": 3.12,
       "d50": 3.48
@@ -115783,7 +115783,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927871,
+      "_last_rev_attempt_ts": 1790967195,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -117397,17 +117397,17 @@
     "price": 373.5,
     "marketCap": 2502.04,
     "turnovers": {
-      "d1": 34.43,
-      "d5": 20.18,
-      "d10": 21.62,
-      "d20": 19.48,
-      "d50": 24.75
+      "d1": 33.57,
+      "d5": 20.01,
+      "d10": 21.54,
+      "d20": 19.44,
+      "d50": 24.74
     },
     "volumes": {
-      "d1": 9.14,
-      "d5": 5.49,
-      "d10": 5.92,
-      "d20": 5.41,
+      "d1": 8.92,
+      "d5": 5.44,
+      "d10": 5.89,
+      "d20": 5.4,
       "d50": 6.96
     },
     "pctOf52wHigh": 92.91,
@@ -117458,7 +117458,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927711,
+      "_last_rev_attempt_ts": 1790967450,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -118418,17 +118418,17 @@
     "price": 104.5,
     "marketCap": 800.18,
     "turnovers": {
-      "d1": 1.89,
+      "d1": 1.87,
       "d5": 1.97,
-      "d10": 2.43,
+      "d10": 2.42,
       "d20": 2.67,
       "d50": 3.1
     },
     "volumes": {
-      "d1": 1.8,
-      "d5": 1.88,
-      "d10": 2.31,
-      "d20": 2.52,
+      "d1": 1.78,
+      "d5": 1.87,
+      "d10": 2.3,
+      "d20": 2.51,
       "d50": 2.93
     },
     "pctOf52wHigh": 69.9,
@@ -118471,7 +118471,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927865,
+      "_last_rev_attempt_ts": 1790967149,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -119103,16 +119103,16 @@
     "price": 716.0,
     "marketCap": 6222.37,
     "turnovers": {
-      "d1": 16.74,
-      "d5": 17.76,
-      "d10": 17.02,
-      "d20": 19.11,
-      "d50": 23.48
+      "d1": 16.19,
+      "d5": 17.65,
+      "d10": 16.97,
+      "d20": 19.08,
+      "d50": 23.47
     },
     "volumes": {
-      "d1": 2.33,
-      "d5": 2.45,
-      "d10": 2.39,
+      "d1": 2.25,
+      "d5": 2.43,
+      "d10": 2.38,
       "d20": 2.75,
       "d50": 3.59
     },
@@ -119146,7 +119146,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927680,
+      "_last_rev_attempt_ts": 1790967343,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -119768,17 +119768,17 @@
     "price": 126.5,
     "marketCap": 719.59,
     "turnovers": {
-      "d1": 4.38,
-      "d5": 3.65,
-      "d10": 5.98,
+      "d1": 4.32,
+      "d5": 3.63,
+      "d10": 5.97,
       "d20": 4.82,
       "d50": 6.1
     },
     "volumes": {
-      "d1": 3.47,
-      "d5": 2.93,
-      "d10": 4.78,
-      "d20": 3.98,
+      "d1": 3.43,
+      "d5": 2.92,
+      "d10": 4.77,
+      "d20": 3.97,
       "d50": 5.16
     },
     "pctOf52wHigh": 81.09,
@@ -119815,7 +119815,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927706,
+      "_last_rev_attempt_ts": 1790967506,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -120088,18 +120088,18 @@
     "price": 295.5,
     "marketCap": 3793.87,
     "turnovers": {
-      "d1": 40.95,
-      "d5": 63.55,
-      "d10": 101.86,
-      "d20": 70.75,
-      "d50": 60.91
+      "d1": 39.22,
+      "d5": 63.2,
+      "d10": 101.68,
+      "d20": 70.67,
+      "d50": 60.87
     },
     "volumes": {
-      "d1": 13.87,
-      "d5": 21.2,
-      "d10": 33.77,
-      "d20": 24.32,
-      "d50": 22.83
+      "d1": 13.29,
+      "d5": 21.08,
+      "d10": 33.72,
+      "d20": 24.29,
+      "d50": 22.82
     },
     "pctOf52wHigh": 84.43,
     "pctOf200dHigh": 84.43,
@@ -120135,7 +120135,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927819,
+      "_last_rev_attempt_ts": 1790967207,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -121404,17 +121404,17 @@
     "price": 174.5,
     "marketCap": 666.79,
     "turnovers": {
-      "d1": 49.71,
-      "d5": 47.62,
-      "d10": 57.11,
-      "d20": 67.51,
-      "d50": 47.04
+      "d1": 49.16,
+      "d5": 47.51,
+      "d10": 57.06,
+      "d20": 67.48,
+      "d50": 47.03
     },
     "volumes": {
-      "d1": 28.38,
-      "d5": 27.17,
-      "d10": 33.22,
-      "d20": 41.44,
+      "d1": 28.06,
+      "d5": 27.11,
+      "d10": 33.19,
+      "d20": 41.43,
       "d50": 30.87
     },
     "pctOf52wHigh": 75.05,
@@ -121451,7 +121451,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928026,
+      "_last_rev_attempt_ts": 1790967478,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -123703,15 +123703,15 @@
     "price": 35.75,
     "marketCap": 209.26,
     "turnovers": {
-      "d1": 2.83,
+      "d1": 2.82,
       "d5": 2.77,
       "d10": 3.17,
       "d20": 3.86,
       "d50": 4.45
     },
     "volumes": {
-      "d1": 7.94,
-      "d5": 7.74,
+      "d1": 7.92,
+      "d5": 7.73,
       "d10": 8.69,
       "d20": 10.6,
       "d50": 12.49
@@ -123750,7 +123750,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927971,
+      "_last_rev_attempt_ts": 1790967198,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -124993,16 +124993,16 @@
     "price": 42.35,
     "marketCap": 2287.09,
     "turnovers": {
-      "d1": 3.61,
+      "d1": 3.6,
       "d5": 7.43,
       "d10": 8.44,
       "d20": 7.2,
       "d50": 11.68
     },
     "volumes": {
-      "d1": 8.55,
+      "d1": 8.53,
       "d5": 17.61,
-      "d10": 20.0,
+      "d10": 19.99,
       "d20": 17.08,
       "d50": 27.69
     },
@@ -125038,7 +125038,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927808,
+      "_last_rev_attempt_ts": 1790967268,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -125954,15 +125954,15 @@
     "price": 98.8,
     "marketCap": 737.45,
     "turnovers": {
-      "d1": 1.82,
-      "d5": 2.33,
+      "d1": 1.8,
+      "d5": 2.32,
       "d10": 2.19,
       "d20": 3.47,
       "d50": 4.65
     },
     "volumes": {
-      "d1": 1.86,
-      "d5": 2.4,
+      "d1": 1.84,
+      "d5": 2.39,
       "d10": 2.21,
       "d20": 3.46,
       "d50": 4.88
@@ -125999,7 +125999,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928052,
+      "_last_rev_attempt_ts": 1790967196,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -126293,7 +126293,7 @@
       "d50": 0.46
     },
     "volumes": {
-      "d1": 0.81,
+      "d1": 0.8,
       "d5": 0.83,
       "d10": 0.95,
       "d20": 1.33,
@@ -126331,7 +126331,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928055,
+      "_last_rev_attempt_ts": 1790967448,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -126935,7 +126935,7 @@
     "price": 143.5,
     "marketCap": 133.85,
     "turnovers": {
-      "d1": 0.19,
+      "d1": 0.18,
       "d5": 0.18,
       "d10": 0.22,
       "d20": 0.27,
@@ -126943,7 +126943,7 @@
     },
     "volumes": {
       "d1": 0.13,
-      "d5": 0.13,
+      "d5": 0.12,
       "d10": 0.15,
       "d20": 0.19,
       "d50": 0.3
@@ -126980,7 +126980,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927698,
+      "_last_rev_attempt_ts": 1790967250,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -130517,16 +130517,16 @@
     "price": 91.5,
     "marketCap": 161.59,
     "turnovers": {
-      "d1": 0.74,
+      "d1": 0.73,
       "d5": 1.09,
       "d10": 1.17,
       "d20": 1.54,
       "d50": 2.52
     },
     "volumes": {
-      "d1": 0.8,
+      "d1": 0.79,
       "d5": 1.17,
-      "d10": 1.28,
+      "d10": 1.27,
       "d20": 1.7,
       "d50": 2.64
     },
@@ -130560,7 +130560,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927797,
+      "_last_rev_attempt_ts": 1790967221,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -131837,16 +131837,16 @@
     "price": 215.5,
     "marketCap": 561.49,
     "turnovers": {
-      "d1": 10.52,
-      "d5": 11.2,
-      "d10": 13.19,
-      "d20": 8.43,
-      "d50": 7.91
+      "d1": 10.27,
+      "d5": 11.15,
+      "d10": 13.16,
+      "d20": 8.42,
+      "d50": 7.9
     },
     "volumes": {
-      "d1": 4.91,
-      "d5": 5.32,
-      "d10": 6.52,
+      "d1": 4.8,
+      "d5": 5.3,
+      "d10": 6.51,
       "d20": 4.3,
       "d50": 4.36
     },
@@ -131884,7 +131884,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927861,
+      "_last_rev_attempt_ts": 1790967430,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -132493,14 +132493,14 @@
     "price": 53.7,
     "marketCap": 144.9,
     "turnovers": {
-      "d1": 2.67,
+      "d1": 2.66,
       "d5": 1.06,
       "d10": 0.71,
       "d20": 0.62,
       "d50": 1.55
     },
     "volumes": {
-      "d1": 4.95,
+      "d1": 4.93,
       "d5": 2.01,
       "d10": 1.36,
       "d20": 1.18,
@@ -132538,7 +132538,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927683,
+      "_last_rev_attempt_ts": 1790967484,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -134444,17 +134444,17 @@
     "price": 173.5,
     "marketCap": 498.93,
     "turnovers": {
-      "d1": 14.43,
-      "d5": 7.07,
-      "d10": 5.62,
-      "d20": 7.48,
+      "d1": 14.17,
+      "d5": 7.01,
+      "d10": 5.59,
+      "d20": 7.47,
       "d50": 12.88
     },
     "volumes": {
-      "d1": 8.39,
-      "d5": 4.2,
-      "d10": 3.36,
-      "d20": 4.43,
+      "d1": 8.24,
+      "d5": 4.17,
+      "d10": 3.35,
+      "d20": 4.42,
       "d50": 7.77
     },
     "pctOf52wHigh": 47.53,
@@ -134499,7 +134499,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928078,
+      "_last_rev_attempt_ts": 1790967366,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -134786,15 +134786,15 @@
     "price": 70.3,
     "marketCap": 58.43,
     "turnovers": {
-      "d1": 24.77,
-      "d5": 17.2,
+      "d1": 24.72,
+      "d5": 17.19,
       "d10": 12.76,
       "d20": 8.31,
-      "d50": 3.89
+      "d50": 3.88
     },
     "volumes": {
-      "d1": 35.18,
-      "d5": 27.21,
+      "d1": 35.12,
+      "d5": 27.2,
       "d10": 21.53,
       "d20": 15.15,
       "d50": 7.55
@@ -134831,7 +134831,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927986,
+      "_last_rev_attempt_ts": 1790967194,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -137067,14 +137067,14 @@
     "price": 32.8,
     "marketCap": 43.3,
     "turnovers": {
-      "d1": 0.18,
+      "d1": 0.17,
       "d5": 0.87,
       "d10": 0.51,
       "d20": 0.29,
       "d50": 0.18
     },
     "volumes": {
-      "d1": 0.54,
+      "d1": 0.53,
       "d5": 2.57,
       "d10": 1.53,
       "d20": 0.88,
@@ -137114,7 +137114,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928030,
+      "_last_rev_attempt_ts": 1790967248,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -138042,15 +138042,15 @@
     "price": 174.0,
     "marketCap": 340.66,
     "turnovers": {
-      "d1": 1.79,
-      "d5": 2.96,
-      "d10": 3.51,
+      "d1": 1.73,
+      "d5": 2.94,
+      "d10": 3.5,
       "d20": 8.19,
       "d50": 7.87
     },
     "volumes": {
-      "d1": 1.03,
-      "d5": 1.7,
+      "d1": 0.99,
+      "d5": 1.69,
       "d10": 1.99,
       "d20": 4.32,
       "d50": 4.07
@@ -138089,7 +138089,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928042,
+      "_last_rev_attempt_ts": 1790967179,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -138376,16 +138376,16 @@
     "price": 292.0,
     "marketCap": 323.9,
     "turnovers": {
-      "d1": 1.52,
-      "d5": 1.68,
-      "d10": 1.6,
+      "d1": 1.46,
+      "d5": 1.67,
+      "d10": 1.59,
       "d20": 1.67,
       "d50": 3.52
     },
     "volumes": {
-      "d1": 0.52,
-      "d5": 0.58,
-      "d10": 0.56,
+      "d1": 0.5,
+      "d5": 0.57,
+      "d10": 0.55,
       "d20": 0.59,
       "d50": 1.17
     },
@@ -138421,7 +138421,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927964,
+      "_last_rev_attempt_ts": 1790967170,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -140006,7 +140006,7 @@
       "d5": 3.24,
       "d10": 2.58,
       "d20": 1.67,
-      "d50": 1.73
+      "d50": 1.72
     },
     "pctOf52wHigh": 64.99,
     "pctOf200dHigh": 64.99,
@@ -140040,7 +140040,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927996,
+      "_last_rev_attempt_ts": 1790967123,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -140334,7 +140334,7 @@
       "d50": 2.54
     },
     "volumes": {
-      "d1": 29.3,
+      "d1": 29.31,
       "d5": 46.32,
       "d10": 29.87,
       "d20": 17.17,
@@ -140376,7 +140376,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928003,
+      "_last_rev_attempt_ts": 1790967277,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -141650,17 +141650,17 @@
     "price": 119.0,
     "marketCap": 2056.87,
     "turnovers": {
-      "d1": 5.6,
-      "d5": 8.96,
-      "d10": 10.4,
+      "d1": 5.52,
+      "d5": 8.94,
+      "d10": 10.39,
       "d20": 9.03,
-      "d50": 11.7
+      "d50": 11.69
     },
     "volumes": {
-      "d1": 4.72,
-      "d5": 7.68,
-      "d10": 9.08,
-      "d20": 8.18,
+      "d1": 4.65,
+      "d5": 7.66,
+      "d10": 9.07,
+      "d20": 8.17,
       "d50": 10.42
     },
     "pctOf52wHigh": 91.19,
@@ -141699,7 +141699,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927898,
+      "_last_rev_attempt_ts": 1790967364,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -142668,16 +142668,16 @@
     "price": 129.5,
     "marketCap": 367.23,
     "turnovers": {
-      "d1": 7.4,
-      "d5": 5.16,
-      "d10": 6.87,
+      "d1": 7.29,
+      "d5": 5.14,
+      "d10": 6.86,
       "d20": 7.39,
-      "d50": 7.1
+      "d50": 7.09
     },
     "volumes": {
-      "d1": 5.7,
-      "d5": 4.07,
-      "d10": 5.48,
+      "d1": 5.61,
+      "d5": 4.05,
+      "d10": 5.47,
       "d20": 5.87,
       "d50": 5.95
     },
@@ -142717,7 +142717,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927710,
+      "_last_rev_attempt_ts": 1790967208,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -143308,7 +143308,7 @@
     "price": 61.4,
     "marketCap": 167.75,
     "turnovers": {
-      "d1": 0.35,
+      "d1": 0.34,
       "d5": 0.55,
       "d10": 0.71,
       "d20": 0.57,
@@ -143355,7 +143355,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927746,
+      "_last_rev_attempt_ts": 1790967426,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -143781,7 +143781,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927716,
+      "_last_rev_attempt_ts": 1790967376,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -144698,15 +144698,15 @@
     "price": 34.3,
     "marketCap": 87.41,
     "turnovers": {
-      "d1": 0.67,
-      "d5": 1.34,
+      "d1": 0.66,
+      "d5": 1.33,
       "d10": 0.92,
       "d20": 1.08,
       "d50": 0.67
     },
     "volumes": {
-      "d1": 1.93,
-      "d5": 3.9,
+      "d1": 1.92,
+      "d5": 3.89,
       "d10": 2.74,
       "d20": 3.31,
       "d50": 2.14
@@ -144751,7 +144751,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927769,
+      "_last_rev_attempt_ts": 1790967217,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -145356,16 +145356,16 @@
     "price": 30.15,
     "marketCap": 124.76,
     "turnovers": {
-      "d1": 0.92,
+      "d1": 0.91,
       "d5": 0.67,
       "d10": 0.66,
       "d20": 0.69,
       "d50": 1.23
     },
     "volumes": {
-      "d1": 3.08,
-      "d5": 2.26,
-      "d10": 2.26,
+      "d1": 3.03,
+      "d5": 2.25,
+      "d10": 2.25,
       "d20": 2.42,
       "d50": 4.02
     },
@@ -145403,7 +145403,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927957,
+      "_last_rev_attempt_ts": 1790967218,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -146018,14 +146018,14 @@
     "price": 47.15,
     "marketCap": 226.57,
     "turnovers": {
-      "d1": 0.49,
+      "d1": 0.48,
       "d5": 0.55,
       "d10": 0.48,
       "d20": 0.49,
       "d50": 0.67
     },
     "volumes": {
-      "d1": 1.04,
+      "d1": 1.03,
       "d5": 1.19,
       "d10": 1.05,
       "d20": 1.08,
@@ -146065,12 +146065,8 @@
     "revenueMonth": "2026-09",
     "revenueFirstSeen": "2026-10-02",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927863,
+      "_last_rev_attempt_ts": 1790967464,
       "revenueYoY": [
-        {
-          "date": "2025-09",
-          "yoy": -35.59
-        },
         {
           "date": "2025-10",
           "yoy": -58.61
@@ -147008,16 +147004,16 @@
     "price": 48.1,
     "marketCap": 57.84,
     "turnovers": {
-      "d1": 0.33,
+      "d1": 0.32,
       "d5": 0.35,
       "d10": 0.36,
       "d20": 0.32,
       "d50": 0.32
     },
     "volumes": {
-      "d1": 0.67,
+      "d1": 0.66,
       "d5": 0.72,
-      "d10": 0.76,
+      "d10": 0.75,
       "d20": 0.69,
       "d50": 0.65
     },
@@ -147053,7 +147049,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927758,
+      "_last_rev_attempt_ts": 1790967423,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -148269,17 +148265,17 @@
     "price": 252.0,
     "marketCap": 165.23,
     "turnovers": {
-      "d1": 9.68,
-      "d5": 11.63,
-      "d10": 9.68,
-      "d20": 8.99,
+      "d1": 9.49,
+      "d5": 11.59,
+      "d10": 9.66,
+      "d20": 8.98,
       "d50": 12.39
     },
     "volumes": {
-      "d1": 3.86,
-      "d5": 4.64,
+      "d1": 3.79,
+      "d5": 4.63,
       "d10": 3.93,
-      "d20": 3.67,
+      "d20": 3.66,
       "d50": 5.11
     },
     "pctOf52wHigh": 87.5,
@@ -148316,7 +148312,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927951,
+      "_last_rev_attempt_ts": 1790967336,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -148604,14 +148600,14 @@
     "price": 574.0,
     "marketCap": 453.22,
     "turnovers": {
-      "d1": 1.2,
-      "d5": 1.59,
-      "d10": 3.15,
-      "d20": 2.63,
+      "d1": 1.11,
+      "d5": 1.58,
+      "d10": 3.14,
+      "d20": 2.62,
       "d50": 3.87
     },
     "volumes": {
-      "d1": 0.21,
+      "d1": 0.19,
       "d5": 0.28,
       "d10": 0.55,
       "d20": 0.47,
@@ -148663,7 +148659,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927786,
+      "_last_rev_attempt_ts": 1790967407,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -154593,7 +154589,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928012,
+      "_last_rev_attempt_ts": 1790967363,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -155846,15 +155842,15 @@
     "price": 32.0,
     "marketCap": 785.7,
     "turnovers": {
-      "d1": 1.16,
+      "d1": 1.15,
       "d5": 1.76,
       "d10": 2.24,
       "d20": 2.05,
       "d50": 2.31
     },
     "volumes": {
-      "d1": 3.64,
-      "d5": 5.51,
+      "d1": 3.59,
+      "d5": 5.5,
       "d10": 6.99,
       "d20": 6.42,
       "d50": 7.47
@@ -155891,7 +155887,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927912,
+      "_last_rev_attempt_ts": 1790967278,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -157129,7 +157125,7 @@
       "d50": 6.16
     },
     "volumes": {
-      "d1": 79.82,
+      "d1": 79.84,
       "d5": 86.15,
       "d10": 83.75,
       "d20": 56.36,
@@ -157171,7 +157167,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927751,
+      "_last_rev_attempt_ts": 1790967133,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -159728,15 +159724,15 @@
     "price": 130.0,
     "marketCap": 283.11,
     "turnovers": {
-      "d1": 1.3,
+      "d1": 1.28,
       "d5": 3.15,
       "d10": 3.64,
       "d20": 2.65,
       "d50": 4.47
     },
     "volumes": {
-      "d1": 0.99,
-      "d5": 2.36,
+      "d1": 0.98,
+      "d5": 2.35,
       "d10": 2.82,
       "d20": 2.13,
       "d50": 3.32
@@ -159771,7 +159767,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927675,
+      "_last_rev_attempt_ts": 1790967225,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -160714,18 +160710,18 @@
     "price": 135.0,
     "marketCap": 844.16,
     "turnovers": {
-      "d1": 191.0,
-      "d5": 164.03,
-      "d10": 127.18,
-      "d20": 82.23,
-      "d50": 66.98
+      "d1": 189.75,
+      "d5": 163.79,
+      "d10": 127.06,
+      "d20": 82.17,
+      "d50": 66.96
     },
     "volumes": {
-      "d1": 142.01,
-      "d5": 127.24,
-      "d10": 102.22,
-      "d20": 68.21,
-      "d50": 57.72
+      "d1": 141.08,
+      "d5": 127.06,
+      "d10": 102.13,
+      "d20": 68.16,
+      "d50": 57.71
     },
     "pctOf52wHigh": 69.41,
     "pctOf200dHigh": 69.41,
@@ -160759,7 +160755,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927940,
+      "_last_rev_attempt_ts": 1790967351,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -161051,11 +161047,11 @@
       "d5": 0.21,
       "d10": 0.21,
       "d20": 0.18,
-      "d50": 0.2
+      "d50": 0.19
     },
     "volumes": {
-      "d1": 0.28,
-      "d5": 0.43,
+      "d1": 0.27,
+      "d5": 0.42,
       "d10": 0.43,
       "d20": 0.38,
       "d50": 0.41
@@ -161098,7 +161094,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927919,
+      "_last_rev_attempt_ts": 1790967493,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -162040,16 +162036,16 @@
     "price": 339.5,
     "marketCap": 419.08,
     "turnovers": {
-      "d1": 8.6,
-      "d5": 4.92,
-      "d10": 5.71,
-      "d20": 4.81,
+      "d1": 8.31,
+      "d5": 4.86,
+      "d10": 5.68,
+      "d20": 4.8,
       "d50": 5.03
     },
     "volumes": {
-      "d1": 2.55,
-      "d5": 1.5,
-      "d10": 1.77,
+      "d1": 2.47,
+      "d5": 1.48,
+      "d10": 1.76,
       "d20": 1.53,
       "d50": 1.63
     },
@@ -162085,7 +162081,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927945,
+      "_last_rev_attempt_ts": 1790967291,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -163674,17 +163670,17 @@
     "price": 683.0,
     "marketCap": 2485.15,
     "turnovers": {
-      "d1": 163.91,
-      "d5": 132.55,
-      "d10": 123.04,
-      "d20": 96.51,
-      "d50": 84.16
+      "d1": 161.67,
+      "d5": 132.1,
+      "d10": 122.82,
+      "d20": 96.4,
+      "d50": 84.11
     },
     "volumes": {
-      "d1": 24.32,
-      "d5": 21.02,
-      "d10": 21.31,
-      "d20": 17.37,
+      "d1": 23.99,
+      "d5": 20.96,
+      "d10": 21.28,
+      "d20": 17.35,
       "d50": 17.51
     },
     "pctOf52wHigh": 97.57,
@@ -163721,7 +163717,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927754,
+      "_last_rev_attempt_ts": 1790967270,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -164324,14 +164320,14 @@
     "turnovers": {
       "d1": 0.39,
       "d5": 0.41,
-      "d10": 0.55,
+      "d10": 0.54,
       "d20": 0.32,
       "d50": 0.22
     },
     "volumes": {
-      "d1": 0.97,
-      "d5": 1.05,
-      "d10": 1.38,
+      "d1": 0.96,
+      "d5": 1.04,
+      "d10": 1.37,
       "d20": 0.82,
       "d50": 0.58
     },
@@ -164371,7 +164367,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928050,
+      "_last_rev_attempt_ts": 1790967168,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -164658,18 +164654,18 @@
     "price": 308.0,
     "marketCap": 2338.17,
     "turnovers": {
-      "d1": 93.95,
-      "d5": 37.72,
-      "d10": 44.22,
-      "d20": 35.97,
-      "d50": 42.14
+      "d1": 91.44,
+      "d5": 37.21,
+      "d10": 43.96,
+      "d20": 35.84,
+      "d50": 42.09
     },
     "volumes": {
-      "d1": 30.79,
-      "d5": 12.73,
-      "d10": 15.17,
-      "d20": 12.57,
-      "d50": 15.39
+      "d1": 29.96,
+      "d5": 12.56,
+      "d10": 15.09,
+      "d20": 12.53,
+      "d50": 15.38
     },
     "pctOf52wHigh": 79.59,
     "pctOf200dHigh": 79.59,
@@ -164705,7 +164701,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927920,
+      "_last_rev_attempt_ts": 1790967334,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -164978,14 +164974,14 @@
     "price": 88.2,
     "marketCap": 129.31,
     "turnovers": {
-      "d1": 0.32,
+      "d1": 0.31,
       "d5": 0.61,
       "d10": 0.78,
       "d20": 0.83,
       "d50": 0.71
     },
     "volumes": {
-      "d1": 0.36,
+      "d1": 0.35,
       "d5": 0.69,
       "d10": 0.9,
       "d20": 0.98,
@@ -165025,7 +165021,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928064,
+      "_last_rev_attempt_ts": 1790967223,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -165313,7 +165309,7 @@
     "price": 78.9,
     "marketCap": 101.38,
     "turnovers": {
-      "d1": 0.24,
+      "d1": 0.23,
       "d5": 0.26,
       "d10": 0.37,
       "d20": 0.35,
@@ -165364,7 +165360,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927777,
+      "_last_rev_attempt_ts": 1790967382,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -166939,18 +166935,18 @@
     "price": 1190.0,
     "marketCap": 5689.55,
     "turnovers": {
-      "d1": 187.11,
-      "d5": 158.87,
-      "d10": 153.44,
-      "d20": 108.16,
-      "d50": 102.52
+      "d1": 178.77,
+      "d5": 157.2,
+      "d10": 152.61,
+      "d20": 107.74,
+      "d50": 102.36
     },
     "volumes": {
-      "d1": 16.25,
-      "d5": 15.14,
-      "d10": 15.34,
-      "d20": 11.0,
-      "d50": 10.64
+      "d1": 15.52,
+      "d5": 15.0,
+      "d10": 15.27,
+      "d20": 10.96,
+      "d50": 10.63
     },
     "pctOf52wHigh": 74.38,
     "pctOf200dHigh": 74.38,
@@ -166986,7 +166982,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928031,
+      "_last_rev_attempt_ts": 1790967454,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -167274,14 +167270,14 @@
     "price": 835.0,
     "marketCap": 1398.67,
     "turnovers": {
-      "d1": 3.62,
-      "d5": 13.52,
-      "d10": 17.93,
-      "d20": 10.15,
-      "d50": 5.96
+      "d1": 3.41,
+      "d5": 13.48,
+      "d10": 17.9,
+      "d20": 10.14,
+      "d50": 5.95
     },
     "volumes": {
-      "d1": 0.43,
+      "d1": 0.41,
       "d5": 1.62,
       "d10": 2.3,
       "d20": 1.33,
@@ -167327,7 +167323,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927682,
+      "_last_rev_attempt_ts": 1790967146,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -167645,7 +167641,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-08",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927707,
+      "_last_rev_attempt_ts": 1790967242,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -169217,18 +169213,18 @@
     "price": 439.0,
     "marketCap": 358.31,
     "turnovers": {
-      "d1": 70.95,
-      "d5": 49.46,
-      "d10": 33.35,
-      "d20": 25.01,
-      "d50": 15.99
+      "d1": 70.15,
+      "d5": 49.3,
+      "d10": 33.27,
+      "d20": 24.97,
+      "d50": 15.98
     },
     "volumes": {
-      "d1": 16.6,
-      "d5": 13.17,
-      "d10": 9.43,
-      "d20": 7.53,
-      "d50": 5.34
+      "d1": 16.42,
+      "d5": 13.13,
+      "d10": 9.41,
+      "d20": 7.52,
+      "d50": 5.33
     },
     "pctOf52wHigh": 100.0,
     "pctOf200dHigh": 100.0,
@@ -169268,7 +169264,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927781,
+      "_last_rev_attempt_ts": 1790967282,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -169541,10 +169537,10 @@
     "price": 54.4,
     "marketCap": 58.25,
     "turnovers": {
-      "d1": 0.32,
+      "d1": 0.31,
       "d5": 0.43,
       "d10": 0.31,
-      "d20": 0.24,
+      "d20": 0.23,
       "d50": 0.25
     },
     "volumes": {
@@ -169590,7 +169586,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927834,
+      "_last_rev_attempt_ts": 1790967467,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -170160,18 +170156,18 @@
     "price": 76.5,
     "marketCap": 3605.16,
     "turnovers": {
-      "d1": 136.02,
-      "d5": 83.67,
-      "d10": 85.22,
-      "d20": 90.14,
-      "d50": 117.01
+      "d1": 135.11,
+      "d5": 83.49,
+      "d10": 85.13,
+      "d20": 90.09,
+      "d50": 116.99
     },
     "volumes": {
-      "d1": 178.5,
-      "d5": 112.69,
-      "d10": 115.94,
-      "d20": 124.99,
-      "d50": 168.87
+      "d1": 177.32,
+      "d5": 112.45,
+      "d10": 115.82,
+      "d20": 124.93,
+      "d50": 168.85
     },
     "pctOf52wHigh": 80.95,
     "pctOf200dHigh": 80.95,
@@ -170205,7 +170201,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927709,
+      "_last_rev_attempt_ts": 1790967310,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -170808,15 +170804,15 @@
     "price": 131.0,
     "marketCap": 115.9,
     "turnovers": {
-      "d1": 15.28,
-      "d5": 7.83,
-      "d10": 7.97,
+      "d1": 15.19,
+      "d5": 7.81,
+      "d10": 7.96,
       "d20": 7.26,
       "d50": 4.98
     },
     "volumes": {
-      "d1": 12.07,
-      "d5": 6.68,
+      "d1": 11.99,
+      "d5": 6.67,
       "d10": 7.02,
       "d20": 6.75,
       "d50": 4.86
@@ -170853,7 +170849,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927772,
+      "_last_rev_attempt_ts": 1790967279,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -172262,14 +172258,14 @@
     "price": 303.5,
     "marketCap": 205.33,
     "turnovers": {
-      "d1": 1.12,
+      "d1": 1.09,
       "d5": 2.08,
-      "d10": 1.82,
+      "d10": 1.81,
       "d20": 1.59,
       "d50": 1.4
     },
     "volumes": {
-      "d1": 0.37,
+      "d1": 0.36,
       "d5": 0.68,
       "d10": 0.6,
       "d20": 0.53,
@@ -172307,7 +172303,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928027,
+      "_last_rev_attempt_ts": 1790967178,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -175882,18 +175878,18 @@
     "price": 127.0,
     "marketCap": 894.74,
     "turnovers": {
-      "d1": 121.78,
-      "d5": 87.72,
-      "d10": 81.42,
-      "d20": 48.49,
-      "d50": 38.71
+      "d1": 120.47,
+      "d5": 87.46,
+      "d10": 81.29,
+      "d20": 48.42,
+      "d50": 38.68
     },
     "volumes": {
-      "d1": 99.14,
-      "d5": 76.98,
-      "d10": 74.77,
-      "d20": 46.04,
-      "d50": 39.98
+      "d1": 98.08,
+      "d5": 76.76,
+      "d10": 74.66,
+      "d20": 45.98,
+      "d50": 39.96
     },
     "pctOf52wHigh": 100.0,
     "pctOf200dHigh": 100.0,
@@ -175937,7 +175933,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927952,
+      "_last_rev_attempt_ts": 1790967356,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -176864,14 +176860,14 @@
     "price": 56.1,
     "marketCap": 38.34,
     "turnovers": {
-      "d1": 1.06,
+      "d1": 1.05,
       "d5": 0.61,
       "d10": 0.4,
       "d20": 0.27,
       "d50": 0.27
     },
     "volumes": {
-      "d1": 1.91,
+      "d1": 1.9,
       "d5": 1.21,
       "d10": 0.82,
       "d20": 0.57,
@@ -176909,7 +176905,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927782,
+      "_last_rev_attempt_ts": 1790967172,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -179103,14 +179099,14 @@
     "price": 84.2,
     "marketCap": 58.89,
     "turnovers": {
-      "d1": 0.75,
+      "d1": 0.74,
       "d5": 0.56,
       "d10": 0.5,
       "d20": 0.29,
       "d50": 0.28
     },
     "volumes": {
-      "d1": 0.9,
+      "d1": 0.89,
       "d5": 0.7,
       "d10": 0.65,
       "d20": 0.38,
@@ -179152,7 +179148,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927665,
+      "_last_rev_attempt_ts": 1790967374,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -179434,7 +179430,7 @@
       "d50": 0.25
     },
     "volumes": {
-      "d1": 0.42,
+      "d1": 0.41,
       "d5": 0.35,
       "d10": 0.39,
       "d20": 0.56,
@@ -179486,7 +179482,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928006,
+      "_last_rev_attempt_ts": 1790967288,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -180438,17 +180434,17 @@
     "price": 52.3,
     "marketCap": 129.74,
     "turnovers": {
-      "d1": 0.59,
+      "d1": 0.58,
       "d5": 0.45,
       "d10": 0.42,
       "d20": 0.43,
       "d50": 0.48
     },
     "volumes": {
-      "d1": 1.13,
-      "d5": 0.86,
+      "d1": 1.11,
+      "d5": 0.85,
       "d10": 0.81,
-      "d20": 0.84,
+      "d20": 0.83,
       "d50": 0.94
     },
     "pctOf52wHigh": 75.47,
@@ -180489,7 +180485,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927961,
+      "_last_rev_attempt_ts": 1790967507,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -181718,14 +181714,14 @@
     "price": 91.4,
     "marketCap": 358.35,
     "turnovers": {
-      "d1": 1.09,
+      "d1": 1.07,
       "d5": 1.02,
       "d10": 1.22,
       "d20": 1.46,
       "d50": 2.78
     },
     "volumes": {
-      "d1": 1.19,
+      "d1": 1.17,
       "d5": 1.1,
       "d10": 1.34,
       "d20": 1.58,
@@ -181769,7 +181765,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927691,
+      "_last_rev_attempt_ts": 1790967304,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -187728,7 +187724,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927731,
+      "_last_rev_attempt_ts": 1790967163,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -189299,14 +189295,14 @@
     "price": 23.25,
     "marketCap": 89.33,
     "turnovers": {
-      "d1": 0.05,
+      "d1": 0.04,
       "d5": 0.03,
       "d10": 0.03,
       "d20": 0.04,
       "d50": 0.05
     },
     "volumes": {
-      "d1": 0.2,
+      "d1": 0.19,
       "d5": 0.14,
       "d10": 0.14,
       "d20": 0.18,
@@ -189364,7 +189360,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927895,
+      "_last_rev_attempt_ts": 1790967439,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -189978,7 +189974,7 @@
       "d50": 0.06
     },
     "volumes": {
-      "d1": 0.11,
+      "d1": 0.1,
       "d5": 0.14,
       "d10": 0.17,
       "d20": 0.14,
@@ -190032,7 +190028,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928043,
+      "_last_rev_attempt_ts": 1790967181,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -196641,18 +196637,18 @@
     "price": 62.4,
     "marketCap": 321.35,
     "turnovers": {
-      "d1": 9.59,
-      "d5": 5.3,
+      "d1": 9.54,
+      "d5": 5.29,
       "d10": 7.79,
       "d20": 5.44,
       "d50": 3.67
     },
     "volumes": {
-      "d1": 15.54,
-      "d5": 8.8,
-      "d10": 13.17,
+      "d1": 15.45,
+      "d5": 8.78,
+      "d10": 13.16,
       "d20": 9.53,
-      "d50": 6.7
+      "d50": 6.69
     },
     "pctOf52wHigh": 82.0,
     "pctOf200dHigh": 82.0,
@@ -196690,7 +196686,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927791,
+      "_last_rev_attempt_ts": 1790967258,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -197642,18 +197638,18 @@
     "price": 5185.0,
     "marketCap": 18578.95,
     "turnovers": {
-      "d1": 121.52,
-      "d5": 91.5,
-      "d10": 117.18,
-      "d20": 95.24,
-      "d50": 106.41
+      "d1": 110.64,
+      "d5": 89.32,
+      "d10": 116.09,
+      "d20": 94.69,
+      "d50": 106.19
     },
     "volumes": {
-      "d1": 2.37,
-      "d5": 1.82,
-      "d10": 2.37,
-      "d20": 1.87,
-      "d50": 2.04
+      "d1": 2.16,
+      "d5": 1.78,
+      "d10": 2.35,
+      "d20": 1.86,
+      "d50": 2.03
     },
     "pctOf52wHigh": 80.14,
     "pctOf200dHigh": 80.14,
@@ -197687,7 +197683,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928047,
+      "_last_rev_attempt_ts": 1790967313,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -197975,15 +197971,15 @@
     "price": 51.2,
     "marketCap": 91.19,
     "turnovers": {
-      "d1": 4.47,
+      "d1": 4.45,
       "d5": 4.29,
       "d10": 4.44,
       "d20": 3.23,
       "d50": 2.82
     },
     "volumes": {
-      "d1": 8.72,
-      "d5": 8.59,
+      "d1": 8.69,
+      "d5": 8.58,
       "d10": 8.98,
       "d20": 6.68,
       "d50": 6.17
@@ -198026,7 +198022,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927725,
+      "_last_rev_attempt_ts": 1790967252,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -198653,17 +198649,17 @@
     "price": 1285.0,
     "marketCap": 2449.04,
     "turnovers": {
-      "d1": 28.39,
-      "d5": 32.45,
-      "d10": 29.91,
-      "d20": 20.39,
-      "d50": 18.52
+      "d1": 27.0,
+      "d5": 32.17,
+      "d10": 29.78,
+      "d20": 20.32,
+      "d50": 18.49
     },
     "volumes": {
-      "d1": 2.18,
-      "d5": 2.56,
-      "d10": 2.47,
-      "d20": 1.76,
+      "d1": 2.07,
+      "d5": 2.54,
+      "d10": 2.46,
+      "d20": 1.75,
       "d50": 1.65
     },
     "pctOf52wHigh": 88.62,
@@ -198698,7 +198694,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927900,
+      "_last_rev_attempt_ts": 1790967431,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -198986,18 +198982,18 @@
     "price": 40.45,
     "marketCap": 3052.8,
     "turnovers": {
-      "d1": 279.76,
-      "d5": 235.32,
-      "d10": 240.53,
-      "d20": 181.07,
-      "d50": 96.3
+      "d1": 279.54,
+      "d5": 235.28,
+      "d10": 240.5,
+      "d20": 181.06,
+      "d50": 96.29
     },
     "volumes": {
-      "d1": 699.7,
-      "d5": 627.9,
-      "d10": 677.54,
-      "d20": 546.43,
-      "d50": 312.48
+      "d1": 699.14,
+      "d5": 627.79,
+      "d10": 677.48,
+      "d20": 546.4,
+      "d50": 312.46
     },
     "pctOf52wHigh": 99.02,
     "pctOf200dHigh": 99.02,
@@ -199043,7 +199039,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927932,
+      "_last_rev_attempt_ts": 1790967337,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -199660,12 +199656,12 @@
     "turnovers": {
       "d1": 0.28,
       "d5": 0.31,
-      "d10": 0.84,
+      "d10": 0.83,
       "d20": 0.76,
       "d50": 0.38
     },
     "volumes": {
-      "d1": 0.95,
+      "d1": 0.94,
       "d5": 1.07,
       "d10": 2.84,
       "d20": 2.65,
@@ -199713,12 +199709,8 @@
     "revenueMonth": "2026-09",
     "revenueFirstSeen": "2026-10-02",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927984,
+      "_last_rev_attempt_ts": 1790967210,
       "revenueYoY": [
-        {
-          "date": "2025-09",
-          "yoy": 0.26
-        },
         {
           "date": "2025-10",
           "yoy": -34.91
@@ -199990,14 +199982,14 @@
     "price": 263.0,
     "marketCap": 336.94,
     "turnovers": {
-      "d1": 4.01,
-      "d5": 2.49,
-      "d10": 2.4,
-      "d20": 2.74,
+      "d1": 3.89,
+      "d5": 2.47,
+      "d10": 2.39,
+      "d20": 2.73,
       "d50": 3.26
     },
     "volumes": {
-      "d1": 1.52,
+      "d1": 1.48,
       "d5": 0.96,
       "d10": 0.93,
       "d20": 1.07,
@@ -200037,7 +200029,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927773,
+      "_last_rev_attempt_ts": 1790967504,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -201682,7 +201674,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-10",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927999,
+      "_last_rev_attempt_ts": 1790967151,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -201969,7 +201961,7 @@
     "price": 49.55,
     "marketCap": 133.94,
     "turnovers": {
-      "d1": 0.44,
+      "d1": 0.43,
       "d5": 0.43,
       "d10": 0.39,
       "d20": 0.31,
@@ -202014,7 +202006,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-09",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927993,
+      "_last_rev_attempt_ts": 1790967255,
       "revenueYoY": [
         {
           "date": "2025-08",
@@ -207809,15 +207801,15 @@
     "price": 2430.0,
     "marketCap": 724.91,
     "turnovers": {
-      "d1": 8.49,
-      "d5": 11.7,
-      "d10": 9.18,
-      "d20": 9.74,
-      "d50": 11.84
+      "d1": 7.87,
+      "d5": 11.58,
+      "d10": 9.12,
+      "d20": 9.71,
+      "d50": 11.83
     },
     "volumes": {
-      "d1": 0.35,
-      "d5": 0.48,
+      "d1": 0.32,
+      "d5": 0.47,
       "d10": 0.37,
       "d20": 0.39,
       "d50": 0.48
@@ -207860,7 +207852,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927722,
+      "_last_rev_attempt_ts": 1790967272,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -208464,18 +208456,18 @@
     "price": 1050.0,
     "marketCap": 5532.56,
     "turnovers": {
-      "d1": 195.82,
-      "d5": 250.06,
-      "d10": 219.51,
-      "d20": 165.1,
-      "d50": 147.35
+      "d1": 189.83,
+      "d5": 248.86,
+      "d10": 218.91,
+      "d20": 164.8,
+      "d50": 147.23
     },
     "volumes": {
-      "d1": 18.8,
-      "d5": 25.48,
-      "d10": 23.65,
-      "d20": 18.65,
-      "d50": 17.42
+      "d1": 18.22,
+      "d5": 25.36,
+      "d10": 23.6,
+      "d20": 18.62,
+      "d50": 17.41
     },
     "pctOf52wHigh": 98.13,
     "pctOf200dHigh": 98.13,
@@ -208515,7 +208507,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927831,
+      "_last_rev_attempt_ts": 1790967418,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -210426,18 +210418,18 @@
     "price": 791.0,
     "marketCap": 2229.05,
     "turnovers": {
-      "d1": 24.52,
-      "d5": 29.17,
-      "d10": 21.07,
-      "d20": 14.15,
-      "d50": 18.36
+      "d1": 22.91,
+      "d5": 28.85,
+      "d10": 20.91,
+      "d20": 14.07,
+      "d50": 18.33
     },
     "volumes": {
-      "d1": 3.08,
-      "d5": 3.72,
-      "d10": 2.76,
-      "d20": 1.89,
-      "d50": 2.49
+      "d1": 2.88,
+      "d5": 3.68,
+      "d10": 2.74,
+      "d20": 1.88,
+      "d50": 2.48
     },
     "pctOf52wHigh": 94.96,
     "pctOf200dHigh": 94.96,
@@ -210473,7 +210465,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927811,
+      "_last_rev_attempt_ts": 1790967399,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -212709,15 +212701,15 @@
     "price": 80.9,
     "marketCap": 80.13,
     "turnovers": {
-      "d1": 0.47,
+      "d1": 0.45,
       "d5": 0.23,
       "d10": 0.23,
       "d20": 0.26,
       "d50": 0.24
     },
     "volumes": {
-      "d1": 0.58,
-      "d5": 0.3,
+      "d1": 0.57,
+      "d5": 0.29,
       "d10": 0.29,
       "d20": 0.33,
       "d50": 0.32
@@ -212758,7 +212750,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927835,
+      "_last_rev_attempt_ts": 1790967422,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -213031,18 +213023,18 @@
     "price": 1855.0,
     "marketCap": 2087.52,
     "turnovers": {
-      "d1": 37.23,
-      "d5": 35.14,
-      "d10": 26.75,
-      "d20": 18.76,
-      "d50": 22.51
+      "d1": 35.59,
+      "d5": 34.81,
+      "d10": 26.58,
+      "d20": 18.67,
+      "d50": 22.47
     },
     "volumes": {
-      "d1": 2.02,
-      "d5": 1.98,
-      "d10": 1.54,
-      "d20": 1.11,
-      "d50": 1.29
+      "d1": 1.93,
+      "d5": 1.96,
+      "d10": 1.53,
+      "d20": 1.1,
+      "d50": 1.28
     },
     "pctOf52wHigh": 62.77,
     "pctOf200dHigh": 62.77,
@@ -213076,7 +213068,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927874,
+      "_last_rev_attempt_ts": 1790967180,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -213350,14 +213342,14 @@
     "price": 51.5,
     "marketCap": 114.54,
     "turnovers": {
-      "d1": 0.27,
+      "d1": 0.26,
       "d5": 0.31,
       "d10": 0.32,
       "d20": 0.31,
       "d50": 0.37
     },
     "volumes": {
-      "d1": 0.52,
+      "d1": 0.51,
       "d5": 0.6,
       "d10": 0.61,
       "d20": 0.61,
@@ -213405,7 +213397,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927816,
+      "_last_rev_attempt_ts": 1790967365,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -214343,17 +214335,17 @@
     "price": 148.5,
     "marketCap": 174.25,
     "turnovers": {
-      "d1": 61.03,
-      "d5": 44.93,
-      "d10": 36.77,
-      "d20": 33.23,
-      "d50": 15.71
+      "d1": 60.87,
+      "d5": 44.89,
+      "d10": 36.75,
+      "d20": 33.22,
+      "d50": 15.7
     },
     "volumes": {
-      "d1": 40.42,
-      "d5": 31.27,
-      "d10": 26.84,
-      "d20": 26.44,
+      "d1": 40.31,
+      "d5": 31.25,
+      "d10": 26.83,
+      "d20": 26.43,
       "d50": 13.36
     },
     "pctOf52wHigh": 83.43,
@@ -214390,7 +214382,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927963,
+      "_last_rev_attempt_ts": 1790967305,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -215620,18 +215612,18 @@
     "price": 663.0,
     "marketCap": 285.03,
     "turnovers": {
-      "d1": 5.74,
-      "d5": 11.0,
-      "d10": 12.64,
-      "d20": 13.67,
+      "d1": 5.44,
+      "d5": 10.94,
+      "d10": 12.61,
+      "d20": 13.66,
       "d50": 8.69
     },
     "volumes": {
-      "d1": 0.86,
-      "d5": 1.59,
-      "d10": 1.8,
+      "d1": 0.82,
+      "d5": 1.58,
+      "d10": 1.79,
       "d20": 1.99,
-      "d50": 1.4
+      "d50": 1.39
     },
     "pctOf52wHigh": 87.81,
     "pctOf200dHigh": 87.81,
@@ -215671,7 +215663,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928010,
+      "_last_rev_attempt_ts": 1790967302,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -216968,7 +216960,7 @@
       "d50": 0.23
     },
     "volumes": {
-      "d1": 0.54,
+      "d1": 0.53,
       "d5": 0.42,
       "d10": 0.39,
       "d20": 0.36,
@@ -217014,7 +217006,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927826,
+      "_last_rev_attempt_ts": 1790967233,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -217334,7 +217326,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927832,
+      "_last_rev_attempt_ts": 1790967317,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -217932,16 +217924,16 @@
     "price": 42.0,
     "marketCap": 55.26,
     "turnovers": {
-      "d1": 2.53,
+      "d1": 2.51,
       "d5": 1.02,
       "d10": 0.81,
       "d20": 0.46,
       "d50": 0.23
     },
     "volumes": {
-      "d1": 5.95,
+      "d1": 5.9,
       "d5": 2.62,
-      "d10": 2.34,
+      "d10": 2.33,
       "d20": 1.37,
       "d50": 0.73
     },
@@ -217979,7 +217971,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927740,
+      "_last_rev_attempt_ts": 1790967347,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -218263,7 +218255,7 @@
       "d1": 0.05,
       "d5": 0.09,
       "d10": 0.08,
-      "d20": 0.09,
+      "d20": 0.08,
       "d50": 0.11
     },
     "pctOf52wHigh": 91.51,
@@ -218304,7 +218296,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927842,
+      "_last_rev_attempt_ts": 1790967303,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -218960,7 +218952,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-07",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927889,
+      "_last_rev_attempt_ts": 1790967301,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -219285,7 +219277,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928032,
+      "_last_rev_attempt_ts": 1790967144,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -220538,7 +220530,7 @@
       "d50": 0.16
     },
     "volumes": {
-      "d1": 1.98,
+      "d1": 1.97,
       "d5": 0.96,
       "d10": 2.32,
       "d20": 1.87,
@@ -220576,7 +220568,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928045,
+      "_last_rev_attempt_ts": 1790967361,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -220870,7 +220862,7 @@
       "d50": 0.13
     },
     "volumes": {
-      "d1": 3.56,
+      "d1": 3.55,
       "d5": 0.93,
       "d10": 0.91,
       "d20": 0.62,
@@ -220908,7 +220900,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927972,
+      "_last_rev_attempt_ts": 1790967145,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -221507,14 +221499,14 @@
     "price": 88.7,
     "marketCap": 110.57,
     "turnovers": {
-      "d1": 1.31,
-      "d5": 1.65,
+      "d1": 1.29,
+      "d5": 1.64,
       "d10": 1.14,
       "d20": 1.06,
       "d50": 1.22
     },
     "volumes": {
-      "d1": 1.48,
+      "d1": 1.46,
       "d5": 1.9,
       "d10": 1.35,
       "d20": 1.29,
@@ -221560,7 +221552,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927995,
+      "_last_rev_attempt_ts": 1790967232,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -221847,17 +221839,17 @@
     "price": 47.15,
     "marketCap": 46.64,
     "turnovers": {
-      "d1": 1.88,
+      "d1": 1.87,
       "d5": 3.45,
-      "d10": 5.09,
+      "d10": 5.08,
       "d20": 4.18,
       "d50": 4.35
     },
     "volumes": {
-      "d1": 4.01,
+      "d1": 3.98,
       "d5": 7.3,
       "d10": 10.51,
-      "d20": 8.62,
+      "d20": 8.61,
       "d50": 8.87
     },
     "pctOf52wHigh": 73.21,
@@ -221892,7 +221884,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927908,
+      "_last_rev_attempt_ts": 1790967340,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -225134,14 +225126,14 @@
     "price": 253.0,
     "marketCap": 235.23,
     "turnovers": {
-      "d1": 2.4,
+      "d1": 2.38,
       "d5": 3.21,
       "d10": 3.04,
       "d20": 3.29,
       "d50": 5.4
     },
     "volumes": {
-      "d1": 0.95,
+      "d1": 0.94,
       "d5": 1.26,
       "d10": 1.21,
       "d20": 1.29,
@@ -225179,7 +225171,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927921,
+      "_last_rev_attempt_ts": 1790967357,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -225777,14 +225769,14 @@
     "price": 75.9,
     "marketCap": 369.0,
     "turnovers": {
-      "d1": 1.23,
+      "d1": 1.22,
       "d5": 0.78,
       "d10": 0.84,
       "d20": 0.76,
       "d50": 1.01
     },
     "volumes": {
-      "d1": 1.63,
+      "d1": 1.62,
       "d5": 1.05,
       "d10": 1.13,
       "d20": 1.04,
@@ -225828,7 +225820,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927915,
+      "_last_rev_attempt_ts": 1790967213,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -226115,15 +226107,15 @@
     "price": 180.5,
     "marketCap": 229.46,
     "turnovers": {
-      "d1": 5.0,
-      "d5": 5.1,
-      "d10": 7.67,
+      "d1": 4.9,
+      "d5": 5.07,
+      "d10": 7.66,
       "d20": 8.56,
-      "d50": 9.8
+      "d50": 9.79
     },
     "volumes": {
-      "d1": 2.77,
-      "d5": 2.83,
+      "d1": 2.72,
+      "d5": 2.82,
       "d10": 4.27,
       "d20": 4.68,
       "d50": 5.82
@@ -226160,7 +226152,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927693,
+      "_last_rev_attempt_ts": 1790967222,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -227415,10 +227407,10 @@
       "d50": 0.12
     },
     "volumes": {
-      "d1": 0.05,
+      "d1": 0.04,
       "d5": 0.12,
-      "d10": 0.1,
-      "d20": 0.12,
+      "d10": 0.09,
+      "d20": 0.11,
       "d50": 0.17
     },
     "pctOf52wHigh": 91.63,
@@ -227455,7 +227447,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927864,
+      "_last_rev_attempt_ts": 1790967455,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -229698,7 +229690,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927729,
+      "_last_rev_attempt_ts": 1790967379,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -230297,7 +230289,7 @@
       "d50": 0.46
     },
     "volumes": {
-      "d1": 16.09,
+      "d1": 16.08,
       "d5": 13.09,
       "d10": 9.03,
       "d20": 5.28,
@@ -230341,7 +230333,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927968,
+      "_last_rev_attempt_ts": 1790967412,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -234857,17 +234849,17 @@
     "price": 277.0,
     "marketCap": 469.93,
     "turnovers": {
-      "d1": 4.88,
-      "d5": 5.77,
-      "d10": 9.32,
-      "d20": 9.39,
+      "d1": 4.78,
+      "d5": 5.75,
+      "d10": 9.31,
+      "d20": 9.38,
       "d50": 8.79
     },
     "volumes": {
-      "d1": 1.76,
-      "d5": 2.09,
-      "d10": 3.36,
-      "d20": 3.46,
+      "d1": 1.72,
+      "d5": 2.08,
+      "d10": 3.35,
+      "d20": 3.45,
       "d50": 3.6
     },
     "pctOf52wHigh": 73.87,
@@ -234902,7 +234894,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927690,
+      "_last_rev_attempt_ts": 1790967393,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -235189,9 +235181,9 @@
     "price": 117.5,
     "marketCap": 86.18,
     "turnovers": {
-      "d1": 0.79,
+      "d1": 0.78,
       "d5": 0.73,
-      "d10": 0.87,
+      "d10": 0.86,
       "d20": 1.31,
       "d50": 0.96
     },
@@ -235236,7 +235228,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-07",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927942,
+      "_last_rev_attempt_ts": 1790967293,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -239105,7 +239097,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928079,
+      "_last_rev_attempt_ts": 1790967333,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -240786,16 +240778,16 @@
     "price": 548.0,
     "marketCap": 431.98,
     "turnovers": {
-      "d1": 8.95,
-      "d5": 5.13,
-      "d10": 5.51,
-      "d20": 6.58,
-      "d50": 6.28
+      "d1": 8.67,
+      "d5": 5.08,
+      "d10": 5.48,
+      "d20": 6.57,
+      "d50": 6.27
     },
     "volumes": {
-      "d1": 1.64,
-      "d5": 0.99,
-      "d10": 1.09,
+      "d1": 1.59,
+      "d5": 0.98,
+      "d10": 1.08,
       "d20": 1.27,
       "d50": 1.25
     },
@@ -240831,8 +240823,8 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790948647,
-      "_last_fin_attempt_ts": 1790948649,
+      "_last_rev_attempt_ts": 1790967157,
+      "_last_fin_attempt_ts": 1790967159,
       "grossMarginYoY": [],
       "operatingMarginYoY": [],
       "epsYoY": [],
@@ -241247,18 +241239,18 @@
     "price": 553.0,
     "marketCap": 813.4,
     "turnovers": {
-      "d1": 48.14,
-      "d5": 13.25,
-      "d10": 25.86,
-      "d20": 26.18,
-      "d50": 24.19
+      "d1": 44.76,
+      "d5": 12.58,
+      "d10": 25.52,
+      "d20": 26.01,
+      "d50": 24.12
     },
     "volumes": {
-      "d1": 8.99,
-      "d5": 2.54,
-      "d10": 5.4,
-      "d20": 5.72,
-      "d50": 5.65
+      "d1": 8.36,
+      "d5": 2.42,
+      "d10": 5.34,
+      "d20": 5.69,
+      "d50": 5.64
     },
     "pctOf52wHigh": 88.2,
     "pctOf200dHigh": 88.2,
@@ -241298,7 +241290,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927965,
+      "_last_rev_attempt_ts": 1790967434,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -242221,17 +242213,17 @@
     "price": 296.0,
     "marketCap": 780.86,
     "turnovers": {
-      "d1": 55.36,
-      "d5": 57.59,
-      "d10": 46.86,
-      "d20": 61.96,
-      "d50": 79.26
+      "d1": 54.76,
+      "d5": 57.47,
+      "d10": 46.8,
+      "d20": 61.93,
+      "d50": 79.25
     },
     "volumes": {
-      "d1": 19.03,
-      "d5": 20.14,
-      "d10": 16.9,
-      "d20": 21.56,
+      "d1": 18.83,
+      "d5": 20.1,
+      "d10": 16.88,
+      "d20": 21.55,
       "d50": 29.32
     },
     "pctOf52wHigh": 81.32,
@@ -242266,7 +242258,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927913,
+      "_last_rev_attempt_ts": 1790967142,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -242889,11 +242881,11 @@
       "d50": 0.07
     },
     "volumes": {
-      "d1": 0.1,
+      "d1": 0.11,
       "d5": 0.13,
       "d10": 0.22,
       "d20": 0.16,
-      "d50": 0.13
+      "d50": 0.14
     },
     "pctOf52wHigh": 70.72,
     "pctOf200dHigh": 73.38,
@@ -242929,7 +242921,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927743,
+      "_last_rev_attempt_ts": 1790967147,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -244200,8 +244192,8 @@
       "d50": 0.14
     },
     "volumes": {
-      "d1": 0.42,
-      "d5": 0.45,
+      "d1": 0.41,
+      "d5": 0.44,
       "d10": 0.34,
       "d20": 0.31,
       "d50": 0.43
@@ -244238,7 +244230,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927723,
+      "_last_rev_attempt_ts": 1790967297,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -245535,15 +245527,15 @@
     "price": 68.4,
     "marketCap": 77.81,
     "turnovers": {
-      "d1": 0.38,
+      "d1": 0.37,
       "d5": 0.45,
       "d10": 0.54,
       "d20": 0.64,
       "d50": 1.27
     },
     "volumes": {
-      "d1": 0.56,
-      "d5": 0.67,
+      "d1": 0.55,
+      "d5": 0.66,
       "d10": 0.8,
       "d20": 0.96,
       "d50": 1.8
@@ -245598,7 +245590,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927901,
+      "_last_rev_attempt_ts": 1790967167,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -247519,7 +247511,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927884,
+      "_last_rev_attempt_ts": 1790967465,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -252673,17 +252665,17 @@
     "price": 2540.0,
     "marketCap": 4954.99,
     "turnovers": {
-      "d1": 70.97,
-      "d5": 100.65,
-      "d10": 99.89,
-      "d20": 70.64,
-      "d50": 72.73
+      "d1": 68.45,
+      "d5": 100.14,
+      "d10": 99.64,
+      "d20": 70.51,
+      "d50": 72.68
     },
     "volumes": {
-      "d1": 2.75,
-      "d5": 4.02,
-      "d10": 4.25,
-      "d20": 3.16,
+      "d1": 2.65,
+      "d5": 4.0,
+      "d10": 4.24,
+      "d20": 3.15,
       "d50": 3.3
     },
     "pctOf52wHigh": 84.39,
@@ -252726,7 +252718,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927733,
+      "_last_rev_attempt_ts": 1790967410,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -253960,16 +253952,16 @@
     "price": 40.05,
     "marketCap": 79.64,
     "turnovers": {
-      "d1": 0.06,
+      "d1": 0.05,
       "d5": 0.05,
       "d10": 0.05,
       "d20": 0.05,
       "d50": 0.09
     },
     "volumes": {
-      "d1": 0.14,
+      "d1": 0.13,
       "d5": 0.12,
-      "d10": 0.13,
+      "d10": 0.12,
       "d20": 0.13,
       "d50": 0.22
     },
@@ -254005,7 +253997,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927720,
+      "_last_rev_attempt_ts": 1790967204,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -254339,7 +254331,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927868,
+      "_last_rev_attempt_ts": 1790967290,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -254951,7 +254943,7 @@
     "price": 35.25,
     "marketCap": 363.6,
     "turnovers": {
-      "d1": 0.08,
+      "d1": 0.07,
       "d5": 0.14,
       "d10": 0.29,
       "d20": 0.23,
@@ -254996,7 +254988,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927894,
+      "_last_rev_attempt_ts": 1790967332,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -255269,16 +255261,16 @@
     "price": 76.7,
     "marketCap": 527.04,
     "turnovers": {
-      "d1": 1.3,
-      "d5": 0.87,
-      "d10": 0.75,
+      "d1": 1.22,
+      "d5": 0.85,
+      "d10": 0.74,
       "d20": 0.72,
       "d50": 0.93
     },
     "volumes": {
-      "d1": 1.69,
-      "d5": 1.11,
-      "d10": 0.95,
+      "d1": 1.59,
+      "d5": 1.09,
+      "d10": 0.94,
       "d20": 0.9,
       "d50": 1.14
     },
@@ -255314,7 +255306,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927779,
+      "_last_rev_attempt_ts": 1790967187,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -256412,14 +256404,14 @@
     "price": 64.4,
     "marketCap": 303.89,
     "turnovers": {
-      "d1": 1.69,
+      "d1": 1.68,
       "d5": 1.33,
       "d10": 1.76,
       "d20": 2.41,
       "d50": 2.02
     },
     "volumes": {
-      "d1": 2.61,
+      "d1": 2.59,
       "d5": 2.07,
       "d10": 2.72,
       "d20": 3.78,
@@ -256465,7 +256457,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927975,
+      "_last_rev_attempt_ts": 1790967283,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -257747,14 +257739,14 @@
     "price": 46.0,
     "marketCap": 94.65,
     "turnovers": {
-      "d1": 1.99,
+      "d1": 1.97,
       "d5": 2.6,
-      "d10": 8.09,
+      "d10": 8.08,
       "d20": 5.19,
       "d50": 2.53
     },
     "volumes": {
-      "d1": 4.26,
+      "d1": 4.22,
       "d5": 5.76,
       "d10": 19.62,
       "d20": 13.67,
@@ -257792,7 +257784,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927997,
+      "_last_rev_attempt_ts": 1790967413,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -258081,17 +258073,17 @@
     "price": 234.5,
     "marketCap": 490.24,
     "turnovers": {
-      "d1": 10.7,
-      "d5": 6.03,
-      "d10": 6.25,
-      "d20": 9.66,
+      "d1": 10.46,
+      "d5": 5.98,
+      "d10": 6.23,
+      "d20": 9.65,
       "d50": 10.26
     },
     "volumes": {
-      "d1": 4.56,
-      "d5": 2.61,
-      "d10": 2.72,
-      "d20": 4.22,
+      "d1": 4.46,
+      "d5": 2.59,
+      "d10": 2.71,
+      "d20": 4.21,
       "d50": 5.05
     },
     "pctOf52wHigh": 77.65,
@@ -258136,7 +258128,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927981,
+      "_last_rev_attempt_ts": 1790967128,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -259389,17 +259381,17 @@
     "price": 58.4,
     "marketCap": 63.12,
     "turnovers": {
-      "d1": 17.14,
-      "d5": 6.43,
-      "d10": 3.59,
+      "d1": 17.09,
+      "d5": 6.42,
+      "d10": 3.58,
       "d20": 2.5,
       "d50": 2.02
     },
     "volumes": {
-      "d1": 29.59,
-      "d5": 11.56,
-      "d10": 6.54,
-      "d20": 4.72,
+      "d1": 29.49,
+      "d5": 11.54,
+      "d10": 6.53,
+      "d20": 4.71,
       "d50": 3.92
     },
     "pctOf52wHigh": 57.25,
@@ -259434,7 +259426,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927990,
+      "_last_rev_attempt_ts": 1790967386,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -260686,15 +260678,15 @@
     "price": 159.0,
     "marketCap": 161.84,
     "turnovers": {
-      "d1": 1.04,
-      "d5": 0.66,
+      "d1": 1.0,
+      "d5": 0.65,
       "d10": 0.72,
       "d20": 0.99,
       "d50": 2.83
     },
     "volumes": {
-      "d1": 0.66,
-      "d5": 0.42,
+      "d1": 0.63,
+      "d5": 0.41,
       "d10": 0.45,
       "d20": 0.6,
       "d50": 1.74
@@ -260735,7 +260727,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927736,
+      "_last_rev_attempt_ts": 1790967389,
       "revenueYoY": [
         {
           "date": "2026-07",
@@ -262520,15 +262512,15 @@
     "price": 6800.0,
     "marketCap": 9977.83,
     "turnovers": {
-      "d1": 73.05,
-      "d5": 96.6,
-      "d10": 78.13,
-      "d20": 68.89,
-      "d50": 71.47
+      "d1": 70.49,
+      "d5": 96.09,
+      "d10": 77.87,
+      "d20": 68.77,
+      "d50": 71.42
     },
     "volumes": {
-      "d1": 1.06,
-      "d5": 1.42,
+      "d1": 1.03,
+      "d5": 1.41,
       "d10": 1.22,
       "d20": 1.14,
       "d50": 1.41
@@ -262571,7 +262563,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927946,
+      "_last_rev_attempt_ts": 1790967165,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -264484,17 +264476,17 @@
     "price": 257.5,
     "marketCap": 1246.07,
     "turnovers": {
-      "d1": 41.04,
-      "d5": 32.41,
-      "d10": 44.55,
-      "d20": 29.04,
-      "d50": 19.46
+      "d1": 40.4,
+      "d5": 32.28,
+      "d10": 44.49,
+      "d20": 29.01,
+      "d50": 19.45
     },
     "volumes": {
-      "d1": 15.91,
-      "d5": 12.93,
-      "d10": 18.17,
-      "d20": 12.25,
+      "d1": 15.66,
+      "d5": 12.88,
+      "d10": 18.15,
+      "d20": 12.24,
       "d50": 8.71
     },
     "pctOf52wHigh": 92.13,
@@ -264531,7 +264523,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927854,
+      "_last_rev_attempt_ts": 1790967379,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -264804,15 +264796,15 @@
     "price": 51.0,
     "marketCap": 57.81,
     "turnovers": {
-      "d1": 1.09,
+      "d1": 1.08,
       "d5": 0.86,
       "d10": 0.98,
       "d20": 1.23,
       "d50": 1.44
     },
     "volumes": {
-      "d1": 2.12,
-      "d5": 1.66,
+      "d1": 2.1,
+      "d5": 1.65,
       "d10": 1.91,
       "d20": 2.38,
       "d50": 3.07
@@ -264849,7 +264841,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927753,
+      "_last_rev_attempt_ts": 1790967201,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -265781,14 +265773,14 @@
     "price": 71.8,
     "marketCap": 218.52,
     "turnovers": {
-      "d1": 0.82,
+      "d1": 0.81,
       "d5": 1.3,
       "d10": 1.2,
       "d20": 1.53,
       "d50": 3.07
     },
     "volumes": {
-      "d1": 1.15,
+      "d1": 1.14,
       "d5": 1.8,
       "d10": 1.66,
       "d20": 2.09,
@@ -265830,7 +265822,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927853,
+      "_last_rev_attempt_ts": 1790967473,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -268361,16 +268353,16 @@
     "price": 60.2,
     "marketCap": 123.81,
     "turnovers": {
-      "d1": 12.05,
+      "d1": 12.03,
       "d5": 5.74,
       "d10": 5.37,
       "d20": 8.68,
       "d50": 4.63
     },
     "volumes": {
-      "d1": 20.36,
-      "d5": 9.17,
-      "d10": 8.88,
+      "d1": 20.32,
+      "d5": 9.16,
+      "d10": 8.87,
       "d20": 19.01,
       "d50": 11.52
     },
@@ -268418,7 +268410,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927877,
+      "_last_rev_attempt_ts": 1790967274,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -268691,16 +268683,16 @@
     "price": 552.0,
     "marketCap": 891.56,
     "turnovers": {
-      "d1": 3.22,
-      "d5": 4.2,
-      "d10": 4.05,
-      "d20": 4.97,
+      "d1": 3.06,
+      "d5": 4.17,
+      "d10": 4.04,
+      "d20": 4.96,
       "d50": 6.4
     },
     "volumes": {
-      "d1": 0.59,
+      "d1": 0.56,
       "d5": 0.77,
-      "d10": 0.76,
+      "d10": 0.75,
       "d20": 0.88,
       "d50": 1.17
     },
@@ -268740,7 +268732,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927925,
+      "_last_rev_attempt_ts": 1790967378,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -269988,18 +269980,18 @@
     "price": 591.0,
     "marketCap": 2505.49,
     "turnovers": {
-      "d1": 166.51,
-      "d5": 141.74,
-      "d10": 156.34,
-      "d20": 133.73,
-      "d50": 115.84
+      "d1": 159.74,
+      "d5": 140.38,
+      "d10": 155.66,
+      "d20": 133.39,
+      "d50": 115.7
     },
     "volumes": {
-      "d1": 28.48,
-      "d5": 26.55,
-      "d10": 30.64,
-      "d20": 27.49,
-      "d50": 27.02
+      "d1": 27.32,
+      "d5": 26.32,
+      "d10": 30.52,
+      "d20": 27.43,
+      "d50": 27.0
     },
     "pctOf52wHigh": 92.78,
     "pctOf200dHigh": 92.78,
@@ -270037,7 +270029,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927803,
+      "_last_rev_attempt_ts": 1790967372,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -270317,9 +270309,9 @@
       "d50": 0.52
     },
     "volumes": {
-      "d1": 1.05,
+      "d1": 1.04,
       "d5": 0.91,
-      "d10": 1.3,
+      "d10": 1.29,
       "d20": 1.27,
       "d50": 1.4
     },
@@ -270355,7 +270347,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927755,
+      "_last_rev_attempt_ts": 1790967206,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -270960,15 +270952,15 @@
     "price": 585.0,
     "marketCap": 835.39,
     "turnovers": {
-      "d1": 7.59,
-      "d5": 14.11,
-      "d10": 33.58,
-      "d20": 40.62,
-      "d50": 51.31
+      "d1": 7.2,
+      "d5": 14.03,
+      "d10": 33.54,
+      "d20": 40.6,
+      "d50": 51.3
     },
     "volumes": {
-      "d1": 1.31,
-      "d5": 2.48,
+      "d1": 1.25,
+      "d5": 2.46,
       "d10": 5.58,
       "d20": 6.74,
       "d50": 9.53
@@ -271005,7 +270997,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927701,
+      "_last_rev_attempt_ts": 1790967358,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -276013,7 +276005,7 @@
       "d50": 0.19
     },
     "volumes": {
-      "d1": 0.11,
+      "d1": 0.1,
       "d5": 0.14,
       "d10": 0.2,
       "d20": 0.24,
@@ -276053,7 +276045,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927983,
+      "_last_rev_attempt_ts": 1790967219,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -277128,7 +277120,7 @@
     "price": 27.0,
     "marketCap": 52.73,
     "turnovers": {
-      "d1": 0.06,
+      "d1": 0.05,
       "d5": 0.11,
       "d10": 0.1,
       "d20": 0.09,
@@ -277179,7 +277171,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928068,
+      "_last_rev_attempt_ts": 1790967359,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -279587,17 +279579,17 @@
     "price": 1510.0,
     "marketCap": 1411.87,
     "turnovers": {
-      "d1": 90.47,
-      "d5": 73.99,
-      "d10": 62.22,
-      "d20": 60.67,
-      "d50": 46.14
+      "d1": 87.31,
+      "d5": 73.36,
+      "d10": 61.9,
+      "d20": 60.51,
+      "d50": 46.07
     },
     "volumes": {
-      "d1": 5.86,
-      "d5": 4.74,
-      "d10": 4.03,
-      "d20": 4.34,
+      "d1": 5.65,
+      "d5": 4.7,
+      "d10": 4.01,
+      "d20": 4.33,
       "d50": 3.68
     },
     "pctOf52wHigh": 89.88,
@@ -279632,7 +279624,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927681,
+      "_last_rev_attempt_ts": 1790967394,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -281900,7 +281892,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927760,
+      "_last_rev_attempt_ts": 1790967209,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -283326,8 +283318,8 @@
       "d50": 0.46
     },
     "volumes": {
-      "d1": 0.15,
-      "d5": 0.25,
+      "d1": 0.14,
+      "d5": 0.24,
       "d10": 0.3,
       "d20": 0.53,
       "d50": 0.64
@@ -283370,7 +283362,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927858,
+      "_last_rev_attempt_ts": 1790967324,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -284641,16 +284633,16 @@
     "price": 307.0,
     "marketCap": 244.82,
     "turnovers": {
-      "d1": 7.12,
-      "d5": 4.2,
-      "d10": 3.66,
-      "d20": 6.58,
+      "d1": 6.93,
+      "d5": 4.16,
+      "d10": 3.64,
+      "d20": 6.57,
       "d50": 5.54
     },
     "volumes": {
-      "d1": 2.36,
-      "d5": 1.42,
-      "d10": 1.25,
+      "d1": 2.3,
+      "d5": 1.41,
+      "d10": 1.24,
       "d20": 2.16,
       "d50": 1.96
     },
@@ -284686,7 +284678,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927938,
+      "_last_rev_attempt_ts": 1790967326,
       "revenueYoY": [
         {
           "date": "2026-08",
@@ -286471,14 +286463,14 @@
     "price": 51.0,
     "marketCap": 56.23,
     "turnovers": {
-      "d1": 1.12,
+      "d1": 1.11,
       "d5": 2.05,
       "d10": 1.35,
       "d20": 0.97,
       "d50": 1.19
     },
     "volumes": {
-      "d1": 2.17,
+      "d1": 2.15,
       "d5": 4.08,
       "d10": 2.75,
       "d20": 2.04,
@@ -286520,7 +286512,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927887,
+      "_last_rev_attempt_ts": 1790967251,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -287754,7 +287746,7 @@
       "d50": 0.2
     },
     "volumes": {
-      "d1": 2.8,
+      "d1": 2.79,
       "d5": 6.42,
       "d10": 3.47,
       "d20": 1.87,
@@ -287792,7 +287784,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928058,
+      "_last_rev_attempt_ts": 1790967175,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -288065,14 +288057,14 @@
     "price": 24.0,
     "marketCap": 126.96,
     "turnovers": {
-      "d1": 1.3,
+      "d1": 1.29,
       "d5": 2.86,
       "d10": 1.76,
       "d20": 1.0,
       "d50": 0.56
     },
     "volumes": {
-      "d1": 5.39,
+      "d1": 5.38,
       "d5": 11.95,
       "d10": 7.5,
       "d20": 4.32,
@@ -288112,7 +288104,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928062,
+      "_last_rev_attempt_ts": 1790967496,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -288744,14 +288736,14 @@
     "price": 93.9,
     "marketCap": 158.25,
     "turnovers": {
-      "d1": 1.12,
-      "d5": 0.93,
+      "d1": 1.1,
+      "d5": 0.92,
       "d10": 0.78,
       "d20": 0.82,
       "d50": 0.9
     },
     "volumes": {
-      "d1": 1.2,
+      "d1": 1.18,
       "d5": 1.01,
       "d10": 0.86,
       "d20": 0.9,
@@ -288795,7 +288787,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927775,
+      "_last_rev_attempt_ts": 1790967169,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -289404,16 +289396,16 @@
     "price": 89.2,
     "marketCap": 2386.86,
     "turnovers": {
-      "d1": 4.05,
-      "d5": 7.71,
+      "d1": 4.0,
+      "d5": 7.7,
       "d10": 7.45,
-      "d20": 7.8,
+      "d20": 7.79,
       "d50": 10.4
     },
     "volumes": {
-      "d1": 4.51,
-      "d5": 8.49,
-      "d10": 8.22,
+      "d1": 4.46,
+      "d5": 8.48,
+      "d10": 8.21,
       "d20": 8.55,
       "d50": 11.52
     },
@@ -289491,7 +289483,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927956,
+      "_last_rev_attempt_ts": 1790967154,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -290422,17 +290414,17 @@
     "price": 45.75,
     "marketCap": 200.67,
     "turnovers": {
-      "d1": 18.99,
+      "d1": 18.94,
       "d5": 11.39,
       "d10": 6.39,
       "d20": 3.6,
       "d50": 2.1
     },
     "volumes": {
-      "d1": 41.68,
-      "d5": 27.08,
-      "d10": 15.55,
-      "d20": 9.02,
+      "d1": 41.59,
+      "d5": 27.06,
+      "d10": 15.54,
+      "d20": 9.01,
       "d50": 5.7
     },
     "pctOf52wHigh": 96.93,
@@ -290477,7 +290469,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927883,
+      "_last_rev_attempt_ts": 1790967214,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -291075,18 +291067,18 @@
     "price": 230.5,
     "marketCap": 790.6,
     "turnovers": {
-      "d1": 98.42,
-      "d5": 76.83,
-      "d10": 50.76,
-      "d20": 34.51,
-      "d50": 30.89
+      "d1": 97.37,
+      "d5": 76.62,
+      "d10": 50.66,
+      "d20": 34.46,
+      "d50": 30.87
     },
     "volumes": {
-      "d1": 43.39,
-      "d5": 35.91,
-      "d10": 24.51,
-      "d20": 17.35,
-      "d50": 16.59
+      "d1": 42.92,
+      "d5": 35.82,
+      "d10": 24.47,
+      "d20": 17.33,
+      "d50": 16.58
     },
     "pctOf52wHigh": 92.2,
     "pctOf200dHigh": 92.2,
@@ -291122,7 +291114,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927821,
+      "_last_rev_attempt_ts": 1790967184,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -291409,16 +291401,16 @@
     "price": 56.0,
     "marketCap": 58.83,
     "turnovers": {
-      "d1": 7.27,
-      "d5": 4.03,
+      "d1": 7.24,
+      "d5": 4.02,
       "d10": 2.39,
-      "d20": 1.64,
+      "d20": 1.63,
       "d50": 1.59
     },
     "volumes": {
-      "d1": 12.9,
-      "d5": 7.51,
-      "d10": 4.53,
+      "d1": 12.84,
+      "d5": 7.5,
+      "d10": 4.52,
       "d20": 3.17,
       "d50": 3.21
     },
@@ -291458,7 +291450,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928001,
+      "_last_rev_attempt_ts": 1790967383,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -293063,7 +293055,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927838,
+      "_last_rev_attempt_ts": 1790967148,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -293114,7 +293106,7 @@
           "yoy": 2.15
         }
       ],
-      "_last_fin_attempt_ts": 1790927839,
+      "_last_fin_attempt_ts": 1790967149,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -294475,14 +294467,14 @@
     "price": 243.0,
     "marketCap": 110.93,
     "turnovers": {
-      "d1": 0.96,
+      "d1": 0.92,
       "d5": 1.04,
-      "d10": 0.83,
+      "d10": 0.82,
       "d20": 0.84,
       "d50": 0.64
     },
     "volumes": {
-      "d1": 0.39,
+      "d1": 0.38,
       "d5": 0.44,
       "d10": 0.36,
       "d20": 0.37,
@@ -294524,7 +294516,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928077,
+      "_last_rev_attempt_ts": 1790967241,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -295490,18 +295482,18 @@
     "price": 1305.0,
     "marketCap": 20766.76,
     "turnovers": {
-      "d1": 236.49,
-      "d5": 169.02,
-      "d10": 165.91,
-      "d20": 174.15,
-      "d50": 209.21
+      "d1": 222.26,
+      "d5": 166.18,
+      "d10": 164.49,
+      "d20": 173.44,
+      "d50": 208.92
     },
     "volumes": {
-      "d1": 18.55,
-      "d5": 14.03,
-      "d10": 14.75,
-      "d20": 16.96,
-      "d50": 21.14
+      "d1": 17.43,
+      "d5": 13.8,
+      "d10": 14.64,
+      "d20": 16.9,
+      "d50": 21.11
     },
     "pctOf52wHigh": 100.0,
     "pctOf200dHigh": 100.0,
@@ -295545,7 +295537,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927747,
+      "_last_rev_attempt_ts": 1790967197,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -296150,17 +296142,17 @@
     "price": 48.15,
     "marketCap": 127.57,
     "turnovers": {
-      "d1": 8.16,
-      "d5": 2.51,
-      "d10": 2.25,
+      "d1": 8.11,
+      "d5": 2.5,
+      "d10": 2.24,
       "d20": 1.86,
       "d50": 1.58
     },
     "volumes": {
-      "d1": 17.4,
-      "d5": 5.47,
-      "d10": 5.01,
-      "d20": 4.24,
+      "d1": 17.3,
+      "d5": 5.45,
+      "d10": 5.0,
+      "d20": 4.23,
       "d50": 4.06
     },
     "pctOf52wHigh": 73.07,
@@ -296195,7 +296187,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-07",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928005,
+      "_last_rev_attempt_ts": 1790967318,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -296482,15 +296474,15 @@
     "price": 79.2,
     "marketCap": 77.78,
     "turnovers": {
-      "d1": 4.0,
-      "d5": 6.09,
-      "d10": 5.11,
+      "d1": 3.96,
+      "d5": 6.08,
+      "d10": 5.1,
       "d20": 6.29,
       "d50": 10.5
     },
     "volumes": {
-      "d1": 5.04,
-      "d5": 7.68,
+      "d1": 4.99,
+      "d5": 7.67,
       "d10": 6.48,
       "d20": 7.67,
       "d50": 14.37
@@ -296527,7 +296519,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927774,
+      "_last_rev_attempt_ts": 1790967193,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -297437,15 +297429,15 @@
     "price": 84.7,
     "marketCap": 422.91,
     "turnovers": {
-      "d1": 1.65,
+      "d1": 1.61,
       "d5": 1.0,
-      "d10": 1.01,
+      "d10": 1.0,
       "d20": 0.94,
-      "d50": 1.62
+      "d50": 1.61
     },
     "volumes": {
-      "d1": 1.96,
-      "d5": 1.2,
+      "d1": 1.91,
+      "d5": 1.19,
       "d10": 1.2,
       "d20": 1.13,
       "d50": 1.93
@@ -297488,7 +297480,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927673,
+      "_last_rev_attempt_ts": 1790967355,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -298447,7 +298439,7 @@
     "price": 22.65,
     "marketCap": 74.77,
     "turnovers": {
-      "d1": 0.27,
+      "d1": 0.28,
       "d5": 0.37,
       "d10": 0.63,
       "d20": 0.4,
@@ -298500,7 +298492,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928048,
+      "_last_rev_attempt_ts": 1790967129,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -300729,18 +300721,18 @@
     "price": 213.5,
     "marketCap": 240.1,
     "turnovers": {
-      "d1": 11.48,
-      "d5": 10.57,
-      "d10": 7.64,
-      "d20": 6.18,
+      "d1": 11.23,
+      "d5": 10.52,
+      "d10": 7.62,
+      "d20": 6.17,
       "d50": 4.83
     },
     "volumes": {
-      "d1": 5.4,
-      "d5": 5.13,
-      "d10": 3.88,
-      "d20": 3.27,
-      "d50": 2.65
+      "d1": 5.29,
+      "d5": 5.11,
+      "d10": 3.87,
+      "d20": 3.26,
+      "d50": 2.64
     },
     "pctOf52wHigh": 71.89,
     "pctOf200dHigh": 71.89,
@@ -300776,7 +300768,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927670,
+      "_last_rev_attempt_ts": 1790967505,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -303646,18 +303638,18 @@
     "price": 2085.0,
     "marketCap": 11645.53,
     "turnovers": {
-      "d1": 48.66,
-      "d5": 37.59,
-      "d10": 59.86,
-      "d20": 72.57,
-      "d50": 94.49
+      "d1": 42.41,
+      "d5": 36.34,
+      "d10": 59.23,
+      "d20": 72.26,
+      "d50": 94.36
     },
     "volumes": {
-      "d1": 2.32,
-      "d5": 1.79,
-      "d10": 2.81,
-      "d20": 3.21,
-      "d50": 4.42
+      "d1": 2.02,
+      "d5": 1.73,
+      "d10": 2.78,
+      "d20": 3.19,
+      "d50": 4.41
     },
     "pctOf52wHigh": 72.52,
     "pctOf200dHigh": 72.52,
@@ -303695,7 +303687,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927872,
+      "_last_rev_attempt_ts": 1790967306,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -304034,7 +304026,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927798,
+      "_last_rev_attempt_ts": 1790967171,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -305275,7 +305267,7 @@
       "d50": 0.54
     },
     "volumes": {
-      "d1": 0.54,
+      "d1": 0.53,
       "d5": 0.95,
       "d10": 1.01,
       "d20": 2.0,
@@ -305315,7 +305307,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927764,
+      "_last_rev_attempt_ts": 1790967311,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -306209,7 +306201,7 @@
       "d50": 0.17
     },
     "volumes": {
-      "d1": 0.79,
+      "d1": 0.78,
       "d5": 1.11,
       "d10": 1.24,
       "d20": 0.93,
@@ -306257,7 +306249,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927756,
+      "_last_rev_attempt_ts": 1790967275,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -306579,7 +306571,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927954,
+      "_last_rev_attempt_ts": 1790967329,
       "revenueYoY": [
         {
           "date": "2026-07",
@@ -307088,7 +307080,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927809,
+      "_last_rev_attempt_ts": 1790967344,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -310397,16 +310389,16 @@
     "price": 1485.0,
     "marketCap": 1021.76,
     "turnovers": {
-      "d1": 9.08,
-      "d5": 13.47,
-      "d10": 18.69,
-      "d20": 19.62,
-      "d50": 21.19
+      "d1": 8.36,
+      "d5": 13.32,
+      "d10": 18.62,
+      "d20": 19.59,
+      "d50": 21.18
     },
     "volumes": {
-      "d1": 0.61,
-      "d5": 0.88,
-      "d10": 1.23,
+      "d1": 0.56,
+      "d5": 0.87,
+      "d10": 1.22,
       "d20": 1.33,
       "d50": 1.59
     },
@@ -310444,7 +310436,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-07",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927825,
+      "_last_rev_attempt_ts": 1790967385,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -312723,7 +312715,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927696,
+      "_last_rev_attempt_ts": 1790967245,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -313325,16 +313317,16 @@
     "price": 35.6,
     "marketCap": 1262.58,
     "turnovers": {
-      "d1": 1.75,
+      "d1": 1.74,
       "d5": 2.84,
       "d10": 2.85,
       "d20": 2.54,
       "d50": 3.2
     },
     "volumes": {
-      "d1": 4.91,
+      "d1": 4.9,
       "d5": 7.99,
-      "d10": 8.04,
+      "d10": 8.03,
       "d20": 7.2,
       "d50": 9.4
     },
@@ -313378,7 +313370,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927817,
+      "_last_rev_attempt_ts": 1790967143,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -313667,14 +313659,14 @@
     "price": 104.0,
     "marketCap": 122.44,
     "turnovers": {
-      "d1": 0.51,
-      "d5": 0.38,
+      "d1": 0.5,
+      "d5": 0.37,
       "d10": 0.68,
       "d20": 0.73,
       "d50": 0.9
     },
     "volumes": {
-      "d1": 0.49,
+      "d1": 0.48,
       "d5": 0.36,
       "d10": 0.65,
       "d20": 0.68,
@@ -313724,7 +313716,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927892,
+      "_last_rev_attempt_ts": 1790967135,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -314667,14 +314659,14 @@
     "price": 18.2,
     "marketCap": 306.61,
     "turnovers": {
-      "d1": 0.4,
-      "d5": 0.29,
+      "d1": 0.39,
+      "d5": 0.28,
       "d10": 0.27,
       "d20": 0.26,
       "d50": 0.49
     },
     "volumes": {
-      "d1": 2.19,
+      "d1": 2.18,
       "d5": 1.58,
       "d10": 1.48,
       "d20": 1.47,
@@ -314720,7 +314712,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927763,
+      "_last_rev_attempt_ts": 1790967377,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -315360,17 +315352,17 @@
     "price": 167.5,
     "marketCap": 842.71,
     "turnovers": {
-      "d1": 3.08,
-      "d5": 3.03,
-      "d10": 3.14,
+      "d1": 3.02,
+      "d5": 3.02,
+      "d10": 3.13,
       "d20": 2.78,
       "d50": 4.34
     },
     "volumes": {
-      "d1": 1.85,
+      "d1": 1.81,
       "d5": 1.81,
       "d10": 1.88,
-      "d20": 1.68,
+      "d20": 1.67,
       "d50": 2.64
     },
     "pctOf52wHigh": 83.33,
@@ -315427,7 +315419,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927810,
+      "_last_rev_attempt_ts": 1790967395,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -316060,10 +316052,10 @@
       "d50": 0.42
     },
     "volumes": {
-      "d1": 3.16,
+      "d1": 3.17,
       "d5": 2.22,
-      "d10": 1.34,
-      "d20": 1.0,
+      "d10": 1.35,
+      "d20": 1.01,
       "d50": 1.16
     },
     "pctOf52wHigh": 50.68,
@@ -316116,7 +316108,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927909,
+      "_last_rev_attempt_ts": 1790967420,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -318660,7 +318652,7 @@
       "d50": 0.95
     },
     "volumes": {
-      "d1": 2.65,
+      "d1": 2.64,
       "d5": 2.11,
       "d10": 1.43,
       "d20": 1.31,
@@ -318977,14 +318969,14 @@
     "price": 207.0,
     "marketCap": 1115.36,
     "turnovers": {
-      "d1": 2.17,
-      "d5": 3.0,
+      "d1": 2.12,
+      "d5": 2.99,
       "d10": 4.54,
-      "d20": 4.59,
+      "d20": 4.58,
       "d50": 5.44
     },
     "volumes": {
-      "d1": 1.05,
+      "d1": 1.03,
       "d5": 1.45,
       "d10": 2.18,
       "d20": 2.21,
@@ -319022,7 +319014,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927736,
+      "_last_rev_attempt_ts": 1790967416,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -319640,14 +319632,14 @@
     "price": 273.0,
     "marketCap": 264.09,
     "turnovers": {
-      "d1": 3.62,
-      "d5": 2.88,
-      "d10": 4.28,
+      "d1": 3.52,
+      "d5": 2.86,
+      "d10": 4.27,
       "d20": 7.0,
-      "d50": 10.79
+      "d50": 10.78
     },
     "volumes": {
-      "d1": 1.32,
+      "d1": 1.29,
       "d5": 1.05,
       "d10": 1.56,
       "d20": 2.53,
@@ -319689,7 +319681,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927923,
+      "_last_rev_attempt_ts": 1790967480,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -321635,18 +321627,18 @@
     "price": 121.0,
     "marketCap": 743.79,
     "turnovers": {
-      "d1": 51.58,
-      "d5": 31.96,
-      "d10": 54.15,
-      "d20": 68.22,
-      "d50": 56.47
+      "d1": 51.18,
+      "d5": 31.88,
+      "d10": 54.11,
+      "d20": 68.2,
+      "d50": 56.46
     },
     "volumes": {
-      "d1": 43.1,
-      "d5": 27.22,
-      "d10": 45.32,
-      "d20": 56.24,
-      "d50": 51.03
+      "d1": 42.77,
+      "d5": 27.16,
+      "d10": 45.29,
+      "d20": 56.23,
+      "d50": 51.02
     },
     "pctOf52wHigh": 89.63,
     "pctOf200dHigh": 89.63,
@@ -321680,7 +321672,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928034,
+      "_last_rev_attempt_ts": 1790967244,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -325193,17 +325185,17 @@
     "price": 6290.0,
     "marketCap": 8227.21,
     "turnovers": {
-      "d1": 105.06,
-      "d5": 95.21,
-      "d10": 113.91,
-      "d20": 118.35,
-      "d50": 124.95
+      "d1": 95.16,
+      "d5": 93.23,
+      "d10": 112.92,
+      "d20": 117.85,
+      "d50": 124.76
     },
     "volumes": {
-      "d1": 1.68,
-      "d5": 1.56,
-      "d10": 1.82,
-      "d20": 1.85,
+      "d1": 1.52,
+      "d5": 1.53,
+      "d10": 1.81,
+      "d20": 1.84,
       "d50": 2.21
     },
     "pctOf52wHigh": 78.67,
@@ -325238,7 +325230,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927712,
+      "_last_rev_attempt_ts": 1790967350,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -326215,7 +326207,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927880,
+      "_last_rev_attempt_ts": 1790967359,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -329789,7 +329781,7 @@
     "price": 270.5,
     "marketCap": 377.04,
     "turnovers": {
-      "d1": 0.3,
+      "d1": 0.29,
       "d5": 0.46,
       "d10": 0.45,
       "d20": 0.42,
@@ -329834,7 +329826,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927938,
+      "_last_rev_attempt_ts": 1790967432,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -330482,7 +330474,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928038,
+      "_last_rev_attempt_ts": 1790967490,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -334382,7 +334374,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928051,
+      "_last_rev_attempt_ts": 1790967508,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -335652,7 +335644,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-08",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928037,
+      "_last_rev_attempt_ts": 1790967284,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -337589,14 +337581,14 @@
     "price": 10.2,
     "marketCap": 14.89,
     "turnovers": {
-      "d1": 0.03,
+      "d1": 0.02,
       "d5": 0.02,
       "d10": 0.02,
       "d20": 0.02,
       "d50": 0.03
     },
     "volumes": {
-      "d1": 0.25,
+      "d1": 0.24,
       "d5": 0.21,
       "d10": 0.2,
       "d20": 0.2,
@@ -337636,7 +337628,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928039,
+      "_last_rev_attempt_ts": 1790967461,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -340194,16 +340186,16 @@
     "price": 449.0,
     "marketCap": 306.55,
     "turnovers": {
-      "d1": 8.63,
-      "d5": 3.57,
-      "d10": 10.28,
-      "d20": 7.74,
+      "d1": 8.41,
+      "d5": 3.53,
+      "d10": 10.26,
+      "d20": 7.73,
       "d50": 5.49
     },
     "volumes": {
-      "d1": 1.91,
-      "d5": 0.79,
-      "d10": 2.36,
+      "d1": 1.87,
+      "d5": 0.78,
+      "d10": 2.35,
       "d20": 1.93,
       "d50": 1.38
     },
@@ -340245,7 +340237,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928017,
+      "_last_rev_attempt_ts": 1790967322,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -350327,7 +350319,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927718,
+      "_last_rev_attempt_ts": 1790967452,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -351900,10 +351892,10 @@
       "d50": 0.24
     },
     "volumes": {
-      "d1": 1.07,
-      "d5": 1.87,
+      "d1": 1.06,
+      "d5": 1.86,
       "d10": 2.0,
-      "d20": 1.87,
+      "d20": 1.86,
       "d50": 1.05
     },
     "pctOf52wHigh": 94.19,
@@ -351938,7 +351930,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928011,
+      "_last_rev_attempt_ts": 1790967276,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -353170,11 +353162,11 @@
       "d1": 1.01,
       "d5": 1.02,
       "d10": 4.03,
-      "d20": 3.69,
+      "d20": 3.68,
       "d50": 1.66
     },
     "volumes": {
-      "d1": 1.93,
+      "d1": 1.92,
       "d5": 1.97,
       "d10": 7.51,
       "d20": 7.13,
@@ -353226,7 +353218,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927934,
+      "_last_rev_attempt_ts": 1790967183,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -354374,7 +354366,7 @@
     "price": 48.9,
     "marketCap": 38.55,
     "turnovers": {
-      "d1": 0.15,
+      "d1": 0.14,
       "d5": 0.07,
       "d10": 0.06,
       "d20": 0.07,
@@ -354419,7 +354411,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-08",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928044,
+      "_last_rev_attempt_ts": 1790967264,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -356628,14 +356620,14 @@
     "price": 113.0,
     "marketCap": 103.83,
     "turnovers": {
-      "d1": 1.18,
+      "d1": 1.17,
       "d5": 2.38,
       "d10": 1.78,
       "d20": 1.01,
       "d50": 0.77
     },
     "volumes": {
-      "d1": 1.05,
+      "d1": 1.04,
       "d5": 1.98,
       "d10": 1.52,
       "d20": 0.89,
@@ -356673,7 +356665,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927989,
+      "_last_rev_attempt_ts": 1790967342,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -359884,14 +359876,14 @@
     "price": 33.35,
     "marketCap": 44.17,
     "turnovers": {
-      "d1": 0.15,
+      "d1": 0.14,
       "d5": 0.26,
       "d10": 0.22,
       "d20": 0.27,
       "d50": 0.43
     },
     "volumes": {
-      "d1": 0.45,
+      "d1": 0.43,
       "d5": 0.76,
       "d10": 0.64,
       "d20": 0.76,
@@ -359929,7 +359921,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927904,
+      "_last_rev_attempt_ts": 1790967152,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -363144,7 +363136,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927761,
+      "_last_rev_attempt_ts": 1790967191,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -367194,7 +367186,7 @@
     "price": 84.7,
     "marketCap": 311.67,
     "turnovers": {
-      "d1": 0.31,
+      "d1": 0.3,
       "d5": 0.63,
       "d10": 0.6,
       "d20": 0.74,
@@ -367239,7 +367231,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928041,
+      "_last_rev_attempt_ts": 1790967463,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -368208,7 +368200,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927802,
+      "_last_rev_attempt_ts": 1790967316,
       "revenueYoY": [
         {
           "date": "2025-02",
@@ -371666,18 +371658,18 @@
     "price": 542.0,
     "marketCap": 2848.78,
     "turnovers": {
-      "d1": 9.08,
-      "d5": 9.64,
-      "d10": 14.04,
-      "d20": 13.24,
-      "d50": 15.28
+      "d1": 8.58,
+      "d5": 9.55,
+      "d10": 13.99,
+      "d20": 13.21,
+      "d50": 15.27
     },
     "volumes": {
-      "d1": 1.69,
-      "d5": 1.82,
-      "d10": 2.67,
+      "d1": 1.6,
+      "d5": 1.8,
+      "d10": 2.66,
       "d20": 2.58,
-      "d50": 3.27
+      "d50": 3.26
     },
     "pctOf52wHigh": 90.64,
     "pctOf200dHigh": 90.64,
@@ -371711,7 +371703,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928057,
+      "_last_rev_attempt_ts": 1790967509,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -379042,15 +379034,15 @@
     "price": 86.6,
     "marketCap": 632.37,
     "turnovers": {
-      "d1": 0.95,
-      "d5": 1.6,
-      "d10": 1.97,
+      "d1": 0.91,
+      "d5": 1.59,
+      "d10": 1.96,
       "d20": 1.46,
       "d50": 2.1
     },
     "volumes": {
-      "d1": 1.1,
-      "d5": 1.86,
+      "d1": 1.05,
+      "d5": 1.85,
       "d10": 2.3,
       "d20": 1.74,
       "d50": 2.58
@@ -379091,7 +379083,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927855,
+      "_last_rev_attempt_ts": 1790967246,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -381342,18 +381334,18 @@
     "price": 713.0,
     "marketCap": 31875.18,
     "turnovers": {
-      "d1": 83.52,
-      "d5": 81.84,
-      "d10": 99.63,
-      "d20": 97.46,
-      "d50": 108.1
+      "d1": 79.49,
+      "d5": 81.03,
+      "d10": 99.23,
+      "d20": 97.25,
+      "d50": 108.02
     },
     "volumes": {
-      "d1": 11.71,
-      "d5": 11.68,
-      "d10": 14.67,
-      "d20": 15.08,
-      "d50": 17.69
+      "d1": 11.15,
+      "d5": 11.56,
+      "d10": 14.61,
+      "d20": 15.05,
+      "d50": 17.68
     },
     "pctOf52wHigh": 97.81,
     "pctOf200dHigh": 97.81,
@@ -381395,7 +381387,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927780,
+      "_last_rev_attempt_ts": 1790967227,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -383978,7 +383970,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927737,
+      "_last_rev_attempt_ts": 1790967453,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -385224,14 +385216,14 @@
     "price": 240.0,
     "marketCap": 111.17,
     "turnovers": {
-      "d1": 0.6,
+      "d1": 0.59,
       "d5": 0.51,
       "d10": 0.32,
       "d20": 0.3,
       "d50": 0.42
     },
     "volumes": {
-      "d1": 0.25,
+      "d1": 0.24,
       "d5": 0.22,
       "d10": 0.14,
       "d20": 0.13,
@@ -385275,7 +385267,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927947,
+      "_last_rev_attempt_ts": 1790967259,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -386880,8 +386872,8 @@
       "d50": 0.06
     },
     "volumes": {
-      "d1": 0.52,
-      "d5": 0.32,
+      "d1": 0.51,
+      "d5": 0.31,
       "d10": 0.45,
       "d20": 0.31,
       "d50": 0.38
@@ -386926,7 +386918,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927684,
+      "_last_rev_attempt_ts": 1790967409,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -389787,15 +389779,15 @@
     "price": 424.0,
     "marketCap": 330.72,
     "turnovers": {
-      "d1": 2.06,
-      "d5": 1.6,
-      "d10": 1.53,
-      "d20": 1.3,
+      "d1": 2.0,
+      "d5": 1.59,
+      "d10": 1.52,
+      "d20": 1.29,
       "d50": 1.65
     },
     "volumes": {
-      "d1": 0.49,
-      "d5": 0.39,
+      "d1": 0.47,
+      "d5": 0.38,
       "d10": 0.37,
       "d20": 0.33,
       "d50": 0.44
@@ -392125,15 +392117,15 @@
     "price": 26.9,
     "marketCap": 71.83,
     "turnovers": {
-      "d1": 1.88,
-      "d5": 2.1,
+      "d1": 1.87,
+      "d5": 2.09,
       "d10": 1.07,
       "d20": 0.57,
       "d50": 0.26
     },
     "volumes": {
-      "d1": 7.07,
-      "d5": 7.94,
+      "d1": 7.04,
+      "d5": 7.93,
       "d10": 4.07,
       "d20": 2.18,
       "d50": 1.04
@@ -392182,7 +392174,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927850,
+      "_last_rev_attempt_ts": 1790967247,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -393748,15 +393740,15 @@
     "price": 372.5,
     "marketCap": 141.77,
     "turnovers": {
-      "d1": 7.09,
-      "d5": 8.71,
-      "d10": 9.62,
-      "d20": 7.96,
+      "d1": 6.95,
+      "d5": 8.68,
+      "d10": 9.6,
+      "d20": 7.95,
       "d50": 5.82
     },
     "volumes": {
-      "d1": 1.92,
-      "d5": 2.32,
+      "d1": 1.88,
+      "d5": 2.31,
       "d10": 2.42,
       "d20": 2.25,
       "d50": 2.43
@@ -393791,12 +393783,8 @@
     "revenueMonth": "2026-09",
     "revenueFirstSeen": "2026-10-02",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928008,
+      "_last_rev_attempt_ts": 1790967188,
       "revenueYoY": [
-        {
-          "date": "2025-09",
-          "yoy": -37.68
-        },
         {
           "date": "2025-10",
           "yoy": -29.7
@@ -393843,7 +393831,7 @@
         },
         {
           "date": "2026-09",
-          "yoy": 43.07
+          "yoy": 43.08
         }
       ],
       "_last_fin_attempt_ts": 1789784128,
@@ -396002,14 +395990,14 @@
     "price": 161.5,
     "marketCap": 171.77,
     "turnovers": {
-      "d1": 0.25,
+      "d1": 0.24,
       "d5": 0.18,
       "d10": 0.32,
       "d20": 0.32,
       "d50": 0.44
     },
     "volumes": {
-      "d1": 0.16,
+      "d1": 0.15,
       "d5": 0.11,
       "d10": 0.19,
       "d20": 0.2,
@@ -396055,7 +396043,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927906,
+      "_last_rev_attempt_ts": 1790967424,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -398296,7 +398284,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927667,
+      "_last_rev_attempt_ts": 1790967215,
       "revenueYoY": [
         {
           "date": "2025-06",
@@ -398941,7 +398929,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927812,
+      "_last_rev_attempt_ts": 1790967239,
       "revenueYoY": [
         {
           "date": "2025-10",
@@ -399487,8 +399475,8 @@
     "price": 76.5,
     "marketCap": 39.98,
     "turnovers": {
-      "d1": 0.08,
-      "d5": 0.05,
+      "d1": 0.07,
+      "d5": 0.04,
       "d10": 0.03,
       "d20": 0.02,
       "d50": 0.02
@@ -399532,7 +399520,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928060,
+      "_last_rev_attempt_ts": 1790967417,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -400767,15 +400755,15 @@
     "price": 62.2,
     "marketCap": 127.64,
     "turnovers": {
-      "d1": 0.93,
+      "d1": 0.92,
       "d5": 2.26,
-      "d10": 1.48,
+      "d10": 1.47,
       "d20": 0.99,
       "d50": 1.93
     },
     "volumes": {
-      "d1": 1.49,
-      "d5": 3.54,
+      "d1": 1.46,
+      "d5": 3.53,
       "d10": 2.35,
       "d20": 1.63,
       "d50": 3.14
@@ -400816,7 +400804,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928053,
+      "_last_rev_attempt_ts": 1790967315,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -401141,7 +401129,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-09",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927824,
+      "_last_rev_attempt_ts": 1790967249,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -401419,16 +401407,16 @@
     "price": 31.1,
     "marketCap": 668.91,
     "turnovers": {
-      "d1": 5.81,
-      "d5": 5.7,
+      "d1": 5.78,
+      "d5": 5.69,
       "d10": 5.62,
-      "d20": 3.58,
+      "d20": 3.57,
       "d50": 2.97
     },
     "volumes": {
-      "d1": 18.87,
-      "d5": 18.78,
-      "d10": 18.8,
+      "d1": 18.77,
+      "d5": 18.76,
+      "d10": 18.79,
       "d20": 12.14,
       "d50": 10.6
     },
@@ -401512,7 +401500,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927833,
+      "_last_rev_attempt_ts": 1790967229,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -402428,18 +402416,18 @@
     "price": 66.8,
     "marketCap": 0.0,
     "turnovers": {
-      "d1": 13.16,
-      "d5": 12.14,
-      "d10": 14.72,
-      "d20": 14.08,
-      "d50": 15.47
+      "d1": 12.69,
+      "d5": 12.05,
+      "d10": 14.68,
+      "d20": 14.06,
+      "d50": 15.46
     },
     "volumes": {
-      "d1": 19.66,
-      "d5": 17.81,
-      "d10": 21.29,
-      "d20": 20.34,
-      "d50": 23.53
+      "d1": 18.97,
+      "d5": 17.67,
+      "d10": 21.22,
+      "d20": 20.3,
+      "d50": 23.52
     },
     "pctOf52wHigh": 93.17,
     "pctOf200dHigh": 93.17,
@@ -402487,7 +402475,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927935,
+      "_last_rev_attempt_ts": 1790967327,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -402763,14 +402751,14 @@
     "price": 117.5,
     "marketCap": 733.87,
     "turnovers": {
-      "d1": 0.82,
-      "d5": 1.09,
+      "d1": 0.8,
+      "d5": 1.08,
       "d10": 1.85,
-      "d20": 2.04,
+      "d20": 2.03,
       "d50": 3.09
     },
     "volumes": {
-      "d1": 0.7,
+      "d1": 0.68,
       "d5": 0.93,
       "d10": 1.57,
       "d20": 1.75,
@@ -402822,7 +402810,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927694,
+      "_last_rev_attempt_ts": 1790967273,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -407154,7 +407142,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927991,
+      "_last_rev_attempt_ts": 1790967216,
       "revenueYoY": [
         {
           "date": "2025-10",
@@ -409720,15 +409708,15 @@
     "price": 63.9,
     "marketCap": 49.9,
     "turnovers": {
-      "d1": 1.36,
-      "d5": 1.39,
+      "d1": 1.34,
+      "d5": 1.38,
       "d10": 0.91,
       "d20": 0.58,
       "d50": 0.3
     },
     "volumes": {
-      "d1": 2.16,
-      "d5": 2.31,
+      "d1": 2.13,
+      "d5": 2.3,
       "d10": 1.56,
       "d20": 1.02,
       "d50": 0.55
@@ -409775,7 +409763,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927790,
+      "_last_rev_attempt_ts": 1790967235,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -413244,7 +413232,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927795,
+      "_last_rev_attempt_ts": 1790967166,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -413517,15 +413505,15 @@
     "price": 26.45,
     "marketCap": 29.17,
     "turnovers": {
-      "d1": 0.12,
+      "d1": 0.11,
       "d5": 0.03,
       "d10": 0.03,
       "d20": 0.02,
       "d50": 0.03
     },
     "volumes": {
-      "d1": 0.46,
-      "d5": 0.14,
+      "d1": 0.44,
+      "d5": 0.13,
       "d10": 0.1,
       "d20": 0.09,
       "d50": 0.11
@@ -413566,7 +413554,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927866,
+      "_last_rev_attempt_ts": 1790967215,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -421803,7 +421791,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927998,
+      "_last_rev_attempt_ts": 1790967224,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -422922,7 +422910,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928070,
+      "_last_rev_attempt_ts": 1790967296,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -423744,15 +423732,15 @@
     "price": 34.0,
     "marketCap": 494.9,
     "turnovers": {
-      "d1": 0.34,
+      "d1": 0.33,
       "d5": 0.29,
       "d10": 0.27,
       "d20": 0.28,
       "d50": 0.47
     },
     "volumes": {
-      "d1": 1.0,
-      "d5": 0.86,
+      "d1": 0.97,
+      "d5": 0.85,
       "d10": 0.78,
       "d20": 0.8,
       "d50": 1.35
@@ -423789,7 +423777,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927730,
+      "_last_rev_attempt_ts": 1790967253,
       "revenueYoY": [
         {
           "date": "2025-08",
@@ -424064,12 +424052,12 @@
     "turnovers": {
       "d1": 0.11,
       "d5": 0.1,
-      "d10": 0.24,
+      "d10": 0.23,
       "d20": 0.22,
       "d50": 0.28
     },
     "volumes": {
-      "d1": 0.39,
+      "d1": 0.38,
       "d5": 0.35,
       "d10": 0.79,
       "d20": 0.72,
@@ -424107,7 +424095,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927837,
+      "_last_rev_attempt_ts": 1790967425,
       "revenueYoY": [
         {
           "date": "2025-05",
@@ -428621,7 +428609,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927688,
+      "_last_rev_attempt_ts": 1790967210,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -432255,7 +432243,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-12",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927903,
+      "_last_rev_attempt_ts": 1790967308,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -434537,7 +434525,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927768,
+      "_last_rev_attempt_ts": 1790967211,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -434810,16 +434798,16 @@
     "price": 64.1,
     "marketCap": 31.27,
     "turnovers": {
-      "d1": 0.44,
+      "d1": 0.43,
       "d5": 0.82,
       "d10": 1.32,
       "d20": 1.98,
       "d50": 0.93
     },
     "volumes": {
-      "d1": 0.68,
+      "d1": 0.67,
       "d5": 1.25,
-      "d10": 2.04,
+      "d10": 2.03,
       "d20": 3.06,
       "d50": 1.49
     },
@@ -434855,7 +434843,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927704,
+      "_last_rev_attempt_ts": 1790967483,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -442163,16 +442151,16 @@
     "price": 24.7,
     "marketCap": 727.86,
     "turnovers": {
-      "d1": 2.02,
+      "d1": 2.01,
       "d5": 2.08,
       "d10": 2.51,
       "d20": 2.37,
       "d50": 3.58
     },
     "volumes": {
-      "d1": 8.17,
+      "d1": 8.15,
       "d5": 8.37,
-      "d10": 10.13,
+      "d10": 10.12,
       "d20": 9.65,
       "d50": 14.63
     },
@@ -442220,7 +442208,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927944,
+      "_last_rev_attempt_ts": 1790967390,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -447356,15 +447344,15 @@
     "price": 106.0,
     "marketCap": 71.01,
     "turnovers": {
-      "d1": 0.75,
+      "d1": 0.74,
       "d5": 0.86,
       "d10": 0.67,
       "d20": 0.61,
       "d50": 0.55
     },
     "volumes": {
-      "d1": 0.71,
-      "d5": 0.84,
+      "d1": 0.7,
+      "d5": 0.83,
       "d10": 0.66,
       "d20": 0.62,
       "d50": 0.57
@@ -447407,7 +447395,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-19",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928009,
+      "_last_rev_attempt_ts": 1790967126,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -448384,7 +448372,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927910,
+      "_last_rev_attempt_ts": 1790967328,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -450572,15 +450560,15 @@
     "price": 35.45,
     "marketCap": 53.17,
     "turnovers": {
-      "d1": 0.55,
+      "d1": 0.54,
       "d5": 0.29,
       "d10": 0.2,
       "d20": 0.14,
       "d50": 0.1
     },
     "volumes": {
-      "d1": 1.56,
-      "d5": 0.89,
+      "d1": 1.55,
+      "d5": 0.88,
       "d10": 0.62,
       "d20": 0.45,
       "d50": 0.35
@@ -450619,7 +450607,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-10",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928033,
+      "_last_rev_attempt_ts": 1790967314,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -452244,14 +452232,14 @@
     "price": 370.0,
     "marketCap": 146.31,
     "turnovers": {
-      "d1": 3.07,
-      "d5": 11.86,
-      "d10": 8.24,
-      "d20": 9.55,
+      "d1": 2.97,
+      "d5": 11.84,
+      "d10": 8.23,
+      "d20": 9.54,
       "d50": 4.43
     },
     "volumes": {
-      "d1": 0.84,
+      "d1": 0.82,
       "d5": 3.34,
       "d10": 2.49,
       "d20": 3.64,
@@ -452289,7 +452277,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927745,
+      "_last_rev_attempt_ts": 1790967260,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -453854,10 +453842,10 @@
       "d50": 0.23
     },
     "volumes": {
-      "d1": 3.6,
+      "d1": 3.57,
       "d5": 1.97,
       "d10": 1.07,
-      "d20": 0.65,
+      "d20": 0.64,
       "d50": 0.68
     },
     "pctOf52wHigh": 70.49,
@@ -453900,7 +453888,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927752,
+      "_last_rev_attempt_ts": 1790967309,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -457831,7 +457819,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928019,
+      "_last_rev_attempt_ts": 1790967427,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -458149,7 +458137,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927967,
+      "_last_rev_attempt_ts": 1790967241,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -458474,7 +458462,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927792,
+      "_last_rev_attempt_ts": 1790967124,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -458792,7 +458780,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-09-25",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927873,
+      "_last_rev_attempt_ts": 1790967349,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -459117,7 +459105,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928080,
+      "_last_rev_attempt_ts": 1790967352,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -459390,7 +459378,7 @@
     "price": 28.1,
     "marketCap": 8.51,
     "turnovers": {
-      "d1": 0.01,
+      "d1": 0.0,
       "d5": 0.01,
       "d10": 0.01,
       "d20": 0.01,
@@ -459435,7 +459423,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927949,
+      "_last_rev_attempt_ts": 1790967231,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -459715,7 +459703,7 @@
       "d50": 0.05
     },
     "volumes": {
-      "d1": 0.02,
+      "d1": 0.01,
       "d5": 0.05,
       "d10": 0.04,
       "d20": 0.05,
@@ -459751,7 +459739,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927667,
+      "_last_rev_attempt_ts": 1790967299,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -460025,18 +460013,18 @@
     "price": 379.0,
     "marketCap": 160.76,
     "turnovers": {
-      "d1": 12.79,
-      "d5": 14.39,
-      "d10": 10.71,
-      "d20": 6.76,
+      "d1": 12.54,
+      "d5": 14.34,
+      "d10": 10.69,
+      "d20": 6.74,
       "d50": 3.76
     },
     "volumes": {
-      "d1": 3.28,
-      "d5": 3.77,
-      "d10": 2.93,
-      "d20": 1.92,
-      "d50": 1.25
+      "d1": 3.22,
+      "d5": 3.75,
+      "d10": 2.92,
+      "d20": 1.91,
+      "d50": 1.24
     },
     "pctOf52wHigh": 91.77,
     "pctOf200dHigh": 91.77,
@@ -460076,7 +460064,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927928,
+      "_last_rev_attempt_ts": 1790967499,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -460394,7 +460382,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927700,
+      "_last_rev_attempt_ts": 1790967330,
       "revenueYoY": [
         {
           "date": "2026-04",
@@ -460619,7 +460607,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927715,
+      "_last_rev_attempt_ts": 1790967140,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -460937,7 +460925,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927732,
+      "_last_rev_attempt_ts": 1790967312,
       "revenueYoY": [
         {
           "date": "2025-09",
@@ -461220,7 +461208,7 @@
     },
     "volumes": {
       "d1": 1.71,
-      "d5": 3.24,
+      "d5": 3.25,
       "d10": 2.1,
       "d20": 1.48,
       "d50": 1.9
@@ -461269,7 +461257,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790928007,
+      "_last_rev_attempt_ts": 1790967405,
       "revenueYoY": [
         {
           "date": "2024-02",
@@ -461503,7 +461491,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927744,
+      "_last_rev_attempt_ts": 1790967320,
       "revenueYoY": [
         {
           "date": "2025-11",
@@ -461776,7 +461764,7 @@
     "revenueMonth": "2026-08",
     "revenueFirstSeen": "2026-10-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1790927695,
+      "_last_rev_attempt_ts": 1790967189,
       "revenueYoY": [
         {
           "date": "2025-09",
