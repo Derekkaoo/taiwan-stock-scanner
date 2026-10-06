@@ -78684,6 +78684,793 @@
     ]
   },
   {
+    "id": "3042",
+    "name": "晶技",
+    "group": "被動元件",
+    "groups": [
+      "被動元件"
+    ],
+    "groupDesc": "",
+    "holdingPct": 51.42,
+    "delta": 2.24,
+    "price": 204.5,
+    "marketCap": 701.42,
+    "turnovers": {
+      "d1": 53.49,
+      "d5": 72.03,
+      "d10": 59.83,
+      "d20": 39.63,
+      "d50": 32.98
+    },
+    "volumes": {
+      "d1": 25.62,
+      "d5": 32.85,
+      "d10": 28.3,
+      "d20": 19.52,
+      "d50": 17.47
+    },
+    "pctOf52wHigh": 81.8,
+    "pctOf200dHigh": 81.8,
+    "ma10": 206.2,
+    "ma20": 192.95,
+    "ma60": 180.82,
+    "ma20Trend": "up",
+    "dailyChangePct": -7.88,
+    "date": "2026-10-02",
+    "threeMonthReturn": 125.72,
+    "returns": {
+      "w1": -1.92,
+      "m1": 17.53,
+      "m3": -17.87,
+      "m6": 126.47,
+      "y1": 125.72
+    },
+    "industry": "電子零組件業",
+    "market": "上市",
+    "subIndustries": [
+      "被動元件",
+      "石英元件",
+      "振盪器"
+    ],
+    "subsByGroup": {
+      "被動元件": [
+        "被動元件",
+        "石英元件",
+        "振盪器"
+      ]
+    },
+    "revenueYoY": 14.6,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-06",
+    "fundamentals": {
+      "_last_rev_attempt_ts": 1791285279,
+      "revenueYoY": [
+        {
+          "date": "2025-10",
+          "yoy": -3.25
+        },
+        {
+          "date": "2025-11",
+          "yoy": 4.24
+        },
+        {
+          "date": "2025-12",
+          "yoy": -1.29
+        },
+        {
+          "date": "2026-01",
+          "yoy": 6.57
+        },
+        {
+          "date": "2026-02",
+          "yoy": 7.31
+        },
+        {
+          "date": "2026-03",
+          "yoy": 2.66
+        },
+        {
+          "date": "2026-04",
+          "yoy": 1.42
+        },
+        {
+          "date": "2026-05",
+          "yoy": 10.5
+        },
+        {
+          "date": "2026-06",
+          "yoy": 19.98
+        },
+        {
+          "date": "2026-07",
+          "yoy": 22.91
+        },
+        {
+          "date": "2026-08",
+          "yoy": 23.48
+        },
+        {
+          "date": "2026-09",
+          "yoy": 14.6
+        }
+      ],
+      "_last_fin_attempt_ts": 1791285280,
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q3",
+          "yoy": -0.77
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -9.92
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -2.51
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -8.56
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -10.82
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -5.36
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": -8.62
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -1.49
+        }
+      ],
+      "operatingMarginYoY": [
+        {
+          "quarter": "2024Q3",
+          "yoy": 5.11
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -30.38
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -3.74
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -6.86
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -24.96
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -0.65
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": -7.35
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 3.03
+        }
+      ],
+      "epsYoY": [
+        {
+          "quarter": "2024Q3",
+          "yoy": -22.68
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 31.82
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -20.23
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -35.33
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -0.67
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -24.14
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": -4.35
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 51.85
+        }
+      ],
+      "grossMargin": [
+        {
+          "quarter": "2024Q3",
+          "value": 34.95
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 34.0
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 35.39
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 33.61
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 31.17
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 32.18
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 32.33
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 33.11
+        }
+      ],
+      "operatingMargin": [
+        {
+          "quarter": "2024Q3",
+          "value": 18.74
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 14.16
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 16.28
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 16.33
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 14.06
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 14.07
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 15.08
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 16.82
+        }
+      ],
+      "eps": [
+        {
+          "quarter": "2024Q3",
+          "value": 1.5
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 1.74
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 1.38
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 1.08
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 1.49
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 1.32
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 1.32
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 1.64
+        }
+      ]
+    },
+    "companyProfile": {
+      "business": "石英元件之研發、製造及買賣",
+      "chairman": "林萬興",
+      "ceo": "郭雅屏",
+      "spokesman": "洪冠文",
+      "deputySpokesman": "張瑛楓",
+      "foundedDate": "1983/12/28",
+      "address": "台北市北投區中央南路二段16號4樓",
+      "fax": "(02)2893-0789",
+      "email": "vivien@txc.com.tw",
+      "sharesOutstanding": "342,992,971",
+      "group": "-",
+      "auditor": "勤業眾信聯合會計師事務所",
+      "englishName": "TXC"
+    },
+    "foreignBuyStreak": 0,
+    "trustBuyStreak": 6,
+    "institutionalHistory": [
+      {
+        "date": "2026-05-27",
+        "foreign": -6483,
+        "trust": 1343
+      },
+      {
+        "date": "2026-05-28",
+        "foreign": 4859,
+        "trust": 0
+      },
+      {
+        "date": "2026-05-29",
+        "foreign": -8300,
+        "trust": 80
+      },
+      {
+        "date": "2026-06-01",
+        "foreign": -260,
+        "trust": 89
+      },
+      {
+        "date": "2026-06-02",
+        "foreign": 788,
+        "trust": 60
+      },
+      {
+        "date": "2026-06-03",
+        "foreign": 3753,
+        "trust": -149
+      },
+      {
+        "date": "2026-06-04",
+        "foreign": -1263,
+        "trust": 18
+      },
+      {
+        "date": "2026-06-05",
+        "foreign": 736,
+        "trust": 24
+      },
+      {
+        "date": "2026-06-08",
+        "foreign": -333,
+        "trust": 114
+      },
+      {
+        "date": "2026-06-09",
+        "foreign": -5405,
+        "trust": 181
+      },
+      {
+        "date": "2026-06-10",
+        "foreign": 3318,
+        "trust": 249
+      },
+      {
+        "date": "2026-06-11",
+        "foreign": 4930,
+        "trust": 391
+      },
+      {
+        "date": "2026-06-12",
+        "foreign": -11223,
+        "trust": 778
+      },
+      {
+        "date": "2026-06-15",
+        "foreign": 9561,
+        "trust": 611
+      },
+      {
+        "date": "2026-06-16",
+        "foreign": -4842,
+        "trust": -90
+      },
+      {
+        "date": "2026-06-17",
+        "foreign": 940,
+        "trust": -4
+      },
+      {
+        "date": "2026-06-18",
+        "foreign": -395,
+        "trust": -35
+      },
+      {
+        "date": "2026-06-22",
+        "foreign": -972,
+        "trust": -5514
+      },
+      {
+        "date": "2026-06-23",
+        "foreign": 3855,
+        "trust": -3196
+      },
+      {
+        "date": "2026-06-24",
+        "foreign": -2843,
+        "trust": -66
+      },
+      {
+        "date": "2026-06-25",
+        "foreign": 1533,
+        "trust": -238
+      },
+      {
+        "date": "2026-06-26",
+        "foreign": 2447,
+        "trust": 128
+      },
+      {
+        "date": "2026-06-29",
+        "foreign": -453,
+        "trust": -590
+      },
+      {
+        "date": "2026-06-30",
+        "foreign": 479,
+        "trust": -484
+      },
+      {
+        "date": "2026-07-01",
+        "foreign": 1255,
+        "trust": 0
+      },
+      {
+        "date": "2026-07-02",
+        "foreign": 2999,
+        "trust": 855
+      },
+      {
+        "date": "2026-07-03",
+        "foreign": -3249,
+        "trust": 1409
+      },
+      {
+        "date": "2026-07-06",
+        "foreign": -14791,
+        "trust": 0
+      },
+      {
+        "date": "2026-07-07",
+        "foreign": 8458,
+        "trust": 133
+      },
+      {
+        "date": "2026-07-08",
+        "foreign": -5094,
+        "trust": 687
+      },
+      {
+        "date": "2026-07-09",
+        "foreign": 79,
+        "trust": -1
+      },
+      {
+        "date": "2026-07-13",
+        "foreign": 1314,
+        "trust": 0
+      },
+      {
+        "date": "2026-07-14",
+        "foreign": 3298,
+        "trust": 0
+      },
+      {
+        "date": "2026-07-15",
+        "foreign": -1292,
+        "trust": -3
+      },
+      {
+        "date": "2026-07-16",
+        "foreign": -5091,
+        "trust": -105
+      },
+      {
+        "date": "2026-07-17",
+        "foreign": 4338,
+        "trust": 93
+      },
+      {
+        "date": "2026-07-20",
+        "foreign": 3553,
+        "trust": -389
+      },
+      {
+        "date": "2026-07-21",
+        "foreign": -1221,
+        "trust": -333
+      },
+      {
+        "date": "2026-07-22",
+        "foreign": -2584,
+        "trust": -288
+      },
+      {
+        "date": "2026-07-23",
+        "foreign": 1939,
+        "trust": -1578
+      },
+      {
+        "date": "2026-07-24",
+        "foreign": -1578,
+        "trust": -6
+      },
+      {
+        "date": "2026-07-27",
+        "foreign": 800,
+        "trust": -1187
+      },
+      {
+        "date": "2026-07-28",
+        "foreign": 3158,
+        "trust": 0
+      },
+      {
+        "date": "2026-07-29",
+        "foreign": 2869,
+        "trust": 0
+      },
+      {
+        "date": "2026-07-30",
+        "foreign": 1196,
+        "trust": -113
+      },
+      {
+        "date": "2026-07-31",
+        "foreign": -2575,
+        "trust": 11
+      },
+      {
+        "date": "2026-08-03",
+        "foreign": 5168,
+        "trust": -138
+      },
+      {
+        "date": "2026-08-04",
+        "foreign": 1315,
+        "trust": 130
+      },
+      {
+        "date": "2026-08-05",
+        "foreign": 1202,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-06",
+        "foreign": -295,
+        "trust": -4
+      },
+      {
+        "date": "2026-08-07",
+        "foreign": -1021,
+        "trust": -5
+      },
+      {
+        "date": "2026-08-10",
+        "foreign": -138,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-11",
+        "foreign": -479,
+        "trust": -122
+      },
+      {
+        "date": "2026-08-12",
+        "foreign": 1896,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-13",
+        "foreign": 679,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-14",
+        "foreign": -659,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-17",
+        "foreign": 2897,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-18",
+        "foreign": -6966,
+        "trust": -1
+      },
+      {
+        "date": "2026-08-19",
+        "foreign": 3398,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-20",
+        "foreign": -5123,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-21",
+        "foreign": 60,
+        "trust": 992
+      },
+      {
+        "date": "2026-08-24",
+        "foreign": -3514,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-25",
+        "foreign": 119,
+        "trust": 1
+      },
+      {
+        "date": "2026-08-26",
+        "foreign": 284,
+        "trust": 59
+      },
+      {
+        "date": "2026-08-27",
+        "foreign": 2786,
+        "trust": -1
+      },
+      {
+        "date": "2026-08-28",
+        "foreign": -3310,
+        "trust": -1
+      },
+      {
+        "date": "2026-08-31",
+        "foreign": 4752,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-01",
+        "foreign": 5189,
+        "trust": 97
+      },
+      {
+        "date": "2026-09-02",
+        "foreign": -3,
+        "trust": 94
+      },
+      {
+        "date": "2026-09-03",
+        "foreign": 1296,
+        "trust": -69
+      },
+      {
+        "date": "2026-09-04",
+        "foreign": -898,
+        "trust": -89
+      },
+      {
+        "date": "2026-09-07",
+        "foreign": 1512,
+        "trust": -40
+      },
+      {
+        "date": "2026-09-08",
+        "foreign": -1891,
+        "trust": -8
+      },
+      {
+        "date": "2026-09-09",
+        "foreign": 1881,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-10",
+        "foreign": -4671,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-11",
+        "foreign": 164,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-14",
+        "foreign": 1872,
+        "trust": -175
+      },
+      {
+        "date": "2026-09-15",
+        "foreign": 1993,
+        "trust": 55
+      },
+      {
+        "date": "2026-09-16",
+        "foreign": 1725,
+        "trust": 6
+      },
+      {
+        "date": "2026-09-17",
+        "foreign": 1049,
+        "trust": -117
+      },
+      {
+        "date": "2026-09-18",
+        "foreign": 4048,
+        "trust": 160
+      },
+      {
+        "date": "2026-09-21",
+        "foreign": -29,
+        "trust": 79
+      },
+      {
+        "date": "2026-09-22",
+        "foreign": 2409,
+        "trust": -159
+      },
+      {
+        "date": "2026-09-23",
+        "foreign": 235,
+        "trust": -145
+      },
+      {
+        "date": "2026-09-24",
+        "foreign": -2803,
+        "trust": 1179
+      },
+      {
+        "date": "2026-09-29",
+        "foreign": -2639,
+        "trust": 1050
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 83,
+        "trust": 477
+      },
+      {
+        "date": "2026-10-01",
+        "foreign": 1424,
+        "trust": 1290
+      },
+      {
+        "date": "2026-10-02",
+        "foreign": -398,
+        "trust": 987
+      },
+      {
+        "date": "2026-10-05",
+        "foreign": -1471,
+        "trust": 149
+      }
+    ]
+  },
+  {
     "id": "3090",
     "name": "日電貿",
     "group": "被動元件",
@@ -78748,9 +79535,9 @@
         "電子元件代理商"
       ]
     },
-    "revenueYoY": 38.44,
-    "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-09-25",
+    "revenueYoY": 31.27,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-06",
     "fundamentals": {
       "_last_rev_attempt_ts": 1791274111,
       "revenueYoY": [
@@ -78801,6 +79588,10 @@
         {
           "date": "2026-08",
           "yoy": 38.45
+        },
+        {
+          "date": "2026-09",
+          "yoy": 31.27
         }
       ],
       "_last_fin_attempt_ts": 1790301430,
@@ -85695,6 +86486,791 @@
     ]
   },
   {
+    "id": "6196",
+    "name": "帆宣",
+    "group": "電子其他",
+    "groups": [
+      "電子其他",
+      "軟體業",
+      "設備儀器商"
+    ],
+    "groupDesc": "",
+    "holdingPct": 66.07,
+    "delta": 0.21,
+    "price": 663.0,
+    "marketCap": 1460.78,
+    "turnovers": {
+      "d1": 21.93,
+      "d5": 15.62,
+      "d10": 11.73,
+      "d20": 9.93,
+      "d50": 8.05
+    },
+    "volumes": {
+      "d1": 3.3,
+      "d5": 2.49,
+      "d10": 1.97,
+      "d20": 1.76,
+      "d50": 1.53
+    },
+    "pctOf52wHigh": 96.93,
+    "pctOf200dHigh": 96.93,
+    "ma10": 587.5,
+    "ma20": 554.35,
+    "ma60": 523.31,
+    "ma20Trend": "up",
+    "dailyChangePct": -2.36,
+    "date": "2026-10-02",
+    "threeMonthReturn": 168.42,
+    "returns": {
+      "w1": 21.88,
+      "m1": 32.6,
+      "m3": 12.76,
+      "m6": 135.52,
+      "y1": 168.42
+    },
+    "industry": "其他電子業",
+    "market": "上市",
+    "subIndustries": [
+      "電子其他",
+      "廠務工程",
+      "軟體業",
+      "系統整合",
+      "設備儀器商",
+      "半導體製程設備"
+    ],
+    "subsByGroup": {
+      "電子其他": [
+        "電子其他",
+        "廠務工程"
+      ],
+      "軟體業": [
+        "軟體業",
+        "系統整合"
+      ],
+      "設備儀器商": [
+        "設備儀器商",
+        "半導體製程設備"
+      ]
+    },
+    "revenueYoY": 83.88,
+    "revenueMonth": "2026-08",
+    "revenueFirstSeen": "2026-10-06",
+    "fundamentals": {
+      "_last_rev_attempt_ts": 1791285277,
+      "revenueYoY": [
+        {
+          "date": "2025-09",
+          "yoy": -27.96
+        },
+        {
+          "date": "2025-10",
+          "yoy": -9.29
+        },
+        {
+          "date": "2025-11",
+          "yoy": 5.72
+        },
+        {
+          "date": "2025-12",
+          "yoy": -5.19
+        },
+        {
+          "date": "2026-01",
+          "yoy": 0.5
+        },
+        {
+          "date": "2026-02",
+          "yoy": 5.44
+        },
+        {
+          "date": "2026-03",
+          "yoy": 17.51
+        },
+        {
+          "date": "2026-04",
+          "yoy": 46.34
+        },
+        {
+          "date": "2026-05",
+          "yoy": 64.89
+        },
+        {
+          "date": "2026-06",
+          "yoy": 120.99
+        },
+        {
+          "date": "2026-07",
+          "yoy": 101.35
+        },
+        {
+          "date": "2026-08",
+          "yoy": 83.89
+        }
+      ],
+      "_last_fin_attempt_ts": 1791285278,
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q3",
+          "yoy": 0.26
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 21.18
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 55.74
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": 47.27
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 14.67
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 1.91
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": 23.13
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 18.47
+        }
+      ],
+      "operatingMarginYoY": [
+        {
+          "quarter": "2024Q3",
+          "yoy": 4.24
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 36.69
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 267.62
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": 39.4
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -42.25
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -11.17
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": 43.86
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 87.72
+        }
+      ],
+      "epsYoY": [
+        {
+          "quarter": "2024Q3",
+          "yoy": -8.22
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 26.58
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 82.23
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": 5.98
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 107.84
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 84.0
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": 15.19
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 318.97
+        }
+      ],
+      "grossMargin": [
+        {
+          "quarter": "2024Q3",
+          "value": 9.59
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 10.35
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 11.02
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 11.36
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 11.0
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 10.55
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 13.57
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 13.45
+        }
+      ],
+      "operatingMargin": [
+        {
+          "quarter": "2024Q3",
+          "value": 4.33
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 5.0
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 5.73
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 4.75
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 2.5
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 4.44
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 8.25
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 8.92
+        }
+      ],
+      "eps": [
+        {
+          "quarter": "2024Q3",
+          "value": 2.68
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 2.0
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 4.41
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 1.95
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 5.57
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 3.68
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 5.08
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 8.17
+        }
+      ]
+    },
+    "companyProfile": {},
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 0,
+    "institutionalHistory": [
+      {
+        "date": "2026-05-27",
+        "foreign": -254,
+        "trust": 402
+      },
+      {
+        "date": "2026-05-28",
+        "foreign": 177,
+        "trust": 5
+      },
+      {
+        "date": "2026-05-29",
+        "foreign": 385,
+        "trust": -1
+      },
+      {
+        "date": "2026-06-01",
+        "foreign": 138,
+        "trust": 60
+      },
+      {
+        "date": "2026-06-02",
+        "foreign": 139,
+        "trust": 16
+      },
+      {
+        "date": "2026-06-03",
+        "foreign": -293,
+        "trust": 24
+      },
+      {
+        "date": "2026-06-04",
+        "foreign": 354,
+        "trust": 19
+      },
+      {
+        "date": "2026-06-05",
+        "foreign": 245,
+        "trust": 19
+      },
+      {
+        "date": "2026-06-08",
+        "foreign": 11,
+        "trust": 19
+      },
+      {
+        "date": "2026-06-09",
+        "foreign": 258,
+        "trust": 41
+      },
+      {
+        "date": "2026-06-10",
+        "foreign": -122,
+        "trust": 40
+      },
+      {
+        "date": "2026-06-11",
+        "foreign": -375,
+        "trust": 12
+      },
+      {
+        "date": "2026-06-12",
+        "foreign": 376,
+        "trust": 623
+      },
+      {
+        "date": "2026-06-15",
+        "foreign": -839,
+        "trust": 132
+      },
+      {
+        "date": "2026-06-16",
+        "foreign": -548,
+        "trust": 34
+      },
+      {
+        "date": "2026-06-17",
+        "foreign": -151,
+        "trust": -22
+      },
+      {
+        "date": "2026-06-18",
+        "foreign": 176,
+        "trust": 196
+      },
+      {
+        "date": "2026-06-22",
+        "foreign": -260,
+        "trust": 0
+      },
+      {
+        "date": "2026-06-23",
+        "foreign": 5,
+        "trust": -20
+      },
+      {
+        "date": "2026-06-24",
+        "foreign": -165,
+        "trust": -12
+      },
+      {
+        "date": "2026-06-25",
+        "foreign": 295,
+        "trust": 2
+      },
+      {
+        "date": "2026-06-26",
+        "foreign": -342,
+        "trust": -6
+      },
+      {
+        "date": "2026-06-29",
+        "foreign": -13,
+        "trust": 16
+      },
+      {
+        "date": "2026-06-30",
+        "foreign": 455,
+        "trust": 20
+      },
+      {
+        "date": "2026-07-01",
+        "foreign": 283,
+        "trust": -37
+      },
+      {
+        "date": "2026-07-02",
+        "foreign": 4,
+        "trust": 27
+      },
+      {
+        "date": "2026-07-03",
+        "foreign": 136,
+        "trust": 12
+      },
+      {
+        "date": "2026-07-06",
+        "foreign": -312,
+        "trust": 2
+      },
+      {
+        "date": "2026-07-07",
+        "foreign": 340,
+        "trust": 9
+      },
+      {
+        "date": "2026-07-08",
+        "foreign": -168,
+        "trust": 18
+      },
+      {
+        "date": "2026-07-09",
+        "foreign": 541,
+        "trust": -553
+      },
+      {
+        "date": "2026-07-13",
+        "foreign": 588,
+        "trust": -438
+      },
+      {
+        "date": "2026-07-14",
+        "foreign": 127,
+        "trust": 5
+      },
+      {
+        "date": "2026-07-15",
+        "foreign": 348,
+        "trust": -7
+      },
+      {
+        "date": "2026-07-16",
+        "foreign": 205,
+        "trust": 60
+      },
+      {
+        "date": "2026-07-17",
+        "foreign": -179,
+        "trust": 8
+      },
+      {
+        "date": "2026-07-20",
+        "foreign": -33,
+        "trust": 12
+      },
+      {
+        "date": "2026-07-21",
+        "foreign": 14,
+        "trust": 6
+      },
+      {
+        "date": "2026-07-22",
+        "foreign": 144,
+        "trust": 10
+      },
+      {
+        "date": "2026-07-23",
+        "foreign": 128,
+        "trust": 32
+      },
+      {
+        "date": "2026-07-24",
+        "foreign": -30,
+        "trust": 2
+      },
+      {
+        "date": "2026-07-27",
+        "foreign": -185,
+        "trust": 32
+      },
+      {
+        "date": "2026-07-28",
+        "foreign": 249,
+        "trust": 1
+      },
+      {
+        "date": "2026-07-29",
+        "foreign": 327,
+        "trust": 69
+      },
+      {
+        "date": "2026-07-30",
+        "foreign": 21,
+        "trust": 2
+      },
+      {
+        "date": "2026-07-31",
+        "foreign": -440,
+        "trust": 9
+      },
+      {
+        "date": "2026-08-03",
+        "foreign": 371,
+        "trust": 12
+      },
+      {
+        "date": "2026-08-04",
+        "foreign": 6,
+        "trust": -102
+      },
+      {
+        "date": "2026-08-05",
+        "foreign": 100,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-06",
+        "foreign": -42,
+        "trust": 98
+      },
+      {
+        "date": "2026-08-07",
+        "foreign": 410,
+        "trust": -458
+      },
+      {
+        "date": "2026-08-10",
+        "foreign": 395,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-11",
+        "foreign": -155,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-12",
+        "foreign": -40,
+        "trust": -183
+      },
+      {
+        "date": "2026-08-13",
+        "foreign": 835,
+        "trust": -1
+      },
+      {
+        "date": "2026-08-14",
+        "foreign": -74,
+        "trust": -2
+      },
+      {
+        "date": "2026-08-17",
+        "foreign": 604,
+        "trust": -423
+      },
+      {
+        "date": "2026-08-18",
+        "foreign": 67,
+        "trust": 153
+      },
+      {
+        "date": "2026-08-19",
+        "foreign": 40,
+        "trust": 134
+      },
+      {
+        "date": "2026-08-20",
+        "foreign": -236,
+        "trust": 94
+      },
+      {
+        "date": "2026-08-21",
+        "foreign": -648,
+        "trust": 5
+      },
+      {
+        "date": "2026-08-24",
+        "foreign": 130,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-25",
+        "foreign": -232,
+        "trust": 3
+      },
+      {
+        "date": "2026-08-26",
+        "foreign": 313,
+        "trust": -65
+      },
+      {
+        "date": "2026-08-27",
+        "foreign": -81,
+        "trust": -4
+      },
+      {
+        "date": "2026-08-28",
+        "foreign": -220,
+        "trust": -1
+      },
+      {
+        "date": "2026-08-31",
+        "foreign": -193,
+        "trust": 4
+      },
+      {
+        "date": "2026-09-01",
+        "foreign": 861,
+        "trust": -150
+      },
+      {
+        "date": "2026-09-02",
+        "foreign": -380,
+        "trust": -75
+      },
+      {
+        "date": "2026-09-03",
+        "foreign": 1221,
+        "trust": -110
+      },
+      {
+        "date": "2026-09-04",
+        "foreign": -10,
+        "trust": 1
+      },
+      {
+        "date": "2026-09-07",
+        "foreign": 69,
+        "trust": -2
+      },
+      {
+        "date": "2026-09-08",
+        "foreign": -400,
+        "trust": 3
+      },
+      {
+        "date": "2026-09-09",
+        "foreign": 885,
+        "trust": 2
+      },
+      {
+        "date": "2026-09-10",
+        "foreign": -69,
+        "trust": 1
+      },
+      {
+        "date": "2026-09-11",
+        "foreign": 71,
+        "trust": 26
+      },
+      {
+        "date": "2026-09-14",
+        "foreign": 689,
+        "trust": 7
+      },
+      {
+        "date": "2026-09-15",
+        "foreign": 228,
+        "trust": 1
+      },
+      {
+        "date": "2026-09-16",
+        "foreign": -79,
+        "trust": 1
+      },
+      {
+        "date": "2026-09-17",
+        "foreign": -68,
+        "trust": 1
+      },
+      {
+        "date": "2026-09-18",
+        "foreign": 173,
+        "trust": -1
+      },
+      {
+        "date": "2026-09-21",
+        "foreign": -139,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-22",
+        "foreign": 307,
+        "trust": -61
+      },
+      {
+        "date": "2026-09-23",
+        "foreign": 282,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-24",
+        "foreign": 189,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-29",
+        "foreign": -338,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 1107,
+        "trust": 0
+      },
+      {
+        "date": "2026-10-01",
+        "foreign": 530,
+        "trust": 0
+      },
+      {
+        "date": "2026-10-02",
+        "foreign": 436,
+        "trust": 0
+      },
+      {
+        "date": "2026-10-05",
+        "foreign": 179,
+        "trust": -34
+      }
+    ]
+  },
+  {
     "id": "6538",
     "name": "倉和",
     "group": "電子其他",
@@ -86460,6 +88036,791 @@
         "date": "2026-10-06",
         "foreign": 174,
         "trust": 0
+      }
+    ]
+  },
+  {
+    "id": "6691",
+    "name": "洋基工程",
+    "group": "電子其他",
+    "groups": [
+      "電子其他"
+    ],
+    "groupDesc": "",
+    "holdingPct": 58.09,
+    "delta": 1.02,
+    "price": 787.0,
+    "marketCap": 1051.01,
+    "turnovers": {
+      "d1": 8.26,
+      "d5": 12.15,
+      "d10": 8.07,
+      "d20": 5.44,
+      "d50": 4.86
+    },
+    "volumes": {
+      "d1": 1.05,
+      "d5": 1.64,
+      "d10": 1.13,
+      "d20": 0.79,
+      "d50": 0.74
+    },
+    "pctOf52wHigh": 99.12,
+    "pctOf200dHigh": 99.12,
+    "ma10": 700.8,
+    "ma20": 659.8,
+    "ma60": 641.98,
+    "ma20Trend": "up",
+    "dailyChangePct": -0.88,
+    "date": "2026-10-02",
+    "threeMonthReturn": 92.59,
+    "returns": {
+      "w1": 20.34,
+      "m1": 30.51,
+      "m3": 13.61,
+      "m6": 49.52,
+      "y1": 92.59
+    },
+    "industry": "其他電子業",
+    "market": "上市",
+    "subIndustries": [
+      "電子其他",
+      "廠務工程"
+    ],
+    "subsByGroup": {
+      "電子其他": [
+        "電子其他",
+        "廠務工程"
+      ]
+    },
+    "revenueYoY": 213.69,
+    "revenueMonth": "2026-08",
+    "revenueFirstSeen": "2026-10-06",
+    "fundamentals": {
+      "_last_rev_attempt_ts": 1791285281,
+      "revenueYoY": [
+        {
+          "date": "2025-09",
+          "yoy": 37.13
+        },
+        {
+          "date": "2025-10",
+          "yoy": 43.81
+        },
+        {
+          "date": "2025-11",
+          "yoy": -6.78
+        },
+        {
+          "date": "2025-12",
+          "yoy": 68.24
+        },
+        {
+          "date": "2026-01",
+          "yoy": 80.45
+        },
+        {
+          "date": "2026-02",
+          "yoy": 37.09
+        },
+        {
+          "date": "2026-03",
+          "yoy": 112.73
+        },
+        {
+          "date": "2026-04",
+          "yoy": 66.7
+        },
+        {
+          "date": "2026-05",
+          "yoy": 82.36
+        },
+        {
+          "date": "2026-06",
+          "yoy": 115.19
+        },
+        {
+          "date": "2026-07",
+          "yoy": 177.06
+        },
+        {
+          "date": "2026-08",
+          "yoy": 213.7
+        }
+      ],
+      "_last_fin_attempt_ts": 1791285282,
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q3",
+          "yoy": 17.16
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 3.8
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 3.38
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -8.5
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -13.27
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 3.3
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": -13.18
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -2.05
+        }
+      ],
+      "operatingMarginYoY": [
+        {
+          "quarter": "2024Q3",
+          "yoy": 13.79
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 13.13
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 11.71
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -5.85
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -6.17
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 8.02
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": -13.8
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 4.79
+        }
+      ],
+      "epsYoY": [
+        {
+          "quarter": "2024Q3",
+          "yoy": -9.03
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 47.33
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 38.01
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": 29.1
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 16.41
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 27.87
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": 26.14
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 95.53
+        }
+      ],
+      "grossMargin": [
+        {
+          "quarter": "2024Q3",
+          "value": 20.38
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 18.85
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 21.19
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 18.53
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 17.68
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 19.47
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 18.39
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 18.15
+        }
+      ],
+      "operatingMargin": [
+        {
+          "quarter": "2024Q3",
+          "value": 16.79
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 15.86
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 18.26
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 15.77
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 15.76
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 17.14
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 15.74
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 16.53
+        }
+      ],
+      "eps": [
+        {
+          "quarter": "2024Q3",
+          "value": 5.24
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 6.35
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 5.7
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 5.59
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 6.1
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 8.12
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 7.19
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 10.93
+        }
+      ]
+    },
+    "companyProfile": {
+      "business": "高科技廠房無塵室及機電空調統包工程與建議服務\r\n節能技術服務",
+      "chairman": "劉士源",
+      "ceo": "林鴻忠",
+      "spokesman": "程志豪",
+      "deputySpokesman": "彭桂芳",
+      "foundedDate": "1980/07/25",
+      "address": "新北市林口區文化二路一段266號18樓之3",
+      "fax": "(02)2600-3790",
+      "email": "yankeyinvestor@yankey.com.tw",
+      "sharesOutstanding": "121,487,209",
+      "group": "-",
+      "auditor": "勤業眾信聯合會計師事務所",
+      "englishName": "YANKEY"
+    },
+    "foreignBuyStreak": 4,
+    "trustBuyStreak": 4,
+    "institutionalHistory": [
+      {
+        "date": "2026-05-27",
+        "foreign": 437,
+        "trust": 0
+      },
+      {
+        "date": "2026-05-28",
+        "foreign": -239,
+        "trust": 0
+      },
+      {
+        "date": "2026-05-29",
+        "foreign": 19,
+        "trust": 0
+      },
+      {
+        "date": "2026-06-01",
+        "foreign": -191,
+        "trust": 27
+      },
+      {
+        "date": "2026-06-02",
+        "foreign": -19,
+        "trust": 23
+      },
+      {
+        "date": "2026-06-03",
+        "foreign": 141,
+        "trust": 0
+      },
+      {
+        "date": "2026-06-04",
+        "foreign": -34,
+        "trust": 0
+      },
+      {
+        "date": "2026-06-05",
+        "foreign": -24,
+        "trust": 0
+      },
+      {
+        "date": "2026-06-08",
+        "foreign": -114,
+        "trust": 0
+      },
+      {
+        "date": "2026-06-09",
+        "foreign": 118,
+        "trust": 0
+      },
+      {
+        "date": "2026-06-10",
+        "foreign": 67,
+        "trust": 0
+      },
+      {
+        "date": "2026-06-11",
+        "foreign": 72,
+        "trust": 0
+      },
+      {
+        "date": "2026-06-12",
+        "foreign": 1543,
+        "trust": -2
+      },
+      {
+        "date": "2026-06-15",
+        "foreign": 626,
+        "trust": -2
+      },
+      {
+        "date": "2026-06-16",
+        "foreign": -77,
+        "trust": 0
+      },
+      {
+        "date": "2026-06-17",
+        "foreign": -110,
+        "trust": -2
+      },
+      {
+        "date": "2026-06-18",
+        "foreign": 80,
+        "trust": 19
+      },
+      {
+        "date": "2026-06-22",
+        "foreign": 111,
+        "trust": 1
+      },
+      {
+        "date": "2026-06-23",
+        "foreign": 37,
+        "trust": -5
+      },
+      {
+        "date": "2026-06-24",
+        "foreign": 121,
+        "trust": 0
+      },
+      {
+        "date": "2026-06-25",
+        "foreign": 376,
+        "trust": 1
+      },
+      {
+        "date": "2026-06-26",
+        "foreign": -14,
+        "trust": 386
+      },
+      {
+        "date": "2026-06-29",
+        "foreign": -460,
+        "trust": 470
+      },
+      {
+        "date": "2026-06-30",
+        "foreign": -635,
+        "trust": 356
+      },
+      {
+        "date": "2026-07-01",
+        "foreign": -605,
+        "trust": 473
+      },
+      {
+        "date": "2026-07-02",
+        "foreign": -333,
+        "trust": 407
+      },
+      {
+        "date": "2026-07-03",
+        "foreign": -523,
+        "trust": 480
+      },
+      {
+        "date": "2026-07-06",
+        "foreign": -690,
+        "trust": 493
+      },
+      {
+        "date": "2026-07-07",
+        "foreign": -658,
+        "trust": 483
+      },
+      {
+        "date": "2026-07-08",
+        "foreign": -550,
+        "trust": 192
+      },
+      {
+        "date": "2026-07-09",
+        "foreign": -98,
+        "trust": -1
+      },
+      {
+        "date": "2026-07-13",
+        "foreign": 21,
+        "trust": 1
+      },
+      {
+        "date": "2026-07-14",
+        "foreign": -349,
+        "trust": 45
+      },
+      {
+        "date": "2026-07-15",
+        "foreign": 213,
+        "trust": -4
+      },
+      {
+        "date": "2026-07-16",
+        "foreign": -180,
+        "trust": 16
+      },
+      {
+        "date": "2026-07-17",
+        "foreign": -415,
+        "trust": 57
+      },
+      {
+        "date": "2026-07-20",
+        "foreign": -257,
+        "trust": 71
+      },
+      {
+        "date": "2026-07-21",
+        "foreign": -71,
+        "trust": 49
+      },
+      {
+        "date": "2026-07-22",
+        "foreign": -74,
+        "trust": 47
+      },
+      {
+        "date": "2026-07-23",
+        "foreign": -22,
+        "trust": 49
+      },
+      {
+        "date": "2026-07-24",
+        "foreign": -175,
+        "trust": 9
+      },
+      {
+        "date": "2026-07-27",
+        "foreign": -232,
+        "trust": 5
+      },
+      {
+        "date": "2026-07-28",
+        "foreign": -461,
+        "trust": 0
+      },
+      {
+        "date": "2026-07-29",
+        "foreign": -117,
+        "trust": 1
+      },
+      {
+        "date": "2026-07-30",
+        "foreign": -45,
+        "trust": 3
+      },
+      {
+        "date": "2026-07-31",
+        "foreign": -207,
+        "trust": 13
+      },
+      {
+        "date": "2026-08-03",
+        "foreign": -9,
+        "trust": -1
+      },
+      {
+        "date": "2026-08-04",
+        "foreign": -21,
+        "trust": 3
+      },
+      {
+        "date": "2026-08-05",
+        "foreign": 75,
+        "trust": -1
+      },
+      {
+        "date": "2026-08-06",
+        "foreign": 33,
+        "trust": 92
+      },
+      {
+        "date": "2026-08-07",
+        "foreign": 417,
+        "trust": -1
+      },
+      {
+        "date": "2026-08-10",
+        "foreign": -8,
+        "trust": -6
+      },
+      {
+        "date": "2026-08-11",
+        "foreign": -54,
+        "trust": -1
+      },
+      {
+        "date": "2026-08-12",
+        "foreign": 39,
+        "trust": -2
+      },
+      {
+        "date": "2026-08-13",
+        "foreign": -85,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-14",
+        "foreign": -93,
+        "trust": -2
+      },
+      {
+        "date": "2026-08-17",
+        "foreign": -125,
+        "trust": 31
+      },
+      {
+        "date": "2026-08-18",
+        "foreign": -657,
+        "trust": 335
+      },
+      {
+        "date": "2026-08-19",
+        "foreign": -611,
+        "trust": 1
+      },
+      {
+        "date": "2026-08-20",
+        "foreign": -914,
+        "trust": -22
+      },
+      {
+        "date": "2026-08-21",
+        "foreign": -639,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-24",
+        "foreign": -53,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-25",
+        "foreign": -141,
+        "trust": 1
+      },
+      {
+        "date": "2026-08-26",
+        "foreign": -21,
+        "trust": 17
+      },
+      {
+        "date": "2026-08-27",
+        "foreign": -62,
+        "trust": -4
+      },
+      {
+        "date": "2026-08-28",
+        "foreign": -229,
+        "trust": 0
+      },
+      {
+        "date": "2026-08-31",
+        "foreign": -63,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-01",
+        "foreign": 139,
+        "trust": 47
+      },
+      {
+        "date": "2026-09-02",
+        "foreign": -395,
+        "trust": -15
+      },
+      {
+        "date": "2026-09-03",
+        "foreign": -23,
+        "trust": -12
+      },
+      {
+        "date": "2026-09-04",
+        "foreign": -160,
+        "trust": 39
+      },
+      {
+        "date": "2026-09-07",
+        "foreign": 233,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-08",
+        "foreign": -99,
+        "trust": -1
+      },
+      {
+        "date": "2026-09-09",
+        "foreign": 18,
+        "trust": -7
+      },
+      {
+        "date": "2026-09-10",
+        "foreign": -118,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-11",
+        "foreign": -203,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-14",
+        "foreign": 4,
+        "trust": 1
+      },
+      {
+        "date": "2026-09-15",
+        "foreign": -42,
+        "trust": 4
+      },
+      {
+        "date": "2026-09-16",
+        "foreign": 200,
+        "trust": -200
+      },
+      {
+        "date": "2026-09-17",
+        "foreign": -126,
+        "trust": -5
+      },
+      {
+        "date": "2026-09-18",
+        "foreign": 520,
+        "trust": -2
+      },
+      {
+        "date": "2026-09-21",
+        "foreign": -319,
+        "trust": 31
+      },
+      {
+        "date": "2026-09-22",
+        "foreign": 20,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-23",
+        "foreign": 9,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-24",
+        "foreign": 201,
+        "trust": 0
+      },
+      {
+        "date": "2026-09-29",
+        "foreign": -111,
+        "trust": -27
+      },
+      {
+        "date": "2026-09-30",
+        "foreign": 957,
+        "trust": 57
+      },
+      {
+        "date": "2026-10-01",
+        "foreign": 202,
+        "trust": 68
+      },
+      {
+        "date": "2026-10-02",
+        "foreign": 181,
+        "trust": 17
+      },
+      {
+        "date": "2026-10-05",
+        "foreign": 513,
+        "trust": 4
       }
     ]
   },
@@ -145981,9 +148342,9 @@
         "穿戴式裝置"
       ]
     },
-    "revenueYoY": -7.71,
-    "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-10-03",
+    "revenueYoY": 12.09,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-06",
     "fundamentals": {
       "_last_rev_attempt_ts": 1791273961,
       "revenueYoY": [
@@ -146034,6 +148395,10 @@
         {
           "date": "2026-08",
           "yoy": -7.71
+        },
+        {
+          "date": "2026-09",
+          "yoy": 12.09
         }
       ],
       "_last_fin_attempt_ts": 1790993859,
@@ -181829,9 +184194,9 @@
         "工業電腦"
       ]
     },
-    "revenueYoY": 47.83,
-    "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-09-25",
+    "revenueYoY": 50.5,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-06",
     "fundamentals": {
       "_last_rev_attempt_ts": 1791274002,
       "revenueYoY": [
@@ -181882,6 +184247,10 @@
         {
           "date": "2026-08",
           "yoy": 47.83
+        },
+        {
+          "date": "2026-09",
+          "yoy": 50.5
         }
       ],
       "_last_fin_attempt_ts": 1790301587,
@@ -187338,9 +189707,9 @@
         "隱形眼鏡"
       ]
     },
-    "revenueYoY": 40.57,
-    "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-09-25",
+    "revenueYoY": 44.46,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-06",
     "fundamentals": {
       "_last_rev_attempt_ts": 1791274203,
       "revenueYoY": [
@@ -187391,6 +189760,10 @@
         {
           "date": "2026-08",
           "yoy": 40.58
+        },
+        {
+          "date": "2026-09",
+          "yoy": 44.46
         }
       ],
       "_last_fin_attempt_ts": 1790301452,
@@ -217287,9 +219660,9 @@
         "智慧醫療技術"
       ]
     },
-    "revenueYoY": 86.01,
-    "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-10-03",
+    "revenueYoY": 65.34,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-06",
     "fundamentals": {
       "_last_rev_attempt_ts": 1791274213,
       "revenueYoY": [
@@ -217340,6 +219713,10 @@
         {
           "date": "2026-08",
           "yoy": 86.02
+        },
+        {
+          "date": "2026-09",
+          "yoy": 65.34
         }
       ],
       "_last_fin_attempt_ts": 1791003935,
