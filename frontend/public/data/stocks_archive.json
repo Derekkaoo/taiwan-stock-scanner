@@ -372,8 +372,8 @@
       "m6": -22.22,
       "y1": -24.46
     },
-    "industry": "食品工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "食品加工",
       "肉品加工",
@@ -1037,8 +1037,8 @@
       "m6": 324.9,
       "y1": 657.54
     },
-    "industry": "塑膠工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "塑化原料",
       "DOP",
@@ -1725,8 +1725,8 @@
       "m6": -20.27,
       "y1": 28.26
     },
-    "industry": "塑膠工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "塑化原料",
       "PE",
@@ -2049,8 +2049,8 @@
       "m6": 0.0,
       "y1": 22.33
     },
-    "industry": "塑膠工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "塑化原料",
       "PVC",
@@ -8603,7 +8603,7 @@
     "price": 1230.0,
     "marketCap": 2460.0,
     "turnovers": {
-      "d1": 7.27,
+      "d1": 7.25,
       "d5": 7.94,
       "d10": 9.21,
       "d20": 10.11,
@@ -8632,8 +8632,8 @@
       "m6": 23.87,
       "y1": 45.73
     },
-    "industry": "電機機械",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "機械零組件",
       "氣動元件"
@@ -9284,8 +9284,8 @@
       "m6": 71.6,
       "y1": 80.12
     },
-    "industry": "電機機械",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "機械零組件",
       "滑軌"
@@ -9935,8 +9935,8 @@
       "m6": -5.83,
       "y1": -13.08
     },
-    "industry": "電器電纜",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "家電",
       "照明",
@@ -12221,8 +12221,8 @@
       "m6": 30.15,
       "y1": 23.34
     },
-    "industry": "化學工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "化學工業",
       "溶劑",
@@ -15178,8 +15178,8 @@
       "m6": 49.89,
       "y1": 54.63
     },
-    "industry": "電機機械",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "機械零組件",
       "滑軌"
@@ -16150,8 +16150,8 @@
       "m6": 11.93,
       "y1": 17.54
     },
-    "industry": "橡膠工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "塑化製品",
       "塑膠皮布",
@@ -17176,8 +17176,8 @@
       "m6": -22.58,
       "y1": -17.65
     },
-    "industry": "汽車工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "機械零組件",
       "減速機",
@@ -18569,8 +18569,8 @@
       "m6": -0.81,
       "y1": 204.08
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "軟板",
@@ -19320,8 +19320,8 @@
       "m6": 165.71,
       "y1": 250.68
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "被動元件",
       "MLCC",
@@ -19651,8 +19651,8 @@
       "m6": 12.09,
       "y1": -12.84
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子零件元件",
       "連接器",
@@ -20308,8 +20308,8 @@
       "m6": 2.16,
       "y1": 335.42
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC製造",
       "非揮發性記憶體"
@@ -20320,9 +20320,9 @@
         "非揮發性記憶體"
       ]
     },
-    "revenueYoY": 218.53,
-    "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-10-03",
+    "revenueYoY": 188.23,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-07",
     "fundamentals": {
       "_last_rev_attempt_ts": 1791359675,
       "revenueYoY": [
@@ -20373,6 +20373,10 @@
         {
           "date": "2026-08",
           "yoy": 218.53
+        },
+        {
+          "date": "2026-09",
+          "yoy": 188.23
         }
       ],
       "_last_fin_attempt_ts": 1790993531,
@@ -20944,8 +20948,8 @@
       "m6": 99.0,
       "y1": 320.87
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC製造",
       "非揮發性記憶體",
@@ -21278,8 +21282,8 @@
       "m6": -12.55,
       "y1": 28.53
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "印刷電路板"
@@ -22593,8 +22597,8 @@
       "m6": -35.78,
       "y1": 73.53
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "印刷電路板"
@@ -24895,8 +24899,8 @@
       "m6": 39.43,
       "y1": 31.42
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "散熱模組",
       "散熱風扇馬達"
@@ -25539,8 +25543,8 @@
       "m6": 228.08,
       "y1": 482.63
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "LED",
       "LED晶粒",
@@ -25874,8 +25878,8 @@
       "m6": 0.88,
       "y1": -14.04
     },
-    "industry": "資訊服務業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "軟體業",
       "系統整合",
@@ -26516,8 +26520,8 @@
       "m6": 36.02,
       "y1": 142.19
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子零件元件",
       "DRAM模組",
@@ -28854,8 +28858,8 @@
       "m6": 203.48,
       "y1": 290.58
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "被動元件",
       "石英元件",
@@ -29834,8 +29838,8 @@
       "m6": 102.84,
       "y1": 114.0
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子通路",
       "半導體材料通路商",
@@ -34694,8 +34698,8 @@
       "m6": 17.62,
       "y1": 11.87
     },
-    "industry": "觀光餐旅",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "食品加工",
       "穀類烘焙製品",
@@ -35020,8 +35024,8 @@
       "m6": 22.58,
       "y1": 11.13
     },
-    "industry": "金融保險業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "金融業",
       "產險"
@@ -38626,8 +38630,8 @@
       "m6": 21.12,
       "y1": 15.16
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "汽機車零組件",
       "汽車端子",
@@ -39288,8 +39292,8 @@
       "m6": 4.0,
       "y1": -18.58
     },
-    "industry": "電腦及週邊設備業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子零件元件",
       "伺服器機殼"
@@ -39966,8 +39970,8 @@
       "m6": 276.45,
       "y1": 239.72
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC製造",
       "第三類半導體",
@@ -46291,8 +46295,8 @@
       "m6": 51.02,
       "y1": 18.59
     },
-    "industry": "電腦及週邊設備業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電腦系統業",
       "伺服器",
@@ -54113,8 +54117,8 @@
       "m6": 21.71,
       "y1": 31.7
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "LED",
       "LED封裝",
@@ -56731,8 +56735,8 @@
       "m6": -19.16,
       "y1": -26.28
     },
-    "industry": "綠能環保",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "化學工業",
       "合成樹脂",
@@ -57055,8 +57059,8 @@
       "m6": -6.0,
       "y1": -40.06
     },
-    "industry": "電腦及週邊設備業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "控股公司"
     ],
@@ -60638,8 +60642,8 @@
       "m6": 43.13,
       "y1": 44.54
     },
-    "industry": "電機機械",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "機械零組件",
       "滑軌"
@@ -63560,8 +63564,8 @@
       "m6": 17.06,
       "y1": 70.16
     },
-    "industry": "通信網路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "網通設備",
       "用戶端設備",
@@ -69432,8 +69436,8 @@
       "m6": -10.12,
       "y1": -6.33
     },
-    "industry": "建材營造業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "營造工程",
       "基礎建設"
@@ -73647,8 +73651,8 @@
       "m6": 26.11,
       "y1": 108.2
     },
-    "industry": "通信網路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "網通設備",
       "低雜訊降頻器",
@@ -79239,8 +79243,8 @@
       "m6": 170.81,
       "y1": 137.44
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "LED",
       "LED照明產品",
@@ -79910,8 +79914,8 @@
       "m6": 51.47,
       "y1": 118.22
     },
-    "industry": "通信網路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "車用電子",
       "網通設備",
@@ -80572,8 +80576,8 @@
       "m6": -0.9,
       "y1": -3.5
     },
-    "industry": "其他電子業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "設備儀器商",
       "PCB相關設備",
@@ -81567,8 +81571,8 @@
       "m6": 96.53,
       "y1": 61.9
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "面板業",
       "觸控面板"
@@ -82556,8 +82560,8 @@
       "m6": 77.94,
       "y1": 70.26
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC封裝測試"
     ],
@@ -85971,8 +85975,8 @@
       "m6": 53.8,
       "y1": 89.9
     },
-    "industry": "其他電子業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子其他",
       "廠務工程"
@@ -88584,8 +88588,8 @@
       "m6": -25.49,
       "y1": -44.53
     },
-    "industry": "運動休閒",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "傳產其他",
       "鞋材"
@@ -91508,8 +91512,8 @@
       "m6": 183.52,
       "y1": 484.98
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "印刷電路板",
@@ -93166,8 +93170,8 @@
       "m6": 51.48,
       "y1": 87.12
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子零件元件",
       "連接器",
@@ -94467,8 +94471,8 @@
       "m6": 55.38,
       "y1": 167.9
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子零件元件",
       "DRAM模組",
@@ -98603,8 +98607,8 @@
       "m6": 3.85,
       "y1": -34.24
     },
-    "industry": "運動休閒",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "產業機械",
       "自行車零件",
@@ -99244,8 +99248,8 @@
       "m6": 25.18,
       "y1": 40.21
     },
-    "industry": "其他業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "營造工程",
       "工程顧問"
@@ -99256,9 +99260,9 @@
         "工程顧問"
       ]
     },
-    "revenueYoY": 5.24,
-    "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-10-03",
+    "revenueYoY": 4.25,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-07",
     "fundamentals": {
       "_last_rev_attempt_ts": 1791359590,
       "revenueYoY": [
@@ -99309,6 +99313,10 @@
         {
           "date": "2026-08",
           "yoy": 5.25
+        },
+        {
+          "date": "2026-09",
+          "yoy": 4.25
         }
       ],
       "_last_fin_attempt_ts": 1790993846,
@@ -99880,8 +99888,8 @@
       "m6": -20.54,
       "y1": -49.14
     },
-    "industry": "鋼鐵工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "條鋼",
       "鋼構"
@@ -103038,8 +103046,8 @@
       "m6": 2.46,
       "y1": 1.13
     },
-    "industry": "其他業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "紡紗",
       "毛紡",
@@ -103693,8 +103701,8 @@
       "m6": 25.29,
       "y1": 29.34
     },
-    "industry": "紡織纖維",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "化學纖維",
       "尼龍粒",
@@ -105979,8 +105987,8 @@
       "m6": 32.34,
       "y1": 43.78
     },
-    "industry": "電器電纜",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電線電纜",
       "電力電纜",
@@ -107946,8 +107954,8 @@
       "m6": 17.5,
       "y1": 19.42
     },
-    "industry": "生技醫療業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "醫藥產業",
       "西藥製劑",
@@ -108589,8 +108597,8 @@
       "m6": -8.45,
       "y1": -5.01
     },
-    "industry": "生技醫療業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "醫藥產業",
       "西藥製劑",
@@ -108909,8 +108917,8 @@
       "m6": -10.69,
       "y1": -33.5
     },
-    "industry": "生技醫療業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "醫藥產業",
       "西藥製劑",
@@ -109202,8 +109210,8 @@
     "price": 65.7,
     "marketCap": 1910.6,
     "turnovers": {
-      "d1": 69.1,
-      "d5": 22.64,
+      "d1": 69.03,
+      "d5": 22.62,
       "d10": 16.11,
       "d20": 12.76,
       "d50": 16.19
@@ -109231,8 +109239,8 @@
       "m6": 26.59,
       "y1": 115.06
     },
-    "industry": "玻璃陶瓷",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "建材",
       "玻璃",
@@ -110211,8 +110219,8 @@
       "m6": -6.11,
       "y1": 7.99
     },
-    "industry": "鋼鐵工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "板鋼",
       "熱軋鋼捲",
@@ -110531,8 +110539,8 @@
       "m6": 133.33,
       "y1": 162.5
     },
-    "industry": "鋼鐵工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "不鏽鋼",
       "不鏽鋼剪裁加工",
@@ -113817,8 +113825,8 @@
       "m6": 83.97,
       "y1": 83.21
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "印刷電路板",
@@ -114143,8 +114151,8 @@
       "m6": -1.37,
       "y1": 16.71
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "光碟片",
       "IC製造",
@@ -115473,8 +115481,8 @@
       "m6": 33.44,
       "y1": 96.59
     },
-    "industry": "通信網路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "網通設備",
       "用戶端設備",
@@ -116805,8 +116813,8 @@
       "m6": 16.16,
       "y1": 62.69
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC封裝測試",
       "IC封裝",
@@ -117127,8 +117135,8 @@
       "m6": -0.15,
       "y1": -23.36
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "數位相機",
       "數位相機組裝",
@@ -117806,8 +117814,8 @@
       "m6": 55.02,
       "y1": 35.71
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC設計",
       "網路卡IC",
@@ -119495,8 +119503,8 @@
       "m6": 23.34,
       "y1": 35.33
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC設計",
       "馬達IC",
@@ -120469,8 +120477,8 @@
       "m6": 126.77,
       "y1": 242.94
     },
-    "industry": "通信網路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC製造",
       "砷化鎵相關",
@@ -120791,8 +120799,8 @@
       "m6": 9.84,
       "y1": -0.37
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC設計",
       "消費性IC",
@@ -121785,8 +121793,8 @@
       "m6": 265.81,
       "y1": 313.53
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "被動元件",
       "MLCC",
@@ -122124,8 +122132,8 @@
       "m6": 7.91,
       "y1": -31.99
     },
-    "industry": "通信網路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "手機",
       "手機製造",
@@ -128270,8 +128278,8 @@
       "m6": 39.74,
       "y1": 37.97
     },
-    "industry": "金融保險業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "金融業",
       "產險"
@@ -129590,8 +129598,8 @@
       "m6": 22.72,
       "y1": -13.26
     },
-    "industry": "鋼鐵工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "線材盤元",
       "螺絲螺帽",
@@ -130578,8 +130586,8 @@
       "m6": 49.42,
       "y1": 32.22
     },
-    "industry": "電腦及週邊設備業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "工業電腦"
     ],
@@ -130901,8 +130909,8 @@
       "m6": 3.67,
       "y1": -21.31
     },
-    "industry": "通信網路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電力設備",
       "重電設備",
@@ -131239,8 +131247,8 @@
       "m6": 29.84,
       "y1": 99.05
     },
-    "industry": "電子通路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子通路",
       "IC零組件通路商",
@@ -131902,8 +131910,8 @@
       "m6": 48.23,
       "y1": 29.41
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC設計",
       "設計IP",
@@ -132240,8 +132248,8 @@
       "m6": -7.05,
       "y1": -22.67
     },
-    "industry": "通信網路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "網通設備",
       "用戶端設備",
@@ -133219,8 +133227,8 @@
       "m6": -10.42,
       "y1": -6.45
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "光碟片",
       "碟片預錄",
@@ -134517,8 +134525,8 @@
       "m6": 92.27,
       "y1": 128.05
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "被動元件",
       "MLCC",
@@ -138115,8 +138123,8 @@
       "m6": -11.52,
       "y1": -34.11
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子零件元件",
       "模具沖壓",
@@ -139102,8 +139110,8 @@
       "m6": 120.13,
       "y1": 247.68
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "面板業",
       "中小尺吋面板",
@@ -140400,8 +140408,8 @@
       "m6": -12.47,
       "y1": 181.39
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "太陽能",
       "太陽能電池",
@@ -141723,8 +141731,8 @@
       "m6": 36.36,
       "y1": 82.65
     },
-    "industry": "電子通路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子通路",
       "IC零組件通路商",
@@ -142741,8 +142749,8 @@
       "m6": -20.57,
       "y1": 42.56
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "印刷電路板",
@@ -147638,8 +147646,8 @@
     "price": 254.0,
     "marketCap": 198.67,
     "turnovers": {
-      "d1": 35.05,
-      "d5": 14.45,
+      "d1": 35.02,
+      "d5": 14.44,
       "d10": 9.79,
       "d20": 13.34,
       "d50": 9.13
@@ -150316,8 +150324,8 @@
       "m6": 108.97,
       "y1": 89.17
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "封測服務與材料",
       "導線架"
@@ -152625,8 +152633,8 @@
       "m6": 98.69,
       "y1": 90.55
     },
-    "industry": "電子通路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子通路",
       "半導體材料通路商",
@@ -156553,8 +156561,8 @@
       "m6": 60.19,
       "y1": 77.74
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "印刷電路板"
@@ -157191,8 +157199,8 @@
       "m6": 94.72,
       "y1": 88.56
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "面板業",
       "中小尺吋面板",
@@ -159797,8 +159805,8 @@
       "m6": 127.43,
       "y1": 114.4
     },
-    "industry": "電腦及週邊設備業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "工業電腦"
     ],
@@ -161116,8 +161124,8 @@
       "m6": 11.01,
       "y1": 0.92
     },
-    "industry": "電子通路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "顯示器",
       "電子通路",
@@ -161779,8 +161787,8 @@
       "m6": 145.42,
       "y1": 171.26
     },
-    "industry": "其他電子業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子其他",
       "廠務工程",
@@ -163415,8 +163423,8 @@
       "m6": 85.51,
       "y1": 111.64
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "光學元件",
       "光學鏡片／頭"
@@ -163747,8 +163755,8 @@
       "m6": 436.03,
       "y1": 654.5
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "軟板基板",
@@ -164068,8 +164076,8 @@
       "m6": 80.48,
       "y1": 55.33
     },
-    "industry": "資訊服務業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "軟體業",
       "系統整合",
@@ -166372,8 +166380,8 @@
       "m6": 62.46,
       "y1": 78.67
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC設計",
       "LED驅動IC",
@@ -167026,9 +167034,9 @@
         "矽晶圓"
       ]
     },
-    "revenueYoY": 7.6,
-    "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-10-01",
+    "revenueYoY": -13.12,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-07",
     "fundamentals": {
       "_last_rev_attempt_ts": 1791359641,
       "revenueYoY": [
@@ -167079,6 +167087,10 @@
         {
           "date": "2026-08",
           "yoy": 7.61
+        },
+        {
+          "date": "2026-09",
+          "yoy": -13.12
         }
       ],
       "_last_fin_attempt_ts": 1790841673,
@@ -167347,8 +167359,8 @@
       "m6": 69.4,
       "y1": 53.82
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC設計",
       "無線網路IC",
@@ -169290,8 +169302,8 @@
       "m6": 302.39,
       "y1": 437.81
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "LED",
       "LED散熱基板",
@@ -169614,8 +169626,8 @@
       "m6": 35.98,
       "y1": -0.96
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC設計",
       "消費性IC",
@@ -170233,8 +170245,8 @@
       "m6": 36.72,
       "y1": 142.81
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC製造",
       "晶圓代工"
@@ -173675,8 +173687,8 @@
       "m6": 27.94,
       "y1": 14.47
     },
-    "industry": "其他業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "手術與治療用醫材",
       "動力手術器具",
@@ -175959,8 +175971,8 @@
       "m6": 139.74,
       "y1": 311.2
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC封裝測試",
       "IC封裝",
@@ -184563,8 +184575,8 @@
       "m6": -3.98,
       "y1": -5.36
     },
-    "industry": "食品工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "食品加工",
       "乳製品",
@@ -184889,8 +184901,8 @@
       "m6": -16.12,
       "y1": -34.94
     },
-    "industry": "建材營造業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "地產",
       "營建"
@@ -185164,8 +185176,8 @@
       "m6": 29.55,
       "y1": 16.34
     },
-    "industry": "紡織纖維",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "化學纖維",
       "尼龍粒",
@@ -187401,8 +187413,8 @@
       "m6": -17.49,
       "y1": -37.47
     },
-    "industry": "汽車工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "汽機車零組件",
       "車燈"
@@ -188079,8 +188091,8 @@
       "m6": -13.9,
       "y1": -21.41
     },
-    "industry": "電機機械",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "工具機",
       "龍門機",
@@ -188400,8 +188412,8 @@
       "m6": 139.72,
       "y1": 204.02
     },
-    "industry": "電機機械",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "產業機械",
       "磨料磨具",
@@ -190383,8 +190395,8 @@
       "m6": 102.16,
       "y1": 150.96
     },
-    "industry": "化學工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "化學工業",
       "烷基苯",
@@ -190707,8 +190719,8 @@
       "m6": 51.27,
       "y1": 73.31
     },
-    "industry": "化學工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "化學纖維",
       "聚酯絲",
@@ -198731,8 +198743,8 @@
       "m6": 62.0,
       "y1": 52.0
     },
-    "industry": "其他電子業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子其他",
       "廠務工程"
@@ -200716,8 +200728,8 @@
       "m6": 294.97,
       "y1": 198.35
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "LED",
       "LED照明產品",
@@ -201372,8 +201384,8 @@
       "m6": -10.05,
       "y1": -8.85
     },
-    "industry": "建材營造業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "地產",
       "營建"
@@ -203972,8 +203984,8 @@
       "m6": 2.19,
       "y1": 3.32
     },
-    "industry": "觀光餐旅",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "旅宿／餐飲",
       "餐飲"
@@ -204935,8 +204947,8 @@
       "m6": -10.66,
       "y1": -21.3
     },
-    "industry": "貿易百貨業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "食品加工",
       "茶葉相關",
@@ -205269,8 +205281,8 @@
       "m6": -7.95,
       "y1": -3.19
     },
-    "industry": "貿易百貨業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "流通業",
       "貿易",
@@ -205561,9 +205573,9 @@
     "price": 839.0,
     "marketCap": 1391.82,
     "turnovers": {
-      "d1": 130.0,
-      "d5": 109.35,
-      "d10": 88.3,
+      "d1": 129.95,
+      "d5": 109.34,
+      "d10": 88.29,
       "d20": 84.74,
       "d50": 62.71
     },
@@ -205590,8 +205602,8 @@
       "m6": 510.18,
       "y1": 743.22
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "被動元件",
       "MLCC",
@@ -206242,8 +206254,8 @@
       "m6": -0.69,
       "y1": 58.46
     },
-    "industry": "電子通路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子通路",
       "IC零組件通路商"
@@ -208542,8 +208554,8 @@
       "m6": 251.44,
       "y1": 856.52
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "封測服務與材料",
       "IC基板",
@@ -214097,8 +214109,8 @@
       "m6": 63.84,
       "y1": 95.53
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "設備儀器商",
       "半導體製程設備",
@@ -219651,8 +219663,8 @@
       "m6": 37.06,
       "y1": 43.15
     },
-    "industry": "電機機械",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "汽機車零組件",
       "傳產其他",
@@ -222909,8 +222921,8 @@
       "m6": 188.14,
       "y1": 259.52
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "軟板",
@@ -223562,8 +223574,8 @@
       "m6": -1.13,
       "y1": 44.03
     },
-    "industry": "通信網路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "光通訊",
       "光纖主動元件"
@@ -225855,8 +225867,8 @@
       "m6": 1.0,
       "y1": -10.85
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "印刷電路板",
@@ -226530,9 +226542,9 @@
         "太陽能矽晶圓"
       ]
     },
-    "revenueYoY": 11.67,
-    "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-10-03",
+    "revenueYoY": -5.61,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-07",
     "fundamentals": {
       "_last_rev_attempt_ts": 1791359686,
       "revenueYoY": [
@@ -226583,6 +226595,10 @@
         {
           "date": "2026-08",
           "yoy": 11.68
+        },
+        {
+          "date": "2026-09",
+          "yoy": -5.61
         }
       ],
       "_last_fin_attempt_ts": 1790993743,
@@ -232985,8 +233001,8 @@
       "m6": 105.38,
       "y1": 73.22
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "LED",
       "LED散熱基板",
@@ -236237,8 +236253,8 @@
       "m6": 155.51,
       "y1": 373.43
     },
-    "industry": "通信網路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "光通訊",
       "光纖零組件"
@@ -236580,9 +236596,9 @@
         "IC零組件通路商"
       ]
     },
-    "revenueYoY": -11.79,
-    "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-10-03",
+    "revenueYoY": -12.92,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-07",
     "fundamentals": {
       "_last_rev_attempt_ts": 1791359563,
       "revenueYoY": [
@@ -236633,6 +236649,10 @@
         {
           "date": "2026-08",
           "yoy": -11.79
+        },
+        {
+          "date": "2026-09",
+          "yoy": -12.92
         }
       ],
       "_last_fin_attempt_ts": 1790993627,
@@ -241653,8 +241673,8 @@
       "m6": 57.46,
       "y1": 54.47
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC製造",
       "矽晶圓"
@@ -242303,8 +242323,8 @@
       "m6": 185.92,
       "y1": 391.13
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "軟板基板"
@@ -244275,8 +244295,8 @@
       "m6": 17.63,
       "y1": 9.59
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "印刷電路板"
@@ -245282,8 +245302,8 @@
       "m6": 97.72,
       "y1": 101.26
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "分離式元件",
       "電晶體"
@@ -246603,8 +246623,8 @@
       "m6": 12.06,
       "y1": 10.88
     },
-    "industry": "綠能環保",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "營造工程",
       "環保工程"
@@ -249496,8 +249516,8 @@
       "m6": 6.23,
       "y1": 5.07
     },
-    "industry": "塑膠工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "塑化製品",
       "塑膠加工",
@@ -251776,8 +251796,8 @@
       "m6": 44.96,
       "y1": 29.86
     },
-    "industry": "汽車工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "產業機械",
       "自行車零件",
@@ -252430,8 +252450,8 @@
       "m6": 12.3,
       "y1": 6.09
     },
-    "industry": "電器電纜",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "家電",
       "冷氣機",
@@ -253082,8 +253102,8 @@
       "m6": 31.25,
       "y1": 80.65
     },
-    "industry": "化學工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "化學工業",
       "合成樹脂",
@@ -253404,8 +253424,8 @@
       "m6": -2.41,
       "y1": -17.19
     },
-    "industry": "橡膠工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "橡膠工業",
       "輪胎",
@@ -254374,8 +254394,8 @@
       "m6": 38.46,
       "y1": 20.93
     },
-    "industry": "玻璃陶瓷",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "家居用品",
       "衛浴設備",
@@ -256494,8 +256514,8 @@
       "m6": -10.14,
       "y1": -18.73
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "車用電子",
       "週邊產品",
@@ -257833,8 +257853,8 @@
       "m6": 81.4,
       "y1": 97.38
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "LED",
       "LED封裝"
@@ -260448,8 +260468,8 @@
       "m6": 50.19,
       "y1": 101.54
     },
-    "industry": "其他電子業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子其他",
       "廠務工程"
@@ -263261,8 +263281,8 @@
       "m6": 79.21,
       "y1": 153.17
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC設計",
       "類比IC",
@@ -264898,8 +264918,8 @@
       "m6": 169.7,
       "y1": 341.32
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "印刷電路板"
@@ -265230,8 +265250,8 @@
       "m6": 13.56,
       "y1": 18.42
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "軟板"
@@ -269125,8 +269145,8 @@
       "m6": -2.63,
       "y1": 42.03
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "設備儀器商",
       "PCB相關設備",
@@ -269780,9 +269800,9 @@
         "設備儀器商"
       ]
     },
-    "revenueYoY": 231.85,
-    "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-10-03",
+    "revenueYoY": 112.75,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-07",
     "fundamentals": {
       "_last_rev_attempt_ts": 1791359638,
       "revenueYoY": [
@@ -269833,6 +269853,10 @@
         {
           "date": "2026-08",
           "yoy": 231.85
+        },
+        {
+          "date": "2026-09",
+          "yoy": 112.75
         }
       ],
       "_last_fin_attempt_ts": 1791003949,
@@ -272674,8 +272698,8 @@
       "m6": 2.68,
       "y1": -31.72
     },
-    "industry": "建材營造業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "地產",
       "營建"
@@ -278405,8 +278429,8 @@
       "m6": 4.0,
       "y1": 4.81
     },
-    "industry": "其他業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "傳播事業",
       "有線電視"
@@ -279685,8 +279709,8 @@
       "m6": 94.44,
       "y1": 303.68
     },
-    "industry": "電機機械",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "傳產其他",
       "金屬加工／製品"
@@ -282619,8 +282643,8 @@
       "m6": 13.29,
       "y1": 7.7
     },
-    "industry": "紡織纖維",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "化學纖維",
       "聚酯加工絲",
@@ -283741,8 +283765,8 @@
       "m6": -9.09,
       "y1": -1.71
     },
-    "industry": "電機機械",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "產業機械",
       "工業用縫紉機"
@@ -288167,8 +288191,8 @@
       "m6": 20.45,
       "y1": 25.13
     },
-    "industry": "鋼鐵工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "不鏽鋼",
       "不鏽鋼剪裁加工",
@@ -290528,8 +290552,8 @@
       "m6": 98.97,
       "y1": 81.02
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "LED",
       "LED晶粒",
@@ -291185,8 +291209,8 @@
       "m6": 127.08,
       "y1": 132.34
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "被動元件",
       "石英元件",
@@ -293128,8 +293152,8 @@
       "m6": 20.85,
       "y1": 57.6
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子零件元件",
       "連接線材"
@@ -293781,8 +293805,8 @@
       "m6": 17.18,
       "y1": 103.89
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子零件元件",
       "DRAM模組",
@@ -295600,8 +295624,8 @@
       "m6": 193.59,
       "y1": 725.95
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "印刷電路板",
@@ -296260,8 +296284,8 @@
       "m6": 35.74,
       "y1": 106.05
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "印刷電路板"
@@ -296910,8 +296934,8 @@
       "m6": 13.91,
       "y1": 127.82
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "銅箔"
@@ -298557,8 +298581,8 @@
       "m6": -24.62,
       "y1": -4.89
     },
-    "industry": "通信網路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "網通設備",
       "用戶端設備",
@@ -301828,9 +301852,9 @@
         "消費用電池"
       ]
     },
-    "revenueYoY": -46.97,
-    "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-10-03",
+    "revenueYoY": -43.96,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-07",
     "fundamentals": {
       "_last_rev_attempt_ts": 1791359597,
       "revenueYoY": [
@@ -301881,6 +301905,10 @@
         {
           "date": "2026-08",
           "yoy": -46.98
+        },
+        {
+          "date": "2026-09",
+          "yoy": -43.96
         }
       ],
       "_last_fin_attempt_ts": 1790993617,
@@ -308124,8 +308152,8 @@
       "m6": -12.93,
       "y1": 26.42
     },
-    "industry": "綠能環保",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "傳產其他",
       "回收焚化／掩埋清運"
@@ -308779,8 +308807,8 @@
       "m6": 21.38,
       "y1": 45.45
     },
-    "industry": "化學工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "化纖原料",
       "EG",
@@ -312123,8 +312151,8 @@
       "m6": -19.19,
       "y1": -21.09
     },
-    "industry": "其他業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "運輸事業",
       "貨櫃場服務",
@@ -314113,8 +314141,8 @@
       "m6": 64.27,
       "y1": 101.07
     },
-    "industry": "塑膠工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "塑化原料",
       "PVC",
@@ -314454,8 +314482,8 @@
       "m6": 94.19,
       "y1": 163.55
     },
-    "industry": "油電燃氣業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "塑化原料",
       "烯烴類",
@@ -315817,8 +315845,8 @@
       "m6": 11.76,
       "y1": 10.83
     },
-    "industry": "電機機械",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電力設備",
       "電機",
@@ -319754,8 +319782,8 @@
       "m6": 33.17,
       "y1": 168.49
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子零件元件",
       "DRAM模組",
@@ -324023,8 +324051,8 @@
       "m6": 182.43,
       "y1": 246.75
     },
-    "industry": "其他電子業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "設備儀器商",
       "PCB相關設備"
@@ -333805,8 +333833,8 @@
       "m6": -7.5,
       "y1": -0.97
     },
-    "industry": "化學工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "化學工業",
       "煤化工"
@@ -336062,8 +336090,8 @@
       "m6": 50.32,
       "y1": 42.62
     },
-    "industry": "通信網路業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "汽機車零組件",
       "穿戴式裝置"
@@ -336400,8 +336428,8 @@
       "m6": 9.69,
       "y1": 55.47
     },
-    "industry": "電腦及週邊設備業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "車用電子",
       "消費性電子產品",
@@ -342927,8 +342955,8 @@
       "m6": 5.92,
       "y1": -15.09
     },
-    "industry": "資訊服務業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "軟體業",
       "系統整合",
@@ -354162,8 +354190,8 @@
       "m6": 12.52,
       "y1": 9.69
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子零件元件",
       "電源供應器",
@@ -359684,8 +359712,8 @@
       "m6": -17.23,
       "y1": -50.15
     },
-    "industry": "運動休閒",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "傳產其他",
       "製鞋業",
@@ -362575,8 +362603,8 @@
       "m6": 15.09,
       "y1": 32.84
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "LED",
       "LED封裝"
@@ -371792,8 +371820,8 @@
       "m6": 71.94,
       "y1": 88.65
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "印刷電路板相關",
       "印刷電路板"
@@ -374718,8 +374746,8 @@
       "m6": -15.11,
       "y1": -18.41
     },
-    "industry": "資訊服務業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "遊戲產業",
       "PC遊戲",
@@ -375338,40 +375366,40 @@
     "groupDesc": "",
     "holdingPct": 72.41,
     "delta": 0.58,
-    "price": 61.7,
-    "marketCap": 121.85,
+    "price": 0.0,
+    "marketCap": 0.0,
     "turnovers": {
-      "d1": 0.17,
-      "d5": 0.21,
-      "d10": 0.18,
-      "d20": 0.27,
-      "d50": 0.53
+      "d1": 0,
+      "d5": 0,
+      "d10": 0,
+      "d20": 0,
+      "d50": 0
     },
     "volumes": {
-      "d1": 0.27,
-      "d5": 0.33,
-      "d10": 0.3,
-      "d20": 0.43,
-      "d50": 0.87
+      "d1": 0,
+      "d5": 0,
+      "d10": 0,
+      "d20": 0,
+      "d50": 0
     },
-    "pctOf52wHigh": 78.5,
-    "pctOf200dHigh": 87.27,
-    "ma10": 62.07,
-    "ma20": 62.77,
-    "ma60": 58.32,
-    "ma20Trend": "down",
-    "dailyChangePct": -2.06,
+    "pctOf52wHigh": null,
+    "pctOf200dHigh": null,
+    "ma10": null,
+    "ma20": null,
+    "ma60": null,
+    "ma20Trend": null,
+    "dailyChangePct": null,
     "date": "2026-10-02",
-    "threeMonthReturn": 25.53,
+    "threeMonthReturn": null,
     "returns": {
-      "w1": -0.16,
-      "m1": -2.53,
-      "m3": 13.42,
-      "m6": 15.54,
-      "y1": 25.53
+      "w1": null,
+      "m1": null,
+      "m3": null,
+      "m6": null,
+      "y1": null
     },
-    "industry": "航運業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "運輸事業",
       "貨櫃場服務",
@@ -376006,8 +376034,8 @@
       "m6": -18.05,
       "y1": -37.71
     },
-    "industry": "生技醫療業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "醫藥產業",
       "新藥研發",
@@ -377629,8 +377657,8 @@
       "m6": -25.21,
       "y1": -47.67
     },
-    "industry": "其他業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "織布業",
       "工業紡織品",
@@ -378612,8 +378640,8 @@
       "m6": 0.26,
       "y1": 0.0
     },
-    "industry": "鋼鐵工業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "線材盤元",
       "條鋼",
@@ -379840,8 +379868,8 @@
       "m6": 3.4,
       "y1": 33.96
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "LED",
       "LED封裝"
@@ -381468,8 +381496,8 @@
       "m6": 122.83,
       "y1": 321.9
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC封裝測試",
       "IC封裝",
@@ -385350,8 +385378,8 @@
       "m6": 11.14,
       "y1": 73.57
     },
-    "industry": "綠能環保",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "產業機械",
       "污染控制設備",
@@ -393243,9 +393271,9 @@
         "LCD顯示器"
       ]
     },
-    "revenueYoY": 47.13,
-    "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-10-03",
+    "revenueYoY": 2.89,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-07",
     "fundamentals": {
       "_last_rev_attempt_ts": 1791359755,
       "revenueYoY": [
@@ -393296,6 +393324,10 @@
         {
           "date": "2026-08",
           "yoy": 47.13
+        },
+        {
+          "date": "2026-09",
+          "yoy": 2.89
         }
       ],
       "_last_fin_attempt_ts": 1791003811,
@@ -393845,8 +393877,8 @@
     "price": 332.0,
     "marketCap": 126.35,
     "turnovers": {
-      "d1": 24.24,
-      "d5": 9.76,
+      "d1": 24.23,
+      "d5": 9.75,
       "d10": 10.99,
       "d20": 7.46,
       "d50": 6.43
@@ -396124,8 +396156,8 @@
       "m6": 21.38,
       "y1": -3.18
     },
-    "industry": "資訊服務業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "軟體業",
       "資訊安全",
@@ -396770,8 +396802,8 @@
       "m6": 180.81,
       "y1": 176.0
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "分離式元件",
       "二極體",
@@ -401212,8 +401244,8 @@
       "m6": 18.74,
       "y1": 21.79
     },
-    "industry": "電機機械",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "產業機械",
       "家用縫紉機",
@@ -421539,8 +421571,8 @@
       "m6": -19.09,
       "y1": -39.74
     },
-    "industry": "綠能環保",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "太陽能",
       "太陽能系統運用",
@@ -434604,8 +434636,8 @@
       "m6": 6.04,
       "y1": -18.97
     },
-    "industry": "運動休閒",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "航天軍工",
       "傳產其他",
@@ -439787,8 +439819,8 @@
       "m6": 7.76,
       "y1": 0.52
     },
-    "industry": "建材營造業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "地產",
       "營建",
@@ -441953,8 +441985,8 @@
       "m6": 3.09,
       "y1": 3.39
     },
-    "industry": "航運業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "運輸事業",
       "海空運承攬業",
@@ -446513,8 +446545,8 @@
       "m6": -2.86,
       "y1": -0.83
     },
-    "industry": "其他業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "其他公用事業",
       "停車場"
@@ -448783,8 +448815,8 @@
       "m6": 11.75,
       "y1": 35.45
     },
-    "industry": "電子零組件業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電子零件元件",
       "電源供應器"
@@ -450698,8 +450730,8 @@
       "m6": 59.96,
       "y1": 15.88
     },
-    "industry": "其他電子業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "電聲產品",
       "藍牙耳機",
@@ -462520,8 +462552,8 @@
       "m6": -23.7,
       "y1": -73.94
     },
-    "industry": "光電業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "面板零組件",
       "玻璃基板加工"
@@ -462838,8 +462870,8 @@
       "m6": 101.74,
       "y1": 19.45
     },
-    "industry": "半導體業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "IC設計",
       "設計IP"
@@ -463156,8 +463188,8 @@
       "m6": -10.15,
       "y1": -24.21
     },
-    "industry": "建材營造業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "地產",
       "營建"
@@ -463476,8 +463508,8 @@
       "m6": -15.05,
       "y1": -26.38
     },
-    "industry": "紡織纖維",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "織布業",
       "紡紗",
@@ -463805,8 +463837,8 @@
       "m6": 41.35,
       "y1": 8.77
     },
-    "industry": "其他電子業",
-    "market": "上市",
+    "industry": "",
+    "market": "",
     "subIndustries": [
       "車用電子",
       "軟體業",
