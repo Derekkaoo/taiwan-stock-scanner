@@ -162704,7 +162704,7 @@
     "price": 202.5,
     "marketCap": 227.73,
     "turnovers": {
-      "d1": 4.23,
+      "d1": 4.24,
       "d5": 6.62,
       "d10": 7.7,
       "d20": 5.81,
@@ -196970,9 +196970,9 @@
         "營建"
       ]
     },
-    "revenueYoY": 2252.29,
-    "revenueMonth": "2026-08",
-    "revenueFirstSeen": "2026-10-03",
+    "revenueYoY": 3425111.32,
+    "revenueMonth": "2026-09",
+    "revenueFirstSeen": "2026-10-08",
     "fundamentals": {
       "_last_rev_attempt_ts": 1791446187,
       "revenueYoY": [
@@ -197023,6 +197023,10 @@
         {
           "date": "2026-08",
           "yoy": 2252.29
+        },
+        {
+          "date": "2026-09",
+          "yoy": 3425111.32
         }
       ],
       "_last_fin_attempt_ts": 1791003802,
