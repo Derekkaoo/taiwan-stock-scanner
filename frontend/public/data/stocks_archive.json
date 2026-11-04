@@ -445,12 +445,8 @@
           "yoy": 6.25
         }
       ],
-      "_last_fin_attempt_ts": 1793793643,
+      "_last_fin_attempt_ts": 1793800699,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -17.32
-        },
         {
           "quarter": "2024Q4",
           "yoy": 3.06
@@ -478,13 +474,13 @@
         {
           "quarter": "2026Q2",
           "yoy": -11.2
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -13.61
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -44.71
-        },
         {
           "quarter": "2024Q4",
           "yoy": 6.13
@@ -512,13 +508,13 @@
         {
           "quarter": "2026Q2",
           "yoy": -18.31
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -23.08
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -20.91
-        },
         {
           "quarter": "2024Q4",
           "yoy": 12.87
@@ -546,13 +542,13 @@
         {
           "quarter": "2026Q2",
           "yoy": -23.64
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -25.42
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 14.8
-        },
         {
           "quarter": "2024Q4",
           "value": 19.21
@@ -580,13 +576,13 @@
         {
           "quarter": "2026Q2",
           "value": 18.79
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 19.19
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 6.15
-        },
         {
           "quarter": "2024Q4",
           "value": 11.49
@@ -614,13 +610,13 @@
         {
           "quarter": "2026Q2",
           "value": 10.52
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 10.93
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 1.74
-        },
         {
           "quarter": "2024Q4",
           "value": 2.28
@@ -648,6 +644,10 @@
         {
           "quarter": "2026Q2",
           "value": 1.97
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 2.23
         }
       ]
     },
@@ -3434,7 +3434,7 @@
           "yoy": -6.35
         }
       ],
-      "_last_fin_attempt_ts": 1793793744,
+      "_last_fin_attempt_ts": 1793800601,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -7067,7 +7067,7 @@
           "yoy": 9.37
         }
       ],
-      "_last_fin_attempt_ts": 1793793787,
+      "_last_fin_attempt_ts": 1793800725,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -8369,7 +8369,7 @@
           "yoy": 4.11
         }
       ],
-      "_last_fin_attempt_ts": 1793793644,
+      "_last_fin_attempt_ts": 1793800509,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -8687,7 +8687,7 @@
           "yoy": 32.17
         }
       ],
-      "_last_fin_attempt_ts": 1793793673,
+      "_last_fin_attempt_ts": 1793800543,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -10314,7 +10314,7 @@
           "yoy": -2.67
         }
       ],
-      "_last_fin_attempt_ts": 1793793600,
+      "_last_fin_attempt_ts": 1793800573,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -11614,7 +11614,7 @@
           "yoy": 40.38
         }
       ],
-      "_last_fin_attempt_ts": 1793793612,
+      "_last_fin_attempt_ts": 1793800741,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -12942,7 +12942,7 @@
           "yoy": 0.88
         }
       ],
-      "_last_fin_attempt_ts": 1793793650,
+      "_last_fin_attempt_ts": 1793800580,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -13018,7 +13018,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 343.82
+          "yoy": 342.22
         },
         {
           "quarter": "2025Q1",
@@ -13034,7 +13034,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -93.55
+          "yoy": -93.58
         },
         {
           "quarter": "2026Q1",
@@ -13120,7 +13120,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 2.17
+          "value": 2.18
         },
         {
           "quarter": "2025Q1",
@@ -15233,7 +15233,7 @@
           "yoy": 30.14
         }
       ],
-      "_last_fin_attempt_ts": 1793793595,
+      "_last_fin_attempt_ts": 1793800668,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -16227,7 +16227,7 @@
           "yoy": 12.87
         }
       ],
-      "_last_fin_attempt_ts": 1793793699,
+      "_last_fin_attempt_ts": 1793800538,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -16576,7 +16576,7 @@
           "yoy": 2.42
         }
       ],
-      "_last_fin_attempt_ts": 1793793803,
+      "_last_fin_attempt_ts": 1793800722,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -17577,7 +17577,7 @@
           "yoy": 18.58
         }
       ],
-      "_last_fin_attempt_ts": 1793793788,
+      "_last_fin_attempt_ts": 1793800586,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -19043,7 +19043,7 @@
           "yoy": 38.42
         }
       ],
-      "_last_fin_attempt_ts": 1793793615,
+      "_last_fin_attempt_ts": 1793800600,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -19710,7 +19710,7 @@
           "yoy": 34.3
         }
       ],
-      "_last_fin_attempt_ts": 1793793782,
+      "_last_fin_attempt_ts": 1793800568,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -20677,7 +20677,7 @@
           "yoy": 15.42
         }
       ],
-      "_last_fin_attempt_ts": 1793793594,
+      "_last_fin_attempt_ts": 1793800675,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -21329,7 +21329,7 @@
           "yoy": 44.28
         }
       ],
-      "_last_fin_attempt_ts": 1793793632,
+      "_last_fin_attempt_ts": 1793800540,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -21657,7 +21657,7 @@
           "yoy": 46.01
         }
       ],
-      "_last_fin_attempt_ts": 1793793648,
+      "_last_fin_attempt_ts": 1793800546,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -22001,7 +22001,7 @@
           "yoy": 11.41
         }
       ],
-      "_last_fin_attempt_ts": 1793793623,
+      "_last_fin_attempt_ts": 1793800625,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -22648,7 +22648,7 @@
           "yoy": 3.52
         }
       ],
-      "_last_fin_attempt_ts": 1793793736,
+      "_last_fin_attempt_ts": 1793800710,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -23305,13 +23305,194 @@
           "yoy": 3.85
         }
       ],
-      "_last_fin_attempt_ts": 1793793676,
-      "grossMarginYoY": [],
-      "operatingMarginYoY": [],
-      "epsYoY": [],
-      "grossMargin": [],
-      "operatingMargin": [],
+      "_last_fin_attempt_ts": 1793800585,
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q3",
+          "yoy": -3.69
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -4.21
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -0.43
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -1.49
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -4.01
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -33.59
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": 10.82
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 0.98
+        }
+      ],
+      "operatingMarginYoY": [
+        {
+          "quarter": "2024Q3",
+          "yoy": -340.0
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -889.03
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -171.81
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -52.91
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 13.16
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -138.88
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": 86.65
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 127.03
+        }
+      ],
+      "epsYoY": [
+        {
+          "quarter": "2024Q2",
+          "yoy": -100.0
+        },
+        {
+          "quarter": "2024Q3",
+          "yoy": -166.67
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -100.0
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -85.71
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": 100.0
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -150.0
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": -100.0
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 118.75
+        }
+      ],
+      "grossMargin": [
+        {
+          "quarter": "2024Q3",
+          "value": 39.86
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 41.87
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 40.54
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 41.11
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 38.26
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 27.81
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 44.93
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 41.51
+        }
+      ],
+      "operatingMargin": [
+        {
+          "quarter": "2024Q3",
+          "value": -4.15
+        },
+        {
+          "quarter": "2024Q4",
+          "value": -4.07
+        },
+        {
+          "quarter": "2025Q1",
+          "value": -3.12
+        },
+        {
+          "quarter": "2025Q2",
+          "value": -4.42
+        },
+        {
+          "quarter": "2025Q3",
+          "value": -3.61
+        },
+        {
+          "quarter": "2025Q4",
+          "value": -9.73
+        },
+        {
+          "quarter": "2026Q1",
+          "value": -0.42
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 1.19
+        }
+      ],
       "eps": [
+        {
+          "quarter": "2024Q3",
+          "value": -0.02
+        },
+        {
+          "quarter": "2024Q4",
+          "value": -0.02
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 0.01
+        },
+        {
+          "quarter": "2025Q2",
+          "value": -0.16
+        },
         {
           "quarter": "2025Q3",
           "value": 0.0
@@ -23458,7 +23639,7 @@
           "yoy": 62.29
         }
       ],
-      "_last_fin_attempt_ts": 1793793727,
+      "_last_fin_attempt_ts": 1793800683,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -23790,12 +23971,8 @@
           "yoy": 487.73
         }
       ],
-      "_last_fin_attempt_ts": 1793793660,
+      "_last_fin_attempt_ts": 1793800707,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 112.84
-        },
         {
           "quarter": "2024Q4",
           "yoy": 22.59
@@ -23823,13 +24000,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 486.68
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 364.43
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 45.09
-        },
         {
           "quarter": "2024Q4",
           "yoy": 8.1
@@ -23857,13 +24034,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 272.31
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 1242.04
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 40.74
-        },
         {
           "quarter": "2024Q4",
           "yoy": 36.25
@@ -23891,13 +24068,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 1210.61
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 4980.0
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 3.24
-        },
         {
           "quarter": "2024Q4",
           "value": -10.56
@@ -23925,13 +24102,13 @@
         {
           "quarter": "2026Q2",
           "value": 79.49
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 85.67
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": -30.81
-        },
         {
           "quarter": "2024Q4",
           "value": -42.76
@@ -23959,13 +24136,13 @@
         {
           "quarter": "2026Q2",
           "value": 73.68
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 79.98
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": -0.48
-        },
         {
           "quarter": "2024Q4",
           "value": -0.51
@@ -23993,6 +24170,10 @@
         {
           "quarter": "2026Q2",
           "value": 14.66
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 25.4
         }
       ]
     },
@@ -24769,7 +24950,7 @@
           "yoy": 16.54
         }
       ],
-      "_last_fin_attempt_ts": 1793793740,
+      "_last_fin_attempt_ts": 1793800694,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -25429,7 +25610,7 @@
           "yoy": 40.86
         }
       ],
-      "_last_fin_attempt_ts": 1793793624,
+      "_last_fin_attempt_ts": 1793800671,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -26394,7 +26575,7 @@
           "yoy": 290.42
         }
       ],
-      "_last_fin_attempt_ts": 1793793808,
+      "_last_fin_attempt_ts": 1793800580,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -27071,7 +27252,7 @@
           "yoy": 2.46
         }
       ],
-      "_last_fin_attempt_ts": 1793793714,
+      "_last_fin_attempt_ts": 1793800565,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -27747,7 +27928,7 @@
           "yoy": 77.97
         }
       ],
-      "_last_fin_attempt_ts": 1793793603,
+      "_last_fin_attempt_ts": 1793800528,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -29057,7 +29238,7 @@
           "yoy": -50.39
         }
       ],
-      "_last_fin_attempt_ts": 1793793635,
+      "_last_fin_attempt_ts": 1793800730,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -29389,7 +29570,7 @@
           "yoy": 56.59
         }
       ],
-      "_last_fin_attempt_ts": 1793793631,
+      "_last_fin_attempt_ts": 1793800598,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -29716,7 +29897,7 @@
           "yoy": 41.13
         }
       ],
-      "_last_fin_attempt_ts": 1793793613,
+      "_last_fin_attempt_ts": 1793800697,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -31007,7 +31188,7 @@
           "yoy": -45.54
         }
       ],
-      "_last_fin_attempt_ts": 1793793792,
+      "_last_fin_attempt_ts": 1793800557,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -31659,7 +31840,7 @@
           "yoy": 21.57
         }
       ],
-      "_last_fin_attempt_ts": 1793793773,
+      "_last_fin_attempt_ts": 1793800531,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -31977,7 +32158,7 @@
           "yoy": -98.91
         }
       ],
-      "_last_fin_attempt_ts": 1793793607,
+      "_last_fin_attempt_ts": 1793800564,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -32627,7 +32808,7 @@
           "yoy": -21.53
         }
       ],
-      "_last_fin_attempt_ts": 1793793792,
+      "_last_fin_attempt_ts": 1793800529,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -40862,7 +41043,7 @@
           "yoy": 38.64
         }
       ],
-      "_last_fin_attempt_ts": 1793793688,
+      "_last_fin_attempt_ts": 1793800609,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -41180,7 +41361,7 @@
           "yoy": 71.93
         }
       ],
-      "_last_fin_attempt_ts": 1793793756,
+      "_last_fin_attempt_ts": 1793800605,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -49138,7 +49319,7 @@
           "yoy": 21.33
         }
       ],
-      "_last_fin_attempt_ts": 1793793789,
+      "_last_fin_attempt_ts": 1793800502,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -51064,7 +51245,7 @@
           "yoy": 1.57
         }
       ],
-      "_last_fin_attempt_ts": 1793793762,
+      "_last_fin_attempt_ts": 1793800687,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -51391,7 +51572,7 @@
           "yoy": 283.62
         }
       ],
-      "_last_fin_attempt_ts": 1793793661,
+      "_last_fin_attempt_ts": 1793800700,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -52387,7 +52568,7 @@
           "yoy": 25.7
         }
       ],
-      "_last_fin_attempt_ts": 1793793802,
+      "_last_fin_attempt_ts": 1793800660,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -53993,7 +54174,7 @@
           "yoy": 35.58
         }
       ],
-      "_last_fin_attempt_ts": 1793793797,
+      "_last_fin_attempt_ts": 1793800630,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -54956,7 +55137,7 @@
           "yoy": 22.66
         }
       ],
-      "_last_fin_attempt_ts": 1793793770,
+      "_last_fin_attempt_ts": 1793800499,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -56931,7 +57112,7 @@
           "yoy": -88.6
         }
       ],
-      "_last_fin_attempt_ts": 1793793628,
+      "_last_fin_attempt_ts": 1793800737,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -60516,7 +60697,7 @@
           "yoy": 40.23
         }
       ],
-      "_last_fin_attempt_ts": 1793793740,
+      "_last_fin_attempt_ts": 1793800567,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -61807,7 +61988,7 @@
           "yoy": 20.86
         }
       ],
-      "_last_fin_attempt_ts": 1793793752,
+      "_last_fin_attempt_ts": 1793800501,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -63440,7 +63621,7 @@
           "yoy": 23.78
         }
       ],
-      "_last_fin_attempt_ts": 1793793793,
+      "_last_fin_attempt_ts": 1793800548,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -64078,7 +64259,7 @@
           "yoy": -14.92
         }
       ],
-      "_last_fin_attempt_ts": 1793793664,
+      "_last_fin_attempt_ts": 1793800726,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -64154,7 +64335,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": 86.05
+          "yoy": 88.37
         },
         {
           "quarter": "2025Q1",
@@ -64170,7 +64351,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -683.33
+          "yoy": -820.0
         },
         {
           "quarter": "2026Q1",
@@ -64256,7 +64437,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": -0.06
+          "value": -0.05
         },
         {
           "quarter": "2025Q1",
@@ -64272,7 +64453,7 @@
         },
         {
           "quarter": "2025Q4",
-          "value": -0.47
+          "value": -0.46
         },
         {
           "quarter": "2026Q1",
@@ -65092,7 +65273,7 @@
           "yoy": -69.81
         }
       ],
-      "_last_fin_attempt_ts": 1793793772,
+      "_last_fin_attempt_ts": 1793800638,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -65726,7 +65907,7 @@
           "yoy": 23.46
         }
       ],
-      "_last_fin_attempt_ts": 1793793615,
+      "_last_fin_attempt_ts": 1793800655,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -67341,7 +67522,7 @@
           "yoy": 500.29
         }
       ],
-      "_last_fin_attempt_ts": 1793793587,
+      "_last_fin_attempt_ts": 1793800513,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -69310,7 +69491,7 @@
           "yoy": 41.3
         }
       ],
-      "_last_fin_attempt_ts": 1793793672,
+      "_last_fin_attempt_ts": 1793800555,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -70285,7 +70466,7 @@
           "yoy": 46.96
         }
       ],
-      "_last_fin_attempt_ts": 1793793799,
+      "_last_fin_attempt_ts": 1793800578,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -71567,7 +71748,7 @@
           "yoy": 49.16
         }
       ],
-      "_last_fin_attempt_ts": 1793793588,
+      "_last_fin_attempt_ts": 1793800636,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -72211,7 +72392,7 @@
           "yoy": 23.34
         }
       ],
-      "_last_fin_attempt_ts": 1793793784,
+      "_last_fin_attempt_ts": 1793800686,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -73870,7 +74051,7 @@
           "yoy": 8.68
         }
       ],
-      "_last_fin_attempt_ts": 1793793796,
+      "_last_fin_attempt_ts": 1793800674,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -76473,7 +76654,7 @@
           "yoy": 36.08
         }
       ],
-      "_last_fin_attempt_ts": 1793793689,
+      "_last_fin_attempt_ts": 1793800509,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -77123,7 +77304,7 @@
           "yoy": 29.23
         }
       ],
-      "_last_fin_attempt_ts": 1793793781,
+      "_last_fin_attempt_ts": 1793800657,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -81445,7 +81626,7 @@
           "yoy": 30.83
         }
       ],
-      "_last_fin_attempt_ts": 1793793763,
+      "_last_fin_attempt_ts": 1793800543,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -82754,7 +82935,7 @@
           "yoy": 90.15
         }
       ],
-      "_last_fin_attempt_ts": 1793793710,
+      "_last_fin_attempt_ts": 1793800561,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -83747,7 +83928,7 @@
           "yoy": 43.16
         }
       ],
-      "_last_fin_attempt_ts": 1793793737,
+      "_last_fin_attempt_ts": 1793800600,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -85956,7 +86137,7 @@
           "yoy": 114.28
         }
       ],
-      "_last_fin_attempt_ts": 1793793630,
+      "_last_fin_attempt_ts": 1793800514,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -86297,7 +86478,7 @@
           "yoy": 131.66
         }
       ],
-      "_last_fin_attempt_ts": 1793793794,
+      "_last_fin_attempt_ts": 1793800711,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -87935,7 +88116,7 @@
           "yoy": 36.15
         }
       ],
-      "_last_fin_attempt_ts": 1793793587,
+      "_last_fin_attempt_ts": 1793800708,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -88887,7 +89068,7 @@
           "yoy": 32.17
         }
       ],
-      "_last_fin_attempt_ts": 1793793802,
+      "_last_fin_attempt_ts": 1793800553,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -92158,7 +92339,7 @@
           "yoy": 35.31
         }
       ],
-      "_last_fin_attempt_ts": 1793793790,
+      "_last_fin_attempt_ts": 1793800585,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -97096,7 +97277,7 @@
           "yoy": 29.5
         }
       ],
-      "_last_fin_attempt_ts": 1793793717,
+      "_last_fin_attempt_ts": 1793800667,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -99230,7 +99411,7 @@
           "yoy": 4.25
         }
       ],
-      "_last_fin_attempt_ts": 1793793678,
+      "_last_fin_attempt_ts": 1793800716,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -99866,7 +100047,7 @@
           "yoy": 83.33
         }
       ],
-      "_last_fin_attempt_ts": 1793793693,
+      "_last_fin_attempt_ts": 1793800541,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -100520,7 +100701,7 @@
           "yoy": 7.63
         }
       ],
-      "_last_fin_attempt_ts": 1793793630,
+      "_last_fin_attempt_ts": 1793800519,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -103038,7 +103219,7 @@
           "yoy": -17.42
         }
       ],
-      "_last_fin_attempt_ts": 1793793584,
+      "_last_fin_attempt_ts": 1793800620,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -103114,7 +103295,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -12.28
+          "yoy": -13.79
         },
         {
           "quarter": "2025Q1",
@@ -106952,7 +107133,7 @@
           "yoy": -6.76
         }
       ],
-      "_last_fin_attempt_ts": 1793793633,
+      "_last_fin_attempt_ts": 1793800597,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -112793,7 +112974,7 @@
           "yoy": 14.61
         }
       ],
-      "_last_fin_attempt_ts": 1793793628,
+      "_last_fin_attempt_ts": 1793800591,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -114131,7 +114312,7 @@
           "yoy": 35.56
         }
       ],
-      "_last_fin_attempt_ts": 1793793690,
+      "_last_fin_attempt_ts": 1793800535,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -114803,7 +114984,7 @@
           "yoy": 2.58
         }
       ],
-      "_last_fin_attempt_ts": 1793793726,
+      "_last_fin_attempt_ts": 1793800654,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -115455,7 +115636,7 @@
           "yoy": 66.13
         }
       ],
-      "_last_fin_attempt_ts": 1793793750,
+      "_last_fin_attempt_ts": 1793800658,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -116467,7 +116648,7 @@
           "yoy": 17.63
         }
       ],
-      "_last_fin_attempt_ts": 1793793621,
+      "_last_fin_attempt_ts": 1793800549,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -116787,7 +116968,7 @@
           "yoy": 23.94
         }
       ],
-      "_last_fin_attempt_ts": 1793793791,
+      "_last_fin_attempt_ts": 1793800685,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -117802,7 +117983,7 @@
           "yoy": 23.35
         }
       ],
-      "_last_fin_attempt_ts": 1793793627,
+      "_last_fin_attempt_ts": 1793800644,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -120779,7 +120960,7 @@
           "yoy": -53.73
         }
       ],
-      "_last_fin_attempt_ts": 1793793748,
+      "_last_fin_attempt_ts": 1793800627,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -121447,7 +121628,7 @@
           "yoy": 38.17
         }
       ],
-      "_last_fin_attempt_ts": 1793793646,
+      "_last_fin_attempt_ts": 1793800732,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -121769,7 +121950,7 @@
           "yoy": 53.93
         }
       ],
-      "_last_fin_attempt_ts": 1793793711,
+      "_last_fin_attempt_ts": 1793800602,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -123746,7 +123927,7 @@
           "yoy": 60.11
         }
       ],
-      "_last_fin_attempt_ts": 1793793780,
+      "_last_fin_attempt_ts": 1793800576,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -124398,7 +124579,7 @@
           "yoy": 69.94
         }
       ],
-      "_last_fin_attempt_ts": 1793793624,
+      "_last_fin_attempt_ts": 1793800593,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -125034,7 +125215,7 @@
           "yoy": 32.86
         }
       ],
-      "_last_fin_attempt_ts": 1793793640,
+      "_last_fin_attempt_ts": 1793800678,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -126645,7 +126826,7 @@
           "yoy": 24.28
         }
       ],
-      "_last_fin_attempt_ts": 1793793667,
+      "_last_fin_attempt_ts": 1793800527,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -127297,7 +127478,7 @@
           "yoy": 14.55
         }
       ],
-      "_last_fin_attempt_ts": 1793793805,
+      "_last_fin_attempt_ts": 1793800536,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -128604,7 +128785,7 @@
           "yoy": -26.37
         }
       ],
-      "_last_fin_attempt_ts": 1793793654,
+      "_last_fin_attempt_ts": 1793800539,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -128934,7 +129115,7 @@
           "yoy": -8.48
         }
       ],
-      "_last_fin_attempt_ts": 1793793810,
+      "_last_fin_attempt_ts": 1793800688,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -130557,7 +130738,7 @@
           "yoy": 75.87
         }
       ],
-      "_last_fin_attempt_ts": 1793793810,
+      "_last_fin_attempt_ts": 1793800625,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -132867,7 +133048,7 @@
           "yoy": -72.89
         }
       ],
-      "_last_fin_attempt_ts": 1793793722,
+      "_last_fin_attempt_ts": 1793800599,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -133849,7 +134030,7 @@
           "yoy": -57.28
         }
       ],
-      "_last_fin_attempt_ts": 1793793655,
+      "_last_fin_attempt_ts": 1793800624,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -134167,7 +134348,7 @@
           "yoy": 77.3
         }
       ],
-      "_last_fin_attempt_ts": 1793793713,
+      "_last_fin_attempt_ts": 1793800616,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -140702,7 +140883,7 @@
           "yoy": 8.5
         }
       ],
-      "_last_fin_attempt_ts": 1793793685,
+      "_last_fin_attempt_ts": 1793800525,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -141020,7 +141201,7 @@
           "yoy": 67.74
         }
       ],
-      "_last_fin_attempt_ts": 1793793591,
+      "_last_fin_attempt_ts": 1793800667,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -141096,7 +141277,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -1.47
+          "yoy": -4.55
         },
         {
           "quarter": "2025Q1",
@@ -141112,7 +141293,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 94.42
+          "yoy": 91.58
         },
         {
           "quarter": "2026Q1",
@@ -141198,7 +141379,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 2.69
+          "value": 2.73
         },
         {
           "quarter": "2025Q1",
@@ -141359,7 +141540,7 @@
           "yoy": -21.4
         }
       ],
-      "_last_fin_attempt_ts": 1793793805,
+      "_last_fin_attempt_ts": 1793800523,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -142714,7 +142895,7 @@
           "yoy": 84.7
         }
       ],
-      "_last_fin_attempt_ts": 1793793764,
+      "_last_fin_attempt_ts": 1793800534,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -144101,7 +144282,7 @@
           "yoy": 76.06
         }
       ],
-      "_last_fin_attempt_ts": 1793793733,
+      "_last_fin_attempt_ts": 1793800596,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -144748,7 +144929,7 @@
           "yoy": 81.03
         }
       ],
-      "_last_fin_attempt_ts": 1793793694,
+      "_last_fin_attempt_ts": 1793800684,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -145400,7 +145581,7 @@
           "yoy": -46.55
         }
       ],
-      "_last_fin_attempt_ts": 1793793703,
+      "_last_fin_attempt_ts": 1793800508,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -146380,7 +146561,7 @@
           "yoy": -14.55
         }
       ],
-      "_last_fin_attempt_ts": 1793793734,
+      "_last_fin_attempt_ts": 1793800696,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -147975,7 +148156,7 @@
           "yoy": 70.31
         }
       ],
-      "_last_fin_attempt_ts": 1793793686,
+      "_last_fin_attempt_ts": 1793800626,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -153262,7 +153443,7 @@
           "yoy": 109.06
         }
       ],
-      "_last_fin_attempt_ts": 1793793599,
+      "_last_fin_attempt_ts": 1793800583,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -154243,7 +154424,7 @@
           "yoy": -9.94
         }
       ],
-      "_last_fin_attempt_ts": 1793793799,
+      "_last_fin_attempt_ts": 1793800648,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -156204,7 +156385,7 @@
           "yoy": -0.93
         }
       ],
-      "_last_fin_attempt_ts": 1793793723,
+      "_last_fin_attempt_ts": 1793800550,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -156522,7 +156703,7 @@
           "yoy": 33.09
         }
       ],
-      "_last_fin_attempt_ts": 1793793735,
+      "_last_fin_attempt_ts": 1793800643,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -156842,7 +157023,7 @@
           "yoy": -14.32
         }
       ],
-      "_last_fin_attempt_ts": 1793793789,
+      "_last_fin_attempt_ts": 1793800691,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -159448,7 +159629,7 @@
           "yoy": 3.08
         }
       ],
-      "_last_fin_attempt_ts": 1793793706,
+      "_last_fin_attempt_ts": 1793800666,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -160752,7 +160933,7 @@
           "yoy": 13.52
         }
       ],
-      "_last_fin_attempt_ts": 1793793764,
+      "_last_fin_attempt_ts": 1793800714,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -161091,13 +161272,194 @@
           "yoy": 6.41
         }
       ],
-      "_last_fin_attempt_ts": 1793793604,
-      "grossMarginYoY": [],
-      "operatingMarginYoY": [],
-      "epsYoY": [],
-      "grossMargin": [],
-      "operatingMargin": [],
+      "_last_fin_attempt_ts": 1793800572,
+      "grossMarginYoY": [
+        {
+          "quarter": "2024Q3",
+          "yoy": -3.72
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -5.14
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 13.07
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": 7.1
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -8.82
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 22.69
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": 4.64
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 0.01
+        }
+      ],
+      "operatingMarginYoY": [
+        {
+          "quarter": "2024Q3",
+          "yoy": 40.13
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": -45.06
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": 6.0
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": 28.16
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -33.41
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": 43.56
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": -3.15
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": -23.76
+        }
+      ],
+      "epsYoY": [
+        {
+          "quarter": "2024Q3",
+          "yoy": -31.05
+        },
+        {
+          "quarter": "2024Q4",
+          "yoy": 612.5
+        },
+        {
+          "quarter": "2025Q1",
+          "yoy": -41.85
+        },
+        {
+          "quarter": "2025Q2",
+          "yoy": -127.68
+        },
+        {
+          "quarter": "2025Q3",
+          "yoy": -14.5
+        },
+        {
+          "quarter": "2025Q4",
+          "yoy": -20.18
+        },
+        {
+          "quarter": "2026Q1",
+          "yoy": -24.24
+        },
+        {
+          "quarter": "2026Q2",
+          "yoy": 306.12
+        }
+      ],
+      "grossMargin": [
+        {
+          "quarter": "2024Q3",
+          "value": 9.26
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 7.09
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 8.75
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 9.31
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 8.45
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 8.7
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 9.16
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 9.31
+        }
+      ],
+      "operatingMargin": [
+        {
+          "quarter": "2024Q3",
+          "value": 6.26
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 2.71
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 4.75
+        },
+        {
+          "quarter": "2025Q2",
+          "value": 6.51
+        },
+        {
+          "quarter": "2025Q3",
+          "value": 4.17
+        },
+        {
+          "quarter": "2025Q4",
+          "value": 3.89
+        },
+        {
+          "quarter": "2026Q1",
+          "value": 4.6
+        },
+        {
+          "quarter": "2026Q2",
+          "value": 4.97
+        }
+      ],
       "eps": [
+        {
+          "quarter": "2024Q3",
+          "value": 1.31
+        },
+        {
+          "quarter": "2024Q4",
+          "value": 1.14
+        },
+        {
+          "quarter": "2025Q1",
+          "value": 1.32
+        },
+        {
+          "quarter": "2025Q2",
+          "value": -0.49
+        },
         {
           "quarter": "2025Q3",
           "value": 1.12
@@ -161579,7 +161941,7 @@
           "yoy": 88.49
         }
       ],
-      "_last_fin_attempt_ts": 1793793616,
+      "_last_fin_attempt_ts": 1793800591,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -163860,7 +164222,7 @@
           "yoy": 55.69
         }
       ],
-      "_last_fin_attempt_ts": 1793793614,
+      "_last_fin_attempt_ts": 1793800660,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -170013,7 +170375,7 @@
           "yoy": 93.95
         }
       ],
-      "_last_fin_attempt_ts": 1793793724,
+      "_last_fin_attempt_ts": 1793800681,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -173467,7 +173829,7 @@
           "yoy": 27.91
         }
       ],
-      "_last_fin_attempt_ts": 1793793675,
+      "_last_fin_attempt_ts": 1793800609,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -174119,7 +174481,7 @@
           "yoy": 13.54
         }
       ],
-      "_last_fin_attempt_ts": 1793793642,
+      "_last_fin_attempt_ts": 1793800729,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -175096,7 +175458,7 @@
           "yoy": 123.46
         }
       ],
-      "_last_fin_attempt_ts": 1793793606,
+      "_last_fin_attempt_ts": 1793800516,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -180615,7 +180977,7 @@
           "yoy": 72.0
         }
       ],
-      "_last_fin_attempt_ts": 1793793656,
+      "_last_fin_attempt_ts": 1793800544,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -185586,7 +185948,7 @@
           "yoy": 27.09
         }
       ],
-      "_last_fin_attempt_ts": 1793793684,
+      "_last_fin_attempt_ts": 1793800588,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -185904,7 +186266,7 @@
           "yoy": 7.02
         }
       ],
-      "_last_fin_attempt_ts": 1793793597,
+      "_last_fin_attempt_ts": 1793800632,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -190816,7 +191178,7 @@
           "yoy": 17.23
         }
       ],
-      "_last_fin_attempt_ts": 1793793786,
+      "_last_fin_attempt_ts": 1793800637,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -194071,7 +194433,7 @@
           "yoy": 4.17
         }
       ],
-      "_last_fin_attempt_ts": 1793793609,
+      "_last_fin_attempt_ts": 1793800545,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -194147,7 +194509,7 @@
         },
         {
           "quarter": "2024Q4",
-          "yoy": -42.55
+          "yoy": -42.24
         },
         {
           "quarter": "2025Q1",
@@ -194163,7 +194525,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 16.3
+          "yoy": 14.93
         },
         {
           "quarter": "2026Q1",
@@ -194249,7 +194611,7 @@
         },
         {
           "quarter": "2024Q4",
-          "value": 1.35
+          "value": 1.34
         },
         {
           "quarter": "2025Q1",
@@ -194265,7 +194627,7 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 1.57
+          "value": 1.54
         },
         {
           "quarter": "2026Q1",
@@ -194744,7 +195106,7 @@
           "yoy": -17.07
         }
       ],
-      "_last_fin_attempt_ts": 1793793771,
+      "_last_fin_attempt_ts": 1793800656,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -195485,7 +195847,7 @@
           "yoy": 13.46
         }
       ],
-      "_last_fin_attempt_ts": 1793793752,
+      "_last_fin_attempt_ts": 1793800673,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -195850,7 +196212,7 @@
           "yoy": 17.73
         }
       ],
-      "_last_fin_attempt_ts": 1793793729,
+      "_last_fin_attempt_ts": 1793800614,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -196182,7 +196544,7 @@
           "yoy": 206.47
         }
       ],
-      "_last_fin_attempt_ts": 1793793645,
+      "_last_fin_attempt_ts": 1793800538,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -196845,7 +197207,7 @@
           "yoy": 35.85
         }
       ],
-      "_last_fin_attempt_ts": 1793793781,
+      "_last_fin_attempt_ts": 1793800558,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -199184,7 +199546,7 @@
           "yoy": 20.85
         }
       ],
-      "_last_fin_attempt_ts": 1793793621,
+      "_last_fin_attempt_ts": 1793800563,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -200821,7 +201183,7 @@
           "yoy": 29.82
         }
       ],
-      "_last_fin_attempt_ts": 1793793757,
+      "_last_fin_attempt_ts": 1793800617,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -201492,7 +201854,7 @@
           "yoy": 17.08
         }
       ],
-      "_last_fin_attempt_ts": 1793793625,
+      "_last_fin_attempt_ts": 1793800704,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -206019,7 +206381,7 @@
           "yoy": 60.01
         }
       ],
-      "_last_fin_attempt_ts": 1793793692,
+      "_last_fin_attempt_ts": 1793800532,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -206342,7 +206704,7 @@
           "yoy": 26.14
         }
       ],
-      "_last_fin_attempt_ts": 1793793749,
+      "_last_fin_attempt_ts": 1793800615,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -207986,7 +208348,7 @@
           "yoy": 73.41
         }
       ],
-      "_last_fin_attempt_ts": 1793793800,
+      "_last_fin_attempt_ts": 1793800653,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -213215,7 +213577,7 @@
           "yoy": -14.17
         }
       ],
-      "_last_fin_attempt_ts": 1793793728,
+      "_last_fin_attempt_ts": 1793800677,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -214520,7 +214882,7 @@
           "yoy": -38.36
         }
       ],
-      "_last_fin_attempt_ts": 1793793798,
+      "_last_fin_attempt_ts": 1793800662,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -217144,7 +217506,7 @@
           "yoy": -7.22
         }
       ],
-      "_last_fin_attempt_ts": 1793793716,
+      "_last_fin_attempt_ts": 1793800519,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -218453,7 +218815,7 @@
           "yoy": -20.39
         }
       ],
-      "_last_fin_attempt_ts": 1793793745,
+      "_last_fin_attempt_ts": 1793800646,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -219096,7 +219458,7 @@
           "yoy": -26.44
         }
       ],
-      "_last_fin_attempt_ts": 1793793691,
+      "_last_fin_attempt_ts": 1793800711,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -219433,7 +219795,7 @@
           "yoy": 44.56
         }
       ],
-      "_last_fin_attempt_ts": 1793793634,
+      "_last_fin_attempt_ts": 1793800717,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -219751,7 +220113,7 @@
           "yoy": 74.7
         }
       ],
-      "_last_fin_attempt_ts": 1793793649,
+      "_last_fin_attempt_ts": 1793800720,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -220719,7 +221081,7 @@
           "yoy": 32.97
         }
       ],
-      "_last_fin_attempt_ts": 1793793774,
+      "_last_fin_attempt_ts": 1793800735,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -221703,7 +222065,7 @@
           "yoy": 30.46
         }
       ],
-      "_last_fin_attempt_ts": 1793793601,
+      "_last_fin_attempt_ts": 1793800679,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -223340,7 +223702,7 @@
           "yoy": 125.77
         }
       ],
-      "_last_fin_attempt_ts": 1793793598,
+      "_last_fin_attempt_ts": 1793800590,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -224005,7 +224367,7 @@
           "yoy": 375.0
         }
       ],
-      "_last_fin_attempt_ts": 1793793633,
+      "_last_fin_attempt_ts": 1793800553,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -224990,7 +225352,7 @@
           "yoy": -4.56
         }
       ],
-      "_last_fin_attempt_ts": 1793793704,
+      "_last_fin_attempt_ts": 1793800521,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -225314,7 +225676,7 @@
           "yoy": -74.76
         }
       ],
-      "_last_fin_attempt_ts": 1793793679,
+      "_last_fin_attempt_ts": 1793800623,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -229509,7 +229871,7 @@
           "yoy": -82.36
         }
       ],
-      "_last_fin_attempt_ts": 1793793667,
+      "_last_fin_attempt_ts": 1793800693,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -229601,7 +229963,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 360.0
+          "yoy": 380.0
         },
         {
           "quarter": "2026Q1",
@@ -229703,7 +230065,7 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 0.13
+          "value": 0.14
         },
         {
           "quarter": "2026Q1",
@@ -230152,7 +230514,7 @@
           "yoy": -5.36
         }
       ],
-      "_last_fin_attempt_ts": 1793793741,
+      "_last_fin_attempt_ts": 1793800709,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -233085,7 +233447,7 @@
           "yoy": -16.67
         }
       ],
-      "_last_fin_attempt_ts": 1793793721,
+      "_last_fin_attempt_ts": 1793800522,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -233726,7 +234088,7 @@
           "yoy": 18.44
         }
       ],
-      "_last_fin_attempt_ts": 1793793708,
+      "_last_fin_attempt_ts": 1793800669,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -234395,7 +234757,7 @@
           "yoy": 4.01
         }
       ],
-      "_last_fin_attempt_ts": 1793793807,
+      "_last_fin_attempt_ts": 1793800690,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -239559,7 +239921,7 @@
           "yoy": 192.87
         }
       ],
-      "_last_fin_attempt_ts": 1793793724,
+      "_last_fin_attempt_ts": 1793800523,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -246386,7 +246748,7 @@
           "yoy": -158.37
         }
       ],
-      "_last_fin_attempt_ts": 1793793663,
+      "_last_fin_attempt_ts": 1793800575,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -247999,7 +248361,7 @@
           "yoy": 2.19
         }
       ],
-      "_last_fin_attempt_ts": 1793793757,
+      "_last_fin_attempt_ts": 1793800511,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -249285,7 +249647,7 @@
           "yoy": 2.92
         }
       ],
-      "_last_fin_attempt_ts": 1793793597,
+      "_last_fin_attempt_ts": 1793800610,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -254159,7 +254521,7 @@
           "yoy": 4.73
         }
       ],
-      "_last_fin_attempt_ts": 1793793596,
+      "_last_fin_attempt_ts": 1793800719,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -254816,7 +255178,7 @@
           "yoy": 43.67
         }
       ],
-      "_last_fin_attempt_ts": 1793793710,
+      "_last_fin_attempt_ts": 1793800623,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -255943,7 +256305,7 @@
           "yoy": -6.71
         }
       ],
-      "_last_fin_attempt_ts": 1793793804,
+      "_last_fin_attempt_ts": 1793800545,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -256624,7 +256986,7 @@
           "yoy": 27.82
         }
       ],
-      "_last_fin_attempt_ts": 1793793754,
+      "_last_fin_attempt_ts": 1793800656,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -256949,7 +257311,7 @@
           "yoy": 0.54
         }
       ],
-      "_last_fin_attempt_ts": 1793793771,
+      "_last_fin_attempt_ts": 1793800691,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -257294,7 +257656,7 @@
           "yoy": 18.8
         }
       ],
-      "_last_fin_attempt_ts": 1793793719,
+      "_last_fin_attempt_ts": 1793800531,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -261727,7 +262089,7 @@
           "yoy": 7.27
         }
       ],
-      "_last_fin_attempt_ts": 1793793776,
+      "_last_fin_attempt_ts": 1793800604,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -267265,7 +267627,7 @@
           "yoy": 12.66
         }
       ],
-      "_last_fin_attempt_ts": 1793793774,
+      "_last_fin_attempt_ts": 1793800547,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -268242,7 +268604,7 @@
           "yoy": 212.8
         }
       ],
-      "_last_fin_attempt_ts": 1793793769,
+      "_last_fin_attempt_ts": 1793800634,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -269861,7 +270223,7 @@
           "yoy": 30.02
         }
       ],
-      "_last_fin_attempt_ts": 1793793635,
+      "_last_fin_attempt_ts": 1793800735,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -270511,7 +270873,7 @@
           "yoy": 27.44
         }
       ],
-      "_last_fin_attempt_ts": 1793793738,
+      "_last_fin_attempt_ts": 1793800641,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -271477,7 +271839,7 @@
           "yoy": 80.21
         }
       ],
-      "_last_fin_attempt_ts": 1793793743,
+      "_last_fin_attempt_ts": 1793800608,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -272763,7 +273125,7 @@
           "yoy": 63462.78
         }
       ],
-      "_last_fin_attempt_ts": 1793793783,
+      "_last_fin_attempt_ts": 1793800533,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -273095,7 +273457,7 @@
           "yoy": -44.77
         }
       ],
-      "_last_fin_attempt_ts": 1793793671,
+      "_last_fin_attempt_ts": 1793800502,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -274119,7 +274481,7 @@
           "yoy": 51.32
         }
       ],
-      "_last_fin_attempt_ts": 1793793719,
+      "_last_fin_attempt_ts": 1793800674,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -274439,7 +274801,7 @@
           "yoy": -1.14
         }
       ],
-      "_last_fin_attempt_ts": 1793793718,
+      "_last_fin_attempt_ts": 1793800560,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -275557,7 +275919,7 @@
           "yoy": -43.13
         }
       ],
-      "_last_fin_attempt_ts": 1793793801,
+      "_last_fin_attempt_ts": 1793800695,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -280415,7 +280777,7 @@
           "yoy": -2.29
         }
       ],
-      "_last_fin_attempt_ts": 1793793783,
+      "_last_fin_attempt_ts": 1793800718,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -280740,7 +281102,7 @@
           "yoy": -12.34
         }
       ],
-      "_last_fin_attempt_ts": 1793793702,
+      "_last_fin_attempt_ts": 1793800629,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -281072,7 +281434,7 @@
           "yoy": 74.66
         }
       ],
-      "_last_fin_attempt_ts": 1793793794,
+      "_last_fin_attempt_ts": 1793800715,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -281397,7 +281759,7 @@
           "yoy": 2.13
         }
       ],
-      "_last_fin_attempt_ts": 1793793713,
+      "_last_fin_attempt_ts": 1793800728,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -284713,7 +285075,7 @@
           "yoy": 35.45
         }
       ],
-      "_last_fin_attempt_ts": 1793793687,
+      "_last_fin_attempt_ts": 1793800561,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -287936,7 +288298,7 @@
           "yoy": 47.39
         }
       ],
-      "_last_fin_attempt_ts": 1793793701,
+      "_last_fin_attempt_ts": 1793800717,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -288280,7 +288642,7 @@
           "yoy": 2.53
         }
       ],
-      "_last_fin_attempt_ts": 1793793795,
+      "_last_fin_attempt_ts": 1793800642,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -288949,7 +289311,7 @@
           "yoy": -25.53
         }
       ],
-      "_last_fin_attempt_ts": 1793793806,
+      "_last_fin_attempt_ts": 1793800701,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -291282,7 +291644,7 @@
           "yoy": 26.27
         }
       ],
-      "_last_fin_attempt_ts": 1793793697,
+      "_last_fin_attempt_ts": 1793800742,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -293548,12 +293910,8 @@
           "yoy": 35.49
         }
       ],
-      "_last_fin_attempt_ts": 1793793705,
+      "_last_fin_attempt_ts": 1793800619,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 20066.75
-        },
         {
           "quarter": "2024Q4",
           "yoy": 23.98
@@ -293581,13 +293939,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 1383.72
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 63.9
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 210.76
-        },
         {
           "quarter": "2024Q4",
           "yoy": 17.23
@@ -293615,13 +293973,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 361.48
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 78.48
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 180.0
-        },
         {
           "quarter": "2024Q4",
           "yoy": 560.0
@@ -293649,13 +294007,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 294.0
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 101.64
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 9.68
-        },
         {
           "quarter": "2024Q4",
           "value": 8.5
@@ -293683,13 +294041,13 @@
         {
           "quarter": "2026Q2",
           "value": 19.64
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 22.82
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 4.93
-        },
         {
           "quarter": "2024Q4",
           "value": 3.78
@@ -293717,13 +294075,13 @@
         {
           "quarter": "2026Q2",
           "value": 15.35
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 18.59
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 0.28
-        },
         {
           "quarter": "2024Q4",
           "value": 0.33
@@ -293751,6 +294109,10 @@
         {
           "quarter": "2026Q2",
           "value": 0.97
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 1.23
         }
       ]
     },
@@ -294348,7 +294710,7 @@
           "yoy": 31.59
         }
       ],
-      "_last_fin_attempt_ts": 1793793617,
+      "_last_fin_attempt_ts": 1793800597,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -294440,7 +294802,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": 2.99
+          "yoy": 2.49
         },
         {
           "quarter": "2026Q1",
@@ -294542,7 +294904,7 @@
         },
         {
           "quarter": "2025Q4",
-          "value": 2.07
+          "value": 2.06
         },
         {
           "quarter": "2026Q1",
@@ -296019,7 +296381,7 @@
           "yoy": 72.83
         }
       ],
-      "_last_fin_attempt_ts": 1793793695,
+      "_last_fin_attempt_ts": 1793800703,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -300280,7 +300642,7 @@
           "yoy": -21.54
         }
       ],
-      "_last_fin_attempt_ts": 1793793755,
+      "_last_fin_attempt_ts": 1793800516,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -303201,7 +303563,7 @@
           "yoy": -25.43
         }
       ],
-      "_last_fin_attempt_ts": 1793793611,
+      "_last_fin_attempt_ts": 1793800517,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -304180,7 +304542,7 @@
           "yoy": 3425111.32
         }
       ],
-      "_last_fin_attempt_ts": 1793793656,
+      "_last_fin_attempt_ts": 1793800613,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -305143,7 +305505,7 @@
           "yoy": 19.94
         }
       ],
-      "_last_fin_attempt_ts": 1793793626,
+      "_last_fin_attempt_ts": 1793800740,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -310280,7 +310642,7 @@
           "yoy": 52.49
         }
       ],
-      "_last_fin_attempt_ts": 1793793768,
+      "_last_fin_attempt_ts": 1793800738,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -311570,7 +311932,7 @@
           "yoy": -52.73
         }
       ],
-      "_last_fin_attempt_ts": 1793793767,
+      "_last_fin_attempt_ts": 1793800525,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -313214,7 +313576,7 @@
           "yoy": 5.18
         }
       ],
-      "_last_fin_attempt_ts": 1793793696,
+      "_last_fin_attempt_ts": 1793800587,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -315952,7 +316314,7 @@
           "yoy": 41.22
         }
       ],
-      "_last_fin_attempt_ts": 1793793705,
+      "_last_fin_attempt_ts": 1793800589,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -318540,7 +318902,7 @@
           "yoy": 20.51
         }
       ],
-      "_last_fin_attempt_ts": 1793793808,
+      "_last_fin_attempt_ts": 1793800570,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -318858,7 +319220,7 @@
           "yoy": -34.19
         }
       ],
-      "_last_fin_attempt_ts": 1793793747,
+      "_last_fin_attempt_ts": 1793800724,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -319203,7 +319565,7 @@
           "yoy": 199.95
         }
       ],
-      "_last_fin_attempt_ts": 1793793775,
+      "_last_fin_attempt_ts": 1793800602,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -320532,7 +320894,7 @@
           "yoy": 23.23
         }
       ],
-      "_last_fin_attempt_ts": 1793793785,
+      "_last_fin_attempt_ts": 1793800606,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -321184,7 +321546,7 @@
           "yoy": 18.03
         }
       ],
-      "_last_fin_attempt_ts": 1793793659,
+      "_last_fin_attempt_ts": 1793800639,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -322159,7 +322521,7 @@
           "yoy": 0.84
         }
       ],
-      "_last_fin_attempt_ts": 1793793755,
+      "_last_fin_attempt_ts": 1793800739,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -323468,7 +323830,7 @@
           "yoy": 233.54
         }
       ],
-      "_last_fin_attempt_ts": 1793793645,
+      "_last_fin_attempt_ts": 1793800687,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -325074,12 +325436,8 @@
           "yoy": -7.31
         }
       ],
-      "_last_fin_attempt_ts": 1793793796,
+      "_last_fin_attempt_ts": 1793800612,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 18.74
-        },
         {
           "quarter": "2024Q4",
           "yoy": 11.74
@@ -325107,13 +325465,13 @@
         {
           "quarter": "2026Q2",
           "yoy": -7.85
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -10.66
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 44.46
-        },
         {
           "quarter": "2024Q4",
           "yoy": 4.15
@@ -325141,13 +325499,13 @@
         {
           "quarter": "2026Q2",
           "yoy": -9.87
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -14.63
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 11.37
-        },
         {
           "quarter": "2024Q4",
           "yoy": 74.76
@@ -325175,13 +325533,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 361.84
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -25.32
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 50.47
-        },
         {
           "quarter": "2024Q4",
           "value": 59.08
@@ -325209,13 +325567,13 @@
         {
           "quarter": "2026Q2",
           "value": 49.42
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 42.21
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 41.17
-        },
         {
           "quarter": "2024Q4",
           "value": 46.02
@@ -325243,13 +325601,13 @@
         {
           "quarter": "2026Q2",
           "value": 37.67
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 30.25
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 49.67
-        },
         {
           "quarter": "2024Q4",
           "value": 65.01
@@ -325277,6 +325635,10 @@
         {
           "quarter": "2026Q2",
           "value": 35.7
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 39.62
         }
       ]
     },
@@ -326569,7 +326931,7 @@
           "yoy": 12.75
         }
       ],
-      "_last_fin_attempt_ts": 1793793809,
+      "_last_fin_attempt_ts": 1793800743,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -327207,7 +327569,7 @@
           "yoy": 6.52
         }
       ],
-      "_last_fin_attempt_ts": 1793793749,
+      "_last_fin_attempt_ts": 1793800662,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -327869,7 +328231,7 @@
           "yoy": 29.84
         }
       ],
-      "_last_fin_attempt_ts": 1793793629,
+      "_last_fin_attempt_ts": 1793800579,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -333886,7 +334248,7 @@
           "yoy": -17.16
         }
       ],
-      "_last_fin_attempt_ts": 1793793653,
+      "_last_fin_attempt_ts": 1793800616,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -340081,7 +340443,7 @@
           "yoy": 40.94
         }
       ],
-      "_last_fin_attempt_ts": 1793793739,
+      "_last_fin_attempt_ts": 1793800729,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -341388,7 +341750,7 @@
           "yoy": 287.94
         }
       ],
-      "_last_fin_attempt_ts": 1793793779,
+      "_last_fin_attempt_ts": 1793800573,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -345580,7 +345942,7 @@
           "yoy": 32.73
         }
       ],
-      "_last_fin_attempt_ts": 1793793728,
+      "_last_fin_attempt_ts": 1793800628,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -346239,7 +346601,7 @@
           "yoy": 23.18
         }
       ],
-      "_last_fin_attempt_ts": 1793793778,
+      "_last_fin_attempt_ts": 1793800631,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -346569,7 +346931,7 @@
           "yoy": 4.79
         }
       ],
-      "_last_fin_attempt_ts": 1793793658,
+      "_last_fin_attempt_ts": 1793800663,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -347239,7 +347601,7 @@
           "yoy": -15.48
         }
       ],
-      "_last_fin_attempt_ts": 1793793759,
+      "_last_fin_attempt_ts": 1793800712,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -349504,7 +349866,7 @@
           "yoy": 11.01
         }
       ],
-      "_last_fin_attempt_ts": 1793793734,
+      "_last_fin_attempt_ts": 1793800732,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -351774,7 +352136,7 @@
           "yoy": 17.35
         }
       ],
-      "_last_fin_attempt_ts": 1793793695,
+      "_last_fin_attempt_ts": 1793800512,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -353923,7 +354285,7 @@
           "yoy": 11.44
         }
       ],
-      "_last_fin_attempt_ts": 1793793613,
+      "_last_fin_attempt_ts": 1793800594,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -356509,7 +356871,7 @@
           "yoy": 64.21
         }
       ],
-      "_last_fin_attempt_ts": 1793793602,
+      "_last_fin_attempt_ts": 1793800704,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -359447,7 +359809,7 @@
           "yoy": -4.76
         }
       ],
-      "_last_fin_attempt_ts": 1793793777,
+      "_last_fin_attempt_ts": 1793800549,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -359765,7 +360127,7 @@
           "yoy": 65.94
         }
       ],
-      "_last_fin_attempt_ts": 1793793769,
+      "_last_fin_attempt_ts": 1793800530,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -366432,7 +366794,7 @@
           "yoy": 96.3
         }
       ],
-      "_last_fin_attempt_ts": 1793793766,
+      "_last_fin_attempt_ts": 1793800559,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -366757,7 +367119,7 @@
           "yoy": 146.61
         }
       ],
-      "_last_fin_attempt_ts": 1793793654,
+      "_last_fin_attempt_ts": 1793800542,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -367393,7 +367755,7 @@
           "yoy": 11.94
         }
       ],
-      "_last_fin_attempt_ts": 1793793682,
+      "_last_fin_attempt_ts": 1793800618,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -367485,7 +367847,7 @@
         },
         {
           "quarter": "2025Q4",
-          "yoy": -58.95
+          "yoy": -60.0
         },
         {
           "quarter": "2026Q1",
@@ -367587,7 +367949,7 @@
         },
         {
           "quarter": "2025Q4",
-          "value": -1.51
+          "value": -1.52
         },
         {
           "quarter": "2026Q1",
@@ -375479,7 +375841,7 @@
           "yoy": -84.62
         }
       ],
-      "_last_fin_attempt_ts": 1793793662,
+      "_last_fin_attempt_ts": 1793800635,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -377436,7 +377798,7 @@
           "yoy": 4.0
         }
       ],
-      "_last_fin_attempt_ts": 1793793600,
+      "_last_fin_attempt_ts": 1793800652,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -378423,7 +378785,7 @@
           "yoy": 27.13
         }
       ],
-      "_last_fin_attempt_ts": 1793793746,
+      "_last_fin_attempt_ts": 1793800721,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -382238,7 +382600,7 @@
           "yoy": 1.83
         }
       ],
-      "_last_fin_attempt_ts": 1793793765,
+      "_last_fin_attempt_ts": 1793800522,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -382892,7 +383254,7 @@
           "yoy": 34.53
         }
       ],
-      "_last_fin_attempt_ts": 1793793638,
+      "_last_fin_attempt_ts": 1793800524,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -383516,7 +383878,7 @@
           "yoy": -0.03
         }
       ],
-      "_last_fin_attempt_ts": 1793793703,
+      "_last_fin_attempt_ts": 1793800589,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -384179,7 +384541,7 @@
           "yoy": 8.67
         }
       ],
-      "_last_fin_attempt_ts": 1793793743,
+      "_last_fin_attempt_ts": 1793800682,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -385147,7 +385509,7 @@
           "yoy": 1.08
         }
       ],
-      "_last_fin_attempt_ts": 1793793738,
+      "_last_fin_attempt_ts": 1793800581,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -385804,7 +386166,7 @@
           "yoy": -5.14
         }
       ],
-      "_last_fin_attempt_ts": 1793793762,
+      "_last_fin_attempt_ts": 1793800604,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -401009,7 +401371,7 @@
           "yoy": 29.19
         }
       ],
-      "_last_fin_attempt_ts": 1793793639,
+      "_last_fin_attempt_ts": 1793800579,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -401380,7 +401742,7 @@
           "yoy": -13.29
         }
       ],
-      "_last_fin_attempt_ts": 1793793761,
+      "_last_fin_attempt_ts": 1793800562,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -402690,7 +403052,7 @@
           "yoy": 16.34
         }
       ],
-      "_last_fin_attempt_ts": 1793793747,
+      "_last_fin_attempt_ts": 1793800552,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -404642,7 +405004,7 @@
           "yoy": 33.31
         }
       ],
-      "_last_fin_attempt_ts": 1793793751,
+      "_last_fin_attempt_ts": 1793800613,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -412148,7 +412510,7 @@
           "yoy": 11.37
         }
       ],
-      "_last_fin_attempt_ts": 1793793626,
+      "_last_fin_attempt_ts": 1793800707,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -413116,7 +413478,7 @@
           "yoy": 3.36
         }
       ],
-      "_last_fin_attempt_ts": 1793793589,
+      "_last_fin_attempt_ts": 1793800497,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -416019,12 +416381,8 @@
           "yoy": -1.17
         }
       ],
-      "_last_fin_attempt_ts": 1793793742,
+      "_last_fin_attempt_ts": 1793800595,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 53.28
-        },
         {
           "quarter": "2024Q4",
           "yoy": -9.92
@@ -416052,13 +416410,13 @@
         {
           "quarter": "2026Q2",
           "yoy": -18.78
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 19.08
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 295.36
-        },
         {
           "quarter": "2024Q4",
           "yoy": 249.25
@@ -416086,13 +416444,13 @@
         {
           "quarter": "2026Q2",
           "yoy": -24.02
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -22.3
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": 1383.33
-        },
         {
           "quarter": "2024Q3",
           "yoy": 7100.0
@@ -416120,13 +416478,13 @@
         {
           "quarter": "2026Q1",
           "yoy": -46.51
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -68.18
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 33.07
-        },
         {
           "quarter": "2024Q4",
           "value": 23.66
@@ -416154,13 +416512,13 @@
         {
           "quarter": "2026Q2",
           "value": 21.76
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 19.39
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 22.99
-        },
         {
           "quarter": "2024Q4",
           "value": 10.23
@@ -416188,13 +416546,13 @@
         {
           "quarter": "2026Q2",
           "value": 11.07
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 1.32
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 0.72
-        },
         {
           "quarter": "2024Q4",
           "value": 0.5
@@ -416222,6 +416580,10 @@
         {
           "quarter": "2026Q2",
           "value": 0.31
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 0.07
         }
       ]
     },
@@ -418112,7 +418474,7 @@
           "yoy": 89.32
         }
       ],
-      "_last_fin_attempt_ts": 1793793715,
+      "_last_fin_attempt_ts": 1793800705,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -423121,7 +423483,7 @@
           "yoy": -58.95
         }
       ],
-      "_last_fin_attempt_ts": 1793793638,
+      "_last_fin_attempt_ts": 1793800689,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -424307,7 +424669,7 @@
           "yoy": 23.86
         }
       ],
-      "_last_fin_attempt_ts": 1793793640,
+      "_last_fin_attempt_ts": 1793800584,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -426250,7 +426612,7 @@
           "yoy": 69.02
         }
       ],
-      "_last_fin_attempt_ts": 1793793760,
+      "_last_fin_attempt_ts": 1793800733,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -428811,7 +429173,7 @@
           "yoy": -15.39
         }
       ],
-      "_last_fin_attempt_ts": 1793793785,
+      "_last_fin_attempt_ts": 1793800692,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -431479,7 +431841,7 @@
           "yoy": -13.91
         }
       ],
-      "_last_fin_attempt_ts": 1793793620,
+      "_last_fin_attempt_ts": 1793800670,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -434217,8 +434579,8 @@
     "revenueMonth": "2026-09",
     "revenueFirstSeen": "2026-11-01",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1793793730,
-      "_last_fin_attempt_ts": 1793793732,
+      "_last_rev_attempt_ts": 1793800648,
+      "_last_fin_attempt_ts": 1793800651,
       "grossMarginYoY": [],
       "operatingMarginYoY": [],
       "epsYoY": [],
@@ -434727,7 +435089,7 @@
           "yoy": -14.13
         }
       ],
-      "_last_fin_attempt_ts": 1793793709,
+      "_last_fin_attempt_ts": 1793800507,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -441438,7 +441800,7 @@
           "yoy": 27.78
         }
       ],
-      "_last_fin_attempt_ts": 1793793776,
+      "_last_fin_attempt_ts": 1793800647,
       "grossMarginYoY": [
         {
           "quarter": "2024Q1",
@@ -446630,12 +446992,8 @@
           "yoy": 14.87
         }
       ],
-      "_last_fin_attempt_ts": 1793793661,
+      "_last_fin_attempt_ts": 1793800640,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -9.38
-        },
         {
           "quarter": "2024Q4",
           "yoy": 8.52
@@ -446663,13 +447021,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 4.82
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 0.97
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 8.88
-        },
         {
           "quarter": "2024Q4",
           "yoy": 36.5
@@ -446697,13 +447055,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 5.62
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -7.39
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 99.37
-        },
         {
           "quarter": "2024Q4",
           "yoy": 16.67
@@ -446731,13 +447089,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 56.42
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 55.67
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 35.71
-        },
         {
           "quarter": "2024Q4",
           "value": 37.53
@@ -446765,13 +447123,13 @@
         {
           "quarter": "2026Q2",
           "value": 48.79
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 46.67
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 19.03
-        },
         {
           "quarter": "2024Q4",
           "value": 19.11
@@ -446799,13 +447157,13 @@
         {
           "quarter": "2026Q2",
           "value": 29.92
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 27.57
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 3.15
-        },
         {
           "quarter": "2024Q4",
           "value": 1.96
@@ -446833,6 +447191,10 @@
         {
           "quarter": "2026Q2",
           "value": 4.63
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 6.32
         }
       ]
     },
@@ -447287,7 +447649,7 @@
           "yoy": 48.69
         }
       ],
-      "_last_fin_attempt_ts": 1793793753,
+      "_last_fin_attempt_ts": 1793800569,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -447614,7 +447976,7 @@
           "yoy": -6.62
         }
       ],
-      "_last_fin_attempt_ts": 1793793670,
+      "_last_fin_attempt_ts": 1793800583,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -448264,7 +448626,7 @@
           "yoy": 19.82
         }
       ],
-      "_last_fin_attempt_ts": 1793793759,
+      "_last_fin_attempt_ts": 1793800727,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -450499,7 +450861,7 @@
           "yoy": 23.8
         }
       ],
-      "_last_fin_attempt_ts": 1793793608,
+      "_last_fin_attempt_ts": 1793800681,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -456160,7 +456522,7 @@
           "yoy": 44.46
         }
       ],
-      "_last_fin_attempt_ts": 1793793778,
+      "_last_fin_attempt_ts": 1793800551,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -456797,7 +457159,7 @@
           "yoy": 19.91
         }
       ],
-      "_last_fin_attempt_ts": 1793793712,
+      "_last_fin_attempt_ts": 1793800665,
       "grossMarginYoY": [
         {
           "quarter": "2025Q2",
@@ -457079,7 +457441,7 @@
           "yoy": -0.64
         }
       ],
-      "_last_fin_attempt_ts": 1793793691,
+      "_last_fin_attempt_ts": 1793800507,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -465572,7 +465934,7 @@
           "yoy": 24.57
         }
       ],
-      "_last_fin_attempt_ts": 1793793641,
+      "_last_fin_attempt_ts": 1793800514,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -472496,7 +472858,7 @@
           "yoy": -1.57
         }
       ],
-      "_last_fin_attempt_ts": 1793793643,
+      "_last_fin_attempt_ts": 1793800594,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -474095,7 +474457,7 @@
           "yoy": 7.58
         }
       ],
-      "_last_fin_attempt_ts": 1793793766,
+      "_last_fin_attempt_ts": 1793800510,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -474413,7 +474775,7 @@
           "yoy": 4.08
         }
       ],
-      "_last_fin_attempt_ts": 1793793622,
+      "_last_fin_attempt_ts": 1793800635,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -474738,7 +475100,7 @@
           "yoy": 46.9
         }
       ],
-      "_last_fin_attempt_ts": 1793793758,
+      "_last_fin_attempt_ts": 1793800515,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -475056,7 +475418,7 @@
           "yoy": 60.6
         }
       ],
-      "_last_fin_attempt_ts": 1793793687,
+      "_last_fin_attempt_ts": 1793800607,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -475374,7 +475736,7 @@
           "yoy": 24.89
         }
       ],
-      "_last_fin_attempt_ts": 1793793707,
+      "_last_fin_attempt_ts": 1793800712,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
