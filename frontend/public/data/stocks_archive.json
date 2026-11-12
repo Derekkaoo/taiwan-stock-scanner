@@ -4710,8 +4710,8 @@
       "m6": -24.09,
       "y1": -18.54
     },
-    "industry": "",
-    "market": "",
+    "industry": "紡織纖維",
+    "market": "上市",
     "subIndustries": [
       "紡紗",
       "毛紡",
@@ -5694,8 +5694,8 @@
       "m6": 4.89,
       "y1": 5.63
     },
-    "industry": "",
-    "market": "",
+    "industry": "紡織纖維",
+    "market": "上市",
     "subIndustries": [
       "成衣",
       "成衣製造",
@@ -5769,7 +5769,7 @@
           "yoy": 29.4
         }
       ],
-      "_last_fin_attempt_ts": 1794470358,
+      "_last_fin_attempt_ts": 1794477317,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -6020,8 +6020,8 @@
       "m6": -27.7,
       "y1": -15.59
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上市",
     "subIndustries": [
       "電力設備",
       "電機",
@@ -6095,7 +6095,7 @@
           "yoy": 9.35
         }
       ],
-      "_last_fin_attempt_ts": 1794470251,
+      "_last_fin_attempt_ts": 1794477379,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -6166,10 +6166,6 @@
       ],
       "epsYoY": [
         {
-          "quarter": "2024Q3",
-          "yoy": -13.64
-        },
-        {
           "quarter": "2024Q4",
           "yoy": -27.12
         },
@@ -6196,6 +6192,10 @@
         {
           "quarter": "2026Q2",
           "yoy": 28.17
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -6.74
         }
       ],
       "grossMargin": [
@@ -6268,10 +6268,6 @@
       ],
       "eps": [
         {
-          "quarter": "2024Q3",
-          "value": 0.57
-        },
-        {
           "quarter": "2024Q4",
           "value": 0.86
         },
@@ -6298,6 +6294,10 @@
         {
           "quarter": "2026Q2",
           "value": 0.91
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 0.83
         }
       ]
     },
@@ -6346,8 +6346,8 @@
       "m6": -40.6,
       "y1": -31.12
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上市",
     "subIndustries": [
       "電力設備",
       "變電設備",
@@ -6415,7 +6415,7 @@
           "yoy": -15.38
         }
       ],
-      "_last_fin_attempt_ts": 1794470273,
+      "_last_fin_attempt_ts": 1794477340,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -6988,8 +6988,8 @@
       "m6": -0.18,
       "y1": 91.13
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上市",
     "subIndustries": [
       "產業機械",
       "木工機械",
@@ -7638,8 +7638,8 @@
       "m6": 17.71,
       "y1": 13.93
     },
-    "industry": "",
-    "market": "",
+    "industry": "汽車工業",
+    "market": "上市",
     "subIndustries": [
       "汽機車零組件",
       "輪圈"
@@ -7956,8 +7956,8 @@
       "m6": 67.76,
       "y1": 66.67
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上櫃",
     "subIndustries": [
       "電子零件元件",
       "機殼",
@@ -8025,7 +8025,7 @@
           "yoy": 133.52
         }
       ],
-      "_last_fin_attempt_ts": 1794470329,
+      "_last_fin_attempt_ts": 1794477336,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -9590,8 +9590,8 @@
       "m6": -11.33,
       "y1": -21.7
     },
-    "industry": "",
-    "market": "",
+    "industry": "運動休閒",
+    "market": "上市",
     "subIndustries": [
       "運動產業",
       "健身器材"
@@ -9657,7 +9657,7 @@
           "yoy": 20.18
         }
       ],
-      "_last_fin_attempt_ts": 1794470353,
+      "_last_fin_attempt_ts": 1794477390,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -9923,8 +9923,8 @@
       "m6": -3.81,
       "y1": -8.84
     },
-    "industry": "",
-    "market": "",
+    "industry": "電器電纜",
+    "market": "上市",
     "subIndustries": [
       "家電",
       "照明",
@@ -13526,8 +13526,8 @@
       "m6": -8.05,
       "y1": 13.12
     },
-    "industry": "",
-    "market": "",
+    "industry": "鋼鐵工業",
+    "market": "上市",
     "subIndustries": [
       "條鋼",
       "鋼構",
@@ -13850,8 +13850,8 @@
       "m6": -19.98,
       "y1": -17.83
     },
-    "industry": "",
-    "market": "",
+    "industry": "鋼鐵工業",
+    "market": "上市",
     "subIndustries": [
       "線材盤元",
       "螺絲螺帽"
@@ -13917,7 +13917,7 @@
           "yoy": -13.72
         }
       ],
-      "_last_fin_attempt_ts": 1794470319,
+      "_last_fin_attempt_ts": 1794477365,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -14182,8 +14182,8 @@
       "m6": 2.85,
       "y1": -2.36
     },
-    "industry": "",
-    "market": "",
+    "industry": "鋼鐵工業",
+    "market": "上市",
     "subIndustries": [
       "板鋼",
       "鍍鋅鋼捲",
@@ -14251,12 +14251,8 @@
           "yoy": 7.14
         }
       ],
-      "_last_fin_attempt_ts": 1794470346,
+      "_last_fin_attempt_ts": 1794477374,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -39.64
-        },
         {
           "quarter": "2024Q4",
           "yoy": -23.24
@@ -14284,13 +14280,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 49.99
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 8.83
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -149.03
-        },
         {
           "quarter": "2024Q4",
           "yoy": -208.0
@@ -14318,13 +14314,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 464.82
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -78.06
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -1850.0
-        },
         {
           "quarter": "2024Q4",
           "yoy": 15.22
@@ -14352,13 +14348,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 84.29
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -5.56
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 5.88
-        },
         {
           "quarter": "2024Q4",
           "value": 6.77
@@ -14386,13 +14382,13 @@
         {
           "quarter": "2026Q2",
           "value": 10.41
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 9.75
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": -1.3
-        },
         {
           "quarter": "2024Q4",
           "value": -1.37
@@ -14420,13 +14416,13 @@
         {
           "quarter": "2026Q2",
           "value": 2.01
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 0.19
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": -0.39
-        },
         {
           "quarter": "2024Q4",
           "value": -0.39
@@ -14454,6 +14450,10 @@
         {
           "quarter": "2026Q2",
           "value": -0.11
+        },
+        {
+          "quarter": "2026Q3",
+          "value": -0.57
         }
       ]
     },
@@ -14504,8 +14504,8 @@
       "m6": 27.57,
       "y1": 30.45
     },
-    "industry": "",
-    "market": "",
+    "industry": "鋼鐵工業",
+    "market": "上市",
     "subIndustries": [
       "線材盤元",
       "螺絲螺帽",
@@ -14585,7 +14585,7 @@
           "yoy": 44.8
         }
       ],
-      "_last_fin_attempt_ts": 1794470338,
+      "_last_fin_attempt_ts": 1794477328,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -16138,8 +16138,8 @@
       "m6": 3.83,
       "y1": 13.87
     },
-    "industry": "",
-    "market": "",
+    "industry": "橡膠工業",
+    "market": "上市",
     "subIndustries": [
       "塑化製品",
       "塑膠皮布",
@@ -16495,8 +16495,8 @@
       "m6": -3.5,
       "y1": -27.02
     },
-    "industry": "",
-    "market": "",
+    "industry": "汽車工業",
+    "market": "上市",
     "subIndustries": [
       "汽車服務相關",
       "汽車銷售",
@@ -16576,7 +16576,7 @@
           "yoy": -7.96
         }
       ],
-      "_last_fin_attempt_ts": 1794470411,
+      "_last_fin_attempt_ts": 1794477305,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -18890,8 +18890,8 @@
       "m6": -4.76,
       "y1": -4.38
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上市",
     "subIndustries": [
       "機器人",
       "家電",
@@ -19043,7 +19043,7 @@
           "yoy": 45.73
         }
       ],
-      "_last_fin_attempt_ts": 1794470318,
+      "_last_fin_attempt_ts": 1794477319,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -22249,8 +22249,8 @@
       "m6": -36.41,
       "y1": -35.27
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上市",
     "subIndustries": [
       "車用電子",
       "行車紀錄器",
@@ -22326,7 +22326,7 @@
           "yoy": 39.59
         }
       ],
-      "_last_fin_attempt_ts": 1794470392,
+      "_last_fin_attempt_ts": 1794477346,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -24219,8 +24219,8 @@
       "m6": -3.59,
       "y1": 5.12
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "電子零件元件",
       "其他電子零件",
@@ -24294,7 +24294,7 @@
           "yoy": 17.16
         }
       ],
-      "_last_fin_attempt_ts": 1794470260,
+      "_last_fin_attempt_ts": 1794477385,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -29818,8 +29818,8 @@
       "m6": 7.55,
       "y1": 53.65
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "電子通路",
       "半導體材料通路商",
@@ -29893,7 +29893,7 @@
           "yoy": 49.06
         }
       ],
-      "_last_fin_attempt_ts": 1794470316,
+      "_last_fin_attempt_ts": 1794477333,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -31449,8 +31449,8 @@
       "m6": -11.37,
       "y1": -34.47
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "地產",
       "營建"
@@ -31767,8 +31767,8 @@
       "m6": 23.54,
       "y1": 41.87
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "營造工程",
       "住宅建設",
@@ -31836,7 +31836,7 @@
           "yoy": 64.23
         }
       ],
-      "_last_fin_attempt_ts": 1794470401,
+      "_last_fin_attempt_ts": 1794477343,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -32087,8 +32087,8 @@
       "m6": 5.34,
       "y1": 1.4
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "地產",
       "營建"
@@ -33387,8 +33387,8 @@
       "m6": 18.63,
       "y1": 35.22
     },
-    "industry": "",
-    "market": "",
+    "industry": "航運業",
+    "market": "上市",
     "subIndustries": [
       "運輸事業",
       "貨櫃航運"
@@ -33454,7 +33454,7 @@
           "yoy": 96.13
         }
       ],
-      "_last_fin_attempt_ts": 1794470271,
+      "_last_fin_attempt_ts": 1794477359,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -35004,8 +35004,8 @@
       "m6": 1.9,
       "y1": 7.97
     },
-    "industry": "",
-    "market": "",
+    "industry": "金融保險業",
+    "market": "上市",
     "subIndustries": [
       "金融業",
       "產險"
@@ -38614,8 +38614,8 @@
       "m6": -15.54,
       "y1": -2.47
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "汽機車零組件",
       "汽車端子",
@@ -38689,7 +38689,7 @@
           "yoy": 52.47
         }
       ],
-      "_last_fin_attempt_ts": 1794470248,
+      "_last_fin_attempt_ts": 1794477384,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -40290,8 +40290,8 @@
       "m6": -13.91,
       "y1": 20.37
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "電子零件元件",
       "連接器",
@@ -40613,8 +40613,8 @@
       "m6": -15.88,
       "y1": 4.02
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上市",
     "subIndustries": [
       "家電",
       "電器銷售",
@@ -42949,8 +42949,8 @@
       "m6": -1.0,
       "y1": -11.97
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上市",
     "subIndustries": [
       "電子零件元件",
       "UPS"
@@ -43016,12 +43016,8 @@
           "yoy": -11.0
         }
       ],
-      "_last_fin_attempt_ts": 1794470397,
+      "_last_fin_attempt_ts": 1794477294,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -18.91
-        },
         {
           "quarter": "2024Q4",
           "yoy": 67.8
@@ -43049,13 +43045,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 3.65
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 162.58
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -111.61
-        },
         {
           "quarter": "2024Q4",
           "yoy": 120.29
@@ -43083,13 +43079,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 103.59
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 143.51
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q2",
-          "yoy": -106.67
-        },
         {
           "quarter": "2024Q4",
           "yoy": 123.12
@@ -43117,13 +43113,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 159.46
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 962.5
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 18.6
-        },
         {
           "quarter": "2024Q4",
           "value": 21.55
@@ -43151,13 +43147,13 @@
         {
           "quarter": "2026Q2",
           "value": 26.1
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 23.59
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": -1.09
-        },
         {
           "quarter": "2024Q4",
           "value": 3.98
@@ -43185,13 +43181,13 @@
         {
           "quarter": "2026Q2",
           "value": 5.95
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 6.67
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 0.25
-        },
         {
           "quarter": "2024Q4",
           "value": 0.43
@@ -43219,6 +43215,10 @@
         {
           "quarter": "2026Q2",
           "value": 0.44
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 0.69
         }
       ]
     },
@@ -43282,8 +43282,8 @@
       "m6": -9.47,
       "y1": -37.92
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "地產",
       "營建",
@@ -43353,7 +43353,7 @@
           "yoy": -19.64
         }
       ],
-      "_last_fin_attempt_ts": 1794470414,
+      "_last_fin_attempt_ts": 1794477402,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -43990,8 +43990,8 @@
       "m6": -12.99,
       "y1": 463.41
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上櫃",
     "subIndustries": [
       "IC製造",
       "砷化鎵相關",
@@ -45961,8 +45961,8 @@
       "m6": -7.04,
       "y1": -13.45
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上櫃",
     "subIndustries": [
       "醫療管理服務",
       "醫療服務"
@@ -46028,7 +46028,7 @@
           "yoy": 8.73
         }
       ],
-      "_last_fin_attempt_ts": 1794470377,
+      "_last_fin_attempt_ts": 1794477302,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -46618,8 +46618,8 @@
       "m6": 35.44,
       "y1": 260.47
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上櫃",
     "subIndustries": [
       "IC製造",
       "光通訊元件磊晶",
@@ -49246,8 +49246,8 @@
       "m6": 137.19,
       "y1": 232.39
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上櫃",
     "subIndustries": [
       "IC封裝測試",
       "IC封裝",
@@ -51164,8 +51164,8 @@
       "m6": 10.75,
       "y1": 33.81
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上櫃",
     "subIndustries": [
       "設備儀器商",
       "半導體製程設備",
@@ -53133,8 +53133,8 @@
       "m6": -9.14,
       "y1": 33.83
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上櫃",
     "subIndustries": [
       "工業電腦"
     ],
@@ -55724,8 +55724,8 @@
       "m6": -28.33,
       "y1": -37.73
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上市",
     "subIndustries": [
       "電線電纜",
       "電纜連接件及配件",
@@ -55797,7 +55797,7 @@
           "yoy": -30.36
         }
       ],
-      "_last_fin_attempt_ts": 1794470246,
+      "_last_fin_attempt_ts": 1794477344,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -56719,8 +56719,8 @@
       "m6": -25.21,
       "y1": -29.02
     },
-    "industry": "",
-    "market": "",
+    "industry": "綠能環保",
+    "market": "上市",
     "subIndustries": [
       "化學工業",
       "合成樹脂",
@@ -57359,8 +57359,8 @@
       "m6": 13.88,
       "y1": 5.68
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上櫃",
     "subIndustries": [
       "醫藥產業",
       "西藥製劑",
@@ -57679,8 +57679,8 @@
       "m6": -3.05,
       "y1": -5.45
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上櫃",
     "subIndustries": [
       "醫藥產業",
       "西藥製劑",
@@ -61917,8 +61917,8 @@
       "m6": -3.49,
       "y1": -12.5
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上市",
     "subIndustries": [
       "體外診斷用醫材",
       "血糖儀"
@@ -62249,8 +62249,8 @@
       "m6": -47.91,
       "y1": -55.37
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上櫃",
     "subIndustries": [
       "醫藥產業",
       "西藥製劑",
@@ -62318,7 +62318,7 @@
           "yoy": -2.74
         }
       ],
-      "_last_fin_attempt_ts": 1794470262,
+      "_last_fin_attempt_ts": 1794477371,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -63234,8 +63234,8 @@
       "m6": -30.02,
       "y1": -30.36
     },
-    "industry": "",
-    "market": "",
+    "industry": "化學工業",
+    "market": "上櫃",
     "subIndustries": [
       "化學工業",
       "工業氣體"
@@ -64865,8 +64865,8 @@
       "m6": -9.45,
       "y1": -34.59
     },
-    "industry": "",
-    "market": "",
+    "industry": "資訊服務業",
+    "market": "上櫃",
     "subIndustries": [
       "軟體業",
       "系統整合"
@@ -65840,8 +65840,8 @@
       "m6": 4.5,
       "y1": -20.78
     },
-    "industry": "",
-    "market": "",
+    "industry": "數位雲端",
+    "market": "上櫃",
     "subIndustries": [
       "INTERNET應用與服務",
       "社群網站與媒體"
@@ -66491,8 +66491,8 @@
       "m6": -24.15,
       "y1": 96.41
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上櫃",
     "subIndustries": [
       "產業機械",
       "自行車零件",
@@ -68444,8 +68444,8 @@
       "m6": -33.18,
       "y1": -2.27
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上櫃",
     "subIndustries": [
       "設備儀器商",
       "半導體製程設備",
@@ -69424,8 +69424,8 @@
       "m6": -9.47,
       "y1": -25.93
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "營造工程",
       "基礎建設"
@@ -69491,12 +69491,8 @@
           "yoy": 28.23
         }
       ],
-      "_last_fin_attempt_ts": 1794470324,
+      "_last_fin_attempt_ts": 1794477312,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -1.59
-        },
         {
           "quarter": "2024Q4",
           "yoy": -21.77
@@ -69524,13 +69520,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 90.71
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 38.75
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 23.06
-        },
         {
           "quarter": "2024Q4",
           "yoy": -113.85
@@ -69558,13 +69554,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 151.5
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 25.13
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 233.33
-        },
         {
           "quarter": "2024Q4",
           "yoy": -83.33
@@ -69592,13 +69588,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 200.0
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 13.04
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 4.97
-        },
         {
           "quarter": "2024Q4",
           "value": 3.98
@@ -69626,13 +69622,13 @@
         {
           "quarter": "2026Q2",
           "value": 11.43
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 11.88
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 1.65
-        },
         {
           "quarter": "2024Q4",
           "value": -0.22
@@ -69660,13 +69656,13 @@
         {
           "quarter": "2026Q2",
           "value": 7.69
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 5.73
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 0.2
-        },
         {
           "quarter": "2024Q4",
           "value": 0.01
@@ -69694,6 +69690,10 @@
         {
           "quarter": "2026Q2",
           "value": 0.45
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 0.26
         }
       ]
     },
@@ -69743,8 +69743,8 @@
       "m6": -16.19,
       "y1": 14.84
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上櫃",
     "subIndustries": [
       "電子其他",
       "廠務工程",
@@ -71037,8 +71037,8 @@
       "m6": 24.92,
       "y1": 66.56
     },
-    "industry": "",
-    "market": "",
+    "industry": "居家生活",
+    "market": "上櫃",
     "subIndustries": [
       "流通業",
       "藥妝零售相關",
@@ -72331,8 +72331,8 @@
       "m6": -39.85,
       "y1": -42.51
     },
-    "industry": "",
-    "market": "",
+    "industry": "文化創意業",
+    "market": "上櫃",
     "subIndustries": [
       "控股公司"
     ],
@@ -72396,7 +72396,7 @@
           "yoy": 34.43
         }
       ],
-      "_last_fin_attempt_ts": 1794470352,
+      "_last_fin_attempt_ts": 1794477351,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -73970,8 +73970,8 @@
       "m6": -4.68,
       "y1": -4.49
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上櫃",
     "subIndustries": [
       "食品加工",
       "保健食品",
@@ -74055,12 +74055,8 @@
           "yoy": 10.09
         }
       ],
-      "_last_fin_attempt_ts": 1794470252,
+      "_last_fin_attempt_ts": 1794477294,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -11.45
-        },
         {
           "quarter": "2024Q4",
           "yoy": -9.66
@@ -74088,13 +74084,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 10.11
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 6.31
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -7.76
-        },
         {
           "quarter": "2024Q4",
           "yoy": 75.13
@@ -74122,13 +74118,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 1.74
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 18.14
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -62.22
-        },
         {
           "quarter": "2024Q4",
           "yoy": 1116.67
@@ -74156,13 +74152,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 37.5
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -24.38
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 29.17
-        },
         {
           "quarter": "2024Q4",
           "value": 29.74
@@ -74190,13 +74186,13 @@
         {
           "quarter": "2026Q2",
           "value": 33.75
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 34.21
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 9.27
-        },
         {
           "quarter": "2024Q4",
           "value": 19.64
@@ -74224,13 +74220,13 @@
         {
           "quarter": "2026Q2",
           "value": 10.36
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 11.38
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 0.51
-        },
         {
           "quarter": "2024Q4",
           "value": 1.46
@@ -74258,6 +74254,10 @@
         {
           "quarter": "2026Q2",
           "value": 1.1
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 1.21
         }
       ]
     },
@@ -77241,8 +77241,8 @@
       "m6": -19.1,
       "y1": 1.68
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上櫃",
     "subIndustries": [
       "電子零件元件",
       "連接線材"
@@ -81229,8 +81229,8 @@
       "m6": -26.02,
       "y1": 105.88
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上市",
     "subIndustries": [
       "太陽能",
       "太陽能電池",
@@ -81298,7 +81298,7 @@
           "yoy": -15.37
         }
       ],
-      "_last_fin_attempt_ts": 1794470263,
+      "_last_fin_attempt_ts": 1794477349,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -82214,8 +82214,8 @@
       "m6": 11.82,
       "y1": 42.93
     },
-    "industry": "",
-    "market": "",
+    "industry": "化學工業",
+    "market": "上櫃",
     "subIndustries": [
       "化學工業",
       "其他化工產品",
@@ -82287,7 +82287,7 @@
           "yoy": 1.41
         }
       ],
-      "_last_fin_attempt_ts": 1794470357,
+      "_last_fin_attempt_ts": 1794477366,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -82552,8 +82552,8 @@
       "m6": -0.49,
       "y1": 29.09
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上市",
     "subIndustries": [
       "IC封裝測試"
     ],
@@ -85418,8 +85418,8 @@
       "m6": -50.99,
       "y1": -25.81
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上櫃",
     "subIndustries": [
       "IC設計",
       "類比IC",
@@ -87072,8 +87072,8 @@
       "m6": -14.63,
       "y1": -19.75
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上市",
     "subIndustries": [
       "IC設計",
       "電源管理IC",
@@ -87729,8 +87729,8 @@
       "m6": -37.44,
       "y1": -42.57
     },
-    "industry": "",
-    "market": "",
+    "industry": "數位雲端",
+    "market": "上櫃",
     "subIndustries": [
       "軟體業",
       "應用軟體",
@@ -87802,7 +87802,7 @@
           "yoy": 29.4
         }
       ],
-      "_last_fin_attempt_ts": 1794470278,
+      "_last_fin_attempt_ts": 1794477364,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -89988,8 +89988,8 @@
       "m6": -31.53,
       "y1": -43.95
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上市",
     "subIndustries": [
       "醫藥產業",
       "新藥研發",
@@ -90252,8 +90252,8 @@
       "m6": -94.17,
       "y1": -89.4
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上市",
     "subIndustries": [
       "醫藥產業",
       "新藥研發",
@@ -90323,7 +90323,7 @@
           "yoy": 3.25
         }
       ],
-      "_last_fin_attempt_ts": 1794470272,
+      "_last_fin_attempt_ts": 1794477381,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -90394,10 +90394,6 @@
       ],
       "epsYoY": [
         {
-          "quarter": "2024Q1",
-          "yoy": -16.42
-        },
-        {
           "quarter": "2024Q4",
           "yoy": 16.43
         },
@@ -90424,6 +90420,10 @@
         {
           "quarter": "2026Q2",
           "yoy": -2.26
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 96.53
         }
       ],
       "grossMargin": [
@@ -90496,10 +90496,6 @@
       ],
       "eps": [
         {
-          "quarter": "2024Q3",
-          "value": -1.76
-        },
-        {
           "quarter": "2024Q4",
           "value": -1.78
         },
@@ -90526,6 +90522,10 @@
         {
           "quarter": "2026Q2",
           "value": -1.36
+        },
+        {
+          "quarter": "2026Q3",
+          "value": -0.07
         }
       ]
     },
@@ -91935,8 +91935,8 @@
       "m6": -11.91,
       "y1": 140.24
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上櫃",
     "subIndustries": [
       "設備儀器商",
       "LED設備",
@@ -93603,8 +93603,8 @@
       "m6": -7.46,
       "y1": 7.36
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上市",
     "subIndustries": [
       "面板業",
       "LCM"
@@ -93921,8 +93921,8 @@
       "m6": -0.83,
       "y1": 20.0
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上櫃",
     "subIndustries": [
       "電子零件元件",
       "電源供應器"
@@ -95920,8 +95920,8 @@
       "m6": 2.79,
       "y1": -7.66
     },
-    "industry": "",
-    "market": "",
+    "industry": "居家生活",
+    "market": "上市",
     "subIndustries": [
       "家居用品",
       "窗簾"
@@ -97214,8 +97214,8 @@
       "m6": -3.07,
       "y1": 3.39
     },
-    "industry": "",
-    "market": "",
+    "industry": "數位雲端",
+    "market": "上櫃",
     "subIndustries": [
       "傳產其他",
       "拉鍊"
@@ -97281,7 +97281,7 @@
           "yoy": 18.16
         }
       ],
-      "_last_fin_attempt_ts": 1794470266,
+      "_last_fin_attempt_ts": 1794477336,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -98388,8 +98388,8 @@
       "m6": 4.35,
       "y1": 9.54
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上市",
     "subIndustries": [
       "顯示器",
       "LCD顯示器"
@@ -98707,8 +98707,8 @@
       "m6": 7.62,
       "y1": -35.63
     },
-    "industry": "",
-    "market": "",
+    "industry": "運動休閒",
+    "market": "上市",
     "subIndustries": [
       "產業機械",
       "自行車零件",
@@ -99348,8 +99348,8 @@
       "m6": 37.91,
       "y1": 59.11
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他業",
+    "market": "上市",
     "subIndustries": [
       "營造工程",
       "工程顧問"
@@ -99666,8 +99666,8 @@
       "m6": 9.97,
       "y1": -0.75
     },
-    "industry": "",
-    "market": "",
+    "industry": "居家生活",
+    "market": "上市",
     "subIndustries": [
       "家居用品",
       "窗簾"
@@ -99733,7 +99733,7 @@
           "yoy": 27.73
         }
       ],
-      "_last_fin_attempt_ts": 1794470279,
+      "_last_fin_attempt_ts": 1794477370,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -100630,8 +100630,8 @@
       "m6": 8.38,
       "y1": 22.02
     },
-    "industry": "",
-    "market": "",
+    "industry": "水泥工業",
+    "market": "上市",
     "subIndustries": [
       "水泥",
       "水泥製品",
@@ -100705,7 +100705,7 @@
           "yoy": 17.83
         }
       ],
-      "_last_fin_attempt_ts": 1794470342,
+      "_last_fin_attempt_ts": 1794477383,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -100970,8 +100970,8 @@
       "m6": -8.66,
       "y1": -17.15
     },
-    "industry": "",
-    "market": "",
+    "industry": "水泥工業",
+    "market": "上市",
     "subIndustries": [
       "水泥",
       "水泥製品",
@@ -101039,7 +101039,7 @@
           "yoy": -11.23
         }
       ],
-      "_last_fin_attempt_ts": 1794470297,
+      "_last_fin_attempt_ts": 1794477291,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -107385,8 +107385,8 @@
       "m6": -5.22,
       "y1": -5.67
     },
-    "industry": "",
-    "market": "",
+    "industry": "化學工業",
+    "market": "上市",
     "subIndustries": [
       "化學工業",
       "農藥",
@@ -108687,8 +108687,8 @@
       "m6": -3.44,
       "y1": 10.7
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上市",
     "subIndustries": [
       "醫藥產業",
       "西藥製劑",
@@ -109007,8 +109007,8 @@
       "m6": -30.23,
       "y1": -45.13
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上市",
     "subIndustries": [
       "醫藥產業",
       "西藥製劑",
@@ -109076,7 +109076,7 @@
           "yoy": -22.46
         }
       ],
-      "_last_fin_attempt_ts": 1794470391,
+      "_last_fin_attempt_ts": 1794477399,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -109329,8 +109329,8 @@
       "m6": 14.75,
       "y1": 131.77
     },
-    "industry": "",
-    "market": "",
+    "industry": "玻璃陶瓷",
+    "market": "上市",
     "subIndustries": [
       "建材",
       "玻璃",
@@ -110629,8 +110629,8 @@
       "m6": 56.21,
       "y1": 79.64
     },
-    "industry": "",
-    "market": "",
+    "industry": "鋼鐵工業",
+    "market": "上市",
     "subIndustries": [
       "不鏽鋼",
       "不鏽鋼剪裁加工",
@@ -110963,8 +110963,8 @@
       "m6": 12.69,
       "y1": 16.54
     },
-    "industry": "",
-    "market": "",
+    "industry": "鋼鐵工業",
+    "market": "上市",
     "subIndustries": [
       "板鋼",
       "鋼剪裁加工"
@@ -111935,8 +111935,8 @@
       "m6": -19.24,
       "y1": -23.0
     },
-    "industry": "",
-    "market": "",
+    "industry": "橡膠工業",
+    "market": "上市",
     "subIndustries": [
       "橡膠工業",
       "輪胎",
@@ -112006,7 +112006,7 @@
           "yoy": 36.94
         }
       ],
-      "_last_fin_attempt_ts": 1794470363,
+      "_last_fin_attempt_ts": 1794477366,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -112591,8 +112591,8 @@
       "m6": -1.46,
       "y1": -0.49
     },
-    "industry": "",
-    "market": "",
+    "industry": "橡膠工業",
+    "market": "上市",
     "subIndustries": [
       "橡膠工業",
       "碳煙"
@@ -115567,8 +115567,8 @@
       "m6": -38.63,
       "y1": 55.14
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上市",
     "subIndustries": [
       "網通設備",
       "用戶端設備",
@@ -115636,7 +115636,7 @@
           "yoy": 91.16
         }
       ],
-      "_last_fin_attempt_ts": 1794470243,
+      "_last_fin_attempt_ts": 1794477295,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -117552,8 +117552,8 @@
       "m6": -3.82,
       "y1": 6.83
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上市",
     "subIndustries": [
       "週邊產品",
       "電競週邊",
@@ -117635,7 +117635,7 @@
           "yoy": 136.72
         }
       ],
-      "_last_fin_attempt_ts": 1794470258,
+      "_last_fin_attempt_ts": 1794477415,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -117900,8 +117900,8 @@
       "m6": 35.85,
       "y1": 48.84
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上市",
     "subIndustries": [
       "IC設計",
       "網路卡IC",
@@ -117983,7 +117983,7 @@
           "yoy": 32.11
         }
       ],
-      "_last_fin_attempt_ts": 1794470343,
+      "_last_fin_attempt_ts": 1794477418,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -118573,8 +118573,8 @@
       "m6": -29.81,
       "y1": -28.41
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "電子零件元件",
       "電源供應器",
@@ -118916,8 +118916,8 @@
       "m6": -13.97,
       "y1": -26.83
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "電子零件元件",
       "電源供應器",
@@ -119007,7 +119007,7 @@
           "yoy": -24.87
         }
       ],
-      "_last_fin_attempt_ts": 1794470416,
+      "_last_fin_attempt_ts": 1794477342,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -124512,8 +124512,8 @@
       "m6": 15.02,
       "y1": 7.58
     },
-    "industry": "",
-    "market": "",
+    "industry": "航運業",
+    "market": "上市",
     "subIndustries": [
       "運輸事業",
       "貨櫃航運"
@@ -124830,8 +124830,8 @@
       "m6": 37.53,
       "y1": 31.13
     },
-    "industry": "",
-    "market": "",
+    "industry": "航運業",
+    "market": "上市",
     "subIndustries": [
       "運輸事業",
       "貨櫃航運"
@@ -124897,7 +124897,7 @@
           "yoy": 124.36
         }
       ],
-      "_last_fin_attempt_ts": 1794470269,
+      "_last_fin_attempt_ts": 1794477326,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -125148,8 +125148,8 @@
       "m6": 38.14,
       "y1": 28.49
     },
-    "industry": "",
-    "market": "",
+    "industry": "航運業",
+    "market": "上市",
     "subIndustries": [
       "運輸事業",
       "空運"
@@ -126109,8 +126109,8 @@
       "m6": 25.39,
       "y1": 50.79
     },
-    "industry": "",
-    "market": "",
+    "industry": "航運業",
+    "market": "上市",
     "subIndustries": [
       "運輸事業",
       "散裝航運"
@@ -126176,7 +126176,7 @@
           "yoy": 31.25
         }
       ],
-      "_last_fin_attempt_ts": 1794470245,
+      "_last_fin_attempt_ts": 1794477303,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -129366,8 +129366,8 @@
       "m6": 2.13,
       "y1": -30.22
     },
-    "industry": "",
-    "market": "",
+    "industry": "貿易百貨業",
+    "market": "上市",
     "subIndustries": [
       "傳產其他",
       "嬰童用品"
@@ -132649,8 +132649,8 @@
       "m6": 5.95,
       "y1": 17.81
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子通路業",
+    "market": "上市",
     "subIndustries": [
       "電子通路",
       "IC零組件通路商"
@@ -133302,8 +133302,8 @@
       "m6": -17.78,
       "y1": -15.7
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上市",
     "subIndustries": [
       "光碟片",
       "碟片預錄",
@@ -133385,12 +133385,8 @@
           "yoy": -6.51
         }
       ],
-      "_last_fin_attempt_ts": 1794470411,
+      "_last_fin_attempt_ts": 1794477377,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -5.94
-        },
         {
           "quarter": "2024Q4",
           "yoy": -23.54
@@ -133418,13 +133414,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 1.57
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -18.53
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -35.53
-        },
         {
           "quarter": "2024Q4",
           "yoy": -2190.44
@@ -133452,13 +133448,13 @@
         {
           "quarter": "2026Q2",
           "yoy": -114.69
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -164.11
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -28.0
-        },
         {
           "quarter": "2024Q4",
           "yoy": -22.22
@@ -133486,13 +133482,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 246.15
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -73.68
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 36.75
-        },
         {
           "quarter": "2024Q4",
           "value": 29.42
@@ -133520,13 +133516,13 @@
         {
           "quarter": "2026Q2",
           "value": 34.07
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 30.53
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 9.5
-        },
         {
           "quarter": "2024Q4",
           "value": -3.8
@@ -133554,13 +133550,13 @@
         {
           "quarter": "2026Q2",
           "value": -0.42
+        },
+        {
+          "quarter": "2026Q3",
+          "value": -4.92
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 0.18
-        },
         {
           "quarter": "2024Q4",
           "value": -0.11
@@ -133588,6 +133584,10 @@
         {
           "quarter": "2026Q2",
           "value": 0.38
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 0.05
         }
       ]
     },
@@ -134600,8 +134600,8 @@
       "m6": 25.59,
       "y1": 55.88
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "被動元件",
       "MLCC",
@@ -136241,8 +136241,8 @@
       "m6": -8.6,
       "y1": 1.68
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上櫃",
     "subIndustries": [
       "醫藥產業",
       "西藥製劑",
@@ -136320,7 +136320,7 @@
           "yoy": 6.62
         }
       ],
-      "_last_fin_attempt_ts": 1794470388,
+      "_last_fin_attempt_ts": 1794477293,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -137874,8 +137874,8 @@
       "m6": -6.9,
       "y1": 1.89
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上市",
     "subIndustries": [
       "印刷電路板相關",
       "PCB材料",
@@ -137947,12 +137947,8 @@
           "yoy": 53.13
         }
       ],
-      "_last_fin_attempt_ts": 1794470247,
+      "_last_fin_attempt_ts": 1794477411,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -11.82
-        },
         {
           "quarter": "2024Q4",
           "yoy": -4.09
@@ -137980,13 +137976,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 39.08
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 13.19
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 11.81
-        },
         {
           "quarter": "2024Q4",
           "yoy": 27.24
@@ -138014,13 +138010,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 48.54
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 60.58
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 63.79
-        },
         {
           "quarter": "2024Q4",
           "yoy": 212.5
@@ -138048,13 +138044,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 1225.0
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 111.76
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 13.28
-        },
         {
           "quarter": "2024Q4",
           "value": 12.16
@@ -138082,13 +138078,13 @@
         {
           "quarter": "2026Q2",
           "value": 18.8
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 16.44
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 8.07
-        },
         {
           "quarter": "2024Q4",
           "value": 5.69
@@ -138116,13 +138112,13 @@
         {
           "quarter": "2026Q2",
           "value": 11.61
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 12.53
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 0.95
-        },
         {
           "quarter": "2024Q4",
           "value": 0.5
@@ -138150,6 +138146,10 @@
         {
           "quarter": "2026Q2",
           "value": 2.12
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 2.52
         }
       ]
     },
@@ -138532,8 +138532,8 @@
       "m6": -20.6,
       "y1": -20.47
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上市",
     "subIndustries": [
       "設備儀器商",
       "半導體製程設備"
@@ -138864,8 +138864,8 @@
       "m6": 2.91,
       "y1": 37.82
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上市",
     "subIndustries": [
       "IC封裝測試",
       "IC封裝",
@@ -138933,7 +138933,7 @@
           "yoy": 74.59
         }
       ],
-      "_last_fin_attempt_ts": 1794470312,
+      "_last_fin_attempt_ts": 1794477405,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -139833,8 +139833,8 @@
       "m6": 16.17,
       "y1": 207.61
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上市",
     "subIndustries": [
       "IC製造",
       "矽晶圓"
@@ -140483,8 +140483,8 @@
       "m6": 10.54,
       "y1": 162.92
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上市",
     "subIndustries": [
       "太陽能",
       "太陽能電池",
@@ -140554,7 +140554,7 @@
           "yoy": 3.0
         }
       ],
-      "_last_fin_attempt_ts": 1794470402,
+      "_last_fin_attempt_ts": 1794477300,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -142501,8 +142501,8 @@
       "m6": -26.06,
       "y1": 6.27
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上櫃",
     "subIndustries": [
       "電子通路",
       "電腦通路商",
@@ -144854,8 +144854,8 @@
       "m6": 54.05,
       "y1": 70.15
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上市",
     "subIndustries": [
       "工具機",
       "車床",
@@ -144929,7 +144929,7 @@
           "yoy": -12.06
         }
       ],
-      "_last_fin_attempt_ts": 1794470336,
+      "_last_fin_attempt_ts": 1794477347,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -145180,8 +145180,8 @@
       "m6": -4.57,
       "y1": 46.84
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上櫃",
     "subIndustries": [
       "工具機",
       "沖床"
@@ -145247,7 +145247,7 @@
           "yoy": 36.63
         }
       ],
-      "_last_fin_attempt_ts": 1794470332,
+      "_last_fin_attempt_ts": 1794477340,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -145847,8 +145847,8 @@
       "m6": 10.14,
       "y1": 16.46
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上市",
     "subIndustries": [
       "體外診斷用醫材",
       "血糖儀",
@@ -145924,7 +145924,7 @@
           "yoy": 53.93
         }
       ],
-      "_last_fin_attempt_ts": 1794470276,
+      "_last_fin_attempt_ts": 1794477396,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -148084,8 +148084,8 @@
       "m6": 61.93,
       "y1": 105.0
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上市",
     "subIndustries": [
       "工業電腦",
       "博奕機台",
@@ -148157,7 +148157,7 @@
           "yoy": 112.43
         }
       ],
-      "_last_fin_attempt_ts": 1794470309,
+      "_last_fin_attempt_ts": 1794477358,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -151049,8 +151049,8 @@
       "m6": -15.82,
       "y1": -8.28
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上櫃",
     "subIndustries": [
       "車用電子",
       "胎壓監測系統",
@@ -152062,8 +152062,8 @@
       "m6": -7.61,
       "y1": 2.06
     },
-    "industry": "",
-    "market": "",
+    "industry": "資訊服務業",
+    "market": "上櫃",
     "subIndustries": [
       "軟體業",
       "系統整合",
@@ -152709,8 +152709,8 @@
       "m6": 18.82,
       "y1": 62.38
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子通路業",
+    "market": "上市",
     "subIndustries": [
       "電子通路",
       "半導體材料通路商",
@@ -157933,8 +157933,8 @@
       "m6": -34.13,
       "y1": -41.39
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上櫃",
     "subIndustries": [
       "產業機械",
       "自動化設備",
@@ -158010,7 +158010,7 @@
           "yoy": 6.52
         }
       ],
-      "_last_fin_attempt_ts": 1794470362,
+      "_last_fin_attempt_ts": 1794477396,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -158600,8 +158600,8 @@
       "m6": -20.81,
       "y1": 4.79
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上櫃",
     "subIndustries": [
       "設備儀器商",
       "檢測驗證服務"
@@ -159563,8 +159563,8 @@
       "m6": -24.33,
       "y1": -21.94
     },
-    "industry": "",
-    "market": "",
+    "industry": "數位雲端",
+    "market": "上市",
     "subIndustries": [
       "INTERNET應用與服務",
       "直播平台"
@@ -159630,7 +159630,7 @@
           "yoy": 24.49
         }
       ],
-      "_last_fin_attempt_ts": 1794470343,
+      "_last_fin_attempt_ts": 1794477361,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -160211,8 +160211,8 @@
       "m6": 93.58,
       "y1": 207.42
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上櫃",
     "subIndustries": [
       "被動元件",
       "MLCC",
@@ -161200,8 +161200,8 @@
       "m6": -12.7,
       "y1": -5.44
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子通路業",
+    "market": "上市",
     "subIndustries": [
       "顯示器",
       "電子通路",
@@ -161273,7 +161273,7 @@
           "yoy": -11.48
         }
       ],
-      "_last_fin_attempt_ts": 1794470254,
+      "_last_fin_attempt_ts": 1794477327,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -164148,8 +164148,8 @@
       "m6": 51.0,
       "y1": 48.05
     },
-    "industry": "",
-    "market": "",
+    "industry": "資訊服務業",
+    "market": "上市",
     "subIndustries": [
       "軟體業",
       "系統整合",
@@ -164223,7 +164223,7 @@
           "yoy": 11.64
         }
       ],
-      "_last_fin_attempt_ts": 1794470321,
+      "_last_fin_attempt_ts": 1794477412,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -165790,8 +165790,8 @@
       "m6": -38.99,
       "y1": -41.35
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "電子零件元件",
       "電源供應器"
@@ -166772,8 +166772,8 @@
       "m6": 131.17,
       "y1": 202.84
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上市",
     "subIndustries": [
       "醫藥產業",
       "新藥研發",
@@ -169047,8 +169047,8 @@
       "m6": -11.55,
       "y1": 15.32
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上櫃",
     "subIndustries": [
       "產業機械",
       "塑膠機械"
@@ -169690,8 +169690,8 @@
       "m6": -0.31,
       "y1": 4.17
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上市",
     "subIndustries": [
       "IC設計",
       "消費性IC",
@@ -170957,8 +170957,8 @@
       "m6": 153.77,
       "y1": 261.36
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "被動元件",
       "晶片電阻"
@@ -171024,12 +171024,8 @@
           "yoy": 179.6
         }
       ],
-      "_last_fin_attempt_ts": 1794470347,
+      "_last_fin_attempt_ts": 1794477388,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 101.49
-        },
         {
           "quarter": "2024Q4",
           "yoy": 334.46
@@ -171057,13 +171053,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 56.79
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 67.94
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 161.24
-        },
         {
           "quarter": "2024Q4",
           "yoy": 106.29
@@ -171091,13 +171087,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 140.59
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 1373.75
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 81.82
-        },
         {
           "quarter": "2024Q4",
           "yoy": 115.56
@@ -171125,13 +171121,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 312.96
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 157.78
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 20.45
-        },
         {
           "quarter": "2024Q4",
           "value": 15.95
@@ -171159,13 +171155,13 @@
         {
           "quarter": "2026Q2",
           "value": 28.13
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 27.08
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 5.45
-        },
         {
           "quarter": "2024Q4",
           "value": 1.8
@@ -171193,13 +171189,13 @@
         {
           "quarter": "2026Q2",
           "value": 12.53
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 16.42
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 0.2
-        },
         {
           "quarter": "2024Q4",
           "value": 0.07
@@ -171227,6 +171223,10 @@
         {
           "quarter": "2026Q2",
           "value": 1.15
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 1.16
         }
       ]
     },
@@ -171600,8 +171600,8 @@
       "m6": -25.46,
       "y1": -26.56
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上市",
     "subIndustries": [
       "醫藥產業",
       "新藥研發",
@@ -174741,8 +174741,8 @@
       "m6": -43.91,
       "y1": 46.98
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上櫃",
     "subIndustries": [
       "印刷電路板相關",
       "PCB材料"
@@ -174808,7 +174808,7 @@
           "yoy": 24.82
         }
       ],
-      "_last_fin_attempt_ts": 1794470299,
+      "_last_fin_attempt_ts": 1794477380,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -176367,8 +176367,8 @@
       "m6": -10.14,
       "y1": -21.46
     },
-    "industry": "",
-    "market": "",
+    "industry": "綠能環保",
+    "market": "上櫃",
     "subIndustries": [
       "電池",
       "工業用電池",
@@ -176438,7 +176438,7 @@
           "yoy": 230.26
         }
       ],
-      "_last_fin_attempt_ts": 1794470244,
+      "_last_fin_attempt_ts": 1794477411,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -178623,8 +178623,8 @@
       "m6": -15.43,
       "y1": -28.37
     },
-    "industry": "",
-    "market": "",
+    "industry": "貿易百貨業",
+    "market": "上市",
     "subIndustries": [
       "傳產其他",
       "製鞋業"
@@ -178690,7 +178690,7 @@
           "yoy": 3.24
         }
       ],
-      "_last_fin_attempt_ts": 1794470326,
+      "_last_fin_attempt_ts": 1794477367,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -180919,8 +180919,8 @@
       "m6": -23.65,
       "y1": -39.6
     },
-    "industry": "",
-    "market": "",
+    "industry": "運動休閒",
+    "market": "上市",
     "subIndustries": [
       "傳產其他",
       "鞋材"
@@ -184311,8 +184311,8 @@
       "m6": 13.39,
       "y1": 3.45
     },
-    "industry": "",
-    "market": "",
+    "industry": "食品工業",
+    "market": "上市",
     "subIndustries": [
       "食品加工",
       "速食麵",
@@ -185890,8 +185890,8 @@
       "m6": -8.89,
       "y1": -12.39
     },
-    "industry": "",
-    "market": "",
+    "industry": "紡織纖維",
+    "market": "上市",
     "subIndustries": [
       "化學纖維",
       "聚酯加工絲"
@@ -186208,8 +186208,8 @@
       "m6": 15.83,
       "y1": 22.95
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "地產",
       "營建"
@@ -186526,8 +186526,8 @@
       "m6": 3.53,
       "y1": 4.83
     },
-    "industry": "",
-    "market": "",
+    "industry": "紡織纖維",
+    "market": "上市",
     "subIndustries": [
       "化學纖維",
       "聚酯加工絲"
@@ -187818,8 +187818,8 @@
       "m6": 3.88,
       "y1": -18.48
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上市",
     "subIndustries": [
       "機械零組件",
       "汽機車零組件",
@@ -187909,7 +187909,7 @@
           "yoy": 23.62
         }
       ],
-      "_last_fin_attempt_ts": 1794470397,
+      "_last_fin_attempt_ts": 1794477320,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -191120,8 +191120,8 @@
       "m6": -10.98,
       "y1": -27.24
     },
-    "industry": "",
-    "market": "",
+    "industry": "運動休閒",
+    "market": "上市",
     "subIndustries": [
       "運動產業",
       "健身器材"
@@ -193076,8 +193076,8 @@
       "m6": -3.67,
       "y1": 13.02
     },
-    "industry": "",
-    "market": "",
+    "industry": "鋼鐵工業",
+    "market": "上市",
     "subIndustries": [
       "不鏽鋼",
       "冷軋不鏽鋼"
@@ -193143,7 +193143,7 @@
           "yoy": 129.55
         }
       ],
-      "_last_fin_attempt_ts": 1794470396,
+      "_last_fin_attempt_ts": 1794477301,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -193721,8 +193721,8 @@
       "m6": 18.39,
       "y1": 16.55
     },
-    "industry": "",
-    "market": "",
+    "industry": "鋼鐵工業",
+    "market": "上櫃",
     "subIndustries": [
       "線材盤元",
       "螺絲螺帽"
@@ -194359,8 +194359,8 @@
       "m6": -5.56,
       "y1": -14.72
     },
-    "industry": "",
-    "market": "",
+    "industry": "汽車工業",
+    "market": "上市",
     "subIndustries": [
       "汽車服務相關",
       "汽車銷售",
@@ -194442,7 +194442,7 @@
           "yoy": -4.37
         }
       ],
-      "_last_fin_attempt_ts": 1794470348,
+      "_last_fin_attempt_ts": 1794477332,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -194695,8 +194695,8 @@
       "m6": 6.92,
       "y1": 1.31
     },
-    "industry": "",
-    "market": "",
+    "industry": "汽車工業",
+    "market": "上市",
     "subIndustries": [
       "汽車服務相關",
       "汽車銷售",
@@ -194776,7 +194776,7 @@
           "yoy": -8.9
         }
       ],
-      "_last_fin_attempt_ts": 1794470364,
+      "_last_fin_attempt_ts": 1794477333,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -196482,8 +196482,8 @@
       "m6": -39.45,
       "y1": 77.94
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上市",
     "subIndustries": [
       "設備儀器商",
       "量測儀器"
@@ -196549,7 +196549,7 @@
           "yoy": 163.26
         }
       ],
-      "_last_fin_attempt_ts": 1794470333,
+      "_last_fin_attempt_ts": 1794477321,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -197137,8 +197137,8 @@
       "m6": 8.46,
       "y1": 8.33
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "被動元件",
       "晶片電阻",
@@ -197212,7 +197212,7 @@
           "yoy": 45.31
         }
       ],
-      "_last_fin_attempt_ts": 1794470251,
+      "_last_fin_attempt_ts": 1794477296,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -198134,8 +198134,8 @@
       "m6": -11.72,
       "y1": 70.84
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上市",
     "subIndustries": [
       "工業電腦",
       "電腦系統業",
@@ -198207,7 +198207,7 @@
           "yoy": 150.95
         }
       ],
-      "_last_fin_attempt_ts": 1794470315,
+      "_last_fin_attempt_ts": 1794477353,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -199476,8 +199476,8 @@
       "m6": 19.12,
       "y1": 22.73
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上市",
     "subIndustries": [
       "網通設備",
       "多軌道衛星",
@@ -199817,8 +199817,8 @@
       "m6": -17.55,
       "y1": 6.64
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上市",
     "subIndustries": [
       "網通設備",
       "用戶端設備",
@@ -201453,8 +201453,8 @@
       "m6": -5.9,
       "y1": -11.61
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "地產",
       "營建"
@@ -201520,7 +201520,7 @@
           "yoy": 110081.11
         }
       ],
-      "_last_fin_attempt_ts": 1794470403,
+      "_last_fin_attempt_ts": 1794477387,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -201786,8 +201786,8 @@
       "m6": 13.38,
       "y1": 1.38
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "地產",
       "營建",
@@ -202124,8 +202124,8 @@
       "m6": 20.94,
       "y1": 56.19
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "地產",
       "營建"
@@ -202191,7 +202191,7 @@
           "yoy": -24.16
         }
       ],
-      "_last_fin_attempt_ts": 1794470283,
+      "_last_fin_attempt_ts": 1794477307,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -203412,8 +203412,8 @@
       "m6": 27.02,
       "y1": 15.15
     },
-    "industry": "",
-    "market": "",
+    "industry": "航運業",
+    "market": "上市",
     "subIndustries": [
       "運輸事業",
       "空運"
@@ -204053,8 +204053,8 @@
       "m6": -2.37,
       "y1": 3.66
     },
-    "industry": "",
-    "market": "",
+    "industry": "觀光餐旅",
+    "market": "上市",
     "subIndustries": [
       "旅宿／餐飲",
       "餐飲"
@@ -204371,8 +204371,8 @@
       "m6": 2.46,
       "y1": 14.16
     },
-    "industry": "",
-    "market": "",
+    "industry": "金融保險業",
+    "market": "上市",
     "subIndustries": [
       "金融業",
       "銀行"
@@ -204438,12 +204438,8 @@
           "yoy": 22.35
         }
       ],
-      "_last_fin_attempt_ts": 1794470407,
+      "_last_fin_attempt_ts": 1794477334,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -0.33
-        },
         {
           "quarter": "2024Q4",
           "yoy": 64.29
@@ -204471,13 +204467,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 1.92
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -6.44
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 0.57
-        },
         {
           "quarter": "2024Q4",
           "yoy": 183.97
@@ -204505,13 +204501,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 15.64
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -1.95
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -4.17
-        },
         {
           "quarter": "2024Q4",
           "yoy": 61.54
@@ -204539,13 +204535,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 100.0
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 23.81
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 92.35
-        },
         {
           "quarter": "2024Q4",
           "value": 123.66
@@ -204573,13 +204569,13 @@
         {
           "quarter": "2026Q2",
           "value": 94.26
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 85.77
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 43.45
-        },
         {
           "quarter": "2024Q4",
           "value": 60.06
@@ -204607,13 +204603,13 @@
         {
           "quarter": "2026Q2",
           "value": 51.65
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 41.34
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 0.23
-        },
         {
           "quarter": "2024Q4",
           "value": 0.21
@@ -204640,6 +204636,10 @@
         },
         {
           "quarter": "2026Q2",
+          "value": 0.26
+        },
+        {
+          "quarter": "2026Q3",
           "value": 0.26
         }
       ]
@@ -205016,8 +205016,8 @@
       "m6": -9.01,
       "y1": -29.37
     },
-    "industry": "",
-    "market": "",
+    "industry": "貿易百貨業",
+    "market": "上市",
     "subIndustries": [
       "食品加工",
       "茶葉相關",
@@ -206638,8 +206638,8 @@
       "m6": -34.0,
       "y1": -49.64
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他業",
+    "market": "上市",
     "subIndustries": [
       "消費性電子產品",
       "地產",
@@ -206709,7 +206709,7 @@
           "yoy": 15.73
         }
       ],
-      "_last_fin_attempt_ts": 1794470372,
+      "_last_fin_attempt_ts": 1794477292,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -212542,8 +212542,8 @@
       "m6": -1.89,
       "y1": -16.25
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上櫃",
     "subIndustries": [
       "顯示器",
       "工業電腦",
@@ -213186,8 +213186,8 @@
       "m6": -36.38,
       "y1": 39.2
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "電子零件元件",
       "CPU SOCKET"
@@ -213253,7 +213253,7 @@
           "yoy": 12.46
         }
       ],
-      "_last_fin_attempt_ts": 1794470269,
+      "_last_fin_attempt_ts": 1794477414,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -214498,8 +214498,8 @@
       "m6": 108.33,
       "y1": 153.95
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上櫃",
     "subIndustries": [
       "被動元件",
       "晶片電阻",
@@ -214818,8 +214818,8 @@
       "m6": -45.73,
       "y1": -63.97
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上櫃",
     "subIndustries": [
       "電池",
       "工業用電池",
@@ -214887,7 +214887,7 @@
           "yoy": -38.36
         }
       ],
-      "_last_fin_attempt_ts": 1794470384,
+      "_last_fin_attempt_ts": 1794477421,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -219390,8 +219390,8 @@
       "m6": -25.27,
       "y1": -15.11
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上市",
     "subIndustries": [
       "汽車內裝",
       "安全氣囊",
@@ -220051,8 +220051,8 @@
       "m6": -8.37,
       "y1": 91.48
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上市",
     "subIndustries": [
       "機械零組件",
       "氣動元件"
@@ -220687,8 +220687,8 @@
       "m6": -26.94,
       "y1": -38.35
     },
-    "industry": "",
-    "market": "",
+    "industry": "化學工業",
+    "market": "上櫃",
     "subIndustries": [
       "化學工業",
       "PU樹脂"
@@ -220754,7 +220754,7 @@
           "yoy": 72.12
         }
       ],
-      "_last_fin_attempt_ts": 1794470345,
+      "_last_fin_attempt_ts": 1794477307,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -221663,8 +221663,8 @@
       "m6": -22.99,
       "y1": 0.0
     },
-    "industry": "",
-    "market": "",
+    "industry": "化學工業",
+    "market": "上市",
     "subIndustries": [
       "電池材料相關",
       "正極材料",
@@ -222321,8 +222321,8 @@
       "m6": -8.46,
       "y1": -1.9
     },
-    "industry": "",
-    "market": "",
+    "industry": "化學工業",
+    "market": "上市",
     "subIndustries": [
       "化學工業",
       "合成樹脂",
@@ -222394,7 +222394,7 @@
           "yoy": 17.33
         }
       ],
-      "_last_fin_attempt_ts": 1794470328,
+      "_last_fin_attempt_ts": 1794477362,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -224958,8 +224958,8 @@
       "m6": -23.24,
       "y1": -33.91
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上櫃",
     "subIndustries": [
       "機械零組件",
       "汽機車零組件",
@@ -225039,7 +225039,7 @@
           "yoy": 9.39
         }
       ],
-      "_last_fin_attempt_ts": 1794470252,
+      "_last_fin_attempt_ts": 1794477409,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -225608,8 +225608,8 @@
       "m6": 5.0,
       "y1": -14.09
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上櫃",
     "subIndustries": [
       "IC設計",
       "電池保護IC",
@@ -225681,7 +225681,7 @@
           "yoy": -76.32
         }
       ],
-      "_last_fin_attempt_ts": 1794470373,
+      "_last_fin_attempt_ts": 1794477322,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -226271,8 +226271,8 @@
       "m6": -49.27,
       "y1": 184.02
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上櫃",
     "subIndustries": [
       "印刷電路板相關",
       "玻纖布"
@@ -226338,7 +226338,7 @@
           "yoy": 388.08
         }
       ],
-      "_last_fin_attempt_ts": 1794470260,
+      "_last_fin_attempt_ts": 1794477392,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -228523,8 +228523,8 @@
       "m6": -3.17,
       "y1": -5.82
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "地產",
       "營建"
@@ -233063,8 +233063,8 @@
       "m6": -32.05,
       "y1": 32.3
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "LED",
       "LED散熱基板",
@@ -233136,7 +233136,7 @@
           "yoy": 21.19
         }
       ],
-      "_last_fin_attempt_ts": 1794470382,
+      "_last_fin_attempt_ts": 1794477356,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -235679,8 +235679,8 @@
       "m6": -17.3,
       "y1": -5.77
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上櫃",
     "subIndustries": [
       "網通設備",
       "RFID相關"
@@ -237280,8 +237280,8 @@
       "m6": -36.82,
       "y1": -36.82
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上櫃",
     "subIndustries": [
       "IC設計",
       "消費性IC",
@@ -237351,7 +237351,7 @@
           "yoy": 45.02
         }
       ],
-      "_last_fin_attempt_ts": 1794470284,
+      "_last_fin_attempt_ts": 1794477368,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -237925,8 +237925,8 @@
       "m6": 5.4,
       "y1": 19.29
     },
-    "industry": "",
-    "market": "",
+    "industry": "紡織纖維",
+    "market": "上櫃",
     "subIndustries": [
       "織布業",
       "化學工業",
@@ -238263,8 +238263,8 @@
       "m6": -15.92,
       "y1": 118.09
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上櫃",
     "subIndustries": [
       "封測服務與材料",
       "測試用板卡"
@@ -238898,8 +238898,8 @@
       "m6": -4.1,
       "y1": 24.8
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上櫃",
     "subIndustries": [
       "醫藥產業",
       "生物製劑"
@@ -238965,7 +238965,7 @@
           "yoy": 43.24
         }
       ],
-      "_last_fin_attempt_ts": 1794470359,
+      "_last_fin_attempt_ts": 1794477309,
       "grossMarginYoY": [
         {
           "quarter": "2023Q4",
@@ -239534,8 +239534,8 @@
       "m6": -36.32,
       "y1": -40.06
     },
-    "industry": "",
-    "market": "",
+    "industry": "綠能環保",
+    "market": "上櫃",
     "subIndustries": [
       "太陽能",
       "太陽能系統運用"
@@ -239601,7 +239601,7 @@
           "yoy": 48.45
         }
       ],
-      "_last_fin_attempt_ts": 1794470298,
+      "_last_fin_attempt_ts": 1794477387,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -243039,8 +243039,8 @@
       "m6": -6.92,
       "y1": -23.48
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上櫃",
     "subIndustries": [
       "網通設備",
       "用戶端設備",
@@ -243108,7 +243108,7 @@
           "yoy": 163.63
         }
       ],
-      "_last_fin_attempt_ts": 1794470301,
+      "_last_fin_attempt_ts": 1794477322,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -246679,8 +246679,8 @@
       "m6": -0.29,
       "y1": -4.72
     },
-    "industry": "",
-    "market": "",
+    "industry": "綠能環保",
+    "market": "上市",
     "subIndustries": [
       "營造工程",
       "環保工程"
@@ -246746,7 +246746,7 @@
           "yoy": -64.94
         }
       ],
-      "_last_fin_attempt_ts": 1794470323,
+      "_last_fin_attempt_ts": 1794477362,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -248286,8 +248286,8 @@
       "m6": -2.87,
       "y1": 3.04
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他業",
+    "market": "上市",
     "subIndustries": [
       "工業電腦",
       "安全監控",
@@ -248359,7 +248359,7 @@
           "yoy": 2.18
         }
       ],
-      "_last_fin_attempt_ts": 1794470314,
+      "_last_fin_attempt_ts": 1794477377,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -248935,8 +248935,8 @@
       "m6": -6.07,
       "y1": -13.53
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "地產",
       "營建"
@@ -249002,7 +249002,7 @@
           "yoy": 141.76
         }
       ],
-      "_last_fin_attempt_ts": 1794470281,
+      "_last_fin_attempt_ts": 1794477341,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -250228,8 +250228,8 @@
       "m6": -11.06,
       "y1": -6.08
     },
-    "industry": "",
-    "market": "",
+    "industry": "紡織纖維",
+    "market": "上市",
     "subIndustries": [
       "成衣",
       "成衣製造",
@@ -250896,8 +250896,8 @@
       "m6": -24.82,
       "y1": -24.82
     },
-    "industry": "",
-    "market": "",
+    "industry": "紡織纖維",
+    "market": "上市",
     "subIndustries": [
       "成衣",
       "成衣製造"
@@ -250963,7 +250963,7 @@
           "yoy": 15.97
         }
       ],
-      "_last_fin_attempt_ts": 1794470412,
+      "_last_fin_attempt_ts": 1794477404,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -252831,8 +252831,8 @@
       "m6": -44.81,
       "y1": 1.0
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上市",
     "subIndustries": [
       "電線電纜",
       "電子線",
@@ -252906,7 +252906,7 @@
           "yoy": 79.99
         }
       ],
-      "_last_fin_attempt_ts": 1794470356,
+      "_last_fin_attempt_ts": 1794477416,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -253480,8 +253480,8 @@
       "m6": -5.64,
       "y1": -8.15
     },
-    "industry": "",
-    "market": "",
+    "industry": "橡膠工業",
+    "market": "上市",
     "subIndustries": [
       "橡膠工業",
       "輪胎",
@@ -254450,8 +254450,8 @@
       "m6": 10.99,
       "y1": 16.29
     },
-    "industry": "",
-    "market": "",
+    "industry": "玻璃陶瓷",
+    "market": "上市",
     "subIndustries": [
       "家居用品",
       "衛浴設備",
@@ -254519,12 +254519,8 @@
           "yoy": 3.79
         }
       ],
-      "_last_fin_attempt_ts": 1794470389,
+      "_last_fin_attempt_ts": 1794477395,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 13.73
-        },
         {
           "quarter": "2024Q4",
           "yoy": -6.58
@@ -254552,13 +254548,13 @@
         {
           "quarter": "2026Q2",
           "yoy": -4.7
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -8.5
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 120.03
-        },
         {
           "quarter": "2024Q4",
           "yoy": -88.34
@@ -254586,13 +254582,13 @@
         {
           "quarter": "2026Q2",
           "yoy": -283.48
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -192.31
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 500.0
-        },
         {
           "quarter": "2024Q4",
           "yoy": -91.67
@@ -254620,13 +254616,13 @@
         {
           "quarter": "2026Q2",
           "yoy": -120.0
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -200.0
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 26.02
-        },
         {
           "quarter": "2024Q4",
           "value": 24.72
@@ -254654,13 +254650,13 @@
         {
           "quarter": "2026Q2",
           "value": 25.4
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 23.67
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 0.55
-        },
         {
           "quarter": "2024Q4",
           "value": 0.22
@@ -254688,13 +254684,13 @@
         {
           "quarter": "2026Q2",
           "value": -2.43
+        },
+        {
+          "quarter": "2026Q3",
+          "value": -5.23
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 0.16
-        },
         {
           "quarter": "2024Q4",
           "value": 0.01
@@ -254722,6 +254718,10 @@
         {
           "quarter": "2026Q2",
           "value": -0.02
+        },
+        {
+          "quarter": "2026Q3",
+          "value": -0.03
         }
       ]
     },
@@ -255427,8 +255427,8 @@
       "m6": -2.03,
       "y1": -20.5
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他業",
+    "market": "上市",
     "subIndustries": [
       "汽車服務相關",
       "汽車融資"
@@ -259547,8 +259547,8 @@
       "m6": 0.21,
       "y1": 55.93
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上櫃",
     "subIndustries": [
       "被動元件",
       "被動元件上游"
@@ -259614,7 +259614,7 @@
           "yoy": -1.96
         }
       ],
-      "_last_fin_attempt_ts": 1794470412,
+      "_last_fin_attempt_ts": 1794477364,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -260844,8 +260844,8 @@
       "m6": -27.12,
       "y1": 135.43
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上市",
     "subIndustries": [
       "電子零件元件",
       "DRAM模組",
@@ -260883,7 +260883,7 @@
           "yoy": 237.3
         }
       ],
-      "_last_fin_attempt_ts": 1794470277,
+      "_last_fin_attempt_ts": 1794477305,
       "grossMarginYoY": [
         {
           "quarter": "2026Q1",
@@ -262686,8 +262686,8 @@
       "m6": 30.2,
       "y1": 147.46
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "散熱模組",
       "其他散熱零件",
@@ -268857,8 +268857,8 @@
       "m6": -46.3,
       "y1": 73.01
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "設備儀器商",
       "PCB相關設備",
@@ -271126,8 +271126,8 @@
       "m6": -46.66,
       "y1": 91.82
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上櫃",
     "subIndustries": [
       "光通訊",
       "光纖主動元件"
@@ -273392,8 +273392,8 @@
       "m6": -10.33,
       "y1": -8.93
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "地產",
       "營建"
@@ -273459,7 +273459,7 @@
           "yoy": -52.76
         }
       ],
-      "_last_fin_attempt_ts": 1794470406,
+      "_last_fin_attempt_ts": 1794477349,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -273724,8 +273724,8 @@
       "m6": -11.33,
       "y1": -33.93
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "地產",
       "營建"
@@ -273791,7 +273791,7 @@
           "yoy": 2703.91
         }
       ],
-      "_last_fin_attempt_ts": 1794470243,
+      "_last_fin_attempt_ts": 1794477297,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -275376,8 +275376,8 @@
       "m6": 4.78,
       "y1": 14.63
     },
-    "industry": "",
-    "market": "",
+    "industry": "航運業",
+    "market": "上市",
     "subIndustries": [
       "運輸事業",
       "飛機維修",
@@ -275714,8 +275714,8 @@
       "m6": -8.51,
       "y1": -11.09
     },
-    "industry": "",
-    "market": "",
+    "industry": "航運業",
+    "market": "上櫃",
     "subIndustries": [
       "運輸事業",
       "海空運承攬業"
@@ -277195,8 +277195,8 @@
       "m6": -19.89,
       "y1": -13.87
     },
-    "industry": "",
-    "market": "",
+    "industry": "食品工業",
+    "market": "上市",
     "subIndustries": [
       "生物科技",
       "食品生技"
@@ -279211,8 +279211,8 @@
       "m6": -8.51,
       "y1": -8.51
     },
-    "industry": "",
-    "market": "",
+    "industry": "貿易百貨業",
+    "market": "上市",
     "subIndustries": [
       "傳產其他",
       "製鞋業"
@@ -279278,7 +279278,7 @@
           "yoy": -8.36
         }
       ],
-      "_last_fin_attempt_ts": 1794470275,
+      "_last_fin_attempt_ts": 1794477338,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -279529,8 +279529,8 @@
       "m6": -7.01,
       "y1": -8.97
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他業",
+    "market": "上櫃",
     "subIndustries": [
       "傳產其他",
       "鞋材",
@@ -279849,8 +279849,8 @@
       "m6": 22.32,
       "y1": 172.99
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上市",
     "subIndustries": [
       "傳產其他",
       "金屬加工／製品"
@@ -279916,7 +279916,7 @@
           "yoy": 125.2
         }
       ],
-      "_last_fin_attempt_ts": 1794470367,
+      "_last_fin_attempt_ts": 1794477393,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -282109,8 +282109,8 @@
       "m6": -12.07,
       "y1": -25.22
     },
-    "industry": "",
-    "market": "",
+    "industry": "居家生活",
+    "market": "上櫃",
     "subIndustries": [
       "飲料相關",
       "非酒精飲料",
@@ -283104,8 +283104,8 @@
       "m6": 10.81,
       "y1": -13.38
     },
-    "industry": "",
-    "market": "",
+    "industry": "紡織纖維",
+    "market": "上市",
     "subIndustries": [
       "成衣",
       "成衣製造",
@@ -285756,8 +285756,8 @@
       "m6": 180.86,
       "y1": 209.2
     },
-    "industry": "",
-    "market": "",
+    "industry": "化學工業",
+    "market": "上市",
     "subIndustries": [
       "化學工業",
       "烷基苯",
@@ -285827,7 +285827,7 @@
           "yoy": 78.22
         }
       ],
-      "_last_fin_attempt_ts": 1794470291,
+      "_last_fin_attempt_ts": 1794477397,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -286733,8 +286733,8 @@
       "m6": 16.96,
       "y1": 4.68
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上市",
     "subIndustries": [
       "家居用品",
       "電子零件元件",
@@ -286804,7 +286804,7 @@
           "yoy": 6.38
         }
       ],
-      "_last_fin_attempt_ts": 1794470390,
+      "_last_fin_attempt_ts": 1794477394,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -288327,8 +288327,8 @@
       "m6": 12.85,
       "y1": 25.45
     },
-    "industry": "",
-    "market": "",
+    "industry": "鋼鐵工業",
+    "market": "上市",
     "subIndustries": [
       "不鏽鋼",
       "不鏽鋼剪裁加工",
@@ -289006,8 +289006,8 @@
       "m6": -24.21,
       "y1": -3.41
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上市",
     "subIndustries": [
       "車用金屬成型",
       "車用沖壓件",
@@ -289079,7 +289079,7 @@
           "yoy": 64.66
         }
       ],
-      "_last_fin_attempt_ts": 1794470390,
+      "_last_fin_attempt_ts": 1794477321,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -289332,8 +289332,8 @@
       "m6": -49.84,
       "y1": -52.27
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上櫃",
     "subIndustries": [
       "車用電子",
       "被動元件",
@@ -289409,7 +289409,7 @@
           "yoy": -24.21
         }
       ],
-      "_last_fin_attempt_ts": 1794470274,
+      "_last_fin_attempt_ts": 1794477329,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -289635,7 +289635,7 @@
     "holdingPct": 76.45,
     "delta": 0.11,
     "price": 92.2,
-    "marketCap": 2467.14,
+    "marketCap": 2466.76,
     "turnovers": {
       "d1": 7.72,
       "d5": 10.08,
@@ -289666,8 +289666,8 @@
       "m6": 10.29,
       "y1": 27.7
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上市",
     "subIndustries": [
       "車用電子",
       "網通設備",
@@ -289775,7 +289775,7 @@
           "yoy": 59.62
         }
       ],
-      "_last_fin_attempt_ts": 1794470380,
+      "_last_fin_attempt_ts": 1794477312,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -292962,8 +292962,8 @@
       "m6": 11.88,
       "y1": 17.59
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上櫃",
     "subIndustries": [
       "電子零件元件",
       "連接線材"
@@ -293029,7 +293029,7 @@
           "yoy": -14.73
         }
       ],
-      "_last_fin_attempt_ts": 1794470306,
+      "_last_fin_attempt_ts": 1794477413,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -295073,8 +295073,8 @@
       "m6": -42.87,
       "y1": -54.82
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上櫃",
     "subIndustries": [
       "IC設計",
       "FLASH記憶體IC",
@@ -297062,8 +297062,8 @@
       "m6": -44.29,
       "y1": 18.9
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "印刷電路板相關",
       "銅箔"
@@ -299371,8 +299371,8 @@
       "m6": -13.6,
       "y1": 13.53
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子通路業",
+    "market": "上市",
     "subIndustries": [
       "電子通路",
       "電子元件代理商",
@@ -299440,7 +299440,7 @@
           "yoy": 24.71
         }
       ],
-      "_last_fin_attempt_ts": 1794470344,
+      "_last_fin_attempt_ts": 1794477335,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -300673,8 +300673,8 @@
       "m6": -36.11,
       "y1": 5.5
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上櫃",
     "subIndustries": [
       "設備儀器商",
       "檢測驗證服務"
@@ -300740,7 +300740,7 @@
           "yoy": -8.36
         }
       ],
-      "_last_fin_attempt_ts": 1794470311,
+      "_last_fin_attempt_ts": 1794477405,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -301630,8 +301630,8 @@
       "m6": -33.51,
       "y1": -11.07
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上櫃",
     "subIndustries": [
       "電池",
       "消費用電池",
@@ -301968,8 +301968,8 @@
       "m6": -30.19,
       "y1": -38.07
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上櫃",
     "subIndustries": [
       "電池",
       "消費用電池"
@@ -302035,7 +302035,7 @@
           "yoy": -34.69
         }
       ],
-      "_last_fin_attempt_ts": 1794470381,
+      "_last_fin_attempt_ts": 1794477299,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -302300,8 +302300,8 @@
       "m6": -35.2,
       "y1": -38.55
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上櫃",
     "subIndustries": [
       "消費性電子產品",
       "視訊轉換相關"
@@ -302367,7 +302367,7 @@
           "yoy": 391.7
         }
       ],
-      "_last_fin_attempt_ts": 1794470375,
+      "_last_fin_attempt_ts": 1794477358,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -302618,8 +302618,8 @@
       "m6": -19.22,
       "y1": 6.1
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上櫃",
     "subIndustries": [
       "光通訊",
       "光纖設備"
@@ -302685,7 +302685,7 @@
           "yoy": -10.58
         }
       ],
-      "_last_fin_attempt_ts": 1794470361,
+      "_last_fin_attempt_ts": 1794477330,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -303908,8 +303908,8 @@
       "m6": -5.77,
       "y1": 2.7
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上市",
     "subIndustries": [
       "電腦系統業",
       "伺服器",
@@ -305850,8 +305850,8 @@
       "m6": -2.46,
       "y1": -16.81
     },
-    "industry": "",
-    "market": "",
+    "industry": "航運業",
+    "market": "上市",
     "subIndustries": [
       "運輸事業",
       "空運"
@@ -305917,7 +305917,7 @@
           "yoy": 59.47
         }
       ],
-      "_last_fin_attempt_ts": 1794470250,
+      "_last_fin_attempt_ts": 1794477403,
       "grossMarginYoY": [
         {
           "quarter": "2025Q2",
@@ -308602,8 +308602,8 @@
       "m6": -1.43,
       "y1": 10.32
     },
-    "industry": "",
-    "market": "",
+    "industry": "文化創意業",
+    "market": "上櫃",
     "subIndustries": [
       "傳產其他",
       "工藝品"
@@ -308935,8 +308935,8 @@
       "m6": 34.41,
       "y1": 33.87
     },
-    "industry": "",
-    "market": "",
+    "industry": "化學工業",
+    "market": "上市",
     "subIndustries": [
       "化纖原料",
       "EG",
@@ -309008,7 +309008,7 @@
           "yoy": 88.63
         }
       ],
-      "_last_fin_attempt_ts": 1794470267,
+      "_last_fin_attempt_ts": 1794477299,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -309713,8 +309713,8 @@
       "m6": -13.73,
       "y1": -18.6
     },
-    "industry": "",
-    "market": "",
+    "industry": "汽車工業",
+    "market": "上市",
     "subIndustries": [
       "汽機車零組件",
       "汽車鈑金"
@@ -311625,8 +311625,8 @@
       "m6": -19.15,
       "y1": -25.92
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上櫃",
     "subIndustries": [
       "工業電腦",
       "KIOSK自助服務機",
@@ -312948,8 +312948,8 @@
       "m6": 3.97,
       "y1": -20.0
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上櫃",
     "subIndustries": [
       "體外診斷用醫材",
       "血糖儀"
@@ -313595,8 +313595,8 @@
       "m6": 3.41,
       "y1": -1.36
     },
-    "industry": "",
-    "market": "",
+    "industry": "水泥工業",
+    "market": "上市",
     "subIndustries": [
       "水泥",
       "預拌混凝土",
@@ -313670,7 +313670,7 @@
           "yoy": -6.9
         }
       ],
-      "_last_fin_attempt_ts": 1794470326,
+      "_last_fin_attempt_ts": 1794477369,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -313937,8 +313937,8 @@
       "m6": -23.87,
       "y1": -26.04
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上櫃",
     "subIndustries": [
       "食品加工",
       "保健食品",
@@ -314937,8 +314937,8 @@
       "m6": 8.07,
       "y1": 8.41
     },
-    "industry": "",
-    "market": "",
+    "industry": "紡織纖維",
+    "market": "上市",
     "subIndustries": [
       "工業紡織品",
       "尼龍製品",
@@ -315630,8 +315630,8 @@
       "m6": -6.43,
       "y1": 1.39
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上市",
     "subIndustries": [
       "產業機械",
       "空調製冷",
@@ -316323,8 +316323,8 @@
       "m6": 37.02,
       "y1": 61.4
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "電力設備",
       "電機",
@@ -317309,8 +317309,8 @@
       "m6": 2.42,
       "y1": -7.46
     },
-    "industry": "",
-    "market": "",
+    "industry": "居家生活",
+    "market": "上市",
     "subIndustries": [
       "家居用品",
       "衛浴設備",
@@ -317378,7 +317378,7 @@
           "yoy": -16.51
         }
       ],
-      "_last_fin_attempt_ts": 1794470407,
+      "_last_fin_attempt_ts": 1794477357,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -318592,8 +318592,8 @@
       "m6": -19.75,
       "y1": -27.22
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上市",
     "subIndustries": [
       "電子零件元件",
       "鎂鋁合金",
@@ -321239,8 +321239,8 @@
       "m6": -16.04,
       "y1": -14.45
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上市",
     "subIndustries": [
       "IC設計",
       "高速傳輸介面IC",
@@ -326958,8 +326958,8 @@
       "m6": 39.28,
       "y1": 42.71
     },
-    "industry": "",
-    "market": "",
+    "industry": "金融保險業",
+    "market": "上市",
     "subIndustries": [
       "金融業",
       "銀行"
@@ -327025,7 +327025,7 @@
           "yoy": 10.26
         }
       ],
-      "_last_fin_attempt_ts": 1794470398,
+      "_last_fin_attempt_ts": 1794477304,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -327596,8 +327596,8 @@
       "m6": 15.92,
       "y1": 19.23
     },
-    "industry": "",
-    "market": "",
+    "industry": "金融保險業",
+    "market": "上市",
     "subIndustries": [
       "金融業",
       "銀行"
@@ -327663,7 +327663,7 @@
           "yoy": 1.34
         }
       ],
-      "_last_fin_attempt_ts": 1794470317,
+      "_last_fin_attempt_ts": 1794477328,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -330378,8 +330378,8 @@
       "m6": 17.91,
       "y1": -8.29
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他業",
+    "market": "上市",
     "subIndustries": [
       "水泥",
       "地產",
@@ -330449,7 +330449,7 @@
           "yoy": 47.74
         }
       ],
-      "_last_fin_attempt_ts": 1794470331,
+      "_last_fin_attempt_ts": 1794477291,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -335879,8 +335879,8 @@
       "m6": -29.96,
       "y1": 10.02
     },
-    "industry": "",
-    "market": "",
+    "industry": "汽車工業",
+    "market": "上市",
     "subIndustries": [
       "汽機車零組件"
     ],
@@ -335944,7 +335944,7 @@
           "yoy": 57.69
         }
       ],
-      "_last_fin_attempt_ts": 1794470319,
+      "_last_fin_attempt_ts": 1794477408,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -336548,8 +336548,8 @@
       "m6": 7.75,
       "y1": 106.54
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上市",
     "subIndustries": [
       "車用電子",
       "消費性電子產品",
@@ -336633,7 +336633,7 @@
           "yoy": 93.95
         }
       ],
-      "_last_fin_attempt_ts": 1794470375,
+      "_last_fin_attempt_ts": 1794477372,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -337859,8 +337859,8 @@
       "m6": -20.0,
       "y1": -20.64
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上櫃",
     "subIndustries": [
       "面板業",
       "TN／STN LCD",
@@ -337928,7 +337928,7 @@
           "yoy": 33.87
         }
       ],
-      "_last_fin_attempt_ts": 1794470289,
+      "_last_fin_attempt_ts": 1794477417,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -338180,8 +338180,8 @@
       "m6": 3.88,
       "y1": 43.43
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上櫃",
     "subIndustries": [
       "被動元件",
       "被動元件上游",
@@ -338518,8 +338518,8 @@
       "m6": -19.33,
       "y1": -23.18
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "電子零件元件",
       "連接線材"
@@ -338836,8 +338836,8 @@
       "m6": -40.29,
       "y1": -40.51
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "電子零件元件",
       "連接線材"
@@ -338903,7 +338903,7 @@
           "yoy": -28.26
         }
       ],
-      "_last_fin_attempt_ts": 1794470403,
+      "_last_fin_attempt_ts": 1794477323,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -339806,8 +339806,8 @@
       "m6": -3.86,
       "y1": -15.68
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上櫃",
     "subIndustries": [
       "電子零件元件",
       "機殼表面處理"
@@ -340139,8 +340139,8 @@
       "m6": 79.9,
       "y1": 50.4
     },
-    "industry": "",
-    "market": "",
+    "industry": "綠能環保",
+    "market": "上櫃",
     "subIndustries": [
       "電子零件元件",
       "塑膠射出",
@@ -340212,7 +340212,7 @@
           "yoy": -7.88
         }
       ],
-      "_last_fin_attempt_ts": 1794470387,
+      "_last_fin_attempt_ts": 1794477418,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -340464,8 +340464,8 @@
       "m6": 5.4,
       "y1": 430.06
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上市",
     "subIndustries": [
       "電子零件元件",
       "連接線材",
@@ -340537,7 +340537,7 @@
           "yoy": -5.94
         }
       ],
-      "_last_fin_attempt_ts": 1794470401,
+      "_last_fin_attempt_ts": 1794477378,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -341446,8 +341446,8 @@
       "m6": -30.05,
       "y1": -37.19
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上市",
     "subIndustries": [
       "通訊服務",
       "光通訊",
@@ -342421,8 +342421,8 @@
       "m6": 68.28,
       "y1": 66.81
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他業",
+    "market": "上市",
     "subIndustries": [
       "軟體業",
       "應用軟體",
@@ -342492,7 +342492,7 @@
           "yoy": 45.46
         }
       ],
-      "_last_fin_attempt_ts": 1794470371,
+      "_last_fin_attempt_ts": 1794477341,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -343395,8 +343395,8 @@
       "m6": -46.52,
       "y1": -0.68
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上市",
     "subIndustries": [
       "設備儀器商",
       "面板設備"
@@ -345015,8 +345015,8 @@
       "m6": -16.35,
       "y1": 5.09
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "地產",
       "營建"
@@ -345082,7 +345082,7 @@
           "yoy": -18.14
         }
       ],
-      "_last_fin_attempt_ts": 1794470336,
+      "_last_fin_attempt_ts": 1794477419,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -346946,8 +346946,8 @@
       "m6": 55.96,
       "y1": 74.38
     },
-    "industry": "",
-    "market": "",
+    "industry": "金融保險業",
+    "market": "上市",
     "subIndustries": [
       "金融業",
       "銀行",
@@ -347025,7 +347025,7 @@
           "yoy": 4.79
         }
       ],
-      "_last_fin_attempt_ts": 1794470370,
+      "_last_fin_attempt_ts": 1794477400,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -347616,8 +347616,8 @@
       "m6": 25.95,
       "y1": 20.46
     },
-    "industry": "",
-    "market": "",
+    "industry": "金融保險業",
+    "market": "上市",
     "subIndustries": [
       "金融業",
       "銀行",
@@ -347695,7 +347695,7 @@
           "yoy": -15.48
         }
       ],
-      "_last_fin_attempt_ts": 1794470289,
+      "_last_fin_attempt_ts": 1794477375,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -349893,8 +349893,8 @@
       "m6": -8.56,
       "y1": 15.4
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上櫃",
     "subIndustries": [
       "傳產其他",
       "複合材料"
@@ -351209,8 +351209,8 @@
       "m6": 1.41,
       "y1": -25.69
     },
-    "industry": "",
-    "market": "",
+    "industry": "紡織纖維",
+    "market": "上市",
     "subIndustries": [
       "成衣",
       "成衣製造"
@@ -351527,8 +351527,8 @@
       "m6": -2.44,
       "y1": -15.61
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上市",
     "subIndustries": [
       "產業機械",
       "自行車零件"
@@ -351594,7 +351594,7 @@
           "yoy": 36.19
         }
       ],
-      "_last_fin_attempt_ts": 1794470362,
+      "_last_fin_attempt_ts": 1794477296,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -353115,8 +353115,8 @@
       "m6": -16.42,
       "y1": 9.5
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上市",
     "subIndustries": [
       "LED",
       "LED封裝",
@@ -353184,12 +353184,8 @@
           "yoy": 27.18
         }
       ],
-      "_last_fin_attempt_ts": 1794470394,
+      "_last_fin_attempt_ts": 1794477348,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 5.9
-        },
         {
           "quarter": "2024Q4",
           "yoy": -3.75
@@ -353217,13 +353213,13 @@
         {
           "quarter": "2026Q2",
           "yoy": -24.71
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -12.56
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 28.47
-        },
         {
           "quarter": "2024Q4",
           "yoy": -14.6
@@ -353251,13 +353247,13 @@
         {
           "quarter": "2026Q2",
           "yoy": -37.84
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -12.54
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 37.36
-        },
         {
           "quarter": "2024Q4",
           "yoy": 484.38
@@ -353285,13 +353281,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 69.86
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 16.28
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 30.4
-        },
         {
           "quarter": "2024Q4",
           "value": 27.6
@@ -353319,13 +353315,13 @@
         {
           "quarter": "2026Q2",
           "value": 24.16
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 27.58
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 12.85
-        },
         {
           "quarter": "2024Q4",
           "value": 8.01
@@ -353353,13 +353349,13 @@
         {
           "quarter": "2026Q2",
           "value": 9.59
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 11.19
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 1.25
-        },
         {
           "quarter": "2024Q4",
           "value": 1.87
@@ -353387,6 +353383,10 @@
         {
           "quarter": "2026Q2",
           "value": 1.24
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 1.5
         }
       ]
     },
@@ -356582,8 +356582,8 @@
       "m6": -1.69,
       "y1": -7.63
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上市",
     "subIndustries": [
       "工業電腦"
     ],
@@ -357548,8 +357548,8 @@
       "m6": -23.74,
       "y1": -40.89
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上市",
     "subIndustries": [
       "電聲產品",
       "藍牙耳機",
@@ -358192,8 +358192,8 @@
       "m6": 21.89,
       "y1": 1.58
     },
-    "industry": "",
-    "market": "",
+    "industry": "航運業",
+    "market": "上市",
     "subIndustries": [
       "運輸事業",
       "貨櫃場服務",
@@ -358277,7 +358277,7 @@
           "yoy": 75.99
         }
       ],
-      "_last_fin_attempt_ts": 1794470346,
+      "_last_fin_attempt_ts": 1794477316,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -359487,8 +359487,8 @@
       "m6": -19.01,
       "y1": -29.77
     },
-    "industry": "",
-    "market": "",
+    "industry": "運動休閒",
+    "market": "上櫃",
     "subIndustries": [
       "傳產其他",
       "複合材料",
@@ -366501,8 +366501,8 @@
       "m6": 7.62,
       "y1": 56.1
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上櫃",
     "subIndustries": [
       "光通訊",
       "光纖光纜"
@@ -367140,8 +367140,8 @@
       "m6": 70.91,
       "y1": 80.26
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他業",
+    "market": "上櫃",
     "subIndustries": [
       "地產",
       "物業投資發展",
@@ -367213,7 +367213,7 @@
           "yoy": 143.5
         }
       ],
-      "_last_fin_attempt_ts": 1794470285,
+      "_last_fin_attempt_ts": 1794477318,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -369409,8 +369409,8 @@
       "m6": -23.68,
       "y1": -17.86
     },
-    "industry": "",
-    "market": "",
+    "industry": "食品工業",
+    "market": "上市",
     "subIndustries": [
       "大宗物資",
       "麵粉",
@@ -369484,7 +369484,7 @@
           "yoy": -20.13
         }
       ],
-      "_last_fin_attempt_ts": 1794470333,
+      "_last_fin_attempt_ts": 1794477292,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -370062,8 +370062,8 @@
       "m6": 9.03,
       "y1": 21.51
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他業",
+    "market": "上櫃",
     "subIndustries": [
       "機械零組件",
       "飛機零件／製造",
@@ -371684,8 +371684,8 @@
       "m6": -37.67,
       "y1": -23.11
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上櫃",
     "subIndustries": [
       "IC設計",
       "類比IC",
@@ -371757,7 +371757,7 @@
           "yoy": 19.27
         }
       ],
-      "_last_fin_attempt_ts": 1794470253,
+      "_last_fin_attempt_ts": 1794477413,
       "grossMarginYoY": [
         {
           "quarter": "2025Q2",
@@ -373280,8 +373280,8 @@
       "m6": 3.32,
       "y1": 31.04
     },
-    "industry": "",
-    "market": "",
+    "industry": "資訊服務業",
+    "market": "上櫃",
     "subIndustries": [
       "軟體業",
       "系統整合"
@@ -373347,7 +373347,7 @@
           "yoy": 1.28
         }
       ],
-      "_last_fin_attempt_ts": 1794470261,
+      "_last_fin_attempt_ts": 1794477290,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -376828,8 +376828,8 @@
       "m6": 0.0,
       "y1": -16.8
     },
-    "industry": "",
-    "market": "",
+    "industry": "油電燃氣業",
+    "market": "上櫃",
     "subIndustries": [
       "電力",
       "汽電共生"
@@ -378796,8 +378796,8 @@
       "m6": -1.06,
       "y1": 2.48
     },
-    "industry": "",
-    "market": "",
+    "industry": "鋼鐵工業",
+    "market": "上市",
     "subIndustries": [
       "線材盤元",
       "條鋼",
@@ -383909,8 +383909,8 @@
       "m6": -6.27,
       "y1": -13.9
     },
-    "industry": "",
-    "market": "",
+    "industry": "金融保險業",
+    "market": "上市",
     "subIndustries": [
       "金融業",
       "銀行"
@@ -385534,8 +385534,8 @@
       "m6": 2.64,
       "y1": 65.0
     },
-    "industry": "",
-    "market": "",
+    "industry": "綠能環保",
+    "market": "上市",
     "subIndustries": [
       "產業機械",
       "污染控制設備",
@@ -385607,7 +385607,7 @@
           "yoy": -18.27
         }
       ],
-      "_last_fin_attempt_ts": 1794470255,
+      "_last_fin_attempt_ts": 1794477370,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -387183,8 +387183,8 @@
       "m6": -37.95,
       "y1": -29.68
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上櫃",
     "subIndustries": [
       "IC設計",
       "無線網路IC",
@@ -388818,8 +388818,8 @@
       "m6": -42.58,
       "y1": -62.5
     },
-    "industry": "",
-    "market": "",
+    "industry": "觀光餐旅",
+    "market": "上櫃",
     "subIndustries": [
       "旅宿／餐飲",
       "餐飲",
@@ -388887,7 +388887,7 @@
           "yoy": -8.07
         }
       ],
-      "_last_fin_attempt_ts": 1794470352,
+      "_last_fin_attempt_ts": 1794477289,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -391438,8 +391438,8 @@
       "m6": -14.85,
       "y1": -21.94
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上櫃",
     "subIndustries": [
       "家電",
       "照明",
@@ -391776,8 +391776,8 @@
       "m6": -14.12,
       "y1": -29.38
     },
-    "industry": "",
-    "market": "",
+    "industry": "橡膠工業",
+    "market": "上市",
     "subIndustries": [
       "橡膠工業",
       "輪胎",
@@ -391845,7 +391845,7 @@
           "yoy": 12.42
         }
       ],
-      "_last_fin_attempt_ts": 1794470274,
+      "_last_fin_attempt_ts": 1794477351,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -392435,8 +392435,8 @@
       "m6": 1.15,
       "y1": -4.13
     },
-    "industry": "",
-    "market": "",
+    "industry": "鋼鐵工業",
+    "market": "上市",
     "subIndustries": [
       "條鋼",
       "鋼管",
@@ -392514,7 +392514,7 @@
           "yoy": -0.94
         }
       ],
-      "_last_fin_attempt_ts": 1794470417,
+      "_last_fin_attempt_ts": 1794477373,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -392765,8 +392765,8 @@
       "m6": 56.92,
       "y1": 86.44
     },
-    "industry": "",
-    "market": "",
+    "industry": "汽車工業",
+    "market": "上市",
     "subIndustries": [
       "汽機車零組件",
       "車燈"
@@ -394058,8 +394058,8 @@
       "m6": 307.5,
       "y1": 378.01
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上櫃",
     "subIndustries": [
       "電子其他"
     ],
@@ -399194,8 +399194,8 @@
       "m6": -3.74,
       "y1": -5.15
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上市",
     "subIndustries": [
       "醫藥產業",
       "西藥製劑",
@@ -399269,7 +399269,7 @@
           "yoy": 5.25
         }
       ],
-      "_last_fin_attempt_ts": 1794470409,
+      "_last_fin_attempt_ts": 1794477420,
       "grossMarginYoY": [
         {
           "quarter": "2025Q4",
@@ -404372,8 +404372,8 @@
       "m6": -31.44,
       "y1": 3.54
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上櫃",
     "subIndustries": [
       "IC製造",
       "其他半導體耗材",
@@ -405358,8 +405358,8 @@
       "m6": -33.37,
       "y1": 67.8
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上市",
     "subIndustries": [
       "設備儀器商",
       "半導體製程設備",
@@ -405431,7 +405431,7 @@
           "yoy": 68.41
         }
       ],
-      "_last_fin_attempt_ts": 1794470360,
+      "_last_fin_attempt_ts": 1794477402,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -409390,8 +409390,8 @@
       "m6": -8.86,
       "y1": -16.03
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上市",
     "subIndustries": [
       "產業機械",
       "木工機械"
@@ -410034,8 +410034,8 @@
       "m6": 7.49,
       "y1": 17.35
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上櫃",
     "subIndustries": [
       "電力設備",
       "配電工程",
@@ -410111,7 +410111,7 @@
           "yoy": 39.84
         }
       ],
-      "_last_fin_attempt_ts": 1794470275,
+      "_last_fin_attempt_ts": 1794477388,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -413181,8 +413181,8 @@
       "m6": -3.03,
       "y1": -10.02
     },
-    "industry": "",
-    "market": "",
+    "industry": "航運業",
+    "market": "上市",
     "subIndustries": [
       "運輸事業",
       "鐵路運輸"
@@ -413513,8 +413513,8 @@
       "m6": 19.13,
       "y1": 7.03
     },
-    "industry": "",
-    "market": "",
+    "industry": "觀光餐旅",
+    "market": "上櫃",
     "subIndustries": [
       "旅宿／餐飲",
       "餐飲"
@@ -418495,8 +418495,8 @@
       "m6": 12.41,
       "y1": 3.82
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上市",
     "subIndustries": [
       "地產",
       "營建",
@@ -419145,8 +419145,8 @@
       "m6": -25.15,
       "y1": -18.99
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上櫃",
     "subIndustries": [
       "地產",
       "營建"
@@ -420422,8 +420422,8 @@
       "m6": 23.31,
       "y1": 61.58
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上櫃",
     "subIndustries": [
       "IC設計",
       "馬達IC",
@@ -421404,8 +421404,8 @@
       "m6": 22.92,
       "y1": 21.81
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上市",
     "subIndustries": [
       "機械零組件",
       "模具",
@@ -423479,7 +423479,7 @@
     "holdingPct": 18.22,
     "delta": 0.14,
     "price": 13.45,
-    "marketCap": 12.32,
+    "marketCap": 5.31,
     "turnovers": {
       "d1": 0.0,
       "d5": 0.0,
@@ -423510,8 +423510,8 @@
       "m6": -20.7,
       "y1": -61.85
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上櫃",
     "subIndustries": [
       "電子零件元件",
       "記憶體模組",
@@ -423585,7 +423585,7 @@
           "yoy": -5.7
         }
       ],
-      "_last_fin_attempt_ts": 1794470365,
+      "_last_fin_attempt_ts": 1794477374,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -424376,8 +424376,8 @@
       "m6": -32.04,
       "y1": -53.59
     },
-    "industry": "",
-    "market": "",
+    "industry": "建材營造業",
+    "market": "上櫃",
     "subIndustries": [
       "地產",
       "營建"
@@ -424443,7 +424443,7 @@
           "yoy": -97.88
         }
       ],
-      "_last_fin_attempt_ts": 1794470339,
+      "_last_fin_attempt_ts": 1794477350,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -426312,8 +426312,8 @@
       "m6": -12.59,
       "y1": 20.09
     },
-    "industry": "",
-    "market": "",
+    "industry": "化學工業",
+    "market": "上市",
     "subIndustries": [
       "化學工業",
       "其他化工產品",
@@ -426385,12 +426385,8 @@
           "yoy": 5.68
         }
       ],
-      "_last_fin_attempt_ts": 1794470377,
+      "_last_fin_attempt_ts": 1794477355,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 3.81
-        },
         {
           "quarter": "2024Q4",
           "yoy": -44.91
@@ -426418,13 +426414,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 10.7
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 12.25
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 3.0
-        },
         {
           "quarter": "2024Q4",
           "yoy": -60.46
@@ -426452,13 +426448,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 2.36
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 50.33
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -13.76
-        },
         {
           "quarter": "2024Q4",
           "yoy": -26.92
@@ -426486,13 +426482,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 288.24
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 176.84
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 20.76
-        },
         {
           "quarter": "2024Q4",
           "value": 13.38
@@ -426520,13 +426516,13 @@
         {
           "quarter": "2026Q2",
           "value": 24.09
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 23.03
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 10.47
-        },
         {
           "quarter": "2024Q4",
           "value": 6.25
@@ -426554,13 +426550,13 @@
         {
           "quarter": "2026Q2",
           "value": 11.95
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 10.14
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 0.94
-        },
         {
           "quarter": "2024Q4",
           "value": 0.95
@@ -426588,6 +426584,10 @@
         {
           "quarter": "2026Q2",
           "value": 1.32
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 2.63
         }
       ]
     },
@@ -426637,8 +426637,8 @@
       "m6": 27.47,
       "y1": 25.27
     },
-    "industry": "",
-    "market": "",
+    "industry": "化學工業",
+    "market": "上市",
     "subIndustries": [
       "化學工業",
       "合成樹脂",
@@ -426961,8 +426961,8 @@
       "m6": -32.98,
       "y1": 39.02
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上櫃",
     "subIndustries": [
       "面板零組件",
       "光學膜"
@@ -427921,8 +427921,8 @@
       "m6": 0.0,
       "y1": 0.67
     },
-    "industry": "",
-    "market": "",
+    "industry": "電子零組件業",
+    "market": "上櫃",
     "subIndustries": [
       "印刷電路板相關",
       "印刷電路板"
@@ -428886,8 +428886,8 @@
       "m6": -7.06,
       "y1": -16.76
     },
-    "industry": "",
-    "market": "",
+    "industry": "觀光餐旅",
+    "market": "上櫃",
     "subIndustries": [
       "旅宿／餐飲",
       "餐飲"
@@ -428953,7 +428953,7 @@
           "yoy": -2.14
         }
       ],
-      "_last_fin_attempt_ts": 1794470282,
+      "_last_fin_attempt_ts": 1794477313,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -434645,8 +434645,8 @@
       "m6": -21.94,
       "y1": -33.15
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上市",
     "subIndustries": [
       "醫藥產業",
       "新藥研發",
@@ -434677,8 +434677,8 @@
     "revenueMonth": "2026-10",
     "revenueFirstSeen": "2026-11-10",
     "fundamentals": {
-      "_last_rev_attempt_ts": 1794470404,
-      "_last_fin_attempt_ts": 1794470406,
+      "_last_rev_attempt_ts": 1794477314,
+      "_last_fin_attempt_ts": 1794477316,
       "grossMarginYoY": [],
       "operatingMarginYoY": [],
       "epsYoY": [],
@@ -439660,8 +439660,8 @@
       "m6": -12.46,
       "y1": 5.13
     },
-    "industry": "",
-    "market": "",
+    "industry": "數位雲端",
+    "market": "上櫃",
     "subIndustries": [
       "INTERNET應用與服務",
       "電商平台"
@@ -439727,7 +439727,7 @@
           "yoy": -1.0
         }
       ],
-      "_last_fin_attempt_ts": 1794470276,
+      "_last_fin_attempt_ts": 1794477356,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -440303,8 +440303,8 @@
       "m6": -19.73,
       "y1": -9.95
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上櫃",
     "subIndustries": [
       "營造工程",
       "住宅建設"
@@ -440370,7 +440370,7 @@
           "yoy": 6.67
         }
       ],
-      "_last_fin_attempt_ts": 1794470292,
+      "_last_fin_attempt_ts": 1794477420,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -442145,8 +442145,8 @@
       "m6": 3.82,
       "y1": 4.59
     },
-    "industry": "",
-    "market": "",
+    "industry": "航運業",
+    "market": "上市",
     "subIndustries": [
       "運輸事業",
       "海空運承攬業",
@@ -442214,7 +442214,7 @@
           "yoy": 125.54
         }
       ],
-      "_last_fin_attempt_ts": 1794470273,
+      "_last_fin_attempt_ts": 1794477398,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -442481,8 +442481,8 @@
       "m6": 0.59,
       "y1": -12.41
     },
-    "industry": "",
-    "market": "",
+    "industry": "運動休閒",
+    "market": "上市",
     "subIndustries": [
       "控股公司",
       "傳產其他",
@@ -442560,7 +442560,7 @@
           "yoy": 3.01
         }
       ],
-      "_last_fin_attempt_ts": 1794470259,
+      "_last_fin_attempt_ts": 1794477310,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -444783,8 +444783,8 @@
       "m6": 7.69,
       "y1": 3.89
     },
-    "industry": "",
-    "market": "",
+    "industry": "資訊服務業",
+    "market": "上市",
     "subIndustries": [
       "軟體業",
       "系統整合",
@@ -447023,8 +447023,8 @@
       "m6": 23.45,
       "y1": 54.14
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上市",
     "subIndustries": [
       "輔助與彌補用醫材",
       "隱形眼鏡"
@@ -452562,8 +452562,8 @@
       "m6": 18.87,
       "y1": 43.18
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上櫃",
     "subIndustries": [
       "IC設計",
       "ASIC"
@@ -455908,8 +455908,8 @@
       "m6": 0.61,
       "y1": 9.05
     },
-    "industry": "",
-    "market": "",
+    "industry": "金融保險業",
+    "market": "上市",
     "subIndustries": [
       "金融業",
       "銀行"
@@ -455975,12 +455975,8 @@
           "yoy": -2.05
         }
       ],
-      "_last_fin_attempt_ts": 1794470264,
+      "_last_fin_attempt_ts": 1794477334,
       "grossMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": -3.18
-        },
         {
           "quarter": "2024Q4",
           "yoy": -6.4
@@ -456008,13 +456004,13 @@
         {
           "quarter": "2026Q2",
           "yoy": -14.16
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": 8.69
         }
       ],
       "operatingMarginYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 9.03
-        },
         {
           "quarter": "2024Q4",
           "yoy": 32.24
@@ -456042,13 +456038,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 3.66
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -4.3
         }
       ],
       "epsYoY": [
-        {
-          "quarter": "2024Q3",
-          "yoy": 22.58
-        },
         {
           "quarter": "2024Q4",
           "yoy": 35.29
@@ -456076,13 +456072,13 @@
         {
           "quarter": "2026Q2",
           "yoy": 61.9
+        },
+        {
+          "quarter": "2026Q3",
+          "yoy": -21.43
         }
       ],
       "grossMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 93.66
-        },
         {
           "quarter": "2024Q4",
           "value": 91.34
@@ -456110,13 +456106,13 @@
         {
           "quarter": "2026Q2",
           "value": 84.43
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 101.07
         }
       ],
       "operatingMargin": [
-        {
-          "quarter": "2024Q3",
-          "value": 34.72
-        },
         {
           "quarter": "2024Q4",
           "value": 26.23
@@ -456144,13 +456140,13 @@
         {
           "quarter": "2026Q2",
           "value": 36.45
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 35.57
         }
       ],
       "eps": [
-        {
-          "quarter": "2024Q3",
-          "value": 0.38
-        },
         {
           "quarter": "2024Q4",
           "value": 0.23
@@ -456178,6 +456174,10 @@
         {
           "quarter": "2026Q2",
           "value": 0.34
+        },
+        {
+          "quarter": "2026Q3",
+          "value": 0.33
         }
       ]
     },
@@ -463034,8 +463034,8 @@
       "m6": -6.0,
       "y1": -11.33
     },
-    "industry": "",
-    "market": "",
+    "industry": "半導體業",
+    "market": "上市",
     "subIndustries": [
       "IC設計",
       "設計IP"
@@ -463101,7 +463101,7 @@
           "yoy": 31.65
         }
       ],
-      "_last_fin_attempt_ts": 1794470262,
+      "_last_fin_attempt_ts": 1794477306,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -464001,8 +464001,8 @@
       "m6": 10.24,
       "y1": -11.39
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上市",
     "subIndustries": [
       "車用電子",
       "軟體業",
@@ -464659,8 +464659,8 @@
       "m6": -13.73,
       "y1": -11.48
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上櫃",
     "subIndustries": [
       "電子零件元件",
       "連接線材",
@@ -465303,8 +465303,8 @@
       "m6": -20.77,
       "y1": -27.77
     },
-    "industry": "",
-    "market": "",
+    "industry": "生技醫療業",
+    "market": "上櫃",
     "subIndustries": [
       "智慧醫療技術"
     ],
@@ -467237,8 +467237,8 @@
       "m6": 0.27,
       "y1": -13.65
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上市",
     "subIndustries": [
       "網通設備",
       "用戶端設備",
@@ -474488,8 +474488,8 @@
       "m6": 10.41,
       "y1": 11.25
     },
-    "industry": "",
-    "market": "",
+    "industry": "塑膠工業",
+    "market": "上市",
     "subIndustries": [
       "塑化製品",
       "塑膠加工"
@@ -474555,7 +474555,7 @@
           "yoy": 7.96
         }
       ],
-      "_last_fin_attempt_ts": 1794470417,
+      "_last_fin_attempt_ts": 1794477379,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -476085,8 +476085,8 @@
       "m6": -5.55,
       "y1": -11.94
     },
-    "industry": "",
-    "market": "",
+    "industry": "電器電纜",
+    "market": "上市",
     "subIndustries": [
       "電線電纜",
       "電力電纜"
@@ -476404,8 +476404,8 @@
       "m6": 142.35,
       "y1": 114.15
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上櫃",
     "subIndustries": [
       "週邊產品",
       "滑鼠",
@@ -476481,7 +476481,7 @@
           "yoy": -16.39
         }
       ],
-      "_last_fin_attempt_ts": 1794470309,
+      "_last_fin_attempt_ts": 1794477298,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -476732,8 +476732,8 @@
       "m6": 3.82,
       "y1": 11.42
     },
-    "industry": "",
-    "market": "",
+    "industry": "電機機械",
+    "market": "上市",
     "subIndustries": [
       "工具機",
       "車床",
@@ -476803,7 +476803,7 @@
           "yoy": 39.96
         }
       ],
-      "_last_fin_attempt_ts": 1794470249,
+      "_last_fin_attempt_ts": 1794477302,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -477055,8 +477055,8 @@
       "m6": -9.47,
       "y1": -11.09
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上市",
     "subIndustries": [
       "產業機械",
       "儀表",
@@ -477379,8 +477379,8 @@
       "m6": -10.52,
       "y1": -10.34
     },
-    "industry": "",
-    "market": "",
+    "industry": "光電業",
+    "market": "上櫃",
     "subIndustries": [
       "面板業",
       "LCM"
@@ -477698,8 +477698,8 @@
       "m6": -9.91,
       "y1": -22.95
     },
-    "industry": "",
-    "market": "",
+    "industry": "資訊服務業",
+    "market": "上櫃",
     "subIndustries": [
       "電子通路",
       "電子元件代理商",
@@ -477771,7 +477771,7 @@
           "yoy": 17.06
         }
       ],
-      "_last_fin_attempt_ts": 1794470350,
+      "_last_fin_attempt_ts": 1794477407,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
@@ -478022,8 +478022,8 @@
       "m6": -2.48,
       "y1": 11.46
     },
-    "industry": "",
-    "market": "",
+    "industry": "通信網路業",
+    "market": "上櫃",
     "subIndustries": [
       "軟體業",
       "系統整合"
@@ -478340,8 +478340,8 @@
       "m6": 90.45,
       "y1": 102.69
     },
-    "industry": "",
-    "market": "",
+    "industry": "其他電子業",
+    "market": "上櫃",
     "subIndustries": [
       "設備儀器商"
     ],
@@ -478656,8 +478656,8 @@
       "m6": -13.04,
       "y1": -11.76
     },
-    "industry": "",
-    "market": "",
+    "industry": "電腦及週邊設備業",
+    "market": "上市",
     "subIndustries": [
       "週邊產品",
       "鍵盤"
@@ -478723,7 +478723,7 @@
           "yoy": -28.47
         }
       ],
-      "_last_fin_attempt_ts": 1794470258,
+      "_last_fin_attempt_ts": 1794477325,
       "grossMarginYoY": [
         {
           "quarter": "2024Q3",
